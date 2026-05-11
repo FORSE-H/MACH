@@ -1,0 +1,52 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/odrl",
+  "@type": ["schema:TechArticle", "mach:Standard"],
+
+  "identifier": "odrl",
+  "name": "ODRL",
+  "alternateName": ["Open Digital Rights Language", "ODRL Information Model 2.2"],
+  "description": "W3C recommendation for expressing policies over data assets — permissions, prohibitions, and obligations. In healthcare, used to encode data access conditions, patient consent policies, and data-sharing agreements in EU Health Data Space and IDS-based data spaces.",
+  "url": "https://www.w3.org/TR/odrl-model/",
+
+  "license": "W3C Document License",
+  "dateModified": "2018-02-15",
+  "keywords": ["policy", "access-control", "consent", "data-governance", "data-spaces", "rights-expression"],
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "World Wide Web Consortium (W3C)"
+  },
+
+  "mach:governance": "foundation",
+  "mach:foundation": "World Wide Web Consortium (W3C)",
+  "mach:category": "interoperability-standards",
+  "mach:subcategory": "data-governance",
+  "mach:maturity": "production",
+  "mach:judgement": "Situational",
+  "mach:judgementReason": "Relevant specifically for projects that need machine-readable data access policies: EU Health Data Space implementations, IDS/Gaia-X health data connectors, and DCAT-AP dataset entries expressing access conditions via odrl:Policy. Not a general-purpose healthcare interoperability standard — adopt only when building data-space or consent infrastructure.",
+  "mach:editorialReviewedAt": "2026-05-11",
+
+  "mach:clinicalDomain": ["research", "public-health", "global-health"],
+  "mach:deploymentContext": ["gdpr-ready", "self-hosted"],
+
+  "mach:supportsStandard": ["dcat-ap", "fhir-r4"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.w3.org/TR/odrl-model/",
+      "mach:evidenceType": "specification"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/",
+      "mach:evidenceType": "related-standard"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://internationaldataspaces.org/",
+      "mach:evidenceType": "ecosystem-reference"
+    }
+  ]
+}
