@@ -69,7 +69,7 @@ Each entry type serializes against the appropriate standard:
 |---|---|---|
 | Software / Tool | [CodeMeta 3.0](https://codemeta.github.io/) | schema.org SoftwareApplication |
 | AI / ML Model | [MLDCAT-AP 3.0](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) | Hugging Face Model Card |
-| Dataset | [Croissant (MLCommons)](https://mlcommons.org/working-groups/data/croissant/) | DCAT-AP |
+| Dataset | [Croissant (MLCommons)](https://mlcommons.org/working-groups/data/croissant/) | schema.org Dataset |
 | MCP Server | [MCP server.json](https://github.com/modelcontextprotocol/registry) | CodeMeta |
 | Standard / Spec | schema.org + MACH vocabulary | DCAT-AP |
 | The catalog itself | [DCAT-AP](https://semiceu.github.io/DCAT-AP/) | |
