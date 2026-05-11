@@ -643,24 +643,72 @@
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:2rem;">
     <div style="background:var(--white);padding:1rem 1.25rem;">
       <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-300);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Total entries</p>
-      <p style="font-size:1.5rem;font-weight:500;color:var(--gray-900);"><!-- STAT:TOTAL -->0<!-- /STAT:TOTAL --></p>
+      <p style="font-size:1.5rem;font-weight:500;color:var(--gray-900);"><!-- STAT:TOTAL -->6<!-- /STAT:TOTAL --></p>
     </div>
     <div style="background:var(--white);padding:1rem 1.25rem;">
       <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-300);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Adopt</p>
-      <p style="font-size:1.5rem;font-weight:500;color:var(--teal-500);"><!-- STAT:ADOPT -->0<!-- /STAT:ADOPT --></p>
+      <p style="font-size:1.5rem;font-weight:500;color:var(--teal-500);"><!-- STAT:ADOPT -->5<!-- /STAT:ADOPT --></p>
     </div>
     <div style="background:var(--white);padding:1rem 1.25rem;">
       <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-300);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Assess</p>
-      <p style="font-size:1.5rem;font-weight:500;color:#5B8DEF;"><!-- STAT:ASSESS -->0<!-- /STAT:ASSESS --></p>
+      <p style="font-size:1.5rem;font-weight:500;color:#5B8DEF;"><!-- STAT:ASSESS -->1<!-- /STAT:ASSESS --></p>
     </div>
     <div style="background:var(--white);padding:1rem 1.25rem;">
       <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-300);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Categories</p>
-      <p style="font-size:1.5rem;font-weight:500;color:var(--gray-900);"><!-- STAT:CATS -->0<!-- /STAT:CATS --></p>
+      <p style="font-size:1.5rem;font-weight:500;color:var(--gray-900);"><!-- STAT:CATS -->5<!-- /STAT:CATS --></p>
     </div>
   </div>
 
   <div class="entries-list">
     <!-- ENTRIES:START -->
+    <div class="entry-row">
+      <div>
+        <p class="entry-name"><a href="https://github.com/wso2/fhir-mcp-server" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">FHIR MCP Server (WSO2)</a></p>
+        <p class="entry-desc">Exposes any FHIR R4/R5 server as an MCP server, enabling LLM agents to perform…</p>
+      </div>
+      <span class="entry-cat">MCP Servers</span>
+      <span class="badge badge-assess">Assess</span>
+    </div>
+    <div class="entry-row">
+      <div>
+        <p class="entry-name"><a href="https://huggingface.co/medicalai/ClinicalBERT" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ClinicalBERT</a></p>
+        <p class="entry-desc">BERT model pre-trained on clinical notes from MIMIC-III, fine-tuned for clinic…</p>
+      </div>
+      <span class="entry-cat">AI / ML Models</span>
+      <span class="badge badge-adopt">Adopt</span>
+    </div>
+    <div class="entry-row">
+      <div>
+        <p class="entry-name"><a href="https://openmrs.org" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OpenMRS</a></p>
+        <p class="entry-desc">Enterprise electronic medical record system platform used in resource-constrai…</p>
+      </div>
+      <span class="entry-cat">Clinical Systems</span>
+      <span class="badge badge-adopt">Adopt</span>
+    </div>
+    <div class="entry-row">
+      <div>
+        <p class="entry-name"><a href="https://pyhealth.dev" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">PyHealth</a></p>
+        <p class="entry-desc">Open-source Python toolkit for clinical deep learning that unifies datasets, t…</p>
+      </div>
+      <span class="entry-cat">Tooling</span>
+      <span class="badge badge-adopt">Adopt</span>
+    </div>
+    <div class="entry-row">
+      <div>
+        <p class="entry-name"><a href="https://hl7.org/fhir/R4/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">HL7 FHIR R4</a></p>
+        <p class="entry-desc">The dominant healthcare interoperability standard, defining a RESTful API and …</p>
+      </div>
+      <span class="entry-cat">Interop Standards</span>
+      <span class="badge badge-adopt">Adopt</span>
+    </div>
+    <div class="entry-row">
+      <div>
+        <p class="entry-name"><a href="https://openehr.org" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">openEHR</a></p>
+        <p class="entry-desc">Open specification for a vendor-neutral EHR platform based on a two-level mode…</p>
+      </div>
+      <span class="entry-cat">Interop Standards</span>
+      <span class="badge badge-adopt">Adopt</span>
+    </div>
     <!-- ENTRIES:END -->
   </div>
 
