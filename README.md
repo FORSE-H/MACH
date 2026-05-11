@@ -7,25 +7,25 @@
 [![Entries](https://img.shields.io/badge/entries-seeding-orange.svg)](#)
 [![Validate](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml/badge.svg)](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml)
 
-MACH is an open, machine-actionable catalog of open-source healthcare software, AI/ML models, clinical standards, datasets, tooling, and MCP servers — curated for humans, queryable by agents.
+MACH is an open, machine-actionable catalog of open-source healthcare software, AI/ML models, clinical standards, datasets, tooling, and MCP servers - curated for humans, queryable by agents.
 
 Every entry is a structured JSON-LD record aligned with established open metadata standards, so hospitals, researchers, governments, and AI agents can all discover and consume the open healthcare commons.
 
-> **Project status:** seeding — initial entries and infrastructure being established.
+> **Project status:** seeding - initial entries and infrastructure being established.
 > Initiated October 2025. A project of [FORSE-H](https://github.com/FORSE-H).
 
 ---
 
 ## Why MACH?
 
-The open healthcare technology ecosystem is fragmented. EHR systems, FHIR servers, clinical AI models, medical imaging tools, ontology services, interoperability standards, and a fast-growing layer of MCP servers exist across hundreds of repos, blog posts, and Hugging Face filters — none of which is structured for agent discovery or aligned with open metadata standards.
+The open healthcare technology ecosystem is fragmented. EHR systems, FHIR servers, clinical AI models, medical imaging tools, ontology services, interoperability standards, and a fast-growing layer of MCP servers exist across hundreds of repos, blog posts, and Hugging Face filters - none of which is structured for agent discovery or aligned with open metadata standards.
 
 MACH fills that gap with:
 
-- **Editorial judgement** — every entry is rated Adopt / Assess / Situational / Caution, with a public rationale
-- **Machine-readable exports** — DCAT-AP, MLDCAT-AP 3.0, CodeMeta 3.0, MCP `server.json`, Croissant
-- **FAIR alignment** — stable entry URIs, versioned releases, DOI-archived on Zenodo
-- **Community curation** — all data lives in Git; contributions via pull request
+- **Editorial judgement** - every entry is rated Adopt / Assess / Situational / Caution, with a public rationale
+- **Machine-readable exports** - DCAT-AP, MLDCAT-AP 3.0, CodeMeta 3.0, MCP `server.json`, Croissant
+- **FAIR alignment** - stable entry URIs, versioned releases, DOI-archived on Zenodo
+- **Community curation** - all data lives in Git; contributions via pull request
 
 ---
 
@@ -72,7 +72,7 @@ Each entry type serializes against the appropriate standard:
 | Dataset | [Croissant (MLCommons)](https://mlcommons.org/working-groups/data/croissant/) | DCAT-AP |
 | MCP Server | [MCP server.json](https://github.com/modelcontextprotocol/registry) | CodeMeta |
 | Standard / Spec | schema.org + MACH vocabulary | DCAT-AP |
-| The catalog itself | [DCAT-AP](https://semiceu.github.io/DCAT-AP/) | — |
+| The catalog itself | [DCAT-AP](https://semiceu.github.io/DCAT-AP/) | |
 
 ---
 
@@ -82,11 +82,11 @@ The table above describes the *intended* alignment. Current implementation gaps:
 
 | Standard | Status | Gap |
 |---|---|---|
-| CodeMeta 3.0 | **Partial** — field names follow CodeMeta, `codemeta:` prefix declared in context | Export script (`scripts/export_codemeta.py`) not yet built; no per-entry `/codemeta/<slug>.json` output |
-| MLDCAT-AP 3.0 | **Partial** — `mldcat:` prefix now declared; model fields resolve to `mldcat:` URIs | Export script (`scripts/export_mldcat_ap.py`) not yet built; no `/mldcat-ap.jsonld` output |
-| Croissant | **Not started** — no dataset entries exist yet | Dataset entries, Croissant context mapping, and export script all pending |
-| MCP server.json | **Partial** — `mach:transport`, `mach:authMethod` etc. present in MCP entries | Export script producing compliant `/mcp/<slug>.server.json` not yet built |
-| DCAT-AP | **Partial** — `dcat:` prefix declared in context | No DCAT-AP export; `dcat:` terms not yet used in individual entries |
+| CodeMeta 3.0 | **Partial** - field names follow CodeMeta, `codemeta:` prefix declared in context | Export script (`scripts/export_codemeta.py`) not yet built; no per-entry `/codemeta/<slug>.json` output |
+| MLDCAT-AP 3.0 | **Partial** - `mldcat:` prefix now declared; model fields resolve to `mldcat:` URIs | Export script (`scripts/export_mldcat_ap.py`) not yet built; no `/mldcat-ap.jsonld` output |
+| Croissant | **Not started** - no dataset entries exist yet | Dataset entries, Croissant context mapping, and export script all pending |
+| MCP server.json | **Partial** - `mach:transport`, `mach:authMethod` etc. present in MCP entries | Export script producing compliant `/mcp/<slug>.server.json` not yet built |
+| DCAT-AP | **Partial** - `dcat:` prefix declared in context | No DCAT-AP export; `dcat:` terms not yet used in individual entries |
 | Bitol ODPS | **Not started** | No data product entries or ODPS mapping |
 
 All export generators are planned Phase 2 work.
@@ -119,7 +119,7 @@ Borrowed and adapted from the [ThoughtWorks Tech Radar](https://www.thoughtworks
 | **Adopt** | Production-ready, well-governed, recommended for new work |
 | **Situational** | Right in specific contexts; requires deliberate choice |
 | **Assess** | Promising but not yet proven for production-default use |
-| **Caution** | Avoid for new work — superseded, unmaintained, or fading |
+| **Caution** | Avoid for new work - superseded, unmaintained, or fading |
 
 Every entry's drawer carries a public "Why this judgement" rationale.
 
@@ -130,7 +130,7 @@ Every entry's drawer carries a public "Why this judgement" rationale.
 - **Code** (CI pipeline, adapters, site tooling): [Apache-2.0](LICENSE)
 - **Catalog data** (all `entries/` JSON-LD files): [CC-BY-4.0](LICENSE-DATA)
 
-Attribution: *MACH — Machine-Actionable Catalog for Healthcare, FORSE-H, https://github.com/FORSE-H/MACH*
+Attribution: *MACH - Machine-Actionable Catalog for Healthcare, FORSE-H, https://github.com/FORSE-H/MACH*
 
 ---
 
