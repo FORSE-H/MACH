@@ -264,6 +264,11 @@
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--gray-900);
+    text-decoration: none;
+  }
+  a.standard-cell-name:hover {
+    text-decoration: underline;
+    color: var(--accent);
   }
 
   /* ── CATEGORIES ── */
@@ -611,27 +616,31 @@
   <div class="standards-grid">
     <div class="standard-cell">
       <span class="standard-cell-label">Software</span>
-      <span class="standard-cell-name">CodeMeta 3.0</span>
+      <a class="standard-cell-name" href="https://codemeta.github.io/" target="_blank" rel="noopener">CodeMeta 3.0</a>
     </div>
     <div class="standard-cell">
       <span class="standard-cell-label">AI / ML models</span>
-      <span class="standard-cell-name">MLDCAT-AP 3.0</span>
+      <a class="standard-cell-name" href="https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/" target="_blank" rel="noopener">MLDCAT-AP 3.0</a>
     </div>
     <div class="standard-cell">
       <span class="standard-cell-label">Datasets</span>
-      <span class="standard-cell-name">Croissant</span>
+      <a class="standard-cell-name" href="https://mlcommons.org/working-groups/data/croissant/" target="_blank" rel="noopener">Croissant</a>
     </div>
     <div class="standard-cell">
       <span class="standard-cell-label">MCP servers</span>
-      <span class="standard-cell-name">server.json</span>
+      <a class="standard-cell-name" href="https://github.com/modelcontextprotocol/registry" target="_blank" rel="noopener">server.json</a>
     </div>
     <div class="standard-cell">
       <span class="standard-cell-label">Catalog</span>
-      <span class="standard-cell-name">DCAT-AP</span>
+      <a class="standard-cell-name" href="https://semiceu.github.io/DCAT-AP/" target="_blank" rel="noopener">DCAT-AP</a>
     </div>
     <div class="standard-cell">
       <span class="standard-cell-label">Data products</span>
-      <span class="standard-cell-name">Bitol ODPS</span>
+      <a class="standard-cell-name" href="https://github.com/bitol-io/open-data-product-standard" target="_blank" rel="noopener">Bitol ODPS</a>
+    </div>
+    <div class="standard-cell">
+      <span class="standard-cell-label">Standards / Specs</span>
+      <a class="standard-cell-name" href="https://schema.org/" target="_blank" rel="noopener">schema.org + MACH</a>
     </div>
   </div>
 </div>
