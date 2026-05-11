@@ -426,6 +426,16 @@
   .entry-type { background: var(--teal-50); color: var(--teal-700); }
   .entry-lic  { background: var(--gray-50); color: var(--gray-500); }
 
+  .entry-url {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+    color: var(--gray-300);
+    text-decoration: none;
+    padding: 1px 4px;
+  }
+  .entry-url:hover { color: var(--teal-500); text-decoration: none; }
+
   .entry-desc {
     font-size: 0.78rem;
     color: var(--gray-300);
@@ -440,6 +450,31 @@
     letter-spacing: 0.06em;
     white-space: nowrap;
   }
+
+  /* ── FILTER BAR ── */
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .filter-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+
+  .filter-btn:hover { border-color: var(--gray-300); color: var(--gray-900); }
+  .filter-btn.active { background: var(--gray-900); color: var(--white); border-color: var(--gray-900); }
 
   /* ── CTA ── */
   .cta {
@@ -655,116 +690,118 @@
   </div>
   <span style="display:none;"><!-- STAT:ADOPT -->8<!-- /STAT:ADOPT --><!-- STAT:ASSESS -->6<!-- /STAT:ASSESS --></span>
 
+  <div class="filter-bar" id="filter-bar"></div>
+
   <div class="entries-list">
     <!-- ENTRIES:START -->
-    <div class="entry-row">
+    <div class="entry-row" data-cat="mcp-servers-ai-interfaces">
       <div>
-        <p class="entry-name"><a href="https://github.com/wso2/fhir-mcp-server" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">FHIR MCP Server (WSO2)</a></p>
-        <div class="entry-tags"><span class="entry-type">MCP Server</span><span class="entry-lic">Apache-2.0</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/mcp-servers/fhir-mcp-wso2.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">FHIR MCP Server (WSO2)</a></p>
+        <div class="entry-tags"><span class="entry-type">MCP Server</span><span class="entry-lic">Apache-2.0</span><a href="https://github.com/wso2/fhir-mcp-server" target="_blank" rel="noopener" class="entry-url">↗ site</a></div>
         <p class="entry-desc">Exposes any FHIR R4/R5 server as an MCP server, enabling LLM agents to perform CRUD operat…</p>
       </div>
       <span class="entry-cat">MCP Servers</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="mcp-servers-ai-interfaces">
       <div>
-        <p class="entry-name"><a href="https://fastomop.github.io/omcp/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OMCP</a></p>
-        <div class="entry-tags"><span class="entry-type">MCP Server</span><span class="entry-lic">MIT</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/mcp-servers/omcp.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OMCP</a></p>
+        <div class="entry-tags"><span class="entry-type">MCP Server</span><span class="entry-lic">MIT</span><a href="https://fastomop.github.io/omcp/" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/fastomop/omcp" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
         <p class="entry-desc">Model Context Protocol (MCP) server for the OMOP Common Data Model. Provides a structured,…</p>
       </div>
       <span class="entry-cat">MCP Servers</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="ai-ml-models">
       <div>
-        <p class="entry-name"><a href="https://huggingface.co/medicalai/ClinicalBERT" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ClinicalBERT</a></p>
-        <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">MIT</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/clinicalbert.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ClinicalBERT</a></p>
+        <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">MIT</span><a href="https://huggingface.co/medicalai/ClinicalBERT" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/kexinhuang12345/clinicalBERT" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
         <p class="entry-desc">BERT model pre-trained on clinical notes from MIMIC-III, fine-tuned for clinical NLP tasks…</p>
       </div>
       <span class="entry-cat">AI / ML Models</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="medical-imaging-signals">
       <div>
-        <p class="entry-name"><a href="https://github.com/MIC-DKFZ/nnDetection" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">nnDetection</a></p>
-        <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/nndetection.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">nnDetection</a></p>
+        <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span><a href="https://github.com/MIC-DKFZ/nnDetection" target="_blank" rel="noopener" class="entry-url">↗ site</a></div>
         <p class="entry-desc">Self-configuring framework for 3D volumetric medical object detection, applying the same a…</p>
       </div>
       <span class="entry-cat">Imaging & Signals</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="medical-imaging-signals">
       <div>
-        <p class="entry-name"><a href="https://github.com/MIC-DKFZ/nnUNet" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">nnU-Net</a></p>
-        <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/nnunet.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">nnU-Net</a></p>
+        <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span><a href="https://github.com/MIC-DKFZ/nnUNet" target="_blank" rel="noopener" class="entry-url">↗ site</a></div>
         <p class="entry-desc">Self-configuring framework for medical image segmentation that automatically adapts its ar…</p>
       </div>
       <span class="entry-cat">Imaging & Signals</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="ai-ml-models">
       <div>
-        <p class="entry-name"><a href="https://openmed.life/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OpenMed</a></p>
-        <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/openmed.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OpenMed</a></p>
+        <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span><a href="https://openmed.life/" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/maziyarpanahi/openmed" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
         <p class="entry-desc">Production-ready medical NLP toolkit providing state-of-the-art encoder transformers (BERT…</p>
       </div>
       <span class="entry-cat">AI / ML Models</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="medical-imaging-signals">
       <div>
-        <p class="entry-name"><a href="https://github.com/MIC-DKFZ/TractSeg" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">TractSeg</a></p>
-        <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/tractseg.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">TractSeg</a></p>
+        <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span><a href="https://github.com/MIC-DKFZ/TractSeg" target="_blank" rel="noopener" class="entry-url">↗ site</a></div>
         <p class="entry-desc">Automated segmentation of 72 white matter fibre bundles from diffusion MRI tractograms, di…</p>
       </div>
       <span class="entry-cat">Imaging & Signals</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="tooling-infrastructure">
       <div>
-        <p class="entry-name"><a href="https://kaapana.ai" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Kaapana</a></p>
-        <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">AGPL-3.0</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/kaapana.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Kaapana</a></p>
+        <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">AGPL-3.0</span><a href="https://kaapana.ai" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/kaapana/kaapana" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
         <p class="entry-desc">Kubernetes-based open-source platform toolkit for building federated medical image analysi…</p>
       </div>
       <span class="entry-cat">Tooling</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="medical-imaging-signals">
       <div>
-        <p class="entry-name"><a href="https://www.mitk.org" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">MITK</a></p>
-        <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">BSD-3-Clause</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/mitk.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">MITK</a></p>
+        <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">BSD-3-Clause</span><a href="https://www.mitk.org" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/MITK/MITK" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
         <p class="entry-desc">Open-source medical image computing toolkit combining a full-featured desktop workbench fo…</p>
       </div>
       <span class="entry-cat">Imaging & Signals</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="clinical-systems">
       <div>
-        <p class="entry-name"><a href="https://openmrs.org" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OpenMRS</a></p>
-        <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">MPL-2.0</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/openmrs.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OpenMRS</a></p>
+        <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">MPL-2.0</span><a href="https://openmrs.org" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/openmrs/openmrs-core" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
         <p class="entry-desc">Enterprise electronic medical record system platform used in resource-constrained environm…</p>
       </div>
       <span class="entry-cat">Clinical Systems</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="tooling-infrastructure">
       <div>
-        <p class="entry-name"><a href="https://pyhealth.dev" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">PyHealth</a></p>
-        <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">MIT</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/pyhealth.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">PyHealth</a></p>
+        <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">MIT</span><a href="https://pyhealth.dev" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/sunlabuiuc/PyHealth" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
         <p class="entry-desc">Open-source Python toolkit for clinical deep learning that unifies datasets, tasks, and ML…</p>
       </div>
       <span class="entry-cat">Tooling</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="tooling-infrastructure">
       <div>
-        <p class="entry-name"><a href="https://vantage6.ai" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">vantage6</a></p>
-        <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">Apache-2.0</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/vantage6.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">vantage6</a></p>
+        <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">Apache-2.0</span><a href="https://vantage6.ai" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/vantage6/vantage6" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
         <p class="entry-desc">Privacy Enhancing Technology (PET) operations platform enabling federated learning and mul…</p>
       </div>
       <span class="entry-cat">Tooling</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="interoperability-standards">
       <div>
-        <p class="entry-name"><a href="https://hl7.org/fhir/R4/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">HL7 FHIR R4</a></p>
-        <div class="entry-tags"><span class="entry-type">Standard</span><span class="entry-lic">CC0-1.0</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/standards/fhir-r4.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">HL7 FHIR R4</a></p>
+        <div class="entry-tags"><span class="entry-type">Standard</span><span class="entry-lic">CC0-1.0</span><a href="https://hl7.org/fhir/R4/" target="_blank" rel="noopener" class="entry-url">↗ site</a></div>
         <p class="entry-desc">The dominant healthcare interoperability standard, defining a RESTful API and JSON/XML res…</p>
       </div>
       <span class="entry-cat">Interop Standards</span>
     </div>
-    <div class="entry-row">
+    <div class="entry-row" data-cat="interoperability-standards">
       <div>
-        <p class="entry-name"><a href="https://openehr.org" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">openEHR</a></p>
-        <div class="entry-tags"><span class="entry-type">Standard</span><span class="entry-lic">CC-BY-3.0</span></div>
+        <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/standards/openehr.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">openEHR</a></p>
+        <div class="entry-tags"><span class="entry-type">Standard</span><span class="entry-lic">CC-BY-3.0</span><a href="https://openehr.org" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/openEHR" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
         <p class="entry-desc">Open specification for a vendor-neutral EHR platform based on a two-level modelling paradi…</p>
       </div>
       <span class="entry-cat">Interop Standards</span>
@@ -842,5 +879,55 @@
   &nbsp;·&nbsp; 2025–2026
 </footer>
 
+<script>
+(function () {
+  const bar = document.getElementById('filter-bar');
+  const rows = Array.from(document.querySelectorAll('.entry-row[data-cat]'));
+  if (!bar || !rows.length) return;
+
+  // Collect unique categories in order of appearance
+  const seen = new Set();
+  const cats = [];
+  rows.forEach(r => {
+    const c = r.dataset.cat;
+    if (c && !seen.has(c)) { seen.add(c); cats.push(c); }
+  });
+
+  // Build label map from entry-cat spans
+  const labelMap = {};
+  rows.forEach(r => {
+    const c = r.dataset.cat;
+    const span = r.querySelector('.entry-cat');
+    if (c && span && !labelMap[c]) labelMap[c] = span.textContent.trim();
+  });
+
+  // Render buttons
+  const allBtn = document.createElement('button');
+  allBtn.className = 'filter-btn active';
+  allBtn.textContent = 'All';
+  allBtn.dataset.cat = '';
+  bar.appendChild(allBtn);
+
+  cats.forEach(c => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.textContent = labelMap[c] || c;
+    btn.dataset.cat = c;
+    bar.appendChild(btn);
+  });
+
+  // Filter logic
+  bar.addEventListener('click', e => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const selected = btn.dataset.cat;
+    rows.forEach(r => {
+      r.style.display = (!selected || r.dataset.cat === selected) ? '' : 'none';
+    });
+  });
+})();
+</script>
 </body>
 </html>

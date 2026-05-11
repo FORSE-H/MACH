@@ -76,6 +76,22 @@ def get_license_short(e):
         return lic.rstrip("/").split("/")[-1]
     return lic
 
+def get_jsonld_url(e):
+    entry_id = e.get("@id", "")
+    if "tree/main" in entry_id:
+        return entry_id.replace("tree/main", "blob/main") + ".jsonld"
+    return ""
+
+def build_url_links(e):
+    site = e.get("url", "")
+    repo = e.get("codeRepository", "")
+    links = []
+    if site:
+        links.append(f'<a href="{site}" target="_blank" rel="noopener" class="entry-url">↗ site</a>')
+    if repo and repo != site:
+        links.append(f'<a href="{repo}" target="_blank" rel="noopener" class="entry-url">↗ repo</a>')
+    return "".join(links)
+
 def build_entries_html(entries):
     if not entries:
         return "<p style='color:var(--gray-300);font-size:0.875rem;'>No entries yet.</p>"
@@ -84,21 +100,22 @@ def build_entries_html(entries):
     for e in entries:
         name        = e.get("name", "—")
         description = e.get("description", "")
-        url         = e.get("url", e.get("codeRepository", "#"))
         cat         = e.get("mach:category", "")
 
-        short_desc = (description[:90] + "…") if len(description) > 92 else description
-
+        short_desc  = (description[:90] + "…") if len(description) > 92 else description
         cat_label   = category_label(cat)
         entry_type  = get_entry_type(e)
         license_str = get_license_short(e)
+        jsonld_url  = get_jsonld_url(e)
+        url_links   = build_url_links(e)
 
-        lic_tag = f'<span class="entry-lic">{license_str}</span>' if license_str else ""
+        lic_tag      = f'<span class="entry-lic">{license_str}</span>' if license_str else ""
+        name_href    = jsonld_url if jsonld_url else e.get("url", e.get("codeRepository", "#"))
 
-        rows.append(f"""    <div class="entry-row">
+        rows.append(f"""    <div class="entry-row" data-cat="{cat}">
       <div>
-        <p class="entry-name"><a href="{url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">{name}</a></p>
-        <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}</div>
+        <p class="entry-name"><a href="{name_href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">{name}</a></p>
+        <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}{url_links}</div>
         <p class="entry-desc">{short_desc}</p>
       </div>
       <span class="entry-cat">{cat_label}</span>
