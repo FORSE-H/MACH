@@ -76,6 +76,23 @@ Each entry type serializes against the appropriate standard:
 
 ---
 
+## Implementation status
+
+The table above describes the *intended* alignment. Current implementation gaps:
+
+| Standard | Status | Gap |
+|---|---|---|
+| CodeMeta 3.0 | **Partial** — field names follow CodeMeta, `codemeta:` prefix declared in context | Export script (`scripts/export_codemeta.py`) not yet built; no per-entry `/codemeta/<slug>.json` output |
+| MLDCAT-AP 3.0 | **Partial** — `mldcat:` prefix now declared; model fields resolve to `mldcat:` URIs | Export script (`scripts/export_mldcat_ap.py`) not yet built; no `/mldcat-ap.jsonld` output |
+| Croissant | **Not started** — no dataset entries exist yet | Dataset entries, Croissant context mapping, and export script all pending |
+| MCP server.json | **Partial** — `mach:transport`, `mach:authMethod` etc. present in MCP entries | Export script producing compliant `/mcp/<slug>.server.json` not yet built |
+| DCAT-AP | **Partial** — `dcat:` prefix declared in context | No DCAT-AP export; `dcat:` terms not yet used in individual entries |
+| Bitol ODPS | **Not started** | No data product entries or ODPS mapping |
+
+All export generators are Phase 2 work, pending the 
+
+---
+
 ## Contributing
 
 All catalog data lives as JSON-LD files under `entries/`. Contributions are made via pull request.

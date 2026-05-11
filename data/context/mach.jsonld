@@ -1,12 +1,13 @@
 {
   "@context": {
     "@version": 1.1,
-    "schema": "https://schema.org/",
+    "schema":   "https://schema.org/",
     "codemeta": "https://w3id.org/codemeta/3.0#",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "mach": "https://github.com/FORSE-H/MACH/blob/main/data/context/mach.jsonld#",
-    "spdx": "https://spdx.org/rdf/terms/#",
+    "dcat":     "http://www.w3.org/ns/dcat#",
+    "dcterms":  "http://purl.org/dc/terms/",
+    "mldcat":   "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#",
+    "mach":     "https://github.com/FORSE-H/MACH/blob/main/data/context/mach.jsonld#",
+    "spdx":     "https://spdx.org/rdf/terms/#",
 
     "name":               "schema:name",
     "alternateName":      "schema:alternateName",
@@ -48,11 +49,11 @@
     "mach:alternativeTo":       { "@id": "mach:alternativeTo", "@container": "@set" },
     "mach:editorialReviewedAt": { "@id": "mach:editorialReviewedAt" },
 
-    "mach:weightsLicense":      { "@id": "mach:weightsLicense" },
-    "mach:trainingDataSummary": { "@id": "mach:trainingDataSummary" },
-    "mach:intendedUse":         { "@id": "mach:intendedUse" },
-    "mach:evaluationReference": { "@id": "mach:evaluationReference", "@container": "@set" },
-    "mach:aiActRiskClass":      { "@id": "mach:aiActRiskClass" },
+    "mach:weightsLicense":      { "@id": "mldcat:weightsLicense" },
+    "mach:trainingDataSummary": { "@id": "mldcat:trainingDataSummary" },
+    "mach:intendedUse":         { "@id": "mldcat:intendedUse" },
+    "mach:evaluationReference": { "@id": "mldcat:evaluationReference", "@container": "@set" },
+    "mach:aiActRiskClass":      { "@id": "mldcat:aiActRiskClass" },
 
     "mach:transport":           { "@id": "mach:transport" },
     "mach:authMethod":          { "@id": "mach:authMethod" },
