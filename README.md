@@ -110,21 +110,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, including the entry c
 
 ---
 
-## Judgement levels
-
-Borrowed and adapted from the [ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar):
-
-| Level | Meaning |
-|---|---|
-| **Adopt** | Production-ready, well-governed, recommended for new work |
-| **Situational** | Right in specific contexts; requires deliberate choice |
-| **Assess** | Promising but not yet proven for production-default use |
-| **Caution** | Avoid for new work - superseded, unmaintained, or fading |
-
-Every entry's drawer carries a public "Why this judgement" rationale.
-
----
-
 ## License
 
 - **Code** (CI pipeline, adapters, site tooling): [Apache-2.0](LICENSE)
