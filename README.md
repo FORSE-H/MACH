@@ -91,6 +91,11 @@ The table above describes the *intended* alignment. Current implementation gaps:
 
 All export generators are planned Phase 2 work.
 
+**Planned Phase 3 features:**
+
+- **AI-assisted catalog search** - natural language query interface over catalog entries; likely implemented as semantic search over entry embeddings or as an MCP server exposing MACH as an agent tool
+- **Automated metadata enrichment on PR** - GitHub Action triggered when a new entry PR is opened; auto-fetches GitHub stars, last release date, license, and language from GitHub/HuggingFace/PyPI APIs and posts a pre-fill comment on the PR to reduce manual curator work
+
 ---
 
 ## Contributing
