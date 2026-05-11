@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/mitk",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "mitk",
+  "name": "MITK",
+  "alternateName": ["Medical Imaging Interaction Toolkit", "MITK Workbench"],
+  "description": "Open-source medical image computing toolkit combining a full-featured desktop workbench for visualization, segmentation, and registration with a modular C++ framework for building custom medical imaging applications. Supports CT, MRI, PET, and other DICOM modalities in 2D, 3D, and 4D. Integrates nnInteractive AI segmentation. Developed at DKFZ.",
+  "url": "https://www.mitk.org",
+  "codeRepository": "https://github.com/MITK/MITK",
+  "logo": "../../logos/mitk.svg",
+  "relatedLink": [
+    "https://docs.mitk.org/2025.12.2/UserManualPortal.html",
+    "https://docs.mitk.org/2025.12.2/DeveloperManualPortal.html"
+  ],
+
+  "license": "BSD-3-Clause",
+  "softwareVersion": "2025.12.2",
+  "dateModified": "2026-02-12",
+
+  "programmingLanguage": ["C++", "Python"],
+  "operatingSystem": ["Windows", "macOS", "Linux"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "medical-imaging", "dicom", "segmentation", "registration",
+    "visualization", "ct", "mri", "pet", "3d-slicer-alternative",
+    "c++-framework", "plugin-system", "nninteractive", "image-guided-therapy"
+  ],
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "German Cancer Research Center (DKFZ)"
+  },
+
+  "mach:governance": "academic",
+  "mach:foundation": "Division of Medical Image Computing, DKFZ Heidelberg",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "dicom-viewer",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "One of the most comprehensive and long-standing open-source medical image computing platforms, developed at DKFZ since the early 2000s. BSD-3-Clause license, native cross-platform installers (Windows/macOS/Linux), active release cadence (v2025.12.2, February 2026). Serves both end users (via the Workbench GUI) and developers (via the extensible C++ plugin framework). The recent integration of nnInteractive AI segmentation brings state-of-the-art interactive AI directly into the workbench. Comparable in scope to 3D Slicer but with a stronger European research and clinical base. Academic governance from a well-resourced national research centre substantially reduces bus-factor risk.",
+  "mach:editorialReviewedAt": "2026-05-11",
+
+  "mach:clinicalDomain": [
+    "radiology", "oncology", "neurology", "surgery",
+    "pathology", "cardiology"
+  ],
+  "mach:deploymentContext": ["self-hosted"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/MITK/MITK",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.mitk.org",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/MITK/MITK/releases/tag/v2025.12.2",
+      "mach:evidenceType": "release"
+    }
+  ],
+
+  "mach:alternativeTo": ["3d-slicer", "itk-snap", "ohif-viewer"],
+
+  "schema:comment": "Two strong follow-on entries from the MITK partner projects page: (1) Kaapana (https://www.kaapana.ai, github.com/kaapana/kaapana) — open-source Kubernetes-based platform for federated medical image analysis workflows, strong fit for tooling-infrastructure/federated-learning; (2) MITK-Diffusion (github.com/MIC-DKFZ/MITK-Diffusion) — diffusion MRI tractography and connectomics, strong fit for medical-imaging-signals."
+}

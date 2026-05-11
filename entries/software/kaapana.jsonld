@@ -1,0 +1,78 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/kaapana",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "kaapana",
+  "name": "Kaapana",
+  "description": "Kubernetes-based open-source platform toolkit for building federated medical image analysis infrastructure. Orchestrates AI workflows (nnU-Net, TotalSegmentator), integrates MITK Workbench, 3D Slicer, and JupyterLab as plugins, provides an internal PACS (dcm4chee), object storage (MinIO), workflow engine (Apache Airflow), search (OpenSearch), and identity management (Keycloak). Designed for multi-centre federated learning — data stays on-site, only results are shared.",
+  "url": "https://kaapana.ai",
+  "codeRepository": "https://github.com/kaapana/kaapana",
+  "logo": "../../logos/kaapana.svg",
+  "relatedLink": [
+    "https://kaapana.readthedocs.io/en/latest/",
+    "https://join.slack.com/t/kaapana/shared_invite/zt-hilvek0w-ucabihas~jn9PDAM0O3gVQ/"
+  ],
+
+  "license": "AGPL-3.0",
+  "softwareVersion": "0.6.0",
+  "dateModified": "2026-02-01",
+
+  "programmingLanguage": ["Python", "TypeScript"],
+  "operatingSystem": ["Linux", "Kubernetes"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "federated-learning", "medical-imaging", "kubernetes", "airflow",
+    "dicom", "pacs", "nnunet", "radiomics", "federated-analytics",
+    "multi-centre", "radiotherapy", "radiology", "platform-provisioning"
+  ],
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Division of Medical Image Computing, DKFZ Heidelberg"
+  },
+
+  "mach:governance": "academic",
+  "mach:foundation": "Division of Medical Image Computing, DKFZ (Hanno Gao, Philipp Schader et al.)",
+  "mach:category": "tooling-infrastructure",
+  "mach:subcategory": "federated-learning",
+  "mach:maturity": "beta",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Architecturally impressive Kubernetes-based platform for federated medical image analysis, with real national-scale deployments including RACOON (German national COVID-19 radiology network) and JIP (Joint Imaging Platform, DKTK). Integrates nnU-Net, MITK, TotalSegmentator, and Airflow into a coherent, access-controlled research platform. Two caveats worth knowing before adopting: (1) AGPL-3.0 license — institutions that deploy a modified version as a service must release their modifications; the team acknowledges this and may switch to a more liberal license in the future; (2) Kubernetes dependency means significant infrastructure expertise is required. Marked Assess rather than Adopt due to the pre-1.0 version, AGPL licensing complexity, and k8s barrier — but the RACOON deployment and active DKFZ team make it a strong candidate to move to Adopt as it matures.",
+  "mach:editorialReviewedAt": "2026-05-11",
+
+  "mach:clinicalDomain": [
+    "radiology", "oncology", "pathology", "neurology"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted", "docker", "kubernetes", "gdpr-ready"
+  ],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/kaapana/kaapana",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://kaapana.readthedocs.io/en/latest/",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1007/978-3-031-18523-6_13",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Towards Real-World Federated Learning in Medical Image Analysis Using Kaapana. Springer, 2022."
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://racoon.network/",
+      "mach:evidenceType": "deployment-evidence",
+      "schema:name": "RACOON — German national COVID-19 radiology network built on Kaapana"
+    }
+  ],
+
+  "mach:alternativeTo": ["vantage6", "substra", "flower-federated-learning"]
+}

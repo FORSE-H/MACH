@@ -1,0 +1,82 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/nnunet",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode", "mach:MLModel"],
+
+  "identifier": "nnunet",
+  "name": "nnU-Net",
+  "alternateName": ["nnUNet", "no-new-UNet"],
+  "description": "Self-configuring framework for medical image segmentation that automatically adapts its architecture, preprocessing, training, and post-processing to any new dataset without manual intervention. The de-facto baseline and benchmark for 3D medical image segmentation, dominating MICCAI segmentation challenges since 2018.",
+  "url": "https://github.com/MIC-DKFZ/nnUNet",
+  "codeRepository": "https://github.com/MIC-DKFZ/nnUNet",
+  "logo": "../../logos/dkfz.svg",
+  "relatedLink": [
+    "https://pypi.org/project/nnunetv2/"
+  ],
+
+  "license": "Apache-2.0",
+  "softwareVersion": "2.x",
+  "dateModified": "2026-02-18",
+
+  "programmingLanguage": ["Python"],
+  "operatingSystem": ["Linux", "macOS", "Windows"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "medical-image-segmentation", "self-configuring", "deep-learning",
+    "unet", "3d-segmentation", "miccai", "radiology", "pathology",
+    "ct", "mri", "pytorch", "automated-ml"
+  ],
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Division of Medical Image Computing, DKFZ Heidelberg"
+  },
+
+  "mach:weightsLicense": "Apache-2.0",
+  "mach:trainingDataSummary": "Framework only — no fixed weights. Trains from scratch on any user-provided segmentation dataset using automated self-configuration. Pre-trained models for specific tasks (e.g. TotalSegmentator) built on top of nnU-Net are available separately.",
+  "mach:intendedUse": "Medical image segmentation research and clinical decision support development. Supports CT, MRI, and other volumetric modalities. Used in MICCAI challenges, radiology, pathology, and surgical planning workflows. Not a cleared medical device.",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:evaluationReference": [
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/s41592-020-01008-z",
+      "schema:name": "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature Methods, 2021."
+    }
+  ],
+
+  "mach:governance": "academic",
+  "mach:foundation": "Division of Medical Image Computing, DKFZ (Fabian Isensee et al.)",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "imaging-model",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The undisputed benchmark for medical image segmentation. nnU-Net's self-configuring approach — automatically tuning architecture, preprocessing, and post-processing per dataset — has dominated MICCAI segmentation challenges since 2018 and is cited in thousands of papers. Nature Methods 2021 publication, Apache-2.0, pip-installable (nnunetv2), 8,000+ GitHub stars. Any new medical segmentation project should benchmark against or build on nnU-Net before choosing an alternative. Academic governance is the only caveat; the principal author (Fabian Isensee) is exceptionally active.",
+  "mach:editorialReviewedAt": "2026-05-11",
+
+  "mach:clinicalDomain": [
+    "radiology", "oncology", "pathology", "neurology",
+    "cardiology", "surgery"
+  ],
+  "mach:deploymentContext": ["self-hosted", "cloud-only", "docker"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/MIC-DKFZ/nnUNet",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pypi.org/project/nnunetv2/",
+      "mach:evidenceType": "package-registry"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/s41592-020-01008-z",
+      "mach:evidenceType": "academic-reference"
+    }
+  ],
+
+  "mach:alternativeTo": ["monai", "totalsegmentator", "medsam"]
+}

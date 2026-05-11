@@ -1,0 +1,78 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/omcp",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode", "mach:MCPServer"],
+
+  "identifier": "omcp",
+  "name": "OMCP",
+  "alternateName": ["OMOP Model Context Protocol Server", "fastomop/omcp"],
+  "description": "Model Context Protocol (MCP) server for the OMOP Common Data Model. Provides a structured, secure interface for LLM agents to query and analyse healthcare data stored in OMOP CDM databases, with built-in OMOP schema awareness, SQL validation, and natural-language-to-SQL generation. Part of the FastOMOP ecosystem.",
+  "url": "https://fastomop.github.io/omcp/",
+  "codeRepository": "https://github.com/fastomop/omcp",
+  "logo": "../../logos/fastomop.svg",
+
+  "license": "MIT",
+  "softwareVersion": "0.0.1-dev",
+  "dateModified": "2026-04-27",
+
+  "programmingLanguage": ["Python"],
+  "operatingSystem": ["Linux", "macOS", "Windows"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "omop", "omop-cdm", "ohdsi", "mcp-server", "real-world-evidence",
+    "rwe", "clinical-data", "nlp-to-sql", "llm", "healthcare-ai",
+    "observational-research", "ehr-analytics"
+  ],
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "FastOMOP contributors"
+  },
+
+  "mach:transport": "stdio",
+  "mach:authMethod": "none",
+  "mach:mcpSpecVersion": "2024-11-05",
+
+  "mach:governance": "individual",
+  "mach:foundation": "FastOMOP (Niko Moeller-Grell et al., NHS / King's College London affiliation)",
+  "mach:category": "mcp-servers-ai-interfaces",
+  "mach:subcategory": "omop-mcp",
+  "mach:maturity": "experimental",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The only open-source MCP server purpose-built for OMOP CDM databases, filling a genuine gap in the OHDSI ecosystem for agent-accessible observational data. MIT license, well-structured Python codebase with CI, docs, tests, and synthetic data for evaluation. Validated in the accompanying FastOMOP paper (arXiv 2604.24572) against MIMIC-IV and NHS UK (IDRIL) data with NL2SQL reliability scores of 0.84–0.94. Marked Assess rather than Situational due to early stage — no formal release yet, individual governance, and limited community adoption as of May 2026. Worth tracking closely; if the FastOMOP ecosystem continues to mature this is a candidate to move to Situational within 6–12 months.",
+  "mach:editorialReviewedAt": "2026-05-11",
+
+  "mach:clinicalDomain": [
+    "primary-care", "secondary-care", "oncology",
+    "public-health", "genomics"
+  ],
+  "mach:deploymentContext": ["self-hosted"],
+
+  "mach:supportsStandard": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fhir-r4"
+  ],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/fastomop/omcp",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://fastomop.github.io/omcp/",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2604.24572",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "FastOMOP: A Foundational Architecture for Reliable Agentic Real-World Evidence Generation on OMOP CDM data. arXiv 2026."
+    }
+  ],
+
+  "mach:alternativeTo": ["fhir-mcp-wso2"],
+
+  "schema:comment": "Add 'omop-mcp' to data/taxonomy/categories.yaml under mcp-servers-ai-interfaces subcategories. Also add 'experimental' to maturity_levels in taxonomy."
+}

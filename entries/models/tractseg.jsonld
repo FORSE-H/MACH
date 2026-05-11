@@ -1,0 +1,68 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/tractseg",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode", "mach:MLModel"],
+
+  "identifier": "tractseg",
+  "name": "TractSeg",
+  "description": "Automated segmentation of 72 white matter fibre bundles from diffusion MRI tractograms, directly from raw peaks (fibre orientation distribution functions) without requiring full tractography. Fast, accurate, and pip-installable.",
+  "url": "https://github.com/MIC-DKFZ/TractSeg",
+  "codeRepository": "https://github.com/MIC-DKFZ/TractSeg",
+  "logo": "../../logos/dkfz.svg",
+
+  "license": "Apache-2.0",
+  "softwareVersion": "2.9",
+  "dateModified": "2024-01-01",
+
+  "programmingLanguage": ["Python"],
+  "operatingSystem": ["Linux", "macOS"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "white-matter-segmentation", "tractography", "diffusion-mri",
+    "dti", "fibre-bundles", "neuroimaging", "fsl", "mrtrix"
+  ],
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Division of Medical Image Computing, DKFZ Heidelberg"
+  },
+
+  "mach:weightsLicense": "Apache-2.0",
+  "mach:trainingDataSummary": "Trained on Human Connectome Project (HCP) data — 105 subjects with high-quality diffusion MRI. Pre-trained weights included for 72 white matter bundles.",
+  "mach:intendedUse": "Research tool for white matter bundle segmentation in neuroscience and clinical neurology research. Supports tractography-based analysis pipelines using FSL, MRtrix3, or dipy. Not a cleared medical device.",
+  "mach:evaluationReference": [
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1016/j.neuroimage.2018.07.070",
+      "schema:name": "TractSeg - Fast and accurate white matter tract segmentation. NeuroImage, 2018."
+    }
+  ],
+
+  "mach:governance": "academic",
+  "mach:foundation": "Division of Medical Image Computing, DKFZ",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "imaging-model",
+  "mach:maturity": "production",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The most widely used open-source tool for automated white matter bundle segmentation. NeuroImage 2018 paper, 253 stars, pip-installable, pre-trained weights included. Niche (diffusion MRI tractography) but within that niche it is the default choice. Last significant release was 2023/2024 — the niche use means lower update frequency is expected and not a concern. Marked Assess rather than Adopt due to narrow clinical domain and academic governance.",
+  "mach:editorialReviewedAt": "2026-05-11",
+
+  "mach:clinicalDomain": ["neurology"],
+  "mach:deploymentContext": ["self-hosted"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/MIC-DKFZ/TractSeg",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1016/j.neuroimage.2018.07.070",
+      "mach:evidenceType": "academic-reference"
+    }
+  ],
+
+  "mach:alternativeTo": ["mrtrix3", "fsl-xtract"]
+}
