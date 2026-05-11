@@ -451,12 +451,31 @@
     white-space: nowrap;
   }
 
-  /* ── FILTER BAR ── */
+  /* ── FILTER BARS ── */
+  .filter-rows { margin-bottom: 1.5rem; }
+
+  .filter-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .filter-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-300);
+    padding-top: 4px;
+    min-width: 56px;
+    flex-shrink: 0;
+  }
+
   .filter-bar {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    margin-bottom: 1rem;
   }
 
   .filter-btn {
@@ -690,11 +709,20 @@
   </div>
   <span style="display:none;"><!-- STAT:ADOPT -->8<!-- /STAT:ADOPT --><!-- STAT:ASSESS -->6<!-- /STAT:ASSESS --></span>
 
-  <div class="filter-bar" id="filter-bar"></div>
+  <div class="filter-rows">
+    <div class="filter-row">
+      <span class="filter-label">Category</span>
+      <div class="filter-bar" id="filter-cat"></div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">License</span>
+      <div class="filter-bar" id="filter-lic"></div>
+    </div>
+  </div>
 
   <div class="entries-list">
     <!-- ENTRIES:START -->
-    <div class="entry-row" data-cat="mcp-servers-ai-interfaces">
+    <div class="entry-row" data-cat="mcp-servers-ai-interfaces" data-license="Apache-2.0">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/mcp-servers/fhir-mcp-wso2.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">FHIR MCP Server (WSO2)</a></p>
         <div class="entry-tags"><span class="entry-type">MCP Server</span><span class="entry-lic">Apache-2.0</span><a href="https://github.com/wso2/fhir-mcp-server" target="_blank" rel="noopener" class="entry-url">↗ site</a></div>
@@ -702,7 +730,7 @@
       </div>
       <span class="entry-cat">MCP Servers & AI Interfaces</span>
     </div>
-    <div class="entry-row" data-cat="mcp-servers-ai-interfaces">
+    <div class="entry-row" data-cat="mcp-servers-ai-interfaces" data-license="MIT">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/mcp-servers/omcp.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OMCP</a></p>
         <div class="entry-tags"><span class="entry-type">MCP Server</span><span class="entry-lic">MIT</span><a href="https://fastomop.github.io/omcp/" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/fastomop/omcp" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
@@ -710,7 +738,7 @@
       </div>
       <span class="entry-cat">MCP Servers & AI Interfaces</span>
     </div>
-    <div class="entry-row" data-cat="ai-ml-models">
+    <div class="entry-row" data-cat="ai-ml-models" data-license="MIT">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/clinicalbert.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ClinicalBERT</a></p>
         <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">MIT</span><a href="https://huggingface.co/medicalai/ClinicalBERT" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/kexinhuang12345/clinicalBERT" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
@@ -718,7 +746,7 @@
       </div>
       <span class="entry-cat">AI / ML Models</span>
     </div>
-    <div class="entry-row" data-cat="medical-imaging-signals">
+    <div class="entry-row" data-cat="medical-imaging-signals" data-license="Apache-2.0">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/nndetection.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">nnDetection</a></p>
         <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span><a href="https://github.com/MIC-DKFZ/nnDetection" target="_blank" rel="noopener" class="entry-url">↗ site</a></div>
@@ -726,7 +754,7 @@
       </div>
       <span class="entry-cat">Medical Imaging & Signals</span>
     </div>
-    <div class="entry-row" data-cat="medical-imaging-signals">
+    <div class="entry-row" data-cat="medical-imaging-signals" data-license="Apache-2.0">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/nnunet.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">nnU-Net</a></p>
         <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span><a href="https://github.com/MIC-DKFZ/nnUNet" target="_blank" rel="noopener" class="entry-url">↗ site</a></div>
@@ -734,7 +762,7 @@
       </div>
       <span class="entry-cat">Medical Imaging & Signals</span>
     </div>
-    <div class="entry-row" data-cat="ai-ml-models">
+    <div class="entry-row" data-cat="ai-ml-models" data-license="Apache-2.0">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/openmed.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OpenMed</a></p>
         <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span><a href="https://openmed.life/" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/maziyarpanahi/openmed" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
@@ -742,7 +770,7 @@
       </div>
       <span class="entry-cat">AI / ML Models</span>
     </div>
-    <div class="entry-row" data-cat="medical-imaging-signals">
+    <div class="entry-row" data-cat="medical-imaging-signals" data-license="Apache-2.0">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/tractseg.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">TractSeg</a></p>
         <div class="entry-tags"><span class="entry-type">ML Model</span><span class="entry-lic">Apache-2.0</span><a href="https://github.com/MIC-DKFZ/TractSeg" target="_blank" rel="noopener" class="entry-url">↗ site</a></div>
@@ -750,7 +778,7 @@
       </div>
       <span class="entry-cat">Medical Imaging & Signals</span>
     </div>
-    <div class="entry-row" data-cat="tooling-infrastructure">
+    <div class="entry-row" data-cat="tooling-infrastructure" data-license="AGPL-3.0">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/kaapana.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Kaapana</a></p>
         <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">AGPL-3.0</span><a href="https://kaapana.ai" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/kaapana/kaapana" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
@@ -758,7 +786,7 @@
       </div>
       <span class="entry-cat">Tooling & Infrastructure</span>
     </div>
-    <div class="entry-row" data-cat="medical-imaging-signals">
+    <div class="entry-row" data-cat="medical-imaging-signals" data-license="BSD-3-Clause">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/mitk.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">MITK</a></p>
         <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">BSD-3-Clause</span><a href="https://www.mitk.org" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/MITK/MITK" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
@@ -766,7 +794,7 @@
       </div>
       <span class="entry-cat">Medical Imaging & Signals</span>
     </div>
-    <div class="entry-row" data-cat="clinical-systems">
+    <div class="entry-row" data-cat="clinical-systems" data-license="MPL-2.0">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/openmrs.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">OpenMRS</a></p>
         <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">MPL-2.0</span><a href="https://openmrs.org" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/openmrs/openmrs-core" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
@@ -774,7 +802,7 @@
       </div>
       <span class="entry-cat">Clinical Systems</span>
     </div>
-    <div class="entry-row" data-cat="tooling-infrastructure">
+    <div class="entry-row" data-cat="tooling-infrastructure" data-license="MIT">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/pyhealth.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">PyHealth</a></p>
         <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">MIT</span><a href="https://pyhealth.dev" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/sunlabuiuc/PyHealth" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
@@ -782,7 +810,7 @@
       </div>
       <span class="entry-cat">Tooling & Infrastructure</span>
     </div>
-    <div class="entry-row" data-cat="tooling-infrastructure">
+    <div class="entry-row" data-cat="tooling-infrastructure" data-license="Apache-2.0">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/vantage6.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">vantage6</a></p>
         <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">Apache-2.0</span><a href="https://vantage6.ai" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/vantage6/vantage6" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
@@ -790,7 +818,7 @@
       </div>
       <span class="entry-cat">Tooling & Infrastructure</span>
     </div>
-    <div class="entry-row" data-cat="interoperability-standards">
+    <div class="entry-row" data-cat="interoperability-standards" data-license="CC0-1.0">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/standards/fhir-r4.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">HL7 FHIR R4</a></p>
         <div class="entry-tags"><span class="entry-type">Standard</span><span class="entry-lic">CC0-1.0</span><a href="https://hl7.org/fhir/R4/" target="_blank" rel="noopener" class="entry-url">↗ site</a></div>
@@ -798,7 +826,7 @@
       </div>
       <span class="entry-cat">Interoperability Standards</span>
     </div>
-    <div class="entry-row" data-cat="interoperability-standards">
+    <div class="entry-row" data-cat="interoperability-standards" data-license="CC-BY-3.0">
       <div>
         <p class="entry-name"><a href="https://github.com/FORSE-H/MACH/blob/main/entries/standards/openehr.jsonld" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">openEHR</a></p>
         <div class="entry-tags"><span class="entry-type">Standard</span><span class="entry-lic">CC-BY-3.0</span><a href="https://openehr.org" target="_blank" rel="noopener" class="entry-url">↗ site</a><a href="https://github.com/openEHR" target="_blank" rel="noopener" class="entry-url">↗ repo</a></div>
@@ -881,52 +909,62 @@
 
 <script>
 (function () {
-  const bar = document.getElementById('filter-bar');
   const rows = Array.from(document.querySelectorAll('.entry-row[data-cat]'));
-  if (!bar || !rows.length) return;
+  if (!rows.length) return;
 
-  // Collect unique categories in order of appearance
-  const seen = new Set();
-  const cats = [];
-  rows.forEach(r => {
-    const c = r.dataset.cat;
-    if (c && !seen.has(c)) { seen.add(c); cats.push(c); }
-  });
+  const active = { cat: '', license: '' };
 
-  // Build label map from entry-cat spans
-  const labelMap = {};
+  function applyFilters() {
+    rows.forEach(r => {
+      const catOk = !active.cat     || r.dataset.cat     === active.cat;
+      const licOk = !active.license || r.dataset.license === active.license;
+      r.style.display = (catOk && licOk) ? '' : 'none';
+    });
+  }
+
+  function buildBar(barId, dataKey, labelFn) {
+    const bar = document.getElementById(barId);
+    if (!bar) return;
+    const seen = new Set();
+    const vals = [];
+    rows.forEach(r => {
+      const v = r.dataset[dataKey];
+      if (v && !seen.has(v)) { seen.add(v); vals.push(v); }
+    });
+
+    const allBtn = document.createElement('button');
+    allBtn.className = 'filter-btn active';
+    allBtn.textContent = 'All';
+    bar.appendChild(allBtn);
+
+    vals.forEach(v => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn';
+      btn.textContent = labelFn(v);
+      btn.dataset.value = v;
+      bar.appendChild(btn);
+    });
+
+    bar.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      active[dataKey] = btn.dataset.value || '';
+      applyFilters();
+    });
+  }
+
+  // Category label map from entry-cat spans
+  const catLabels = {};
   rows.forEach(r => {
     const c = r.dataset.cat;
     const span = r.querySelector('.entry-cat');
-    if (c && span && !labelMap[c]) labelMap[c] = span.textContent.trim();
+    if (c && span && !catLabels[c]) catLabels[c] = span.textContent.trim();
   });
 
-  // Render buttons
-  const allBtn = document.createElement('button');
-  allBtn.className = 'filter-btn active';
-  allBtn.textContent = 'All';
-  allBtn.dataset.cat = '';
-  bar.appendChild(allBtn);
-
-  cats.forEach(c => {
-    const btn = document.createElement('button');
-    btn.className = 'filter-btn';
-    btn.textContent = labelMap[c] || c;
-    btn.dataset.cat = c;
-    bar.appendChild(btn);
-  });
-
-  // Filter logic
-  bar.addEventListener('click', e => {
-    const btn = e.target.closest('.filter-btn');
-    if (!btn) return;
-    bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const selected = btn.dataset.cat;
-    rows.forEach(r => {
-      r.style.display = (!selected || r.dataset.cat === selected) ? '' : 'none';
-    });
-  });
+  buildBar('filter-cat', 'cat',     v => catLabels[v] || v);
+  buildBar('filter-lic', 'license', v => v);
 })();
 </script>
 </body>

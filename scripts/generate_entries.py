@@ -112,7 +112,7 @@ def build_entries_html(entries):
         lic_tag      = f'<span class="entry-lic">{license_str}</span>' if license_str else ""
         name_href    = jsonld_url if jsonld_url else e.get("url", e.get("codeRepository", "#"))
 
-        rows.append(f"""    <div class="entry-row" data-cat="{cat}">
+        rows.append(f"""    <div class="entry-row" data-cat="{cat}" data-license="{license_str}">
       <div>
         <p class="entry-name"><a href="{name_href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">{name}</a></p>
         <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}{url_links}</div>
