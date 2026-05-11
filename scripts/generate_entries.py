@@ -52,6 +52,30 @@ def load_entries():
 def category_label(cat):
     return CATEGORY_LABELS.get(cat, cat)
 
+TYPE_LABELS = {
+    "mach:MLModel":    "ML Model",
+    "mach:MCPServer":  "MCP Server",
+    "mach:Standard":   "Standard",
+    "mach:Dataset":    "Dataset",
+}
+
+def get_entry_type(e):
+    types = e.get("@type", [])
+    if isinstance(types, str):
+        types = [types]
+    for key, label in TYPE_LABELS.items():
+        if key in types:
+            return label
+    return "Software"
+
+def get_license_short(e):
+    lic = e.get("license", "")
+    if not lic:
+        return ""
+    if lic.startswith("http"):
+        return lic.rstrip("/").split("/")[-1]
+    return lic
+
 def build_entries_html(entries):
     if not entries:
         return "<p style='color:var(--gray-300);font-size:0.875rem;'>No entries yet.</p>"
@@ -62,21 +86,22 @@ def build_entries_html(entries):
         description = e.get("description", "")
         url         = e.get("url", e.get("codeRepository", "#"))
         cat         = e.get("mach:category", "")
-        judgement   = e.get("mach:judgement", "")
 
-        # Truncate description to ~80 chars for table display
-        short_desc = (description[:78] + "…") if len(description) > 80 else description
+        short_desc = (description[:90] + "…") if len(description) > 92 else description
 
-        cat_label = category_label(cat)
-        badge_cls, badge_text = JUDGEMENT_BADGE.get(judgement, ("badge-caution", judgement))
+        cat_label   = category_label(cat)
+        entry_type  = get_entry_type(e)
+        license_str = get_license_short(e)
+
+        lic_tag = f'<span class="entry-lic">{license_str}</span>' if license_str else ""
 
         rows.append(f"""    <div class="entry-row">
       <div>
         <p class="entry-name"><a href="{url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">{name}</a></p>
+        <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}</div>
         <p class="entry-desc">{short_desc}</p>
       </div>
       <span class="entry-cat">{cat_label}</span>
-      <span class="badge {badge_cls}">{badge_text}</span>
     </div>""")
 
     return "\n".join(rows)
