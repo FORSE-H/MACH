@@ -129,7 +129,7 @@ flowchart TD
     GEN --> MLDC["mldcat-ap.jsonld\nML model export"]
     GEN --> LLM["llms.txt\nLLM-readable index"]
 
-    CAT --> HARVEST["Download · Cite · Harvest"]
+    CAT --> HARVEST["Search · Discover · Download · Cite · Harvest"]
     MLDC --> HARVEST
     LLM --> HARVEST
 
