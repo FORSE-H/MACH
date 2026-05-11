@@ -15,19 +15,19 @@ INDEX_HTML  = Path("index.html")
 
 CATEGORY_LABELS = {
     "clinical-systems":            "Clinical Systems",
-    "interoperability-standards":  "Interop Standards",
-    "terminologies-ontologies":    "Terminologies",
-    "data-models-research":        "Data Models",
-    "medical-imaging-signals":     "Imaging & Signals",
+    "interoperability-standards":  "Interoperability Standards",
+    "terminologies-ontologies":    "Terminologies & Ontologies",
+    "data-models-research":        "Data Models & Research Platforms",
+    "medical-imaging-signals":     "Medical Imaging & Signals",
     "ai-ml-models":                "AI / ML Models",
-    "datasets-benchmarks":         "Datasets",
-    "deidentification-privacy":    "De-id & Privacy",
-    "quality-conformance":         "Quality",
-    "public-health-epi":           "Public Health",
-    "mcp-servers-ai-interfaces":   "MCP Servers",
-    "tooling-infrastructure":      "Tooling",
-    "patient-facing-mhealth":      "Patient-Facing",
-    "compliance-governance":       "Compliance",
+    "datasets-benchmarks":         "Datasets & Benchmarks",
+    "deidentification-privacy":    "De-identification & Privacy",
+    "quality-conformance":         "Quality & Conformance",
+    "public-health-epi":           "Public Health & Epi",
+    "mcp-servers-ai-interfaces":   "MCP Servers & AI Interfaces",
+    "tooling-infrastructure":      "Tooling & Infrastructure",
+    "patient-facing-mhealth":      "Patient-Facing & mHealth",
+    "compliance-governance":       "Compliance & Governance",
 }
 
 JUDGEMENT_BADGE = {
