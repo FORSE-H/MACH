@@ -1,0 +1,53 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/REPLACE-WITH-SLUG",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "REPLACE-WITH-SLUG",
+  "name": "Project Name",
+  "alternateName": [],
+  "description": "One sentence description of what this software does.",
+  "url": "https://project-website.org",
+  "codeRepository": "https://github.com/org/repo",
+  "logo": "../../logos/REPLACE-WITH-SLUG.svg",
+
+  "license": "SPDX-EXPRESSION-HERE",
+  "softwareVersion": "0.0.0",
+  "dateModified": "YYYY-MM-DD",
+
+  "programmingLanguage": ["Java"],
+  "operatingSystem": ["Linux", "Docker"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": ["fhir", "ehr", "open-source"],
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Organisation Name"
+  },
+
+  "mach:governance": "foundation",
+  "mach:foundation": "Foundation Name (if applicable)",
+  "mach:category": "clinical-systems",
+  "mach:subcategory": "ehr",
+  "mach:maturity": "production",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Explain in 1–3 sentences why this judgement level was chosen.",
+  "mach:editorialReviewedAt": "YYYY-MM-DD",
+
+  "mach:clinicalDomain": ["primary-care"],
+  "mach:deploymentContext": ["self-hosted", "docker"],
+  "mach:supportsStandard": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fhir-r4"
+  ],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/org/repo",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+
+  "mach:alternativeTo": []
+}

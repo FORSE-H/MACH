@@ -1,0 +1,88 @@
+name: Suggest a new entry
+description: Suggest a new project, model, standard, or MCP server for MACH
+title: "[New entry] "
+labels: ["new-entry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an entry! Fill in as much as you can.
+        A curator will review and may open a PR on your behalf, or you can submit the PR yourself.
+
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Primary URL
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Source code repository (if applicable)
+      placeholder: https://github.com/...
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - clinical-systems
+        - interoperability-standards
+        - terminologies-ontologies
+        - data-models-research
+        - medical-imaging-signals
+        - ai-ml-models
+        - datasets-benchmarks
+        - deidentification-privacy
+        - quality-conformance
+        - public-health-epi
+        - mcp-servers-ai-interfaces
+        - tooling-infrastructure
+        - patient-facing-mhealth
+        - compliance-governance
+    validations:
+      required: true
+
+  - type: dropdown
+    id: judgement
+    attributes:
+      label: Suggested judgement
+      options:
+        - Adopt
+        - Situational
+        - Assess
+        - Caution
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why this judgement?
+      placeholder: 1–3 sentences explaining your suggested rating.
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: License (SPDX)
+      placeholder: Apache-2.0
+
+  - type: textarea
+    id: conflict
+    attributes:
+      label: Conflict of interest
+      description: Are you affiliated with the organisation behind this entry?
+      placeholder: No conflict / I work at [org]
+    validations:
+      required: true

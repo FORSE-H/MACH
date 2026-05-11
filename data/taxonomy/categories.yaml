@@ -1,0 +1,194 @@
+categories:
+  - id: clinical-systems
+    name: Clinical Systems
+    description: EHR/EMR, HIS, practice management, telemedicine, dental, ophthalmology, mental health
+    subcategories:
+      - ehr
+      - his
+      - practice-management
+      - telemedicine
+      - dental
+      - mental-health
+      - ophthalmology
+
+  - id: interoperability-standards
+    name: Interoperability Standards
+    description: FHIR, HL7, openEHR, DICOM, IHE, SMART on FHIR, CDS Hooks
+    subcategories:
+      - fhir
+      - hl7-v2
+      - openehr
+      - dicom
+      - ihe
+      - smart-on-fhir
+
+  - id: terminologies-ontologies
+    name: Terminologies & Ontologies
+    description: SNOMED-CT, LOINC, ICD-10/11, RxNorm, MedDRA, ATC, HPO, MONDO, UMLS
+    subcategories:
+      - clinical-terminology
+      - drug-terminology
+      - phenotype-ontology
+      - disease-ontology
+
+  - id: data-models-research
+    name: Data Models & Research Platforms
+    description: OMOP CDM, i2b2, PCORnet CDM, Sentinel CDM, openEHR CKM archetypes
+    subcategories:
+      - common-data-model
+      - clinical-data-repository
+      - research-platform
+
+  - id: medical-imaging-signals
+    name: Medical Imaging & Signals
+    description: PACS, DICOM servers/viewers, signal processing, pathology, radiology AI
+    subcategories:
+      - pacs
+      - dicom-viewer
+      - signal-processing
+      - pathology
+      - radiology
+
+  - id: ai-ml-models
+    name: AI / ML Models
+    description: Clinical LLMs, imaging models, biomedical NLP, foundation models
+    subcategories:
+      - clinical-llm
+      - imaging-model
+      - nlp-ner
+      - foundation-model
+      - multimodal
+
+  - id: datasets-benchmarks
+    name: Datasets & Benchmarks
+    description: MIMIC, PhysioNet, MedQA, MedMNIST, clinical trial data
+    subcategories:
+      - ehr-dataset
+      - imaging-dataset
+      - nlp-benchmark
+      - genomics-dataset
+
+  - id: deidentification-privacy
+    name: De-identification & Privacy
+    description: PHI removal, anonymisation, pseudonymisation, differential privacy tools
+    subcategories:
+      - phi-removal
+      - anonymisation
+      - consent-management
+
+  - id: quality-conformance
+    name: Quality & Conformance
+    description: FHIR validators, Inferno (ONC), conformance test suites
+    subcategories:
+      - fhir-validator
+      - conformance-testing
+      - data-quality
+
+  - id: public-health-epi
+    name: Public Health & Epi
+    description: DHIS2, SORMAS, OpenSRP, Go.Data, surveillance systems
+    subcategories:
+      - hmis
+      - surveillance
+      - disease-registry
+      - mobile-health
+
+  - id: mcp-servers-ai-interfaces
+    name: MCP Servers & AI Interfaces
+    description: FHIR MCP servers, PubMed MCP, openFDA MCP, clinical AI APIs
+    subcategories:
+      - fhir-mcp
+      - literature-mcp
+      - regulatory-mcp
+      - terminology-mcp
+
+  - id: tooling-infrastructure
+    name: Tooling & Infrastructure
+    description: Terminology servers, FHIR pipeline tools, profile registries
+    subcategories:
+      - terminology-server
+      - pipeline
+      - sdk
+      - profile-registry
+
+  - id: patient-facing-mhealth
+    name: Patient-Facing & mHealth
+    description: Patient portals, wearable bridges, consumer health records, mHealth standards
+    subcategories:
+      - patient-portal
+      - wearable
+      - mhealth-standard
+
+  - id: compliance-governance
+    name: Compliance & Governance
+    description: HIPAA helpers, EU AI Act tooling, audit, consent, policy enforcement
+    subcategories:
+      - hipaa
+      - eu-ai-act
+      - audit
+      - policy
+
+judgements:
+  - id: Adopt
+    description: >
+      Production-ready, well-governed, recommended for new work. Proven at scale,
+      actively maintained, clearly the default for its slot.
+  - id: Situational
+    description: >
+      Right in specific contexts but not a general default. Pick deliberately.
+  - id: Assess
+    description: >
+      Promising but not yet proven for production-default use. Track it and prototype,
+      but do not commit your architecture to it yet.
+  - id: Caution
+    description: >
+      Avoid for new work. Either superseded, unmaintained (>18 months), or fading.
+      Listed because it is still encountered in existing systems.
+
+maturity_levels:
+  - experimental
+  - beta
+  - production
+  - legacy
+
+governance_types:
+  - foundation
+  - vendor-led
+  - individual
+  - government
+  - academic
+  - community
+
+deployment_contexts:
+  - cloud-only
+  - self-hosted
+  - offline-capable
+  - low-resource
+  - hipaa-ready
+  - gdpr-ready
+  - eu-ai-act-documented
+  - docker
+  - kubernetes
+
+clinical_domains:
+  - primary-care
+  - secondary-care
+  - oncology
+  - radiology
+  - pathology
+  - cardiology
+  - neurology
+  - psychiatry
+  - paediatrics
+  - obstetrics
+  - surgery
+  - emergency
+  - public-health
+  - global-health
+  - genomics
+  - pharmacy
+  - dental
+  - ophthalmology
+  - dermatology
+  - rehabilitation
+  - palliative-care

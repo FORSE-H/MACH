@@ -1,0 +1,65 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/openmrs",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "openmrs",
+  "name": "OpenMRS",
+  "alternateName": ["OpenMRS Platform"],
+  "description": "Enterprise electronic medical record system platform used in resource-constrained environments worldwide.",
+  "url": "https://openmrs.org",
+  "codeRepository": "https://github.com/openmrs/openmrs-core",
+  "logo": "../../logos/openmrs.svg",
+  "issueTracker": "https://issues.openmrs.org",
+
+  "license": "MPL-2.0",
+  "softwareVersion": "2.7.0",
+  "dateModified": "2025-12-01",
+
+  "programmingLanguage": ["Java"],
+  "operatingSystem": ["Linux", "Windows", "Docker"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": ["ehr", "emr", "fhir", "global-health", "low-resource", "offline-capable"],
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "OpenMRS Inc."
+  },
+
+  "mach:governance": "foundation",
+  "mach:foundation": "OpenMRS Inc.",
+  "mach:category": "clinical-systems",
+  "mach:subcategory": "ehr",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "Deployed in 60+ countries across Africa, Asia, and Latin America with over 15 years of production use. Actively maintained with regular releases. openMRS 3.x includes FHIR R4 compliance and a modern React-based frontend. Foundation-governed with a large global community.",
+  "mach:editorialReviewedAt": "2025-10-01",
+
+  "mach:clinicalDomain": ["primary-care", "public-health", "global-health"],
+  "mach:deploymentContext": ["self-hosted", "offline-capable", "low-resource", "docker"],
+  "mach:supportsStandard": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fhir-r4",
+    "https://github.com/FORSE-H/MACH/tree/main/entries/standards/hl7-v2"
+  ],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/openmrs/openmrs-core",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://openmrs.org/about/mission/",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1377/hlthaff.2010.0064",
+      "mach:evidenceType": "academic-reference"
+    }
+  ],
+
+  "mach:alternativeTo": ["openemr", "bahmni", "gnu-health"]
+}

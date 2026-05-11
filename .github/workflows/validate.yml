@@ -1,0 +1,121 @@
+name: Validate Entries
+
+on:
+  pull_request:
+    paths:
+      - 'entries/**'
+      - 'data/schema/**'
+      - 'data/context/**'
+  push:
+    branches: [main]
+    paths:
+      - 'entries/**'
+
+jobs:
+  validate:
+    name: Validate JSON-LD entries
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install -g ajv-cli jsonld
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install requests
+
+      - name: Validate JSON syntax on all entries
+        run: |
+          echo "Checking JSON syntax..."
+          find entries/ -name "*.jsonld" ! -name "_template.jsonld" | while read f; do
+            python3 -c "import json; json.load(open('$f'))" && echo "OK: $f" || { echo "FAIL: $f"; exit 1; }
+          done
+
+      - name: Check required fields
+        run: |
+          python3 - <<'EOF'
+          import json, os, sys
+
+          REQUIRED = ["identifier", "name", "description", "url", "license",
+                      "mach:category", "mach:judgement", "mach:judgementReason",
+                      "mach:editorialReviewedAt", "mach:evidence"]
+
+          VALID_JUDGEMENTS = {"Adopt", "Situational", "Assess", "Caution"}
+          VALID_CATEGORIES = {
+            "clinical-systems", "interoperability-standards", "terminologies-ontologies",
+            "data-models-research", "medical-imaging-signals", "ai-ml-models",
+            "datasets-benchmarks", "deidentification-privacy", "quality-conformance",
+            "public-health-epi", "mcp-servers-ai-interfaces", "tooling-infrastructure",
+            "patient-facing-mhealth", "compliance-governance"
+          }
+
+          errors = []
+          for root, dirs, files in os.walk("entries"):
+              for fname in files:
+                  if not fname.endswith(".jsonld") or fname.startswith("_"):
+                      continue
+                  path = os.path.join(root, fname)
+                  with open(path) as f:
+                      data = json.load(f)
+
+                  for field in REQUIRED:
+                      if field not in data:
+                          errors.append(f"{path}: missing required field '{field}'")
+
+                  if "mach:judgement" in data:
+                      if data["mach:judgement"] not in VALID_JUDGEMENTS:
+                          errors.append(f"{path}: invalid judgement '{data['mach:judgement']}'")
+
+                  if "mach:category" in data:
+                      if data["mach:category"] not in VALID_CATEGORIES:
+                          errors.append(f"{path}: invalid category '{data['mach:category']}'")
+
+                  if "identifier" in data and "logo" in data:
+                      logo_path = data["logo"].replace("../../", "")
+                      if not os.path.exists(logo_path):
+                          print(f"WARN: {path}: logo file not found at {logo_path}")
+
+          if errors:
+              for e in errors:
+                  print(f"ERROR: {e}")
+              sys.exit(1)
+          else:
+              print(f"All entries valid.")
+          EOF
+
+      - name: Check for duplicate identifiers
+        run: |
+          python3 - <<'EOF'
+          import json, os, sys
+          from collections import Counter
+
+          ids = []
+          for root, dirs, files in os.walk("entries"):
+              for fname in files:
+                  if not fname.endswith(".jsonld") or fname.startswith("_"):
+                      continue
+                  path = os.path.join(root, fname)
+                  with open(path) as f:
+                      data = json.load(f)
+                  if "identifier" in data:
+                      ids.append(data["identifier"])
+
+          dupes = [id for id, count in Counter(ids).items() if count > 1]
+          if dupes:
+              print(f"ERROR: Duplicate identifiers found: {dupes}")
+              sys.exit(1)
+          else:
+              print(f"No duplicate identifiers. {len(ids)} entries checked.")
+          EOF
