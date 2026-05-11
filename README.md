@@ -111,6 +111,33 @@ All export generators are planned Phase 2 work.
 
 ---
 
+## How it works
+
+```mermaid
+flowchart TD
+    PR["Pull Request\nentries/*.jsonld"] --> VAL
+    ENRICH["Planned: auto-enrichment\nGitHub / HF / PyPI APIs"] -.->|future| VAL
+
+    VAL{"CI: validate.yml\nJSON-LD · schema · required fields"}
+    VAL -- fail --> PR
+    VAL -- pass / merge --> MAIN["main branch"]
+
+    MAIN --> GEN["CI: generate_entries.py"]
+
+    GEN --> UI["GitHub Pages\ncatalog with filters"]
+    GEN --> CAT["catalog.jsonld\nfull export"]
+    GEN --> MLDC["mldcat-ap.jsonld\nML model export"]
+    GEN --> LLM["llms.txt\nLLM-readable index"]
+
+    CAT --> HARVEST["Download · Cite · Harvest"]
+    MLDC --> HARVEST
+    LLM --> HARVEST
+
+    HARVEST -.->|planned| FDP["FDP / SPARQL\ndownstream portals · AI agents"]
+```
+
+---
+
 ## Contributing
 
 All catalog data lives as JSON-LD files under `entries/`. Contributions are made via pull request.
