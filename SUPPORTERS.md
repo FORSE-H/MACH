@@ -7,9 +7,7 @@ entry inclusion, or judgement levels. See [GOVERNANCE.md](GOVERNANCE.md) for pol
 
 ## Grants
 
-| Funder | Programme | Amount | Period | Status |
-|---|---|---|---|---|
-| *(pending)* | open-source funding | — | — | Applied |
+*No grants confirmed yet.*
 
 ---
 

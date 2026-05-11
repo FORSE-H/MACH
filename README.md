@@ -89,7 +89,7 @@ The table above describes the *intended* alignment. Current implementation gaps:
 | DCAT-AP | **Partial** — `dcat:` prefix declared in context | No DCAT-AP export; `dcat:` terms not yet used in individual entries |
 | Bitol ODPS | **Not started** | No data product entries or ODPS mapping |
 
-All export generators are Phase 2 work, pending the 
+All export generators are planned Phase 2 work.
 
 ---
 
