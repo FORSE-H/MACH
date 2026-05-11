@@ -632,53 +632,43 @@
 </div>
 
 <div class="section">
-  <p class="section-label">Seed entries</p>
-  <h2>First entries,<br>more coming</h2>
+  <p class="section-label">Catalog entries</p>
+  <h2>Live entries,<br>growing with every commit</h2>
   <p class="section-lead">
-    Catalog is actively seeding. Contributions welcome via pull request.
+    Every entry is a structured JSON-LD file in the repository.
+    This list updates automatically on each push via CI.
+    Contributions welcome via pull request.
   </p>
-  <div class="entries-list">
-    <div class="entry-row">
-      <div>
-        <p class="entry-name">OpenMRS</p>
-        <p class="entry-desc">Enterprise EMR platform, deployed in 60+ countries</p>
-      </div>
-      <span class="entry-cat">Clinical Systems</span>
-      <span class="badge badge-adopt">Adopt</span>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:2rem;">
+    <div style="background:var(--white);padding:1rem 1.25rem;">
+      <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-300);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Total entries</p>
+      <p style="font-size:1.5rem;font-weight:500;color:var(--gray-900);"><!-- STAT:TOTAL -->0<!-- /STAT:TOTAL --></p>
     </div>
-    <div class="entry-row">
-      <div>
-        <p class="entry-name">HL7 FHIR R4</p>
-        <p class="entry-desc">De-facto healthcare interoperability standard</p>
-      </div>
-      <span class="entry-cat">Interop Standards</span>
-      <span class="badge badge-adopt">Adopt</span>
+    <div style="background:var(--white);padding:1rem 1.25rem;">
+      <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-300);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Adopt</p>
+      <p style="font-size:1.5rem;font-weight:500;color:var(--teal-500);"><!-- STAT:ADOPT -->0<!-- /STAT:ADOPT --></p>
     </div>
-    <div class="entry-row">
-      <div>
-        <p class="entry-name">ClinicalBERT</p>
-        <p class="entry-desc">BERT pre-trained on MIMIC-III clinical notes</p>
-      </div>
-      <span class="entry-cat">AI / ML Models</span>
-      <span class="badge badge-adopt">Adopt</span>
+    <div style="background:var(--white);padding:1rem 1.25rem;">
+      <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-300);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Assess</p>
+      <p style="font-size:1.5rem;font-weight:500;color:#5B8DEF;"><!-- STAT:ASSESS -->0<!-- /STAT:ASSESS --></p>
     </div>
-    <div class="entry-row">
-      <div>
-        <p class="entry-name">FHIR MCP Server (WSO2)</p>
-        <p class="entry-desc">Exposes any FHIR server as an MCP server</p>
-      </div>
-      <span class="entry-cat">MCP Servers</span>
-      <span class="badge badge-assess">Assess</span>
-    </div>
-    <div class="entry-row" style="border-bottom:none; opacity:0.4;">
-      <div>
-        <p class="entry-name">+ more entries being added</p>
-        <p class="entry-desc">OpenEMR, Bahmni, HAPI FHIR, DHIS2, MONAI, Orthanc…</p>
-      </div>
-      <span class="entry-cat"></span>
-      <a href="https://github.com/FORSE-H/MACH/blob/main/CONTRIBUTING.md" class="badge badge-adopt" style="text-decoration:none;">Contribute</a>
+    <div style="background:var(--white);padding:1rem 1.25rem;">
+      <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-300);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Categories</p>
+      <p style="font-size:1.5rem;font-weight:500;color:var(--gray-900);"><!-- STAT:CATS -->0<!-- /STAT:CATS --></p>
     </div>
   </div>
+
+  <div class="entries-list">
+    <!-- ENTRIES:START -->
+    <!-- ENTRIES:END -->
+  </div>
+
+  <p style="margin-top:1rem;font-size:0.78rem;color:var(--gray-300);font-family:'DM Mono',monospace;">
+    → <a href="https://github.com/FORSE-H/MACH/tree/main/entries">Browse all entries on GitHub</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/FORSE-H/MACH/blob/main/CONTRIBUTING.md">Contribute an entry</a>
+  </p>
 </div>
 
 <div class="section" id="contribute">
@@ -740,7 +730,7 @@
   <a href="https://github.com/FORSE-H/MACH">github.com/FORSE-H/MACH</a>
   &nbsp;·&nbsp; Code: Apache-2.0 &nbsp;·&nbsp; Data: CC-BY-4.0
   &nbsp;·&nbsp; A <a href="https://github.com/FORSE-H">FORSE-H</a> project by
-  <a href="https://orcid.org/0000-0002-6844-6493">Priyanka Ojha</a>
+  <a href="https://orcid.org/YOUR-ORCID-HERE">Priyanka Ojha</a>
   &nbsp;·&nbsp; 2025–2026
 </footer>
 
