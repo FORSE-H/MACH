@@ -255,6 +255,59 @@ Possible commercial layer (keeps catalog free):
 
 ---
 
+## Funding Pipeline
+
+### Submitted
+| Funder | Programme | Amount | Code | Status |
+|---|---|---|---|---|
+| open-source funder | open-source funding | EUR 50,000 |  | Under review — expect July/August 2026 |
+
+### Do NOT apply yet — revisit 2027
+| Funder | Programme | Why wait |
+|---|---|---|
+| OS4Science / Renaissance Philanthropy | Open Source for the Life Sciences (OS4LS) | Requires fiscal sponsor + demonstrated traction. MACH too early. Portal opened May 11 2026. LOI due June 8 2026 — skip this round, apply May 2027. Grants: $250k Track 1, $1M Track 2. |
+| Sovereign Tech Fund | Infrastructure hardening | Requires EUR 50k min + existing dependents. Apply after 20+ orgs depend on MACH. |
+
+### Future pipeline (2027+)
+- Sloan Foundation Open Source in Science: $50k-$750k, research angle needed
+- Wellcome Trust Data for Science and Health: UK-friendly, longer cycles
+- EU Horizon Europe: needs consortium of EU partners
+- NIH/NLM: needs US 501(c)(3) host
+- Mozilla MOSS: $10k-$50k, periodic
+
+---
+
+## Fiscal Sponsorship Status and Plan
+
+Current status: No fiscal sponsor. Priyanka Ojha is sole legal entity.
+
+Why this matters:
+- OS4Science requires fiscal sponsor by full proposal deadline
+- Sovereign Tech Fund contracts with legal entities only
+- Open Collective donations flow through a fiscal host
+- Protects Priyanka personally from legal/financial liability
+
+Target fiscal sponsors in priority order:
+
+1. Open Source Collective (opencollective.com/opensource)
+   - Fastest: apply online, approved within days
+   - 5% fee on donations received
+   - No minimum community size required
+   - Perfect for early-stage individual-led projects
+   - ACTION: Apply now at https://opencollective.com/create
+   - See OPEN-COLLECTIVE-EMAIL.md for outreach draft
+
+2. NumFOCUS (numfocus.org/sponsored-projects)
+   - Sponsors PyData, Jupyter, pandas, NumPy etc.
+   - Apply late 2026 after open-source funder deliverables ship
+   - Weeks/months to approve
+
+3. LF Public Health or LF AI and Data Foundation
+   - LF AI and Data already hosts Bitol ODPS (direct alignment)
+   - Apply 2027 when community is established
+
+---
+
 ## Common Tasks & Commands
 
 ```bash
