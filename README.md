@@ -122,9 +122,10 @@ Attribution: *MACH — Machine-Actionable Catalog for Healthcare, FORSE-H, https
 ```bibtex
 @misc{mach2025,
   title        = {MACH: Machine-Actionable Catalog for Healthcare},
-  author       = {{FORSE-H}},
-  year         = {2025},
+  author       = {{Priyanka Ojha}},
+  year         = {2026},
   url          = {https://github.com/FORSE-H/MACH},
+  orcid        = {https://orcid.org/0000-0002-6844-6493},
   note         = {CC-BY-4.0}
 }
 ```
