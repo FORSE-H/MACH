@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MACH — Machine-Actionable Catalog for Healthcare</title>
+<meta name="description" content="An open, machine-actionable catalog of open-source healthcare software, AI/ML models, standards, and MCP servers. FAIR-aligned, community-curated.">
+<meta property="og:title" content="MACH — Machine-Actionable Catalog for Healthcare">
+<meta property="og:description" content="An open, machine-actionable catalog of open-source healthcare software, AI/ML models, standards, and MCP servers.">
+<meta property="og:url" content="https://forse-h.github.io/MACH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --teal-900: #04342C;
+    --teal-700: #0F6E56;
+    --teal-500: #1D9E75;
+    --teal-300: #5DCAA5;
+    --teal-100: #9FE1CB;
+    --teal-50:  #E1F5EE;
+    --gray-900: #1a1a18;
+    --gray-700: #2C2C2A;
+    --gray-500: #5F5E5A;
+    --gray-300: #B4B2A9;
+    --gray-100: #D3D1C7;
+    --gray-50:  #F1EFE8;
+    --white: #FAFAF8;
+    --border: rgba(0,0,0,0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    background: var(--white);
+    color: var(--gray-900);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  a { color: var(--teal-700); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .mono {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85em;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--gray-900);
+    letter-spacing: -0.02em;
+  }
+
+  .nav-brand span {
+    color: var(--teal-500);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  .nav-links a {
+    color: var(--gray-500);
+  }
+
+  .nav-links a:hover {
+    color: var(--gray-900);
+    text-decoration: none;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 7rem 2rem 5rem;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal-500);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--teal-500);
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--gray-900);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--teal-500);
+  }
+
+  .hero-sub {
+    font-size: 1.125rem;
+    color: var(--gray-500);
+    max-width: 580px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background: var(--gray-900);
+    color: var(--white);
+    border: 1px solid var(--gray-900);
+  }
+
+  .btn-primary:hover {
+    background: var(--teal-700);
+    border-color: var(--teal-700);
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--gray-700);
+    border: 1px solid var(--gray-300);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--gray-900);
+    color: var(--gray-900);
+    text-decoration: none;
+  }
+
+  .hero-note {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--gray-300);
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gray-300);
+    margin-bottom: 2.5rem;
+  }
+
+  .section h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+    color: var(--gray-900);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section-lead {
+    color: var(--gray-500);
+    font-size: 1rem;
+    max-width: 560px;
+    margin-bottom: 3rem;
+  }
+
+  /* ── WHAT MACH COVERS ── */
+  .standards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 2rem;
+  }
+
+  .standard-cell {
+    background: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .standard-cell-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gray-300);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .standard-cell-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-900);
+  }
+
+  /* ── CATEGORIES ── */
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0;
+    border: 1px solid var(--border);
+  }
+
+  .category-item {
+    padding: 1rem 1.25rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .cat-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--teal-300);
+    padding-top: 3px;
+    flex-shrink: 0;
+  }
+
+  .cat-name {
+    font-size: 0.825rem;
+    font-weight: 400;
+    color: var(--gray-700);
+    line-height: 1.4;
+  }
+
+  /* ── JUDGEMENT LEVELS ── */
+  .judgements {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .judgement-card {
+    padding: 1.25rem;
+    border-left: 2px solid;
+  }
+
+  .judgement-card.adopt  { border-color: var(--teal-500); }
+  .judgement-card.assess { border-color: #5B8DEF; }
+  .judgement-card.situational { border-color: #E0A94B; }
+  .judgement-card.caution { border-color: var(--gray-300); }
+
+  .judgement-level {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .adopt .judgement-level  { color: var(--teal-500); }
+  .assess .judgement-level { color: #5B8DEF; }
+  .situational .judgement-level { color: #E0A94B; }
+  .caution .judgement-level { color: var(--gray-300); }
+
+  .judgement-desc {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+  }
+
+  /* ── METADATA ── */
+  .metadata-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+  }
+
+  .metadata-table th {
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gray-300);
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .metadata-table td {
+    padding: 0.875rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  .metadata-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .metadata-table td:first-child {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--teal-700);
+    white-space: nowrap;
+  }
+
+  .metadata-table td:nth-child(2) {
+    color: var(--gray-700);
+    font-weight: 400;
+  }
+
+  .metadata-table td:nth-child(3) {
+    color: var(--gray-300);
+    font-size: 0.8rem;
+  }
+
+  /* ── SEED ENTRIES ── */
+  .entries-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    margin-top: 1rem;
+  }
+
+  .entry-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
+  }
+
+  .entry-row:last-child { border-bottom: none; }
+
+  .entry-name {
+    font-weight: 500;
+    color: var(--gray-900);
+  }
+
+  .entry-desc {
+    font-size: 0.78rem;
+    color: var(--gray-300);
+    margin-top: 2px;
+  }
+
+  .entry-cat {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gray-300);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  .badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+
+  .badge-adopt      { background: var(--teal-50); color: var(--teal-700); }
+  .badge-assess     { background: #EEF3FD; color: #2D5DC9; }
+  .badge-situational{ background: #FDF6E3; color: #9A6C10; }
+  .badge-caution    { background: var(--gray-50); color: var(--gray-500); }
+
+  /* ── CTA ── */
+  .cta {
+    background: var(--gray-900);
+    color: var(--white);
+    padding: 5rem 2rem;
+    text-align: center;
+    margin-top: 6rem;
+  }
+
+  .cta h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+
+  .cta h2 em {
+    font-style: italic;
+    color: var(--teal-300);
+  }
+
+  .cta p {
+    color: var(--gray-300);
+    max-width: 480px;
+    margin: 0 auto 2rem;
+    font-size: 0.95rem;
+  }
+
+  .cta .btn-primary {
+    background: var(--teal-500);
+    border-color: var(--teal-500);
+    color: var(--white);
+  }
+
+  .cta .btn-primary:hover {
+    background: var(--teal-300);
+    border-color: var(--teal-300);
+    color: var(--gray-900);
+  }
+
+  .cta .btn-secondary {
+    border-color: rgba(255,255,255,0.2);
+    color: var(--gray-300);
+  }
+
+  .cta .btn-secondary:hover {
+    border-color: rgba(255,255,255,0.5);
+    color: var(--white);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--gray-900);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 2rem;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gray-500);
+    line-height: 2;
+  }
+
+  footer a { color: var(--gray-300); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .hero { padding: 4rem 1.25rem 3rem; }
+    .section { padding: 3rem 1.25rem; }
+    .entry-row { grid-template-columns: 1fr auto; }
+    .entry-cat { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">M<span>A</span>CH</span>
+  <ul class="nav-links">
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#standards">Standards</a></li>
+    <li><a href="#contribute">Contribute</a></li>
+    <li><a href="https://github.com/FORSE-H/MACH">GitHub →</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <p class="hero-eyebrow">Open catalog · Healthcare commons</p>
+  <h1>Machine-Actionable<br>Catalog for <em>Healthcare</em></h1>
+  <p class="hero-sub">
+    An open, curated registry of open-source healthcare software, AI&nbsp;models,
+    clinical standards, datasets, and MCP servers — structured so humans
+    and agents can both find and use them.
+  </p>
+  <div class="hero-actions">
+    <a href="https://github.com/FORSE-H/MACH" class="btn btn-primary">View on GitHub</a>
+    <a href="https://github.com/FORSE-H/MACH/tree/main/entries" class="btn btn-secondary">Browse entries</a>
+    <a href="https://github.com/FORSE-H/MACH/blob/main/CONTRIBUTING.md" class="btn btn-secondary">Contribute</a>
+  </div>
+  <p class="hero-note">
+    catalog.jsonld &nbsp;·&nbsp; mldcat-ap.jsonld &nbsp;·&nbsp; codemeta/*.json &nbsp;·&nbsp; llms.txt
+    &nbsp;— machine-readable exports on every release
+  </p>
+</div>
+
+<div class="section">
+  <p class="section-label">Structured metadata</p>
+  <h2>Every entry is<br>standards-compliant</h2>
+  <p class="section-lead">
+    Each entry serializes against the right open metadata standard for its type,
+    making the catalog queryable by software, reproducible in research, and
+    ready for downstream portals.
+  </p>
+  <div class="standards-grid">
+    <div class="standard-cell">
+      <span class="standard-cell-label">Software</span>
+      <span class="standard-cell-name">CodeMeta 3.0</span>
+    </div>
+    <div class="standard-cell">
+      <span class="standard-cell-label">AI / ML models</span>
+      <span class="standard-cell-name">MLDCAT-AP 3.0</span>
+    </div>
+    <div class="standard-cell">
+      <span class="standard-cell-label">Datasets</span>
+      <span class="standard-cell-name">Croissant</span>
+    </div>
+    <div class="standard-cell">
+      <span class="standard-cell-label">MCP servers</span>
+      <span class="standard-cell-name">server.json</span>
+    </div>
+    <div class="standard-cell">
+      <span class="standard-cell-label">Catalog</span>
+      <span class="standard-cell-name">DCAT-AP</span>
+    </div>
+    <div class="standard-cell">
+      <span class="standard-cell-label">Data products</span>
+      <span class="standard-cell-name">Bitol ODPS</span>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="categories">
+  <p class="section-label">Taxonomy</p>
+  <h2>14 categories<br>across the stack</h2>
+  <p class="section-lead">
+    From clinical systems to AI agents, from global-health tools to EU AI Act
+    compliance — every open healthcare artifact has a home here.
+  </p>
+  <div class="categories">
+    <div class="category-item"><span class="cat-num">01</span><span class="cat-name">Clinical Systems</span></div>
+    <div class="category-item"><span class="cat-num">02</span><span class="cat-name">Interoperability Standards</span></div>
+    <div class="category-item"><span class="cat-num">03</span><span class="cat-name">Terminologies &amp; Ontologies</span></div>
+    <div class="category-item"><span class="cat-num">04</span><span class="cat-name">Data Models &amp; Research Platforms</span></div>
+    <div class="category-item"><span class="cat-num">05</span><span class="cat-name">Medical Imaging &amp; Signals</span></div>
+    <div class="category-item"><span class="cat-num">06</span><span class="cat-name">AI / ML Models</span></div>
+    <div class="category-item"><span class="cat-num">07</span><span class="cat-name">Datasets &amp; Benchmarks</span></div>
+    <div class="category-item"><span class="cat-num">08</span><span class="cat-name">De-identification &amp; Privacy</span></div>
+    <div class="category-item"><span class="cat-num">09</span><span class="cat-name">Quality &amp; Conformance</span></div>
+    <div class="category-item"><span class="cat-num">10</span><span class="cat-name">Public Health &amp; Epi</span></div>
+    <div class="category-item"><span class="cat-num">11</span><span class="cat-name">MCP Servers &amp; AI Interfaces</span></div>
+    <div class="category-item"><span class="cat-num">12</span><span class="cat-name">Tooling &amp; Infrastructure</span></div>
+    <div class="category-item"><span class="cat-num">13</span><span class="cat-name">Patient-Facing &amp; mHealth</span></div>
+    <div class="category-item"><span class="cat-num">14</span><span class="cat-name">Compliance &amp; Governance</span></div>
+  </div>
+</div>
+
+<div class="section" id="standards">
+  <p class="section-label">Editorial judgement</p>
+  <h2>Curated, not<br>just aggregated</h2>
+  <p class="section-lead">
+    Each entry carries an editorial rating with a public, evidence-backed rationale.
+    Borrowed from the ThoughtWorks Tech Radar, adapted for open healthcare tooling.
+  </p>
+  <div class="judgements">
+    <div class="judgement-card adopt">
+      <p class="judgement-level">Adopt</p>
+      <p class="judgement-desc">Production-ready, well-governed, recommended for new work.</p>
+    </div>
+    <div class="judgement-card situational">
+      <p class="judgement-level">Situational</p>
+      <p class="judgement-desc">Right in specific contexts. Requires deliberate choice.</p>
+    </div>
+    <div class="judgement-card assess">
+      <p class="judgement-level">Assess</p>
+      <p class="judgement-desc">Promising but not yet proven at production scale.</p>
+    </div>
+    <div class="judgement-card caution">
+      <p class="judgement-level">Caution</p>
+      <p class="judgement-desc">Avoid for new work — superseded or unmaintained.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="section-label">Seed entries</p>
+  <h2>First entries,<br>more coming</h2>
+  <p class="section-lead">
+    Catalog is actively seeding. Contributions welcome via pull request.
+  </p>
+  <div class="entries-list">
+    <div class="entry-row">
+      <div>
+        <p class="entry-name">OpenMRS</p>
+        <p class="entry-desc">Enterprise EMR platform, deployed in 60+ countries</p>
+      </div>
+      <span class="entry-cat">Clinical Systems</span>
+      <span class="badge badge-adopt">Adopt</span>
+    </div>
+    <div class="entry-row">
+      <div>
+        <p class="entry-name">HL7 FHIR R4</p>
+        <p class="entry-desc">De-facto healthcare interoperability standard</p>
+      </div>
+      <span class="entry-cat">Interop Standards</span>
+      <span class="badge badge-adopt">Adopt</span>
+    </div>
+    <div class="entry-row">
+      <div>
+        <p class="entry-name">ClinicalBERT</p>
+        <p class="entry-desc">BERT pre-trained on MIMIC-III clinical notes</p>
+      </div>
+      <span class="entry-cat">AI / ML Models</span>
+      <span class="badge badge-adopt">Adopt</span>
+    </div>
+    <div class="entry-row">
+      <div>
+        <p class="entry-name">FHIR MCP Server (WSO2)</p>
+        <p class="entry-desc">Exposes any FHIR server as an MCP server</p>
+      </div>
+      <span class="entry-cat">MCP Servers</span>
+      <span class="badge badge-assess">Assess</span>
+    </div>
+    <div class="entry-row" style="border-bottom:none; opacity:0.4;">
+      <div>
+        <p class="entry-name">+ more entries being added</p>
+        <p class="entry-desc">OpenEMR, Bahmni, HAPI FHIR, DHIS2, MONAI, Orthanc…</p>
+      </div>
+      <span class="entry-cat"></span>
+      <a href="https://github.com/FORSE-H/MACH/blob/main/CONTRIBUTING.md" class="badge badge-adopt" style="text-decoration:none;">Contribute</a>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="contribute">
+  <p class="section-label">How it works</p>
+  <h2>Git-native,<br>PR-driven curation</h2>
+  <p class="section-lead">
+    All catalog data lives as JSON-LD files in the repository. Adding an entry
+    is a pull request. CI validates every submission automatically.
+  </p>
+  <table class="metadata-table">
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Action</th>
+        <th>Who</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>01</td>
+        <td>Copy a template from <span class="mono">entries/software/</span> or <span class="mono">entries/models/</span></td>
+        <td>Contributor</td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>Fill in required fields including judgement and evidence links</td>
+        <td>Contributor</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>CI validates JSON-LD schema, required fields, and duplicate identifiers</td>
+        <td>Automated</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>Editor reviews judgement rationale and evidence quality</td>
+        <td>Curator</td>
+      </tr>
+      <tr>
+        <td>05</td>
+        <td>Merge → catalog exports regenerated → site updated</td>
+        <td>Automated</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="cta">
+  <h2>The open healthcare<br>commons needs <em>you</em></h2>
+  <p>Know a tool, model, or standard that should be here? Open a pull request or suggest an entry.</p>
+  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+    <a href="https://github.com/FORSE-H/MACH" class="btn btn-primary">View on GitHub</a>
+    <a href="https://github.com/FORSE-H/MACH/issues/new?template=new-entry.yml" class="btn btn-secondary">Suggest an entry</a>
+  </div>
+</div>
+
+<footer>
+  MACH — Machine-Actionable Catalog for Healthcare &nbsp;·&nbsp;
+  <a href="https://github.com/FORSE-H/MACH">github.com/FORSE-H/MACH</a>
+  &nbsp;·&nbsp; Code: Apache-2.0 &nbsp;·&nbsp; Data: CC-BY-4.0
+  &nbsp;·&nbsp; A <a href="https://github.com/FORSE-H">FORSE-H</a> project by
+  <a href="https://orcid.org/YOUR-ORCID-HERE">Priyanka Ojha</a>
+  &nbsp;·&nbsp; 2025–2026
+</footer>
+
+</body>
+</html>
