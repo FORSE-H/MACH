@@ -22,10 +22,22 @@ The open healthcare technology ecosystem is fragmented. EHR systems, FHIR server
 
 MACH fills that gap with:
 
-- **Editorial judgement** - every entry is rated Adopt / Assess / Situational / Caution, with a public rationale
-- **Machine-readable exports** - DCAT-AP, MLDCAT-AP 3.0, CodeMeta 3.0, MCP `server.json`, Croissant
-- **FAIR alignment** - stable entry URIs, versioned releases, DOI-archived on Zenodo
-- **Community curation** - all data lives in Git; contributions via pull request
+- **Structured, evidence-backed metadata** - every entry includes a curated rationale, clinical domain tags, deployment context, and at least one live evidence URL
+- **Machine-readable exports** - MLDCAT-AP 3.0, CodeMeta 3.0, MCP `server.json`, Croissant, DCAT-AP
+- **FAIR alignment** - stable entry URIs (w3id.org planned), versioned releases, DOI-archived on Zenodo
+- **FAIR Data Point server** - planned RDF/SPARQL endpoint implementing the [FDP specification](https://specs.fairdatapoint.org/), making the catalog queryable by data portals, registries, and agents
+- **Community curation** - all data lives in Git; contributions via pull request; CI validates every entry on push
+
+---
+
+## Who is MACH for?
+
+| | |
+|---|---|
+| **Hospitals & health systems** | Evaluate open-source tools against structured criteria before procurement or deployment |
+| **Researchers & data scientists** | Discover FAIR-aligned datasets, models, and pipelines with standardised metadata they can cite and query |
+| **AI / agent developers** | Query the catalog programmatically via JSON-LD, llms.txt, MCP server, or SPARQL - no scraping required |
+| **Governments & ministries** | Identify open standards-compliant tooling for national digital health infrastructure |
 
 ---
 
@@ -37,6 +49,7 @@ MACH fills that gap with:
 | 📄 Full catalog (JSON-LD) | `/catalog.jsonld` *(generated on release)* |
 | 🤖 For LLMs | `/llms.txt` *(generated on release)* |
 | 📦 MLDCAT-AP export | `/mldcat-ap.jsonld` *(generated on release)* |
+| 🔗 FAIR Data Point (RDF/SPARQL) | planned - implementing [specs.fairdatapoint.org](https://specs.fairdatapoint.org/) |
 
 ---
 
@@ -141,4 +154,4 @@ Attribution: *MACH - Machine-Actionable Catalog for Healthcare, FORSE-H, https:/
 
 ## Acknowledgements
 
-Inspired by [CNCF Landscape](https://landscape.cncf.io/), [Data Landscape (Entropy Data)](https://www.data-landscape.com/), and the [ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar). Metadata standards: [MLDCAT-AP](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) (SEMIC/EU), [CodeMeta](https://codemeta.github.io/), [DCAT-AP](https://semiceu.github.io/DCAT-AP/), [Bitol ODPS](https://github.com/bitol-io/open-data-product-standard).
+Inspired by [CNCF Landscape](https://landscape.cncf.io/), [Data Landscape (Entropy Data)](https://www.data-landscape.com/), [ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar), [Research Software Directory](https://research-software-directory.org/) (Netherlands eScience Center), and [bio.tools](https://bio.tools/) (ELIXIR). Metadata standards: [MLDCAT-AP](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) (SEMIC/EU), [CodeMeta](https://codemeta.github.io/), [DCAT-AP](https://semiceu.github.io/DCAT-AP/), [Croissant](https://mlcommons.org/working-groups/data/croissant/) (MLCommons), [Bitol ODPS](https://github.com/bitol-io/open-data-product-standard), [ODRL](https://www.w3.org/TR/odrl-model/) (W3C), [FAIR Data Point spec](https://specs.fairdatapoint.org/).
