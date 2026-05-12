@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/geneagent",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "geneagent",
+  "name": "GeneAgent",
+  "description": "Self-verifying LLM agent for gene-set analysis that autonomously queries domain databases (Gene Ontology, KEGG, NCBI Gene, PubMed) to annotate biological functions for user-provided gene sets. Employs a generate-verify-revise loop to cross-check outputs against authoritative databases, reporting a 40% reduction in hallucinations versus baseline LLMs. Published in Nature Methods 2025. Developed at NCBI/NLM, NIH.",
+  "url": "https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/GeneAgent/",
+  "codeRepository": "https://github.com/ncbi-nlp/GeneAgent",
+  "relatedLink": [
+    "https://www.nature.com/articles/s41592-025-02748-6",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12328209/"
+  ],
+  "license": "Public Domain (US Government Work)",
+  "dateModified": "2026-05-09",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "genomics",
+    "gene-set-analysis",
+    "bioinformatics",
+    "self-verification",
+    "llm-agent",
+    "gene-ontology",
+    "kegg",
+    "ncbi",
+    "hallucination-reduction",
+    "precision-medicine"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "NCBI / National Library of Medicine / NIH"
+  },
+  "mach:governance": "government",
+  "mach:foundation": "National Institutes of Health / NLM",
+  "mach:category": "ai-ml-models",
+  "mach:subcategory": "genomics",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The leading open-source agent for gene-set functional analysis. Published in Nature Methods 2025 (top-tier methods journal) from NIH/NLM. Self-verification loop against Gene Ontology, KEGG, and NCBI databases reduces hallucinations by 40% over baseline LLMs — a critical property for genomics research. Public domain licence (US Government Work), freely usable without restriction. Live demo available at NCBI. Recommended for any team performing pathway analysis, biomarker annotation, or integrating genomic data into clinical or research pipelines.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "rare-disease"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ncbi-nlp/GeneAgent",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://www.nature.com/articles/s41592-025-02748-6",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/GeneAgent/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}

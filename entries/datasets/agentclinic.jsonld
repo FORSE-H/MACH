@@ -1,0 +1,68 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/agentclinic",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "agentclinic",
+  "name": "AgentClinic",
+  "description": "Multimodal medical agent benchmark that simulates end-to-end clinical workflows. Presents AI agents with patient-facing dialogue, EHR records, lab results, and medical images, requiring differential diagnosis and treatment planning across multiple specialties. Evaluates both physician-agent and patient-agent roles. Published in npj Digital Medicine 2026.",
+  "url": "https://agentclinic.github.io/",
+  "codeRepository": "https://github.com/SamuelSchmidgall/AgentClinic",
+  "relatedLink": [
+    "https://arxiv.org/abs/2405.07960"
+  ],
+  "license": "MIT",
+  "dateModified": "2026-05-11",
+  "keywords": [
+    "clinical-benchmark",
+    "llm-agent",
+    "multimodal",
+    "ehr",
+    "differential-diagnosis",
+    "medical-imaging",
+    "clinical-workflow",
+    "evaluation",
+    "agent-benchmark"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Samuel Schmidgall"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets-benchmarks",
+  "mach:subcategory": "clinical-benchmark",
+  "mach:maturity": "beta",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Distinctive multimodal clinical benchmark combining EHR data, lab results, and medical imaging within realistic doctor-patient dialogue scenarios. Published in npj Digital Medicine 2026 (Nature portfolio). MIT licence, 304 GitHub stars. Notably models both physician and patient agent roles — a design choice that enables richer evaluation of clinical reasoning. Assess pending peer replication studies and broader adoption in the clinical NLP community.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "rare-disease"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/SamuelSchmidgall/AgentClinic",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2405.07960",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://agentclinic.github.io/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}

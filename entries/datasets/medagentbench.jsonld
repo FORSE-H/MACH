@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/medagentbench",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "medagentbench",
+  "name": "MedAgentBench",
+  "description": "FHIR-native benchmark for evaluating AI agents on real-world clinical tasks authored by practising physicians. Contains 300 tasks across 10 clinical specialties, 100 synthetic patient profiles, and over 700,000 FHIR data points. Tasks mirror genuine EHR workflows: ordering labs, interpreting results, writing referrals, and medication management. Published in NEJM AI 2025.",
+  "url": "https://ai.nejm.org/doi/full/10.1056/AIdbp2500144",
+  "codeRepository": "https://github.com/stanfordmlgroup/MedAgentBench",
+  "relatedLink": [
+    "https://ai.nejm.org/doi/full/10.1056/AIdbp2500144"
+  ],
+  "license": "MIT",
+  "dateModified": "2026-05-11",
+  "keywords": [
+    "clinical-benchmark",
+    "fhir",
+    "llm-agent",
+    "ehr",
+    "physician-authored",
+    "clinical-workflow",
+    "medication-management",
+    "evaluation",
+    "agent-benchmark",
+    "interoperability"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Stanford ML Group / Stanford University"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://github.com/stanfordmlgroup/MedAgentBench",
+      "schema:encodingFormat": "application/json"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Stanford University",
+  "mach:category": "datasets-benchmarks",
+  "mach:subcategory": "clinical-benchmark",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The most clinically rigorous open benchmark for medical AI agents. Published in NEJM AI 2025 — the gold-standard journal for clinical AI. All 300 tasks were authored by practising physicians across 10 specialties and grounded in FHIR, making it the only benchmark natively aligned with real EHR interoperability standards. MIT licence, 269 stars, Stanford pedigree. Essential for any team benchmarking agents against clinical workflow tasks.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "rare-disease",
+    "public-health"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/stanfordmlgroup/MedAgentBench",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://ai.nejm.org/doi/full/10.1056/AIdbp2500144",
+      "mach:evidenceType": "academic-reference"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/medcalc-bench",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "medcalc-bench",
+  "name": "MedCalc-Bench",
+  "description": "Benchmark dataset for evaluating LLM ability to perform clinical calculator tasks — a common but under-tested dimension of medical reasoning. Covers 55 distinct clinical scoring systems and calculators (e.g., SOFA, CHA2DS2-VASc, Wells criteria), with 1,100 test instances and 10,543 training instances generated from real patient notes. NeurIPS 2024 Oral. Developed at NCBI/NLM, NIH.",
+  "url": "https://arxiv.org/abs/2406.12036",
+  "codeRepository": "https://github.com/ncbi-nlp/MedCalc-Bench",
+  "relatedLink": [
+    "https://arxiv.org/abs/2406.12036"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "dateModified": "2026-05-11",
+  "keywords": [
+    "clinical-benchmark",
+    "clinical-calculators",
+    "medical-reasoning",
+    "llm-evaluation",
+    "sofa",
+    "scoring-systems",
+    "patient-notes",
+    "ncbi",
+    "neurips",
+    "structured-prediction"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "NCBI / National Library of Medicine / NIH"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://github.com/ncbi-nlp/MedCalc-Bench",
+      "schema:encodingFormat": "application/json"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:foundation": "National Institutes of Health / NLM",
+  "mach:category": "datasets-benchmarks",
+  "mach:subcategory": "clinical-benchmark",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "NeurIPS 2024 Oral from NIH/NLM — the only dedicated benchmark for clinical calculator reasoning, a skill systematically absent from existing medical QA benchmarks. Covers 55 real-world scoring systems derived from actual patient notes. CC-BY-SA-4.0 data licence, freely usable. Essential for teams evaluating LLM safety in numerical clinical reasoning tasks where errors carry direct patient-safety implications.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "rare-disease",
+    "public-health"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ncbi-nlp/MedCalc-Bench",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2406.12036",
+      "mach:evidenceType": "academic-reference"
+    }
+  ]
+}
