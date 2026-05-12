@@ -1,11 +1,16 @@
 {
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/monai-model-zoo",
-  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
-
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
   "identifier": "monai-model-zoo",
   "name": "MONAI Model Zoo",
-  "alternateName": ["Project-MONAI Model Zoo", "MONAI Bundle Zoo"],
+  "alternateName": [
+    "Project-MONAI Model Zoo",
+    "MONAI Bundle Zoo"
+  ],
   "description": "Curated repository of 30+ production-ready medical imaging models in standardised MONAI Bundle format, covering segmentation, detection, classification, and image synthesis across CT, MRI, pathology, and endoscopy modalities. Bundles include model weights, training configs, inference scripts, and metadata. Hosted on GitHub, NVIDIA NGC, and Hugging Face.",
   "url": "https://monai.io/model-zoo.html",
   "codeRepository": "https://github.com/Project-MONAI/model-zoo",
@@ -13,30 +18,40 @@
     "https://huggingface.co/collections/MONAI",
     "https://catalog.ngc.nvidia.com/orgs/nvidia/teams/monai"
   ],
-
   "license": "Apache-2.0",
   "dateModified": "2026-05-02",
-
-  "programmingLanguage": ["Python"],
-  "operatingSystem": ["Linux", "macOS", "Windows"],
-  "applicationCategory": "Healthcare",
-
-  "keywords": [
-    "medical-imaging", "model-zoo", "segmentation", "detection",
-    "classification", "image-synthesis", "ct", "mri", "pathology",
-    "endoscopy", "monai-bundle", "pytorch", "deep-learning"
+  "programmingLanguage": [
+    "Python"
   ],
-
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "medical-imaging",
+    "model-zoo",
+    "segmentation",
+    "detection",
+    "classification",
+    "image-synthesis",
+    "ct",
+    "mri",
+    "pathology",
+    "endoscopy",
+    "monai-bundle",
+    "pytorch",
+    "deep-learning"
+  ],
   "author": {
     "@type": "Organization",
     "name": "Project-MONAI"
   },
-
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Project-MONAI"
   },
-
   "mach:governance": "community",
   "mach:category": "medical-imaging-signals",
   "mach:subcategory": "imaging-model",
@@ -44,14 +59,20 @@
   "mach:judgement": "Adopt",
   "mach:judgementReason": "The most comprehensive open-source collection of production-ready medical imaging models. 30+ models in a standardised Bundle format (weights + configs + inference scripts) spanning CT, MRI, pathology, and endoscopy. Apache-2.0, highly active (315 stars, regular releases), distributed via GitHub, NVIDIA NGC, and Hugging Face. MONAI Bundle format enables reproducible deployment but lacks alignment with open metadata standards (no MLDCAT-AP, Croissant, or CodeMeta) — MACH partially fills that gap by providing standards-aligned metadata for individual zoo entries.",
   "mach:editorialReviewedAt": "2026-05-12",
-
   "mach:clinicalDomain": [
-    "radiology", "oncology", "pathology", "neurology", "cardiology", "surgery"
+    "radiology",
+    "oncology",
+    "pathology",
+    "neurology",
+    "cardiology",
+    "surgery"
   ],
-  "mach:deploymentContext": ["self-hosted", "cloud-only", "docker"],
-
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only",
+    "docker"
+  ],
   "mach:supportsStandard": [],
-
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -69,6 +90,9 @@
       "mach:evidenceType": "documentation"
     }
   ],
-
-  "mach:alternativeTo": ["nnunet", "medsam"]
+  "mach:alternativeTo": [
+    "nnunet",
+    "medsam"
+  ],
+  "mach:swhid": "swh:1:ori:98b121215e6edcf92020c17b4be4630649dd2b3a"
 }

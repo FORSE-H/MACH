@@ -1,29 +1,38 @@
 {
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/fhir-mcp-wso2",
-  "@type": ["schema:SoftwareApplication", "mach:MCPServer"],
-
+  "@type": [
+    "schema:SoftwareApplication",
+    "mach:MCPServer"
+  ],
   "identifier": "fhir-mcp-wso2",
   "name": "FHIR MCP Server (WSO2)",
   "description": "Exposes any FHIR R4/R5 server as an MCP server, enabling LLM agents to perform CRUD operations on FHIR resources through natural language via a standardised MCP interface.",
   "url": "https://github.com/wso2/fhir-mcp-server",
   "codeRepository": "https://github.com/wso2/fhir-mcp-server",
   "logo": "../../logos/wso2.svg",
-
   "license": "Apache-2.0",
   "softwareVersion": "0.1.0",
   "dateModified": "2025-06-01",
-
-  "programmingLanguage": ["Python"],
-  "operatingSystem": ["Linux", "Docker"],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "Docker"
+  ],
   "applicationCategory": "Healthcare",
-  "keywords": ["mcp", "fhir", "llm", "agent", "healthcare-ai"],
-
+  "keywords": [
+    "mcp",
+    "fhir",
+    "llm",
+    "agent",
+    "healthcare-ai"
+  ],
   "mach:transport": "http",
   "mach:authMethod": "oauth2",
   "mach:fhirVersion": "R4",
   "mach:mcpSpecVersion": "2024-11-05",
-
   "mach:governance": "vendor-led",
   "mach:foundation": "WSO2",
   "mach:category": "mcp-servers-ai-interfaces",
@@ -32,13 +41,17 @@
   "mach:judgement": "Assess",
   "mach:judgementReason": "Well-structured implementation with OAuth2 support and Docker compose for rapid local setup. MCP is itself an emerging standard (2024), and healthcare MCP servers are pre-production as of early 2026. Track this space actively; do not commit to production clinical workflows until the MCP ecosystem matures.",
   "mach:editorialReviewedAt": "2026-01-01",
-
-  "mach:clinicalDomain": ["primary-care", "secondary-care"],
-  "mach:deploymentContext": ["self-hosted", "docker"],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "docker"
+  ],
   "mach:supportsStandard": [
     "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fhir-r4"
   ],
-
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -46,6 +59,9 @@
       "mach:evidenceType": "primary-repo"
     }
   ],
-
-  "mach:alternativeTo": ["fhir-mcp-momentum", "fhir-mcp-flexpa"]
+  "mach:alternativeTo": [
+    "fhir-mcp-momentum",
+    "fhir-mcp-flexpa"
+  ],
+  "mach:swhid": "swh:1:ori:9e35676f66b95dc3a65ecc87e5befde0a4728c20"
 }

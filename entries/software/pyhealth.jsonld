@@ -1,11 +1,15 @@
 {
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/pyhealth",
-  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
-
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
   "identifier": "pyhealth",
   "name": "PyHealth",
-  "alternateName": ["PyHealth 2.0"],
+  "alternateName": [
+    "PyHealth 2.0"
+  ],
   "description": "Open-source Python toolkit for clinical deep learning that unifies datasets, tasks, and ML models across EHR, physiological signals, and medical imaging into a single 5-stage pipeline API. Supports 20+ clinical datasets, 26+ standardised clinical prediction tasks, and 33+ models with built-in explainability and conformal prediction.",
   "url": "https://pyhealth.dev",
   "codeRepository": "https://github.com/sunlabuiuc/PyHealth",
@@ -15,22 +19,35 @@
     "https://pyhealth.readthedocs.io/en/latest/",
     "https://discord.gg/mpb835EHaX"
   ],
-
   "license": "MIT",
   "softwareVersion": "2.0",
   "dateModified": "2026-01-01",
-
-  "programmingLanguage": ["Python"],
-  "operatingSystem": ["Linux", "macOS", "Windows"],
-  "applicationCategory": "Healthcare",
-
-  "keywords": [
-    "clinical-ai", "deep-learning", "ehr", "mimic", "omop", "eicu",
-    "clinical-prediction", "drug-recommendation", "mortality-prediction",
-    "readmission-prediction", "explainability", "conformal-prediction",
-    "pytorch", "pipeline", "healthcare-ai-toolkit"
+  "programmingLanguage": [
+    "Python"
   ],
-
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "clinical-ai",
+    "deep-learning",
+    "ehr",
+    "mimic",
+    "omop",
+    "eicu",
+    "clinical-prediction",
+    "drug-recommendation",
+    "mortality-prediction",
+    "readmission-prediction",
+    "explainability",
+    "conformal-prediction",
+    "pytorch",
+    "pipeline",
+    "healthcare-ai-toolkit"
+  ],
   "copyrightHolder": {
     "@type": "Person",
     "name": "John Wu",
@@ -39,7 +56,6 @@
       "name": "Sun Lab, University of Illinois Urbana-Champaign (UIUC)"
     }
   },
-
   "mach:governance": "academic",
   "mach:foundation": "Sun Lab, UIUC (John Wu)",
   "mach:category": "tooling-infrastructure",
@@ -48,17 +64,22 @@
   "mach:judgement": "Adopt",
   "mach:judgementReason": "PyHealth 2.0 (Jan 2026) is the most comprehensive unified Python framework for clinical AI, covering EHR, signals, and imaging in a single coherent API. Benchmarks show 39× faster loading than pandas and 20× less memory than pandarallel on MIMIC-IV. Active community (400+ Discord), pip-installable, peer-reviewed paper, and a structured research initiative. The main caveat is academic governance (single lab) rather than a foundation — watch for bus-factor risk as with most academic open-source.",
   "mach:editorialReviewedAt": "2026-05-01",
-
   "mach:clinicalDomain": [
-    "primary-care", "secondary-care", "oncology",
-    "cardiology", "emergency", "public-health"
+    "primary-care",
+    "secondary-care",
+    "oncology",
+    "cardiology",
+    "emergency",
+    "public-health"
   ],
-  "mach:deploymentContext": ["self-hosted", "cloud-only", "docker"],
-
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only",
+    "docker"
+  ],
   "mach:supportsStandard": [
     "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fhir-r4"
   ],
-
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -82,6 +103,9 @@
       "mach:evidenceType": "documentation"
     }
   ],
-
-  "mach:alternativeTo": ["torcheeg", "medicalai"]
+  "mach:alternativeTo": [
+    "torcheeg",
+    "medicalai"
+  ],
+  "mach:swhid": "swh:1:ori:02d8b4f6ac3e8499e44bd640ada6d5d4a5318ea1"
 }

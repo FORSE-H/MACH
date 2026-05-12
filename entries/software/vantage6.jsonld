@@ -1,11 +1,15 @@
 {
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/vantage6",
-  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
-
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
   "identifier": "vantage6",
   "name": "vantage6",
-  "alternateName": ["VANTAGE6"],
+  "alternateName": [
+    "VANTAGE6"
+  ],
   "description": "Privacy Enhancing Technology (PET) operations platform enabling federated learning and multi-party computation across distributed healthcare data. Institutions keep their sensitive data locally; only aggregated results leave the node. Delivers a central server, node agents, Python client, CLI, algorithm store, and Angular UI as Docker images.",
   "url": "https://vantage6.ai",
   "codeRepository": "https://github.com/vantage6/vantage6",
@@ -16,26 +20,36 @@
     "https://discord.gg/yAyFf6Y",
     "https://research-software-directory.org/software/vantage6"
   ],
-
   "license": "Apache-2.0",
   "softwareVersion": "4.14.0",
   "dateModified": "2026-03-24",
-
-  "programmingLanguage": ["Python", "TypeScript"],
-  "operatingSystem": ["Linux", "Docker"],
-  "applicationCategory": "Healthcare",
-
-  "keywords": [
-    "federated-learning", "privacy-preserving", "pet", "multi-party-computation",
-    "distributed-analytics", "ohdsi", "omop", "gdpr", "research-infrastructure",
-    "federated-analytics", "healthcare-ai", "clinical-research"
+  "programmingLanguage": [
+    "Python",
+    "TypeScript"
   ],
-
+  "operatingSystem": [
+    "Linux",
+    "Docker"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "federated-learning",
+    "privacy-preserving",
+    "pet",
+    "multi-party-computation",
+    "distributed-analytics",
+    "ohdsi",
+    "omop",
+    "gdpr",
+    "research-infrastructure",
+    "federated-analytics",
+    "healthcare-ai",
+    "clinical-research"
+  ],
   "copyrightHolder": {
     "@type": "Organization",
     "name": "vantage6 community"
   },
-
   "mach:governance": "community",
   "mach:foundation": "vantage6 community (originally iknl / Netherlands eScience Center)",
   "mach:category": "tooling-infrastructure",
@@ -44,19 +58,22 @@
   "mach:judgement": "Adopt",
   "mach:judgementReason": "One of the most mature open-source federated learning platforms available for healthcare research, with 246 releases and v4.14.0 as of March 2026. Pip-installable, fully Dockerised, with a dedicated algorithm store and OHDSI/OMOP algorithm base image. EU-origin with GDPR-aligned architecture — data never leaves the node. Zenodo DOI, CITATION.cff, AMIA 2020 peer-reviewed paper, and a Research Software Directory listing make it fully citable for academic use. The principal caution is community (not foundation) governance, but 8,000+ commits and 8+ years of active development substantially reduce the bus-factor risk.",
   "mach:editorialReviewedAt": "2026-05-11",
-
   "mach:clinicalDomain": [
-    "oncology", "public-health", "genomics",
-    "primary-care", "secondary-care"
+    "oncology",
+    "public-health",
+    "genomics",
+    "primary-care",
+    "secondary-care"
   ],
   "mach:deploymentContext": [
-    "self-hosted", "docker", "gdpr-ready", "eu-ai-act-documented"
+    "self-hosted",
+    "docker",
+    "gdpr-ready",
+    "eu-ai-act-documented"
   ],
-
   "mach:supportsStandard": [
     "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fhir-r4"
   ],
-
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -90,6 +107,10 @@
       "mach:evidenceType": "research-software-directory"
     }
   ],
-
-  "mach:alternativeTo": ["flower-federated-learning", "pysyft", "substra"]
+  "mach:alternativeTo": [
+    "flower-federated-learning",
+    "pysyft",
+    "substra"
+  ],
+  "mach:swhid": "swh:1:ori:c55613f6fc1190eae2efbafa315912af46f7112a"
 }

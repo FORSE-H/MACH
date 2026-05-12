@@ -1,23 +1,34 @@
 {
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/openmed",
-  "@type": ["schema:SoftwareApplication", "mach:MLModel"],
-
+  "@type": [
+    "schema:SoftwareApplication",
+    "mach:MLModel"
+  ],
   "identifier": "openmed",
   "name": "OpenMed",
   "description": "Production-ready medical NLP toolkit providing state-of-the-art encoder transformers (BERT, ELECTRA, DeBERTa families) for biomedical named entity recognition (disease, drug, gene, anatomy, oncology) and multilingual clinical de-identification with HIPAA Safe Harbor coverage. All inference runs on-device — no external API calls, no PHI leaving the environment.",
   "url": "https://openmed.life/",
   "codeRepository": "https://github.com/maziyarpanahi/openmed",
   "logo": "../../logos/openmed.svg",
-
   "license": "https://spdx.org/licenses/Apache-2.0",
   "softwareVersion": "1.4.0",
   "dateModified": "2026-05-11",
-
-  "programmingLanguage": ["Python", "Swift"],
+  "programmingLanguage": [
+    "Python",
+    "Swift"
+  ],
   "applicationCategory": "Healthcare",
-  "keywords": ["clinical-nlp", "ner", "de-identification", "phi", "hipaa", "biomedical", "transformers", "on-device"],
-
+  "keywords": [
+    "clinical-nlp",
+    "ner",
+    "de-identification",
+    "phi",
+    "hipaa",
+    "biomedical",
+    "transformers",
+    "on-device"
+  ],
   "mach:weightsLicense": "Apache-2.0",
   "mach:trainingDataSummary": "Specialised models trained on biomedical NER benchmarks across disease, drug, gene, anatomy, and oncology corpora. De-identification models trained for HIPAA Safe Harbor entity types across 9 languages. Full training data provenance per model listed on Hugging Face model cards.",
   "mach:intendedUse": "Extracting structured clinical entities from unstructured text (EHR notes, discharge summaries, clinical reports). De-identification of clinical documents prior to secondary use or sharing. Research and production use. Not a clinical decision support tool; outputs require human review in regulated settings.",
@@ -29,7 +40,6 @@
       "name": "OpenMed: State-of-the-art biomedical NER benchmark results"
     }
   ],
-
   "mach:governance": "individual",
   "mach:category": "ai-ml-models",
   "mach:subcategory": "nlp-ner",
@@ -37,10 +47,14 @@
   "mach:judgement": "Assess",
   "mach:judgementReason": "Strong technical foundation — SOTA on 10 of 12 biomedical NER benchmarks, Apache-2.0 weights, on-device inference, and active development (v1.4.0, 1.1k GitHub stars). Rated Assess rather than Adopt because the peer-reviewed paper is very recent (August 2025) and clinical deployment track record is not yet established. Re-evaluate for Adopt after community adoption evidence accumulates.",
   "mach:editorialReviewedAt": "2026-05-11",
-
-  "mach:clinicalDomain": ["cross-cutting"],
-  "mach:deploymentContext": ["offline-capable", "self-hosted", "hipaa-ready"],
-
+  "mach:clinicalDomain": [
+    "cross-cutting"
+  ],
+  "mach:deploymentContext": [
+    "offline-capable",
+    "self-hosted",
+    "hipaa-ready"
+  ],
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -62,5 +76,6 @@
       "url": "https://openmed.life/",
       "mach:evidenceType": "project-site"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:c0e198ef7ba41275e2b69aa2e2fb5428385729ef"
 }

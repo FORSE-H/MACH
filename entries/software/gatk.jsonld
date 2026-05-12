@@ -1,41 +1,55 @@
 {
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/gatk",
-  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
-
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
   "identifier": "gatk",
   "name": "GATK",
-  "alternateName": ["Genome Analysis Toolkit", "GATK4"],
+  "alternateName": [
+    "Genome Analysis Toolkit",
+    "GATK4"
+  ],
   "description": "The industry-standard toolkit for variant discovery in high-throughput sequencing data, developed by the Broad Institute. Implements best-practice pipelines for germline and somatic variant calling, copy number variation, and structural variant detection across WGS, WES, and targeted panel data.",
   "url": "https://gatk.broadinstitute.org/",
   "codeRepository": "https://github.com/broadinstitute/gatk",
   "relatedLink": [
     "https://hub.docker.com/r/broadinstitute/gatk"
   ],
-
   "license": "Apache-2.0",
   "softwareVersion": "4.6.2.0",
   "dateModified": "2026-03-01",
-
-  "programmingLanguage": ["Java"],
-  "operatingSystem": ["Linux", "macOS"],
-  "applicationCategory": "Healthcare",
-
-  "keywords": [
-    "variant-calling", "genomics", "wgs", "wes", "germline", "somatic",
-    "snp", "indel", "cnv", "clinical-genomics", "ngs", "bioinformatics"
+  "programmingLanguage": [
+    "Java"
   ],
-
+  "operatingSystem": [
+    "Linux",
+    "macOS"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "variant-calling",
+    "genomics",
+    "wgs",
+    "wes",
+    "germline",
+    "somatic",
+    "snp",
+    "indel",
+    "cnv",
+    "clinical-genomics",
+    "ngs",
+    "bioinformatics"
+  ],
   "author": {
     "@type": "Organization",
     "name": "Broad Institute"
   },
-
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Broad Institute of MIT and Harvard"
   },
-
   "mach:governance": "academic",
   "mach:foundation": "Broad Institute of MIT and Harvard",
   "mach:category": "tooling-infrastructure",
@@ -44,10 +58,18 @@
   "mach:judgement": "Adopt",
   "mach:judgementReason": "The de-facto standard for clinical variant calling. GATK Best Practices pipelines are the reference methodology for germline and somatic variant discovery in clinical genomics labs globally. 1,900+ stars, Apache-2.0, Docker-distributed, Cromwell/WDL compatible. Used in the 100,000 Genomes Project, clinical diagnostic labs, and most large-scale genomics programmes. No credible open-source alternative matches its breadth and validation in clinical settings.",
   "mach:editorialReviewedAt": "2026-05-12",
-
-  "mach:clinicalDomain": ["oncology", "research", "rare-disease", "public-health"],
-  "mach:deploymentContext": ["self-hosted", "cloud-only", "docker", "hipaa-ready"],
-
+  "mach:clinicalDomain": [
+    "oncology",
+    "research",
+    "rare-disease",
+    "public-health"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only",
+    "docker",
+    "hipaa-ready"
+  ],
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -64,5 +86,6 @@
       "url": "https://hub.docker.com/r/broadinstitute/gatk",
       "mach:evidenceType": "package-registry"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:062ae9057dd25273d479e4bb5ae410dc9eded313"
 }

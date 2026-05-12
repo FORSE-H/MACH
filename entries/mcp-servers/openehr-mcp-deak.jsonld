@@ -1,32 +1,43 @@
 {
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/openehr-mcp-deak",
-  "@type": ["schema:SoftwareApplication", "mach:MCPServer"],
-
+  "@type": [
+    "schema:SoftwareApplication",
+    "mach:MCPServer"
+  ],
   "identifier": "openehr-mcp-deak",
   "name": "openEHR MCP Server (deak-ai)",
-  "alternateName": ["openehr-mcp-server"],
+  "alternateName": [
+    "openehr-mcp-server"
+  ],
   "description": "MCP server for runtime interaction with EHRbase via openEHR REST APIs. Exposes 11 MCP tools covering template operations, EHR lifecycle management, composition CRUD, and AQL query execution. Enables AI agents to read and write real patient data in an EHRbase CDR through natural language.",
   "url": "https://github.com/deak-ai/openehr-mcp-server",
   "codeRepository": "https://github.com/deak-ai/openehr-mcp-server",
-
   "license": "MIT",
   "softwareVersion": "0.1.0",
   "dateModified": "2026-04-01",
-
-  "operatingSystem": ["Linux", "Docker"],
+  "operatingSystem": [
+    "Linux",
+    "Docker"
+  ],
   "applicationCategory": "Healthcare",
-  "keywords": ["mcp", "openehr", "ehrbase", "aql", "composition", "ehr", "healthcare-ai", "llm"],
-
+  "keywords": [
+    "mcp",
+    "openehr",
+    "ehrbase",
+    "aql",
+    "composition",
+    "ehr",
+    "healthcare-ai",
+    "llm"
+  ],
   "author": {
     "@type": "Organization",
     "name": "deak-ai"
   },
-
   "mach:transport": "stdio",
   "mach:authMethod": "env-config",
   "mach:mcpSpecVersion": "2024-11-05",
-
   "mach:governance": "individual",
   "mach:category": "mcp-servers-ai-interfaces",
   "mach:subcategory": "openehr-mcp",
@@ -34,13 +45,18 @@
   "mach:judgement": "Assess",
   "mach:judgementReason": "The first MCP server for live EHRbase CDR interaction — covering the full composition lifecycle and AQL queries. Concretely useful for AI agents that need to read and write real patient data in an openEHR CDR. EHRbase-specific (not generic openEHR), which limits portability to other CDRs. Very early stage (14 commits, v0.1.0), individual maintainer, no auth mechanism documented. Complementary to Cadasto's design-time server. Evaluate alongside it; do not use with real patient data until auth and stability mature.",
   "mach:editorialReviewedAt": "2026-05-12",
-
-  "mach:clinicalDomain": ["primary-care", "secondary-care", "research"],
-  "mach:deploymentContext": ["self-hosted", "docker"],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "docker"
+  ],
   "mach:supportsStandard": [
     "https://github.com/FORSE-H/MACH/tree/main/entries/standards/openehr"
   ],
-
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -48,6 +64,8 @@
       "mach:evidenceType": "primary-repo"
     }
   ],
-
-  "mach:alternativeTo": ["openehr-mcp-cadasto"]
+  "mach:alternativeTo": [
+    "openehr-mcp-cadasto"
+  ],
+  "mach:swhid": "swh:1:ori:1412de90d56ffa05fca10fdcdbcf33ce415a570d"
 }
