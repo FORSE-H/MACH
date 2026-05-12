@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/openscribe",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "openscribe",
+  "name": "OpenScribe",
+  "description": "Open-source, local-first AI clinical scribe that records patient encounters and automatically generates structured clinical notes. Runs entirely on-device via a desktop Electron app — no audio or patient data leaves the clinic. Uses local LLMs to transcribe and structure notes, providing a privacy-preserving alternative to commercial AI scribes (Nuance DAX, Ambience, Suki) with no vendor lock-in.",
+  "url": "https://github.com/sammargolis/OpenScribe",
+  "codeRepository": "https://github.com/sammargolis/OpenScribe",
+  "license": "MIT",
+  "dateModified": "2026-05-10",
+  "programmingLanguage": [
+    "TypeScript"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "ai-scribe",
+    "clinical-documentation",
+    "local-first",
+    "llm",
+    "clinical-notes",
+    "ehr",
+    "privacy",
+    "self-hosted",
+    "ambient-documentation",
+    "electron"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Sam Margolis"
+  },
+  "mach:governance": "individual",
+  "mach:category": "clinical-systems",
+  "mach:subcategory": "ehr",
+  "mach:maturity": "beta",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The leading open-source alternative to commercial AI clinical scribes. Local-first Electron app processes audio entirely on-device — no patient data leaves the clinic — a critical differentiator for practices subject to HIPAA, GDPR, or institutional data governance policies. 165 stars and 38 forks within 6 months of launch signals strong community demand. MIT licence, actively maintained. Individual-governed and no peer-reviewed publication yet; Assess pending community growth and clinical validation, but the privacy-preserving design makes it worth evaluating now for any team exploring ambient clinical documentation.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/sammargolis/OpenScribe",
+      "mach:evidenceType": "primary-repo"
+    }
+  ]
+}
