@@ -1,0 +1,70 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/direct",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "direct",
+  "name": "DIRECT",
+  "alternateName": [
+    "Deep Image REConstruction Toolkit"
+  ],
+  "description": "PyTorch-based deep learning framework for accelerated MRI reconstruction from undersampled k-space data. Implements a range of state-of-the-art inverse-problem approaches including unrolled networks, diffusion models, and physics-informed architectures. Participated in the fastMRI challenge. Developed by the AI for Oncology group at the Netherlands Cancer Institute (NKI).",
+  "url": "https://docs.aiforoncology.nl/direct",
+  "codeRepository": "https://github.com/NKI-AI/direct",
+  "license": "Apache-2.0",
+  "softwareVersion": "2.1.0",
+  "dateModified": "2026-05-09",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "mri-reconstruction",
+    "deep-learning",
+    "pytorch",
+    "inverse-problems",
+    "medical-imaging",
+    "accelerated-mri",
+    "fastmri",
+    "k-space",
+    "oncology",
+    "radiology"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI for Oncology / Netherlands Cancer Institute (NKI)"
+  },
+  "mach:governance": "academic",
+  "mach:foundation": "Netherlands Cancer Institute / AI for Oncology",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "radiology",
+  "mach:maturity": "beta",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Well-structured deep learning framework for accelerated MRI reconstruction from the AI for Oncology group at the Netherlands Cancer Institute. Apache-2.0, 302 stars and 49 forks for a specialised research tool reflects solid community adoption. Implements physics-informed and unrolled network approaches, with fastMRI challenge participation confirming benchmark-level quality. Active development through May 2026 despite last formal release being July 2024. Assess for teams building MRI acceleration pipelines or evaluating deep learning reconstruction against clinical baseline methods.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "radiology"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/NKI-AI/direct",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.aiforoncology.nl/direct",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}
