@@ -6,7 +6,7 @@
   "identifier": "biomni",
   "name": "Biomni",
   "description": "General-purpose biomedical AI agent framework from Stanford SNAP Lab. Combines LLM reasoning with retrieval-augmented planning and code execution to autonomously run biomedical research workflows — CRISPR screening, drug property prediction, RNA-seq annotation, GWAS analysis, and rare disease diagnosis. Integrates external tools via MCP.",
-  "url": "https://github.com/snap-stanford/biomni",
+  "url": "https://biomni.stanford.edu/",
   "codeRepository": "https://github.com/snap-stanford/biomni",
   "relatedLink": [
     "https://pypi.org/project/biomni/"
