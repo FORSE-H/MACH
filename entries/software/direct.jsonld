@@ -66,5 +66,6 @@
       "url": "https://docs.aiforoncology.nl/direct",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:5943b867f0106a319bd9239da56c88222e45cc0f"
 }
