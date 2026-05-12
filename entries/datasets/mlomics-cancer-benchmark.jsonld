@@ -1,0 +1,81 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/mlomics-cancer-benchmark",
+  "@type": ["schema:Dataset", "mach:Dataset"],
+
+  "identifier": "mlomics-cancer-benchmark",
+  "name": "MLOmics Cancer Multi-Omics Benchmark",
+  "alternateName": ["Cancer-Multi-Omics-Benchmark", "MLOmics"],
+  "description": "Standardised multi-omics benchmark dataset covering all 32 TCGA cancer types across four omics modalities: mRNA expression, microRNA, DNA methylation, and copy number variation (CNV). Includes preprocessed data splits, baseline ML implementations in Python and R, and evaluation protocols for cancer subtype classification and prognosis tasks.",
+  "url": "https://github.com/chenzRG/Cancer-Multi-Omics-Benchmark",
+  "codeRepository": "https://github.com/chenzRG/Cancer-Multi-Omics-Benchmark",
+  "relatedLink": [
+    "https://arxiv.org/abs/2409.02143",
+    "https://huggingface.co/datasets/chenzRG/Cancer-Multi-Omics-Benchmark"
+  ],
+
+  "license": "CC-BY-4.0",
+  "dateModified": "2024-09-01",
+
+  "keywords": [
+    "cancer", "multi-omics", "tcga", "mrna", "mirna", "dna-methylation",
+    "cnv", "benchmark", "cancer-subtype", "precision-oncology", "machine-learning"
+  ],
+
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Kyoto University"
+    },
+    {
+      "@type": "Organization",
+      "name": "University of Tokyo"
+    },
+    {
+      "@type": "Organization",
+      "name": "University of Illinois Urbana-Champaign"
+    }
+  ],
+
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://huggingface.co/datasets/chenzRG/Cancer-Multi-Omics-Benchmark",
+      "schema:encodingFormat": "application/json"
+    },
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://figshare.com",
+      "schema:encodingFormat": "text/csv"
+    }
+  ],
+
+  "mach:governance": "academic",
+  "mach:category": "datasets-benchmarks",
+  "mach:subcategory": "omics-benchmark",
+  "mach:maturity": "production",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Well-structured multi-omics benchmark covering all 32 TCGA cancer types with standardised preprocessing and baseline implementations in Python and R. CC-BY-4.0 data license, distributed via Hugging Face and Figshare. Modest adoption (81 GitHub stars) and primarily a research benchmark rather than clinical data. Assess pending broader community uptake. A useful starting point for teams building cancer subtype classification or prognosis models who need a standardised multi-omics baseline.",
+  "mach:editorialReviewedAt": "2026-05-12",
+
+  "mach:clinicalDomain": ["oncology", "research"],
+  "mach:deploymentContext": ["offline-capable", "self-hosted"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2409.02143",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/chenzRG/Cancer-Multi-Omics-Benchmark",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/datasets/chenzRG/Cancer-Multi-Omics-Benchmark",
+      "mach:evidenceType": "model-hub"
+    }
+  ]
+}
