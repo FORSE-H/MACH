@@ -121,12 +121,13 @@ categories:
 
   - id: compliance-governance
     name: Compliance & Governance
-    description: HIPAA helpers, EU AI Act tooling, audit, consent, policy enforcement
+    description: HIPAA helpers, EU AI Act tooling, audit, consent, policy enforcement, data access governance
     subcategories:
       - hipaa
       - eu-ai-act
       - audit
       - policy
+      - data-access
 
 judgements:
   - id: Adopt

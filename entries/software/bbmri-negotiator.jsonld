@@ -1,0 +1,78 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/bbmri-negotiator",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "bbmri-negotiator",
+  "name": "BBMRI-ERIC Negotiator",
+  "alternateName": [
+    "Negotiator"
+  ],
+  "description": "Open-source access negotiation platform for biobank and research infrastructure data requests. Manages the full Data Access Request (DAR) lifecycle — submission, review, multi-party negotiation, and approval — across distributed biobank networks. Used as the official access management system for BBMRI-ERIC, the pan-European biobank research infrastructure spanning 20+ countries. Deployable by individual biobanks or federated research networks.",
+  "url": "https://bbmri-eric.github.io/negotiator/",
+  "codeRepository": "https://github.com/BBMRI-ERIC/negotiator",
+  "relatedLink": [
+    "https://www.bbmri-eric.eu/"
+  ],
+  "license": "AGPL-3.0",
+  "dateModified": "2026-05-11",
+  "programmingLanguage": [
+    "Java"
+  ],
+  "operatingSystem": [
+    "Linux"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "data-access",
+    "biobank",
+    "access-negotiation",
+    "dar",
+    "research-infrastructure",
+    "bbmri",
+    "federated",
+    "data-governance",
+    "access-management"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "BBMRI-ERIC"
+  },
+  "mach:governance": "foundation",
+  "mach:foundation": "BBMRI-ERIC",
+  "mach:category": "compliance-governance",
+  "mach:subcategory": "data-access",
+  "mach:maturity": "production",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The official data access negotiation platform for BBMRI-ERIC, the pan-European biobank network (20+ countries). Covers the full Data Access Request lifecycle including multi-party review and approval workflows — a genuine gap not addressed by generic workflow tools. AGPL-3.0 licence and Java stack may require evaluation for hospital IT environments. 33 stars understates institutional deployment; 11 forks indicate real infrastructure adoption. Assess for teams building FAIR data access workflows for biobanks or multi-site research networks; strong fit for ELIXIR and BBMRI-affiliated institutions.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "rare-disease",
+    "public-health"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "docker"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/BBMRI-ERIC/negotiator",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://bbmri-eric.github.io/negotiator/",
+      "mach:evidenceType": "project-website"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.bbmri-eric.eu/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}
