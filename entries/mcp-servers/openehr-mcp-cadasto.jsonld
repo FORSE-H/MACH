@@ -1,0 +1,60 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/openehr-mcp-cadasto",
+  "@type": ["schema:SoftwareApplication", "mach:MCPServer"],
+
+  "identifier": "openehr-mcp-cadasto",
+  "name": "openEHR Assistant MCP (Cadasto)",
+  "alternateName": ["openehr-assistant-mcp"],
+  "description": "MCP server bridging AI assistants with openEHR design-time workflows. Exposes CKM archetype and template search, openEHR terminology concept resolution, curated guides and examples, and BMM type specifications as MCP resources via openehr:// URIs. Deployable locally via Docker or usable via hosted endpoint.",
+  "url": "https://github.com/Cadasto/openehr-assistant-mcp",
+  "codeRepository": "https://github.com/Cadasto/openehr-assistant-mcp",
+
+  "license": "MIT",
+  "softwareVersion": "0.x",
+  "dateModified": "2026-04-01",
+
+  "programmingLanguage": ["PHP"],
+  "operatingSystem": ["Linux", "Docker"],
+  "applicationCategory": "Healthcare",
+  "keywords": ["mcp", "openehr", "ckm", "archetypes", "terminology", "healthcare-ai", "llm"],
+
+  "author": {
+    "@type": "Organization",
+    "name": "Cadasto"
+  },
+
+  "mach:transport": "http",
+  "mach:authMethod": "none",
+  "mach:mcpSpecVersion": "2025-03-26",
+
+  "mach:governance": "vendor-led",
+  "mach:foundation": "Cadasto",
+  "mach:category": "mcp-servers-ai-interfaces",
+  "mach:subcategory": "openehr-mcp",
+  "mach:maturity": "beta",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The first MCP server focused on openEHR design-time knowledge — CKM archetypes, templates, and terminology. Fills a genuine gap for AI agents working with openEHR artefacts. Pre-release (v0.x, breaking changes expected), maintained by Cadasto (small org, unclear long-term sustainability), and written in PHP which limits the contributor pool. Hosted endpoint available for quick evaluation. Track alongside the openEHR CDR-focused counterpart (deak-ai). Do not use in production clinical workflows until v1.0.",
+  "mach:editorialReviewedAt": "2026-05-12",
+
+  "mach:clinicalDomain": ["primary-care", "secondary-care", "research"],
+  "mach:deploymentContext": ["self-hosted", "docker", "cloud-only"],
+  "mach:supportsStandard": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/standards/openehr"
+  ],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Cadasto/openehr-assistant-mcp",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://openehr-assistant-mcp.apps.cadasto.com/",
+      "mach:evidenceType": "live-demo"
+    }
+  ],
+
+  "mach:alternativeTo": ["openehr-mcp-deak"]
+}
