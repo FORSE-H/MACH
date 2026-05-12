@@ -82,12 +82,23 @@ def get_jsonld_url(e):
         return entry_id.replace("tree/main", "blob/main") + ".jsonld"
     return ""
 
+REPO_HOSTS = {"github.com", "gitlab.com", "bitbucket.org", "codeberg.org", "sr.ht"}
+
+def _is_repo_url(url):
+    try:
+        from urllib.parse import urlparse
+        host = urlparse(url).netloc.lower().removeprefix("www.")
+        return host in REPO_HOSTS
+    except Exception:
+        return False
+
 def build_url_links(e):
     site = e.get("url", "")
     repo = e.get("codeRepository", "")
     links = []
     if site:
-        links.append(f'<a href="{site}" target="_blank" rel="noopener" class="entry-url">↗ site</a>')
+        label = "repo" if _is_repo_url(site) else "site"
+        links.append(f'<a href="{site}" target="_blank" rel="noopener" class="entry-url">↗ {label}</a>')
     if repo and repo != site:
         links.append(f'<a href="{repo}" target="_blank" rel="noopener" class="entry-url">↗ repo</a>')
     return "".join(links)
