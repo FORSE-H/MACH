@@ -4,14 +4,14 @@
 
 [![License: Apache-2.0](https://img.shields.io/badge/Code-Apache_2.0-blue.svg)](LICENSE)
 [![Data License: CC-BY-4.0](https://img.shields.io/badge/Data-CC--BY--4.0-lightgrey.svg)](LICENSE-DATA)
-[![Entries](https://img.shields.io/badge/entries-seeding-orange.svg)](#)
+[![Entries](https://img.shields.io/badge/entries-39-brightgreen.svg)](#)
 [![Validate](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml/badge.svg)](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml)
 
 MACH is an open, machine-actionable catalog of open-source healthcare software, AI/ML models, clinical standards, datasets, tooling, and MCP servers - curated for humans, queryable by agents.
 
 Every entry is a structured JSON-LD record aligned with established open metadata standards, so hospitals, researchers, governments, and AI agents can all discover and consume the open healthcare commons.
 
-> **Project status:** seeding - initial entries and infrastructure being established.
+> **Project status:** active — 39 curated entries across 8 categories; CI pipeline live; 
 > Initiated October 2025. A project of [FORSE-H](https://github.com/FORSE-H).
 
 ---
@@ -97,7 +97,7 @@ The table above describes the *intended* alignment. Current implementation gaps:
 |---|---|---|
 | [CodeMeta 3.0](https://codemeta.github.io/) | **Partial** - field names follow CodeMeta, `codemeta:` prefix declared in context | Export script (`scripts/export_codemeta.py`) not yet built; no per-entry `/codemeta/<slug>.json` output |
 | [MLDCAT-AP 3.0](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) | **Partial** - `mldcat:` prefix now declared; model fields resolve to `mldcat:` URIs | Export script (`scripts/export_mldcat_ap.py`) not yet built; no `/mldcat-ap.jsonld` output |
-| [Croissant](https://mlcommons.org/working-groups/data/croissant/) | **Not started** - no dataset entries exist yet | Dataset entries, Croissant context mapping, and export script all pending |
+| [Croissant](https://mlcommons.org/working-groups/data/croissant/) | **Partial** - dataset entries exist (AgentClinic, MedAgentBench, MedCalc-Bench, MLOmics) | Croissant context mapping and export script pending |
 | [MCP server.json](https://github.com/modelcontextprotocol/registry) | **Partial** - `mach:transport`, `mach:authMethod` etc. present in MCP entries | Export script producing compliant `/mcp/<slug>.server.json` not yet built |
 | [DCAT-AP](https://semiceu.github.io/DCAT-AP/) | **Partial** - `dcat:` prefix declared in context | No DCAT-AP export; `dcat:` terms not yet used in individual entries |
 | [Bitol ODPS](https://github.com/bitol-io/open-data-product-standard) | **Not started** | No data product entries or ODPS mapping |

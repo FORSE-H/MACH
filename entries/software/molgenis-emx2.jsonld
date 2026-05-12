@@ -1,0 +1,77 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/molgenis-emx2",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "molgenis-emx2",
+  "name": "MOLGENIS EMX2",
+  "alternateName": [
+    "MOLGENIS",
+    "Entity Model eXtension 2"
+  ],
+  "description": "FAIR research data platform for building and managing biobank catalogues, rare-disease registries, and cohort data portals. Provides a flexible entity-model framework (EMX2), GraphQL API, and built-in data harmonisation support. Used across BBMRI-ERIC, RD-Connect, and ELIXIR-affiliated networks to host federated biobank metadata catalogues and sample directories. Developed at the University of Groningen.",
+  "url": "https://molgenis.github.io/molgenis-emx2/",
+  "codeRepository": "https://github.com/molgenis/molgenis-emx2",
+  "relatedLink": [
+    "https://www.molgenis.org/"
+  ],
+  "license": "LGPL-3.0",
+  "dateModified": "2026-05-12",
+  "programmingLanguage": [
+    "Java",
+    "Vue"
+  ],
+  "operatingSystem": [
+    "Linux"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "biobank",
+    "research-data-management",
+    "fair-data",
+    "rare-disease",
+    "data-catalogue",
+    "graphql",
+    "bbmri",
+    "elixir",
+    "cohort",
+    "federated",
+    "data-harmonisation"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "University of Groningen / MOLGENIS team"
+  },
+  "mach:governance": "academic",
+  "mach:foundation": "University of Groningen",
+  "mach:category": "data-models-research",
+  "mach:subcategory": "research-platform",
+  "mach:maturity": "production",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Established FAIR research data platform widely deployed across European biobank and rare-disease networks (BBMRI-ERIC, RD-Connect, ELIXIR). 25 forks reflect real institutional deployments that GitHub stars undercount. LGPL-3.0, actively maintained (updated May 2026), GraphQL API enables integration with modern data portals. EMX2 is a significant rewrite of the long-running MOLGENIS platform. Assess for teams building FAIR biobank catalogues or rare-disease data portals in the European research infrastructure landscape; strong overlap with BBMRI-ERIC Negotiator for end-to-end biobank data access workflows.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "rare-disease",
+    "public-health"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "docker"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/molgenis/molgenis-emx2",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://molgenis.github.io/molgenis-emx2/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}
