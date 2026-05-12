@@ -570,6 +570,11 @@
   .filter-btn:hover { border-color: var(--teal-300); color: var(--teal-700); background: var(--teal-50); }
   .filter-btn.active { background: var(--teal-500); color: var(--white); border-color: var(--teal-500); }
 
+  /* Category filter buttons: per-category color injected via --c / --b / --cb CSS vars */
+  #filter-cat .filter-btn[data-value]:not(.active) { color: var(--c, var(--gray-500)); border-color: var(--cb, var(--border)); }
+  #filter-cat .filter-btn[data-value]:hover        { background: var(--b, var(--teal-50)) !important; border-color: var(--c, var(--teal-300)) !important; color: var(--c, var(--teal-700)) !important; }
+  #filter-cat .filter-btn[data-value].active       { background: var(--c, var(--teal-500)) !important; border-color: var(--c, var(--teal-500)) !important; color: #fff !important; }
+
   /* ── CTA ── */
   .cta {
     background: linear-gradient(135deg, var(--teal-900) 0%, #1e1b4b 100%);
@@ -1060,6 +1065,23 @@
   const rows = Array.from(document.querySelectorAll('.entry-row[data-cat]'));
   if (!rows.length) return;
 
+  const CAT_COLORS = {
+    'clinical-systems':               { c:'#1D9E75', b:'#E1F5EE', cb:'rgba(29,158,117,0.28)' },
+    'interoperability-standards':     { c:'#0284C7', b:'#E0F2FE', cb:'rgba(2,132,199,0.28)' },
+    'terminologies-ontologies':       { c:'#D97706', b:'#FFFBEB', cb:'rgba(217,119,6,0.28)' },
+    'data-models-research-platforms': { c:'#4F46E5', b:'#EEF2FF', cb:'rgba(79,70,229,0.28)' },
+    'medical-imaging-signals':        { c:'#7C3AED', b:'#F5F3FF', cb:'rgba(124,58,237,0.28)' },
+    'ai-ml-models':                   { c:'#4F46E5', b:'#EEF2FF', cb:'rgba(79,70,229,0.28)' },
+    'datasets-benchmarks':            { c:'#0284C7', b:'#E0F2FE', cb:'rgba(2,132,199,0.28)' },
+    'de-identification-privacy':      { c:'#E11D48', b:'#FFF1F2', cb:'rgba(225,29,72,0.28)' },
+    'quality-conformance':            { c:'#D97706', b:'#FFFBEB', cb:'rgba(217,119,6,0.28)' },
+    'public-health-epi':              { c:'#1D9E75', b:'#E1F5EE', cb:'rgba(29,158,117,0.28)' },
+    'mcp-servers-ai-interfaces':      { c:'#7C3AED', b:'#F5F3FF', cb:'rgba(124,58,237,0.28)' },
+    'tooling-infrastructure':         { c:'#1D9E75', b:'#E1F5EE', cb:'rgba(29,158,117,0.28)' },
+    'patient-facing-mhealth':         { c:'#E11D48', b:'#FFF1F2', cb:'rgba(225,29,72,0.28)' },
+    'compliance-governance':          { c:'#D97706', b:'#FFFBEB', cb:'rgba(217,119,6,0.28)' },
+  };
+
   const active = { cat: '', license: '' };
 
   function applyFilters() {
@@ -1090,6 +1112,12 @@
       btn.className = 'filter-btn';
       btn.textContent = labelFn(v);
       btn.dataset.value = v;
+      if (barId === 'filter-cat' && CAT_COLORS[v]) {
+        const { c, b, cb } = CAT_COLORS[v];
+        btn.style.setProperty('--c', c);
+        btn.style.setProperty('--b', b);
+        btn.style.setProperty('--cb', cb);
+      }
       bar.appendChild(btn);
     });
 
