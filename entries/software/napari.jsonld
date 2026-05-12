@@ -1,0 +1,78 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/napari",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "napari",
+  "name": "napari",
+  "description": "Fast, interactive, multi-dimensional image viewer for Python. The standard viewer for bio-imaging and computational pathology workflows — supports n-dimensional arrays, layered rendering (images, labels, points, shapes, tracks), and a large plugin ecosystem covering fluorescence microscopy, histopathology, cell segmentation, and medical imaging. Backed by the Chan Zuckerberg Initiative.",
+  "url": "https://napari.org",
+  "codeRepository": "https://github.com/napari/napari",
+  "relatedLink": [
+    "https://napari-hub.org/",
+    "https://pypi.org/project/napari/"
+  ],
+  "license": "BSD-3-Clause",
+  "dateModified": "2026-05-12",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "bio-imaging",
+    "image-viewer",
+    "microscopy",
+    "histopathology",
+    "multidimensional-imaging",
+    "computational-pathology",
+    "cell-segmentation",
+    "plugin-ecosystem",
+    "python",
+    "visualisation"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "napari community / Chan Zuckerberg Initiative"
+  },
+  "mach:governance": "foundation",
+  "mach:foundation": "Chan Zuckerberg Initiative",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "pathology",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The standard Python viewer for bio-imaging and computational pathology research. 2,652 stars, 496 forks, CZI-backed, BSD-3-Clause. Not a clinical DICOM platform — its strength is multi-dimensional bio-image exploration and a rich plugin ecosystem (napari-hub) covering histopathology, fluorescence microscopy, and cell segmentation. Natural companion to OMERO (data management), PathML, and HistoLab (analysis) already in MACH. Essential for any team building Python-native bio-imaging or computational pathology pipelines.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "pathology"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/napari/napari",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://napari.org",
+      "mach:evidenceType": "project-website"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://napari-hub.org/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
