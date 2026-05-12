@@ -7,9 +7,10 @@ using a deterministic hash formula (no API call needed to compute them).
 They do NOT change when new commits are pushed to the repository.
 
 Usage:
-    python scripts/fetch_swhids.py              # compute & write to all entries
-    python scripts/fetch_swhids.py --dry-run    # preview only, no writes
-    python scripts/fetch_swhids.py --verify     # also check SWH has crawled each repo
+    python scripts/fetch_swhids.py                   # compute & write to all entries
+    python scripts/fetch_swhids.py --dry-run         # preview only, no writes
+    python scripts/fetch_swhids.py --verify          # check SWH has crawled each repo
+    python scripts/fetch_swhids.py --verify-swhid    # confirm SWH SWHID matches ours exactly
 """
 import argparse
 import hashlib
@@ -46,11 +47,7 @@ def is_repo_url(url: str) -> bool:
 
 
 def check_archived(repo_url: str) -> tuple[bool, str]:
-    """
-    Check whether Software Heritage has archived this origin.
-    Returns (archived: bool, message: str).
-    Rate limit: 1200 req/hr unauthenticated. We sleep 0.5s between calls.
-    """
+    """Check whether Software Heritage has archived this origin."""
     api_url = f"{SWH_API}/origin/{repo_url}/get/"
     try:
         req = urllib.request.Request(api_url, headers={"Accept": "application/json"})
@@ -59,11 +56,46 @@ def check_archived(repo_url: str) -> tuple[bool, str]:
                 return True, "archived"
     except urllib.error.HTTPError as e:
         if e.code == 404:
-            return False, "not yet archived in SWH — visit https://archive.softwareheritage.org/save/ to request crawl"
+            return False, "not yet archived — save at https://archive.softwareheritage.org/save/"
         return False, f"HTTP {e.code}"
     except Exception as ex:
         return False, f"error: {ex}"
     return False, "unknown"
+
+
+def verify_swhid_against_api(repo_url: str, computed: str) -> tuple[bool, str]:
+    """
+    Confirm our computed SWHID matches what SWH stores.
+
+    SWH embeds the origin SWHID in the metadata_authorities_url field of the
+    origin get response, e.g.:
+      .../raw-extrinsic-metadata/swhid/swh:1:ori:abc123.../authorities/
+    We extract and compare it against our locally computed value.
+    """
+    api_url = f"{SWH_API}/origin/{repo_url}/get/"
+    try:
+        req = urllib.request.Request(api_url, headers={"Accept": "application/json"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read())
+
+        meta_url = data.get("metadata_authorities_url", "")
+        # Extract swh:1:ori:... from the URL path
+        swh_token = next(
+            (part for part in meta_url.split("/") if part.startswith("swh:1:ori:")),
+            None,
+        )
+        if not swh_token:
+            return False, f"SWHID not found in API response: {meta_url}"
+        if swh_token == computed:
+            return True, f"MATCH  {swh_token}"
+        return False, f"MISMATCH\n    computed: {computed}\n    SWH says: {swh_token}"
+
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return False, "not archived in SWH"
+        return False, f"HTTP {e.code}"
+    except Exception as ex:
+        return False, f"error: {ex}"
 
 
 def main():
@@ -73,6 +105,8 @@ def main():
                         help="Print what would change without writing files")
     parser.add_argument("--verify", action="store_true",
                         help="Hit the SWH API to confirm each repo has been crawled")
+    parser.add_argument("--verify-swhid", action="store_true",
+                        help="Confirm our computed SWHID matches the one SWH stores (slower)")
     args = parser.parse_args()
 
     entry_files = sorted(ENTRIES_DIR.rglob("*.jsonld"))
@@ -93,7 +127,16 @@ def main():
 
         swhid = origin_swhid(repo_url)
 
-        if args.verify:
+        if args.verify_swhid:
+            ok, msg = verify_swhid_against_api(repo_url, swhid)
+            time.sleep(0.5)
+            status = "OK  " if ok else "FAIL"
+            print(f"  [{status}]  {path.name}  —  {msg}")
+            if not ok:
+                skipped += 1
+                continue
+
+        elif args.verify:
             archived, msg = check_archived(repo_url)
             time.sleep(0.5)
             if not archived:
