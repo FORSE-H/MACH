@@ -13,7 +13,7 @@
   ],
   "description": "Open specification for a vendor-neutral EHR platform based on a two-level modelling paradigm — separating stable technical architecture from clinician-defined content models (archetypes). Enables lifelong, patient-centric, semantically computable health records.",
   "url": "https://openehr.org",
-  "codeRepository": "https://github.com/openEHR",
+  "codeRepository": "https://github.com/openEHR/specifications-RM",
   "logo": "../../logos/openehr.svg",
   "license": "CC-BY-3.0",
   "dateModified": "2026-04-01",
@@ -85,5 +85,5 @@
     "fhir-r4"
   ],
   "schema:comment": "The openEHR Clinical Knowledge Manager (CKM) at https://ckm.openehr.org warrants a separate MACH entry under data-models-research as a curated archetype library. EHRbase (https://github.com/ehrbase/ehrbase), the leading open-source openEHR CDR, also warrants a separate entry under clinical-systems.",
-  "mach:swhid": "swh:1:ori:bbff86489b03d57580718aeee0b626fa76979485"
+  "mach:swhid": "swh:1:ori:1b3fec1c8594358d0008802596bb0d2c4bd7c243"
 }
