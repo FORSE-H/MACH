@@ -1,0 +1,75 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/stir",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "stir",
+  "name": "STIR",
+  "alternateName": [
+    "Software for Tomographic Image Reconstruction"
+  ],
+  "description": "Leading open-source library for PET and SPECT tomographic image reconstruction. Provides iterative and analytical reconstruction algorithms, scatter correction, motion correction, and kinetic modelling support. Includes Python bindings and integrates with the SIRF reconstruction framework. Widely used in nuclear medicine physics research and scanner development. Developed at University College London with contributions from international nuclear medicine imaging groups.",
+  "url": "http://stir.sourceforge.net/",
+  "codeRepository": "https://github.com/UCL/STIR",
+  "license": "Apache-2.0",
+  "softwareVersion": "6.3.1",
+  "dateModified": "2026-05-11",
+  "programmingLanguage": [
+    "C++",
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "pet",
+    "spect",
+    "tomographic-reconstruction",
+    "nuclear-medicine",
+    "image-reconstruction",
+    "iterative-reconstruction",
+    "scatter-correction",
+    "kinetic-modelling",
+    "sirf",
+    "medical-physics"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "University College London / STIR community"
+  },
+  "mach:governance": "community",
+  "mach:foundation": "University College London",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "signal-processing",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The definitive open-source toolkit for PET and SPECT image reconstruction — no comparable open alternative covers the full reconstruction pipeline for nuclear medicine imaging. Apache-2.0, 109 forks against 147 stars reflects deep institutional adoption by research groups customising for specific scanner configurations. Actively maintained through v6.3.1 (April 2026), with Python bindings and SIRF integration enabling use in modern imaging pipelines. Fills a clear gap in MACH: the only nuclear medicine / PET/SPECT entry in the catalog.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "neurology",
+    "cardiology"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/UCL/STIR",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "http://stir.sourceforge.net/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}
