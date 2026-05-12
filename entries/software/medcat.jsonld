@@ -1,11 +1,15 @@
 {
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/medcat",
-  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
-
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
   "identifier": "medcat",
   "name": "MedCAT",
-  "alternateName": ["Medical Concept Annotation Tool"],
+  "alternateName": [
+    "Medical Concept Annotation Tool"
+  ],
   "description": "Clinical NLP toolkit for named entity recognition and linking in free-text clinical notes. Performs concept extraction and normalisation against SNOMED CT, UMLS, and custom ontologies, with built-in active learning and meta-annotation (negation, temporality, experiencer). Used in NHS trusts, CogStack deployments, and clinical NLP research pipelines.",
   "url": "https://medcat.readthedocs.io/",
   "codeRepository": "https://github.com/CogStack/MedCAT",
@@ -13,26 +17,35 @@
     "https://pypi.org/project/medcat/",
     "https://huggingface.co/CogStack"
   ],
-
   "license": "Apache-2.0",
   "softwareVersion": "1.16.0",
   "dateModified": "2025-04-25",
-
-  "programmingLanguage": ["Python"],
-  "operatingSystem": ["Linux", "macOS", "Windows"],
-  "applicationCategory": "Healthcare",
-
-  "keywords": [
-    "clinical-nlp", "ner", "entity-linking", "snomed-ct", "umls",
-    "concept-annotation", "active-learning", "meta-annotation",
-    "ehr", "information-extraction", "cogstack"
+  "programmingLanguage": [
+    "Python"
   ],
-
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "clinical-nlp",
+    "ner",
+    "entity-linking",
+    "snomed-ct",
+    "umls",
+    "concept-annotation",
+    "active-learning",
+    "meta-annotation",
+    "ehr",
+    "information-extraction",
+    "cogstack"
+  ],
   "author": {
     "@type": "Organization",
     "name": "CogStack (King's College London / South London and Maudsley NHS Trust)"
   },
-
   "mach:governance": "academic",
   "mach:foundation": "CogStack / King's College London",
   "mach:category": "tooling-infrastructure",
@@ -41,10 +54,17 @@
   "mach:judgement": "Adopt",
   "mach:judgementReason": "The leading open-source clinical NLP toolkit for concept extraction from EHR free text. 531 stars, Apache-2.0, actively maintained with regular releases (v1.16.0, April 2025). Deployed across NHS trusts via CogStack and widely cited in clinical NLP research. Supports SNOMED CT, UMLS, and custom ontologies with built-in active learning — a significant differentiator over generic NLP libraries. Pre-trained models available on Hugging Face. Essential for any team building structured data extraction from clinical notes.",
   "mach:editorialReviewedAt": "2026-05-12",
-
-  "mach:clinicalDomain": ["research", "oncology", "rare-disease", "public-health"],
-  "mach:deploymentContext": ["self-hosted", "docker", "offline-capable"],
-
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "rare-disease",
+    "public-health"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "docker",
+    "offline-capable"
+  ],
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -61,5 +81,6 @@
       "url": "https://medcat.readthedocs.io/",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:57f852844383702e16feacee6a4c21ab566ecbb8"
 }
