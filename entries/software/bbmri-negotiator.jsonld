@@ -74,5 +74,6 @@
       "url": "https://www.bbmri-eric.eu/",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:3acb33cc3680b0c3434a267a779fdd5b95d25341"
 }
