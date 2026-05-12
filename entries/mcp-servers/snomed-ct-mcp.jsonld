@@ -1,0 +1,55 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/snomed-ct-mcp",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "snomed-ct-mcp",
+  "name": "MCP SNOMED CT",
+  "description": "Experimental MCP server exposing SNOMED CT concept lookup to LLM agents via any FHIR R4 terminology server. Enables AI agents to resolve clinical terms, retrieve concept hierarchies, and query descriptions without hardcoding terminology endpoints. Works with public FHIR R4 terminology servers (e.g. SNOMED International browser API) as well as self-hosted instances.",
+  "url": "https://github.com/eigenbau/mcp-snomed-ct",
+  "codeRepository": "https://github.com/eigenbau/mcp-snomed-ct",
+  "license": "Apache-2.0",
+  "dateModified": "2026-05-12",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "mcp",
+    "snomed-ct",
+    "terminology",
+    "fhir",
+    "clinical-terminology",
+    "llm-agent",
+    "concept-lookup",
+    "healthcare"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "eigenbau"
+  },
+  "mach:governance": "individual",
+  "mach:category": "mcp-servers-ai-interfaces",
+  "mach:subcategory": "terminology-mcp",
+  "mach:maturity": "experimental",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Early-stage MCP server (February 2026) filling a clear gap: SNOMED CT concept lookup for LLM agents via any FHIR R4 terminology server. Apache-2.0, vendor-neutral design is the key differentiator. 18 stars reflects its novelty rather than quality — SNOMED CT access is a fundamental need for clinical AI agents. Explicitly experimental; individual-governed with no institutional backing. Assess with the caveat that API stability, error handling, and production hardening have not been validated. Worth tracking as the MCP ecosystem matures.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "primary-care",
+    "secondary-care"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/eigenbau/mcp-snomed-ct",
+      "mach:evidenceType": "primary-repo"
+    }
+  ]
+}
