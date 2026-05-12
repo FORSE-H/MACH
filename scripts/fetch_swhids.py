@@ -3,14 +3,17 @@
 fetch_swhids.py — compute and add mach:swhid (origin SWHID) to all MACH entries.
 
 Origin SWHIDs are STABLE: they are derived solely from the repository URL
-using a deterministic hash formula (no API call needed to compute them).
-They do NOT change when new commits are pushed to the repository.
+using a deterministic hash formula. They do NOT change when new commits are pushed.
+
+By default this script ONLY writes mach:swhid when Software Heritage has confirmed
+it has archived the repo. This keeps the UI badge honest — it only appears once the
+archive link actually resolves.
 
 Usage:
-    python scripts/fetch_swhids.py                   # compute & write to all entries
+    python scripts/fetch_swhids.py                   # write SWHID only if SWH has crawled repo
     python scripts/fetch_swhids.py --dry-run         # preview only, no writes
-    python scripts/fetch_swhids.py --verify          # check SWH has crawled each repo
-    python scripts/fetch_swhids.py --verify-swhid    # confirm SWH SWHID matches ours exactly
+    python scripts/fetch_swhids.py --no-verify       # write without checking SWH (fast, offline)
+    python scripts/fetch_swhids.py --verify-swhid    # confirm stored SWHID matches SWH exactly
 """
 import argparse
 import hashlib
@@ -103,10 +106,10 @@ def main():
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--dry-run", action="store_true",
                         help="Print what would change without writing files")
-    parser.add_argument("--verify", action="store_true",
-                        help="Hit the SWH API to confirm each repo has been crawled")
+    parser.add_argument("--no-verify", action="store_true",
+                        help="Write SWHID without checking SWH archive (fast, offline use)")
     parser.add_argument("--verify-swhid", action="store_true",
-                        help="Confirm our computed SWHID matches the one SWH stores (slower)")
+                        help="Confirm stored SWHID matches SWH exactly (implies archive check)")
     args = parser.parse_args()
 
     entry_files = sorted(ENTRIES_DIR.rglob("*.jsonld"))
@@ -136,7 +139,8 @@ def main():
                 skipped += 1
                 continue
 
-        elif args.verify:
+        elif not args.no_verify:
+            # Default: only write if SWH has crawled the repo
             archived, msg = check_archived(repo_url)
             time.sleep(0.5)
             if not archived:

@@ -91,6 +91,5 @@
   "mach:alternativeTo": [
     "fhir-mcp-wso2"
   ],
-  "schema:comment": "Add 'omop-mcp' to data/taxonomy/categories.yaml under mcp-servers-ai-interfaces subcategories. Also add 'experimental' to maturity_levels in taxonomy.",
-  "mach:swhid": "swh:1:ori:830fe3fcbddd30a36bb4693fb78ce354b35fe305"
+  "schema:comment": "Add 'omop-mcp' to data/taxonomy/categories.yaml under mcp-servers-ai-interfaces subcategories. Also add 'experimental' to maturity_levels in taxonomy."
 }
