@@ -93,14 +93,18 @@ def _is_repo_url(url):
         return False
 
 def build_url_links(e):
-    site = e.get("url", "")
-    repo = e.get("codeRepository", "")
+    site  = e.get("url", "")
+    repo  = e.get("codeRepository", "")
+    swhid = e.get("mach:swhid", "")
     links = []
     if site:
         label = "repo" if _is_repo_url(site) else "site"
         links.append(f'<a href="{site}" target="_blank" rel="noopener" class="entry-url">↗ {label}</a>')
     if repo and repo != site:
         links.append(f'<a href="{repo}" target="_blank" rel="noopener" class="entry-url">↗ repo</a>')
+    if swhid:
+        swh_url = f"https://archive.softwareheritage.org/browse/origin/?origin_url={repo or site}"
+        links.append(f'<a href="{swh_url}" target="_blank" rel="noopener" class="entry-url entry-swh" title="{swhid}">swh</a>')
     return "".join(links)
 
 def build_entries_html(entries):
