@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/pydicom",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "pydicom",
+  "name": "pydicom",
+  "description": "The standard Python library for reading, modifying, and writing DICOM files. Used in virtually every Python-based medical imaging pipeline — from research scripts to production clinical AI. Handles the full DICOM data model including pixel data, metadata, and transfer syntaxes.",
+  "url": "https://pydicom.github.io/",
+  "codeRepository": "https://github.com/pydicom/pydicom",
+  "relatedLink": [
+    "https://pypi.org/project/pydicom/"
+  ],
+
+  "license": "MIT",
+  "softwareVersion": "2.4.5",
+  "dateModified": "2026-03-01",
+
+  "programmingLanguage": ["Python"],
+  "operatingSystem": ["Linux", "macOS", "Windows"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "dicom", "medical-imaging", "radiology", "python", "pixel-data",
+    "imaging-pipeline", "ct", "mri", "pacs", "wado"
+  ],
+
+  "author": {
+    "@type": "Organization",
+    "name": "pydicom community"
+  },
+
+  "mach:governance": "community",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "dicom",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The de-facto standard for DICOM file handling in Python. 2,200+ GitHub stars, pip-installable, actively maintained with a March 2026 release. Used as a foundational dependency by nnU-Net, MONAI, TotalSegmentator, SimpleITK, and most clinical AI pipelines. No credible alternative exists in the Python ecosystem for direct DICOM file I/O. MIT license, community-governed.",
+  "mach:editorialReviewedAt": "2026-05-12",
+
+  "mach:clinicalDomain": ["radiology", "oncology", "neurology", "cardiology", "pathology"],
+  "mach:deploymentContext": ["self-hosted", "offline-capable", "docker"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/pydicom/pydicom",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pypi.org/project/pydicom/",
+      "mach:evidenceType": "package-registry"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pydicom.github.io/pydicom/stable/",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+
+  "mach:alternativeTo": []
+}

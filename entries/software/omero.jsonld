@@ -1,0 +1,70 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/omero",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "omero",
+  "name": "OMERO",
+  "alternateName": ["Open Microscopy Environment Remote Objects", "OME Server"],
+  "description": "Open-source platform for managing, visualising, and analysing microscopy image data. Supports 150+ imaging formats, centralised storage, web and desktop clients, scripting APIs (Python, Java, MATLAB), and collaborative annotation. Widely deployed in academic research institutes and hospital imaging core facilities.",
+  "url": "https://www.openmicroscopy.org/omero/",
+  "codeRepository": "https://github.com/ome/openmicroscopy",
+  "relatedLink": [
+    "https://docs.openmicroscopy.org/omero/"
+  ],
+
+  "license": "GPL-2.0",
+  "softwareVersion": "5.6.17",
+  "dateModified": "2026-02-01",
+
+  "programmingLanguage": ["Java", "Python", "C++"],
+  "operatingSystem": ["Linux"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "microscopy", "image-management", "dicom", "pathology",
+    "bioimaging", "pacs", "collaborative-annotation", "ome-tiff"
+  ],
+
+  "author": {
+    "@type": "Organization",
+    "name": "Open Microscopy Environment (OME)"
+  },
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "University of Dundee & Open Microscopy Environment"
+  },
+
+  "mach:governance": "academic",
+  "mach:foundation": "University of Dundee, with contributions from EMBL-EBI, Institut Pasteur, and others",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "pacs",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The standard open-source image data management platform for microscopy and bioimaging. Deployed at hundreds of research institutions globally, supports 150+ formats via Bio-Formats, and provides Python/Java/MATLAB APIs for programmatic access. GPL-2.0; commercial support available via Glencoe Software. Primarily Linux server deployment. The go-to choice for any research institute managing large-scale microscopy or digital pathology data.",
+  "mach:editorialReviewedAt": "2026-05-12",
+
+  "mach:clinicalDomain": ["pathology", "oncology", "neurology", "research"],
+  "mach:deploymentContext": ["self-hosted", "docker"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.openmicroscopy.org/omero/",
+      "mach:evidenceType": "project-website"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ome/openmicroscopy",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.openmicroscopy.org/omero/",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+
+  "mach:alternativeTo": ["orthanc"]
+}
