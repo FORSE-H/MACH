@@ -7,7 +7,7 @@
   "name": "MLOmics Cancer Multi-Omics Benchmark",
   "alternateName": ["Cancer-Multi-Omics-Benchmark", "MLOmics"],
   "description": "Standardised multi-omics benchmark dataset covering all 32 TCGA cancer types across four omics modalities: mRNA expression, microRNA, DNA methylation, and copy number variation (CNV). Includes preprocessed data splits, baseline ML implementations in Python and R, and evaluation protocols for cancer subtype classification and prognosis tasks.",
-  "url": "https://github.com/chenzRG/Cancer-Multi-Omics-Benchmark",
+  "url": "https://chenzrg.github.io/project/mlomics",
   "codeRepository": "https://github.com/chenzRG/Cancer-Multi-Omics-Benchmark",
   "relatedLink": [
     "https://arxiv.org/abs/2409.02143",
