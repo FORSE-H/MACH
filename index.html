@@ -521,11 +521,27 @@
   .entry-cat {
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
-    color: var(--gray-300);
+    color: var(--gray-500);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     white-space: nowrap;
   }
+
+  /* Category label on right inherits same color as badge */
+  [data-cat="clinical-systems"]                .entry-cat { color: #1D9E75; }
+  [data-cat="interoperability-standards"]      .entry-cat { color: #0284C7; }
+  [data-cat="terminologies-ontologies"]        .entry-cat { color: #D97706; }
+  [data-cat="data-models-research-platforms"]  .entry-cat { color: #4F46E5; }
+  [data-cat="medical-imaging-signals"]         .entry-cat { color: #7C3AED; }
+  [data-cat="ai-ml-models"]                   .entry-cat { color: #4F46E5; }
+  [data-cat="datasets-benchmarks"]            .entry-cat { color: #0284C7; }
+  [data-cat="de-identification-privacy"]       .entry-cat { color: #E11D48; }
+  [data-cat="quality-conformance"]             .entry-cat { color: #D97706; }
+  [data-cat="public-health-epi"]               .entry-cat { color: #1D9E75; }
+  [data-cat="mcp-servers-ai-interfaces"]       .entry-cat { color: #7C3AED; }
+  [data-cat="tooling-infrastructure"]          .entry-cat { color: #1D9E75; }
+  [data-cat="patient-facing-mhealth"]          .entry-cat { color: #E11D48; }
+  [data-cat="compliance-governance"]           .entry-cat { color: #D97706; }
 
   /* ── FILTER BARS ── */
   .filter-rows { margin-bottom: 1.5rem; }
