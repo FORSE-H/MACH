@@ -640,12 +640,80 @@
 
   footer a { color: var(--gray-300); }
 
+  /* ── PAGINATION ── */
+  .pagination {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .page-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: var(--white);
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: all 0.12s;
+    min-width: 28px;
+    text-align: center;
+  }
+
+  .page-btn:hover:not(:disabled) { border-color: var(--teal-300); color: var(--teal-700); background: var(--teal-50); }
+  .page-btn.active { background: var(--teal-500); border-color: var(--teal-500); color: #fff; }
+  .page-btn:disabled { opacity: 0.3; cursor: default; }
+
+  .page-info {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gray-300);
+    padding: 0 0.35rem;
+    white-space: nowrap;
+  }
+
   /* ── RESPONSIVE ── */
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
+    /* Nav */
     .nav-links { display: none; }
-    .hero { padding: 4rem 1.25rem 3rem; }
-    .section { padding: 3rem 1.25rem; }
+
+    /* Hero */
+    .hero { padding: 3.5rem 1.25rem 2.5rem; }
+    .hero h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+    .hero-eyebrow { font-size: 0.65rem; }
+    .hero-sub { font-size: 1rem; }
+    .hero-note { font-size: 0.72rem; line-height: 1.8; word-break: break-word; }
+    .hero-actions { gap: 0.65rem; }
+    .btn { padding: 0.55rem 1.1rem; font-size: 0.82rem; }
+
+    /* Sections */
+    .section { padding: 2.5rem 1.25rem; }
+    .section h2 { font-size: 1.6rem; }
+
+    /* Standards grid: 2 per row */
+    .standard-cell { flex: 1 1 140px; }
+
+    /* Category grid: 2 columns */
+    .categories { grid-template-columns: repeat(2, 1fr); }
+
+    /* Entry rows: stack to single column, hide category label */
+    .entry-row { grid-template-columns: 1fr; padding: 0.75rem 1rem; }
     .entry-cat { display: none; }
+
+    /* Filter bars: horizontal scroll, no wrap */
+    .filter-bar { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+    .filter-bar::-webkit-scrollbar { height: 3px; }
+    .filter-bar::-webkit-scrollbar-thumb { background: var(--gray-100); border-radius: 2px; }
+    .filter-btn { white-space: nowrap; flex-shrink: 0; scroll-snap-align: start; }
+    .filter-label { padding-top: 6px; }
+
+    /* Stats */
+    .cta h2 { font-size: 1.7rem; }
+    .pagination { justify-content: center; }
   }
 </style>
 </head>
@@ -990,6 +1058,8 @@
     <!-- ENTRIES:END -->
   </div>
 
+  <div id="pagination" class="pagination"></div>
+
   <p style="margin-top:1rem;font-size:0.78rem;color:var(--gray-300);font-family:'DM Mono',monospace;">
     → <a href="https://github.com/FORSE-H/MACH/tree/main/entries">Browse all entries on GitHub</a>
     &nbsp;·&nbsp;
@@ -1065,6 +1135,9 @@
   const rows = Array.from(document.querySelectorAll('.entry-row[data-cat]'));
   if (!rows.length) return;
 
+  const PAGE_SIZE = 15;
+  let currentPage = 1;
+
   const CAT_COLORS = {
     'clinical-systems':               { c:'#1D9E75', b:'#E1F5EE', cb:'rgba(29,158,117,0.28)' },
     'interoperability-standards':     { c:'#0284C7', b:'#E0F2FE', cb:'rgba(2,132,199,0.28)' },
@@ -1084,12 +1157,70 @@
 
   const active = { cat: '', license: '' };
 
-  function applyFilters() {
-    rows.forEach(r => {
+  function getVisible() {
+    return rows.filter(r => {
       const catOk = !active.cat     || r.dataset.cat     === active.cat;
       const licOk = !active.license || r.dataset.license === active.license;
-      r.style.display = (catOk && licOk) ? '' : 'none';
+      return catOk && licOk;
     });
+  }
+
+  function renderPage() {
+    const visible = getVisible();
+    const total = visible.length;
+    const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    if (currentPage > totalPages) currentPage = totalPages;
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const end   = start + PAGE_SIZE;
+
+    rows.forEach(r => { r.style.display = 'none'; });
+    visible.slice(start, end).forEach(r => { r.style.display = ''; });
+
+    renderPagination(totalPages, total);
+  }
+
+  function renderPagination(totalPages, total) {
+    const container = document.getElementById('pagination');
+    if (!container) return;
+    container.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    const info = document.createElement('span');
+    info.className = 'page-info';
+    const s = (currentPage - 1) * PAGE_SIZE + 1;
+    const e = Math.min(currentPage * PAGE_SIZE, total);
+    info.textContent = s + '–' + e + ' of ' + total;
+    container.appendChild(info);
+
+    function makeBtn(label, page, isActive, disabled) {
+      const btn = document.createElement('button');
+      btn.className = 'page-btn' + (isActive ? ' active' : '');
+      btn.textContent = label;
+      btn.disabled = disabled;
+      if (!disabled) btn.addEventListener('click', () => {
+        currentPage = page;
+        renderPage();
+        document.querySelector('.entries-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      return btn;
+    }
+
+    container.appendChild(makeBtn('← Prev', currentPage - 1, false, currentPage === 1));
+
+    const maxBtns = 5;
+    let lo = Math.max(1, currentPage - 2);
+    let hi = Math.min(totalPages, lo + maxBtns - 1);
+    if (hi - lo < maxBtns - 1) lo = Math.max(1, hi - maxBtns + 1);
+    for (let i = lo; i <= hi; i++) {
+      container.appendChild(makeBtn(String(i), i, i === currentPage, false));
+    }
+
+    container.appendChild(makeBtn('Next →', currentPage + 1, false, currentPage === totalPages));
+  }
+
+  function applyFilters() {
+    currentPage = 1;
+    renderPage();
   }
 
   function buildBar(barId, dataKey, labelFn) {
@@ -1131,7 +1262,6 @@
     });
   }
 
-  // Category label map from entry-cat spans
   const catLabels = {};
   rows.forEach(r => {
     const c = r.dataset.cat;
@@ -1141,6 +1271,7 @@
 
   buildBar('filter-cat', 'cat',     v => catLabels[v] || v);
   buildBar('filter-lic', 'license', v => v);
+  renderPage();
 })();
 </script>
 </body>
