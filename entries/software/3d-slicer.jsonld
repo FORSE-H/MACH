@@ -83,5 +83,6 @@
       "url": "https://slicer.readthedocs.io/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:1c47cace64b6d3d27e7ebed181954efe10a9b03f"
 }
