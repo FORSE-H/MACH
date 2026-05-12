@@ -554,6 +554,24 @@
   [data-cat="patient-facing-mhealth"]          .entry-cat { color: #E11D48; }
   [data-cat="compliance-governance"]           .entry-cat { color: #D97706; }
 
+  /* ── SEARCH ── */
+  .search-wrap { margin-bottom: 1rem; }
+  .search-wrap input {
+    width: 100%;
+    padding: .6rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .95rem;
+    font-weight: 300;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--gray-900);
+    outline: none;
+    transition: border-color .15s;
+  }
+  .search-wrap input:focus { border-color: var(--teal-500); }
+  .search-wrap input::placeholder { color: var(--gray-300); }
+
   /* ── FILTER BARS ── */
   .filter-rows { margin-bottom: 1.5rem; }
 
@@ -861,6 +879,10 @@
     </div>
   </div>
   <span style="display:none;"><!-- STAT:ADOPT -->20<!-- /STAT:ADOPT --><!-- STAT:ASSESS -->22<!-- /STAT:ASSESS --></span>
+
+  <div class="search-wrap">
+    <input type="text" id="entry-search" placeholder="Search by name…" autocomplete="off" spellcheck="false">
+  </div>
 
   <div class="filter-rows">
     <div class="filter-row">
@@ -1319,13 +1341,16 @@
     'compliance-governance':          { c:'#D97706', b:'#FFFBEB', cb:'rgba(217,119,6,0.28)' },
   };
 
-  const active = { cat: '', license: '' };
+  const active = { cat: '', license: '', search: '' };
 
   function getVisible() {
     return rows.filter(r => {
-      const catOk = !active.cat     || r.dataset.cat     === active.cat;
-      const licOk = !active.license || r.dataset.license === active.license;
-      return catOk && licOk;
+      const catOk    = !active.cat     || r.dataset.cat     === active.cat;
+      const licOk    = !active.license || r.dataset.license === active.license;
+      const nameEl   = r.querySelector('.entry-name');
+      const name     = nameEl ? nameEl.textContent.toLowerCase() : '';
+      const searchOk = !active.search  || name.includes(active.search);
+      return catOk && licOk && searchOk;
     });
   }
 
@@ -1435,6 +1460,16 @@
 
   buildBar('filter-cat', 'cat',     v => catLabels[v] || v);
   buildBar('filter-lic', 'license', v => v);
+
+  const searchInput = document.getElementById('entry-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      active.search = searchInput.value.trim().toLowerCase();
+      currentPage = 1;
+      renderPage();
+    });
+  }
+
   renderPage();
 })();
 </script>
