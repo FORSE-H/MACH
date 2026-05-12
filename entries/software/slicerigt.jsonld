@@ -1,0 +1,76 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/slicerigt",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "slicerigt",
+  "name": "SlicerIGT",
+  "alternateName": [
+    "Slicer Image-Guided Therapy"
+  ],
+  "description": "3D Slicer extension providing a toolkit for image-guided interventions (IGT). Offers real-time instrument tracking, ultrasound and needle guidance, surgical navigation, and OpenIGTLink-based integration with tracking hardware and imaging devices. Used in research and clinical prototype workflows for needle biopsy, catheter placement, and intraoperative navigation. Developed by the PerkLab at Queen's University.",
+  "url": "https://www.slicerigt.org/wp/",
+  "codeRepository": "https://github.com/SlicerIGT/SlicerIGT",
+  "relatedLink": [
+    "https://github.com/openigtlink/OpenIGTLink"
+  ],
+  "license": "BSD-3-Clause",
+  "dateModified": "2026-04-24",
+  "programmingLanguage": [
+    "C++",
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "image-guided-therapy",
+    "surgical-navigation",
+    "instrument-tracking",
+    "ultrasound-guidance",
+    "needle-guidance",
+    "openigtlink",
+    "interventional-radiology",
+    "3d-slicer-extension",
+    "intraoperative",
+    "perklab"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "PerkLab / Queen's University"
+  },
+  "mach:governance": "academic",
+  "mach:foundation": "PerkLab / Queen's University",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "medical-imaging",
+  "mach:maturity": "production",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The leading open-source toolkit for image-guided therapy research built on 3D Slicer. BSD-3-Clause licence, 110 stars, actively maintained (April 2026). Developed by PerkLab (Queen's University), a globally recognised group in surgical navigation and IGT research. Integrates with tracking hardware via OpenIGTLink and supports real-time needle, catheter, and instrument guidance workflows. Niche but authoritative for teams building intraoperative navigation or ultrasound-guided intervention pipelines; requires 3D Slicer as a runtime dependency.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "rare-disease"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/SlicerIGT/SlicerIGT",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.slicerigt.org/wp/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}
