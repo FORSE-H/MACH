@@ -72,5 +72,6 @@
       "url": "https://simvascular.github.io/",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:84641543e68533b8371a9b9cfda56ee348eebe61"
 }
