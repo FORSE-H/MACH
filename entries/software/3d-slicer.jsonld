@@ -1,0 +1,87 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/3d-slicer",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "3d-slicer",
+  "name": "3D Slicer",
+  "description": "Free, open-source platform for medical image informatics, image processing, and three-dimensional visualisation. Supports segmentation, registration, image-guided therapy, tractography, and 3D printing workflows across CT, MRI, PET, and ultrasound modalities. Extensible via 200+ community modules. Backed by NIH and the National Alliance for Medical Image Computing (NA-MIC), maintained by Brigham and Women's Hospital and Kitware.",
+  "url": "https://www.slicer.org",
+  "codeRepository": "https://github.com/Slicer/Slicer",
+  "relatedLink": [
+    "https://slicer.readthedocs.io/",
+    "https://discourse.slicer.org/"
+  ],
+  "license": "BSD-style (3D Slicer Contribution and Software License Agreement)",
+  "softwareVersion": "5.10.0",
+  "dateModified": "2026-05-12",
+  "programmingLanguage": [
+    "C++",
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "medical-imaging",
+    "segmentation",
+    "3d-visualisation",
+    "radiology",
+    "mri",
+    "ct",
+    "pet",
+    "tractography",
+    "image-guided-therapy",
+    "neuroimaging",
+    "itk",
+    "vtk",
+    "3d-printing",
+    "registration"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "NA-MIC / Brigham and Women's Hospital / NIH / Kitware"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:foundation": "NA-MIC / Brigham and Women's Hospital",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "medical-imaging",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The definitive open-source platform for medical image computing. 2,452 GitHub stars, 20+ years of NIH-funded development, and a global community of 200+ extension modules covering segmentation, registration, tractography, and image-guided therapy. Runs on Linux, macOS, and Windows; extensible in Python. Used across academic medical centres, research hospitals, and clinical trials worldwide. BSD-style licence with no commercial restrictions. The default choice for any team building medical image analysis workflows that need an extensible, well-documented, and clinically proven platform.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "rare-disease",
+    "public-health"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Slicer/Slicer",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.slicer.org",
+      "mach:evidenceType": "project-website"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://slicer.readthedocs.io/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
