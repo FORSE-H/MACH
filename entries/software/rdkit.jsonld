@@ -1,0 +1,62 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/rdkit",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "rdkit",
+  "name": "RDKit",
+  "description": "Open-source cheminformatics toolkit for molecule manipulation, descriptor calculation, substructure searching, and pharmacophore analysis. The standard library for chemical informatics in Python and C++. Used in drug discovery, pharmaceutical AI, ADMET prediction, and molecular machine learning pipelines.",
+  "url": "https://www.rdkit.org/",
+  "codeRepository": "https://github.com/rdkit/rdkit",
+  "relatedLink": [
+    "https://anaconda.org/conda-forge/rdkit"
+  ],
+
+  "license": "BSD-3-Clause",
+  "softwareVersion": "2026.03.2",
+  "dateModified": "2026-03-01",
+
+  "programmingLanguage": ["C++", "Python"],
+  "operatingSystem": ["Linux", "macOS", "Windows"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "cheminformatics", "drug-discovery", "molecular-descriptors",
+    "pharmacophore", "admet", "smiles", "molecular-fingerprints",
+    "computational-chemistry", "pharmaceutical"
+  ],
+
+  "author": {
+    "@type": "Organization",
+    "name": "RDKit community (Greg Landrum et al.)"
+  },
+
+  "mach:governance": "community",
+  "mach:category": "tooling-infrastructure",
+  "mach:subcategory": "pipeline-tools",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The de-facto standard for cheminformatics in Python. 3,400+ stars, BSD-3-Clause, conda/pip installable, quarterly releases. Used as a core dependency by virtually every drug discovery AI platform — DeepChem, REINVENT, TorchDrug, and most ADMET prediction tools depend on it. No credible open-source alternative matches its breadth. Essential for any team working on pharmaceutical AI, molecular property prediction, or computational drug design.",
+  "mach:editorialReviewedAt": "2026-05-12",
+
+  "mach:clinicalDomain": ["research", "oncology"],
+  "mach:deploymentContext": ["self-hosted", "offline-capable"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.rdkit.org/",
+      "mach:evidenceType": "project-website"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/rdkit/rdkit",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://anaconda.org/conda-forge/rdkit",
+      "mach:evidenceType": "package-registry"
+    }
+  ]
+}

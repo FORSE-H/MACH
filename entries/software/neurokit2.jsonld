@@ -1,0 +1,56 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/neurokit2",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "neurokit2",
+  "name": "NeuroKit2",
+  "description": "Python library for neurophysiological signal processing. Provides accessible, reproducible tools for ECG, EEG, EMG, EDA, and PPG signals — covering cleaning, feature extraction, and analysis. Used in clinical research, wearable device pipelines, and psychophysiology studies.",
+  "url": "https://neuropsychology.github.io/NeuroKit/",
+  "codeRepository": "https://github.com/neuropsychology/NeuroKit",
+  "relatedLink": [
+    "https://pypi.org/project/neurokit2/"
+  ],
+
+  "license": "MIT",
+  "softwareVersion": "0.2.13",
+  "dateModified": "2025-12-01",
+
+  "programmingLanguage": ["Python"],
+  "operatingSystem": ["Linux", "macOS", "Windows"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "ecg", "eeg", "emg", "eda", "ppg", "biosignals",
+    "neurophysiology", "psychophysiology", "wearables", "signal-processing"
+  ],
+
+  "author": {
+    "@type": "Organization",
+    "name": "neuropsychology (Dominique Makowski et al.)"
+  },
+
+  "mach:governance": "academic",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "signal-processing",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The most accessible and comprehensive Python library for physiological signal processing. 2,200+ stars, MIT license, pip-installable, well-documented with tutorials. Covers ECG, EEG, EMG, EDA, and PPG with a consistent API. Widely used in clinical research and wearable device analysis pipelines. Benchmarked against established tools in peer-reviewed publications.",
+  "mach:editorialReviewedAt": "2026-05-12",
+
+  "mach:clinicalDomain": ["cardiology", "neurology", "research", "primary-care"],
+  "mach:deploymentContext": ["self-hosted", "offline-capable"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/neuropsychology/NeuroKit",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pypi.org/project/neurokit2/",
+      "mach:evidenceType": "package-registry"
+    }
+  ]
+}

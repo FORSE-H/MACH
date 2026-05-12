@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/histolab",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "histolab",
+  "name": "histolab",
+  "description": "Python library for whole slide image (WSI) processing in computational pathology. Provides tissue detection, tiling, stain normalisation, and dataset preparation tools for digital pathology pipelines. Designed to standardise WSI preprocessing for deep learning workflows.",
+  "url": "https://histolab.readthedocs.io/",
+  "codeRepository": "https://github.com/histolab/histolab",
+  "relatedLink": [
+    "https://pypi.org/project/histolab/"
+  ],
+
+  "license": "Apache-2.0",
+  "softwareVersion": "0.7.0",
+  "dateModified": "2024-06-01",
+
+  "programmingLanguage": ["Python"],
+  "operatingSystem": ["Linux", "macOS", "Windows"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "digital-pathology", "whole-slide-image", "wsi", "computational-pathology",
+    "tissue-detection", "tiling", "stain-normalisation", "deep-learning"
+  ],
+
+  "author": {
+    "@type": "Organization",
+    "name": "histolab community (Marcolini et al.)"
+  },
+
+  "mach:governance": "community",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "imaging-model",
+  "mach:maturity": "beta",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Solid WSI preprocessing library with a clean API for tissue detection, tiling, and stain normalisation. Apache-2.0, pip-installable, well-documented. 457 stars — smaller community than pathml but more focused in scope. Assess rather than Adopt due to modest maintenance activity and community size. A good choice for teams building digital pathology pipelines who want a lightweight, purpose-built tile extraction library.",
+  "mach:editorialReviewedAt": "2026-05-12",
+
+  "mach:clinicalDomain": ["pathology", "oncology"],
+  "mach:deploymentContext": ["self-hosted", "offline-capable", "docker"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/histolab/histolab",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pypi.org/project/histolab/",
+      "mach:evidenceType": "package-registry"
+    }
+  ],
+
+  "mach:alternativeTo": ["pathml"]
+}

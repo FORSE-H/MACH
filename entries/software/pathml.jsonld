@@ -1,0 +1,64 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/pathml",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "pathml",
+  "name": "PathML",
+  "description": "Open-source toolkit for computational pathology from Dana-Farber Cancer Institute. Covers the full digital pathology pipeline: whole slide image loading, preprocessing, tissue detection, tiling, stain normalisation, and ML model training. Supports multiple WSI formats and integrates with PyTorch.",
+  "url": "https://pathml.readthedocs.io/",
+  "codeRepository": "https://github.com/Dana-Farber-AIOS/pathml",
+  "relatedLink": [
+    "https://pypi.org/project/pathml/"
+  ],
+
+  "license": "GPL-2.0",
+  "softwareVersion": "3.0.6",
+  "dateModified": "2024-12-01",
+
+  "programmingLanguage": ["Python"],
+  "operatingSystem": ["Linux", "macOS"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "computational-pathology", "digital-pathology", "whole-slide-image",
+    "wsi", "tissue-segmentation", "pytorch", "deep-learning", "oncology"
+  ],
+
+  "author": {
+    "@type": "Organization",
+    "name": "Dana-Farber Cancer Institute AI Operations (AIOS)"
+  },
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Dana-Farber Cancer Institute"
+  },
+
+  "mach:governance": "academic",
+  "mach:foundation": "Dana-Farber Cancer Institute",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "imaging-model",
+  "mach:maturity": "beta",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Comprehensive computational pathology toolkit from a leading cancer institute. Covers the full WSI pipeline with PyTorch integration and strong documentation. 452 stars, GPL-2.0 (note licence implications for commercial use). Assess due to GPL licence and moderate community size. Strong institutional provenance from Dana-Farber makes it a credible choice for oncology research groups building pathology AI pipelines.",
+  "mach:editorialReviewedAt": "2026-05-12",
+
+  "mach:clinicalDomain": ["pathology", "oncology", "research"],
+  "mach:deploymentContext": ["self-hosted", "docker"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Dana-Farber-AIOS/pathml",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pypi.org/project/pathml/",
+      "mach:evidenceType": "package-registry"
+    }
+  ],
+
+  "mach:alternativeTo": ["histolab"]
+}
