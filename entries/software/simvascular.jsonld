@@ -1,0 +1,76 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/simvascular",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "simvascular",
+  "name": "SimVascular",
+  "description": "End-to-end open-source platform for patient-specific cardiovascular blood flow simulation. Provides a complete pipeline from medical image segmentation and vessel lumen extraction, through geometric model construction and finite-element mesh generation, to CFD-based haemodynamic simulation and analysis. Used in cardiovascular surgical planning, device design, and clinical research. Developed at Stanford University and the University of California.",
+  "url": "https://simvascular.github.io/",
+  "codeRepository": "https://github.com/SimVascular/SimVascular",
+  "relatedLink": [
+    "https://github.com/SimVascular"
+  ],
+  "license": "BSD-style (SimVascular / Stanford / UC Regents)",
+  "softwareVersion": "2025-June",
+  "dateModified": "2026-05-11",
+  "programmingLanguage": [
+    "C++",
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "cardiovascular",
+    "haemodynamics",
+    "blood-flow-simulation",
+    "cfd",
+    "finite-element",
+    "vessel-segmentation",
+    "surgical-planning",
+    "patient-specific",
+    "medical-imaging",
+    "biomechanics"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Stanford University / University of California"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Stanford University / University of California",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "medical-imaging",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The definitive open-source platform for patient-specific cardiovascular haemodynamic simulation — no comparable open alternative covers the full pipeline from image segmentation to CFD analysis. 313 GitHub stars for a highly specialised scientific computing tool reflects strong domain adoption. BSD-style licence, actively maintained (May 2026), with Stanford and UC Regents pedigree and extensive peer-reviewed publications. Essential for any team working on computational cardiovascular medicine, surgical planning, or vascular device evaluation.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "rare-disease"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/SimVascular/SimVascular",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://simvascular.github.io/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}
