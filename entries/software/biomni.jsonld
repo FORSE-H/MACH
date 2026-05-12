@@ -1,0 +1,62 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/biomni",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "biomni",
+  "name": "Biomni",
+  "description": "General-purpose biomedical AI agent framework from Stanford SNAP Lab. Combines LLM reasoning with retrieval-augmented planning and code execution to autonomously run biomedical research workflows — CRISPR screening, drug property prediction, RNA-seq annotation, GWAS analysis, and rare disease diagnosis. Integrates external tools via MCP.",
+  "url": "https://github.com/snap-stanford/biomni",
+  "codeRepository": "https://github.com/snap-stanford/biomni",
+  "relatedLink": [
+    "https://pypi.org/project/biomni/"
+  ],
+
+  "license": "Apache-2.0",
+  "softwareVersion": "0.0.8",
+  "dateModified": "2025-10-01",
+
+  "programmingLanguage": ["Python"],
+  "operatingSystem": ["Linux", "macOS"],
+  "applicationCategory": "Healthcare",
+
+  "keywords": [
+    "biomedical-ai", "ai-agent", "mcp", "drug-discovery", "crispr",
+    "gwas", "rna-seq", "rare-disease", "llm", "research-automation"
+  ],
+
+  "author": {
+    "@type": "Organization",
+    "name": "Stanford SNAP Lab (Jure Leskovec et al.)"
+  },
+
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Stanford University"
+  },
+
+  "mach:governance": "academic",
+  "mach:foundation": "Stanford University SNAP Lab",
+  "mach:category": "tooling-infrastructure",
+  "mach:subcategory": "pipeline-tools",
+  "mach:maturity": "beta",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Promising biomedical AI agent framework from Stanford SNAP with strong traction (3.1k stars, Apache-2.0). Uses MCP for external tool integration, supports Claude, GPT-4, Gemini, and custom models. Covers a wide range of biomedical research workflows. Critical caveat: executes LLM-generated code with full system privileges — authors require sandboxed environments. Research prototype (v0.0.8); not suitable for clinical production or sensitive data without isolation. Track as the MCP-native biomedical agent ecosystem matures.",
+  "mach:editorialReviewedAt": "2026-05-12",
+
+  "mach:clinicalDomain": ["research", "oncology", "rare-disease"],
+  "mach:deploymentContext": ["self-hosted", "docker"],
+
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/snap-stanford/biomni",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pypi.org/project/biomni/",
+      "mach:evidenceType": "package-registry"
+    }
+  ]
+}
