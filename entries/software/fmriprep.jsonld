@@ -1,0 +1,78 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/fmriprep",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "fmriprep",
+  "name": "fMRIPrep",
+  "description": "Robust and reproducible preprocessing pipeline for functional MRI (fMRI) data. Accepts BIDS-formatted input and performs brain extraction, susceptibility distortion correction, motion correction, spatial normalisation, and surface projection with minimal manual intervention. Generates standardised derivatives and detailed visual QC reports. Part of the NiPreps ecosystem. Published in Nature Methods 2019.",
+  "url": "https://fmriprep.org",
+  "codeRepository": "https://github.com/nipreps/fmriprep",
+  "relatedLink": [
+    "https://www.nature.com/articles/s41592-018-0235-4",
+    "https://pypi.org/project/fmriprep/"
+  ],
+  "license": "Apache-2.0",
+  "softwareVersion": "25.2.5",
+  "dateModified": "2026-03-10",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "fmri",
+    "neuroimaging",
+    "preprocessing",
+    "bids",
+    "brain-imaging",
+    "motion-correction",
+    "nipype",
+    "nipreps",
+    "reproducibility",
+    "signal-processing"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "NiPreps / Poldrack Lab, Stanford University"
+  },
+  "mach:governance": "community",
+  "mach:foundation": "NiPreps / Stanford University",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "signal-processing",
+  "mach:maturity": "production",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The de facto standard for fMRI preprocessing in academic and clinical neuroimaging. Published in Nature Methods 2019, 731 stars and 318 forks reflect deep institutional adoption across neuroimaging labs worldwide. BIDS-native design ensures interoperability with downstream analysis tools (FSL, FreeSurfer, nilearn). Apache-2.0, pip-installable, Docker and Singularity images available for HPC deployment. Part of the broader NiPreps ecosystem (sMRIPrep, MRIQC). Essential for any team building reproducible neuroimaging pipelines.",
+  "mach:editorialReviewedAt": "2026-05-12",
+  "mach:clinicalDomain": [
+    "research",
+    "neurology"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable",
+    "docker"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/nipreps/fmriprep",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://www.nature.com/articles/s41592-018-0235-4",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://fmriprep.org",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}
