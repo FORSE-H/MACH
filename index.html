@@ -338,13 +338,21 @@
 
   .category-item:hover { background: var(--gray-50); }
 
-  .category-item:nth-child(7n+1)  .cat-num { color: var(--teal-500); }
-  .category-item:nth-child(7n+2)  .cat-num { color: var(--indigo); }
-  .category-item:nth-child(7n+3)  .cat-num { color: var(--amber); }
-  .category-item:nth-child(7n+4)  .cat-num { color: var(--purple); }
-  .category-item:nth-child(7n+5)  .cat-num { color: var(--rose); }
-  .category-item:nth-child(7n+6)  .cat-num { color: var(--sky); }
-  .category-item:nth-child(7n+0)  .cat-num { color: var(--teal-300); }
+  /* Category color map — matches entry badge colors exactly */
+  .category-item:nth-child(1)  .cat-num { color: var(--teal-500); } /* Clinical Systems */
+  .category-item:nth-child(2)  .cat-num { color: var(--sky); }      /* Interoperability Standards */
+  .category-item:nth-child(3)  .cat-num { color: var(--amber); }    /* Terminologies & Ontologies */
+  .category-item:nth-child(4)  .cat-num { color: var(--indigo); }   /* Data Models & Research Platforms */
+  .category-item:nth-child(5)  .cat-num { color: var(--purple); }   /* Medical Imaging & Signals */
+  .category-item:nth-child(6)  .cat-num { color: var(--indigo); }   /* AI / ML Models */
+  .category-item:nth-child(7)  .cat-num { color: var(--sky); }      /* Datasets & Benchmarks */
+  .category-item:nth-child(8)  .cat-num { color: var(--rose); }     /* De-identification & Privacy */
+  .category-item:nth-child(9)  .cat-num { color: var(--amber); }    /* Quality & Conformance */
+  .category-item:nth-child(10) .cat-num { color: var(--teal-500); } /* Public Health & Epi */
+  .category-item:nth-child(11) .cat-num { color: var(--purple); }   /* MCP Servers & AI Interfaces */
+  .category-item:nth-child(12) .cat-num { color: var(--teal-500); } /* Tooling & Infrastructure */
+  .category-item:nth-child(13) .cat-num { color: var(--rose); }     /* Patient-Facing & mHealth */
+  .category-item:nth-child(14) .cat-num { color: var(--amber); }    /* Compliance & Governance */
 
   /* ── JUDGEMENT LEVELS ── */
   .judgements {
@@ -477,13 +485,21 @@
   .entry-type { background: var(--teal-50); color: var(--teal-700); }
   .entry-lic  { background: var(--gray-50); color: var(--gray-500); }
 
-  [data-cat="tooling-infrastructure"]      .entry-type { background: var(--teal-50);     color: var(--teal-700); }
-  [data-cat="medical-imaging-signals"]     .entry-type { background: var(--amber-light);  color: var(--amber); }
-  [data-cat="ai-ml-models"]               .entry-type { background: var(--indigo-light);  color: var(--indigo); }
-  [data-cat="mcp-servers-ai-interfaces"]  .entry-type { background: var(--purple-light);  color: var(--purple); }
-  [data-cat="interoperability-standards"] .entry-type { background: var(--rose-light);    color: var(--rose); }
-  [data-cat="datasets-benchmarks"]        .entry-type { background: var(--sky-light);     color: var(--sky); }
-  [data-cat="clinical-systems"]           .entry-type { background: var(--teal-50);       color: var(--teal-700); }
+  /* Entry badge colors — same semantic map as category grid numbers */
+  [data-cat="clinical-systems"]                .entry-type { background: var(--teal-50);      color: var(--teal-700); }
+  [data-cat="interoperability-standards"]      .entry-type { background: var(--sky-light);    color: var(--sky); }
+  [data-cat="terminologies-ontologies"]        .entry-type { background: var(--amber-light);  color: var(--amber); }
+  [data-cat="data-models-research-platforms"]  .entry-type { background: var(--indigo-light); color: var(--indigo); }
+  [data-cat="medical-imaging-signals"]         .entry-type { background: var(--purple-light); color: var(--purple); }
+  [data-cat="ai-ml-models"]                   .entry-type { background: var(--indigo-light);  color: var(--indigo); }
+  [data-cat="datasets-benchmarks"]            .entry-type { background: var(--sky-light);     color: var(--sky); }
+  [data-cat="de-identification-privacy"]       .entry-type { background: var(--rose-light);   color: var(--rose); }
+  [data-cat="quality-conformance"]             .entry-type { background: var(--amber-light);  color: var(--amber); }
+  [data-cat="public-health-epi"]               .entry-type { background: var(--teal-50);      color: var(--teal-700); }
+  [data-cat="mcp-servers-ai-interfaces"]       .entry-type { background: var(--purple-light); color: var(--purple); }
+  [data-cat="tooling-infrastructure"]          .entry-type { background: var(--teal-50);      color: var(--teal-700); }
+  [data-cat="patient-facing-mhealth"]          .entry-type { background: var(--rose-light);   color: var(--rose); }
+  [data-cat="compliance-governance"]           .entry-type { background: var(--amber-light);  color: var(--amber); }
 
   .entry-url {
     font-family: 'DM Mono', monospace;
