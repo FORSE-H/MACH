@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/veil",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "veil",
+  "name": "Veil",
+  "alternateName": [
+    "MAYA Veil"
+  ],
+  "description": "Open-source Chrome extension for real-time PII detection and redaction before submission to AI chat interfaces. Monitors text inputs and identifies sensitive entities (names, emails, SSNs, credit cards) using a locally-run GLiNER2 ONNX model — no data leaves the user's machine. MIT-licensed open-source offering from MAYA Data Privacy, whose commercial products (AppSafe, FileSafe, AISafe) target enterprise HIPAA and GDPR compliance. Directly addresses the challenge of safe AI tool use in clinical and administrative healthcare settings where patient or staff data may be inadvertently included in prompts.",
+  "url": "https://www.mayadataprivacy.com/",
+  "codeRepository": "https://github.com/MAYA-DATA-PRIVACY/Veil",
+  "license": "MIT",
+  "version": "1.2.8",
+  "dateModified": "2026-04-04",
+  "keywords": [
+    "pii",
+    "de-identification",
+    "privacy",
+    "ai-safety",
+    "hipaa",
+    "gdpr",
+    "nlp",
+    "ner",
+    "browser-extension",
+    "chrome-extension",
+    "gliner",
+    "local-processing"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "MAYA Data Privacy",
+    "url": "https://www.mayadataprivacy.com/"
+  },
+  "mach:governance": "vendor-led",
+  "mach:maturity": "beta",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Open-source PII redaction tool from MAYA Data Privacy, a commercial vendor whose closed-source products (AppSafe, FileSafe, AISafe) target enterprise HIPAA and GDPR compliance — Veil is their community offering. Directly relevant to safe AI use in healthcare: prevents patient or staff data from reaching external AI services inadvertently. All processing is local via GLiNER2 ONNX, MIT licensed, actively maintained (v1.2.8, April 2026, 11 releases). Marked Assess due to limited community adoption (2 GitHub stars) and narrow deployment as a Chrome extension only — watch for broader client or API support.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/MAYA-DATA-PRIVACY/Veil",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.mayadataprivacy.com/",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}
