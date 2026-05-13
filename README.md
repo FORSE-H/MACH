@@ -6,6 +6,7 @@
 [![Data License: CC-BY-4.0](https://img.shields.io/badge/Data-CC--BY--4.0-lightgrey.svg)](LICENSE-DATA)
 [![Entries](https://img.shields.io/badge/entries-48-brightgreen.svg)](#)
 [![Validate](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml/badge.svg)](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20155320.svg)](https://doi.org/10.5281/zenodo.20155320)
 
 MACH is an open, machine-actionable catalog of open-source healthcare software, AI/ML models, clinical standards, datasets, tooling, and MCP servers - curated for humans, queryable by agents.
 
@@ -163,9 +164,10 @@ Attribution: *MACH - Machine-Actionable Catalog for Healthcare, FORSE-H, https:/
   title        = {MACH: Machine-Actionable Catalog for Healthcare},
   author       = {{Priyanka Ojha}},
   year         = {2026},
-  url          = {https://github.com/FORSE-H/MACH},
+  doi          = {10.5281/zenodo.20155320},
+  url          = {https://zenodo.org/records/20155320},
   orcid        = {https://orcid.org/0000-0002-6844-6493},
-  note         = {CC-BY-4.0}
+  note         = {CC-BY-4.0, v0.1.0 pre-release}
 }
 ```
 
