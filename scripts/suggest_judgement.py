@@ -10,13 +10,77 @@ Usage:
     python scripts/suggest_judgement.py
     python scripts/suggest_judgement.py --show-all          # include matching entries
     python scripts/suggest_judgement.py --show-scores       # include score breakdown
+    python scripts/suggest_judgement.py --no-stars          # skip GitHub API calls
 """
 
 import json
 import argparse
+import os
+import urllib.request
+import urllib.error
 from pathlib import Path
 
 ENTRIES_DIR = Path("entries")
+
+# ── GitHub star fetcher ───────────────────────────────────────────────────────
+
+_CACHE_FILE = Path(".star_cache.json")
+_star_cache: dict[str, int] = {}
+_rate_limited = False
+
+
+def _load_cache():
+    if _CACHE_FILE.exists():
+        try:
+            _star_cache.update(json.loads(_CACHE_FILE.read_text(encoding="utf-8")))
+        except Exception:
+            pass
+
+
+def _save_cache():
+    _CACHE_FILE.write_text(json.dumps(_star_cache, indent=2), encoding="utf-8")
+
+
+def fetch_github_stars(repo_url: str) -> int:
+    """Return star count for a GitHub repo URL, 0 on any error. Cached.
+    Set GITHUB_TOKEN env var to raise rate limit from 60 to 5000 req/hr."""
+    global _rate_limited
+    if not repo_url or "github.com" not in repo_url:
+        return 0
+    if repo_url in _star_cache:
+        return _star_cache[repo_url]
+    if _rate_limited:
+        return 0
+
+    path = repo_url.rstrip("/").replace(".git", "")
+    parts = path.split("github.com/")[-1].split("/")
+    if len(parts) < 2:
+        return 0
+    owner, repo = parts[0], parts[1]
+
+    api_url = f"https://api.github.com/repos/{owner}/{repo}"
+    headers = {"User-Agent": "MACH-catalog"}
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    try:
+        req = urllib.request.Request(api_url, headers=headers)
+        with urllib.request.urlopen(req, timeout=6) as resp:
+            data = json.loads(resp.read())
+            stars = data.get("stargazers_count", 0)
+    except urllib.error.HTTPError as e:
+        if e.code == 403:
+            _rate_limited = True
+            print("  WARNING: GitHub rate limit hit — set GITHUB_TOKEN for 5000 req/hr")
+        stars = 0
+    except Exception:
+        stars = 0
+
+    _star_cache[repo_url] = stars
+    _save_cache()
+    return stars
+
 
 # ── Scoring tables ────────────────────────────────────────────────────────────
 
@@ -57,7 +121,7 @@ ADOPT_THRESHOLD  = 8
 ASSESS_THRESHOLD = 4   # score 4–7 → Assess, below 4 → Caution
 
 
-def score_entry(e: dict) -> tuple[str, dict]:
+def score_entry(e: dict, fetch_stars: bool = True) -> tuple[str, dict]:
     """Return (suggested_judgement, score_breakdown)."""
     breakdown = {}
 
@@ -69,17 +133,26 @@ def score_entry(e: dict) -> tuple[str, dict]:
     governance = e.get("mach:governance", "")
     breakdown["governance"] = GOVERNANCE_SCORE.get(governance, 0)
 
-    # GitHub stars (0–3) — optional field mach:githubStars not yet in schema;
-    # fall back to 0 if absent so the function still runs
-    stars = e.get("mach:githubStars") or 0
-    if stars >= 500:
+    # GitHub stars (0–3)
+    # Prefer mach:githubStars if present in the entry, otherwise fetch live.
+    stored = e.get("mach:githubStars")
+    if stored is not None:
+        stars = int(stored)
+    elif fetch_stars:
+        repo = e.get("codeRepository", "") or e.get("url", "")
+        stars = fetch_github_stars(repo)
+    else:
+        stars = 0
+
+    if stars >= 1000:
         breakdown["stars"] = 3
-    elif stars >= 50:
+    elif stars >= 200:
         breakdown["stars"] = 2
-    elif stars > 0:
+    elif stars >= 30:
         breakdown["stars"] = 1
     else:
         breakdown["stars"] = 0
+    breakdown["stars_raw"] = stars
 
     # Evidence quality (0–2)
     evidence = e.get("mach:evidence", [])
@@ -103,7 +176,7 @@ def score_entry(e: dict) -> tuple[str, dict]:
     # Evidence count (0–1)
     breakdown["evidence_count"] = 1 if len(evidence) >= 2 else 0
 
-    total = sum(breakdown.values())
+    total = sum(v for k, v in breakdown.items() if k != "stars_raw")
     breakdown["total"] = total
 
     if total >= ADOPT_THRESHOLD:
@@ -144,7 +217,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--show-all",    action="store_true", help="Include entries where suggestion matches current")
     parser.add_argument("--show-scores", action="store_true", help="Print score breakdown for each entry")
+    parser.add_argument("--no-stars",    action="store_true", help="Skip GitHub API calls (faster, offline)")
     args = parser.parse_args()
+
+    fetch_stars = not args.no_stars
+    if fetch_stars:
+        _load_cache()
+        cached = len(_star_cache)
+        hint = f"  ({cached} cached from {_CACHE_FILE})" if cached else "  (set GITHUB_TOKEN env var for 5000 req/hr)"
+        print(f"Fetching GitHub stars...{hint}\n")
 
     entries = load_entries()
     mismatches = 0
@@ -157,7 +238,7 @@ def main():
     for e in entries:
         name       = e.get("name", e.get("identifier", "?"))[:LABEL_WIDTH - 1]
         current    = e.get("mach:judgement", "—")
-        suggestion, breakdown = score_entry(e)
+        suggestion, breakdown = score_entry(e, fetch_stars=fetch_stars)
         total      = breakdown["total"]
 
         match = current == suggestion
@@ -175,7 +256,7 @@ def main():
             f"lic={breakdown['license']} "
             f"evQ={breakdown['evidence_quality']} "
             f"evN={breakdown['evidence_count']} "
-            f"str={breakdown['stars']}"
+            f"str={breakdown['stars']}({breakdown['stars_raw']})"
         )
         flag = "" if match else "  <--"
         print(
