@@ -1,0 +1,64 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/torchio",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "torchio",
+  "name": "TorchIO",
+  "description": "Open-source Python library for efficient loading, preprocessing, augmentation, and patch-based sampling of 3D medical images in deep learning pipelines built with PyTorch. Provides spatial transforms (random flips, affine, elastic deformation), intensity transforms (bias field simulation, MRI k-space motion artifact simulation, noise, normalisation), and label map operations — including domain-specific MRI augmentations not found in general-purpose vision libraries. Supports standard medical image formats via SimpleITK/ITK. Published in Computer Methods and Programs in Biomedicine (2021). Originally developed at UCL and King's College London; now community-maintained under the torchio-project organisation. Apache 2.0 licensed, 2.4k stars, v1.0.2.",
+  "url": "https://torchio.org/",
+  "codeRepository": "https://github.com/fepegar/torchio",
+  "license": "Apache-2.0",
+  "version": "1.0.2",
+  "dateModified": "2026-04-01",
+  "keywords": [
+    "medical-imaging",
+    "deep-learning",
+    "pytorch",
+    "python",
+    "data-augmentation",
+    "preprocessing",
+    "mri",
+    "3d-imaging",
+    "patch-sampling",
+    "itk",
+    "simpleitk"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "TorchIO contributors",
+    "url": "https://github.com/torchio-project"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The standard Python library for 3D medical image augmentation and preprocessing in deep learning — fills a gap that general-purpose vision libraries (Albumentations, torchvision) do not cover. Domain-specific transforms include MRI bias field and k-space motion artifact simulation. v1.0.2 released April 2026, 2.4k stars, 262 forks, Apache 2.0, peer-reviewed publication in Computer Methods and Programs in Biomedicine (2021). Originally from UCL/KCL, now community-maintained.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/fepegar/torchio",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://torchio.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.torchio.org/",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1016/j.cmpb.2021.106236",
+      "mach:evidenceType": "academic-reference"
+    }
+  ]
+}
