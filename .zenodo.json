@@ -1,0 +1,36 @@
+{
+  "title": "MACH: Machine-Actionable Catalog for Healthcare",
+  "description": "An open, machine-actionable catalog of open-source healthcare software, AI/ML models, clinical standards, datasets, tooling, and MCP servers — curated for humans, queryable by agents. Every entry is a structured JSON-LD record aligned with established open metadata standards (CodeMeta, MLDCAT-AP, Croissant, DCAT-AP), enabling discovery by hospitals, researchers, governments, and AI agents. Catalog data (entries/) is licensed CC-BY-4.0; pipeline code is Apache-2.0.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Ojha, Priyanka",
+      "orcid": "0000-0002-6844-6493"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "version": "0.1.0",
+  "keywords": [
+    "healthcare",
+    "open-source",
+    "catalog",
+    "JSON-LD",
+    "FAIR",
+    "metadata",
+    "machine-readable",
+    "interoperability",
+    "clinical AI",
+    "FHIR",
+    "openEHR",
+    "MLDCAT-AP",
+    "CodeMeta"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/FORSE-H/MACH",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "This is an early-stage release. Active development is ongoing. A formal versioned release is planned once the schema export pipeline and 50+ entries are complete."
+}

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "MACH: Machine-Actionable Catalog for Healthcare"
+message: "If you use this catalog, please cite it as below."
+type: software
+authors:
+  - family-names: Ojha
+    given-names: Priyanka
+    orcid: "https://orcid.org/0000-0002-6844-6493"
+repository-code: "https://github.com/FORSE-H/MACH"
+url: "https://forse-h.github.io/MACH"
+abstract: >
+  An open, machine-actionable catalog of open-source healthcare software,
+  AI/ML models, clinical standards, datasets, tooling, and MCP servers —
+  curated for humans, queryable by agents. Every entry is a structured
+  JSON-LD record aligned with established open metadata standards
+  (CodeMeta, MLDCAT-AP, Croissant, DCAT-AP).
+keywords:
+  - healthcare
+  - open-source
+  - catalog
+  - JSON-LD
+  - FAIR
+  - metadata
+  - machine-readable
+  - interoperability
+  - clinical-AI
+  - FHIR
+  - openEHR
+license: CC-BY-4.0
+date-released: "2025-10-01"
+version: "0.1.0"
