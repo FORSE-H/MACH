@@ -1,0 +1,68 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/care",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "care",
+  "name": "CARE",
+  "alternateName": [
+    "Open Healthcare Network CARE",
+    "OHC CARE"
+  ],
+  "description": "FHIR R5-powered, modular open-source electronic health management information system (HMIS) developed by Open Healthcare Network Foundation (Kerala, India). Designated as the 50th Digital Public Good by the Digital Public Goods Alliance. Integrates SNOMED, LOINC, UCUM, and ICD-10, and is compliant with India's ABDM (Ayushman Bharat Digital Mission). Features include Tele-ICU management, patient consultation tracking, real-time bed/ICU/ventilator analytics, telemedicine, and inventory monitoring. Mobile-first and cloud-agnostic. In production across 10+ Indian states, serving 186 million people through 580+ hospitals. Backend in Python/Django (MIT); frontend at github.com/ohcnetwork/care_fe.",
+  "url": "https://ohc.network",
+  "codeRepository": "https://github.com/ohcnetwork/care",
+  "license": "MIT",
+  "version": "3.0.0",
+  "dateModified": "2025-02-01",
+  "keywords": [
+    "ehr",
+    "hmis",
+    "fhir",
+    "fhir-r5",
+    "india",
+    "abdm",
+    "digital-public-good",
+    "tele-icu",
+    "telemedicine",
+    "snomed",
+    "loinc",
+    "open-source",
+    "python",
+    "django",
+    "cloud-agnostic"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Open Healthcare Network Foundation",
+    "url": "https://ohc.network"
+  },
+  "mach:governance": "foundation",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "Production-proven FHIR R5-native HMIS operating at national scale in India — 580+ hospitals, 10+ states, 186 million people served. Designated the 50th Digital Public Good by the DPGA, ABDM-compliant, and backed by the Michael & Susan Dell Foundation and ACT Grants. MIT-licensed with active development (v3.0.0, 5000+ commits, 47 releases). The reference open-source EHR for LMIC and national-scale health system deployments, particularly where Tele-ICU and resource analytics are priorities.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://ohc.network",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ohcnetwork/care",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://digitalpublicgoods.net/registry/care.html",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
