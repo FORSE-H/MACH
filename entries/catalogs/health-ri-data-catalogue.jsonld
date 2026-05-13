@@ -62,5 +62,6 @@
       "url": "https://specs.fairdatapoint.org/",
       "mach:evidenceType": "specification"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:957ded432989ad8e850231107579cc1d776fb218"
 }
