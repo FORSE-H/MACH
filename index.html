@@ -752,12 +752,24 @@
   .filter-label {
     font-family: 'DM Mono', monospace;
     font-size: 0.6rem;
+    font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--gray-300);
+    color: var(--gray-700);
     padding-top: 4px;
     min-width: 56px;
     flex-shrink: 0;
+  }
+
+  .search-label {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-700);
+    margin-bottom: 0.4rem;
   }
 
   .filter-bar {
@@ -993,6 +1005,7 @@
   <span class="nav-brand">M<span>A</span>CH<span class="nav-brand-full">Machine-Actionable Catalog for Healthcare</span></span>
   <ul class="nav-links">
     <li><a href="#categories">Categories</a></li>
+    <li><a href="#catalog">Catalog</a></li>
     <li><a href="#metadata">Metadata</a></li>
     <li><a href="#suggest">Contribute</a></li>
     <li><a href="https://github.com/FORSE-H/MACH">GitHub →</a></li>
@@ -1090,7 +1103,7 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section" id="catalog">
   <p class="section-label">Catalog entries</p>
   <h2>Live entries,<br>growing with every commit</h2>
   <p class="section-lead">
@@ -1112,6 +1125,7 @@
   <span style="display:none;"><!-- STAT:ADOPT -->26<!-- /STAT:ADOPT --><!-- STAT:ASSESS -->26<!-- /STAT:ASSESS --></span>
 
   <div class="search-wrap">
+    <label for="entry-search" class="search-label">Search</label>
     <input type="text" id="entry-search" placeholder="Search by name…" autocomplete="off" spellcheck="false">
   </div>
 
