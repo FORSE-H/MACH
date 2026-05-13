@@ -33,12 +33,14 @@
     --indigo:       #4F46E5;
     --indigo-light: #EEF2FF;
     --amber:        #D97706;
+    --amber-dark:   #B45309;
     --amber-light:  #FFFBEB;
     --rose:         #E11D48;
     --rose-light:   #FFF1F2;
     --purple:       #7C3AED;
     --purple-light: #F5F3FF;
     --sky:          #0284C7;
+    --sky-dark:     #0369A1;
     --sky-light:    #E0F2FE;
   }
 
@@ -299,9 +301,9 @@
   }
 
   .btn-primary {
-    background: var(--teal-500);
+    background: var(--teal-700);
     color: var(--white);
-    border: 1px solid var(--teal-500);
+    border: 1px solid var(--teal-700);
   }
 
   .btn-primary:hover {
@@ -345,7 +347,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--gray-300);
+    color: var(--gray-500);
     margin-bottom: 2.5rem;
   }
 
@@ -388,7 +390,7 @@
   .standard-cell-label {
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
-    color: var(--gray-300);
+    color: var(--gray-500);
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
@@ -448,20 +450,20 @@
   .category-item:hover { background: var(--gray-50); }
 
   /* Category color map — matches entry badge colors exactly */
-  .category-item:nth-child(1)  .cat-num { color: var(--teal-500); } /* Clinical Systems */
-  .category-item:nth-child(2)  .cat-num { color: var(--sky); }      /* Interoperability Standards */
-  .category-item:nth-child(3)  .cat-num { color: var(--amber); }    /* Terminologies & Ontologies */
+  .category-item:nth-child(1)  .cat-num { color: var(--teal-700); }  /* Clinical Systems */
+  .category-item:nth-child(2)  .cat-num { color: var(--sky-dark); } /* Interoperability Standards */
+  .category-item:nth-child(3)  .cat-num { color: var(--amber-dark); } /* Terminologies & Ontologies */
   .category-item:nth-child(4)  .cat-num { color: var(--indigo); }   /* Data Models & Research Platforms */
   .category-item:nth-child(5)  .cat-num { color: var(--purple); }   /* Medical Imaging & Signals */
   .category-item:nth-child(6)  .cat-num { color: var(--indigo); }   /* AI / ML Models */
-  .category-item:nth-child(7)  .cat-num { color: var(--sky); }      /* Datasets & Benchmarks */
+  .category-item:nth-child(7)  .cat-num { color: var(--sky-dark); } /* Datasets & Benchmarks */
   .category-item:nth-child(8)  .cat-num { color: var(--rose); }     /* De-identification & Privacy */
-  .category-item:nth-child(9)  .cat-num { color: var(--amber); }    /* Quality & Conformance */
-  .category-item:nth-child(10) .cat-num { color: var(--teal-500); } /* Public Health & Epi */
+  .category-item:nth-child(9)  .cat-num { color: var(--amber-dark); } /* Quality & Conformance */
+  .category-item:nth-child(10) .cat-num { color: var(--teal-700); } /* Public Health & Epi */
   .category-item:nth-child(11) .cat-num { color: var(--purple); }   /* MCP Servers & AI Interfaces */
-  .category-item:nth-child(12) .cat-num { color: var(--teal-500); } /* Tooling & Infrastructure */
+  .category-item:nth-child(12) .cat-num { color: var(--teal-700); } /* Tooling & Infrastructure */
   .category-item:nth-child(13) .cat-num { color: var(--rose); }     /* Patient-Facing & mHealth */
-  .category-item:nth-child(14) .cat-num { color: var(--amber); }    /* Compliance & Governance */
+  .category-item:nth-child(14) .cat-num { color: var(--amber-dark); } /* Compliance & Governance */
 
   /* ── JUDGEMENT LEVELS ── */
   .judgements {
@@ -515,7 +517,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--gray-300);
+    color: var(--gray-500);
     padding: 0.5rem 1rem;
     border-bottom: 1px solid var(--border);
   }
@@ -543,7 +545,7 @@
   }
 
   .metadata-table td:nth-child(3) {
-    color: var(--gray-300);
+    color: var(--gray-500);
     font-size: 0.8rem;
   }
 
@@ -830,8 +832,8 @@
   }
 
   .cta .btn-primary {
-    background: var(--teal-500);
-    border-color: var(--teal-500);
+    background: var(--teal-700);
+    border-color: var(--teal-700);
     color: var(--white);
   }
 
@@ -1737,7 +1739,7 @@
           <label for="f-email">Your email (optional — for follow-up only)</label>
           <input type="email" id="f-email" name="email" placeholder="you@example.com">
         </div>
-        <input type="text" name="_gotcha" style="display:none">
+        <input type="text" name="_gotcha" style="display:none" aria-hidden="true" tabindex="-1">
         <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.25rem;">Submit suggestion</button>
       </form>
       <div id="suggest-success" class="form-success">
