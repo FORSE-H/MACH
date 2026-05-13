@@ -1,4 +1,4 @@
-name: Suggest a new entry
+name: Suggest an entry for MACH
 description: Suggest a new project, model, standard, or MCP server for MACH
 title: "[New entry] "
 labels: ["new-entry"]
