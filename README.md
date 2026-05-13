@@ -13,7 +13,7 @@ MACH is an open, machine-actionable catalog of open-source healthcare software, 
 
 Every entry is a structured JSON-LD record aligned with established open metadata standards, so hospitals, researchers, governments, and AI agents can all discover and consume the open healthcare commons.
 
-> **Project status:** active — 48 curated entries across 9 categories; CI pipeline live.
+> **Project status:** active — growing catalog across 14 categories; CI pipeline live.
 > Initiated October 2025. A project of [FORSE-H](https://github.com/FORSE-H).
 
 ---
