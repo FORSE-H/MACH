@@ -64,5 +64,6 @@
       "url": "https://digitalpublicgoods.net/registry/care.html",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:cde7b1bc024973d272c7d61ca01c7aef3f82d338"
 }

@@ -59,5 +59,6 @@
       "url": "https://github.com/sammargolis/OpenScribe",
       "mach:evidenceType": "primary-repo"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:941d0cebf7be15c329a2bac1a092398fb13f8f47"
 }

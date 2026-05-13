@@ -67,5 +67,6 @@
       "url": "https://virtualpatientengine.github.io/AIAgents4Pharma/",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:e1a1617305bc181ea24a82c22d9044de511bf6b9"
 }
