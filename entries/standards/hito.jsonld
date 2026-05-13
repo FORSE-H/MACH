@@ -1,0 +1,61 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/hito",
+  "@type": [
+    "mach:Standard"
+  ],
+  "identifier": "hito",
+  "name": "HITO",
+  "alternateName": [
+    "Health IT Ontology",
+    "Health Information Technology Ontology"
+  ],
+  "description": "OWL ontology for systematically describing and classifying health IT application systems and software products. Defines classes and relationships for software features, enterprise functions, programming languages, licenses, and user groups, enabling structured documentation of libre/free and open-source software (LIFOSS) for medicine and healthcare. Published as Linked Open Data with a SPARQL endpoint, RDF browser, and downloadable Turtle/N-Triples distributions. Data is compiled from spreadsheets and linked data sources via an automated build pipeline with SHACL validation. CC0-licensed (public domain), making it freely reusable as a vocabulary or dataset.",
+  "url": "https://hitontology.eu/",
+  "codeRepository": "https://github.com/hitontology/ontology",
+  "license": "CC0-1.0",
+  "version": "24.11",
+  "dateModified": "2024-11-05",
+  "keywords": [
+    "ontology",
+    "owl",
+    "rdf",
+    "linked-open-data",
+    "sparql",
+    "health-it",
+    "software-classification",
+    "lifoss",
+    "semantic-web",
+    "shacl",
+    "turtle",
+    "open-source-health"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "hitontology",
+    "url": "https://hitontology.eu/"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "specs",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Mature OWL ontology for classifying health IT software, published as CC0 Linked Open Data with a live SPARQL endpoint — one of the few genuinely machine-actionable health software vocabularies. Useful as a reference taxonomy for labelling and classifying catalog entries, and as a complementary resource to MACH: HITO provides ontological structure, MACH provides editorial curation and recommendations. Marked Assess rather than Adopt because its primary audience is semantic web and ontology engineers rather than software practitioners, and community adoption remains modest (11 stars). The CC0 licence and SPARQL endpoint make it straightforward to integrate.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://hitontology.eu/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/hitontology/ontology",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://hitontology.eu/search/softwareproduct.html",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
