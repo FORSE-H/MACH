@@ -1,0 +1,61 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/healthdcat-ap",
+  "@type": [
+    "mach:Standard"
+  ],
+  "identifier": "healthdcat-ap",
+  "name": "HealthDCAT-AP",
+  "alternateName": [
+    "Health Data Catalogue Application Profile"
+  ],
+  "description": "The official EU metadata specification for describing health datasets for secondary use, extending DCAT-AP 3.0 with health-domain semantics. Mandated by Article 77 of the EHDS Regulation (EU) 2025/327, which requires Health Data Access Bodies to publish dataset catalogues using this profile. Covers privacy properties, GDPR-aligned dataset descriptions, and cross-border discoverability across EU Member States. Includes a SHACL validator, Dataset Descriptions Assistant, and Metadata Model Explorer. Hosted on European Commission infrastructure and adopted in the HealthData@EU Central Platform and national EHDS implementations such as the Health-RI Data Catalogue.",
+  "url": "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-5/",
+  "codeRepository": "https://code.europa.eu/healthdataeu/healthdcat-ap",
+  "license": "CC-BY-4.0",
+  "version": "Release 5",
+  "dateModified": "2025-09-22",
+  "keywords": [
+    "metadata-standard",
+    "health-data",
+    "ehds",
+    "european-health-data-space",
+    "dcat-ap",
+    "dcat",
+    "rdf",
+    "shacl",
+    "secondary-use",
+    "fair",
+    "european-commission",
+    "gdpr",
+    "interoperability"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "European Commission, DG SANTE",
+    "url": "https://health.ec.europa.eu"
+  },
+  "mach:governance": "government",
+  "mach:maturity": "production",
+  "mach:category": "specs",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The mandated metadata standard for EHDS-compliant health data catalogues under EU Regulation 2025/327. Any organisation implementing a Health Data Access Body catalogue or participating in the European Health Data Space secondary-use infrastructure must use HealthDCAT-AP. Extends DCAT-AP 3.0 and is already implemented in the HealthData@EU Central Platform and national catalogues (e.g. Health-RI). The reference implementation, SHACL validator, and tooling are production-quality and maintained on EU infrastructure.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-5/",
+      "mach:evidenceType": "specification"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://code.europa.eu/healthdataeu/healthdcat-ap",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.healthinformationportal.eu/healthdcat-ap",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
