@@ -31,10 +31,10 @@ CATEGORY_LABELS = {
 }
 
 JUDGEMENT_BADGE = {
-    "Adopt":       ("badge-adopt",       "Adopt"),
-    "Situational": ("badge-situational", "Situational"),
-    "Assess":      ("badge-assess",      "Assess"),
-    "Caution":     ("badge-caution",     "Caution"),
+    "Adopt":       "badge-adopt",
+    "Situational": "badge-situational",
+    "Assess":      "badge-assess",
+    "Caution":     "badge-caution",
 }
 
 def load_entries():
@@ -99,9 +99,9 @@ def build_url_links(e):
     links = []
     if site:
         label = "repo" if _is_repo_url(site) else "site"
-        links.append(f'<a href="{site}" target="_blank" rel="noopener" class="entry-url">↗ {label}</a>')
+        links.append(f'<a href="{site}" target="_blank" rel="noopener" class="entry-url">&#8599; {label}</a>')
     if repo and repo != site:
-        links.append(f'<a href="{repo}" target="_blank" rel="noopener" class="entry-url">↗ repo</a>')
+        links.append(f'<a href="{repo}" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a>')
     if swhid:
         swh_url = f"https://archive.softwareheritage.org/browse/origin/?origin_url={repo or site}"
         links.append(f'<a href="{swh_url}" target="_blank" rel="noopener" class="entry-url entry-swh" title="{swhid}">swh</a>')
@@ -111,32 +111,38 @@ def build_entries_html(entries):
     if not entries:
         return "<p style='color:var(--gray-300);font-size:0.875rem;'>No entries yet.</p>"
 
-    rows = []
+    cards = []
     for e in entries:
         name        = e.get("name", "—")
         description = e.get("description", "")
         cat         = e.get("mach:category", "")
+        judgement   = e.get("mach:judgement", "")
 
-        short_desc  = (description[:90] + "…") if len(description) > 92 else description
+        short_desc  = (description[:140] + "…") if len(description) > 143 else description
         cat_label   = category_label(cat)
         entry_type  = get_entry_type(e)
         license_str = get_license_short(e)
         jsonld_url  = get_jsonld_url(e)
         url_links   = build_url_links(e)
 
-        lic_tag      = f'<span class="entry-lic">{license_str}</span>' if license_str else ""
-        name_href    = jsonld_url if jsonld_url else e.get("url", e.get("codeRepository", "#"))
+        lic_tag       = f'<span class="entry-lic">{license_str}</span>' if license_str else ""
+        name_href     = jsonld_url if jsonld_url else e.get("url", e.get("codeRepository", "#"))
+        badge_class   = JUDGEMENT_BADGE.get(judgement, "")
+        judgement_tag = f'<span class="entry-judgement {badge_class}">{judgement}</span>' if badge_class else ""
+        links_html    = f'<div class="entry-card-links">{url_links}</div>' if url_links else ""
 
-        rows.append(f"""    <div class="entry-row" data-cat="{cat}" data-license="{license_str}">
-      <div>
-        <p class="entry-name"><a href="{name_href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">{name}</a></p>
-        <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}{url_links}</div>
-        <p class="entry-desc">{short_desc}</p>
+        cards.append(f"""    <div class="entry-card" data-cat="{cat}" data-license="{license_str}">
+      <div class="entry-card-meta">
+        <span class="entry-cat">{cat_label}</span>
+        {judgement_tag}
       </div>
-      <span class="entry-cat">{cat_label}</span>
+      <p class="entry-name"><a href="{name_href}" target="_blank" rel="noopener">{name}</a></p>
+      <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}</div>
+      <p class="entry-desc">{short_desc}</p>
+      {links_html}
     </div>""")
 
-    return "\n".join(rows)
+    return "\n".join(cards)
 
 def build_stats_html(entries):
     total    = len(entries)
