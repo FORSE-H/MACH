@@ -127,14 +127,11 @@ def build_entries_html(entries):
 
         lic_tag       = f'<span class="entry-lic">{license_str}</span>' if license_str else ""
         name_href     = jsonld_url if jsonld_url else e.get("url", e.get("codeRepository", "#"))
-        badge_class   = JUDGEMENT_BADGE.get(judgement, "")
-        judgement_tag = f'<span class="entry-judgement {badge_class}">{judgement}</span>' if badge_class else ""
         links_html    = f'<div class="entry-card-links">{url_links}</div>' if url_links else ""
 
         cards.append(f"""    <div class="entry-card" data-cat="{cat}" data-license="{license_str}">
       <div class="entry-card-meta">
         <span class="entry-cat">{cat_label}</span>
-        {judgement_tag}
       </div>
       <p class="entry-name"><a href="{name_href}" target="_blank" rel="noopener">{name}</a></p>
       <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}</div>
