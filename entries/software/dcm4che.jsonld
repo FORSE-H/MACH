@@ -1,0 +1,64 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/dcm4che",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "dcm4che",
+  "name": "dcm4che",
+  "alternateName": [
+    "dcm4chee",
+    "dcm4che 5"
+  ],
+  "description": "The de-facto open-source Java DICOM toolkit and library, providing a comprehensive implementation of the DICOM standard for medical imaging. Ships as three complementary products: dcm4che 5 toolkit and library (core Java API), dcm4chee Archive 5 (IHE-compliant enterprise image manager and archive), and 50+ command-line utilities covering DICOM conversion (to/from JSON, XML, JPEG, PDF), network services (C-FIND, C-MOVE, C-GET), de-identification, HL7 message handling, and LDAP configuration. Runs on Linux, Windows, and macOS across multiple architectures. MPL-1.1 licensed, community-governed, with 3,500+ commits and active releases.",
+  "url": "http://web.dcm4che.org/",
+  "codeRepository": "https://github.com/dcm4che/dcm4che",
+  "license": "MPL-1.1",
+  "version": "5.34.3",
+  "dateModified": "2026-04-23",
+  "keywords": [
+    "dicom",
+    "medical-imaging",
+    "pacs",
+    "java",
+    "hl7",
+    "ihe",
+    "image-archive",
+    "toolkit",
+    "de-identification",
+    "c-find",
+    "c-move",
+    "radiology"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "dcm4che",
+    "url": "https://github.com/dcm4che"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The foundational open-source DICOM toolkit for Java environments — widely embedded in hospital PACS systems, research imaging pipelines, and clinical data platforms, often invisibly. v5.34.3 released April 2026, 1.4k stars and 696 forks reflect a specialist infrastructure library rather than a consumer tool. The dcm4chee Archive 5 component is an IHE-compliant enterprise image archive deployable in production. No viable open-source alternative exists at this depth of DICOM coverage in Java.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/dcm4che/dcm4che",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "http://web.dcm4che.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/dcm4che/dcm4chee-arc-light",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
