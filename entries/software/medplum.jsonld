@@ -59,5 +59,6 @@
       "url": "https://www.medplum.com/docs",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:c31d9bde6ee14ed592c4ed5a2217dbf0d1c2d292"
 }
