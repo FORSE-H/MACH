@@ -5,6 +5,7 @@
 [![License: Apache-2.0](https://img.shields.io/badge/Code-Apache_2.0-blue.svg)](LICENSE)
 [![Data License: CC-BY-4.0](https://img.shields.io/badge/Data-CC--BY--4.0-lightgrey.svg)](LICENSE-DATA)
 [![Validate](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml/badge.svg)](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml)
+[![Accessibility](https://github.com/FORSE-H/MACH/actions/workflows/accessibility.yml/badge.svg)](https://github.com/FORSE-H/MACH/actions/workflows/accessibility.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20155320.svg)](https://doi.org/10.5281/zenodo.20155320)
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/FORSE-H/MACH/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/FORSE-H/MACH)
 [![OpenAIRE](https://img.shields.io/badge/OpenAIRE-indexed-blue)](https://explore.openaire.eu/search/result?pid=10.5281/zenodo.20155320)
@@ -177,6 +178,8 @@ Attribution: *MACH - Machine-Actionable Catalog for Healthcare, FORSE-H, https:/
 ## Acknowledgements
 
 Inspired by [CNCF Landscape](https://landscape.cncf.io/), [Data Landscape (Entropy Data)](https://www.data-landscape.com/), [ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar), [Research Software Directory](https://research-software-directory.org/) (Netherlands eScience Center), and [bio.tools](https://bio.tools/) (ELIXIR). Metadata standards: [MLDCAT-AP](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) (SEMIC/EU), [CodeMeta](https://codemeta.github.io/), [DCAT-AP](https://semiceu.github.io/DCAT-AP/), [Croissant](https://mlcommons.org/working-groups/data/croissant/) (MLCommons), [Bitol ODPS](https://github.com/bitol-io/open-data-product-standard), [ODRL](https://www.w3.org/TR/odrl-model/) (W3C), [FAIR Data Point spec](https://specs.fairdatapoint.org/).
+
+Accessibility testing is powered by [pa11y](https://github.com/pa11y/pa11y), an open-source automated accessibility testing tool, running WCAG 2.1 AA checks in CI on every change to the site.
 
 MACH uses [Software Heritage](https://www.softwareheritage.org/) identifiers (SWHIDs) as persistent archival references for catalog entries. SWHIDs are an ISO/IEC 18670 standard; the Software Heritage logo displayed in the catalog is used under their [CC-BY communication kit](https://www.softwareheritage.org/software-heritage-communication-kit/). We thank Software Heritage for their work on universal software preservation.
 

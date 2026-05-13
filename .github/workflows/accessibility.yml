@@ -1,0 +1,34 @@
+name: Accessibility Check
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+
+jobs:
+  pa11y:
+    name: WCAG 2.1 AA — pa11y
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pa11y
+        run: npm install -g pa11y
+
+      - name: Serve static site
+        run: python3 -m http.server 8080 &
+
+      - name: Run pa11y WCAG 2.1 AA
+        run: |
+          sleep 2
+          pa11y http://localhost:8080/index.html \
+            --standard WCAG2AA \
+            --reporter cli \
+            --chromium-flags "--no-sandbox --disable-setuid-sandbox"
