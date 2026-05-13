@@ -1,0 +1,65 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/nightscout",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "nightscout",
+  "name": "Nightscout",
+  "alternateName": [
+    "cgm-remote-monitor",
+    "CGM in the Cloud"
+  ],
+  "description": "Open-source web application for real-time remote monitoring of continuous glucose monitor (CGM) data, created and maintained by the diabetes patient and caregiver community. Reads CGM readings from devices by Dexcom, Freestyle, and Medtronic via uploaders (xDrip+, Spike, xDrip4iOS), stores data in MongoDB, and displays glucose values graphically with high/low alarms and 30-minute predictive alerts. Integrates with DIY closed-loop automated insulin delivery systems including OpenAPS, Loop, and AndroidAPS. Self-hosted on any cloud platform or local server. No corporate backing — entirely volunteer-maintained. AGPL-3.0, 2.8k stars, 73k forks, v15.0.7.",
+  "url": "https://nightscout.github.io/",
+  "codeRepository": "https://github.com/nightscout/cgm-remote-monitor",
+  "license": "AGPL-3.0",
+  "version": "15.0.7",
+  "dateModified": "2026-04-29",
+  "keywords": [
+    "diabetes",
+    "cgm",
+    "continuous-glucose-monitoring",
+    "insulin",
+    "closed-loop",
+    "patient-empowerment",
+    "javascript",
+    "self-hosted",
+    "wearables",
+    "dexcom",
+    "openaps",
+    "mongodb"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "CGM Remote Monitor Contributors",
+    "url": "https://github.com/nightscout"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference open-source platform for patient-operated CGM remote monitoring — built by and for the diabetes community with no corporate backing. v15.0.7 released April 2026, 2.8k stars and 73k forks (the high fork count reflects widespread self-hosting), AGPL-3.0. Integrates with all major CGM devices and DIY closed-loop APS systems (OpenAPS, Loop, AndroidAPS). A well-established example of patient-empowered health IT with over a decade of community development.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/nightscout/cgm-remote-monitor",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://nightscout.github.io/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://nightscout.github.io/nightscout/new_user/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
