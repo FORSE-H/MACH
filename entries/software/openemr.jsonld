@@ -1,0 +1,62 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/openemr",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "openemr",
+  "name": "OpenEMR",
+  "description": "The most widely used open-source electronic health records (EHR) and medical practice management solution, governed by the OpenEMR Foundation, Inc. ONC Certified as of Version 8 (February 2026), confirming compliance with US federal health IT standards. Features advanced scheduling, electronic prescribing, HIPAA ASC X12 Version 5010 compliant billing, lab integration with automated result importing, a clinical decision support rules engine, CMS reporting, and fine-grained access controls. Supports FHIR interoperability and 30+ languages. Available as self-hosted, cloud-deployed, or free hosted for US-based providers. In production at International Planned Parenthood Federation, Peace Corps, and Siaya District Hospital among others. GPL-3.0 licensed, PHP-based, Docker-ready.",
+  "url": "https://open-emr.org/",
+  "codeRepository": "https://github.com/openemr/openemr",
+  "license": "GPL-3.0",
+  "version": "8.0.0.3",
+  "dateModified": "2026-03-25",
+  "keywords": [
+    "ehr",
+    "emr",
+    "practice-management",
+    "fhir",
+    "hipaa",
+    "onc-certified",
+    "clinical-decision-support",
+    "e-prescribing",
+    "medical-billing",
+    "php",
+    "open-source",
+    "global-health",
+    "lmic"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "OpenEMR Foundation, Inc.",
+    "url": "https://open-emr.org/"
+  },
+  "mach:governance": "foundation",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The most popular open-source EHR by community size (5.1k stars, 2.9k forks), ONC Certified as of Version 8 (February 2026), and production-proven at international scale — International Planned Parenthood Federation, Peace Corps, and Siaya District Hospital among others. Foundation-governed (OpenEMR Foundation, Inc.), GPL-3.0, FHIR-integrated, and HIPAA billing compliant. Complements OpenMRS in the MACH catalog: OpenEMR is the reference choice for US practice management and ONC compliance; OpenMRS is the reference for LMIC and modular concept-driven deployments.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://open-emr.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/openemr/openemr",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.open-emr.org/wiki/index.php/OpenEMR_Wiki_Home_Page",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
