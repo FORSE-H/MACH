@@ -8,11 +8,10 @@
   "name": "HealthData@EU Dataset Catalogue",
   "alternateName": [
     "EHDS2 Central Platform",
-    "HealthData@EU Central Platform",
-    "data.health.europa.eu"
+    "HealthData@EU Central Platform"
   ],
-  "description": "Central European dataset catalogue underpinning the European Health Data Space (EHDS), operated by the European Commission DG SANTE. Aggregates health dataset metadata from EU Member States, European institutions, research infrastructures, and third countries. Uses HealthDCAT-AP (the EHDS metadata profile extending DCAT-AP) as its metadata standard. Built on Piveau-Hub and supports multilingual interfaces across all EU languages, smart search, filtering, and secure cross-border data sharing via eDelivery AS4. First open-source publication by DG SANTE (EUPL-1.2). The EHDS Regulation entered into force March 2025; full data exchange is expected from 2029.",
-  "url": "https://data.health.europa.eu",
+  "description": "Central European dataset catalogue underpinning the European Health Data Space (EHDS), operated by the European Commission DG SANTE. Aggregates health dataset metadata from EU Member States, European institutions, research infrastructures, and third countries. Uses HealthDCAT-AP (the EHDS metadata profile extending DCAT-AP) as its metadata standard. Built on Piveau-Hub and supports multilingual interfaces across all EU languages, smart search, filtering, and secure cross-border data sharing via eDelivery AS4. First open-source publication by DG SANTE (EUPL-1.2). The EHDS Regulation entered into force March 2025; full data exchange is expected from 2029. No public-facing hosted instance has been confirmed yet; the source code is the primary public artifact.",
+  "url": "https://code.europa.eu/healthdataeu/healthdataeu-eu-dataset-catalogue",
   "codeRepository": "https://code.europa.eu/healthdataeu/healthdataeu-eu-dataset-catalogue",
   "license": "EUPL-1.2",
   "dateModified": "2026-05-01",
@@ -47,11 +46,6 @@
   "mach:judgementReason": "The primary dataset discovery layer of the European Health Data Space (EHDS), operated by the European Commission. Directly implements HealthDCAT-AP and serves as a reference deployment of that standard at EU scale. Marked Assess rather than Adopt because the EHDS rollout is still in progress — the EHDS Regulation entered into force in March 2025 and full cross-border data exchange is not expected until 2029. The open-source codebase (EUPL-1.2) is the deployable artifact for organisations building EHDS-compatible catalogues.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
-    {
-      "@type": "schema:WebPage",
-      "url": "https://data.health.europa.eu",
-      "mach:evidenceType": "primary-instance"
-    },
     {
       "@type": "schema:WebPage",
       "url": "https://code.europa.eu/healthdataeu/healthdataeu-eu-dataset-catalogue",
