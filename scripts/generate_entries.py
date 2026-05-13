@@ -8,27 +8,16 @@ of index.html with live data. Run locally or via GitHub Actions.
 import json
 import os
 import re
+import sys
 from pathlib import Path
 
 ENTRIES_DIR = Path("entries")
 INDEX_HTML  = Path("index.html")
 
-CATEGORY_LABELS = {
-    "clinical-systems":            "Clinical Systems",
-    "interoperability-standards":  "Interoperability Standards",
-    "terminologies-ontologies":    "Terminologies & Ontologies",
-    "data-models-research":        "Data Models & Research Platforms",
-    "medical-imaging-signals":     "Medical Imaging & Signals",
-    "ai-ml-models":                "AI / ML Models",
-    "datasets-benchmarks":         "Datasets & Benchmarks",
-    "deidentification-privacy":    "De-identification & Privacy",
-    "quality-conformance":         "Quality & Conformance",
-    "public-health-epi":           "Public Health & Epi",
-    "mcp-servers-ai-interfaces":   "MCP Servers & AI Interfaces",
-    "tooling-infrastructure":      "Tooling & Infrastructure",
-    "patient-facing-mhealth":      "Patient-Facing & mHealth",
-    "compliance-governance":       "Compliance & Governance",
-}
+sys.path.insert(0, str(Path(__file__).parent))
+from taxonomy import category_labels, label as category_label
+
+CATEGORY_LABELS = category_labels()
 
 JUDGEMENT_BADGE = {
     "Adopt":       "badge-adopt",
@@ -49,8 +38,8 @@ def load_entries():
             print(f"WARN: skipping {path} — {e}")
     return entries
 
-def category_label(cat):
-    return CATEGORY_LABELS.get(cat, cat)
+def _category_label(cat):
+    return category_label(cat)
 
 TYPE_LABELS = {
     "mach:MLModel":    "ML Model",
@@ -119,7 +108,7 @@ def build_entries_html(entries):
         judgement   = e.get("mach:judgement", "")
 
         short_desc  = (description[:140] + "…") if len(description) > 143 else description
-        cat_label   = category_label(cat)
+        cat_label   = _category_label(cat)
         entry_type  = get_entry_type(e)
         license_str = get_license_short(e)
         jsonld_url  = get_jsonld_url(e)
