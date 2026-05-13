@@ -26,6 +26,10 @@ JUDGEMENT_BADGE = {
     "Caution":     "badge-caution",
 }
 
+FOLDER_TO_CAT = {c["folder"]: c["id"] for c in __import__("yaml").safe_load(
+    (Path(__file__).parent.parent / "data/taxonomy/categories.yaml").read_text()
+)["categories"]}
+
 def load_entries():
     entries = []
     for path in sorted(ENTRIES_DIR.rglob("*.jsonld")):
@@ -33,6 +37,8 @@ def load_entries():
             continue
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
+            folder = path.parent.name
+            data["_cat"] = FOLDER_TO_CAT.get(folder, folder)
             entries.append(data)
         except json.JSONDecodeError as e:
             print(f"WARN: skipping {path} — {e}")
@@ -104,7 +110,7 @@ def build_entries_html(entries):
     for e in entries:
         name        = e.get("name", "—")
         description = e.get("description", "")
-        cat         = e.get("mach:category", "")
+        cat         = e.get("_cat", "")
         judgement   = e.get("mach:judgement", "")
 
         short_desc  = (description[:140] + "…") if len(description) > 143 else description
@@ -134,7 +140,7 @@ def build_stats_html(entries):
     total    = len(entries)
     adopts   = sum(1 for e in entries if e.get("mach:judgement") == "Adopt")
     assessed = sum(1 for e in entries if e.get("mach:judgement") == "Assess")
-    cats     = len(set(e.get("mach:category","") for e in entries if e.get("mach:category")))
+    cats     = len(set(e.get("_cat","") for e in entries if e.get("_cat")))
     return total, adopts, assessed, cats
 
 def patch_html(html, entries):
