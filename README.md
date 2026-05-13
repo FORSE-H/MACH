@@ -86,7 +86,7 @@ Each entry type serializes against the appropriate standard:
 | Dataset | [Croissant (MLCommons)](https://mlcommons.org/working-groups/data/croissant/) | schema.org Dataset |
 | MCP Server | [MCP server.json](https://github.com/modelcontextprotocol/registry) | CodeMeta |
 | Standard / Spec | schema.org + MACH vocabulary | DCAT-AP |
-| The catalog itself | [DCAT-AP](https://semiceu.github.io/DCAT-AP/) | |
+| The catalog itself | [DCAT-AP 3.0](https://semiceu.github.io/DCAT-AP/) (EU profile of [DCAT v3](https://www.w3.org/TR/vocab-dcat-3/)) | |
 
 ---
 
