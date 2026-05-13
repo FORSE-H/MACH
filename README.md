@@ -183,6 +183,8 @@ Attribution: *MACH - Machine-Actionable Catalog for Healthcare, FORSE-H, https:/
 
 Inspired by [CNCF Landscape](https://landscape.cncf.io/), [Data Landscape (Entropy Data)](https://www.data-landscape.com/), [ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar), [Research Software Directory](https://research-software-directory.org/) (Netherlands eScience Center), and [bio.tools](https://bio.tools/) (ELIXIR). Metadata standards: [MLDCAT-AP](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) (SEMIC/EU), [CodeMeta](https://codemeta.github.io/), [DCAT-AP](https://semiceu.github.io/DCAT-AP/), [Croissant](https://mlcommons.org/working-groups/data/croissant/) (MLCommons), [Bitol ODPS](https://github.com/bitol-io/open-data-product-standard), [ODRL](https://www.w3.org/TR/odrl-model/) (W3C), [FAIR Data Point spec](https://specs.fairdatapoint.org/).
 
+MACH uses [Software Heritage](https://www.softwareheritage.org/) identifiers (SWHIDs) as persistent archival references for catalog entries. SWHIDs are an ISO/IEC 18670 standard; the Software Heritage logo displayed in the catalog is used under their [CC-BY communication kit](https://www.softwareheritage.org/software-heritage-communication-kit/). We thank Software Heritage for their work on universal software preservation.
+
 Parts of this project, including catalog entries, tooling scripts, and scoring methodology, were developed with assistance from [Claude](https://claude.ai) by [Anthropic](https://www.anthropic.com), specifically Claude Sonnet 4.6 via [Claude Code](https://github.com/anthropics/claude-code). All content has been reviewed and is the intellectual responsibility of the project curator.
 
 ---
@@ -199,4 +201,4 @@ Academic and community standards informing the MACH scoring methodology and meta
 | [fair-software.nl recommendations](https://fair-software.nl) | Five practical FAIR software recommendations: repository, license, registry, citation, checklist |
 | [OpenSSF Scorecard](https://scorecard.dev) | Automated security and best-practices checks for open source projects |
 | [Citation File Format (CFF)](https://citation-file-format.github.io/) | CITATION.cff standard for software citation metadata |
-| [Software Heritage](https://www.softwareheritage.org/) | Universal software archive; SWHID persistent identifiers used in MACH entries |
+| [Software Heritage](https://www.softwareheritage.org/) | Universal software archive; MACH uses SWHIDs (ISO/IEC 18670) as persistent archival identifiers in catalog entries |

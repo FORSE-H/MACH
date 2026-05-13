@@ -103,8 +103,8 @@ def build_url_links(e):
     if repo and repo != site:
         links.append(f'<a href="{repo}" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a>')
     if swhid:
-        swh_url = f"https://archive.softwareheritage.org/browse/origin/?origin_url={repo or site}"
-        links.append(f'<a href="{swh_url}" target="_blank" rel="noopener" class="entry-url entry-swh" title="{swhid}">swh</a>')
+        swh_url = f"https://archive.softwareheritage.org/browse/{swhid}/"
+        links.append(f'<a href="{swh_url}" target="_blank" rel="noopener" class="entry-url entry-swh" title="Archived on Software Heritage&#10;{swhid}"><img src="logos/swh.svg" alt="" class="swh-icon">swh</a>')
     return "".join(links)
 
 def build_entries_html(entries):
