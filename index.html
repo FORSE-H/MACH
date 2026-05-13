@@ -144,6 +144,79 @@
     vertical-align: middle;
   }
 
+  /* ── HERO TRAIL ── */
+  .hero-trail {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 1.25rem;
+  }
+
+  .trail-cloud {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.67rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.82);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 18px;
+    padding: 0.6rem 1rem;
+    max-width: 190px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .trail-cloud::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 28%;
+    width: 42%;
+    height: 20px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 50%;
+    border-bottom-color: transparent;
+  }
+
+  .trail-cloud em {
+    color: var(--teal-300);
+    font-style: italic;
+  }
+
+  .trail-plane {
+    margin-left: auto;
+    color: var(--teal-100);
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+    animation: plane-drift 5s ease-in-out infinite;
+    padding-bottom: 0.25rem;
+  }
+
+  .trail-cloud-1 { animation: cloud-in 0.6s ease 0.5s forwards, cloud-bob 4.5s ease-in-out 1.4s infinite; }
+  .trail-cloud-2 { animation: cloud-in 0.6s ease 1.0s forwards, cloud-bob 4.5s ease-in-out 1.9s infinite; }
+  .trail-cloud-3 { animation: cloud-in 0.6s ease 1.5s forwards, cloud-bob 4.5s ease-in-out 2.4s infinite; }
+
+  @keyframes cloud-in {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes cloud-bob {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-6px); }
+  }
+  @keyframes plane-drift {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-5px); }
+  }
+
+  @media (max-width: 600px) {
+    .hero-trail { display: none; }
+  }
+
   .hero h1 {
     font-family: 'Fraunces', serif;
     font-weight: 300;
@@ -894,6 +967,20 @@
 </nav>
 
 <div class="hero-band">
+<div class="hero-trail" aria-hidden="true">
+  <div class="trail-cloud trail-cloud-1">
+    <em>mach</em> (ˈmäk)<br>
+    Speed relative to the speed of sound.<br>
+    Named after <a href="https://en.wikipedia.org/wiki/Ernst_Mach" target="_blank" rel="noopener" style="color:var(--teal-300);text-decoration:none;">Ernst Mach</a>, 1838–1916.*
+  </div>
+  <div class="trail-cloud trail-cloud-2">
+    Discover curated open-source<br>healthcare resources with speed.
+  </div>
+  <div class="trail-cloud trail-cloud-3">
+    The first machine-actionable catalog spanning healthcare software, AI&nbsp;models, standards, and datasets.
+  </div>
+  <div class="trail-plane">✈</div>
+</div>
 <div class="hero">
   <p class="hero-eyebrow">Open catalog · Healthcare commons · Early access</p>
   <h1>Machine-Actionable<br>Catalog for <em>Healthcare</em></h1>
