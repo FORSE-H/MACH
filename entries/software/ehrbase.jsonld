@@ -56,5 +56,6 @@
       "url": "https://docs.ehrbase.org/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:affd5aaa680da911d3d326db4fae0aef0022ea05"
 }
