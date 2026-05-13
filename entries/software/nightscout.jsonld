@@ -61,5 +61,6 @@
       "url": "https://nightscout.github.io/nightscout/new_user/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:fefab2e3a4665e465b42617db0f2a2b294ae9275"
 }
