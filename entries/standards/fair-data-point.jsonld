@@ -1,0 +1,61 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fair-data-point",
+  "@type": [
+    "mach:Standard"
+  ],
+  "identifier": "fair-data-point",
+  "name": "FAIR Data Point (FDP) Specification",
+  "alternateName": [
+    "FDP",
+    "FAIRDataPoint"
+  ],
+  "description": "W3C Unofficial Proposal Draft specification for a metadata service that exposes digital objects following FAIR principles (Findable, Accessible, Interoperable, Reusable) via REST APIs. Defines how data publishers serve standardised metadata and how consumers discover it. Builds on DCAT v2, RDF, SHACL, and LDP (Linked Data Platform). Widely adopted in European research data infrastructure, including national health data catalogues (e.g. Health-RI), biobanks, and ELIXIR nodes. A Java reference implementation (MIT, github.com/FAIRDataTeam/FAIRDataPoint) exists with 40+ releases; the spec itself is published under the W3C Software and Document License.",
+  "url": "https://specs.fairdatapoint.org/",
+  "codeRepository": "https://github.com/FAIRDataTeam/FAIRDataPoint",
+  "license": "W3C",
+  "dateModified": "2026-03-12",
+  "version": "Unofficial Proposal Draft (2026-03-12)",
+  "keywords": [
+    "fair",
+    "metadata",
+    "data-catalogue",
+    "dcat",
+    "rdf",
+    "shacl",
+    "ldp",
+    "linked-data",
+    "research-data",
+    "interoperability",
+    "health-data",
+    "w3c"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "W3C / FAIRDataTeam",
+    "url": "https://www.w3.org"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "beta",
+  "mach:category": "specs",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The primary specification for FAIR metadata services in European research data infrastructure, with production deployments at Health-RI and across ELIXIR nodes. Still an Unofficial Proposal Draft at W3C — not yet a formal standard — and the March 2026 draft still targets DCAT v2 rather than the current DCAT v3. The Java reference implementation is functional but known to be heavyweight. Marked Assess: track it closely if building FAIR-aligned health data infrastructure, especially given its role in the EHDS ecosystem, but evaluate whether the spec version and implementation maturity fit your requirements.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://specs.fairdatapoint.org/",
+      "mach:evidenceType": "specification"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/FAIRDataTeam/FAIRDataPoint",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://app.fairdatapoint.org/",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}

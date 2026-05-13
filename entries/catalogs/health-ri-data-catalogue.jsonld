@@ -12,8 +12,6 @@
   ],
   "description": "Dutch national health research data catalogue built on the FAIR Data Point (FDP) specification. Metadata is described using HealthDCAT-AP, the European Health Data Space (EHDS) profile of DCAT-AP, making it one of the first national catalogs aligned with EHDS requirements. Harvests and exposes dataset metadata from hospitals, biobanks, research institutes, and cohort studies across the Netherlands. As of 2026, the catalogue indexes over 480 datasets. Metadata is openly accessible and FAIR-aligned; access to the underlying data is governed per dataset and is typically restricted.",
   "url": "https://catalogus.healthdata.nl/en",
-  "codeRepository": "https://github.com/FAIRDataTeam/FAIRDataPoint",
-  "license": "Apache-2.0",
   "dateModified": "2026-05-01",
   "keywords": [
     "health-data",
@@ -44,7 +42,7 @@
     "cloud-only"
   ],
   "mach:judgement": "Assess",
-  "mach:judgementReason": "The principal national health data discovery infrastructure for the Netherlands, indexing over 480 datasets from hospitals, biobanks, and research cohorts. One of the first national health catalogs to adopt HealthDCAT-AP, the EHDS-aligned metadata profile — making it directly relevant to the European Health Data Space rollout. Built on the FAIR Data Point specification with openly accessible metadata. Marked Assess rather than Adopt because the catalogue is a hosted service rather than a self-contained open-source tool; the underlying FDP software (Apache-2.0) is the deployable artifact. Valuable as a reference implementation of national-scale EHDS-ready health metadata infrastructure.",
+  "mach:judgementReason": "The principal national health data discovery infrastructure for the Netherlands, indexing over 480 datasets from hospitals, biobanks, and research cohorts. One of the first national health catalogs to adopt HealthDCAT-AP, the EHDS-aligned metadata profile — making it directly relevant to the European Health Data Space rollout. Built on the FAIR Data Point specification with openly accessible metadata. Marked Assess rather than Adopt because the catalogue is a hosted service rather than a self-contained open-source tool.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -54,14 +52,8 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://github.com/FAIRDataTeam/FAIRDataPoint",
-      "mach:evidenceType": "primary-repo"
-    },
-    {
-      "@type": "schema:WebPage",
       "url": "https://specs.fairdatapoint.org/",
       "mach:evidenceType": "specification"
     }
-  ],
-  "mach:swhid": "swh:1:ori:957ded432989ad8e850231107579cc1d776fb218"
+  ]
 }

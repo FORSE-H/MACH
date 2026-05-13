@@ -49,10 +49,11 @@ def _category_label(cat):
     return category_label(cat)
 
 TYPE_LABELS = {
-    "mach:MLModel":    "ML Model",
-    "mach:MCPServer":  "MCP Server",
-    "mach:Standard":   "Standard",
-    "mach:Dataset":    "Dataset",
+    "mach:MLModel":       "ML Model",
+    "mach:MCPServer":     "MCP Server",
+    "mach:Standard":      "Standard",
+    "mach:Dataset":       "Dataset",
+    "schema:DataCatalog": "Catalog",
 }
 
 def get_entry_type(e):
