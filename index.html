@@ -150,8 +150,27 @@
     margin: 0 auto;
     padding: 2.5rem 2rem 0;
     display: flex;
-    align-items: flex-end;
-    gap: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    position: relative;
+  }
+
+  /* dotted contrail line running through all elements */
+  .hero-trail::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    right: 2rem;
+    height: 1px;
+    background: repeating-linear-gradient(
+      to right,
+      rgba(255,255,255,0.18) 0, rgba(255,255,255,0.18) 5px,
+      transparent 5px, transparent 11px
+    );
+    pointer-events: none;
+    z-index: 0;
   }
 
   .trail-cloud {
@@ -159,47 +178,46 @@
     font-size: 0.67rem;
     line-height: 1.65;
     color: rgba(255,255,255,0.82);
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(4,52,44,0.95);
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 18px;
     padding: 0.6rem 1rem;
     max-width: 190px;
     position: relative;
+    z-index: 1;
     opacity: 0;
     transform: translateY(10px);
   }
 
+  /* cloud bump on top */
   .trail-cloud::before {
     content: '';
     position: absolute;
-    top: -10px;
-    left: 28%;
-    width: 42%;
-    height: 20px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.16);
+    top: -11px;
+    left: 25%;
+    width: 50%;
+    height: 22px;
+    background: rgba(4,52,44,0.95);
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 50%;
     border-bottom-color: transparent;
   }
 
-  .trail-cloud em {
-    color: var(--teal-300);
-    font-style: italic;
-  }
+  .trail-cloud em { color: var(--teal-300); font-style: italic; }
+  .trail-cloud a  { color: var(--teal-300); }
 
   .trail-plane {
-    margin-left: auto;
     color: var(--teal-100);
     font-size: 2rem;
     line-height: 1;
     flex-shrink: 0;
+    z-index: 1;
     animation: plane-drift 5s ease-in-out infinite;
-    padding-bottom: 0.25rem;
   }
 
-  .trail-cloud-1 { animation: cloud-in 0.6s ease 0.5s forwards, cloud-bob 4.5s ease-in-out 1.4s infinite; }
-  .trail-cloud-2 { animation: cloud-in 0.6s ease 1.0s forwards, cloud-bob 4.5s ease-in-out 1.9s infinite; }
-  .trail-cloud-3 { animation: cloud-in 0.6s ease 1.5s forwards, cloud-bob 4.5s ease-in-out 2.4s infinite; }
+  .trail-cloud-1 { animation: cloud-in 0.6s ease 0.4s forwards, cloud-bob 4.5s ease-in-out 1.3s infinite; }
+  .trail-cloud-2 { animation: cloud-in 0.6s ease 0.9s forwards, cloud-bob 4.5s ease-in-out 1.8s infinite; }
+  .trail-cloud-3 { animation: cloud-in 0.6s ease 1.4s forwards, cloud-bob 4.5s ease-in-out 2.3s infinite; }
 
   @keyframes cloud-in {
     to { opacity: 1; transform: translateY(0); }
@@ -209,8 +227,8 @@
     50%       { transform: translateY(-6px); }
   }
   @keyframes plane-drift {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-5px); }
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50%       { transform: translateY(-5px) translateX(3px); }
   }
 
   @media (max-width: 600px) {
