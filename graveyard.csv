@@ -1,0 +1,2 @@
+name,repo_url,website_url,license,category,stars_at_archival,last_commit_date,archived_date,reason_known,notes
+HospitalRun,https://github.com/hospitalrun/hospitalrun-frontend,https://hospitalrun.io/,MIT,HIS / EMR (LMIC),6886,2023-01-09,2025-10-15,No public post-mortem,Volunteer burnout; v2 React rewrite was never completed despite 6.9k stars. Formal closure announced Oct 2025.
