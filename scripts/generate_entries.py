@@ -26,7 +26,8 @@ JUDGEMENT_BADGE = {
     "Caution":     "badge-caution",
 }
 
-FOLDER_TO_CAT = {c["folder"]: c["id"] for c in __import__("yaml").safe_load(
+import yaml as _yaml
+FOLDER_TO_CAT = {c["folder"]: c["id"] for c in _yaml.safe_load(
     (Path(__file__).parent.parent / "data/taxonomy/categories.yaml").read_text()
 )["categories"]}
 

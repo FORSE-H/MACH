@@ -7,6 +7,8 @@ on:
       - 'entries/**'
       - 'scripts/generate_entries.py'
       - 'scripts/fetch_swhids.py'
+      - 'scripts/taxonomy.py'
+      - 'data/taxonomy/categories.yaml'
       - 'index.html'
 
 jobs:
@@ -26,6 +28,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml requests
 
       - name: Compute and add SWHIDs for new entries
         run: python scripts/fetch_swhids.py
