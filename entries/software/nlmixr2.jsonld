@@ -1,0 +1,61 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/nlmixr2",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "nlmixr2",
+  "name": "nlmixr2",
+  "description": "R package for nonlinear mixed-effects (NLME) modelling in pharmacometrics, designed to compete with commercial tools such as NONMEM and Monolix and explicitly suitable for regulatory submissions (FDA, EMA). Supports PK/PD modelling, multiple endpoints, model piping, censoring, and automated reporting. Interoperates with NONMEM and Monolix via babelmixr2, and integrates with a rich ecosystem of companion packages: xpose.nlmixr2 and ggPMX for diagnostics, shinyMixR for a Shiny-based GUI, nlmixr2lib for a model library, and nlmixr2targets for workflow pipelines. Available on CRAN with binaries for multiple platforms. GPL-3.0 licensed, community-governed with an advisory committee.",
+  "url": "https://nlmixr2.org/",
+  "codeRepository": "https://github.com/nlmixr2/nlmixr2",
+  "license": "GPL-3.0",
+  "version": "5.0.0",
+  "dateModified": "2025-11-30",
+  "keywords": [
+    "pharmacometrics",
+    "nlme",
+    "mixed-effects",
+    "pk-pd",
+    "pharmacokinetics",
+    "pharmacodynamics",
+    "r",
+    "cran",
+    "nonmem",
+    "monolix",
+    "regulatory",
+    "clinical-trials",
+    "fda",
+    "ema"
+  ],
+  "copyrightHolder": {
+    "@type": "Person",
+    "name": "Matthew Fidler"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "Production-grade R pharmacometrics package explicitly targeting regulatory submissions — the primary open-source alternative to NONMEM and Monolix, both of which are expensive commercial tools with restrictive licensing. v5.0.0 on CRAN, 349 commits, community-governed with an advisory committee. Rich companion ecosystem: babelmixr2 handles bidirectional NONMEM and Monolix conversion, shinyMixR provides a Shiny GUI, xpose.nlmixr2 covers diagnostics, and nlmixr2lib provides a curated model library. Modest star count (87) reflects the specialist pharmacometrics audience, not limited quality or adoption.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/nlmixr2/nlmixr2",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://nlmixr2.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://cran.r-project.org/package=nlmixr2",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
