@@ -1,0 +1,62 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/catalogs/sphn-metadata-catalog",
+  "@type": [
+    "schema:DataCatalog"
+  ],
+  "identifier": "sphn-metadata-catalog",
+  "name": "SPHN Metadata Catalog",
+  "alternateName": [
+    "SIB FAIR Data Point",
+    "fdp.dcc.sib.swiss"
+  ],
+  "description": "Swiss national health research metadata catalog operated by the SIB Swiss Institute of Bioinformatics for the Swiss Personalized Health Network (SPHN). Built on the FAIR Data Point specification and governed by a custom SPHN Metadata Catalog Schema — a lightweight extension of the FDP ontology aligned with DCAT, DCAT-AP CH 2.0 (Swiss public sector), and HealthDCAT-AP (European Health Data Space). Exposes FAIR-compliant metadata for health-related datasets across Swiss research institutions. Schema published under CC-BY 4.0.",
+  "url": "https://fdp.dcc.sib.swiss/",
+  "dateModified": "2026-05-01",
+  "keywords": [
+    "health-data",
+    "fair-data-point",
+    "data-catalogue",
+    "switzerland",
+    "sphn",
+    "sib",
+    "dcat",
+    "dcat-ap",
+    "healthdcat-ap",
+    "metadata",
+    "open-metadata",
+    "fdp",
+    "ehds"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "SIB Swiss Institute of Bioinformatics",
+    "url": "https://www.sib.swiss"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "catalogs",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Switzerland's national FAIR Data Point for health research metadata, run by SIB for the SPHN initiative. Notable for implementing a custom schema that bridges DCAT-AP CH 2.0 (Swiss public sector), HealthDCAT-AP (EHDS), and the FDP ontology simultaneously — making it one of the few national deployments aligned with both Swiss and EU standards. Marked Assess because it is a hosted service rather than a deployable artifact; the SPHN schema (CC-BY 4.0) is the reusable output for other national deployments.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://fdp.dcc.sib.swiss/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://sphn.gitlab.io/sphn-metacat-schema",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://git.dcc.sib.swiss/sphn-semantic-framework/metadata-collection/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
