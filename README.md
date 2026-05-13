@@ -182,3 +182,21 @@ Attribution: *MACH - Machine-Actionable Catalog for Healthcare, FORSE-H, https:/
 ## Acknowledgements
 
 Inspired by [CNCF Landscape](https://landscape.cncf.io/), [Data Landscape (Entropy Data)](https://www.data-landscape.com/), [ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar), [Research Software Directory](https://research-software-directory.org/) (Netherlands eScience Center), and [bio.tools](https://bio.tools/) (ELIXIR). Metadata standards: [MLDCAT-AP](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) (SEMIC/EU), [CodeMeta](https://codemeta.github.io/), [DCAT-AP](https://semiceu.github.io/DCAT-AP/), [Croissant](https://mlcommons.org/working-groups/data/croissant/) (MLCommons), [Bitol ODPS](https://github.com/bitol-io/open-data-product-standard), [ODRL](https://www.w3.org/TR/odrl-model/) (W3C), [FAIR Data Point spec](https://specs.fairdatapoint.org/).
+
+Parts of this project, including catalog entries, tooling scripts, and scoring methodology, were developed with assistance from [Claude](https://claude.ai) by [Anthropic](https://www.anthropic.com), specifically Claude Sonnet 4.6 via [Claude Code](https://github.com/anthropics/claude-code). All content has been reviewed and is the intellectual responsibility of the project curator.
+
+---
+
+## References
+
+Academic and community standards informing the MACH scoring methodology and metadata design:
+
+| Reference | Description |
+|---|---|
+| Martin del Pico E., Gelpi J.L., Capella-Gutierrez S. (2024). *FAIRsoft—a practical implementation of FAIR principles for research software*. Bioinformatics, 40(8). [doi:10.1093/bioinformatics/btae464](https://doi.org/10.1093/bioinformatics/btae464) | FAIRsoft: 12 measurable FAIR indicators for research software (F/A/I/R axis breakdown) |
+| Chue Hong N.P. et al. (2022). *FAIR Principles for Research Software (FAIR4RS Principles)*. ReSA / RDA / FORCE11. [doi:10.15497/RDA00068](https://doi.org/10.15497/RDA00068) | Foundational FAIR4RS principles adapted from FAIR data to research software |
+| [howfairis v0.15](https://github.com/fair-software/howfairis) (2025). Netherlands eScience Center. | Automated tool implementing 5 FAIR software recommendations from fair-software.nl |
+| [fair-software.nl recommendations](https://fair-software.nl) | Five practical FAIR software recommendations: repository, license, registry, citation, checklist |
+| [OpenSSF Scorecard](https://scorecard.dev) | Automated security and best-practices checks for open source projects |
+| [Citation File Format (CFF)](https://citation-file-format.github.io/) | CITATION.cff standard for software citation metadata |
+| [Software Heritage](https://www.softwareheritage.org/) | Universal software archive; SWHID persistent identifiers used in MACH entries |
