@@ -12,6 +12,7 @@
   ],
   "description": "Swiss national health research metadata catalog operated by the SIB Swiss Institute of Bioinformatics for the Swiss Personalized Health Network (SPHN). Built on the FAIR Data Point specification and governed by a custom SPHN Metadata Catalog Schema — a lightweight extension of the FDP ontology aligned with DCAT, DCAT-AP CH 2.0 (Swiss public sector), and HealthDCAT-AP (European Health Data Space). Exposes FAIR-compliant metadata for health-related datasets across Swiss research institutions. Schema published under CC-BY 4.0.",
   "url": "https://fdp.dcc.sib.swiss/",
+  "license": "CC-BY-4.0",
   "dateModified": "2026-05-01",
   "keywords": [
     "health-data",

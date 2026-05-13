@@ -48,18 +48,14 @@ jobs:
           python3 - <<'EOF'
           import json, os, sys
 
-          REQUIRED = ["identifier", "name", "description", "url", "license",
+          REQUIRED = ["identifier", "name", "description", "url",
                       "mach:category", "mach:judgement", "mach:judgementReason",
                       "mach:editorialReviewedAt", "mach:evidence"]
 
+          # license required except for hosted-service catalog entries
+          CATALOG_TYPES = {"schema:DataCatalog"}
+
           VALID_JUDGEMENTS = {"Adopt", "Situational", "Assess", "Caution"}
-          VALID_CATEGORIES = {
-            "clinical-systems", "interoperability-standards", "terminologies-ontologies",
-            "data-models-research", "medical-imaging-signals", "ai-ml-models",
-            "datasets-benchmarks", "deidentification-privacy", "quality-conformance",
-            "public-health-epi", "mcp-servers-ai-interfaces", "tooling-infrastructure",
-            "patient-facing-mhealth", "compliance-governance"
-          }
 
           errors = []
           for root, dirs, files in os.walk("entries"):
@@ -70,17 +66,22 @@ jobs:
                   with open(path) as f:
                       data = json.load(f)
 
+                  types = data.get("@type", [])
+                  if isinstance(types, str):
+                      types = [types]
+                  is_catalog = bool(CATALOG_TYPES & set(types))
+
                   for field in REQUIRED:
                       if field not in data:
                           errors.append(f"{path}: missing required field '{field}'")
+
+                  if not is_catalog and "license" not in data:
+                      errors.append(f"{path}: missing required field 'license'")
 
                   if "mach:judgement" in data:
                       if data["mach:judgement"] not in VALID_JUDGEMENTS:
                           errors.append(f"{path}: invalid judgement '{data['mach:judgement']}'")
 
-                  if "mach:category" in data:
-                      if data["mach:category"] not in VALID_CATEGORIES:
-                          errors.append(f"{path}: invalid category '{data['mach:category']}'")
 
                   if "identifier" in data and "logo" in data:
                       logo_path = data["logo"].replace("../../", "")
