@@ -27,6 +27,7 @@ MACH fills that gap with:
 - **FAIR alignment** - stable entry URIs (w3id.org planned), versioned releases, DOI-archived on Zenodo
 - **FAIR Data Point server** - planned RDF/SPARQL endpoint implementing the [FDP specification](https://specs.fairdatapoint.org/), making the catalog queryable by data portals, registries, and agents
 - **Community curation** - all data lives in Git; contributions via pull request; CI validates every entry on push
+- **Agent-native interface** *(exploratory)* - the catalog structure is designed to be queryable by AI agents directly; an MCP server exposing MACH as a tool for Claude, Cursor, and similar environments is a natural next step, subject to resourcing
 
 ---
 
