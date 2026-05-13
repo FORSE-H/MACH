@@ -602,24 +602,24 @@
     font-size: 0.6rem;
     text-transform: uppercase;
     letter-spacing: 0.07em;
-    color: var(--gray-300);
+    color: var(--gray-500);
     line-height: 1.4;
   }
-  [data-cat="clinical-systems"]                .entry-cat { color: #1D9E75; }
-  [data-cat="interoperability-standards"]      .entry-cat { color: #0284C7; }
-  [data-cat="terminologies-ontologies"]        .entry-cat { color: #D97706; }
+  [data-cat="clinical-systems"]                .entry-cat { color: #0F6E56; }
+  [data-cat="interoperability-standards"]      .entry-cat { color: #0369A1; }
+  [data-cat="terminologies-ontologies"]        .entry-cat { color: #B45309; }
   [data-cat="data-models-research"]            .entry-cat { color: #4F46E5; }
   [data-cat="data-models-research-platforms"]  .entry-cat { color: #4F46E5; }
   [data-cat="medical-imaging-signals"]         .entry-cat { color: #7C3AED; }
   [data-cat="ai-ml-models"]                   .entry-cat { color: #4F46E5; }
-  [data-cat="datasets-benchmarks"]            .entry-cat { color: #0284C7; }
+  [data-cat="datasets-benchmarks"]            .entry-cat { color: #0369A1; }
   [data-cat="de-identification-privacy"]       .entry-cat { color: #E11D48; }
-  [data-cat="quality-conformance"]             .entry-cat { color: #D97706; }
-  [data-cat="public-health-epi"]               .entry-cat { color: #1D9E75; }
+  [data-cat="quality-conformance"]             .entry-cat { color: #B45309; }
+  [data-cat="public-health-epi"]               .entry-cat { color: #0F6E56; }
   [data-cat="mcp-servers-ai-interfaces"]       .entry-cat { color: #7C3AED; }
-  [data-cat="tooling-infrastructure"]          .entry-cat { color: #1D9E75; }
+  [data-cat="tooling-infrastructure"]          .entry-cat { color: #0F6E56; }
   [data-cat="patient-facing-mhealth"]          .entry-cat { color: #E11D48; }
-  [data-cat="compliance-governance"]           .entry-cat { color: #D97706; }
+  [data-cat="compliance-governance"]           .entry-cat { color: #B45309; }
 
   .entry-judgement {
     font-family: 'DM Mono', monospace;
@@ -795,12 +795,12 @@
   }
 
   .filter-btn:hover { border-color: var(--teal-300); color: var(--teal-700); background: var(--teal-50); }
-  .filter-btn.active { background: var(--teal-500); color: var(--white); border-color: var(--teal-500); }
+  .filter-btn.active { background: var(--teal-700); color: var(--white); border-color: var(--teal-700); }
 
   /* Category filter buttons: per-category color injected via --c / --b / --cb CSS vars */
   #filter-cat .filter-btn[data-value]:not(.active) { color: var(--c, var(--gray-500)); border-color: var(--cb, var(--border)); }
   #filter-cat .filter-btn[data-value]:hover        { background: var(--b, var(--teal-50)) !important; border-color: var(--c, var(--teal-300)) !important; color: var(--c, var(--teal-700)) !important; }
-  #filter-cat .filter-btn[data-value].active       { background: var(--c, var(--teal-500)) !important; border-color: var(--c, var(--teal-500)) !important; color: #fff !important; }
+  #filter-cat .filter-btn[data-value].active       { background: var(--c, var(--teal-700)) !important; border-color: var(--c, var(--teal-700)) !important; color: #fff !important; }
 
   /* ── CTA ── */
   .cta {
@@ -1119,11 +1119,11 @@
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:2rem;">
     <div style="background:var(--white);padding:1rem 1.25rem;">
-      <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-300);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Total entries</p>
+      <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Total entries</p>
       <p style="font-size:1.75rem;font-weight:600;color:#1D9E75;"><!-- STAT:TOTAL -->53<!-- /STAT:TOTAL --></p>
     </div>
     <div style="background:var(--white);padding:1rem 1.25rem;">
-      <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-300);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Entry types</p>
+      <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Entry types</p>
       <p style="font-size:1.75rem;font-weight:600;color:#4F46E5;"><!-- STAT:CATS -->6<!-- /STAT:CATS -->/7</p>
     </div>
   </div>
