@@ -4,14 +4,15 @@
 
 [![License: Apache-2.0](https://img.shields.io/badge/Code-Apache_2.0-blue.svg)](LICENSE)
 [![Data License: CC-BY-4.0](https://img.shields.io/badge/Data-CC--BY--4.0-lightgrey.svg)](LICENSE-DATA)
-[![Entries](https://img.shields.io/badge/entries-39-brightgreen.svg)](#)
+[![Entries](https://img.shields.io/badge/entries-48-brightgreen.svg)](#)
 [![Validate](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml/badge.svg)](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml)
 
 MACH is an open, machine-actionable catalog of open-source healthcare software, AI/ML models, clinical standards, datasets, tooling, and MCP servers - curated for humans, queryable by agents.
 
 Every entry is a structured JSON-LD record aligned with established open metadata standards, so hospitals, researchers, governments, and AI agents can all discover and consume the open healthcare commons.
 
-
+> **Project status:** active — 48 curated entries across 9 categories; CI pipeline live.
+> Initiated October 2025. A project of [FORSE-H](https://github.com/FORSE-H).
 
 ---
 
