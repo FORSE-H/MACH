@@ -82,10 +82,25 @@
     font-size: 1.2rem;
     color: var(--white);
     letter-spacing: -0.02em;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
   }
 
   .nav-brand span {
     color: var(--teal-300);
+  }
+
+  .nav-brand-full {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.01em;
+  }
+
+  @media (max-width: 640px) {
+    .nav-brand-full { display: none; }
   }
 
   .nav-links {
@@ -975,7 +990,7 @@
 <body>
 
 <nav>
-  <span class="nav-brand">M<span>A</span>CH</span>
+  <span class="nav-brand">M<span>A</span>CH<span class="nav-brand-full">Machine-Actionable Catalog for Healthcare</span></span>
   <ul class="nav-links">
     <li><a href="#categories">Categories</a></li>
     <li><a href="#metadata">Metadata</a></li>
