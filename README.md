@@ -26,7 +26,7 @@ MACH fills that gap with:
 - **Machine-readable exports** - MLDCAT-AP 3.0, CodeMeta 3.0, MCP `server.json`, Croissant, DCAT-AP
 - **FAIR alignment** - stable entry URIs (w3id.org planned), versioned releases, DOI-archived on Zenodo
 - **FAIR Data Point server** - planned RDF/SPARQL endpoint implementing the [FDP specification](https://specs.fairdatapoint.org/), making the catalog queryable by data portals, registries, and agents
-- **Community curation** - all data lives in Git; contributions via pull request; CI validates every entry on push
+- **Community curation** - all data lives in Git; suggest entries via GitHub issues or pull request; CI validates every entry on push
 - **Agent-native interface** *(exploratory)* - the catalog structure is designed to be queryable by AI agents directly; an MCP server exposing MACH as a tool for Claude, Cursor, and similar environments is a natural next step, subject to resourcing
 
 ---
@@ -141,9 +141,9 @@ flowchart TD
 
 ## Contributing
 
-All catalog data lives as JSON-LD files under `entries/`. Contributions are made via pull request.
+All catalog data lives as JSON-LD files under `entries/`. The easiest way to suggest an entry is via a [GitHub issue](https://github.com/FORSE-H/MACH/issues/new/choose) — curators will handle the JSON-LD. Developers comfortable with the format are welcome to submit a pull request directly.
 
-**Quick start:**
+**Quick start (for developers):**
 
 ```bash
 git clone https://github.com/FORSE-H/MACH
