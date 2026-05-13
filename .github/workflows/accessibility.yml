@@ -27,8 +27,9 @@ jobs:
 
       - name: Run pa11y WCAG 2.1 AA
         run: |
+          echo '{"chromeLaunchConfig":{"args":["--no-sandbox","--disable-setuid-sandbox"]}}' > /tmp/pa11yrc.json
           sleep 2
           pa11y http://localhost:8080/index.html \
             --standard WCAG2AA \
             --reporter cli \
-            --chromium-flags "--no-sandbox --disable-setuid-sandbox"
+            --config /tmp/pa11yrc.json

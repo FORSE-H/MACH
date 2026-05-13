@@ -48,12 +48,13 @@ jobs:
 
       - name: Run pa11y WCAG 2.1 AA on generated index.html
         run: |
+          echo '{"chromeLaunchConfig":{"args":["--no-sandbox","--disable-setuid-sandbox"]}}' > /tmp/pa11yrc.json
           python3 -m http.server 8080 &
           sleep 2
           pa11y http://localhost:8080/index.html \
             --standard WCAG2AA \
             --reporter cli \
-            --chromium-flags "--no-sandbox --disable-setuid-sandbox"
+            --config /tmp/pa11yrc.json
 
       - name: Commit updated entries and index.html
         run: |
