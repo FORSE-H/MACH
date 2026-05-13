@@ -141,16 +141,7 @@ flowchart TD
 
 ## Contributing
 
-All catalog data lives as JSON-LD files under `entries/`. The easiest way to suggest an entry is via a [GitHub issue](https://github.com/FORSE-H/MACH/issues/new/choose) — curators will handle the JSON-LD. Developers comfortable with the format are welcome to submit a pull request directly.
-
-**Quick start (for developers):**
-
-```bash
-git clone https://github.com/FORSE-H/MACH
-cp entries/software/_template.jsonld entries/software/my-project.jsonld
-# edit my-project.jsonld
-# open a pull request
-```
+Suggest an entry via a [GitHub issue](https://github.com/FORSE-H/MACH/issues/new/choose) — fill in the template and curators will handle the rest.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, including the entry checklist and editorial judgement criteria.
 
