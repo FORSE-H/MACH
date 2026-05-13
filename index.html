@@ -731,6 +731,63 @@
     color: var(--white);
   }
 
+  /* ── CONTRIBUTE / SUGGEST FORM ── */
+  .contribute-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-top: 2rem;
+  }
+  .form-row { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1rem; }
+  .form-row label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    color: var(--gray-700);
+    background: var(--white);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .form-row input:focus,
+  .form-row select:focus,
+  .form-row textarea:focus {
+    outline: none;
+    border-color: var(--teal-400);
+    box-shadow: 0 0 0 3px rgba(20,184,166,0.1);
+  }
+  .form-row textarea { resize: vertical; }
+  .contribute-github-inner {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.75rem;
+  }
+  .form-success {
+    display: none;
+    padding: 1rem 1.25rem;
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    border-radius: 6px;
+    color: #166534;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+  @media (max-width: 640px) {
+    .contribute-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+
   /* ── FOOTER ── */
   footer {
     background: var(--gray-900);
@@ -1452,7 +1509,83 @@
   <p>Know a tool, model, or standard that should be here? Open a pull request or suggest an entry.</p>
   <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
     <a href="https://github.com/FORSE-H/MACH" class="btn btn-primary">View on GitHub</a>
-    <a href="https://github.com/FORSE-H/MACH/issues/new?template=new-entry.yml" class="btn btn-secondary">Suggest an entry</a>
+    <a href="#suggest" class="btn btn-secondary">Suggest an entry</a>
+  </div>
+</div>
+
+<!-- ── SUGGEST AN ENTRY ─────────────────────────────────────────────────── -->
+<!-- Formspree: sign up at formspree.io, create a form, replace YOUR_FORM_ID -->
+<div id="suggest" class="section" style="background: var(--gray-50); border-top: 1px solid var(--border);">
+  <h2 style="margin-bottom: 0.35rem;">Suggest an entry</h2>
+  <p style="color: var(--gray-400); font-size: 0.925rem; margin-bottom: 0; max-width: 560px;">
+    Know a tool, model, dataset, or standard that belongs in MACH? Drop a link and a sentence — we will take it from there.
+  </p>
+
+  <div class="contribute-grid">
+
+    <!-- Form -->
+    <div>
+      <form id="suggest-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <label for="f-name">Tool / project name *</label>
+          <input type="text" id="f-name" name="name" required placeholder="e.g. OpenMRS, nnU-Net, MIMIC-IV">
+        </div>
+        <div class="form-row">
+          <label for="f-url">Link (GitHub, Hugging Face, project site, ...) *</label>
+          <input type="text" id="f-url" name="url" required placeholder="https://...">
+        </div>
+        <div class="form-row">
+          <label for="f-cat">Category (best guess)</label>
+          <select id="f-cat" name="category">
+            <option value="">-- not sure --</option>
+            <option>Clinical Systems</option>
+            <option>Interoperability Standards</option>
+            <option>Terminologies &amp; Ontologies</option>
+            <option>Data Models &amp; Research Platforms</option>
+            <option>Medical Imaging &amp; Signals</option>
+            <option>AI / ML Models</option>
+            <option>Datasets &amp; Benchmarks</option>
+            <option>De-identification &amp; Privacy</option>
+            <option>Quality &amp; Conformance</option>
+            <option>Public Health &amp; Epi</option>
+            <option>MCP Servers &amp; AI Interfaces</option>
+            <option>Tooling &amp; Infrastructure</option>
+            <option>Patient-Facing &amp; mHealth</option>
+            <option>Compliance &amp; Governance</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="f-reason">Why does it belong here? *</label>
+          <textarea id="f-reason" name="reason" required rows="3" placeholder="Open-source, actively maintained, used in clinical or research settings..."></textarea>
+        </div>
+        <div class="form-row">
+          <label for="f-email">Your email (optional — for follow-up only)</label>
+          <input type="email" id="f-email" name="email" placeholder="you@example.com">
+        </div>
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.25rem;">Submit suggestion</button>
+      </form>
+      <div id="suggest-success" class="form-success">
+        Thanks — we have received your suggestion and will review it. If you left an email we may follow up.
+      </div>
+    </div>
+
+    <!-- GitHub side -->
+    <div class="contribute-github-inner">
+      <p style="font-size:0.7rem; font-weight:600; color:var(--gray-400); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.75rem;">Prefer to contribute directly?</p>
+      <p style="font-size:0.875rem; color:var(--gray-500); margin-bottom:1.5rem; line-height:1.7;">
+        All catalog data lives in Git. Clone the repo, copy a template, fill in the fields, open a pull request. CI validates on push.
+      </p>
+      <div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.5rem;">
+        <a href="https://github.com/FORSE-H/MACH" target="_blank" rel="noopener" class="btn btn-secondary" style="text-align:center;">&#8599; github.com/FORSE-H/MACH</a>
+        <a href="https://github.com/FORSE-H/MACH/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" class="btn btn-secondary" style="text-align:center;">Contributing guide</a>
+      </div>
+      <p style="font-size:0.75rem; color:var(--gray-300); line-height:1.7; font-family:'DM Mono',monospace;">
+        cp entries/software/_template.jsonld entries/software/my-tool.jsonld<br>
+        # edit, then open a PR
+      </p>
+    </div>
+
   </div>
 </div>
 
@@ -1627,6 +1760,37 @@
   }
 
   renderPage();
+})();
+
+// ── Formspree AJAX submission ─────────────────────────────────────────────
+(function () {
+  const form = document.getElementById('suggest-form');
+  if (!form) return;
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    try {
+      const resp = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (resp.ok) {
+        form.style.display = 'none';
+        document.getElementById('suggest-success').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Submit suggestion';
+        alert('Something went wrong. Please try again or open a GitHub issue.');
+      }
+    } catch (_) {
+      btn.disabled = false;
+      btn.textContent = 'Submit suggestion';
+      alert('Could not send. Please check your connection and try again.');
+    }
+  });
 })();
 </script>
 </body>
