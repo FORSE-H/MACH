@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/medplum",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "medplum",
+  "name": "Medplum",
+  "description": "FHIR-native open-source developer platform for building and deploying clinical software, operated by Orangebot Inc. Provides a full-stack TypeScript monorepo (Node.js API, React frontend, PostgreSQL, Redis) covering FHIR-based clinical data repository, SMART-on-FHIR authentication, serverless Bots for workflow automation, a React component library for clinical UIs, and client SDKs. ONC Certified (including HTI-4), SOC 2 Type II, HIPAA, CFR Part 11, EPCS, and ISO 9001 certified. Used in production by Ro, Rad AI, Summer Health, Thirty Madison, Color, and Tia across custom EHRs, AI scribe agents, patient engagement portals, and population health tools. Apache 2.0 licensed, self-hostable, with a managed cloud option. OpenSSF Best Practices certified, 150+ open-source contributors.",
+  "url": "https://medplum.com/",
+  "codeRepository": "https://github.com/medplum/medplum",
+  "license": "Apache-2.0",
+  "version": "5.1.11",
+  "dateModified": "2026-05-06",
+  "keywords": [
+    "fhir",
+    "fhir-r4",
+    "smart-on-fhir",
+    "ehr",
+    "clinical-data-repository",
+    "typescript",
+    "nodejs",
+    "react",
+    "onc-certified",
+    "hipaa",
+    "soc2",
+    "developer-platform",
+    "healthcare-api",
+    "serverless"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Orangebot, Inc.",
+    "url": "https://medplum.com/"
+  },
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "Modern FHIR-native developer platform for building custom clinical applications from scratch — the strongest open-source choice for teams who need a certified, API-first foundation rather than a configurable off-the-shelf EHR. ONC Certified (including HTI-4), SOC 2 Type II, HIPAA, CFR Part 11, and EPCS certified. v5.1.11, 272 releases, 2.4k stars, 150+ contributors, Apache 2.0. Production deployments include Ro, Rad AI, Summer Health, and Thirty Madison across telehealth, AI scribe, and population health use cases. Vendor-led by Orangebot Inc. with both self-hosted and managed cloud options.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/medplum/medplum",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://medplum.com/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.medplum.com/docs",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
