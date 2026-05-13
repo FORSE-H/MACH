@@ -39,4 +39,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add entries/ index.html
           git diff --staged --quiet || git commit -m "ci: add SWHIDs and regenerate index.html [skip ci]"
+          git pull --rebase origin main
           git push
