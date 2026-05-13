@@ -1,0 +1,61 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/ozone-his",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "ozone-his",
+  "name": "Ozone HIS",
+  "description": "Open-source Health Information System distribution that integrates OpenMRS 3 (EMR/clinical records), Odoo (ERP, billing, pharmacy), SENAITE (laboratory information system), and Apache Superset (analytics) into a single deployable platform connected via FHIR. Designed for resource-limited and LMIC settings, with offline capability inherited from OpenMRS 3. Production deployments include Médecins Sans Frontières (MSF) at Mosul Hospital in Iraq, Ubuntu Village of Life rural health system in Burundi, and programmes at UCSF, World Bank, and FAIMER. Community maintained under the ozone-his organisation with discussion on the OpenMRS Slack and forum. MPL-2.0, 32 stars, v1.0.0-alpha.15.",
+  "url": "https://www.ozone-his.com/",
+  "codeRepository": "https://github.com/ozone-his/ozone",
+  "license": "MPL-2.0",
+  "version": "1.0.0-alpha.15",
+  "dateModified": "2026-01-02",
+  "keywords": [
+    "his",
+    "ehr",
+    "emr",
+    "openmrs",
+    "fhir",
+    "lmic",
+    "global-health",
+    "lims",
+    "erp",
+    "analytics",
+    "offline-capable",
+    "distribution",
+    "docker"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Ozone HIS",
+    "url": "https://github.com/ozone-his"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "beta",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Fills a distinct niche as a batteries-included HIS distribution built on OpenMRS 3 — adding integrated billing (Odoo), lab (SENAITE), and analytics (Superset) that OpenMRS alone does not provide. Production-proven at MSF Mosul Hospital (Iraq), Burundi, UCSF, and World Bank deployments despite carrying an alpha version tag. Community-governed within the OpenMRS ecosystem, MPL-2.0. Marked Assess rather than Adopt due to alpha versioning and low community discovery (32 stars); the deployment evidence is credible but the project has not yet reached a stable 1.0 release.",
+  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ozone-his/ozone",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ozone-his.com/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.ozone-his.com/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
