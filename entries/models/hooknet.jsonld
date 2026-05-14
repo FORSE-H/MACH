@@ -1,0 +1,59 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/hooknet",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "hooknet",
+  "name": "HookNet",
+  "description": "Multi-resolution convolutional neural network for semantic segmentation of whole-slide histopathology images. Uses two parallel U-Net-style encoder-decoder branches operating at different magnifications (context and target), coupled via a 'hooking' mechanism that injects contextual feature maps into the detail branch. Demonstrated on multi-class tissue segmentation in breast cancer and TLS/germinal centre segmentation in lung cancer. MIT, TensorFlow 2.x, pip-installable. Published in Medical Image Analysis 2021. Developed by Diagnostic Image Analysis Group, Radboud University Medical Center.",
+  "url": "https://github.com/DIAGNijmegen/pathology-hooknet",
+  "codeRepository": "https://github.com/DIAGNijmegen/pathology-hooknet",
+  "relatedLink": [
+    "https://www.computationalpathologygroup.eu/software/hooknet/"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "digital-pathology",
+    "whole-slide-imaging",
+    "semantic-segmentation",
+    "multi-resolution",
+    "tissue-segmentation",
+    "tls",
+    "breast-cancer",
+    "lung-cancer",
+    "tensorflow",
+    "radboudumc",
+    "diag-nijmegen"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Diagnostic Image Analysis Group, Radboud University Medical Center",
+      "url": "https://www.diagnijmegen.nl/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Influential multi-resolution segmentation architecture with a well-cited MIA 2021 paper — the hooking mechanism for cross-resolution feature injection is a notable architectural contribution. MIT licensed, pip-installable. However, modest adoption (71 GitHub stars) and a TensorFlow 2.x dependency limit appeal relative to PyTorch-native alternatives. The architecture has been extended for TLS detection (see HookNet-TLS) and is deployed on Grand Challenge. Assess for teams building multi-resolution pathology segmentation pipelines.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/DIAGNijmegen/pathology-hooknet",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1016/j.media.2020.101890",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "HookNet: Multi-resolution convolutional neural networks for semantic segmentation in histopathology whole-slide images. Medical Image Analysis 2021."
+    }
+  ]
+}
