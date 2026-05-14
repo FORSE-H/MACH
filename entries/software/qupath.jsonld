@@ -2,42 +2,71 @@
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/qupath",
   "@type": [
-    "schema:SoftwareApplication"
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
   ],
   "identifier": "qupath",
   "name": "QuPath",
-  "description": "The leading open-source platform for digital pathology and bioimage analysis — used in virtually every computational pathology lab worldwide. Supports whole-slide image annotation, cell detection and segmentation, tissue microarray analysis, fluorescence and brightfield analysis, interactive machine learning for tissue classification, and scripting via Groovy for batch workflows. Integrates with StarDist, OMERO, and ImageJ. Java-based, cross-platform (Windows, macOS, Linux). Developed at the University of Edinburgh by Pete Bankhead, funded by Wellcome Trust and Chan Zuckerberg Initiative. GPL-3.0, 1.4k stars, 342 forks, v0.7.0 (March 2026).",
+  "alternateName": [
+    "Quantitative Pathology & Bioimage Analysis"
+  ],
+  "description": "Open-source desktop platform for digital pathology image analysis and bioimage informatics. Provides whole slide image (WSI) viewing, interactive cell detection and classification, tissue segmentation, TMA (tissue microarray) analysis, fluorescence image analysis, and a Groovy scripting interface for automating and extending workflows. Supports OpenSlide-compatible formats (SVS, NDPI, SCN, MRXS, OME-TIFF, and others). Machine learning classifiers can be trained interactively on annotated regions without leaving the application. Integrates with MONAI Label for AI-assisted annotation. GPL-3.0, 1.4k stars, v0.7.0 (March 2026). Published in Scientific Reports 2017 (DOI: 10.1038/s41598-017-17204-5) with 8,480+ citations — the most widely cited open-source digital pathology software. Developed by Peter Bankhead at the University of Edinburgh.",
   "url": "https://qupath.github.io/",
   "codeRepository": "https://github.com/qupath/qupath",
-  "license": "GPL-3.0-only",
+  "relatedLink": [
+    "https://qupath.readthedocs.io/"
+  ],
+  "license": "GPL-3.0",
   "version": "0.7.0",
   "dateModified": "2026-03-02",
+  "programmingLanguage": [
+    "Java",
+    "Groovy"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
   "keywords": [
     "digital-pathology",
     "whole-slide-imaging",
     "bioimage-analysis",
     "cell-segmentation",
-    "tissue-classification",
+    "tissue-microarray",
     "wsi",
-    "java",
     "computational-pathology",
+    "histology",
     "fluorescence",
-    "annotation"
+    "annotation",
+    "groovy",
+    "openslide",
+    "oncology",
+    "university-of-edinburgh"
   ],
-  "copyrightHolder": {
-    "@type": "Organization",
-    "name": "University of Edinburgh",
-    "url": "https://www.ed.ac.uk/"
-  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Peter Bankhead",
+      "affiliation": "University of Edinburgh"
+    }
+  ],
   "mach:governance": "academic",
   "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
-    "self-hosted"
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:clinicalDomain": [
+    "oncology",
+    "research",
+    "pathology"
   ],
   "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference open-source digital pathology platform — the 3D Slicer of computational pathology. Used in virtually every digital pathology research lab globally for annotation, segmentation, and classification workflows. GPL-3.0, v0.7.0 (March 2026), 1.4k stars, Wellcome Trust and Chan Zuckerberg Initiative funded. Integrates with StarDist, OMERO, and ImageJ. Essential for any team building on WSI data without a commercial pathology platform.",
-  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:judgementReason": "The de facto open-source platform for digital pathology — 8,480+ citations on the 2017 Scientific Reports paper make it the most widely cited pathology analysis software in existence. GPL-3.0, 1.4k stars, v0.7.0 March 2026 showing active maintenance. Supports WSI annotation, interactive cell classification, TMA analysis, and Groovy scripting for reproducible pipelines. Integrates natively with MONAI Label for AI-assisted annotation. Adopt for any team doing computational pathology, biomarker quantification, or training pathology AI models.",
+  "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -46,14 +75,14 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://qupath.github.io/",
-      "mach:evidenceType": "primary-instance"
-    },
-    {
-      "@type": "schema:WebPage",
       "url": "https://qupath.readthedocs.io/",
       "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/s41598-017-17204-5",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "QuPath: Open source software for digital pathology image analysis. Scientific Reports 2017."
     }
-  ],
-  "mach:swhid": "swh:1:ori:901111bd8c8794f4f96af13cec42c3d247036dd9"
+  ]
 }
