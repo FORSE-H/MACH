@@ -1,0 +1,64 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/ctakes",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "ctakes",
+  "name": "Apache cTAKES",
+  "alternateName": [
+    "cTAKES",
+    "clinical Text Analysis and Knowledge Extraction System"
+  ],
+  "description": "Open-source NLP platform for extracting clinical information from unstructured clinical text — radiology reports, discharge summaries, and EHR notes. Identifies and normalises clinical concepts including medications, diagnoses, procedures, anatomical terms, and temporal events. Supports HL7 CDA, FHIR, SNOMED-CT, and RxNorm. Combines rule-based and machine learning approaches with modular UIMA-based components. Originally developed at Mayo Clinic; now an Apache Software Foundation top-level project. Apache 2.0, v6.0.0 (Sept 2024), Java-based.",
+  "url": "https://ctakes.apache.org/",
+  "codeRepository": "https://github.com/apache/ctakes",
+  "license": "Apache-2.0",
+  "version": "6.0.0",
+  "dateModified": "2024-09-16",
+  "keywords": [
+    "nlp",
+    "clinical-nlp",
+    "text-mining",
+    "ehr",
+    "snomed-ct",
+    "rxnorm",
+    "fhir",
+    "hl7-cda",
+    "java",
+    "uima",
+    "information-extraction",
+    "mayo-clinic"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Apache Software Foundation",
+    "url": "https://www.apache.org/"
+  },
+  "mach:governance": "foundation",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference open-source clinical NLP platform for extracting structured knowledge from unstructured clinical text. Originally from Mayo Clinic, now an Apache top-level project. Supports SNOMED-CT, RxNorm, FHIR, and HL7 CDA. Apache 2.0, v6.0.0 (Sept 2024), modular UIMA architecture. Widely used in clinical research and EHR analytics pipelines. Complements MedCAT in the MACH catalog: cTAKES is the established rule-based + ML pipeline; MedCAT is the modern transformer-based NER/linking tool.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/apache/ctakes",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://ctakes.apache.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://cwiki.apache.org/confluence/display/CTAKES/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

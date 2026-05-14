@@ -1,0 +1,62 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/itk",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "itk",
+  "name": "ITK",
+  "alternateName": [
+    "Insight Toolkit",
+    "Insight Segmentation and Registration Toolkit"
+  ],
+  "description": "Foundational open-source C++ toolkit for N-dimensional scientific image processing, with primary focus on medical imaging segmentation and registration. Provides algorithms for identifying and classifying structures in 2D/3D/nD medical scans (CT, MRI, ultrasound) and aligning multi-modal images. Available as C++ source and Python packages (pip/conda-forge). Widely used as the underlying library in medical imaging research tools including 3D Slicer, ITK-SNAP, and many imaging AI pipelines. Maintained by the Insight Software Consortium under NumFOCUS fiscal sponsorship. Apache 2.0, 1.6k stars, 728 forks, v5.4.6.",
+  "url": "https://itk.org/",
+  "codeRepository": "https://github.com/InsightSoftwareConsortium/ITK",
+  "license": "Apache-2.0",
+  "version": "5.4.6",
+  "dateModified": "2026-05-01",
+  "keywords": [
+    "medical-imaging",
+    "segmentation",
+    "registration",
+    "c-plus-plus",
+    "python",
+    "image-processing",
+    "mri",
+    "ct",
+    "numfocus",
+    "scientific-computing"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Insight Software Consortium",
+    "url": "https://www.insightsoftwareconsortium.org/"
+  },
+  "mach:governance": "foundation",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The foundational medical image segmentation and registration toolkit — underpins 3D Slicer, ITK-SNAP, and numerous imaging AI pipelines. Apache 2.0, v5.4.6 released May 2026, 1.6k stars, 728 forks, NumFOCUS-sponsored. Cross-platform C++ with Python bindings. Like dcm4che in the DICOM space, ITK is infrastructure that often operates invisibly inside other tools rather than being directly deployed by end users.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/InsightSoftwareConsortium/ITK",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://itk.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.itk.org/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

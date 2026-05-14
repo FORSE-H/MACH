@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/mirth-connect",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "mirth-connect",
+  "name": "Mirth Connect",
+  "description": "The most widely used open-source healthcare integration engine — routes, transforms, and filters health messages between clinical systems across HL7 v2, HL7 v3, FHIR, XML, JSON, DICOM, and other formats. Manages message pathways (channels) through a visual Administrator interface. Used by hospitals, clinics, and health information exchanges to connect EMRs, labs, pharmacies, imaging systems, and billing platforms. Maintained by NextGen Healthcare; MPL 2.0 licensed. 1.2k stars, 449 forks, v4.5.2.",
+  "url": "https://www.nextgen.com/solutions/interoperability/mirth-integration-engine/mirth-connect-downloads",
+  "codeRepository": "https://github.com/nextgenhealthcare/connect",
+  "license": "MPL-2.0",
+  "version": "4.5.2",
+  "dateModified": "2024-09-23",
+  "keywords": [
+    "hl7",
+    "fhir",
+    "healthcare-integration",
+    "interoperability",
+    "interface-engine",
+    "java",
+    "hl7v2",
+    "dicom",
+    "etl",
+    "message-routing"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "NextGen Healthcare",
+    "url": "https://www.nextgen.com/"
+  },
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The de-facto open-source healthcare integration engine — the standard tool for connecting heterogeneous clinical systems via HL7, FHIR, DICOM, and proprietary formats. Widely deployed in hospitals and health information exchanges worldwide. MPL 2.0, 1.2k stars, v4.5.2 (Sept 2024), vendor-led by NextGen Healthcare. The closest open-source equivalent to commercial integration engines like Rhapsody and Mulesoft in healthcare contexts.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/nextgenhealthcare/connect",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.nextgen.com/solutions/interoperability/mirth-integration-engine/mirth-connect-downloads",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.nextgen.com/bundle/Mirth_Connect_UG_42/page/connect/connect/topics/c_About_this_guide_connect_ug.html",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
