@@ -55,5 +55,6 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "HookNet: Multi-resolution convolutional neural networks for semantic segmentation in histopathology whole-slide images. Medical Image Analysis 2021."
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:2a952e9785ef8246bb449110c937d1ad79468166"
 }
