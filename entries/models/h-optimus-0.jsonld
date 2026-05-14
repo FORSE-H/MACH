@@ -1,0 +1,56 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/h-optimus-0",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "h-optimus-0",
+  "name": "H-optimus-0",
+  "description": "1.1-billion parameter vision transformer foundation model for histopathology — the largest publicly available pathology FM by parameter count. Trained on 500,000+ H&E stained whole-slide images from a proprietary multi-institutional collection. Outputs 1536-dimensional feature vectors. Evaluated on mutation prediction, survival analysis, and tissue classification. Apache 2.0, 27k+ monthly HuggingFace downloads. Note: model file access requires a contact agreement with Bioptimus despite the Apache 2.0 licence. Developed by Bioptimus (Paris).",
+  "url": "https://huggingface.co/bioptimus/H-optimus-0",
+  "relatedLink": [
+    "https://www.bioptimus.com/"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "pathology-foundation-model",
+    "digital-pathology",
+    "whole-slide-imaging",
+    "vision-transformer",
+    "large-model",
+    "mutation-prediction",
+    "survival-analysis",
+    "bioptimus",
+    "paris"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Bioptimus",
+      "url": "https://www.bioptimus.com/"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The largest publicly available pathology FM by parameter count (1.1B) — strong benchmark performance on mutation prediction and survival analysis. Apache 2.0 licence, but model file access currently requires a contact agreement with Bioptimus, which creates a practical friction not reflected in the formal licence. Assess until the access process is standardised. Technically compelling; worth tracking as Bioptimus opens access further.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/bioptimus/H-optimus-0",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.bioptimus.com/",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}

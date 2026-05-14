@@ -1,0 +1,59 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/virchow",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "virchow",
+  "name": "Virchow",
+  "description": "Self-supervised vision transformer (ViT-H/14, 632M parameters) pretrained on 1.5M whole-slide histopathology images from Memorial Sloan Kettering Cancer Center using DINOv2. Tile-level feature extractor for computational pathology — used frozen or fine-tuned for cancer detection, subtyping, and rare cancer identification. Published in Nature Medicine 2024. Apache 2.0, 13k+ monthly HuggingFace downloads. Developed by Paige and Microsoft Research. Institutional email required for model access. See also Virchow2 (3.1M slides, CC-BY-NC-ND-4.0).",
+  "url": "https://huggingface.co/paige-ai/Virchow",
+  "codeRepository": "https://github.com/Paige-AI/paige-ml-sdk",
+  "relatedLink": [
+    "https://doi.org/10.1038/s41591-024-03141-0"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "pathology-foundation-model",
+    "digital-pathology",
+    "whole-slide-imaging",
+    "vision-transformer",
+    "dinov2",
+    "cancer-detection",
+    "rare-cancer",
+    "msk",
+    "paige",
+    "microsoft",
+    "nature-medicine"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Paige / Microsoft Research",
+      "url": "https://paige.ai/"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "Apache 2.0 pathology foundation model trained on 1.5M MSK slides — one of the few major pathology FMs with a truly open licence. Nature Medicine 2024, Paige + Microsoft Research. 632M parameter ViT-H/14. Alongside Prov-GigaPath (also Apache 2.0), Virchow is recommended over the NC-licensed alternatives (UNI, CONCH, Virchow2) for teams building commercial or derivative pathology AI pipelines.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/paige-ai/Virchow",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/s41591-024-03141-0",
+      "mach:evidenceType": "academic-reference"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/virchow2",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "virchow2",
+  "name": "Virchow2",
+  "description": "Second-generation Virchow pathology foundation model — ViT-H/14 (632M parameters) pretrained on 3.1M whole-slide images from Memorial Sloan Kettering Cancer Center at multiple magnifications (5×, 10×, 20×, 40×). Doubles training data and adds multi-magnification pretraining over the original Virchow. 91k+ monthly HuggingFace downloads. Paige + Microsoft Research, arXiv 2024. Note: licence changed from Virchow's Apache 2.0 to CC-BY-NC-ND 4.0 — non-commercial and academic use only. Institutional email and individual registration required.",
+  "url": "https://huggingface.co/paige-ai/Virchow2",
+  "relatedLink": [
+    "https://arxiv.org/abs/2408.00738"
+  ],
+  "license": "CC-BY-NC-ND-4.0",
+  "keywords": [
+    "pathology-foundation-model",
+    "digital-pathology",
+    "whole-slide-imaging",
+    "vision-transformer",
+    "multi-magnification",
+    "msk",
+    "paige",
+    "microsoft"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Paige / Microsoft Research",
+      "url": "https://paige.ai/"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The most-downloaded Paige pathology FM (91k+ monthly downloads) with 3.1M slides and multi-magnification pretraining — technically superior to the original Virchow. However, Paige downgraded the licence from Apache 2.0 to CC-BY-NC-ND 4.0 for this version, restricting commercial and derivative use. Teams with commercial pipelines should use Virchow (Apache 2.0) or Prov-GigaPath (Apache 2.0) instead. Assess for academic research.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/paige-ai/Virchow2",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2408.00738",
+      "mach:evidenceType": "academic-reference"
+    }
+  ]
+}
