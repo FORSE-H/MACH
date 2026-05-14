@@ -12,8 +12,7 @@
   "codeRepository": "https://github.com/kaapana/kaapana",
   "logo": "../../logos/kaapana.svg",
   "relatedLink": [
-    "https://kaapana.readthedocs.io/en/latest/",
-    "https://join.slack.com/t/kaapana/shared_invite/zt-hilvek0w-ucabihas~jn9PDAM0O3gVQ/"
+    "https://kaapana.readthedocs.io/en/latest/"
   ],
   "license": "AGPL-3.0",
   "softwareVersion": "0.6.0",

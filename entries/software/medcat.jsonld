@@ -14,8 +14,7 @@
   "url": "https://medcat.readthedocs.io/",
   "codeRepository": "https://github.com/CogStack/MedCAT",
   "relatedLink": [
-    "https://pypi.org/project/medcat/",
-    "https://huggingface.co/CogStack"
+    "https://pypi.org/project/medcat/"
   ],
   "license": "Apache-2.0",
   "softwareVersion": "1.16.0",

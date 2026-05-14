@@ -92,7 +92,7 @@
     },
     {
       "@type": "schema:ScholarlyArticle",
-      "url": "https://vantage6.ai/vantage6/",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8075508/",
       "mach:evidenceType": "academic-reference",
       "schema:name": "VANTAGE6: an open source priVAcy preserviNg federaTed leArninG infrastructurE for Secure Insight eXchange. AMIA 2020."
     },

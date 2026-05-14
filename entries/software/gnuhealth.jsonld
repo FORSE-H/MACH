@@ -57,7 +57,7 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://www.gnuhealth.org/documentation.html",
+      "url": "https://www.gnuhealth.org/docs/",
       "mach:evidenceType": "documentation"
     }
   ]

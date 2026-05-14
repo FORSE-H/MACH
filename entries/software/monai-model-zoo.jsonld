@@ -15,8 +15,7 @@
   "url": "https://monai.io/model-zoo.html",
   "codeRepository": "https://github.com/Project-MONAI/model-zoo",
   "relatedLink": [
-    "https://huggingface.co/collections/MONAI",
-    "https://catalog.ngc.nvidia.com/orgs/nvidia/teams/monai"
+    "https://huggingface.co/MONAI"
   ],
   "license": "Apache-2.0",
   "dateModified": "2026-05-02",
