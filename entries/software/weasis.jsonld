@@ -52,5 +52,6 @@
       "url": "https://weasis.org/en/getting-started/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:4ccdc5af96b33f3d7847c14bfbd0472ccd2d84f8"
 }

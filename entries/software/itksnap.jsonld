@@ -49,5 +49,6 @@
       "url": "http://www.itksnap.org/",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:0c34580f7821ced612e0927d5f618b5d7368bc74"
 }

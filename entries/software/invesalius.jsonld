@@ -49,5 +49,6 @@
       "url": "https://invesalius.github.io/",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:bad33cfc5f6225b393ccb4ae5c7f1dcd57da2587"
 }
