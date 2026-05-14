@@ -1,0 +1,70 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/batchgenerators",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "batchgenerators",
+  "name": "batchgenerators",
+  "description": "Framework-agnostic Python data augmentation library for 2D and 3D medical imaging. Provides spatial transforms (elastic deformations, rotations, scaling, mirroring), intensity augmentations (gamma, brightness, contrast), noise injection, and anatomy-informed operations compatible with both PyTorch and TensorFlow training pipelines. Handles volumetric (3D) data natively — a differentiator from most general-purpose augmentation libraries. Used as the augmentation backend in nnU-Net but widely adopted independently for medical image segmentation and classification training. Apache 2.0, 1.2k stars, v0.25.1 (March 2024). A successor, batchgeneratorsv2, is in active development (February 2025). Developed at MIC-DKFZ / Helmholtz Imaging.",
+  "url": "https://github.com/MIC-DKFZ/batchgenerators",
+  "codeRepository": "https://github.com/MIC-DKFZ/batchgenerators",
+  "relatedLink": [
+    "https://pypi.org/project/batchgenerators/",
+    "https://github.com/MIC-DKFZ/batchgeneratorsv2"
+  ],
+  "license": "Apache-2.0",
+  "version": "0.25.1",
+  "dateModified": "2024-03-20",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "data-augmentation",
+    "medical-imaging",
+    "deep-learning",
+    "segmentation",
+    "3d-imaging",
+    "pytorch",
+    "tensorflow",
+    "nnunet",
+    "elastic-deformation",
+    "dkfz",
+    "helmholtz"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Division of Medical Image Computing, DKFZ / Helmholtz Imaging",
+      "url": "https://www.dkfz.de/en/mic/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The de facto data augmentation library for medical image segmentation training — 1.2k stars, Apache 2.0, pip-installable, framework-agnostic. Core augmentation backend of nnU-Net (already in the MACH catalog) and widely adopted independently across medical imaging research pipelines. Native 3D support is a key differentiator over general-purpose augmentation libraries. Actively maintained by DKFZ with a v2 successor in development. Essential dependency for any team training segmentation models on volumetric medical imaging data.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/MIC-DKFZ/batchgenerators",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pypi.org/project/batchgenerators/",
+      "mach:evidenceType": "package-registry"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/mirp",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "mirp",
+  "name": "MIRP",
+  "alternateName": [
+    "Medical Image Radiomics Processor"
+  ],
+  "description": "Python package for standardised medical image radiomics and preprocessing. Handles DICOM, NIfTI, and NRRD input, performs image preprocessing (resampling, normalisation, discretisation), processes regions of interest, and extracts quantitative radiomic features compliant with the Image Biomarker Standardisation Initiative (IBSI). Also supports preprocessing pipelines for deep learning workflows. EUPL-1.2, 84 stars, v2.6.0 (May 2026, actively maintained). Published in Journal of Open Source Software 2024. Developed by Alex Zwanenburg et al. at OncoRay, National Center for Radiation Research in Oncology, TU Dresden.",
+  "url": "https://github.com/oncoray/mirp",
+  "codeRepository": "https://github.com/oncoray/mirp",
+  "relatedLink": [
+    "https://pypi.org/project/mirp/"
+  ],
+  "license": "EUPL-1.2",
+  "version": "2.6.0",
+  "dateModified": "2026-05-07",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "radiomics",
+    "medical-imaging",
+    "ibsi",
+    "dicom",
+    "nifti",
+    "feature-extraction",
+    "preprocessing",
+    "oncology",
+    "radiology",
+    "deep-learning",
+    "oncoray",
+    "tu-dresden"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "OncoRay, National Center for Radiation Research in Oncology, TU Dresden",
+      "url": "https://www.oncoray.de/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "IBSI-compliant radiomics package with active maintenance — v2.6.0 released May 2026, JOSS 2024 peer-reviewed. Handles the full standardised radiomics pipeline from DICOM input through feature extraction, covering both classical radiomics and deep learning preprocessing. EUPL-1.2 is OSI-approved but copyleft, so commercial embedding requires attention. Modest adoption (84 stars) compared to PyRadiomics, but stronger IBSI compliance and more recent development. Assess for teams building standardised radiomic biomarker pipelines in oncology research.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/oncoray/mirp",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.21105/joss.06413",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MIRP: A Python package for standardised radiomics. Journal of Open Source Software 2024."
+    }
+  ]
+}
