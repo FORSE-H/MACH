@@ -56,7 +56,7 @@
     "oncology"
   ],
   "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference platform for automated cell phenotyping \u2014 BSD-3-Clause, 1.1k stars, v4.2.8 September 2024, maintained by the Broad Institute. Modular pipeline design makes it accessible to biologists without programming expertise while supporting headless batch processing for high-throughput screening. Widely cited across drug discovery and cell biology research. Adopt for teams performing automated quantitative cell analysis from fluorescence or brightfield microscopy.",
+  "mach:judgementReason": "The reference platform for automated cell phenotyping — BSD-3-Clause, 1.1k stars, v4.2.8 September 2024, maintained by the Broad Institute. Modular pipeline design makes it accessible to biologists without programming expertise while supporting headless batch processing for high-throughput screening. Widely cited across drug discovery and cell biology research. Adopt for teams performing automated quantitative cell analysis from fluorescence or brightfield microscopy.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -69,5 +69,6 @@
       "url": "https://cellprofiler.org/",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:a71470b5e4a4e1319e3067f657638f96dab2e19d"
 }

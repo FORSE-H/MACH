@@ -10,7 +10,7 @@
   "alternateName": [
     "Fiji Is Just ImageJ"
   ],
-  "description": "The standard batteries-included distribution of ImageJ for life sciences research. Bundles ImageJ with 200+ curated plugins covering segmentation, registration, tracking, deconvolution, and morphological analysis \u2014 pre-configured and ready to use without manual plugin installation. Includes Bio-Formats for reading 150+ proprietary microscopy formats, TrackMate for cell tracking, BigDataViewer for large volume rendering, and MorphoLibJ for morphological operations. Extends ImageJ with a rolling-release update site system that keeps plugins current. The de facto bioimage analysis platform across cell biology, neuroscience, and pathology \u2014 cited in hundreds of thousands of scientific papers. GPL-3.0 (individual plugins may be GPL-2+), 971 stars. Maintained by Curtis Rueden at LOCI, University of Wisconsin-Madison, with broad community contribution.",
+  "description": "The standard batteries-included distribution of ImageJ for life sciences research. Bundles ImageJ with 200+ curated plugins covering segmentation, registration, tracking, deconvolution, and morphological analysis — pre-configured and ready to use without manual plugin installation. Includes Bio-Formats for reading 150+ proprietary microscopy formats, TrackMate for cell tracking, BigDataViewer for large volume rendering, and MorphoLibJ for morphological operations. Extends ImageJ with a rolling-release update site system that keeps plugins current. The de facto bioimage analysis platform across cell biology, neuroscience, and pathology — cited in hundreds of thousands of scientific papers. GPL-3.0 (individual plugins may be GPL-2+), 971 stars. Maintained by Curtis Rueden at LOCI, University of Wisconsin-Madison, with broad community contribution.",
   "url": "https://fiji.sc/",
   "codeRepository": "https://github.com/fiji/fiji",
   "relatedLink": [
@@ -61,7 +61,7 @@
     "oncology"
   ],
   "mach:judgement": "Adopt",
-  "mach:judgementReason": "The most widely used bioimage analysis platform in life sciences \u2014 cited in hundreds of thousands of papers across cell biology, neuroscience, and pathology. Ships 200+ plugins pre-integrated including Bio-Formats (150+ format support), TrackMate, and BigDataViewer. Rolling update sites keep it current. GPL-3.0 applies to the distribution; individual plugins vary. Adopt as the standard general-purpose bioimage analysis environment and the entry point for researchers before moving to specialised pathology tools such as QuPath or TIA Toolbox.",
+  "mach:judgementReason": "The most widely used bioimage analysis platform in life sciences — cited in hundreds of thousands of papers across cell biology, neuroscience, and pathology. Ships 200+ plugins pre-integrated including Bio-Formats (150+ format support), TrackMate, and BigDataViewer. Rolling update sites keep it current. GPL-3.0 applies to the distribution; individual plugins vary. Adopt as the standard general-purpose bioimage analysis environment and the entry point for researchers before moving to specialised pathology tools such as QuPath or TIA Toolbox.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -74,5 +74,6 @@
       "url": "https://fiji.sc/",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:fd6bff78bd117ffdf7ec2586a69f862062347843"
 }

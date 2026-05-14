@@ -56,7 +56,7 @@
     "pathology"
   ],
   "mach:judgement": "Assess",
-  "mach:judgementReason": "Interactive ML platform for image segmentation and classification requiring no programming expertise \u2014 users label a few pixels and the random forest trains in real-time. 398 stars, developed at EMBL and Janelia. Mixed GPL/LGPL licensing across modules. Latest stable is v1.4.2; v1.4.2rc1 released April 2026 suggests active development. Assess for teams needing interactive annotation-driven segmentation of microscopy images, particularly in 3D where deep learning pipelines require more labelled data than is available.",
+  "mach:judgementReason": "Interactive ML platform for image segmentation and classification requiring no programming expertise — users label a few pixels and the random forest trains in real-time. 398 stars, developed at EMBL and Janelia. Mixed GPL/LGPL licensing across modules. Latest stable is v1.4.2; v1.4.2rc1 released April 2026 suggests active development. Assess for teams needing interactive annotation-driven segmentation of microscopy images, particularly in 3D where deep learning pipelines require more labelled data than is available.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -69,5 +69,6 @@
       "url": "https://www.ilastik.org/",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:1a0f9e55ae15248b77fa2c3d59abaf400a7da5c8"
 }
