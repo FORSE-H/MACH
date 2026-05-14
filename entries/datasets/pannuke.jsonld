@@ -1,0 +1,57 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/pannuke",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "pannuke",
+  "name": "PanNuke",
+  "description": "Pan-cancer nucleus instance segmentation and classification dataset covering ~200,000 nuclei across 5 clinically important classes (neoplastic, non-neoplastic epithelial, inflammatory, connective, dead) and 19 tissue types — the broadest tissue coverage of any public nucleus segmentation dataset. Organised into three cross-validation folds. Used as the primary training and evaluation benchmark for HoVer-Net, CellViT, and most nucleus classification models. Published by the Tissue Image Analytics (TIA) Centre, University of Warwick (Gamper et al. 2019 + 2020). CC-BY-NC-SA-4.0, available from the TIA Centre website.",
+  "url": "https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke",
+  "relatedLink": [
+    "https://arxiv.org/abs/2003.10778"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "keywords": [
+    "digital-pathology",
+    "nucleus-segmentation",
+    "pan-cancer",
+    "instance-segmentation",
+    "classification",
+    "h-and-e",
+    "benchmark",
+    "multi-tissue",
+    "warwick",
+    "tia"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Tissue Image Analytics (TIA) Centre, University of Warwick",
+      "url": "https://warwick.ac.uk/fac/cross_fac/tia/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets-benchmarks",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The broadest public nucleus segmentation dataset — 200K nuclei across 19 tissue types, the de-facto benchmark for pan-cancer nucleus classification models including HoVer-Net and CellViT. CC-BY-NC-SA-4.0: non-commercial restriction limits use in commercial AI pipelines. Assess rather than Adopt due to the NC licence clause. Essential for academic teams evaluating nucleus segmentation models across diverse tissue contexts.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2003.10778",
+      "mach:evidenceType": "academic-reference"
+    }
+  ]
+}
