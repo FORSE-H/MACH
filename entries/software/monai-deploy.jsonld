@@ -1,0 +1,60 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/monai-deploy",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "monai-deploy",
+  "name": "MONAI Deploy",
+  "description": "Framework for packaging, testing, and deploying medical AI applications into clinical production environments, part of the MONAI ecosystem. Provides an Application Package specification, an App SDK for containerising trained models, an Informatics Gateway for DICOM and FHIR integration with hospital systems, a Workflow Manager for orchestration, and MONAI Deploy Express for end-to-end local testing. Designed to bridge the gap between research model development (MONAI core) and clinical production deployment in radiology and beyond. Apache 2.0, 117 stars, v0.6.1 (pre-release).",
+  "url": "https://monai.io/deploy.html",
+  "codeRepository": "https://github.com/Project-MONAI/monai-deploy",
+  "license": "Apache-2.0",
+  "version": "0.6.1",
+  "dateModified": "2025-03-26",
+  "keywords": [
+    "medical-imaging",
+    "mlops",
+    "clinical-deployment",
+    "dicom",
+    "fhir",
+    "workflow-orchestration",
+    "pytorch",
+    "python",
+    "docker",
+    "healthcare-ai",
+    "monai"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Project-MONAI",
+    "url": "https://github.com/Project-MONAI"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "beta",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Fills a real gap in the MONAI ecosystem — bridges trained model development to clinical production via DICOM/FHIR gateway, workflow orchestration, and standardised app packaging. The Informatics Gateway's DICOM and FHIR integration is directly relevant for hospital deployments. Apache 2.0, part of Project-MONAI (NVIDIA-backed). Marked Assess due to pre-release versioning (v0.6.1), low community traction (117 stars), and explicit production caution in release notes.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Project-MONAI/monai-deploy",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://monai.io/deploy.html",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.monai.io/projects/monai-deploy-app-sdk/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
