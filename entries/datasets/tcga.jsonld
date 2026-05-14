@@ -1,0 +1,71 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/tcga",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "tcga",
+  "name": "The Cancer Genome Atlas",
+  "alternateName": [
+    "TCGA"
+  ],
+  "description": "Landmark cancer genomics program that comprehensively characterised the molecular landscape of 33 cancer types across 20,000+ primary tumour and matched normal tissue samples — generating over 2.5 petabytes of genomic, epigenomic, transcriptomic, proteomic, and clinical data, plus whole-slide pathology images and radiology imaging. Jointly run by NCI and NHGRI (2006–2018). Data access via the GDC (Genomic Data Commons) portal and API. Most data is open access under the NIH Genomic Data Sharing Policy; a subset requires dbGaP controlled-access approval. One of the most-cited datasets in cancer biology and medical AI.",
+  "url": "https://portal.gdc.cancer.gov/",
+  "codeRepository": "https://github.com/NCI-GDC/gdc-client",
+  "license": "custom",
+  "keywords": [
+    "cancer-genomics",
+    "multi-omics",
+    "genomics",
+    "transcriptomics",
+    "proteomics",
+    "pathology",
+    "whole-slide-imaging",
+    "nci",
+    "nhgri",
+    "oncology",
+    "open-data",
+    "gdc"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "NCI / National Human Genome Research Institute (NHGRI)",
+      "url": "https://www.cancer.gov/ccg/research/genome-sequencing/tcga"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://portal.gdc.cancer.gov/",
+      "schema:encodingFormat": "application/json"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:category": "datasets-benchmarks",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The most widely used cancer research dataset in existence — 2.5 petabytes across 33 cancer types, cited in tens of thousands of papers in genomics, pathology AI, and clinical oncology. NCI/NHGRI governed, open access for most data via GDC portal (controlled access via dbGaP for some). Includes whole-slide pathology images used to train and benchmark virtually every digital pathology foundation model. Essential reference dataset for oncology AI development.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://portal.gdc.cancer.gov/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/NCI-GDC/gdc-client",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.gdc.cancer.gov/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
