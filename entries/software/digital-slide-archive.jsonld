@@ -51,5 +51,6 @@
       "url": "https://digitalslidearchive.github.io/digital_slide_archive/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:ef8943df8ef565260c4bb51ca73dac11cb906086"
 }
