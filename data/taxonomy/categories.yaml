@@ -22,7 +22,7 @@ categories:
   - id: data-sources
     name: Data Sources
     folder: data-sources
-    description: FHIR servers, terminology servers, registries, and structured healthcare data endpoints
+    description: Continuously updated open registries and data feeds — adverse events, trial registries, live clinical data
 
   - id: catalogs
     name: Catalogs
