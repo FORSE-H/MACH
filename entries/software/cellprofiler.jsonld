@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/cellprofiler",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "cellprofiler",
+  "name": "CellProfiler",
+  "description": "Open-source Python platform for automated quantitative measurement of biological phenotypes from microscopy images. Enables biologists without programming expertise to build modular pipelines for cell detection, segmentation, feature measurement, and classification across thousands of images. Pipelines are assembled from reusable modules (identify objects, measure intensity, measure morphology, classify) and can be run headless for high-throughput batch processing. Widely used for high-content screening, drug discovery, and cell biology research. BSD-3-Clause, 1.1k stars, v4.2.8 (September 2024). Developed and maintained by the Broad Institute of MIT and Harvard.",
+  "url": "https://cellprofiler.org/",
+  "codeRepository": "https://github.com/CellProfiler/CellProfiler",
+  "relatedLink": [
+    "https://cellprofiler-manual.s3.amazonaws.com/CellProfiler-4.2.1/index.html"
+  ],
+  "license": "BSD-3-Clause",
+  "version": "4.2.8",
+  "dateModified": "2024-09-27",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "cell-analysis",
+    "phenotyping",
+    "high-content-screening",
+    "bioimage-analysis",
+    "segmentation",
+    "morphology",
+    "microscopy",
+    "drug-discovery",
+    "broad-institute",
+    "automated-analysis"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Broad Institute of MIT and Harvard",
+      "url": "https://www.broadinstitute.org/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "oncology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference platform for automated cell phenotyping \u2014 BSD-3-Clause, 1.1k stars, v4.2.8 September 2024, maintained by the Broad Institute. Modular pipeline design makes it accessible to biologists without programming expertise while supporting headless batch processing for high-throughput screening. Widely cited across drug discovery and cell biology research. Adopt for teams performing automated quantitative cell analysis from fluorescence or brightfield microscopy.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/CellProfiler/CellProfiler",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://cellprofiler.org/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}

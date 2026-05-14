@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/ilastik",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "ilastik",
+  "name": "ilastik",
+  "description": "Interactive machine learning toolkit for image segmentation, classification, object detection, counting, and tracking. Users interactively label a small number of image regions and ilastik trains a random forest classifier in real-time, applying predictions across the full image with immediate visual feedback. Supports 2D, 3D, and 4D images and handles large datasets efficiently through out-of-core processing. Workflows include pixel classification, multi-cut segmentation, object classification, cell tracking, and carving. Used across cell biology, neuroscience, and pathology for tasks where manual annotation is impractical at scale. Mixed GPL/LGPL, 398 stars, v1.4.2 (latest stable); v1.4.2rc1 (April 2026). Developed at EMBL Heidelberg and Janelia Research Campus.",
+  "url": "https://www.ilastik.org/",
+  "codeRepository": "https://github.com/ilastik/ilastik",
+  "relatedLink": [
+    "https://www.ilastik.org/documentation/"
+  ],
+  "license": "LGPL-2.1",
+  "version": "1.4.2",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "segmentation",
+    "classification",
+    "cell-tracking",
+    "interactive-ml",
+    "random-forest",
+    "bioimage-analysis",
+    "microscopy",
+    "3d-imaging",
+    "neuroscience",
+    "embl",
+    "janelia"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "EMBL Heidelberg / Janelia Research Campus",
+      "url": "https://www.ilastik.org/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "pathology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Interactive ML platform for image segmentation and classification requiring no programming expertise \u2014 users label a few pixels and the random forest trains in real-time. 398 stars, developed at EMBL and Janelia. Mixed GPL/LGPL licensing across modules. Latest stable is v1.4.2; v1.4.2rc1 released April 2026 suggests active development. Assess for teams needing interactive annotation-driven segmentation of microscopy images, particularly in 3D where deep learning pipelines require more labelled data than is available.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ilastik/ilastik",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ilastik.org/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}

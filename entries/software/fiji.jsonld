@@ -1,0 +1,78 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/fiji",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "fiji",
+  "name": "Fiji",
+  "alternateName": [
+    "Fiji Is Just ImageJ"
+  ],
+  "description": "The standard batteries-included distribution of ImageJ for life sciences research. Bundles ImageJ with 200+ curated plugins covering segmentation, registration, tracking, deconvolution, and morphological analysis \u2014 pre-configured and ready to use without manual plugin installation. Includes Bio-Formats for reading 150+ proprietary microscopy formats, TrackMate for cell tracking, BigDataViewer for large volume rendering, and MorphoLibJ for morphological operations. Extends ImageJ with a rolling-release update site system that keeps plugins current. The de facto bioimage analysis platform across cell biology, neuroscience, and pathology \u2014 cited in hundreds of thousands of scientific papers. GPL-3.0 (individual plugins may be GPL-2+), 971 stars. Maintained by Curtis Rueden at LOCI, University of Wisconsin-Madison, with broad community contribution.",
+  "url": "https://fiji.sc/",
+  "codeRepository": "https://github.com/fiji/fiji",
+  "relatedLink": [
+    "https://imagej.net/software/fiji/"
+  ],
+  "license": "GPL-3.0",
+  "programmingLanguage": [
+    "Java",
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "bioimage-analysis",
+    "imagej",
+    "microscopy",
+    "segmentation",
+    "registration",
+    "cell-tracking",
+    "fiji",
+    "life-sciences",
+    "digital-pathology",
+    "bio-formats",
+    "fluorescence",
+    "histology"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "LOCI, University of Wisconsin-Madison / ImageJ community",
+      "url": "https://loci.wisc.edu/"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "pathology",
+    "oncology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The most widely used bioimage analysis platform in life sciences \u2014 cited in hundreds of thousands of papers across cell biology, neuroscience, and pathology. Ships 200+ plugins pre-integrated including Bio-Formats (150+ format support), TrackMate, and BigDataViewer. Rolling update sites keep it current. GPL-3.0 applies to the distribution; individual plugins vary. Adopt as the standard general-purpose bioimage analysis environment and the entry point for researchers before moving to specialised pathology tools such as QuPath or TIA Toolbox.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/fiji/fiji",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://fiji.sc/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}
