@@ -56,7 +56,7 @@
     "pathology"
   ],
   "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference Python API for end-to-end computational pathology from the University of Warwick TIA Centre \u2014 BSD-3-Clause, 526 stars, v2.0.1 March 2026. Covers the full pipeline from WSI loading through inference in a single consistent API, with pretrained models included. Complements QuPath (GUI) for teams building automated Python pipelines. Adopt for any team developing or deploying histopathology AI workflows.",
+  "mach:judgementReason": "The reference Python API for end-to-end computational pathology from the University of Warwick TIA Centre — BSD-3-Clause, 526 stars, v2.0.1 March 2026. Covers the full pipeline from WSI loading through inference in a single consistent API, with pretrained models included. Complements QuPath (GUI) for teams building automated Python pipelines. Adopt for any team developing or deploying histopathology AI workflows.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -69,5 +69,6 @@
       "url": "https://tia-toolbox.readthedocs.io/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:460cc70e87c788df9df943fd780f7f14b51df719"
 }
