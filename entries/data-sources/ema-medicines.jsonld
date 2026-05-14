@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/ema-medicines",
+  "@type": [
+    "schema:Dataset",
+    "mach:DataSource"
+  ],
+  "identifier": "ema-medicines",
+  "name": "EMA Medicines Data",
+  "alternateName": [
+    "European Medicines Agency Open Data",
+    "EMA EPAR Data"
+  ],
+  "description": "European Medicines Agency open data covering all EU-authorised medicines — approved and withdrawn applications, post-authorisation procedures, referrals, orphan designations, paediatric investigation plans, periodic safety update reports (PSUSAs), direct healthcare professional communications (DHPCs), medicine supply shortages, and herbal medicines. Available as JSON (overnight updates, machine-readable) and Excel. JSON format covers all tables on the medicines download page. Commercial and non-commercial reuse permitted with EMA attribution. Maintained by the European Medicines Agency, an EU regulatory body.",
+  "url": "https://www.ema.europa.eu/en/medicines/download-medicine-data",
+  "license": "custom",
+  "keywords": [
+    "drug-authorisation",
+    "pharmacovigilance",
+    "eu",
+    "ema",
+    "medicines",
+    "orphan-drugs",
+    "drug-safety",
+    "post-authorisation",
+    "epar",
+    "regulatory",
+    "open-data"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "European Medicines Agency",
+      "url": "https://www.ema.europa.eu/"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The authoritative open dataset for EU drug authorisations and safety signals — overnight-updated JSON covering approved medicines, EPARs, orphan designations, PSUSAs, DHPCs, and shortages. Free for commercial and non-commercial reuse with attribution. Pairs with OpenFDA in the MACH catalog for geographic coverage: OpenFDA covers US drug and device safety data; EMA Medicines Data covers EU. Essential for European pharmacovigilance research, market access analysis, and drug safety AI.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ema.europa.eu/en/medicines/download-medicine-data",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ema.europa.eu/en/about-us/about-website/download-website-data-json-data-format",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ema.europa.eu/en/about-us/legal-notice",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
