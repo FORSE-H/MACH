@@ -1,0 +1,60 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/vista",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "vista",
+  "name": "VistA",
+  "alternateName": [
+    "WorldVistA",
+    "Veterans Health Information Systems and Technology Architecture"
+  ],
+  "description": "The Veterans Health Information Systems and Technology Architecture — the comprehensive EHR and HIS that has run the US Department of Veterans Affairs healthcare system for decades, serving millions of veterans across 170+ VA medical centres. One of the largest integrated healthcare IT deployments in the world. Built on MUMPS/GT.M, with the open-source community version maintained by OSEHRA (Open Source Electronic Health Record Alliance) and WorldVistA. Also deployed by the Indian Health Service (RPMS). The VA is currently migrating to Oracle Cerner, signalling the end of VistA's primary deployment era. Apache 2.0, 140 stars, last open-source release 2020.",
+  "url": "https://worldvista.org/",
+  "codeRepository": "https://github.com/WorldVistA/VistA",
+  "license": "Apache-2.0",
+  "dateModified": "2020-07-20",
+  "keywords": [
+    "ehr",
+    "his",
+    "veterans",
+    "mumps",
+    "us-government",
+    "digital-public-good",
+    "indian-health-service",
+    "legacy",
+    "cprs"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "OSEHRA",
+    "url": "https://www.osehra.org/"
+  },
+  "mach:governance": "foundation",
+  "mach:maturity": "legacy",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Historically one of the most significant open-source EHR systems — the backbone of the US Veterans Affairs healthcare system for decades, covering millions of patients across 170+ medical centres. Apache 2.0, OSEHRA/WorldVistA-governed. Marked Assess rather than Adopt due to legacy MUMPS tech stack, declining open-source community activity (last release 2020), and the VA's active migration away to Oracle Cerner. Still deployed at scale by the Indian Health Service (RPMS). Relevant for organisations with existing MUMPS infrastructure or for historical reference.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/WorldVistA/VistA",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://worldvista.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.osehra.org/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
