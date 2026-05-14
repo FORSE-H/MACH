@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/dhis2",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "dhis2",
+  "name": "DHIS2",
+  "alternateName": [
+    "District Health Information Software 2"
+  ],
+  "description": "The world's largest health management information system (HMIS) platform, deployed in over 80 countries and used by billions of people's health records. Provides flexible data capture, validation, analytics, dashboards, pivot tables, GIS visualisation, and a RESTful API. Supports FHIR interoperability and covers health surveillance, disease reporting, supply chain, immunisation tracking, and electronic medical records. Led by the HISP Centre at the University of Oslo and supported by a global HISP network across Africa, Asia, the Middle East, and the Americas. Funded by WHO, World Bank, Gates Foundation, Gavi, UNICEF, and Wellcome Trust. Recognised as a Digital Public Good. BSD 3-Clause, 14,826 commits, Java-based.",
+  "url": "https://dhis2.org/",
+  "codeRepository": "https://github.com/dhis2/dhis2-core",
+  "license": "BSD-3-Clause",
+  "dateModified": "2026-05-14",
+  "keywords": [
+    "hmis",
+    "public-health",
+    "health-surveillance",
+    "lmic",
+    "global-health",
+    "fhir",
+    "gis",
+    "analytics",
+    "java",
+    "digital-public-good",
+    "disease-surveillance",
+    "immunisation"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "HISP Centre, University of Oslo",
+    "url": "https://www.mn.uio.no/ifi/english/research/networks/hisp/"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference open-source HMIS platform for public health — deployed in 80+ countries, endorsed by WHO, World Bank, Gates Foundation, Gavi, UNICEF, and Wellcome Trust, and recognised as a Digital Public Good. 14,826 commits, FHIR-integrated, BSD 3-Clause. Led by the HISP Centre at the University of Oslo with a global network of implementers. Fills the public health surveillance slot in the MACH catalog that OpenMRS (clinical EMR) and OpenEMR (practice management) do not cover.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/dhis2/dhis2-core",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://dhis2.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.dhis2.org/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
