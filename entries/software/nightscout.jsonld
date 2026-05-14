@@ -2,49 +2,71 @@
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/nightscout",
   "@type": [
-    "schema:SoftwareApplication"
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
   ],
   "identifier": "nightscout",
   "name": "Nightscout",
   "alternateName": [
-    "cgm-remote-monitor",
-    "CGM in the Cloud"
+    "cgm-remote-monitor"
   ],
-  "description": "Open-source web application for real-time remote monitoring of continuous glucose monitor (CGM) data, created and maintained by the diabetes patient and caregiver community. Reads CGM readings from devices by Dexcom, Freestyle, and Medtronic via uploaders (xDrip+, Spike, xDrip4iOS), stores data in MongoDB, and displays glucose values graphically with high/low alarms and 30-minute predictive alerts. Integrates with DIY closed-loop automated insulin delivery systems including OpenAPS, Loop, and AndroidAPS. Self-hosted on any cloud platform or local server. No corporate backing — entirely volunteer-maintained. AGPL-3.0, 2.8k stars, 73k forks, v15.0.7.",
+  "description": "Web platform for real-time continuous glucose monitoring (CGM) data broadcasting, storage, and visualisation. Acts as a personal diabetes data hub ingesting CGM readings from Dexcom, FreeStyle Libre, Medtronic, and other sources, storing data in MongoDB, and serving a browser dashboard, REST API, and GraphQL endpoint for caregivers, clinicians, and AID systems. Supports configurable glucose alarms, treatment logging, AGP reports, and integration with Loop, AndroidAPS, and Trio. Deployable to free-tier cloud platforms or self-hosted Docker. AGPL-3.0, 2.8k stars with 73k forks reflecting extraordinary real-world DIY deployment, v15.0.7 (April 2026). The de facto remote monitoring platform of the #WeAreNotWaiting diabetes community since 2013.",
   "url": "https://nightscout.github.io/",
   "codeRepository": "https://github.com/nightscout/cgm-remote-monitor",
+  "relatedLink": [
+    "https://nightscout.github.io/"
+  ],
   "license": "AGPL-3.0",
   "version": "15.0.7",
   "dateModified": "2026-04-29",
+  "programmingLanguage": [
+    "JavaScript"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
   "keywords": [
-    "diabetes",
     "cgm",
     "continuous-glucose-monitoring",
-    "insulin",
-    "closed-loop",
-    "patient-empowerment",
-    "javascript",
-    "self-hosted",
-    "wearables",
+    "diabetes",
+    "t1d",
+    "nightscout",
+    "remote-monitoring",
+    "data-visualization",
+    "agp",
     "dexcom",
-    "openaps",
-    "mongodb"
+    "freestyle-libre",
+    "wearenot-waiting",
+    "closed-loop",
+    "mongodb",
+    "nodejs"
   ],
-  "copyrightHolder": {
-    "@type": "Organization",
-    "name": "CGM Remote Monitor Contributors",
-    "url": "https://github.com/nightscout"
-  },
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Nightscout / #WeAreNotWaiting community",
+      "url": "https://github.com/nightscout"
+    }
+  ],
   "mach:governance": "community",
   "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
-    "cloud-only"
+    "docker",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "endocrinology",
+    "research",
+    "public-health"
   ],
   "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference open-source platform for patient-operated CGM remote monitoring — built by and for the diabetes community with no corporate backing. v15.0.7 released April 2026, 2.8k stars and 73k forks (the high fork count reflects widespread self-hosting), AGPL-3.0. Integrates with all major CGM devices and DIY closed-loop APS systems (OpenAPS, Loop, AndroidAPS). A well-established example of patient-empowered health IT with over a decade of community development.",
-  "mach:editorialReviewedAt": "2026-05-13",
+  "mach:judgementReason": "The de facto open-source CGM data platform with 73k forks reflecting extraordinary real-world deployment since 2013. Provides the data layer that Loop, AndroidAPS, and Trio integrate with for remote monitoring and data sharing. REST and GraphQL APIs enable research pipeline integration. AGPL-3.0 copyleft applies to embedding in proprietary products. Adopt for any diabetes research programme or clinical team supporting patients using DIY AID or needing real-time remote CGM visibility.",
+  "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -54,13 +76,7 @@
     {
       "@type": "schema:WebPage",
       "url": "https://nightscout.github.io/",
-      "mach:evidenceType": "primary-instance"
-    },
-    {
-      "@type": "schema:WebPage",
-      "url": "https://nightscout.github.io/nightscout/new_user/",
       "mach:evidenceType": "documentation"
     }
-  ],
-  "mach:swhid": "swh:1:ori:fefab2e3a4665e465b42617db0f2a2b294ae9275"
+  ]
 }
