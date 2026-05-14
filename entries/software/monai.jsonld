@@ -60,5 +60,6 @@
       "url": "https://docs.monai.io/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:d5118eba6654e6d3488010d9d81129124bfd708c"
 }
