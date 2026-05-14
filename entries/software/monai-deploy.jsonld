@@ -56,5 +56,6 @@
       "url": "https://docs.monai.io/projects/monai-deploy-app-sdk/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:d7e4784ec0c4ddce5f43cb26440b510d6cd0c7b7"
 }
