@@ -1,0 +1,75 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/eva",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "eva",
+  "name": "eva",
+  "alternateName": [
+    "eva: Oncology Foundation Model Evaluation Framework"
+  ],
+  "description": "Standardised evaluation framework for oncology foundation models, covering both pathology and radiology. Benchmarks patch-level, slide-level, and scan-level classification, 2D/3D semantic segmentation, and visual question answering (VQA) tasks across multiple foundation model encoders. Supports offline (pre-extracted embeddings) and online (end-to-end) evaluation modes, enabling reproducible comparison of FMs such as UNI, CONCH, Virchow, and others on standardised task suites. Fills the evaluation layer in the pathology AI stack that sits alongside TRIDENT (feature extraction) and the foundation models themselves. Apache-2.0, 156 stars, v0.4.5 (April 2026). Published at MIDL 2024. Developed by kaiko.ai.",
+  "url": "https://github.com/kaiko-ai/eva",
+  "codeRepository": "https://github.com/kaiko-ai/eva",
+  "license": "Apache-2.0",
+  "version": "0.4.5",
+  "dateModified": "2026-04-29",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "foundation-models",
+    "evaluation",
+    "benchmarking",
+    "digital-pathology",
+    "radiology",
+    "oncology",
+    "computational-pathology",
+    "vqa",
+    "segmentation",
+    "classification",
+    "kaiko-ai"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "kaiko.ai",
+      "url": "https://kaiko.ai/"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:maturity": "beta",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "oncology",
+    "research",
+    "pathology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The dedicated evaluation framework for oncology foundation models \u2014 Apache-2.0, v0.4.5 April 2026, MIDL 2024 peer-reviewed. Provides standardised benchmarking across patch/slide/scan classification, segmentation, and VQA for both pathology and radiology FMs. 156 stars is modest but Kaiko is a credible pathology AI company and the tool fills a real gap as the evaluation counterpart to TRIDENT. Assess for teams building or comparing foundation models across oncology imaging tasks.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/kaiko-ai/eva",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://openreview.net/forum?id=FNBQOPj18N",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "eva: Evaluation framework for medical imaging foundation models. MIDL 2024."
+    }
+  ]
+}
