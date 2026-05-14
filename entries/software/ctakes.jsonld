@@ -60,5 +60,6 @@
       "url": "https://cwiki.apache.org/confluence/display/CTAKES/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:c8dec29349bebf664429f3c370184ada99106986"
 }
