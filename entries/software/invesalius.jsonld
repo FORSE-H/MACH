@@ -1,0 +1,53 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/invesalius",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "invesalius",
+  "name": "InVesalius",
+  "description": "Open-source 3D medical image reconstruction software that generates volumetric models from 2D DICOM slices (CT and MRI). Features segmentation tools, surface mesh export (STL, OBJ, PLY, VRML) for 3D printing and surgical planning, volume rendering, and measurement tools. Developed and maintained by CTI Renato Archer, a Brazilian federal research institution under the Ministry of Science, Technology and Innovations. Widely used for surgical simulation, prosthetics planning, and biomedical research. GPL-2.0, Python/Rust, 785 stars, 433 forks, v3.1.99998 (April 2024). Available in 10 languages.",
+  "url": "https://invesalius.github.io/",
+  "codeRepository": "https://github.com/invesalius/invesalius3",
+  "license": "GPL-2.0-only",
+  "version": "3.1.99998",
+  "dateModified": "2024-04-14",
+  "keywords": [
+    "medical-imaging",
+    "dicom",
+    "3d-reconstruction",
+    "segmentation",
+    "3d-printing",
+    "surgical-planning",
+    "python",
+    "ct",
+    "mri",
+    "brazil"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "CTI Renato Archer",
+    "url": "https://www.cti.gov.br/"
+  },
+  "mach:governance": "government",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Specialised 3D reconstruction tool for surgical planning and biomedical research — notable for STL/mesh export for 3D printing of anatomical models. GPL-2.0, 785 stars, government-maintained (CTI Renato Archer, Brazil). Marked Assess rather than Adopt because release pace has slowed (v3.1.99998, April 2024) and the tool is more niche than general-purpose DICOM viewers. Strong in global south and 3D-printing-for-medicine contexts.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/invesalius/invesalius3",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://invesalius.github.io/",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}
