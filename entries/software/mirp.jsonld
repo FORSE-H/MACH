@@ -71,5 +71,6 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "MIRP: A Python package for standardised radiomics. Journal of Open Source Software 2024."
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:bc37481c9919827bb717a1f8740fd1a3bfc3ef38"
 }

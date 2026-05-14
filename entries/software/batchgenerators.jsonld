@@ -66,5 +66,6 @@
       "url": "https://pypi.org/project/batchgenerators/",
       "mach:evidenceType": "package-registry"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:44448b42bffd1287b21a27e60218a4503a74ffc2"
 }
