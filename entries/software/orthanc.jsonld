@@ -55,5 +55,6 @@
       "url": "https://orthanc.uclouvain.be/book/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:0ec70bc9cda7433bfb07bc5f5ae6f5184cee7d07"
 }
