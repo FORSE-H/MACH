@@ -1,0 +1,68 @@
+name: Weekly URL check
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Every Monday 08:00 UTC
+  workflow_dispatch:         # Allow manual runs
+
+jobs:
+  check-urls:
+    name: Check entry URLs
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run URL checker
+        id: urlcheck
+        run: python3 scripts/check_urls.py --output url-report.md
+        continue-on-error: true
+
+      - name: Post report to step summary
+        run: cat url-report.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Open or update GitHub issue if broken URLs found
+        if: steps.urlcheck.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing=$(gh issue list \
+            --state open \
+            --search "Broken URLs detected in:title" \
+            --json number \
+            --jq '.[0].number // empty')
+
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file url-report.md
+            echo "Added comment to existing issue #$existing"
+          else
+            gh issue create \
+              --title "Broken URLs detected $(date +'%Y-%m-%d')" \
+              --body-file url-report.md
+            echo "Opened new issue"
+          fi
+
+      - name: Close issue if all URLs pass
+        if: steps.urlcheck.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing=$(gh issue list \
+            --state open \
+            --search "Broken URLs detected in:title" \
+            --json number \
+            --jq '.[0].number // empty')
+
+          if [ -n "$existing" ]; then
+            gh issue close "$existing" \
+              --comment "All URLs passing as of $(date +'%Y-%m-%d'). Closing."
+            echo "Closed issue #$existing"
+          fi

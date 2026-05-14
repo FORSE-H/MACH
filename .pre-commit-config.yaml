@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: validate-jsonld
+        name: Validate JSON-LD syntax
+        language: python
+        entry: python3 scripts/validate_jsonld.py
+        files: ^entries/.*\.jsonld$
+        exclude: ^entries/.*/_template\.jsonld$
+        pass_filenames: true
