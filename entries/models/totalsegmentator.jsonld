@@ -1,0 +1,64 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/totalsegmentator",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "totalsegmentator",
+  "name": "TotalSegmentator",
+  "description": "Automated segmentation tool for 100+ anatomical structures in CT and MRI scans — covering abdominal organs (liver, spleen, pancreas, kidneys), thoracic structures (lungs, heart, aorta), vertebrae, ribs, muscles, and vasculature. Built on nnU-Net, installable as a Python package with a simple one-line CLI. 40+ additional specialised task models available (some under academic/commercial licence). Used in clinical research workflows for large-scale cohort studies. Published in Radiology: Artificial Intelligence 2023 (CT) and Radiology 2024 (MRI). Apache-2.0, Python, 2.7k stars, 427 forks, v2.5.0 (January 2025). Developed at University Hospital Basel.",
+  "url": "https://totalsegmentator.com/",
+  "codeRepository": "https://github.com/wasserth/TotalSegmentator",
+  "relatedLink": [
+    "https://doi.org/10.1148/ryai.230024"
+  ],
+  "license": "Apache-2.0",
+  "version": "2.5.0",
+  "dateModified": "2025-01-15",
+  "keywords": [
+    "ct-segmentation",
+    "mri-segmentation",
+    "anatomy",
+    "nnunet",
+    "medical-imaging",
+    "python",
+    "radiology",
+    "organ-segmentation",
+    "clinical-research"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "University Hospital Basel",
+      "url": "https://www.unispital-basel.ch/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference tool for whole-body CT and MRI anatomical segmentation — 100+ structures, one-line CLI, Apache-2.0, 2.7k stars, v2.5.0 (January 2025). Built on nnU-Net and published in Radiology AI 2023. Widely used in large-scale clinical cohort studies for automated organ volumetry and structure extraction. Complements nnU-Net in the MACH catalog: nnU-Net is the general-purpose training framework; TotalSegmentator is the ready-to-use pre-trained segmentation tool for radiology.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/wasserth/TotalSegmentator",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://totalsegmentator.com/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1148/ryai.230024",
+      "mach:evidenceType": "academic-reference"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/hover-net",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "hover-net",
+  "name": "HoVer-Net",
+  "description": "Simultaneous nucleus instance segmentation and classification model for H&E histology images. Uses horizontal and vertical distance maps (HoVer maps) from nuclear centroids to separate touching nuclei, enabling accurate instance segmentation across dense tissue. Multi-branch architecture outputs segmentation mask, classification map, and HoVer maps in a single forward pass. Pretrained on CoNSeP (colon), PanNuke (pan-cancer, 19 tissue types), MoNuSAC, and Kumar/CPM datasets. MIT licensed, 712 stars, 272 forks. Published in Medical Image Analysis 2019. Developed at the Tissue Image Analytics (TIA) Centre, University of Warwick.",
+  "url": "https://github.com/vqdang/hover_net",
+  "codeRepository": "https://github.com/vqdang/hover_net",
+  "relatedLink": [
+    "https://doi.org/10.1016/j.media.2019.101563"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "nuclei-segmentation",
+    "instance-segmentation",
+    "digital-pathology",
+    "h-and-e",
+    "classification",
+    "multi-tissue",
+    "python",
+    "pytorch",
+    "warwick"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Tissue Image Analytics (TIA) Centre, University of Warwick",
+      "url": "https://warwick.ac.uk/fac/cross_fac/tia/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The foundational nucleus instance segmentation and classification model — MIT licensed, 712 stars, Medical Image Analysis 2019, pretrained on CoNSeP/PanNuke/MoNuSAC. Introduced the HoVer map technique for separating touching nuclei, which influenced all subsequent nucleus segmentation work including StarDist and CellViT. Widely used as a baseline and production model for cell-level analysis in computational pathology pipelines.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/vqdang/hover_net",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1016/j.media.2019.101563",
+      "mach:evidenceType": "academic-reference"
+    }
+  ]
+}

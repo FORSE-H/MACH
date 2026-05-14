@@ -1,0 +1,60 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/cellvit",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "cellvit",
+  "name": "CellViT",
+  "alternateName": [
+    "CellViT++"
+  ],
+  "description": "Vision Transformer-based framework for precise nucleus instance segmentation and classification in whole-slide histology images. U-Net encoder-decoder architecture with pretrained ViT encoders. Achieves state-of-the-art panoptic quality on PanNuke (pan-cancer, 19 tissue types). Supports gigapixel WSI inference. Original CellViT superseded by CellViT++ (TIO-IKIM/CellViT-plus-plus). Published in Medical Image Analysis 2024. 380 stars (original) + 204 stars (CellViT++). Developed at IKIM (Institute for AI in Medicine), University Hospital Essen. Note: licensed under Apache 2.0 with Commons Clause — commercial use restricted.",
+  "url": "https://github.com/TIO-IKIM/CellViT",
+  "codeRepository": "https://github.com/TIO-IKIM/CellViT",
+  "relatedLink": [
+    "https://doi.org/10.1016/j.media.2024.103143",
+    "https://github.com/TIO-IKIM/CellViT-plus-plus"
+  ],
+  "license": "Apache-2.0",
+  "dateModified": "2025-07-23",
+  "keywords": [
+    "nuclei-segmentation",
+    "instance-segmentation",
+    "vision-transformer",
+    "digital-pathology",
+    "pannuke",
+    "python",
+    "pytorch",
+    "whole-slide-imaging"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "IKIM — Institute for AI in Medicine, University Hospital Essen",
+      "url": "https://ikim.uk-essen.de/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Caution",
+  "mach:judgementReason": "Strong nucleus segmentation model — Medical Image Analysis 2024, state-of-the-art on PanNuke, ViT-based WSI inference. However, licensed under Apache 2.0 with Commons Clause, which prohibits selling the software and is not OSI-approved open source. This non-standard licence creates legal ambiguity for commercial and many institutional use cases. Consider HoVer-Net (MIT) or StarDist (BSD-3-Clause) as alternatives with clean open-source licences. CellViT++ is the actively maintained successor.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/TIO-IKIM/CellViT",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1016/j.media.2024.103143",
+      "mach:evidenceType": "academic-reference"
+    }
+  ]
+}
