@@ -449,6 +449,30 @@
 
   .category-item:hover { background: var(--gray-50); }
 
+  /* ── CATEGORY TOOLTIPS ── */
+  .category-item { position: relative; }
+
+  .category-item[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    background: var(--gray-800);
+    color: #fff;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    padding: 0.45rem 0.65rem;
+    border-radius: 4px;
+    width: 210px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 20;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  }
+
+  .category-item[data-tooltip]:hover::after { opacity: 1; }
+
   /* Category color map — matches entry badge colors exactly */
   .category-item:nth-child(1)  .cat-num { color: var(--teal-700); }  /* Clinical Systems */
   .category-item:nth-child(2)  .cat-num { color: var(--sky-dark); } /* Interoperability Standards */
@@ -1115,13 +1139,13 @@
     From clinical software to AI agents — every open healthcare artifact has a home here.
   </p>
   <div class="categories">
-    <div class="category-item"><span class="cat-num">01</span><span class="cat-name">Software</span></div>
-    <div class="category-item"><span class="cat-num">02</span><span class="cat-name">AI / ML Models</span></div>
-    <div class="category-item"><span class="cat-num">03</span><span class="cat-name">Datasets</span></div>
-    <div class="category-item"><span class="cat-num">04</span><span class="cat-name">MCP Servers</span></div>
-    <div class="category-item"><span class="cat-num">05</span><span class="cat-name">Data Sources</span></div>
-    <div class="category-item"><span class="cat-num">06</span><span class="cat-name">Catalogs</span></div>
-    <div class="category-item"><span class="cat-num">07</span><span class="cat-name">Specs</span></div>
+    <div class="category-item" data-tooltip="Open-source healthcare software tools, platforms, and applications"><span class="cat-num">01</span><span class="cat-name">Software</span></div>
+    <div class="category-item" data-tooltip="Clinical AI models, medical imaging models, biomedical NLP, and foundation models"><span class="cat-num">02</span><span class="cat-name">AI / ML Models</span></div>
+    <div class="category-item" data-tooltip="Static, versioned healthcare datasets, benchmarks, and evaluation corpora"><span class="cat-num">03</span><span class="cat-name">Datasets</span></div>
+    <div class="category-item" data-tooltip="Model Context Protocol servers exposing healthcare data and APIs to AI agents"><span class="cat-num">04</span><span class="cat-name">MCP Servers</span></div>
+    <div class="category-item" data-tooltip="Continuously updated open registries and data feeds — adverse events, trial registries, live clinical data"><span class="cat-num">05</span><span class="cat-name">Data Sources</span></div>
+    <div class="category-item" data-tooltip="Open catalogs and registries of healthcare software, models, or standards"><span class="cat-num">06</span><span class="cat-name">Catalogs</span></div>
+    <div class="category-item" data-tooltip="Clinical interoperability standards, terminology systems, and specifications"><span class="cat-num">07</span><span class="cat-name">Specs</span></div>
   </div>
 </div>
 
