@@ -1,0 +1,71 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/camelyon",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "camelyon",
+  "name": "CAMELYON",
+  "alternateName": [
+    "CAMELYON16",
+    "CAMELYON17"
+  ],
+  "description": "Benchmark series for automated detection of breast cancer metastases in H&E-stained whole-slide images of sentinel lymph nodes — the first and most widely cited grand challenge using whole-slide histopathology images. CAMELYON16 (2016): 400 WSIs from Radboudumc + UMCU, slide-level labels. CAMELYON17 (2017): 1,000 WSIs from 5 medical centres, patient-level pN-stage classification. Both datasets are CC0 (public domain), accessible via GigaScience, AWS Open Data, and Google Drive. Organised by the Diagnostic Image Analysis Group (DIAG), Radboud University Medical Center. The CAMELYON benchmarks catalysed the development of modern computational pathology and set the standard for pathology AI evaluation.",
+  "url": "https://camelyon17.grand-challenge.org/",
+  "license": "CC0-1.0",
+  "keywords": [
+    "digital-pathology",
+    "whole-slide-imaging",
+    "breast-cancer",
+    "metastasis-detection",
+    "lymph-node",
+    "wsi",
+    "computational-pathology",
+    "benchmark",
+    "gleason",
+    "h-and-e",
+    "radboudumc"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Diagnostic Image Analysis Group (DIAG), Radboud University Medical Center",
+      "url": "https://www.diagnijmegen.nl/"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://camelyon17.grand-challenge.org/Data/",
+      "schema:encodingFormat": "image/tiff"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets-benchmarks",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The foundational computational pathology benchmark — CAMELYON16 and CAMELYON17 established the first rigorous evaluation standard for cancer metastasis detection in WSIs and catalysed an entire field of pathology AI. CC0 (public domain), no access restrictions, available via AWS Open Data and GigaScience. 1,400 total slides from 5 medical centres. Cited in hundreds of papers; used to train and evaluate virtually every breast cancer pathology AI model. Essential reference benchmark for digital pathology research.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://camelyon17.grand-challenge.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://camelyon16.grand-challenge.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://camelyon17.grand-challenge.org/Data/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
