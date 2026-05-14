@@ -1,0 +1,65 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/plip",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "plip",
+  "name": "PLIP",
+  "alternateName": [
+    "Pathology Language and Image Pre-Training"
+  ],
+  "description": "The first vision-language foundation model for computational pathology — a CLIP-based contrastive model fine-tuned on 208,414 pathology image-text pairs sourced from medical Twitter posts. Enables zero-shot tissue and cancer classification from natural language prompts without task-specific training. Evaluated across multiple pathology classification tasks. Published in Nature Medicine 2023. Model weights hosted on HuggingFace (vinid/plip), 75k+ monthly downloads. 376 stars. Research use only.",
+  "url": "https://huggingface.co/vinid/plip",
+  "codeRepository": "https://github.com/PathologyFoundation/plip",
+  "relatedLink": [
+    "https://www.nature.com/articles/s41591-023-02504-3"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "pathology-foundation-model",
+    "vision-language",
+    "clip",
+    "digital-pathology",
+    "zero-shot",
+    "contrastive-learning",
+    "tissue-classification",
+    "cancer",
+    "nature-medicine"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Huang et al. — UNC / Stanford",
+      "url": "https://github.com/PathologyFoundation/plip"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The pioneering vision-language model for pathology — Nature Medicine 2023, 75k+ monthly HuggingFace downloads, zero-shot tissue classification from free-text prompts. Training data sourced from medical Twitter (now X), which raises questions about data provenance and long-term reproducibility. Assess pending cleaner dataset documentation and broader independent validation. Useful for teams prototyping zero-shot pathology classification pipelines before committing to task-specific fine-tuning.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/vinid/plip",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://www.nature.com/articles/s41591-023-02504-3",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/PathologyFoundation/plip",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

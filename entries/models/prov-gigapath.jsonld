@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/prov-gigapath",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "prov-gigapath",
+  "name": "Prov-GigaPath",
+  "description": "Whole-slide pathology foundation model trained on real-world clinical data from Providence Health System — the first WSI-level foundation model with a dual-component architecture: a tile encoder for local patch features and a slide encoder for global slide-level representations. Trained on a large proprietary dataset of H&E slides from Providence clinical archives. Evaluated on cancer subtyping, survival prediction, and mutation detection across TCGA. Published in Nature 2024. Apache 2.0, 46k+ monthly HuggingFace downloads. Developed jointly by Providence Healthcare and Microsoft Research.",
+  "url": "https://huggingface.co/prov-gigapath/prov-gigapath",
+  "codeRepository": "https://github.com/prov-gigapath/prov-gigapath",
+  "relatedLink": [
+    "https://www.nature.com/articles/s41586-024-07441-w"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "pathology-foundation-model",
+    "digital-pathology",
+    "whole-slide-imaging",
+    "vision-transformer",
+    "slide-encoder",
+    "tile-encoder",
+    "cancer-subtyping",
+    "survival-prediction",
+    "microsoft",
+    "nature"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Providence Healthcare / Microsoft Research",
+      "url": "https://www.providenceai.com/"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The most permissively licensed major pathology foundation model — Apache 2.0, unlike UNI (CC-BY-NC-ND) and CONCH (CC-BY-NC-ND). Published in Nature 2024, 46k+ monthly HuggingFace downloads, dual tile+slide encoder architecture. Trained on real clinical Providence data rather than academic collections, providing strong clinical validity. The open licence makes it the preferred choice for commercial and derivative pathology AI development where UNI's NC restriction is a blocker.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/prov-gigapath/prov-gigapath",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://www.nature.com/articles/s41586-024-07441-w",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/prov-gigapath/prov-gigapath",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
