@@ -1,0 +1,54 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/clinicaltrials",
+  "@type": [
+    "schema:Dataset",
+    "mach:DataSource"
+  ],
+  "identifier": "clinicaltrials",
+  "name": "ClinicalTrials.gov",
+  "description": "The world's largest public registry of clinical studies — 500,000+ registered trials covering interventional and observational studies, eligibility criteria, outcomes, results, and status. Maintained by NLM/NIH. REST API v2 (launched 2024) provides structured JSON access with full-text search, field filters, and pagination. Bulk download available as ZIP. Data updated daily. Public domain (US government work). OpenAPI-compliant with Swagger documentation. The authoritative source for clinical trial data used in evidence synthesis, trial matching AI, and research landscape analysis.",
+  "url": "https://clinicaltrials.gov/",
+  "codeRepository": "https://clinicaltrials.gov/data-api/api",
+  "license": "CC0-1.0",
+  "keywords": [
+    "clinical-trials",
+    "registry",
+    "research",
+    "interventional-studies",
+    "eligibility-criteria",
+    "outcomes",
+    "rest-api",
+    "nlm",
+    "nih",
+    "public-domain"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "National Library of Medicine / NIH",
+      "url": "https://www.nlm.nih.gov/"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The authoritative open registry of 500,000+ clinical trials, updated daily, public domain. API v2 (2024) provides OpenAPI-compliant structured access to trial metadata, eligibility criteria, results, and status. Bulk download available. Used in trial matching AI, systematic reviews, evidence synthesis pipelines, and regulatory intelligence. No authentication required. The single most important open data source for clinical research infrastructure.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://clinicaltrials.gov/data-api/api",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://clinicaltrials.gov/data-api/about-api",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

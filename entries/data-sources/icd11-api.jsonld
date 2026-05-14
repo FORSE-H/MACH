@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/icd11-api",
+  "@type": [
+    "schema:Dataset",
+    "mach:DataSource"
+  ],
+  "identifier": "icd11-api",
+  "name": "ICD-11 API",
+  "alternateName": [
+    "ICD API",
+    "WHO ICD-11 MMS API"
+  ],
+  "description": "WHO REST API providing programmatic access to the ICD-11 Mortality and Morbidity Statistics (MMS) linearization — including entity lookups, search, code validation, autocompletion, and release history. Supports ICD-11 for Mortality and Morbidity, International Classification of Functioning (ICF), and the ICD-O-3 oncology extension. Free registration required for API key. Also deployable locally via Docker or Windows/Linux installer for offline use. API v2.6, 2026 classification release. JSON responses, multilingual (40+ languages). Maintained by WHO.",
+  "url": "https://icd.who.int/icdapi",
+  "license": "custom",
+  "keywords": [
+    "icd-11",
+    "disease-classification",
+    "terminology",
+    "who",
+    "diagnosis-codes",
+    "rest-api",
+    "multilingual",
+    "mortality",
+    "morbidity",
+    "coding"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "World Health Organization",
+      "url": "https://www.who.int/"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "cloud-only",
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The authoritative programmatic interface to ICD-11 — WHO-maintained, free, multilingual (40+ languages), updated with each annual classification release (v2.6, 2026). Supports entity lookup, search, code validation, and autocompletion. Self-hostable via Docker for offline/air-gapped deployments. Free registration required for API key. Marked custom licence as ICD-11 has its own WHO terms of use rather than a standard open licence, but free for most research and implementation uses.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://icd.who.int/icdapi",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://icd.who.int/icdapi/docs2/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

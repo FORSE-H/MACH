@@ -1,0 +1,53 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/openfda",
+  "@type": [
+    "schema:Dataset",
+    "mach:DataSource"
+  ],
+  "identifier": "openfda",
+  "name": "openFDA",
+  "description": "FDA public data API providing structured access to drug adverse event reports (FAERS), drug labeling, drug recalls, medical device adverse events, device recalls, and food enforcement reports. Elasticsearch-based REST API with JSON responses. All data CC0 1.0 (public domain). Bulk downloads available as compressed JSON files. Updated regularly from FDA source systems. Covers millions of adverse event reports and tens of thousands of drug labels. Excludes personally identifiable patient information. Maintained by the US Food and Drug Administration.",
+  "url": "https://open.fda.gov/",
+  "license": "CC0-1.0",
+  "keywords": [
+    "adverse-events",
+    "drug-safety",
+    "fda",
+    "pharmacovigilance",
+    "drug-labeling",
+    "recalls",
+    "medical-devices",
+    "rest-api",
+    "public-domain",
+    "us-government"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "US Food and Drug Administration",
+      "url": "https://www.fda.gov/"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The primary open API for US drug and device safety data — adverse events (FAERS), drug labels, recalls, and device reports. CC0 public domain, no API key required for basic use (1000 requests/day unauthenticated, 120,000/day with key), bulk downloads available. Essential for pharmacovigilance research, drug safety AI, and clinical decision support pipelines that need real-world adverse event data.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://open.fda.gov/apis/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://open.fda.gov/license/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
