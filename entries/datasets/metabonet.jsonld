@@ -1,0 +1,80 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/metabonet",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "metabonet",
+  "name": "MetaboNet",
+  "alternateName": [
+    "MetaboNet: The Largest Publicly Available Consolidated Dataset for Type 1 Diabetes Management"
+  ],
+  "description": "The largest publicly available consolidated dataset for type 1 diabetes management. Aggregates 21 source datasets into a standardised schema — 3,135 subjects, 1,228 patient-years of overlapping CGM and insulin data total. Public subset (1,895 subjects, 867.4 patient-years) available via free account at metabo-net.org; DUA-restricted subset (1,240 subjects) consolidates OhioT1DM, OpenAPS Commons, T1DEXI, and Tidepool contributions requiring individual data use agreements. Source datasets include AZT1D, BrisT1D, HUPA-UCM, DiaTrend, Loop Observational Study, DCLP3/5, IOBP2, REPLACE-BG, and others. Modalities: CGM readings, insulin pump dosing (basal and bolus), carbohydrate intake, and physical activity. Distributed as Parquet files with open-source processing pipelines for DUA datasets. Addresses fragmentation across T1D benchmarks by providing a common format and scale for training and evaluating glucose prediction and AID algorithms. arXiv 2601.11505, January 2026. Developed by Replica Health and Jaeb Center for Health Research.",
+  "url": "https://metabo-net.org/",
+  "codeRepository": "https://github.com/replicahealth/metabonet_processor",
+  "relatedLink": [
+    "https://arxiv.org/abs/2601.11505"
+  ],
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "cgm",
+    "continuous-glucose-monitoring",
+    "diabetes",
+    "t1d",
+    "insulin-pump",
+    "automated-insulin-delivery",
+    "time-series",
+    "benchmark",
+    "glucose-prediction",
+    "consolidated-dataset",
+    "parquet",
+    "replica-health",
+    "jaeb"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Replica Health / Jaeb Center for Health Research",
+      "url": "https://metabo-net.org/"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://metabo-net.org/",
+      "schema:encodingFormat": "application/x-parquet"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets-benchmarks",
+  "mach:maturity": "production",
+  "mach:clinicalDomain": [
+    "endocrinology",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference consolidated T1D dataset for ML research — 3,135 subjects and 1,228 patient-years across 21 source datasets in a standardised Parquet schema. Eliminates the per-dataset preprocessing burden that has fragmented T1D algorithm development. Public subset (1,895 subjects) accessible via free account; full dataset via individual DUAs with source dataset owners. CC BY 4.0 for the public portion. Adopt as the primary training and evaluation corpus for glucose prediction, digital twin, and AID algorithm development.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://metabo-net.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/replicahealth/metabonet_processor",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2601.11505",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MetaboNet: The Largest Publicly Available Consolidated Dataset for Type 1 Diabetes Management. arXiv 2601.11505, January 2026."
+    }
+  ]
+}
