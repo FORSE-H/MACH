@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/openaps",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "openaps",
+  "name": "OpenAPS",
+  "alternateName": [
+    "oref0",
+    "Open Artificial Pancreas System"
+  ],
+  "description": "Community-built open-source reference implementation of an automated insulin delivery (AID) algorithm for Type 1 diabetes — the original DIY artificial pancreas system. The oref0 component implements glucose monitoring, insulin-on-board calculations, profile management, and Nightscout integration across three layers: monitor (data collection), predict (glucose forecasting), and control (basal rate adjustment). Designed for patient-led self-implementation with a Raspberry Pi or Edison and a compatible insulin pump. The OpenAPS algorithm directly influenced FDA-cleared commercial APS systems. MIT licensed, 475 stars, 404 forks, community-governed.",
+  "url": "https://openaps.org/",
+  "codeRepository": "https://github.com/openaps/oref0",
+  "license": "MIT",
+  "version": "0.7.1",
+  "dateModified": "2022-06-19",
+  "keywords": [
+    "diabetes",
+    "artificial-pancreas",
+    "aps",
+    "closed-loop",
+    "insulin",
+    "cgm",
+    "diy",
+    "javascript",
+    "raspberry-pi",
+    "patient-empowerment",
+    "nightscout"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "OpenAPS contributors",
+    "url": "https://github.com/openaps"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The original open-source artificial pancreas algorithm — community-built by and for people with Type 1 diabetes, with direct influence on FDA-cleared commercial APS systems. MIT licensed, 475 stars, 404 forks. Last formal release v0.7.1 (2022) reflects algorithmic maturity rather than abandonment; the broader DIY loop ecosystem (AndroidAPS, Loop) evolved from this foundation. Historically significant as a patient-empowerment project that reshaped the commercial insulin delivery landscape.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/openaps/oref0",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://openaps.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://openaps.readthedocs.io/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
