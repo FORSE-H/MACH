@@ -1,0 +1,59 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/orthanc",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "orthanc",
+  "name": "Orthanc",
+  "description": "Lightweight, open-source RESTful DICOM server for medical imaging, widely used in hospitals, research institutions, and imaging workflows. Provides a web interface for uploading, receiving, and transferring DICOM images, a REST API for automating imaging workflows, and a plugin SDK for extending functionality. Plugins include PostgreSQL/MySQL storage backends, DICOMweb, and the Stone Web Viewer. Originated at the University Hospital of Liège; currently maintained by the Orthanc Team SRL with commercial support via Orthanc Services. GPL v3 (core), LGPL v3 (framework), 6,498 commits, v1.12.11, C++-based.",
+  "url": "https://www.orthanc-server.com/",
+  "codeRepository": "https://github.com/jodogne/OrthancMirror",
+  "license": "GPL-3.0",
+  "version": "1.12.11",
+  "dateModified": "2026-05-14",
+  "keywords": [
+    "dicom",
+    "medical-imaging",
+    "pacs",
+    "rest-api",
+    "c-plus-plus",
+    "dicomweb",
+    "imaging-server",
+    "self-hosted",
+    "plugin-architecture",
+    "radiology"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Orthanc Team SRL",
+    "url": "https://www.orthanc-server.com/"
+  },
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference lightweight open-source DICOM server — widely embedded in hospital imaging workflows, research pipelines, and teleradiology platforms. GPL v3, 6,498 commits, v1.12.11, extensible plugin architecture. Originated at University Hospital of Liège; now maintained by Orthanc Team SRL with a commercial support tier. Complements dcm4che in the MACH catalog: Orthanc is the lightweight REST-first DICOM server; dcm4che is the comprehensive Java DICOM toolkit for enterprise PACS.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/jodogne/OrthancMirror",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.orthanc-server.com/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://orthanc.uclouvain.be/book/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
