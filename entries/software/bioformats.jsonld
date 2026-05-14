@@ -1,0 +1,75 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/bioformats",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "bioformats",
+  "name": "Bio-Formats",
+  "description": "Java library for reading and writing life sciences image file formats, developed by the Open Microscopy Environment (OME) consortium. Supports 150+ proprietary and open microscopy formats including SVS, NDPI, SCN, CZI, LIF, ND2, MRXS, OME-TIFF, and DICOM and converts them to the OME data model and OME-TIFF standard. The foundational image I/O layer for QuPath, ImageJ/FIJI, OMERO, and most other bioimage analysis tools. GPL-2.0, 419 stars, v8.5.0 (March 2026), 22,000+ commits reflecting 20+ years of active development. Maintained by the OME consortium (University of Dundee, EMBL-EBI, and others).",
+  "url": "https://www.openmicroscopy.org/bio-formats/",
+  "codeRepository": "https://github.com/ome/bioformats",
+  "relatedLink": [
+    "https://bio-formats.readthedocs.io/"
+  ],
+  "license": "GPL-2.0",
+  "version": "8.5.0",
+  "dateModified": "2026-03-18",
+  "programmingLanguage": [
+    "Java"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "microscopy",
+    "image-formats",
+    "ome",
+    "ome-tiff",
+    "whole-slide-imaging",
+    "wsi",
+    "bioimage",
+    "format-conversion",
+    "imagej",
+    "qupath",
+    "omero",
+    "digital-pathology"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Open Microscopy Environment (OME)",
+      "url": "https://www.openmicroscopy.org/"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "pathology",
+    "oncology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The foundational image I/O library for biomedical microscopy used by QuPath, ImageJ/FIJI, OMERO, and virtually every WSI analysis tool to read proprietary scanner formats. 150+ formats supported, 20+ years of active OME consortium development, v8.5.0 March 2026. GPL-2.0 copyleft applies to redistribution but does not restrict use as a library dependency in research pipelines. Adopt as the standard format reading layer for any pathology or microscopy imaging pipeline.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ome/bioformats",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.openmicroscopy.org/bio-formats/",
+      "mach:evidenceType": "project-website"
+    }
+  ]
+}

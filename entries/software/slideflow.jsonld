@@ -1,0 +1,71 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/slideflow",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "slideflow",
+  "name": "Slideflow",
+  "description": "Unified deep learning framework for digital pathology, providing a consistent API across weakly supervised, strongly supervised, multiple instance learning, and self-supervised training workflows on whole slide images. Handles slide processing, stain normalisation, patch extraction, model training, and deployment. Includes explainability tools (heatmaps, saliency maps) and an interactive visualisation interface (Slideflow Studio). Apache-2.0, 361 stars, v3.0.2 (October 2024).",
+  "url": "https://slideflow.dev/",
+  "codeRepository": "https://github.com/slideflow/slideflow",
+  "relatedLink": [
+    "https://slideflow.dev/"
+  ],
+  "license": "Apache-2.0",
+  "version": "3.0.2",
+  "dateModified": "2024-10-18",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "digital-pathology",
+    "whole-slide-imaging",
+    "deep-learning",
+    "weakly-supervised",
+    "multiple-instance-learning",
+    "self-supervised",
+    "histopathology",
+    "stain-normalisation",
+    "computational-pathology"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Slideflow"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:maturity": "beta",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "oncology",
+    "research",
+    "pathology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Apache-2.0 unified training framework covering weakly supervised, MIL, and self-supervised workflows in a single API. 361 stars, v3.0.2 October 2024. Fills a gap between low-level libraries (TIA Toolbox) and research codebases (CLAM) by providing a training-focused abstraction. Assess for teams wanting a framework-level API rather than assembling individual components.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/slideflow/slideflow",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://slideflow.dev/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

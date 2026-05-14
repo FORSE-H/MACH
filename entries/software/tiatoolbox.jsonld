@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/tiatoolbox",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "tiatoolbox",
+  "name": "TIA Toolbox",
+  "description": "End-to-end Python API for computational pathology built on PyTorch, developed by the TIA Centre at the University of Warwick. Provides a unified pipeline covering data loading, stain normalisation, tissue segmentation, patch extraction, model inference, and result visualisation for whole slide images. Includes pretrained models for common tasks (cell segmentation, tissue classification, stain normalisation) and supports custom model integration. BSD-3-Clause, 526 stars, v2.0.1 (March 2026). Published in the Journal of Pathology: Clinical Research 2022.",
+  "url": "https://tia-toolbox.readthedocs.io/",
+  "codeRepository": "https://github.com/TissueImageAnalytics/tiatoolbox",
+  "relatedLink": [
+    "https://tia-toolbox.readthedocs.io/"
+  ],
+  "license": "BSD-3-Clause",
+  "version": "2.0.1",
+  "dateModified": "2026-03-16",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "digital-pathology",
+    "whole-slide-imaging",
+    "computational-pathology",
+    "cell-segmentation",
+    "tissue-segmentation",
+    "stain-normalisation",
+    "pytorch",
+    "histopathology",
+    "warwick",
+    "tia-centre"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "TIA Centre, University of Warwick",
+      "url": "https://warwick.ac.uk/fac/cross_fac/tia/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "oncology",
+    "research",
+    "pathology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference Python API for end-to-end computational pathology from the University of Warwick TIA Centre \u2014 BSD-3-Clause, 526 stars, v2.0.1 March 2026. Covers the full pipeline from WSI loading through inference in a single consistent API, with pretrained models included. Complements QuPath (GUI) for teams building automated Python pipelines. Adopt for any team developing or deploying histopathology AI workflows.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/TissueImageAnalytics/tiatoolbox",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://tia-toolbox.readthedocs.io/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
