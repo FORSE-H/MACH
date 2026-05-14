@@ -1,0 +1,64 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/uni",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "uni",
+  "name": "UNI",
+  "description": "The largest pretrained vision foundation model for computational pathology — a ViT-L/16 encoder trained with DINOv2 self-supervised learning on 100M+ H&E image patches from 100,000+ whole-slide images (Mass-100K dataset, MGH/BWH private collections + GTEx). Achieves state-of-the-art performance across 34 clinical pathology tasks including cancer subtyping, survival prediction, and mutation detection. Does not use TCGA/CAMELYON/CPTAC for pretraining, eliminating benchmark contamination risk. Published in Nature Medicine 2024. 0.3B parameters (ViT-Large). CC-BY-NC-ND-4.0, 45k+ monthly HuggingFace downloads.",
+  "url": "https://huggingface.co/MahmoodLab/UNI",
+  "codeRepository": "https://github.com/mahmoodlab/UNI",
+  "relatedLink": [
+    "https://www.nature.com/articles/s41591-024-02857-3"
+  ],
+  "license": "CC-BY-NC-ND-4.0",
+  "dateModified": "2024-03-20",
+  "keywords": [
+    "pathology-foundation-model",
+    "digital-pathology",
+    "whole-slide-imaging",
+    "self-supervised-learning",
+    "vision-transformer",
+    "dinov2",
+    "cancer-subtyping",
+    "survival-prediction",
+    "harvard",
+    "nature-medicine"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Mahmood Lab, Harvard Medical School / Brigham and Women's Hospital",
+      "url": "https://faisal.ai/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The most widely adopted open pathology foundation model — 45k+ monthly HuggingFace downloads, Nature Medicine 2024, state-of-the-art across 34 clinical tasks. Assess rather than Adopt due to CC-BY-NC-ND-4.0 licence: non-commercial and no-derivatives restrictions limit use in commercial and derivative research pipelines. Registration with institutional email required for access. Benchmark-contamination-free by design. Essential reference model for computational pathology AI research.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/MahmoodLab/UNI",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://www.nature.com/articles/s41591-024-02857-3",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/mahmoodlab/UNI",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

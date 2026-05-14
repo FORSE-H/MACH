@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/qupath",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "qupath",
+  "name": "QuPath",
+  "description": "The leading open-source platform for digital pathology and bioimage analysis — used in virtually every computational pathology lab worldwide. Supports whole-slide image annotation, cell detection and segmentation, tissue microarray analysis, fluorescence and brightfield analysis, interactive machine learning for tissue classification, and scripting via Groovy for batch workflows. Integrates with StarDist, OMERO, and ImageJ. Java-based, cross-platform (Windows, macOS, Linux). Developed at the University of Edinburgh by Pete Bankhead, funded by Wellcome Trust and Chan Zuckerberg Initiative. GPL-3.0, 1.4k stars, 342 forks, v0.7.0 (March 2026).",
+  "url": "https://qupath.github.io/",
+  "codeRepository": "https://github.com/qupath/qupath",
+  "license": "GPL-3.0-only",
+  "version": "0.7.0",
+  "dateModified": "2026-03-02",
+  "keywords": [
+    "digital-pathology",
+    "whole-slide-imaging",
+    "bioimage-analysis",
+    "cell-segmentation",
+    "tissue-classification",
+    "wsi",
+    "java",
+    "computational-pathology",
+    "fluorescence",
+    "annotation"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "University of Edinburgh",
+    "url": "https://www.ed.ac.uk/"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference open-source digital pathology platform — the 3D Slicer of computational pathology. Used in virtually every digital pathology research lab globally for annotation, segmentation, and classification workflows. GPL-3.0, v0.7.0 (March 2026), 1.4k stars, Wellcome Trust and Chan Zuckerberg Initiative funded. Integrates with StarDist, OMERO, and ImageJ. Essential for any team building on WSI data without a commercial pathology platform.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/qupath/qupath",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://qupath.github.io/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://qupath.readthedocs.io/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

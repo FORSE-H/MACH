@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/patchcamelyon",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "patchcamelyon",
+  "name": "PatchCamelyon",
+  "alternateName": [
+    "PCam"
+  ],
+  "description": "Binary image classification benchmark derived from CAMELYON16, consisting of 327,680 colour patches (96×96 px) extracted from H&E-stained lymph node WSIs, labelled for presence or absence of metastatic breast cancer tissue. Split into 262,144 training, 32,768 validation, and 32,768 test examples (~7.7 GB compressed HDF5). Widely used as a computationally accessible entry point to computational pathology — models can be trained on a single GPU in hours while remaining clinically meaningful. Available via Zenodo and Google Drive. CC0, MIT code licence. 521 stars.",
+  "url": "https://github.com/basveeling/pcam",
+  "codeRepository": "https://github.com/basveeling/pcam",
+  "license": "CC0-1.0",
+  "keywords": [
+    "digital-pathology",
+    "breast-cancer",
+    "metastasis-detection",
+    "patch-classification",
+    "benchmark",
+    "h-and-e",
+    "lymph-node",
+    "binary-classification",
+    "camelyon"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Bas Veeling"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://zenodo.org/record/2546921",
+      "schema:encodingFormat": "application/x-hdf5"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:category": "datasets-benchmarks",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The accessible entry-point benchmark for computational pathology — 327K patches derived from CAMELYON16, trainable on a single GPU in hours, CC0. Standard inclusion in pathology AI model evaluations alongside CAMELYON and PANDA. Complements the CAMELYON WSI-level benchmark in the MACH catalog: PCam enables rapid patch-level classifier development; CAMELYON provides the full slide-level evaluation setting.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/basveeling/pcam",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://zenodo.org/record/2546921",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
