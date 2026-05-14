@@ -59,5 +59,6 @@
       "url": "https://zenodo.org/record/2546921",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:ccad8e5bc14bd7812f3e4815bb05392683c946f4"
 }

@@ -61,5 +61,6 @@
       "url": "https://github.com/PathologyFoundation/plip",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:7bf7b9104346965d6f5a13e1bfccb8c94e0d22d9"
 }

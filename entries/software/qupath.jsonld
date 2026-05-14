@@ -54,5 +54,6 @@
       "url": "https://qupath.readthedocs.io/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:901111bd8c8794f4f96af13cec42c3d247036dd9"
 }
