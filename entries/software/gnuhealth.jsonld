@@ -1,0 +1,64 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/gnuhealth",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "gnuhealth",
+  "name": "GNU Health",
+  "alternateName": [
+    "GNU Health HMIS"
+  ],
+  "description": "Libre hospital and health information system providing over 40 standard-based packages covering primary care, obstetrics, pediatrics, laboratory management, diagnostics, and health administration. Developed by GNU Solidario, an NGO founded by Luis Falcón MD, with a mission rooted in social medicine and equitable healthcare access. Production deployments span Africa (Gabon, Cameroon, Gambia), Asia (India/AIIMS, Laos/Mahosot Hospital, Pakistan), Latin America (Argentina, Mexico/Cruz Roja Mexicana), the Caribbean (Jamaica Ministry of Health), and Europe. Recognised as a Digital Public Good, GNU Official Package, and FSF Award for Projects of Social Benefit recipient. Python-based, GPL v3+, self-hosted, v5.0.7. Hosted on Codeberg — not GitHub.",
+  "url": "https://www.gnuhealth.org/",
+  "codeRepository": "https://codeberg.org/gnuhealth/his",
+  "license": "GPL-3.0-or-later",
+  "version": "5.0.7",
+  "dateModified": "2026-04-11",
+  "keywords": [
+    "his",
+    "ehr",
+    "emr",
+    "hospital-information-system",
+    "lmic",
+    "global-health",
+    "social-medicine",
+    "python",
+    "self-hosted",
+    "digital-public-good",
+    "gnu",
+    "primary-care",
+    "laboratory"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "GNU Solidario",
+    "url": "https://www.gnuhealth.org/"
+  },
+  "mach:governance": "foundation",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "Mature, actively maintained libre HIS with 8,637 commits and v5.0.7 released April 2026 — development was incorrectly assumed dead due to a stale GitLab mirror; the canonical repo is on Codeberg. Digital Public Good, GNU Official Package, FSF Award recipient. Production deployments across four continents including AIIMS India, Mahosot Hospital Laos, Cruz Roja Mexicana, and Jamaica Ministry of Health. GPL v3+, 40+ packages covering the full HIS scope. Complements OpenMRS (concept-driven modular EMR) and OpenEMR (US practice management) with a social-medicine-oriented integrated HIS.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://codeberg.org/gnuhealth/his",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.gnuhealth.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.gnuhealth.org/documentation.html",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
