@@ -1,0 +1,55 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/digital-slide-archive",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "digital-slide-archive",
+  "name": "Digital Slide Archive",
+  "alternateName": [
+    "DSA"
+  ],
+  "description": "Web-based platform for managing, annotating, and running computational algorithms on large whole-slide and microscopy images. Supports image ingestion from local filesystems and S3, fine-grained user access controls, collaborative annotation and review workflows, and algorithm execution via HistomicsTK and slicer_cli_web plugins. Provides a REST API for programmatic access. NIH-funded (U24-CA194362). Apache 2.0, Python, 136 stars, 61 forks. Developed and maintained by Kitware in conjunction with HistomicsTK. Live demo at demo.kitware.com.",
+  "url": "https://digitalslidearchive.github.io/digital_slide_archive/",
+  "codeRepository": "https://github.com/DigitalSlideArchive/digital_slide_archive",
+  "license": "Apache-2.0",
+  "keywords": [
+    "digital-pathology",
+    "whole-slide-imaging",
+    "annotation",
+    "wsi-management",
+    "web-platform",
+    "python",
+    "kitware",
+    "nih",
+    "rest-api",
+    "collaborative"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Kitware / DigitalSlideArchive",
+    "url": "https://www.kitware.com/"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The open-source web platform for institutional WSI management and collaborative annotation — the pathology equivalent of OMERO. Apache 2.0, NIH-funded, Kitware-maintained. Integrates directly with HistomicsTK for algorithm execution and provides a REST API for pipeline integration. Complements QuPath in the MACH catalog: QuPath is the desktop analysis tool; DSA is the server-side image management and annotation infrastructure.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/DigitalSlideArchive/digital_slide_archive",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://digitalslidearchive.github.io/digital_slide_archive/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/monuseg",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "monuseg",
+  "name": "MoNuSeg",
+  "alternateName": [
+    "Multi-organ Nuclei Segmentation Challenge"
+  ],
+  "description": "MICCAI 2018 grand challenge dataset for nucleus instance segmentation in H&E-stained histology images across multiple organs (breast, liver, kidney, prostate, bladder, colon, stomach). 30 training images (21,623 annotated nuclei) and 14 test images from diverse patients and hospitals. Expert-annotated nucleus boundaries. Published in IEEE Transactions on Medical Imaging 2020 (Kumar et al.). The primary multi-organ nucleus segmentation benchmark; used to train and evaluate StarDist, CellViT, and most nucleus segmentation models. Access via Grand Challenge registration.",
+  "url": "https://monuseg.grand-challenge.org/",
+  "license": "custom",
+  "keywords": [
+    "digital-pathology",
+    "nucleus-segmentation",
+    "instance-segmentation",
+    "multi-organ",
+    "h-and-e",
+    "benchmark",
+    "miccai",
+    "breast-cancer",
+    "prostate",
+    "colon"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Kumar et al. — IIT Bombay / University of Wisconsin",
+      "url": "https://monuseg.grand-challenge.org/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets-benchmarks",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The standard multi-organ nucleus segmentation benchmark — used to train and evaluate StarDist, CellViT, and virtually every nucleus instance segmentation model. IEEE Transactions on Medical Imaging 2020, MICCAI 2018 origin. Assess rather than Adopt because access requires Grand Challenge registration and the licence terms are not openly stated. The dataset itself is small (30 training images) but heavily cited due to multi-organ diversity.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://monuseg.grand-challenge.org/",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/nct-crc-he-100k",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "nct-crc-he-100k",
+  "name": "NCT-CRC-HE-100K",
+  "description": "100,000 colour-normalised H&E image patches (224×224 px, 0.5 µm/px) from colorectal cancer and normal colon tissue across 9 tissue classes: adipose, background, debris, lymphocytes, mucus, smooth muscle, normal mucosa, cancer-associated stroma, and colorectal adenocarcinoma epithelium. Extracted from 86 tissue slides from NCT Cancer Center Heidelberg and University Medical Center Mannheim. Includes a 7,180-patch validation set (CRC-VAL-HE-7K). The standard benchmark for colorectal tissue classification. CC-BY-4.0, 11.7 GB, hosted on Zenodo (DOI: 10.5281/zenodo.1214456).",
+  "url": "https://zenodo.org/record/1214456",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "digital-pathology",
+    "colorectal-cancer",
+    "tissue-classification",
+    "patch-classification",
+    "h-and-e",
+    "benchmark",
+    "colour-normalisation",
+    "adenocarcinoma",
+    "zenodo"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "NCT Cancer Center Heidelberg / University Medical Center Mannheim",
+      "url": "https://www.nct-heidelberg.de/"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://zenodo.org/record/1214456",
+      "schema:encodingFormat": "image/jpeg"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets-benchmarks",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The standard colorectal tissue classification benchmark — 100K CC-BY-4.0 patches across 9 classes, hosted on Zenodo, widely used to evaluate patch-level tissue type classifiers in computational pathology. Clean CC-BY-4.0 licence with no non-commercial restrictions. Complements PatchCamelyon (breast/lymph node) and PANDA (prostate) in the MACH pathology dataset cluster.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://zenodo.org/record/1214456",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}

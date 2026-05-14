@@ -1,0 +1,66 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/conch",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "conch",
+  "name": "CONCH",
+  "alternateName": [
+    "CONtrastive learning from Captions for Histopathology"
+  ],
+  "description": "Vision-language foundation model for histopathology pretrained on 1.17 million image-caption pairs from PubMed Central open-access articles (H&E, IHC, and special stain images). Contrastive learning aligns visual and textual representations, enabling zero-shot classification, image-text retrieval, and captioning. ViT-B/16 vision encoder (90M params) + 110M text encoder. State-of-the-art across 14 computational pathology tasks. Notably performs well on non-H&E stains (IHC, special stains). Published in Nature Medicine 2024. CC-BY-NC-ND-4.0, 86k+ monthly HuggingFace downloads. Mahmood Lab, Harvard/BWH.",
+  "url": "https://huggingface.co/MahmoodLab/CONCH",
+  "codeRepository": "https://github.com/mahmoodlab/CONCH",
+  "relatedLink": [
+    "https://www.nature.com/articles/s41591-024-02856-4"
+  ],
+  "license": "CC-BY-NC-ND-4.0",
+  "keywords": [
+    "pathology-foundation-model",
+    "vision-language",
+    "digital-pathology",
+    "contrastive-learning",
+    "zero-shot",
+    "ihc",
+    "h-and-e",
+    "vision-transformer",
+    "nature-medicine",
+    "harvard"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Mahmood Lab, Harvard Medical School / Brigham and Women's Hospital",
+      "url": "https://faisal.ai/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The leading vision-language pathology foundation model — 86k+ monthly HuggingFace downloads, Nature Medicine 2024, state-of-the-art across 14 tasks, trained on PMC open-access image-caption pairs (unlike PLIP's Twitter data). Assess rather than Adopt due to CC-BY-NC-ND-4.0 licence: non-commercial and no-derivatives restrictions. Complements UNI in the MACH catalog: UNI is the vision-only encoder; CONCH adds language understanding for zero-shot and retrieval tasks.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/MahmoodLab/CONCH",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://www.nature.com/articles/s41591-024-02856-4",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/mahmoodlab/CONCH",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

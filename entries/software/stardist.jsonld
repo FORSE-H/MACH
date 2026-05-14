@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/stardist",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "stardist",
+  "name": "StarDist",
+  "description": "Cell and nucleus instance segmentation library using star-convex polygon representations — predicts distances to object boundaries along fixed rays and refines candidates via non-maximum suppression. Supports 2D and 3D images. Widely used in computational pathology and fluorescence microscopy; natively integrated into QuPath, Fiji/ImageJ, and napari. Python package with pretrained models for H&E nuclei. Published at MICCAI 2018 (2D) and WACV 2020 (3D). Developed at MPI-CBG and EPFL. BSD-3-Clause, 1.2k stars, 272 forks, v0.9.2 (December 2025).",
+  "url": "https://stardist.net/",
+  "codeRepository": "https://github.com/stardist/stardist",
+  "license": "BSD-3-Clause",
+  "version": "0.9.2",
+  "dateModified": "2025-12-15",
+  "keywords": [
+    "nuclei-segmentation",
+    "instance-segmentation",
+    "digital-pathology",
+    "fluorescence-microscopy",
+    "python",
+    "qupath",
+    "fiji",
+    "napari",
+    "star-convex",
+    "cell-detection"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Max Planck Institute of Molecular Cell Biology and Genetics (MPI-CBG)",
+    "url": "https://www.mpi-cbg.de/"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The standard nuclei segmentation algorithm in computational pathology — natively integrated into QuPath, Fiji, and napari, and used as the default segmentation backbone in countless pathology AI pipelines. BSD-3-Clause, v0.9.2 (December 2025), 1.2k stars, MPI-CBG/EPFL origin. Pretrained models available for H&E nuclei out of the box. The go-to choice for nucleus detection before committing to a deep learning segmentation pipeline.",
+  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/stardist/stardist",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://stardist.net/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/1806.03535",
+      "mach:evidenceType": "academic-reference"
+    }
+  ]
+}
