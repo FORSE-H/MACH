@@ -84,5 +84,6 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "QuPath: Open source software for digital pathology image analysis. Scientific Reports 2017."
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:901111bd8c8794f4f96af13cec42c3d247036dd9"
 }
