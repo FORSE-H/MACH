@@ -59,5 +59,6 @@
       "url": "https://docs.dhis2.org/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:06ffa3f233a87c52674ac342f9cb011151d5d696"
 }
