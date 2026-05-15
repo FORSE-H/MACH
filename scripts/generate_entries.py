@@ -53,6 +53,7 @@ TYPE_LABELS = {
     "mach:MCPServer":     "MCP Server",
     "mach:Standard":      "Standard",
     "mach:DataSource":    "Data Source",
+    "mach:Benchmark":     "Benchmark",
     "mach:Dataset":       "Dataset",
     "schema:Dataset":     "Dataset",
     "schema:DataCatalog": "Catalog",

@@ -3,7 +3,7 @@
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/agentclinic",
   "@type": [
     "schema:Dataset",
-    "mach:Dataset"
+    "mach:Benchmark"
   ],
   "identifier": "agentclinic",
   "name": "AgentClinic",

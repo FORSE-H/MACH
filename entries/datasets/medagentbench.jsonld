@@ -3,7 +3,7 @@
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/medagentbench",
   "@type": [
     "schema:Dataset",
-    "mach:Dataset"
+    "mach:Benchmark"
   ],
   "identifier": "medagentbench",
   "name": "MedAgentBench",
