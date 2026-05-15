@@ -1,0 +1,77 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/tcia",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "tcia",
+  "name": "The Cancer Imaging Archive",
+  "alternateName": [
+    "TCIA"
+  ],
+  "description": "Open repository of de-identified cancer imaging data funded by the National Cancer Institute (NCI) and hosted at the University of Arkansas for Medical Sciences (UAMS). Organises data into collections by cancer type, imaging modality, or research programme — covering CT, MRI, PET, digital histopathology (DICOM format), and supporting clinical data (outcomes, genomics, treatment details). Notable collections include LIDC-IDRI (lung nodule CT, 1,018 cases), TCGA imaging collections linked to TCGA genomics, NLST (National Lung Screening Trial), and QIN challenge datasets. Programmatic access via TCIA REST API (NBIA Data Retriever) and TCIA Python client. Most collections are CC BY 3.0; some newer collections use CC BY 4.0. Free registration required for some restricted collections. The primary open archive for cancer imaging research and AI model development in oncology.",
+  "url": "https://www.cancerimagingarchive.net/",
+  "codeRepository": "https://wiki.cancerimagingarchive.net/display/Public/TCIA+Programmatic+Interface+(REST+API)+Usage+Guide",
+  "relatedLink": [
+    "https://github.com/kirbyju/tcia_utils",
+    "https://www.cancerimagingarchive.net/collection/"
+  ],
+  "license": "CC-BY-3.0",
+  "keywords": [
+    "cancer",
+    "medical-imaging",
+    "dicom",
+    "ct",
+    "mri",
+    "pet",
+    "histopathology",
+    "oncology",
+    "radiology",
+    "benchmark",
+    "nci",
+    "open-data",
+    "tcga",
+    "lidc-idri"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "National Cancer Institute / University of Arkansas for Medical Sciences",
+      "url": "https://www.cancerimagingarchive.net/"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "oncology",
+    "radiology",
+    "pathology",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The primary open repository for cancer imaging data — NCI-funded, DICOM-format collections spanning CT, MRI, PET, and histopathology across all major cancer types. Hosts foundational benchmarks including LIDC-IDRI (lung nodule detection) and TCGA-linked imaging collections. REST API and Python client (tcia_utils) enable programmatic access. CC BY 3.0 for most collections. Adopt as the first stop for teams building or validating oncology imaging AI models.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.cancerimagingarchive.net/collection/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://wiki.cancerimagingarchive.net/display/Public/TCIA+Programmatic+Interface+(REST+API)+Usage+Guide",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1158/0008-5472.CAN-13-2966",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "The Cancer Imaging Archive (TCIA): Maintaining and Operating a Public Information Repository. Journal of Digital Imaging 2013."
+    }
+  ]
+}

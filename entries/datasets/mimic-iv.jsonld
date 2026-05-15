@@ -1,0 +1,74 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/mimic-iv",
+  "@type": [
+    "schema:Dataset"
+  ],
+  "identifier": "mimic-iv",
+  "name": "MIMIC-IV",
+  "alternateName": [
+    "Medical Information Mart for Intensive Care IV"
+  ],
+  "description": "Large de-identified EHR dataset from 364,627 patients across 546,028 hospital admissions and 94,458 ICU stays at Beth Israel Deaconess Medical Center (BIDMC), Boston. Organised into two modules: hosp (hospital-wide EHR: admissions, diagnoses, procedures, labs, prescriptions, microbiology) and icu (ICU clinical information system: charted events, inputs/outputs, procedures, datetimes). Time period 2008–2022, de-identified to 2100–2200 range. v3.1 (October 2024). Linked datasets include MIMIC-IV-Note (clinical notes), MIMIC-IV-ED (emergency department), and MIMIC-CXR (chest X-rays). PhysioNet Credentialed Health Data License 1.5.0 — requires free PhysioNet credentialing, CITI training completion, and DUA signature. The most widely used open clinical EHR dataset for ICU prediction, clinical NLP, and foundation model development.",
+  "url": "https://physionet.org/content/mimiciv/",
+  "license": "PhysioNet-CHDL-1.5",
+  "version": "3.1",
+  "dateModified": "2024-10-11",
+  "schema:includedInDataCatalog": {
+    "@type": "schema:DataCatalog",
+    "name": "PhysioNet",
+    "url": "https://physionet.org/"
+  },
+  "keywords": [
+    "icu",
+    "ehr",
+    "clinical-data",
+    "critical-care",
+    "hospital",
+    "deidentified",
+    "nlp",
+    "time-series",
+    "benchmark",
+    "bidmc",
+    "mit",
+    "physionet",
+    "foundation-model"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "MIT Laboratory for Computational Physiology",
+      "url": "https://lcp.mit.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets",
+  "mach:maturity": "production",
+  "mach:clinicalDomain": [
+    "critical-care",
+    "research",
+    "clinical-nlp"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The most widely used open EHR dataset for ICU and clinical AI research — 364k patients, 546k admissions, two structured modules (hosp + icu), with linked note and imaging datasets. Published in Scientific Data (2023), v3.1 October 2024. Access requires free PhysioNet credentialing and CITI training completion (DUA-restricted, not openly downloadable). Adopt for ICU mortality prediction, clinical NLP, foundation model pretraining, and benchmark tasks requiring real-world EHR data.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://physionet.org/content/mimiciv/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.13026/kpb9-mt58",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MIMIC-IV (version 3.1). PhysioNet 2024."
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/s41597-022-01899-x",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MIMIC-IV, a freely accessible electronic health record dataset. Scientific Data 2023."
+    }
+  ]
+}

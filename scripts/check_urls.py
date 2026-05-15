@@ -50,6 +50,9 @@ PAYWALL_OR_BOTBLOCK = {
     "sciencedirect.com",
 }
 
+# TLS verification intentionally disabled: many academic and hospital domains
+# have self-signed or misconfigured certs. We're checking link reachability,
+# not establishing a secure connection, so cert validity doesn't apply here.
 CTX = ssl.create_default_context()
 CTX.check_hostname = False
 CTX.verify_mode = ssl.CERT_NONE

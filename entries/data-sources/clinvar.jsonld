@@ -1,0 +1,74 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/clinvar",
+  "@type": [
+    "schema:Dataset",
+    "mach:DataSource"
+  ],
+  "identifier": "clinvar",
+  "name": "ClinVar",
+  "description": "Freely accessible public archive of human genomic variants classified for disease and drug response, maintained by NCBI/NLM/NIH. Contains 4.5M+ distinct variants from 6.8M+ submissions by 3,386 submitters across 95 countries — including clinical laboratories, expert panels, research institutions, and patient registries. Records are structured around two types: VCV (variant-centric) and RCV (variant-condition pairs), both carrying standardised pathogenicity classifications (Pathogenic, Likely Pathogenic, VUS, Likely Benign, Benign) and star-rated review status reflecting evidence quality. Supports HGVS notation, ClinGen expert panel curation, and Mondo/OMIM disease mapping. Accessible via web interface, bulk FTP download, and NCBI E-utilities REST API. Public domain (US government work). The authoritative open reference for germline variant interpretation used in clinical genetics, precision oncology, and genomic medicine pipelines.",
+  "url": "https://www.ncbi.nlm.nih.gov/clinvar/",
+  "codeRepository": "https://www.ncbi.nlm.nih.gov/clinvar/docs/api_http/",
+  "relatedLink": [
+    "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/",
+    "https://www.ncbi.nlm.nih.gov/clinvar/docs/ftp_primer/"
+  ],
+  "license": "CC0-1.0",
+  "keywords": [
+    "genomics",
+    "variants",
+    "clinical-genetics",
+    "pathogenicity",
+    "vus",
+    "hgvs",
+    "precision-medicine",
+    "germline",
+    "pharmacogenomics",
+    "ncbi",
+    "nih",
+    "open-data",
+    "clingen",
+    "rare-disease"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "National Center for Biotechnology Information / NIH",
+      "url": "https://www.ncbi.nlm.nih.gov/"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "clinical-genetics",
+    "oncology",
+    "rare-disease",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The authoritative open reference for germline variant-disease classification — 4.5M+ distinct variants, star-rated evidence quality, ClinGen expert panel curation, public domain. Accessible via REST API and bulk FTP. Used in clinical variant interpretation workflows, VUS resolution pipelines, genetic counselling decision support, and precision oncology. Adopt for any team building genomic medicine tools or ingesting variant significance data.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ncbi.nlm.nih.gov/clinvar/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ncbi.nlm.nih.gov/clinvar/docs/api_http/",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1093/nar/gkac1111",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "ClinVar: improvements to accessing data. Nucleic Acids Research 2023."
+    }
+  ]
+}

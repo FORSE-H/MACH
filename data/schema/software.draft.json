@@ -1,0 +1,266 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12",
+  "$id": "https://github.com/FORSE-H/MACH/blob/main/data/schema/software.draft.json",
+  "title": "MACH Software Entry",
+  "description": "JSON Schema for MACH software entries (entries/software/*.jsonld). Status: DRAFT — not yet enforced in CI.",
+  "type": "object",
+  "additionalProperties": true,
+
+  "required": [
+    "@context",
+    "@id",
+    "@type",
+    "identifier",
+    "name",
+    "description",
+    "url",
+    "codeRepository",
+    "license",
+    "mach:category",
+    "mach:judgement",
+    "mach:judgementReason",
+    "mach:editorialReviewedAt",
+    "mach:evidence"
+  ],
+
+  "properties": {
+    "@context": {
+      "type": "string",
+      "description": "Relative path to the MACH JSON-LD context file.",
+      "const": "../../data/context/mach.jsonld"
+    },
+    "@id": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical IRI for this entry in the MACH catalog."
+    },
+    "@type": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        }
+      ],
+      "description": "schema.org type(s). Software entries use schema:SoftwareApplication and/or schema:SoftwareSourceCode."
+    },
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Slug used as file name and internal key. Lowercase alphanumeric and hyphens only."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Display name of the software."
+    },
+    "alternateName": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Abbreviations, former names, or alternate titles."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 50,
+      "description": "Rich editorial description. Should include: what it does, key features, language, license, stars, version, date, institutional origin, and notable publications."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Primary public URL (project site, docs, or GitHub if no separate site)."
+    },
+    "codeRepository": {
+      "type": "string",
+      "format": "uri",
+      "description": "Source code repository URL (GitHub, GitLab, etc.)."
+    },
+    "relatedLink": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" },
+      "description": "Additional URLs: docs, PyPI, package registries, related projects."
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX license identifier (e.g. Apache-2.0, MIT, GPL-3.0, AGPL-3.0). Use LicenseRef-proprietary for non-OSI licences."
+    },
+    "version": {
+      "type": "string",
+      "description": "Most recent stable release version at time of editorial review."
+    },
+    "dateModified": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the most recent release or significant commit (YYYY-MM-DD)."
+    },
+    "programmingLanguage": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Primary programming languages."
+    },
+    "operatingSystem": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Linux", "macOS", "Windows", "Android", "iOS", "Web", "Cross-platform"]
+      },
+      "description": "Supported operating systems."
+    },
+    "applicationCategory": {
+      "type": "string",
+      "description": "schema.org applicationCategory. Use 'Healthcare' for all MACH entries unless a more specific term applies."
+    },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Lowercase kebab-case tags for discovery."
+    },
+    "author": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "@type": { "type": "string", "enum": ["Person", "Organization"] },
+          "name": { "type": "string" },
+          "affiliation": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        },
+        "required": ["@type", "name"]
+      },
+      "description": "Author(s) or maintaining organisation(s)."
+    },
+
+    "mach:category": {
+      "type": "string",
+      "enum": [
+        "software",
+        "ai-ml-models",
+        "datasets-benchmarks",
+        "mcp-servers",
+        "interoperability-standards",
+        "tooling-infrastructure",
+        "clinical-systems",
+        "medical-imaging-signals",
+        "public-health-epi",
+        "patient-facing-mhealth",
+        "deidentification-privacy",
+        "quality-conformance",
+        "terminologies-ontologies",
+        "compliance-governance"
+      ],
+      "description": "Primary MACH taxonomy category. Software entries should use 'software'."
+    },
+    "mach:governance": {
+      "type": "string",
+      "enum": [
+        "foundation",
+        "vendor-led",
+        "individual",
+        "government",
+        "academic",
+        "community"
+      ],
+      "description": "Who controls the project's direction and releases."
+    },
+    "mach:maturity": {
+      "type": "string",
+      "enum": ["experimental", "beta", "production", "legacy"],
+      "description": "Development maturity level."
+    },
+    "mach:deploymentContext": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "self-hosted",
+          "cloud",
+          "hybrid",
+          "offline-capable",
+          "embedded",
+          "saas",
+          "kubernetes"
+        ]
+      },
+      "description": "How the software is typically deployed."
+    },
+    "mach:clinicalDomain": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Clinical or research domains the software serves. Free-text for now; will be constrained to a controlled vocabulary in Phase 2."
+    },
+    "mach:judgement": {
+      "type": "string",
+      "enum": ["Adopt", "Assess", "Situational", "Caution"],
+      "description": "MACH editorial recommendation ring. Adopt=ready for production use; Assess=worth evaluating; Situational=right tool for specific contexts; Caution=significant barriers (license, maintenance, safety)."
+    },
+    "mach:judgementReason": {
+      "type": "string",
+      "minLength": 80,
+      "description": "1–3 sentences explaining the judgement. Must address: evidence quality, maturity, license implications, and who should adopt/avoid."
+    },
+    "mach:editorialReviewedAt": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the entry was last substantively reviewed by a MACH editor (YYYY-MM-DD)."
+    },
+    "mach:evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["@type", "url", "mach:evidenceType"],
+        "properties": {
+          "@type": {
+            "type": "string",
+            "enum": ["schema:WebPage", "schema:ScholarlyArticle", "schema:Dataset"]
+          },
+          "url": { "type": "string", "format": "uri" },
+          "mach:evidenceType": {
+            "type": "string",
+            "enum": [
+              "primary-repo",
+              "documentation",
+              "academic-reference",
+              "clinical-trial",
+              "benchmark",
+              "package-registry",
+              "community-forum"
+            ]
+          },
+          "schema:name": { "type": "string" }
+        }
+      },
+      "description": "Supporting evidence with at least one live primary-repo or documentation URL."
+    },
+    "mach:swhid": {
+      "type": "string",
+      "pattern": "^swh:1:(ori|dir|rev|rel|snp):[0-9a-f]{40}$",
+      "description": "Software Heritage persistent identifier for long-term archival."
+    }
+  },
+
+  "$defs": {
+    "_notes": {
+      "status": "DRAFT — open for review, not yet wired into CI validate.yml",
+      "open_questions": [
+        "Should 'license' be validated against a known SPDX list or remain free-text?",
+        "Should mach:clinicalDomain be an enum now or stay free-text until Phase 2 classifier is built?",
+        "Should mach:swhid be required for Adopt-ring entries?",
+        "Minimum minLength for mach:judgementReason — 80 chars reasonable?",
+        "Should we add a maxLength for description to prevent runaway text?"
+      ],
+      "standards_alignment": {
+        "CodeMeta_3.0": "name, description, url, codeRepository, license, version, programmingLanguage, operatingSystem, author, keywords map directly to CodeMeta terms",
+        "schema.org": "@type values (SoftwareApplication, SoftwareSourceCode) and applicationCategory follow schema.org",
+        "mach_vocabulary": "All mach: prefixed fields are defined in data/context/mach.jsonld",
+        "SPDX_3.0": "license field should use SPDX identifiers per SPDX 3.0 spec"
+      },
+      "next_steps": [
+        "Create parallel schemas: models.draft.json, datasets.draft.json, mcp-servers.draft.json",
+        "Wire into CI validate.yml using ajv (Node) or jsonschema (Python)",
+        "Create SHACL shapes in data/shacl/ for RDF-level validation",
+        "Replace manual Python field checks in validate.yml once schemas are approved"
+      ]
+    }
+  }
+}

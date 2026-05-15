@@ -1,0 +1,92 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/ptb-xl",
+  "@type": [
+    "schema:Dataset"
+  ],
+  "identifier": "ptb-xl",
+  "name": "PTB-XL",
+  "alternateName": [
+    "PTB-XL ECG Dataset"
+  ],
+  "description": "Large publicly available 12-lead ECG dataset containing 21,799 clinical recordings from 18,869 patients (ages 0–95, 52% male) collected at the Physikalisch-Technische Bundesanstalt (PTB). Each record is a 10-second 12-lead ECG annotated by up to two cardiologists with 71 standardised SCP-ECG diagnostic, form, and rhythm statements. Provided in WFDB format at two sampling frequencies: 500 Hz (full) and 100 Hz (downsampled). Includes signal quality metadata (noise, baseline drift, artefacts) and comprehensive demographic and clinical metadata. Supplies recommended train/validation/test splits for reproducible benchmarking. CC BY 4.0, v1.0.3 (November 2022). Published in Scientific Data 2020 (Wagner et al.). The de facto benchmark for deep learning ECG classification research.",
+  "url": "https://physionet.org/content/ptb-xl/",
+  "license": "CC-BY-4.0",
+  "version": "1.0.3",
+  "dateModified": "2022-11-09",
+  "schema:includedInDataCatalog": {
+    "@type": "schema:DataCatalog",
+    "name": "PhysioNet",
+    "url": "https://physionet.org/"
+  },
+  "keywords": [
+    "ecg",
+    "electrocardiography",
+    "12-lead",
+    "cardiac",
+    "benchmark",
+    "wfdb",
+    "scp-ecg",
+    "deep-learning",
+    "cardiology",
+    "classification",
+    "time-series",
+    "ptb",
+    "physionet"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Patrick Wagner",
+      "affiliation": "Physikalisch-Technische Bundesanstalt"
+    },
+    {
+      "@type": "Person",
+      "name": "Nils Strodthoff",
+      "affiliation": "Physikalisch-Technische Bundesanstalt"
+    },
+    {
+      "@type": "Person",
+      "name": "Ralf-Dieter Bousseljot",
+      "affiliation": "Physikalisch-Technische Bundesanstalt"
+    },
+    {
+      "@type": "Person",
+      "name": "Wojciech Samek",
+      "affiliation": "Physikalisch-Technische Bundesanstalt"
+    },
+    {
+      "@type": "Person",
+      "name": "Tobias Schaeffter",
+      "affiliation": "Physikalisch-Technische Bundesanstalt"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:category": "datasets",
+  "mach:maturity": "production",
+  "mach:clinicalDomain": [
+    "cardiology",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The de facto benchmark for 12-lead ECG deep learning research — 21,799 cardiologist-annotated recordings with 71 SCP-ECG labels, standardised train/val/test splits, and CC BY 4.0 access. Published in Scientific Data (2020) and widely cited across ECG classification, arrhythmia detection, and foundation model work. WFDB format with dual sampling rates (500 Hz / 100 Hz). Adopt for any team building or evaluating ECG AI models.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://physionet.org/content/ptb-xl/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/s41597-020-0495-6",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "PTB-XL, a large publicly available electrocardiography dataset. Scientific Data 2020."
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://doi.org/10.13026/kfzx-aw45",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}

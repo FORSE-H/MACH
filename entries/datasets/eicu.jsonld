@@ -1,0 +1,75 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/eicu",
+  "@type": [
+    "schema:Dataset"
+  ],
+  "identifier": "eicu",
+  "name": "eICU Collaborative Research Database",
+  "alternateName": [
+    "eICU-CRD"
+  ],
+  "description": "Multi-center ICU database containing data from 200,000+ admissions of 139,000+ patients across 335 ICU units at 208 hospitals across the continental United States, collected in 2014–2015 via Philips Healthcare's eCareManager telehealth system. Covers charted vital signs, nursing assessments, care plans, diagnosis codes, lab results, medication orders, and respiratory charting. Key differentiator from MIMIC-IV: multi-center design enables generalisability studies and hospital-level variation analysis. PhysioNet Credentialed Health Data License 1.5.0 — requires free PhysioNet credentialing, CITI training, and DUA signature. v2.0 (April 2019). Published in Scientific Data 2018 (Pollard et al.). Developed by MIT Laboratory for Computational Physiology and Philips Healthcare.",
+  "url": "https://physionet.org/content/eicu-crd/",
+  "license": "PhysioNet-CHDL-1.5",
+  "version": "2.0",
+  "dateModified": "2019-04-15",
+  "schema:includedInDataCatalog": {
+    "@type": "schema:DataCatalog",
+    "name": "PhysioNet",
+    "url": "https://physionet.org/"
+  },
+  "keywords": [
+    "icu",
+    "critical-care",
+    "multi-center",
+    "ehr",
+    "telehealth",
+    "time-series",
+    "benchmark",
+    "deidentified",
+    "philips",
+    "mit",
+    "physionet",
+    "mortality-prediction"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "MIT Laboratory for Computational Physiology",
+      "url": "https://lcp.mit.edu/"
+    },
+    {
+      "@type": "Organization",
+      "name": "Philips Healthcare"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets",
+  "mach:maturity": "production",
+  "mach:clinicalDomain": [
+    "critical-care",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The leading multi-center open ICU dataset — 200k+ admissions across 208 US hospitals, enabling generalisation studies not possible with single-center datasets like MIMIC-IV. Published in Scientific Data (2018). Access requires free PhysioNet credentialing and DUA signature. Adopt alongside MIMIC-IV for any critical care AI work requiring external validation or hospital-level heterogeneity.",
+  "mach:editorialReviewedAt": "2026-05-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://physionet.org/content/eicu-crd/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/sdata.2018.178",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "The eICU Collaborative Research Database, a freely available multi-center database for critical care research. Scientific Data 2018."
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://doi.org/10.13026/C2WM1R",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}

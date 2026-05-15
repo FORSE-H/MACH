@@ -86,6 +86,24 @@ accept well-evidenced entries regardless of affiliation, but disclosure is manda
 
 ---
 
+## Evaluating judgements
+
+Before settling on a judgement level, run the scoring helper against the entry you are adding:
+
+```bash
+# Score a single entry (shows editorial + FAIR breakdown)
+python scripts/suggest_judgement.py --show-scores --no-fetch
+
+# Include GitHub/PyPI signals (requires GITHUB_TOKEN for > 60 req/hr)
+GITHUB_TOKEN=<token> python scripts/suggest_judgement.py --show-scores
+```
+
+The script prints suggested vs current judgement with a full signal breakdown
+(maturity, governance, forks, PyPI downloads, license, evidence quality).
+It does not override editorial discretion — it surfaces signals you might have missed.
+
+---
+
 ## Review process
 
 1. CI validates JSON-LD schema and checks for dead links.

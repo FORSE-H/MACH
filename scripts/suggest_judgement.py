@@ -227,6 +227,8 @@ MATURITY_SCORE = {
     "legacy":       0,
 }
 
+# Weights mirror DHCF Publication 2, Section 8 "Organisational characteristics
+# that support openness": independent governance > academic/gov > vendor > solo.
 GOVERNANCE_SCORE = {
     "foundation":  3,
     "community":   3,
