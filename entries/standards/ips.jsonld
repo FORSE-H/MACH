@@ -1,11 +1,18 @@
 {
   "@context": "../../data/context/mach.jsonld",
   "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/ips",
-  "@type": ["schema:TechArticle", "mach:Standard"],
-
+  "@type": [
+    "schema:TechArticle",
+    "mach:Standard"
+  ],
   "identifier": "ips",
   "name": "International Patient Summary",
-  "alternateName": ["IPS", "HL7 IPS", "ISO 27269", "HL7 FHIR IPS IG"],
+  "alternateName": [
+    "IPS",
+    "HL7 IPS",
+    "ISO 27269",
+    "HL7 FHIR IPS IG"
+  ],
   "description": "A minimal, specialty-agnostic FHIR R4 Implementation Guide defining a structured electronic health record extract containing essential healthcare information about a patient. Standardised jointly by HL7 International and ISO (ISO 27269:2021). The IPS dataset covers 14 clinical sections — allergies and intolerances, medication summary, problem list, immunisations, procedures, medical devices, diagnostic results, past history of illness, functional status, plan of care, social history, pregnancy history, advance directives, and vital signs — using SNOMED CT, LOINC, RxNorm, and EDQM for coded content. Designed primarily for unplanned cross-border care but applicable to planned care, care transitions, and local continuity-of-care use cases. Version 2.0.0 (STU 2) published October 2025. Mandated by the EU eHDSI (Electronic Health Data Service Infrastructure) for cross-border patient data exchange under the myHealth@EU programme and referenced in the EU Health Data Space (EHDS) regulation.",
   "url": "https://hl7.org/fhir/uv/ips/",
   "codeRepository": "https://github.com/HL7/fhir-ips",
@@ -13,7 +20,6 @@
     "https://www.iso.org/standard/79491.html",
     "https://health.ec.europa.eu/ehealth-digital-health-and-care/ehealth-and-digital-health_en"
   ],
-
   "license": "CC0-1.0",
   "dateModified": "2025-10-03",
   "softwareVersion": "2.0.0",
@@ -33,13 +39,11 @@
     "care-transitions",
     "eu-health"
   ],
-
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Health Level Seven International (HL7)",
     "url": "https://www.hl7.org/"
   },
-
   "author": [
     {
       "@type": "Organization",
@@ -47,13 +51,15 @@
       "url": "https://www.hl7.org/Special/committees/patientcare/"
     }
   ],
-
   "mach:governance": "foundation",
   "mach:foundation": "Health Level Seven International (HL7) / ISO",
   "mach:category": "interoperability-standards",
   "mach:subcategory": "fhir",
   "mach:maturity": "production",
-  "mach:deploymentContext": ["cloud", "self-hosted"],
+  "mach:deploymentContext": [
+    "cloud",
+    "self-hosted"
+  ],
   "mach:clinicalDomain": [
     "emergency",
     "primary-care",
@@ -61,11 +67,9 @@
     "cross-border",
     "care-transitions"
   ],
-
   "mach:judgement": "Adopt",
   "mach:judgementReason": "The global standard for portable patient summaries — ISO 27269 + HL7 FHIR R4 IG, mandated by the EU for cross-border health data exchange (eHDSI / myHealth@EU) and referenced in the EU Health Data Space regulation. CC0 licensed. Any team building care transition, cross-border, or patient-facing health data flows should implement IPS as the minimum patient context payload.",
   "mach:editorialReviewedAt": "2026-05-15",
-
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -82,5 +86,6 @@
       "url": "https://health.ec.europa.eu/ehealth-digital-health-and-care/ehealth-and-digital-health_en",
       "mach:evidenceType": "regulatory-reference"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:7cb6fd76ce8e2dab4357ab04327ffe9cb595be78"
 }
