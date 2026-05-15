@@ -52,7 +52,9 @@ TYPE_LABELS = {
     "mach:MLModel":       "ML Model",
     "mach:MCPServer":     "MCP Server",
     "mach:Standard":      "Standard",
+    "mach:DataSource":    "Data Source",
     "mach:Dataset":       "Dataset",
+    "schema:Dataset":     "Dataset",
     "schema:DataCatalog": "Catalog",
 }
 
