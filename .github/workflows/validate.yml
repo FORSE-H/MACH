@@ -127,3 +127,6 @@ jobs:
           else:
               print(f"No duplicate identifiers. {len(ids)} entries checked.")
           EOF
+
+      - name: Check primary URLs for dead links
+        run: python scripts/check_urls.py --primary-only
