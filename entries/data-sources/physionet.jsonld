@@ -13,7 +13,6 @@
   ],
   "description": "Open repository of freely available physiological signals and related clinical data, maintained by the MIT Laboratory for Computational Physiology. Hosts 130+ curated datasets covering ECG, ICU monitoring, sleep studies, and multimodal clinical time-series data — including MIMIC-III, MIMIC-IV, PTB-XL, eICU, MIT-BIH Arrhythmia, and MIMIC-CXR. Datasets are published with DOIs, versioned, and accessible via browser download, WFDB library, or REST API. Access tier varies by dataset: many are open CC BY 4.0; others require free PhysioNet credentialing (DUA and training completion). Also co-organises the annual PhysioNet/Computing in Cardiology Challenge. Founded in 2000 with Circulation paper (Goldberger et al.); now the primary open repository for clinical signal research.",
   "url": "https://physionet.org/",
-  "codeRepository": "https://physionet.org/rest/v1/",
   "relatedLink": [
     "https://physionet.org/content/",
     "https://wfdb.readthedocs.io/"
@@ -62,7 +61,7 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://physionet.org/rest/v1/",
+      "url": "https://physionet.org/content/",
       "mach:evidenceType": "documentation"
     },
     {
