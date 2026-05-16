@@ -71,5 +71,6 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "PhysioBank, PhysioToolkit, and PhysioNet: Components of a New Research Resource for Complex Physiologic Signals. Circulation 2000."
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:3efbfc668f5a4ac105a85fbfc7d92c9a2d6e740d"
 }
