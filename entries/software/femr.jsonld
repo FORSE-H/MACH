@@ -55,5 +55,6 @@
       "url": "https://github.com/som-shahlab/femr",
       "mach:evidenceType": "primary-repo"
     }
-  ]
+  ],
+  "mach:swhid": "swh:1:ori:9b741685df88a449a445ad2b5d4cb012cf249668"
 }
