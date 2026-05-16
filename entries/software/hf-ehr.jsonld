@@ -14,6 +14,7 @@
     "https://github.com/som-shahlab/femr"
   ],
   "license": "Apache-2.0",
+  "mach:huggingFaceUrl": "https://huggingface.co/StanfordShahLab",
   "softwareVersion": "0.1.2",
   "keywords": [
     "ehr",

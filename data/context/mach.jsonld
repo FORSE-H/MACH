@@ -58,6 +58,9 @@
     "mach:transport":           { "@id": "mach:transport" },
     "mach:authMethod":          { "@id": "mach:authMethod" },
     "mach:fhirVersion":         { "@id": "mach:fhirVersion" },
-    "mach:mcpSpecVersion":      { "@id": "mach:mcpSpecVersion" }
+    "mach:mcpSpecVersion":      { "@id": "mach:mcpSpecVersion" },
+
+    "mach:huggingFaceUrl":      { "@id": "mach:huggingFaceUrl" },
+    "mach:swhid":               { "@id": "mach:swhid" }
   }
 }

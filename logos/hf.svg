@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Face -->
+  <circle cx="50" cy="52" r="46" fill="#FFD21E"/>
+  <!-- Left eye (squinting arc) -->
+  <path d="M 27 42 Q 34 34 41 42" stroke="#1a1a1a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Right eye (squinting arc) -->
+  <path d="M 59 42 Q 66 34 73 42" stroke="#1a1a1a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Smile -->
+  <path d="M 28 62 Q 50 82 72 62" stroke="#1a1a1a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Rosy cheeks -->
+  <ellipse cx="22" cy="60" rx="9" ry="6" fill="#FF9F9F" opacity="0.5"/>
+  <ellipse cx="78" cy="60" rx="9" ry="6" fill="#FF9F9F" opacity="0.5"/>
+</svg>

@@ -93,9 +93,10 @@ def _is_repo_url(url):
         return False
 
 def build_url_links(e):
-    site  = e.get("url", "")
-    repo  = e.get("codeRepository", "")
-    swhid = e.get("mach:swhid", "")
+    site   = e.get("url", "")
+    repo   = e.get("codeRepository", "")
+    swhid  = e.get("mach:swhid", "")
+    hf_url = e.get("mach:huggingFaceUrl", "")
     links = []
     if site:
         label = "repo" if _is_repo_url(site) else "site"
@@ -105,6 +106,8 @@ def build_url_links(e):
     if swhid:
         swh_url = f"https://archive.softwareheritage.org/browse/origin/?origin_url={repo or site}"
         links.append(f'<a href="{swh_url}" target="_blank" rel="noopener" class="entry-url entry-swh" title="Archived on Software Heritage&#10;{swhid}"><img src="logos/swh.svg" alt="" class="swh-icon">swh</a>')
+    if hf_url:
+        links.append(f'<a href="{hf_url}" target="_blank" rel="noopener" class="entry-url entry-hf" title="Available on HuggingFace Hub"><img src="logos/hf.svg" alt="" class="swh-icon">hf</a>')
     return "".join(links)
 
 def build_entries_html(entries):
