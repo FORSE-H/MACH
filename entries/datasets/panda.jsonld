@@ -12,7 +12,7 @@
   ],
   "description": "The largest publicly available whole-slide imaging dataset, containing ~11,000 H&E-stained prostate biopsy WSIs with Gleason grading annotations from Radboud University Medical Center and Karolinska Institute. Designed to evaluate automated Gleason grading — the primary clinical severity score for prostate cancer. Approximately 8 times the size of CAMELYON17. Originally run as a Kaggle competition (2020), now available for ongoing scientific research. Dataset available via Kaggle. CC BY-SA-NC 4.0 (non-commercial use only). Organised by Radboudumc, Karolinska Institute, and Tampere University.",
   "url": "https://panda.grand-challenge.org/",
-  "codeRepository": "https://www.kaggle.com/competitions/prostate-cancer-grade-assessment",
+  "codeRepository": "https://www.kaggle.com/c/prostate-cancer-grade-assessment",
   "license": "CC-BY-NC-SA-4.0",
   "keywords": [
     "digital-pathology",

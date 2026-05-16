@@ -12,7 +12,7 @@
   ],
   "description": "Open repository of de-identified cancer imaging data funded by the National Cancer Institute (NCI) and hosted at the University of Arkansas for Medical Sciences (UAMS). Organises data into collections by cancer type, imaging modality, or research programme — covering CT, MRI, PET, digital histopathology (DICOM format), and supporting clinical data (outcomes, genomics, treatment details). Notable collections include LIDC-IDRI (lung nodule CT, 1,018 cases), TCGA imaging collections linked to TCGA genomics, NLST (National Lung Screening Trial), and QIN challenge datasets. Programmatic access via TCIA REST API (NBIA Data Retriever) and TCIA Python client. Most collections are CC BY 3.0; some newer collections use CC BY 4.0. Free registration required for some restricted collections. The primary open archive for cancer imaging research and AI model development in oncology.",
   "url": "https://www.cancerimagingarchive.net/",
-  "codeRepository": "https://wiki.cancerimagingarchive.net/display/Public/TCIA+Programmatic+Interface+(REST+API)+Usage+Guide",
+  "codeRepository": "https://www.cancerimagingarchive.net/access-data/",
   "relatedLink": [
     "https://github.com/kirbyju/tcia_utils",
     "https://www.cancerimagingarchive.net/collection/"
