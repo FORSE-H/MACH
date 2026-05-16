@@ -1,0 +1,76 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/medhelm",
+  "@type": [
+    "schema:Dataset",
+    "mach:Benchmark"
+  ],
+  "identifier": "medhelm",
+  "name": "MedHELM",
+  "alternateName": [
+    "Holistic Evaluation of Large Language Models for Medical Tasks"
+  ],
+  "description": "Comprehensive evaluation framework for benchmarking LLMs on medical tasks, built on Stanford CRFM's HELM platform. Covers 121 clinician-validated tasks across 5 domains — clinical decision support, clinical note generation, patient communication, medical research assistance, and administration/workflow — spanning 35 benchmarks (17 existing + 18 newly formulated). Uses an LLM-jury evaluation methodology with agreement rates comparable to clinician ratings. Includes a live public leaderboard at medhelm.org. Published in Nature Medicine 2025 by Stanford CRFM, Shah Lab, and Microsoft Health.",
+  "url": "https://medhelm.org/",
+  "codeRepository": "https://github.com/som-shahlab/medhelm",
+  "relatedLink": [
+    "https://crfm-helm.readthedocs.io/en/latest/medhelm/",
+    "https://arxiv.org/abs/2505.23802"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "llm-evaluation",
+    "benchmark",
+    "clinical-nlp",
+    "clinical-decision-support",
+    "note-generation",
+    "medical-ai",
+    "helm",
+    "leaderboard",
+    "stanford",
+    "nature-medicine"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Stanford CRFM / Shah Lab / Microsoft Health",
+      "url": "https://crfm.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Stanford University / Microsoft",
+  "mach:category": "datasets-benchmarks",
+  "mach:subcategory": "clinical-benchmark",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "oncology",
+    "research"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The most comprehensive open evaluation framework for medical LLMs — 121 clinician-validated tasks across 5 clinical domains, published in Nature Medicine 2025. Built on the established HELM framework with Apache 2.0 licence. The repo is very new and community traction is still low. Assess now; expect to move to Adopt once star count and downstream adoption confirm real-world uptake beyond the paper.",
+  "mach:editorialReviewedAt": "2026-05-16",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://medhelm.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/som-shahlab/medhelm",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://www.nature.com/articles/s41591-025-04151-2",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MedHELM: Holistic Evaluation of Large Language Models for Medical Tasks. Nature Medicine 2025."
+    }
+  ]
+}
