@@ -1,0 +1,59 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/femr",
+  "@type": [
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "femr",
+  "name": "FEMR",
+  "alternateName": [
+    "Framework for Electronic Medical Records"
+  ],
+  "description": "Python framework for large-scale self-supervised learning on electronic health records. Provides tooling for converting raw EHR data to the MEDS (Medical Event Data Standard) format, building code ontologies (SNOMED, LOINC, ICD), and training clinical foundation models — including MOTOR, a BERT-style model pretrained on structured EHR events. Supports labelling functions, feature extraction pipelines, and evaluation utilities. Designed to lower the barrier to reproducing and extending EHR foundation model research. Apache 2.0. From the Shah Lab at Stanford Medicine.",
+  "url": "https://github.com/som-shahlab/femr",
+  "codeRepository": "https://github.com/som-shahlab/femr",
+  "license": "Apache-2.0",
+  "softwareVersion": "0.2.4",
+  "keywords": [
+    "ehr",
+    "foundation-model",
+    "self-supervised",
+    "meds",
+    "clinical-nlp",
+    "motor",
+    "stanford",
+    "omop",
+    "structured-ehr",
+    "python"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Shah Lab, Stanford Medicine",
+      "url": "https://shahlab.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Stanford University",
+  "mach:category": "tooling-infrastructure",
+  "mach:maturity": "beta",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "research"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The most capable open framework for training EHR foundation models on structured data. Tightly integrated with the MEDS standard and the EHRSHOT benchmark (both from the same Shah Lab). Apache 2.0, 173 stars, v0.2.4. Assess rather than Adopt because it is pre-1.0 with a beta API and MEDS itself is still stabilising. Teams building clinical foundation models on structured EHR should evaluate this before building custom pipelines.",
+  "mach:editorialReviewedAt": "2026-05-16",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/som-shahlab/femr",
+      "mach:evidenceType": "primary-repo"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/medalign",
+  "@type": [
+    "schema:Dataset",
+    "mach:Benchmark"
+  ],
+  "identifier": "medalign",
+  "name": "MedAlign",
+  "description": "Clinician-curated benchmark for evaluating LLM instruction-following on real clinical tasks. Contains 983 natural-language instructions authored by clinicians, paired with 275 de-identified longitudinal EHRs from Stanford Health Care. Instructions span a wide range of clinical reasoning tasks — summarisation, differential diagnosis, care plan generation, and follow-up ordering. Designed to assess whether LLMs can faithfully execute what a clinician actually asks, not just answer medical trivia. Dataset access requires a Stanford AIMI data use agreement; evaluation code is MIT. From the Shah Lab at Stanford Medicine.",
+  "url": "https://github.com/som-shahlab/medalign",
+  "codeRepository": "https://github.com/som-shahlab/medalign",
+  "license": "MIT",
+  "keywords": [
+    "clinical-benchmark",
+    "instruction-following",
+    "ehr",
+    "clinical-reasoning",
+    "llm-evaluation",
+    "longitudinal",
+    "stanford",
+    "clinician-authored"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Shah Lab, Stanford Medicine",
+      "url": "https://shahlab.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Stanford University",
+  "mach:category": "datasets-benchmarks",
+  "mach:subcategory": "clinical-benchmark",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "research"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "One of the few benchmarks that evaluates LLM instruction-following against real longitudinal EHRs using clinician-authored tasks — a much harder and more clinically valid signal than MCQ benchmarks. MIT code licence, 99 stars. Assess because the dataset itself requires a Stanford AIMI DUA (not freely downloadable) and there are no versioned releases. Essential reference for teams evaluating clinical LLMs on realistic EHR reasoning tasks.",
+  "mach:editorialReviewedAt": "2026-05-16",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/som-shahlab/medalign",
+      "mach:evidenceType": "primary-repo"
+    }
+  ]
+}

@@ -12,10 +12,11 @@
   ],
   "description": "Comprehensive evaluation framework for benchmarking LLMs on medical tasks, built on Stanford CRFM's HELM platform. Covers 121 clinician-validated tasks across 5 domains — clinical decision support, clinical note generation, patient communication, medical research assistance, and administration/workflow — spanning 35 benchmarks (17 existing + 18 newly formulated). Uses an LLM-jury evaluation methodology with agreement rates comparable to clinician ratings. Includes a live public leaderboard at medhelm.org. Published in Nature Medicine 2025 by Stanford CRFM, Shah Lab, and Microsoft Health.",
   "url": "https://medhelm.org/",
-  "codeRepository": "https://github.com/som-shahlab/medhelm",
+  "codeRepository": "https://github.com/stanford-crfm/helm",
   "relatedLink": [
     "https://crfm-helm.readthedocs.io/en/latest/medhelm/",
-    "https://arxiv.org/abs/2505.23802"
+    "https://arxiv.org/abs/2505.23802",
+    "https://github.com/som-shahlab/medhelm"
   ],
   "license": "Apache-2.0",
   "keywords": [
@@ -63,7 +64,7 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://github.com/som-shahlab/medhelm",
+      "url": "https://github.com/stanford-crfm/helm",
       "mach:evidenceType": "primary-repo"
     },
     {
