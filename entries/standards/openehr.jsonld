@@ -12,8 +12,11 @@
     "openEHR Platform"
   ],
   "description": "Open specification for a vendor-neutral EHR platform based on a two-level modelling paradigm — separating stable technical architecture from clinician-defined content models (archetypes). Enables lifelong, patient-centric, semantically computable health records.",
-  "url": "https://openehr.org",
+  "url": "https://specifications.openehr.org/",
   "codeRepository": "https://github.com/openEHR/specifications-RM",
+  "relatedLink": [
+    "https://openehr.org"
+  ],
   "logo": "../../logos/openehr.svg",
   "license": "CC-BY-3.0",
   "dateModified": "2026-04-01",
