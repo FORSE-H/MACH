@@ -1,0 +1,71 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/cdisc-adam",
+  "@type": [
+    "schema:TechArticle",
+    "mach:Standard"
+  ],
+  "identifier": "cdisc-adam",
+  "name": "CDISC ADaM",
+  "alternateName": [
+    "Analysis Data Model",
+    "ADaM",
+    "CDISC ADaM v1.3"
+  ],
+  "description": "The CDISC standard for analysis-ready clinical trial datasets — the layer between raw SDTM tabulation data and the statistical analyses submitted to regulators. ADaM defines dataset structures and naming conventions that make it straightforward to trace every analysis result back to the source SDTM records (traceability). Core dataset types include ADSL (subject-level analysis dataset), ADAE (adverse events), ADLB (laboratory), ADTTE (time-to-event), and ADRS (response). Required by FDA and EMA alongside SDTM for new regulatory submissions. ADaM datasets are what statisticians and programmers build to produce the tables, listings, and figures (TLFs) in a clinical study report. ADaM Implementation Guides extend the model for specific endpoints — overall survival, PK, ECG, etc. Maintained by CDISC. Current version: ADaM v1.3 (2021). Companion to SDTM: SDTM = how trial data is collected and tabulated; ADaM = how it is analysed.",
+  "url": "https://www.cdisc.org/standards/foundational/adam",
+  "relatedLink": [
+    "https://github.com/cdisc-org/cdisc-rules-engine",
+    "https://www.cdisc.org/standards/foundational/sdtm"
+  ],
+  "license": "CDISC Intellectual Property License (freely available for implementation)",
+  "softwareVersion": "1.3",
+  "dateModified": "2021-11-01",
+  "keywords": [
+    "clinical-trials",
+    "regulatory",
+    "fda",
+    "ema",
+    "analysis-datasets",
+    "statistics",
+    "drug-submission",
+    "cdisc",
+    "pharma",
+    "traceability",
+    "tlf"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Clinical Data Interchange Standards Consortium (CDISC)",
+    "url": "https://www.cdisc.org"
+  },
+  "mach:governance": "foundation",
+  "mach:foundation": "Clinical Data Interchange Standards Consortium (CDISC)",
+  "mach:category": "interoperability-standards",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "clinical-trials",
+    "research",
+    "pharmacology",
+    "oncology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "Required alongside SDTM for FDA and EMA drug approval submissions — ADaM is the analysis layer that makes SDTM trial data machine-auditable and reproducible. Any team building statistical analysis pipelines, AI-assisted trial analytics, or regulatory-grade reporting tools must understand ADaM structure. The pair SDTM + ADaM defines the complete data lifecycle for regulated clinical trials.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.cdisc.org/standards/foundational/adam",
+      "mach:evidenceType": "specification"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.fda.gov/industry/study-data-standards-resources/study-data-submission-cder-and-cber",
+      "mach:evidenceType": "regulatory-reference"
+    }
+  ]
+}

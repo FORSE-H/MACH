@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/open-targets",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "open-targets",
+  "name": "Open Targets Platform",
+  "alternateName": [
+    "Open Targets"
+  ],
+  "description": "Open science platform for systematic identification and prioritisation of drug targets using human genetic, genomic, and disease evidence. Integrates data from GWAS, gene expression, somatic mutations, animal models, known drugs, and literature to generate target-disease association scores across 60,000+ targets and 23,000+ diseases/phenotypes. Provides a REST API, GraphQL API, and bulk data downloads (Parquet/JSON). Maintained by a public-private partnership: EMBL-EBI, Wellcome Sanger Institute, GSK, AstraZeneca, Bristol Myers Squibb, and Pfizer. Data releases every two months. Code Apache-2.0; data CC BY 4.0.",
+  "url": "https://platform.opentargets.org",
+  "relatedLink": [
+    "https://github.com/opentargets",
+    "https://platform.opentargets.org/api"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "drug-targets",
+    "genomics",
+    "gwas",
+    "disease-association",
+    "target-prioritisation",
+    "open-data",
+    "graphql",
+    "rest-api",
+    "pharma",
+    "precision-medicine"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Open Targets (EMBL-EBI / Wellcome Sanger / GSK / AstraZeneca / BMS / Pfizer)",
+      "url": "https://www.opentargets.org"
+    }
+  ],
+  "mach:governance": "foundation",
+  "mach:foundation": "Open Targets partnership (EMBL-EBI led)",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "oncology",
+    "rare-disease",
+    "research",
+    "pharmacology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The de-facto open platform for evidence-based drug target identification — integrates genetics, genomics, and disease data across 60k+ targets with a REST/GraphQL API and CC BY 4.0 bulk downloads. Public-private partnership (EMBL-EBI + GSK + AstraZeneca + BMS + Pfizer) ensures long-term sustainability. Adopt for any team building target discovery pipelines, drug repurposing models, or grounding clinical AI with gene-disease associations.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://platform.opentargets.org",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://platform.opentargets.org/api",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1093/nar/gkab1049",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Open Targets Platform: supporting systematic drug-target identification and prioritisation. Nucleic Acids Research 2022."
+    }
+  ]
+}

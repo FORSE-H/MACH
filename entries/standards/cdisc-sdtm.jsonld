@@ -1,0 +1,76 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/cdisc-sdtm",
+  "@type": [
+    "schema:TechArticle",
+    "mach:Standard"
+  ],
+  "identifier": "cdisc-sdtm",
+  "name": "CDISC SDTM",
+  "alternateName": [
+    "Study Data Tabulation Model",
+    "SDTM",
+    "CDISC SDTM v3.4"
+  ],
+  "description": "The regulatory standard for organising and formatting clinical trial data submitted to the FDA and EMA. SDTM defines a set of domain models — subject demographics (DM), adverse events (AE), laboratory results (LB), vital signs (VS), medical history (MH), and ~40 other domains — each with standardised variable names, controlled terminology, and metadata. Required for all new drug and biologic NDA/BLA submissions to the FDA since 2016 and for EMA submissions via CDISC Harmonised Protocol. SDTM Implementation Guides (SDTMIGs) extend the base model for therapeutic area-specific data (oncology, cardiovascular, neuroscience). Maintained by CDISC (Clinical Data Interchange Standards Consortium), a non-profit standards body with pharmaceutical industry membership. Current version: SDTM v3.4 / SDTMIG v3.4 (2024). Open-source validation tooling available via the CDISC Rules Engine (github.com/cdisc-org/cdisc-rules-engine, MIT).",
+  "url": "https://www.cdisc.org/standards/foundational/sdtm",
+  "relatedLink": [
+    "https://github.com/cdisc-org/cdisc-rules-engine",
+    "https://www.cdisc.org/standards/therapeutic-areas"
+  ],
+  "license": "CDISC Intellectual Property License (freely available for implementation)",
+  "softwareVersion": "3.4",
+  "dateModified": "2024-01-01",
+  "keywords": [
+    "clinical-trials",
+    "regulatory",
+    "fda",
+    "ema",
+    "drug-submission",
+    "data-tabulation",
+    "controlled-terminology",
+    "cdisc",
+    "pharma",
+    "nda",
+    "bla"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Clinical Data Interchange Standards Consortium (CDISC)",
+    "url": "https://www.cdisc.org"
+  },
+  "mach:governance": "foundation",
+  "mach:foundation": "Clinical Data Interchange Standards Consortium (CDISC)",
+  "mach:category": "interoperability-standards",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "clinical-trials",
+    "research",
+    "pharmacology",
+    "oncology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "Mandatory for FDA and EMA clinical trial data submissions — if your team touches drug development or regulatory-grade clinical trial data, SDTM is non-negotiable. Freely available to implement (CDISC IP License). The open-source CDISC Rules Engine (MIT) validates SDTM datasets against conformance rules. Adopt as the reference standard for any pipeline ingesting or producing clinical trial tabulation data.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.cdisc.org/standards/foundational/sdtm",
+      "mach:evidenceType": "specification"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/cdisc-org/cdisc-rules-engine",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.fda.gov/industry/study-data-standards-resources/study-data-submission-cder-and-cber",
+      "mach:evidenceType": "regulatory-reference"
+    }
+  ]
+}
