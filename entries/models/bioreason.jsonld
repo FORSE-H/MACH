@@ -1,0 +1,72 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/bioreason",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode",
+    "mach:MLModel"
+  ],
+  "identifier": "bioreason",
+  "name": "BioReason",
+  "description": "Multimodal biological reasoning model fusing a DNA foundation model with a large language model to generate interpretable, step-by-step mechanistic insights from genomic data. Achieves 98.28% accuracy on KEGG-based disease pathway prediction (up from 86% baseline) and 15%+ gains on variant effect classification over single-modality approaches. Designed for tasks requiring reasoning across DNA sequences and biological language — disease pathway inference, variant effect prediction, and gene-disease association. BioReason-Pro, a successor integrating ESM3 protein embeddings and reinforcement learning, has also been released by the same lab. NeurIPS 2025. Apache-2.0.",
+  "url": "https://bowang-lab.github.io/BioReason/",
+  "codeRepository": "https://github.com/bowang-lab/BioReason",
+  "license": "Apache-2.0",
+  "relatedLink": [
+    "https://arxiv.org/abs/2505.23579"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "dna",
+    "foundation-model",
+    "multimodal",
+    "biological-reasoning",
+    "genomics",
+    "variant-effect",
+    "disease-pathway",
+    "kegg",
+    "llm",
+    "neurips"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Bo Wang Lab, University of Toronto",
+      "url": "https://bowang-lab.github.io/"
+    }
+  ],
+  "mach:huggingFaceUrl": "https://huggingface.co/collections/wanglab/bioreason-683cd17172a037a31d208f70",
+  "mach:weightsLicense": "Apache-2.0",
+  "mach:trainingDataSummary": "Trained on genomic sequences paired with biological knowledge bases including KEGG pathways and variant effect datasets. Fuses DNA foundation model embeddings with LLM reasoning.",
+  "mach:intendedUse": "Biological reasoning research — disease pathway prediction, variant effect classification, gene-disease association. Sits at the genomics-clinical boundary. Not a cleared medical device.",
+  "mach:governance": "academic",
+  "mach:foundation": "Bo Wang Lab, University of Toronto",
+  "mach:category": "ai-ml-models",
+  "mach:maturity": "beta",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "oncology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Genuinely novel multimodal architecture fusing DNA and LLM reasoning — strong benchmark results (98.28% KEGG pathway accuracy) and NeurIPS 2025 pedigree. Apache-2.0, 387 stars, HuggingFace collection. Sits at the genomics-clinical boundary (similar to scGPT) so clinical adoption pathways are less direct than imaging or EHR tools. BioReason-Pro (ESM3 + RL) is already out from the same lab — monitor which version the community converges on before upgrading to Adopt.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/bowang-lab/BioReason",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2505.23579",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "BioReason: Incentivizing Multimodal Biological Reasoning within a DNA-LLM Model. NeurIPS 2025."
+    }
+  ]
+}

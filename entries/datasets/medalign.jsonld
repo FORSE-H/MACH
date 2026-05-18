@@ -49,6 +49,12 @@
       "@type": "schema:WebPage",
       "url": "https://github.com/som-shahlab/medalign",
       "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1609/aaai.v38i20.30205",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MedAlign: A Clinician-Generated Dataset for Instruction Following with Electronic Medical Records. AAAI 2024."
     }
   ]
 }

@@ -1,0 +1,74 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/scgpt",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode",
+    "mach:MLModel"
+  ],
+  "identifier": "scgpt",
+  "name": "scGPT",
+  "alternateName": [
+    "single-cell GPT"
+  ],
+  "description": "Generative foundation model for single-cell multi-omics analysis. Pre-trained on 33 million normal human cells from CellXGene across brain, blood, heart, lung, kidney, and pan-cancer tissue. Enables cell type annotation, scRNA-seq integration, gene regulatory network inference, and reference mapping. Supports fine-tuning on specific cell populations and zero-shot cell embedding for large-scale similarity searches. MIT, v0.2.4.",
+  "url": "https://github.com/bowang-lab/scGPT",
+  "codeRepository": "https://github.com/bowang-lab/scGPT",
+  "license": "MIT",
+  "softwareVersion": "0.2.4",
+  "relatedLink": [
+    "https://www.biorxiv.org/content/10.1101/2023.04.30.538439"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "single-cell",
+    "rna-seq",
+    "multi-omics",
+    "foundation-model",
+    "generative-ai",
+    "cell-type-annotation",
+    "gene-regulatory-network",
+    "transformers",
+    "bioinformatics"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Bo Wang Lab, University of Toronto",
+      "url": "https://bowang-lab.github.io/"
+    }
+  ],
+  "mach:weightsLicense": "MIT",
+  "mach:trainingDataSummary": "33 million normal human cells from CellXGene spanning brain, blood, heart, lung, kidney, and pan-cancer tissue types. Pre-trained checkpoints available per tissue type and as a whole-human model.",
+  "mach:intendedUse": "Single-cell genomics research: cell type annotation, multi-omics integration, gene regulatory network analysis. Research use. Not a cleared medical device.",
+  "mach:governance": "academic",
+  "mach:foundation": "Bo Wang Lab, University of Toronto",
+  "mach:category": "ai-ml-models",
+  "mach:maturity": "beta",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "oncology",
+    "research"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Strong foundation model for single-cell genomics — 1.6k stars, MIT, v0.2.4, trained on 33M cells across tissue types. Sits at the boundary of MACH's clinical scope (genomics/bioinformatics rather than clinical informatics) but relevant for precision oncology and translational research pipelines that bridge molecular data and clinical outcomes. Assess pending broader clinical validation beyond genomics research use cases.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/bowang-lab/scGPT",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://www.biorxiv.org/content/10.1101/2023.04.30.538439",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "scGPT: Towards Building a Foundation Model for Single-Cell Multi-omics Using Generative AI. bioRxiv 2023."
+    }
+  ]
+}

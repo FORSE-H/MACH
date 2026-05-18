@@ -1,0 +1,71 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/medrax",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "medrax",
+  "name": "MedRAX",
+  "alternateName": [
+    "Medical Reasoning Agent for Chest X-ray"
+  ],
+  "description": "Agentic AI framework for chest X-ray (CXR) interpretation that dynamically orchestrates multiple specialist models — visual QA (CheXagent, LLaVA-Med), segmentation (MedSAM, PSPNet), grounding (Maira-2), report generation (SwinV2), disease classification (DenseNet-121) — via LangChain and LangGraph. Addresses complex multi-step clinical queries without additional training. Introduces ChestAgentBench: 2,500 complex CXR queries across 7 reasoning categories for standardised evaluation. ICML 2025. Apache-2.0.",
+  "url": "https://github.com/bowang-lab/MedRAX",
+  "codeRepository": "https://github.com/bowang-lab/MedRAX",
+  "license": "Apache-2.0",
+  "relatedLink": [
+    "https://arxiv.org/abs/2502.02673",
+    "https://huggingface.co/datasets/wanglab/chest-agent-bench"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "chest-x-ray",
+    "ai-agent",
+    "clinical-reasoning",
+    "radiology",
+    "langchain",
+    "langgraph",
+    "multi-model",
+    "visual-qa",
+    "report-generation",
+    "benchmark"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Bo Wang Lab, University of Toronto",
+      "url": "https://bowang-lab.github.io/"
+    }
+  ],
+  "mach:huggingFaceUrl": "https://huggingface.co/datasets/wanglab/chest-agent-bench",
+  "mach:governance": "academic",
+  "mach:foundation": "Bo Wang Lab, University of Toronto",
+  "mach:category": "medical-imaging-signals",
+  "mach:maturity": "beta",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "radiology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "One of the first open agentic frameworks for multi-step clinical CXR reasoning — orchestrates 7 specialist models dynamically rather than relying on a single model. ICML 2025, 1.2k stars, Apache-2.0. Caveats: uses GPT-4o as the default backbone (commercial dependency), no versioned releases, and the agentic pattern is still early-stage in clinical radiology. Assess until the framework proves stable and backbone-agnostic deployments are validated.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/bowang-lab/MedRAX",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2502.02673",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MedRAX: Medical Reasoning Agent for Chest X-Ray. ICML 2025."
+    }
+  ]
+}

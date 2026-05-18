@@ -1,0 +1,82 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/medsam2",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode",
+    "mach:MLModel"
+  ],
+  "identifier": "medsam2",
+  "name": "MedSAM2",
+  "alternateName": [
+    "Segment Anything in 3D Medical Images and Videos"
+  ],
+  "description": "Extension of MedSAM to 3D volumetric medical imaging and video sequences, built on Meta's SAM2 architecture. Handles instance-level segmentation across CT/MRI volumes and temporal tracking of anatomical structures across clinical video frames (endoscopy, ultrasound). Supports automated annotation of lesions in CT scans and cross-frame tracking workflows. Successor to MedSAM for teams working with 3D or dynamic imaging data.",
+  "url": "https://github.com/bowang-lab/MedSAM2",
+  "codeRepository": "https://github.com/bowang-lab/MedSAM2",
+  "license": "Apache-2.0",
+  "relatedLink": [
+    "https://arxiv.org/abs/2504.03600"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "medical-image-segmentation",
+    "segment-anything",
+    "sam2",
+    "3d-segmentation",
+    "volumetric",
+    "video-segmentation",
+    "ct",
+    "mri",
+    "foundation-model",
+    "pytorch"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Bo Wang Lab, University of Toronto",
+      "url": "https://bowang-lab.github.io/"
+    }
+  ],
+  "mach:weightsLicense": "Apache-2.0",
+  "mach:trainingDataSummary": "Extension of MedSAM training corpus to 3D volumetric and video medical data including CT volumes, MRI sequences, and clinical video (endoscopy, ultrasound).",
+  "mach:intendedUse": "3D volumetric and video medical image segmentation for research workflows requiring instance tracking across slices or frames. Not a cleared medical device.",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:governance": "academic",
+  "mach:foundation": "Bo Wang Lab, University of Toronto",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "imaging-model",
+  "mach:maturity": "beta",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "radiology",
+    "oncology",
+    "surgery",
+    "gastroenterology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Natural successor to MedSAM for 3D and video data — extends SAM2 to volumetric CT/MRI and clinical video with 645 stars and Apache-2.0. No versioned releases yet and arXiv paper is very recent (April 2025). Assess until the community validates it at the same scale as MedSAM. Teams working with 3D imaging or video should evaluate this alongside MedSAM.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/bowang-lab/MedSAM2",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2504.03600",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MedSAM2: Segment Anything in 3D Medical Images and Videos. arXiv 2025."
+    }
+  ],
+  "mach:alternativeTo": [
+    "medsam",
+    "nnunet"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/tuh-eeg",
+  "@type": [
+    "schema:Dataset",
+    "mach:Benchmark"
+  ],
+  "identifier": "tuh-eeg",
+  "name": "TUH EEG Corpus",
+  "alternateName": [
+    "Temple University Hospital EEG Corpus",
+    "TUEG"
+  ],
+  "description": "The largest publicly available clinical EEG database, containing 60,000+ recordings from Temple University Hospital (2002–present) across 7 annotated sub-corpora: TUEG (general clinical EEG, 26,846 recordings), TUSZ (seizure detection with temporal start/stop channel-level annotations), TUEP (epilepsy classification, 100 with/100 without, including medication metadata), TUAB (normal vs. abnormal), TUAR (5 artifact types: eye movement, chewing, shivering, electrode, muscle), TUEV (6-class EEG event classification), and TUSL (EEG slowing events). EDF+ format, 24–36 channels at 250 Hz. Explicitly permissive for both research and commercial use. Access requires registration and SSH key (approved within 24–48 hours). Maintained by the Neural Engineering Data Consortium (NEDC) at Temple University.",
+  "url": "https://isip.piconepress.com/projects/nedc/html/tuh_eeg/",
+  "license": "Custom — research and commercial use permitted; registration required",
+  "keywords": [
+    "eeg",
+    "electroencephalography",
+    "seizure-detection",
+    "epilepsy",
+    "clinical-eeg",
+    "neurology",
+    "artifact-detection",
+    "deep-learning",
+    "edf",
+    "temple-university"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Neural Engineering Data Consortium (NEDC), Temple University",
+      "url": "https://isip.piconepress.com/projects/nedc/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Temple University / NEDC",
+  "mach:category": "datasets-benchmarks",
+  "mach:subcategory": "clinical-benchmark",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "neurology",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The de-facto standard EEG benchmark for clinical neurological AI — 60,000+ recordings, 7 annotated sub-corpora covering seizure detection, epilepsy classification, artifact typing, and event classification. Explicitly permissive for research and commercial use (no royalties, no field-of-use restrictions). Registration and SSH key required but approved within 24–48 hours. Widely used in deep learning seizure detection literature as the primary evaluation dataset. TUSZ (seizure) and TUEP (epilepsy) sub-corpora are particularly clinically significant. Essential for any team building EEG-based clinical AI.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://isip.piconepress.com/projects/nedc/html/tuh_eeg/",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}

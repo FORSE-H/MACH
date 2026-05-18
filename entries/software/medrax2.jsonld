@@ -1,0 +1,54 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/medrax2",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "medrax2",
+  "name": "MedRAX2",
+  "description": "Updated iteration of the MedRAX agentic chest X-ray reasoning framework from the Bo Wang Lab. Extends the multi-model orchestration approach of MedRAX with improvements to tool integration and reasoning capabilities for complex clinical CXR queries. Early-stage with 25 stars and no releases at time of triage.",
+  "url": "https://github.com/bowang-lab/MedRAX2",
+  "codeRepository": "https://github.com/bowang-lab/MedRAX2",
+  "license": "Apache-2.0",
+  "relatedLink": [
+    "https://arxiv.org/abs/2502.02673"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "chest-x-ray",
+    "ai-agent",
+    "clinical-reasoning",
+    "radiology",
+    "multi-model"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Bo Wang Lab, University of Toronto",
+      "url": "https://bowang-lab.github.io/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Bo Wang Lab, University of Toronto",
+  "mach:category": "medical-imaging-signals",
+  "mach:maturity": "experimental",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "radiology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Very early iteration (25 stars, no releases) of the MedRAX agentic CXR framework. Apache-2.0. Follow MedRAX first — catalog this once the project has independent traction and a distinct paper or release beyond the MedRAX arXiv preprint.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/bowang-lab/MedRAX2",
+      "mach:evidenceType": "primary-repo"
+    }
+  ]
+}

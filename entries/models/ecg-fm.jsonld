@@ -1,0 +1,75 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/ecg-fm",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode",
+    "mach:MLModel"
+  ],
+  "identifier": "ecg-fm",
+  "name": "ECG-FM",
+  "alternateName": [
+    "Electrocardiogram Foundation Model"
+  ],
+  "description": "Open foundation model for electrocardiogram (ECG) analysis with 90.9 million parameters built on the wav2vec 2.0 architecture. Pre-trained on MIMIC-IV-ECG and PhysioNet datasets using W2V+CMSC+RLM methodology. Pre-trained and fine-tuned model checkpoints available via HuggingFace. Designed for clinical ECG signal processing tasks including arrhythmia detection, cardiac condition classification, and signal quality assessment. MIT licensed.",
+  "url": "https://github.com/bowang-lab/ecg-fm",
+  "codeRepository": "https://github.com/bowang-lab/ecg-fm",
+  "license": "MIT",
+  "relatedLink": [
+    "https://arxiv.org/abs/2408.05178"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "ecg",
+    "electrocardiogram",
+    "foundation-model",
+    "wav2vec",
+    "cardiac",
+    "arrhythmia",
+    "clinical-signals",
+    "mimic-iv",
+    "physionet",
+    "pytorch"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Bo Wang Lab, University of Toronto",
+      "url": "https://bowang-lab.github.io/"
+    }
+  ],
+  "mach:huggingFaceUrl": "https://huggingface.co/wanglab",
+  "mach:weightsLicense": "MIT",
+  "mach:trainingDataSummary": "Pre-trained on MIMIC-IV-ECG and PhysioNet ECG datasets using W2V+CMSC+RLM self-supervised learning. 90.9M parameter wav2vec 2.0 architecture adapted for ECG signals.",
+  "mach:intendedUse": "ECG signal analysis for research — arrhythmia detection, cardiac classification, downstream fine-tuning for clinical prediction tasks. Checkpoints on HuggingFace. Not a cleared medical device.",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:governance": "academic",
+  "mach:foundation": "Bo Wang Lab, University of Toronto",
+  "mach:category": "medical-imaging-signals",
+  "mach:maturity": "beta",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "cardiology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "One of the few open ECG foundation models with HuggingFace checkpoints and MIT license — 278 stars, wav2vec 2.0, trained on MIMIC-IV-ECG + PhysioNet. No versioned releases and arXiv paper is from August 2024. Assess until downstream task benchmarks validate performance across clinical ECG classification scenarios. Natural complement to EchoJEPA for teams building comprehensive cardiac AI.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/bowang-lab/ecg-fm",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2408.05178",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "ECG-FM: An Open Electrocardiogram Foundation Model. arXiv 2024."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/amsterdamumc-db",
+  "@type": [
+    "schema:Dataset"
+  ],
+  "identifier": "amsterdamumc-db",
+  "name": "AmsterdamUMCdb",
+  "alternateName": [
+    "Amsterdam University Medical Centers Database"
+  ],
+  "description": "The first freely accessible European intensive care database. Contains de-identified clinical data from 23,106 ICU and high-dependency unit admissions (20,109 unique patients) at Amsterdam UMC from 2003–2016, totalling approximately 1 billion clinical observations including vital signs, laboratory values, medication records, and device data. Released in OMOP Common Data Model v5.4 (v1.5.0). Accompanied by a Python package with fluid balance calculations, dictionary lookups, and data visualisation utilities. Data access requires a short application via the Amsterdam Medical Data Science website. Code and tooling are MIT licensed. From the Intensive Care Department at Amsterdam UMC, with Paul Elbers as corresponding author.",
+  "url": "https://amsterdammedicaldatascience.nl",
+  "codeRepository": "https://github.com/AmsterdamUMC/AmsterdamUMCdb",
+  "license": "MIT",
+  "softwareVersion": "1.5.0",
+  "keywords": [
+    "icu",
+    "intensive-care",
+    "critical-care",
+    "omop",
+    "european",
+    "clinical-database",
+    "sepsis",
+    "vitals",
+    "laboratory",
+    "medications",
+    "amsterdam"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Amsterdam UMC Intensive Care Department",
+      "url": "https://www.amsterdamumc.org/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Amsterdam University Medical Centers",
+  "mach:category": "datasets-benchmarks",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "secondary-care",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The first and most significant freely accessible European ICU database — 23,106 admissions, ~1 billion observations, OMOP CDM v5.4 aligned. Published in Critical Care Medicine 2021, actively versioned (v1.5.0 May 2024), MIT code license, 206 stars. Essential reference for European ICU research including sepsis, fluid management, and clinical prediction tasks. Data access requires a short application (not full DUA) making it far more accessible than US equivalents like MIMIC. Direct complement to MIMIC-IV for teams needing European patient populations.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/AmsterdamUMC/AmsterdamUMCdb",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1097/CCM.0000000000004916",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "AmsterdamUMCdb: A Freely Accessible and Privacy-Preserving Intensive Care Database. Critical Care Medicine, 2021."
+    }
+  ]
+}

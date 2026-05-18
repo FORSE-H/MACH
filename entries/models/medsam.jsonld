@@ -1,0 +1,92 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/medsam",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode",
+    "mach:MLModel"
+  ],
+  "identifier": "medsam",
+  "name": "MedSAM",
+  "alternateName": [
+    "Segment Anything in Medical Images"
+  ],
+  "description": "Universal medical image segmentation model adapting Meta's Segment Anything Model (SAM) to 30+ imaging modalities including CT, MRI, ultrasound, X-ray, endoscopy, and microscopy. Trained on over 1 million image-mask pairs across diverse anatomical structures. Requires only a bounding box prompt — no per-dataset retraining. Ships with LiteMedSAM (10× faster lightweight variant), a 3D Slicer plugin, and CLI/GUI/notebook inference interfaces. The de-facto open foundation for promptable medical image segmentation since the Nature Communications 2024 paper.",
+  "url": "https://github.com/bowang-lab/MedSAM",
+  "codeRepository": "https://github.com/bowang-lab/MedSAM",
+  "license": "Apache-2.0",
+  "softwareVersion": "1.0.0",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "medical-image-segmentation",
+    "segment-anything",
+    "sam",
+    "foundation-model",
+    "promptable-segmentation",
+    "ct",
+    "mri",
+    "ultrasound",
+    "endoscopy",
+    "3d-slicer",
+    "pytorch"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Bo Wang Lab, University of Toronto",
+      "url": "https://bowang-lab.github.io/"
+    }
+  ],
+  "mach:weightsLicense": "Apache-2.0",
+  "mach:trainingDataSummary": "Over 1 million image-mask pairs from 30+ medical imaging modalities sourced from multiple public datasets. Covers CT, MRI, ultrasound, X-ray, endoscopy, dermoscopy, and microscopy across diverse anatomical structures.",
+  "mach:intendedUse": "Universal medical image segmentation for research and clinical decision support development. Promptable via bounding boxes across modalities without per-dataset retraining. Not a cleared medical device.",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:evaluationReference": [
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/s41467-024-44824-z",
+      "schema:name": "Segment anything in medical images. Nature Communications, 2024."
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Bo Wang Lab, University of Toronto",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "imaging-model",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "radiology",
+    "oncology",
+    "cardiology",
+    "pathology",
+    "surgery",
+    "neurology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The de-facto open standard for promptable medical image segmentation. 4.3k stars, Nature Communications 2024, Apache-2.0, versioned release (v1.0.0). Covers 30+ modalities with bounding-box prompting and no per-dataset retraining. LiteMedSAM and 3D Slicer integration lower the barrier to clinical workflow use. Any medical imaging pipeline that needs flexible segmentation should benchmark against or build on MedSAM before choosing an alternative.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/bowang-lab/MedSAM",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/s41467-024-44824-z",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Segment anything in medical images. Nature Communications, 2024."
+    }
+  ],
+  "mach:alternativeTo": [
+    "nnunet",
+    "monai",
+    "medsam2"
+  ]
+}

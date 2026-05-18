@@ -1,0 +1,74 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/echojep",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode",
+    "mach:MLModel"
+  ],
+  "identifier": "echojep",
+  "name": "EchoJEPA",
+  "alternateName": [
+    "Echocardiography Joint-Embedding Predictive Architecture"
+  ],
+  "description": "Latent predictive foundation model for echocardiography trained on 18 million cardiac ultrasound images using joint-embedding predictive architecture (JEPA). Extracts anatomically meaningful cardiac features while filtering ultrasound speckle noise. Outperforms baselines by ~20% on left ventricular ejection fraction (LVEF) estimation and achieves 79% accuracy with only 1% of labelled training data. Demonstrates strong robustness under acoustic perturbation — degrades only 2% vs 17% for competing approaches. Apache-2.0.",
+  "url": "https://github.com/bowang-lab/EchoJEPA",
+  "codeRepository": "https://github.com/bowang-lab/EchoJEPA",
+  "license": "Apache-2.0",
+  "relatedLink": [
+    "https://arxiv.org/abs/2602.02603"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "echocardiography",
+    "cardiac-ultrasound",
+    "foundation-model",
+    "jepa",
+    "ejection-fraction",
+    "self-supervised",
+    "cardiology",
+    "ultrasound",
+    "pytorch"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Bo Wang Lab, University of Toronto",
+      "url": "https://bowang-lab.github.io/"
+    }
+  ],
+  "mach:weightsLicense": "Apache-2.0",
+  "mach:trainingDataSummary": "18 million cardiac ultrasound images for self-supervised pretraining using JEPA latent prediction objectives. Covers diverse echocardiographic views and cardiac pathologies.",
+  "mach:intendedUse": "Echocardiography analysis research — LVEF estimation, cardiac structure assessment, downstream fine-tuning for cardiac prediction tasks. Not a cleared medical device.",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:governance": "academic",
+  "mach:foundation": "Bo Wang Lab, University of Toronto",
+  "mach:category": "medical-imaging-signals",
+  "mach:subcategory": "imaging-model",
+  "mach:maturity": "beta",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "cardiology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The most capable open foundation model specifically for echocardiography — 18M training images, 20% LVEF improvement over baselines, remarkable sample efficiency (79% accuracy from 1% labels). Apache-2.0, 306 stars. No versioned releases yet and the arXiv paper is recent (February 2026). Assess until the community validates it in downstream cardiology tasks. Clear entry point for teams building cardiac AI on echo data.",
+  "mach:editorialReviewedAt": "2026-05-18",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/bowang-lab/EchoJEPA",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2602.02603",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "EchoJEPA: A Latent Predictive Foundation Model for Echocardiography. arXiv 2026."
+    }
+  ]
+}
