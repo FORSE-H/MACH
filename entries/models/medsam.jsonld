@@ -36,7 +36,7 @@
     {
       "@type": "Organization",
       "name": "Bo Wang Lab, University of Toronto",
-      "url": "https://bowang-lab.github.io/"
+      "url": "https://github.com/bowang-lab"
     }
   ],
   "mach:weightsLicense": "Apache-2.0",
