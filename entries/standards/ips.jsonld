@@ -18,7 +18,7 @@
   "codeRepository": "https://github.com/HL7/fhir-ips",
   "relatedLink": [
     "https://www.iso.org/standard/79491.html",
-    "https://health.ec.europa.eu/ehealth-digital-health-and-care/ehealth-and-digital-health_en"
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care_en"
   ],
   "license": "CC0-1.0",
   "dateModified": "2025-10-03",
@@ -83,7 +83,7 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://health.ec.europa.eu/ehealth-digital-health-and-care/ehealth-and-digital-health_en",
+      "url": "https://health.ec.europa.eu/ehealth-digital-health-and-care_en",
       "mach:evidenceType": "regulatory-reference"
     }
   ],

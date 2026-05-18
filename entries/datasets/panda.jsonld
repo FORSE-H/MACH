@@ -61,7 +61,7 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://www.kaggle.com/competitions/prostate-cancer-grade-assessment/data",
+      "url": "https://www.kaggle.com/competitions/prostate-cancer-grade-assessment",
       "mach:evidenceType": "documentation"
     }
   ]
