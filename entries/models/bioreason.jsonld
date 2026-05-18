@@ -9,7 +9,7 @@
   "identifier": "bioreason",
   "name": "BioReason",
   "description": "Multimodal biological reasoning model fusing a DNA foundation model with a large language model to generate interpretable, step-by-step mechanistic insights from genomic data. Achieves 98.28% accuracy on KEGG-based disease pathway prediction (up from 86% baseline) and 15%+ gains on variant effect classification over single-modality approaches. Designed for tasks requiring reasoning across DNA sequences and biological language — disease pathway inference, variant effect prediction, and gene-disease association. BioReason-Pro, a successor integrating ESM3 protein embeddings and reinforcement learning, has also been released by the same lab. NeurIPS 2025. Apache-2.0.",
-  "url": "https://github.com/bowang-labBioReason/",
+  "url": "https://github.com/bowang-lab/BioReason",
   "codeRepository": "https://github.com/bowang-lab/BioReason",
   "license": "Apache-2.0",
   "relatedLink": [
