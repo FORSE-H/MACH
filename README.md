@@ -178,10 +178,7 @@ Attribution for data reuse:
 - [CodeMeta 3.0](https://codemeta.github.io/) — software metadata crosswalk (schema.org + W3C)
 - [MLDCAT-AP 3.0](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) (SEMIC / EU) — ML model metadata, EU AI Act aligned
 - [DCAT-AP 3.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/) (SEMIC / EU) — dataset and catalog metadata
-- [MLCommons Croissant](https://mlcommons.org/working-groups/data/croissant/) — ML dataset metadata format
-- [FAIR Data Point Specification](https://specs.fairdatapoint.org/) — machine-readable data catalog protocol
 - [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/) / [schema.org](https://schema.org) (W3C) — linked data serialisation
-- [ODRL](https://www.w3.org/TR/odrl-model/) (W3C) — open digital rights language
 
 **Healthcare interoperability standards** *(referenced in catalog entries)*
 - [HL7 FHIR R4](https://hl7.org/fhir/R4/) — healthcare data exchange
@@ -203,9 +200,6 @@ Attribution for data reuse:
 - [Software Heritage](https://www.softwareheritage.org/) — persistent SWHIDs (ISO/IEC 18670)
 - [Zenodo](https://zenodo.org) — DOI archival (DOI: 10.5281/zenodo.20155320)
 - [OpenAIRE](https://explore.openaire.eu) — open science graph indexing
-
-**Funding**
-- [NLnet NGI0 Commons Fund](https://nlnet.nl/commonsfund/) — application submitted June 2026 (decision pending)
 
 **AI assistance**
 - Parts of this project were developed with assistance from [Claude](https://claude.ai) (Anthropic). All content has been reviewed and is the intellectual responsibility of the project curator.
