@@ -1,9 +1,9 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/cdisc-sdtm",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/cdisc-sdtm",
   "@type": [
     "schema:TechArticle",
-    "mach:Standard"
+    "mach:Spec"
   ],
   "identifier": "cdisc-sdtm",
   "name": "CDISC SDTM",
@@ -41,7 +41,7 @@
   },
   "mach:governance": "foundation",
   "mach:foundation": "Clinical Data Interchange Standards Consortium (CDISC)",
-  "mach:category": "interoperability-standards",
+  "mach:category": "specs",
   "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted",

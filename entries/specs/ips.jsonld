@@ -1,9 +1,9 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/ips",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/ips",
   "@type": [
     "schema:TechArticle",
-    "mach:Standard"
+    "mach:Spec"
   ],
   "identifier": "ips",
   "name": "International Patient Summary",
@@ -53,7 +53,7 @@
   ],
   "mach:governance": "foundation",
   "mach:foundation": "Health Level Seven International (HL7) / ISO",
-  "mach:category": "interoperability-standards",
+  "mach:category": "specs",
   "mach:subcategory": "fhir",
   "mach:maturity": "production",
   "mach:deploymentContext": [

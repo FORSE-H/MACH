@@ -58,8 +58,8 @@
     "docker",
     "cloud-only"
   ],
-  "mach:supportsStandard": [
-    "https://github.com/FORSE-H/MACH/tree/main/entries/standards/openehr"
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/openehr"
   ],
   "mach:evidence": [
     {

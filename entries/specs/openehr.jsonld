@@ -1,9 +1,9 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/openehr",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/openehr",
   "@type": [
     "schema:TechArticle",
-    "mach:Standard"
+    "mach:Spec"
   ],
   "identifier": "openehr",
   "name": "openEHR",
@@ -39,7 +39,7 @@
   },
   "mach:governance": "foundation",
   "mach:foundation": "openEHR Foundation (non-profit, est. 2003)",
-  "mach:category": "interoperability-standards",
+  "mach:category": "specs",
   "mach:subcategory": "openehr",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",
@@ -58,8 +58,8 @@
     "cloud-only",
     "gdpr-ready"
   ],
-  "mach:supportsStandard": [
-    "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fhir-r4"
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fhir-r4"
   ],
   "mach:evidence": [
     {

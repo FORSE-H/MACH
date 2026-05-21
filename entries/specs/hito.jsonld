@@ -1,8 +1,8 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/hito",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/hito",
   "@type": [
-    "mach:Standard"
+    "mach:Spec"
   ],
   "identifier": "hito",
   "name": "HITO",

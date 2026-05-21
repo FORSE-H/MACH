@@ -43,7 +43,7 @@
     "mach:foundation":          { "@id": "mach:foundation" },
     "mach:clinicalDomain":      { "@id": "mach:clinicalDomain", "@container": "@set" },
     "mach:deploymentContext":   { "@id": "mach:deploymentContext", "@container": "@set" },
-    "mach:supportsStandard":    { "@id": "mach:supportsStandard", "@container": "@set" },
+    "mach:supportsSpec":        { "@id": "mach:supportsSpec", "@container": "@set" },
     "mach:evidence":            { "@id": "mach:evidence", "@container": "@set" },
     "mach:evidenceType":        { "@id": "mach:evidenceType" },
     "mach:alternativeTo":       { "@id": "mach:alternativeTo", "@container": "@set" },

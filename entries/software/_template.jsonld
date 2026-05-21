@@ -37,8 +37,8 @@
 
   "mach:clinicalDomain": ["primary-care"],
   "mach:deploymentContext": ["self-hosted", "docker"],
-  "mach:supportsStandard": [
-    "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fhir-r4"
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fhir-r4"
   ],
 
   "mach:evidence": [

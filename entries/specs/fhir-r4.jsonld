@@ -1,36 +1,53 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fhir-r4",
-  "@type": ["schema:TechArticle", "mach:Standard"],
-
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fhir-r4",
+  "@type": [
+    "schema:TechArticle",
+    "mach:Spec"
+  ],
   "identifier": "fhir-r4",
   "name": "HL7 FHIR R4",
-  "alternateName": ["FHIR R4", "Fast Healthcare Interoperability Resources Release 4"],
+  "alternateName": [
+    "FHIR R4",
+    "Fast Healthcare Interoperability Resources Release 4"
+  ],
   "description": "The dominant healthcare interoperability standard, defining a RESTful API and JSON/XML resource formats for exchanging clinical and administrative data.",
   "url": "https://hl7.org/fhir/R4/",
   "logo": "../../logos/fhir.svg",
-
   "license": "CC0-1.0",
   "dateModified": "2019-10-30",
-  "keywords": ["interoperability", "api", "rest", "json", "xml", "clinical-data"],
-
+  "keywords": [
+    "interoperability",
+    "api",
+    "rest",
+    "json",
+    "xml",
+    "clinical-data"
+  ],
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Health Level Seven International (HL7)"
   },
-
   "mach:governance": "foundation",
   "mach:foundation": "Health Level Seven International (HL7)",
-  "mach:category": "interoperability-standards",
+  "mach:category": "specs",
   "mach:subcategory": "fhir",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",
   "mach:judgementReason": "The de-facto standard for modern healthcare interoperability. Mandated by CMS and ONC in the US, referenced in EU EHR interoperability guidelines, and adopted globally. Multiple mature open-source implementations exist (HAPI FHIR, Blaze, Medplum, Azure Health Data Services). Use R4 for new work; R5 is emerging but R4 has far wider ecosystem support.",
   "mach:editorialReviewedAt": "2025-10-01",
-
-  "mach:clinicalDomain": ["primary-care", "secondary-care", "public-health", "global-health"],
-  "mach:deploymentContext": ["self-hosted", "cloud-only", "hipaa-ready", "gdpr-ready"],
-
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "public-health",
+    "global-health"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only",
+    "hipaa-ready",
+    "gdpr-ready"
+  ],
   "mach:evidence": [
     {
       "@type": "schema:WebPage",

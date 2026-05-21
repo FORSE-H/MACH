@@ -1,9 +1,9 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/cdisc-adam",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/cdisc-adam",
   "@type": [
     "schema:TechArticle",
-    "mach:Standard"
+    "mach:Spec"
   ],
   "identifier": "cdisc-adam",
   "name": "CDISC ADaM",
@@ -41,7 +41,7 @@
   },
   "mach:governance": "foundation",
   "mach:foundation": "Clinical Data Interchange Standards Consortium (CDISC)",
-  "mach:category": "interoperability-standards",
+  "mach:category": "specs",
   "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted",

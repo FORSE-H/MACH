@@ -1,8 +1,8 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/healthdcat-ap",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/healthdcat-ap",
   "@type": [
-    "mach:Standard"
+    "mach:Spec"
   ],
   "identifier": "healthdcat-ap",
   "name": "HealthDCAT-AP",

@@ -31,8 +31,8 @@ categories:
 
   - id: specs
     name: Specs
-    folder: standards
-    description: Clinical interoperability standards, specifications, and terminology systems
+    folder: specs
+    description: Clinical interoperability specifications, protocols, and terminology systems
 
 judgements:
   - id: Adopt

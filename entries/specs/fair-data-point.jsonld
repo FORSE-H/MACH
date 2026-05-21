@@ -1,8 +1,8 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/standards/fair-data-point",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fair-data-point",
   "@type": [
-    "mach:Standard"
+    "mach:Spec"
   ],
   "identifier": "fair-data-point",
   "name": "FAIR Data Point (FDP) Specification",

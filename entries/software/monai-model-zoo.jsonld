@@ -71,7 +71,7 @@
     "cloud-only",
     "docker"
   ],
-  "mach:supportsStandard": [],
+  "mach:supportsSpec": [],
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
