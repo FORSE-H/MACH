@@ -190,8 +190,6 @@ Attribution for data reuse:
 
 **Archival & indexing**
 - [Software Heritage](https://www.softwareheritage.org/) — persistent SWHIDs (ISO/IEC 18670)
-- [Zenodo](https://zenodo.org) — DOI archival (DOI: 10.5281/zenodo.20155320)
-- [OpenAIRE](https://explore.openaire.eu) — open science graph indexing
 
 **AI assistance**
 - Parts of this project were developed with assistance from [Claude](https://claude.ai) (Anthropic). All content has been reviewed and is the intellectual responsibility of the project curator.
