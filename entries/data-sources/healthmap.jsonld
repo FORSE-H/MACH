@@ -1,0 +1,68 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/healthmap",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "healthmap",
+  "name": "HealthMap",
+  "alternateName": [
+    "Outbreaks Near Me"
+  ],
+  "description": "Automated global disease surveillance system developed at Boston Children's Hospital in 2006 by Clark Freifeld and John Brownstein. Aggregates and classifies outbreak signals 24/7 from online news aggregators, eyewitness reports, expert-curated discussions (including ProMED), and validated official reports to produce a unified real-time map of infectious disease activity worldwide. Covers human and animal health events across all disease types. Funded by Google.org, the Life Buoy Fund, NLM, CDC, and Canadian Institutes of Health Research. Also available as the mobile app 'Outbreaks Near Me'. No public API is available; data access is governed by a binding user agreement with Children's Hospital Boston rather than an open license, limiting programmatic reuse.",
+  "url": "https://healthmap.org/",
+  "relatedLink": [
+    "https://healthmap.org/about/",
+    "https://www.healthmap.org/about/termsofuse/"
+  ],
+  "license": "LicenseRef-proprietary",
+  "dateModified": "2026-01-01",
+  "keywords": [
+    "outbreak-surveillance",
+    "infectious-disease",
+    "public-health",
+    "epidemiology",
+    "disease-intelligence",
+    "global-health",
+    "automated-surveillance",
+    "nlp",
+    "real-time"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Boston Children's Hospital",
+      "url": "https://www.childrenshospital.org/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:applicability": "specialist",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "public-health",
+    "epidemiology",
+    "global-health",
+    "infectious-disease"
+  ],
+  "mach:judgement": "Caution",
+  "mach:judgementReason": "Established and well-funded real-time outbreak surveillance system (2006, Boston Children's Hospital) with broader and faster signal coverage than WHO DON. However, there is no public API and data access is governed by a proprietary user agreement with Children's Hospital Boston, not an open license — limiting programmatic integration. Caution for teams needing open, reusable data; the platform remains useful for manual monitoring and situational awareness. Re-assess if an open API or data licence is introduced.",
+  "mach:editorialReviewedAt": "2026-05-21",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://healthmap.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://healthmap.org/about/",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "schema:comment": "entry_status: watchlist — re-assess if a public API or open data licence becomes available. No programmatic access under open terms as of May 2026."
+}

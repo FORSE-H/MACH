@@ -1,0 +1,74 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/who-don",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "who-don",
+  "name": "WHO Disease Outbreak News",
+  "alternateName": [
+    "WHO DON",
+    "Disease Outbreak News"
+  ],
+  "description": "Official WHO publication series reporting confirmed and potential acute public health events of international concern across all hazards — infectious disease outbreaks, antimicrobial resistance events, foodborne illness, and chemical or radiological incidents. Reports are authoritative, expert-reviewed, and published when events meet WHO criteria for international significance. Programmatically accessible via a WHO REST API and RSS feed. Coverage is conservative by design: DON reports represent events where WHO has confirmed public disclosure is warranted, not an exhaustive list of all monitored events. Used as the ground-truth reference for international outbreak surveillance in academic research and public health intelligence systems.",
+  "url": "https://www.who.int/emergencies/disease-outbreak-news",
+  "relatedLink": [
+    "https://www.who.int/api/news/diseaseoutbreaknews/sfhelp",
+    "https://www.who.int/data/gho/info/gho-odata-api"
+  ],
+  "license": "CC-BY-NC-SA-3.0-IGO",
+  "keywords": [
+    "outbreak-surveillance",
+    "infectious-disease",
+    "public-health",
+    "epidemiology",
+    "global-health",
+    "antimicrobial-resistance",
+    "who",
+    "disease-intelligence",
+    "open-data",
+    "rest-api"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "World Health Organization (WHO)",
+      "url": "https://www.who.int/"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:applicability": "specialist",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "public-health",
+    "epidemiology",
+    "global-health",
+    "infectious-disease"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The authoritative international reference for confirmed disease outbreak intelligence, published by WHO and accessible via a public REST API and RSS feed under CC BY-NC-SA 3.0 IGO. UN-governed, indefinitely maintained, and widely used as ground-truth data in surveillance research. Adopt for public health intelligence systems, academic outbreak research, and as a validation baseline for automated surveillance tools. Coverage is deliberately conservative — pair with HealthMap or ECDC for broader signal capture.",
+  "mach:editorialReviewedAt": "2026-05-21",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.who.int/api/news/diseaseoutbreaknews/sfhelp",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10021193/",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "The World Health Organization's Disease Outbreak News: A retrospective database. PMC 2023."
+    }
+  ]
+}

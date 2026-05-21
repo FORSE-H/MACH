@@ -1,0 +1,74 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/promed",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "promed",
+  "name": "ProMED",
+  "alternateName": [
+    "Program for Monitoring Emerging Diseases",
+    "ProMED-mail"
+  ],
+  "description": "Internet-based outbreak surveillance system launched in 1994 by the International Society for Infectious Diseases (ISID). Operated 24/7 by a global team of 30 subject-matter expert moderators across 24 countries who curate and analyse reports of infectious disease outbreaks, antimicrobial resistance events, foodborne illness, and animal disease events worldwide. Holds 31 years of outbreak archive data. Historically a gold-standard open surveillance resource used by WHO, CDC, and researchers during SARS, H1N1, Ebola, and COVID-19. Access model changed significantly in 2023: the free RSS feed was permanently closed to prevent unauthorised use. A commercial API became available in late 2024 via a partnership with Samdesk, covering alerts from January 2025 onwards only. The historical archive remains searchable on the website but is not programmatically accessible under open terms.",
+  "url": "https://promedmail.org/",
+  "relatedLink": [
+    "https://isid.org/promed-samdesk-api/",
+    "https://www.isid.org/"
+  ],
+  "license": "LicenseRef-proprietary",
+  "dateModified": "2024-11-01",
+  "keywords": [
+    "outbreak-surveillance",
+    "infectious-disease",
+    "public-health",
+    "epidemiology",
+    "disease-intelligence",
+    "antimicrobial-resistance",
+    "zoonosis",
+    "global-health"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "International Society for Infectious Diseases (ISID)",
+      "url": "https://www.isid.org/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:applicability": "specialist",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "public-health",
+    "epidemiology",
+    "global-health",
+    "infectious-disease"
+  ],
+  "mach:judgement": "Caution",
+  "mach:judgementReason": "Historically the most important open outbreak surveillance resource (1994–2022), widely used by WHO, CDC, and researchers. Now Caution: the free RSS feed was permanently closed in 2023, the API is commercial-only via Samdesk and covers only post-January 2025 alerts, and STAT News reported the organisation was near financial collapse in 2023. The historical archive is not programmatically accessible under open terms. Teams needing open outbreak intelligence should evaluate HealthMap or WHO Disease Outbreak News as alternatives.",
+  "mach:editorialReviewedAt": "2026-05-21",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://promedmail.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://isid.org/promed-samdesk-api/",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.statnews.com/2023/08/03/promed-early-warning-system-on-disease-outbreaks-appears-near-collapse/",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "ProMED, an early warning system on disease outbreaks, appears near collapse. STAT News, 2023."
+    }
+  ],
+  "schema:comment": "entry_status: watchlist — re-assess when access model stabilises. RSS permanently closed 2023; commercial API (Samdesk) covers 2025+ only. Monitor ISID financial situation and any restoration of open access."
+}

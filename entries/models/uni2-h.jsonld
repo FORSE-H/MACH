@@ -1,0 +1,83 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/uni2-h",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "uni2-h",
+  "name": "UNI2-h",
+  "alternateName": [
+    "UNI2",
+    "Universal Model for Pathology v2 (ViT-H)"
+  ],
+  "description": "Successor to UNI — a ViT-H/14 vision foundation model for computational pathology from the Mahmood Lab at Harvard/BWH. 681M parameters, trained on 200M+ image tiles from 300,000+ H&E and IHC whole-slide images (Mass General Brigham). Uses DINOv2 self-supervised learning combined with iBOT masked-image modelling and KoLeo regularisation. Produces 1536-dimensional feature embeddings per region of interest. Supports ROI classification, slide-level MIL, retrieval, and segmentation tasks. Pre-extracted embeddings available on HuggingFace for TCGA, CPTAC, and PANDA datasets. Access is gated — requires HuggingFace login with institutional email. CC-BY-NC-ND 4.0.",
+  "url": "https://huggingface.co/MahmoodLab/UNI2-h",
+  "codeRepository": "https://github.com/mahmoodlab/uni",
+  "relatedLink": [
+    "https://huggingface.co/datasets/MahmoodLab/UNI2-h-features",
+    "https://huggingface.co/MahmoodLab/UNI"
+  ],
+  "license": "CC-BY-NC-ND-4.0",
+  "dateModified": "2025-01-01",
+  "keywords": [
+    "pathology-foundation-model",
+    "digital-pathology",
+    "whole-slide-imaging",
+    "self-supervised-learning",
+    "vision-transformer",
+    "dinov2",
+    "ibot",
+    "cancer-subtyping",
+    "survival-prediction",
+    "harvard",
+    "nature-medicine",
+    "gated-model"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Mahmood Lab, Harvard Medical School / Brigham and Women's Hospital",
+      "url": "https://faisal.ai/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:applicability": "specialist",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "pathology",
+    "oncology",
+    "radiology",
+    "research"
+  ],
+  "mach:weightsLicense": "CC-BY-NC-ND-4.0",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The largest publicly available pathology vision foundation model (681M params, ViT-H/14), trained on 200M+ tiles from 300k+ slides — a significant scale-up from UNI. Same Mahmood Lab provenance and Nature Medicine lineage. Assess rather than Adopt for the same reasons as UNI: CC-BY-NC-ND-4.0, free for non-commercial academic research only. Commercial rights are exclusively held by Modella AI (Mahmood Lab spin-off, since acquired by AstraZeneca) — commercial use requires approval via the Mass General Brigham Innovation Office. Access requires institutional email via HuggingFace. Pre-extracted features for TCGA/CPTAC/PANDA lower the barrier to evaluation.",
+  "mach:editorialReviewedAt": "2026-05-21",
+  "mach:alternativeTo": [
+    "uni"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/MahmoodLab/UNI2-h",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://www.nature.com/articles/s41591-024-02857-3",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Towards a General-Purpose Foundation Model for Computational Pathology. Nature Medicine, 2024."
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/mahmoodlab/uni",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

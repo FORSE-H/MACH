@@ -1,0 +1,72 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/paho-opendata",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "paho-opendata",
+  "name": "PAHO Open Data Portal",
+  "alternateName": [
+    "PAHO Data",
+    "Pan American Health Organization Open Data",
+    "opendata.paho.org"
+  ],
+  "description": "Open data portal of the Pan American Health Organization (PAHO), the WHO regional office for the Americas. Provides 140+ core health indicators from 1995 to present with demographic disaggregation across all countries and territories in the Americas. Topics include communicable diseases (dengue, malaria, HIV, TB, influenza, COVID-19), non-communicable diseases, immunisation coverage, maternal and child health, health workforce, environmental health, and SDG health targets. Data is accessible via interactive dashboards and downloadable in CSV/Excel formats. Licensed under CC BY-NC 3.0 IGO — free for non-commercial and research use.",
+  "url": "https://opendata.paho.org/",
+  "relatedLink": [
+    "https://www.paho.org/en/information-systems",
+    "https://iris.paho.org/"
+  ],
+  "license": "CC-BY-NC-3.0-IGO",
+  "dateModified": "2026-05-01",
+  "keywords": [
+    "public-health",
+    "epidemiology",
+    "communicable-disease",
+    "non-communicable-disease",
+    "immunisation",
+    "latin-america",
+    "caribbean",
+    "americas",
+    "who",
+    "paho",
+    "health-indicators",
+    "open-data"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Pan American Health Organization (PAHO)",
+      "url": "https://www.paho.org/"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:category": "data-sources",
+  "mach:maturity": "production",
+  "mach:applicability": "specialist",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "public-health",
+    "epidemiology",
+    "global-health",
+    "primary-care"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The authoritative open data source for population health indicators across the Americas, maintained by PAHO (WHO regional office) with 30+ years of longitudinal data. Production-grade, intergovernmentally governed, and freely accessible for non-commercial and research use under CC BY-NC 3.0 IGO. Adopt for public health research, surveillance, and SDG monitoring in the Americas region. Note: the NC clause restricts commercial applications — verify compliance before use in a commercial product.",
+  "mach:editorialReviewedAt": "2026-05-21",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://opendata.paho.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.paho.org/en/information-systems",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
