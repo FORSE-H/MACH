@@ -12,3 +12,6 @@ docs/PRD.md
 PRD.md
 data/schema/mach.duckdb.sql
 scripts/suggest_judgement.py
+watchlist.csv
+graveyard.csv
+data/compliance-standards.csv
