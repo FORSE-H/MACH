@@ -109,10 +109,10 @@ GitHub Issue (suggest an entry)
                   │
                   ▼
          Catalog goes live
+         ├── API (JSON-LD · REST · Phase 2)
          ├── GitHub Pages (searchable UI)
-         ├── JSON-LD entries (this repo)
-         ├── FDP / SPARQL endpoint (Phase 3)
-         └── MCP server (Phase 2)
+         ├── MCP server (Phase 2)
+         └── FDP / SPARQL endpoint (Phase 3)
 ```
 
 ---
