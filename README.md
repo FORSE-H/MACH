@@ -171,8 +171,6 @@ Attribution for data reuse:
 **Design inspiration**
 - [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar) — three-ring Adopt / Assess / Caution editorial model
 - [CNCF Landscape](https://landscape.cncf.io/) — category-based open ecosystem catalog design
-- [bio.tools](https://bio.tools/) (ELIXIR) — bioinformatics tool registry and controlled vocabulary
-- [Research Software Directory](https://research-software-directory.org/) (Netherlands eScience Center) — FAIR research software catalog
 
 **Metadata standards**
 - [CodeMeta 3.0](https://codemeta.github.io/) — software metadata crosswalk (schema.org + W3C)
