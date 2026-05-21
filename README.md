@@ -200,3 +200,13 @@ Academic and community standards informing the MACH scoring methodology and meta
 | [OpenSSF Scorecard](https://scorecard.dev) | Automated security and best-practices checks for open source projects |
 | [Citation File Format (CFF)](https://citation-file-format.github.io/) | CITATION.cff standard for software citation metadata |
 | [Software Heritage](https://www.softwareheritage.org/) | Universal software archive; MACH uses SWHIDs (ISO/IEC 18670) as persistent archival identifiers in catalog entries |
+
+### Harvesting Infrastructure
+
+Tools informing MACH's metadata harvesting pipeline design (Phase 2). MACH operates primarily as a harvester — sourcing raw metadata from repositories and portals, with editorial curation limited to judgement, categorisation, and evidence.
+
+| Tool | License | Role in MACH |
+|---|---|---|
+| [SOMEF](https://github.com/KnowledgeCaptureAndDiscovery/somef) — Mao et al. Software Metadata Extraction Framework. | MIT | Extracts 50+ metadata fields from README files, GitHub API, and package manifests (`setup.py`, `pyproject.toml`, `CITATION.cff`, `pom.xml`) using supervised classifiers and header analysis. Outputs CodeMeta JSON and JSON-LD. MACH's harvest pipeline uses SOMEF for GitHub-hosted entries to populate `repo_artifacts` and fill gaps in editorial fields. GitLab support is partial — a future contribution target. Non-repo entry types (specs, data portals) are not in scope for SOMEF. |
+| [codemeta-harvester](https://github.com/proycon/codemeta-harvester) — Maarten van Gompel, KNAW HuC. | GPL-3.0 | Aggregates `codemeta.json`, `CITATION.cff`, `setup.py`, `pyproject.toml`, `pom.xml`, `package.json`, LICENSE, and README into a single `codemeta.json` with defined source priority rules. Used server-side (not embedded) in MACH's planned `GET /{type}/{id}/codemeta.json` export endpoint. GPL-3.0 is compatible with server-side use; the code is not incorporated into MACH's Apache-2.0 codebase. |
+| [SOCA](https://github.com/oeg-upm/soca) — OEG-UPM. | Apache-2.0 | Software Catalog Creator built on SOMEF. Informed MACH's `fetch → extract → display` harvest pipeline architecture and entry completeness scoring approach. Apache-2.0 compatible with MACH. |
