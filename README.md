@@ -101,7 +101,7 @@ GitHub Issue (suggest an entry)
          ▼ Maintainer approves → CI harvests from source systems
          │
          ▼
-      DuckDB  ←  GitHub API · PyPI · OpenAlex · arXiv
+      DuckDB  ←  Catalog sources (Git · HuggingFace · PyPI · npm · OpenAlex · arXiv · etc.)
          │
          ├── Scoring (Adopt / Assess / Caution)
          ├── Validation
