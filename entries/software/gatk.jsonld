@@ -52,7 +52,7 @@
   },
   "mach:governance": "academic",
   "mach:foundation": "Broad Institute of MIT and Harvard",
-  "mach:category": "tooling-infrastructure",
+  "mach:category": "software",
   "mach:subcategory": "pipeline-tools",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

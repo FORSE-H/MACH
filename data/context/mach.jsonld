@@ -55,6 +55,8 @@
     "mach:evaluationReference": { "@id": "mldcat:evaluationReference", "@container": "@set" },
     "mach:aiActRiskClass":      { "@id": "mldcat:aiActRiskClass" },
 
+    "mach:applicability":       { "@id": "mach:applicability" },
+
     "mach:transport":           { "@id": "mach:transport" },
     "mach:authMethod":          { "@id": "mach:authMethod" },
     "mach:fhirVersion":         { "@id": "mach:fhirVersion" },

@@ -9,3 +9,6 @@ docs/SKILLS-AND-PATTERNS.md
 docs/PRD.md
 .star_cache.json
 .mach_cache.json
+PRD.md
+data/schema/mach.duckdb.sql
+scripts/suggest_judgement.py

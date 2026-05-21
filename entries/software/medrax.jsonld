@@ -43,7 +43,7 @@
   "mach:huggingFaceUrl": "https://huggingface.co/datasets/wanglab/chest-agent-bench",
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:maturity": "beta",
   "mach:deploymentContext": [
     "self-hosted",

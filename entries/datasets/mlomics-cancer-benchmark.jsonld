@@ -60,7 +60,7 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:category": "datasets-benchmarks",
+  "mach:category": "datasets",
   "mach:subcategory": "omics-benchmark",
   "mach:maturity": "production",
   "mach:judgement": "Assess",

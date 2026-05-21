@@ -62,7 +62,7 @@ jobs:
           # license required except for hosted-service catalog entries
           CATALOG_TYPES = {"schema:DataCatalog"}
 
-          VALID_JUDGEMENTS = {"Adopt", "Situational", "Assess", "Caution"}
+          VALID_JUDGEMENTS = {"Adopt", "Assess", "Caution"}
 
           errors = []
           for root, dirs, files in os.walk("entries"):

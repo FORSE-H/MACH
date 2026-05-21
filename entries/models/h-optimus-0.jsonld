@@ -7,7 +7,7 @@
   ],
   "identifier": "h-optimus-0",
   "name": "H-optimus-0",
-  "description": "1.1-billion parameter vision transformer foundation model for histopathology — the largest publicly available pathology FM by parameter count. Trained on 500,000+ H&E stained whole-slide images from a proprietary multi-institutional collection. Outputs 1536-dimensional feature vectors. Evaluated on mutation prediction, survival analysis, and tissue classification. Apache 2.0, 27k+ monthly HuggingFace downloads. Note: model file access requires a contact agreement with Bioptimus despite the Apache 2.0 licence. Developed by Bioptimus (Paris).",
+  "description": "1.1-billion parameter vision transformer foundation model for histopathology — the largest publicly available pathology FM by parameter count. Trained on 500,000+ H&E stained whole-slide images from a proprietary multi-institutional collection. Outputs 1536-dimensional feature vectors. Evaluated on mutation prediction, survival analysis, and tissue classification. Apache 2.0, 27k+ monthly HuggingFace downloads. Note: model file access requires a contact agreement with Bioptimus despite the Apache 2.0 licence; no public training or inference code repository. Developed by Bioptimus (Paris).",
   "url": "https://huggingface.co/bioptimus/H-optimus-0",
   "relatedLink": [
     "https://www.bioptimus.com/"

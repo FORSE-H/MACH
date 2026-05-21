@@ -47,7 +47,7 @@
   },
   "mach:governance": "academic",
   "mach:foundation": "CogStack / King's College London",
-  "mach:category": "tooling-infrastructure",
+  "mach:category": "software",
   "mach:subcategory": "pipeline-tools",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

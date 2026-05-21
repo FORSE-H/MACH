@@ -31,7 +31,7 @@
     "name": "eigenbau"
   },
   "mach:governance": "individual",
-  "mach:category": "mcp-servers-ai-interfaces",
+  "mach:category": "mcp-servers",
   "mach:subcategory": "terminology-mcp",
   "mach:maturity": "experimental",
   "mach:judgement": "Assess",

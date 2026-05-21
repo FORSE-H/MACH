@@ -12,7 +12,7 @@
 - [ ] `name`, `description`, `url` are accurate and live
 - [ ] `license` is a valid SPDX expression
 - [ ] `mach:category` matches a category in `data/taxonomy/categories.yaml`
-- [ ] `mach:judgement` is one of: `Adopt` / `Situational` / `Assess` / `Caution`
+- [ ] `mach:judgement` is one of: `Adopt` / `Assess` / `Caution`
 - [ ] `mach:judgementReason` explains the judgement in 1–3 sentences
 - [ ] At least one `mach:evidence` item with a live URL
 - [ ] Logo file added to `logos/` (SVG preferred, max 100 KB)

@@ -1,212 +1,179 @@
-# MACH
-
-**Machine-Actionable Catalog for Healthcare**
+# MACH — Machine-Actionable Catalog for Healthcare
 
 [![License: Apache-2.0](https://img.shields.io/badge/Code-Apache_2.0-blue.svg)](LICENSE)
 [![Data License: CC-BY-4.0](https://img.shields.io/badge/Data-CC--BY--4.0-lightgrey.svg)](LICENSE-DATA)
 [![Validate](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml/badge.svg)](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml)
-[![Accessibility](https://github.com/FORSE-H/MACH/actions/workflows/accessibility.yml/badge.svg)](https://github.com/FORSE-H/MACH/actions/workflows/accessibility.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20155320.svg)](https://doi.org/10.5281/zenodo.20155320)
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/FORSE-H/MACH/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/FORSE-H/MACH)
 [![OpenAIRE](https://img.shields.io/badge/OpenAIRE-indexed-blue)](https://explore.openaire.eu/search/result?pid=10.5281/zenodo.20155320)
 
-MACH is an open, machine-actionable catalog of open-source healthcare software, AI/ML models, clinical standards, datasets, tooling, and MCP servers - curated for humans, queryable by agents.
+An open, machine-actionable catalog of open-source healthcare software, AI/ML models, clinical standards, datasets, and MCP servers — curated for humans, queryable by agents.
 
-Every entry is a structured JSON-LD record aligned with established open metadata standards, so hospitals, researchers, governments, and AI agents can all discover and consume the open healthcare commons.
+Every entry is a structured JSON-LD record aligned with established open metadata standards (CodeMeta, MLDCAT-AP, DCAT-AP, Croissant), so hospitals, researchers, governments, and AI agents can discover and consume the open healthcare commons.
 
-> **Project status:** active — growing catalog across 14 categories; CI pipeline live.
-> Initiated October 2025. A project of [FORSE-H](https://github.com/FORSE-H).
+**Project status:** Active — CI pipeline live. A project of [FORSE-H](https://github.com/FORSE-H).
 
 ---
 
 ## Why MACH?
 
-The open healthcare technology ecosystem is fragmented. EHR systems, FHIR servers, clinical AI models, medical imaging tools, ontology services, interoperability standards, and a fast-growing layer of MCP servers exist across hundreds of repos, blog posts, and Hugging Face filters - none of which is structured for agent discovery or aligned with open metadata standards.
+The open healthcare technology ecosystem is fragmented across hundreds of repositories, blog posts, and HuggingFace model cards — none of which is structured for agent discovery or aligned with open metadata standards.
 
-MACH fills that gap with:
+MACH fills that gap:
 
-- **Structured, evidence-backed metadata** - every entry includes a curated rationale, clinical domain tags, deployment context, and at least one live evidence URL
-- **Machine-readable exports** - MLDCAT-AP 3.0, CodeMeta 3.0, MCP `server.json`, Croissant, DCAT-AP
-- **FAIR alignment** - stable entry URIs (w3id.org planned), versioned releases, DOI-archived on Zenodo
-- **FAIR Data Point server** - planned RDF/SPARQL endpoint implementing the [FDP specification](https://specs.fairdatapoint.org/), making the catalog queryable by data portals, registries, and agents
-- **Community curation** - all data lives in Git; suggest entries via GitHub issues or pull request; CI validates every entry on push
-- **Agent-native interface** *(exploratory)* - the catalog structure is designed to be queryable by AI agents directly; an MCP server exposing MACH as a tool for Claude, Cursor, and similar environments is a natural next step, subject to resourcing
+- **Structured, evidence-backed entries** — every entry includes a curated rationale, clinical domain tags, deployment context, and at least one live evidence URL
+- **Three-ring editorial judgement** — Adopt / Assess / Caution, data-driven and explained, adapted from the [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar)
+- **Machine-readable exports** — MLDCAT-AP 3.0, CodeMeta 3.0, DCAT-AP, Croissant, llms.txt
+- **FAIR alignment** — stable entry URIs, DOI-archived on Zenodo, ORCID-attributed
+- **Agent-native** — MCP server and FAIR Data Point RDF/SPARQL endpoint (Phase 2)
 
 ---
 
 ## Who is MACH for?
 
-| | |
+| Audience | Use case |
 |---|---|
-| **Hospitals & health systems** | Evaluate open-source tools against structured criteria before procurement or deployment |
-| **Researchers & data scientists** | Discover FAIR-aligned datasets, models, and pipelines with standardised metadata they can cite and query |
-| **AI / agent developers** | Query the catalog programmatically via JSON-LD, llms.txt, MCP server, or SPARQL - no scraping required |
+| **Hospitals & health systems** | Evaluate open-source tools against structured criteria before procurement |
+| **Researchers & data scientists** | Discover FAIR-aligned datasets, models, and pipelines with citable metadata |
+| **AI / agent developers** | Query the catalog programmatically via JSON-LD, MCP server, or SPARQL |
 | **Governments & ministries** | Identify open standards-compliant tooling for national digital health infrastructure |
 
 ---
 
-## Browse
+## Catalog categories
 
-| | |
+| Category | What it covers |
 |---|---|
-| 🌐 Website | https://openmach.health *(coming soon)* |
-| 📄 Full catalog (JSON-LD) | `/catalog.jsonld` *(generated on release)* |
-| 🤖 For LLMs | `/llms.txt` *(generated on release)* |
-| 📦 MLDCAT-AP export | `/mldcat-ap.jsonld` *(generated on release)* |
-| 🔗 FAIR Data Point (RDF/SPARQL) | planned - implementing [specs.fairdatapoint.org](https://specs.fairdatapoint.org/) |
+| **Software** | EHR/EMR, imaging tools, pipeline software, clinical systems |
+| **AI / ML Models** | Clinical LLMs, imaging foundation models, NLP |
+| **Datasets** | Benchmarks, clinical datasets, evaluation suites |
+| **MCP Servers** | FHIR MCP, OMOP MCP, clinical AI interfaces |
+| **Data Sources** | Public health APIs, open data portals, surveillance feeds |
+| **Catalogs** | Other open healthcare catalogs and registries |
+| **Specs** | Interoperability standards and specifications |
 
 ---
 
-## Categories
+## How to use the catalog
 
-| # | Category | Covers |
-|---|---|---|
-| 1 | **Clinical Systems** | EHR/EMR, HIS, PMS, telemedicine |
-| 2 | **Interoperability Standards** | FHIR, HL7, openEHR, DICOM, IHE |
-| 3 | **Terminologies & Ontologies** | SNOMED-CT, LOINC, ICD-11, RxNorm, HPO |
-| 4 | **Data Models & Research Platforms** | OMOP CDM, i2b2, PCORnet, openEHR CKM |
-| 5 | **Medical Imaging & Signals** | PACS, DICOM viewers, signal processing |
-| 6 | **AI / ML Models** | Clinical LLMs, imaging models, NLP |
-| 7 | **Datasets & Benchmarks** | MIMIC, PhysioNet, MedQA, MedMNIST |
-| 8 | **De-identification & Privacy** | Philter, Presidio, openPseudonymiser |
-| 9 | **Quality & Conformance** | FHIR validators, Inferno, test suites |
-| 10 | **Public Health & Epi** | DHIS2, SORMAS, OpenSRP, Go.Data |
-| 11 | **MCP Servers & AI Interfaces** | FHIR MCP, PubMed MCP, openFDA MCP |
-| 12 | **Tooling & Infrastructure** | Terminology servers, pipeline tools |
-| 13 | **Patient-Facing & mHealth** | Patient portals, wearable bridges |
-| 14 | **Compliance & Governance** | HIPAA helpers, EU AI Act tooling |
+**Browse the website:**
+Visit the [GitHub Pages site](https://forse-h.github.io/MACH) for a searchable, filterable view of all entries.
 
----
+**Use the data programmatically:**
+All entries are JSON-LD files in `entries/`. Clone the repo or fetch individual entries directly:
 
-## Metadata Standards
+```bash
+# Clone
+git clone https://github.com/FORSE-H/MACH
 
-Each entry type serializes against the appropriate standard:
+# Fetch a single entry
+curl https://raw.githubusercontent.com/FORSE-H/MACH/main/entries/software/openmrs.jsonld
+```
 
-| Entry type | Primary standard | Also aligned with |
-|---|---|---|
-| Software / Tool | [CodeMeta 3.0](https://codemeta.github.io/) | schema.org SoftwareApplication |
-| AI / ML Model | [MLDCAT-AP 3.0](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) | Hugging Face Model Card |
-| Dataset | [Croissant (MLCommons)](https://mlcommons.org/working-groups/data/croissant/) | schema.org Dataset |
-| MCP Server | [MCP server.json](https://github.com/modelcontextprotocol/registry) | CodeMeta |
-| Standard / Spec | schema.org + MACH vocabulary | DCAT-AP |
-| The catalog itself | [DCAT-AP 3.0](https://semiceu.github.io/DCAT-AP/) (EU profile of [DCAT v3](https://www.w3.org/TR/vocab-dcat-3/)) | |
+**Entry structure:**
+Each entry is a JSON-LD file with fields from CodeMeta, MLDCAT-AP, and the MACH vocabulary:
 
----
+```json
+{
+  "@context": "../../data/context/mach.jsonld",
+  "identifier": "openmrs",
+  "name": "OpenMRS",
+  "description": "...",
+  "url": "https://openmrs.org",
+  "license": "MPL-2.0",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "...",
+  "mach:clinicalDomain": ["primary-care", "global-health"],
+  "mach:evidence": [...]
+}
+```
 
-## Implementation status
-
-The table above describes the *intended* alignment. Current implementation gaps:
-
-| Standard | Status | Gap |
-|---|---|---|
-| [CodeMeta 3.0](https://codemeta.github.io/) | **Partial** - field names follow CodeMeta, `codemeta:` prefix declared in context | Export script (`scripts/export_codemeta.py`) not yet built; no per-entry `/codemeta/<slug>.json` output |
-| [MLDCAT-AP 3.0](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) | **Partial** - `mldcat:` prefix now declared; model fields resolve to `mldcat:` URIs | Export script (`scripts/export_mldcat_ap.py`) not yet built; no `/mldcat-ap.jsonld` output |
-| [Croissant](https://mlcommons.org/working-groups/data/croissant/) | **Partial** - dataset entries exist (AgentClinic, MedAgentBench, MedCalc-Bench, MLOmics) | Croissant context mapping and export script pending |
-| [MCP server.json](https://github.com/modelcontextprotocol/registry) | **Partial** - `mach:transport`, `mach:authMethod` etc. present in MCP entries | Export script producing compliant `/mcp/<slug>.server.json` not yet built |
-| [DCAT-AP](https://semiceu.github.io/DCAT-AP/) | **Partial** - `dcat:` prefix declared in context | No DCAT-AP export; `dcat:` terms not yet used in individual entries |
-| [Bitol ODPS](https://github.com/bitol-io/open-data-product-standard) | **Not started** | No data product entries or ODPS mapping |
-
-All export generators are planned Phase 2 work.
-
-**Planned Phase 3 features:**
-
-- **AI-assisted catalog search** - natural language query interface over catalog entries; likely implemented as semantic search over entry embeddings or as an MCP server exposing MACH as an agent tool
-- **Automated metadata enrichment on PR** - GitHub Action triggered when a new entry PR is opened; auto-fetches GitHub stars, last release date, license, and language from GitHub/HuggingFace/PyPI APIs and posts a pre-fill comment on the PR to reduce manual curator work
+**Vocabulary reference:** [`data/context/mach.jsonld`](data/context/mach.jsonld)
+**Taxonomy reference:** [`data/taxonomy/categories.yaml`](data/taxonomy/categories.yaml)
 
 ---
 
 ## How it works
 
-```mermaid
-flowchart TD
-    PR["Pull Request\nentries/*.jsonld"] --> VAL
-    ENRICH["Planned: auto-enrichment\nGitHub / HF / PyPI APIs"] -.->|future| VAL
-
-    VAL{"CI: validate.yml\nJSON-LD · schema · required fields"}
-    VAL -- fail --> PR
-    VAL -- pass / merge --> MAIN["main branch"]
-
-    MAIN --> GEN["CI: generate_entries.py"]
-
-    GEN --> UI["GitHub Pages\ncatalog with filters"]
-    GEN --> CAT["catalog.jsonld\nfull export"]
-    GEN --> MLDC["mldcat-ap.jsonld\nML model export"]
-    GEN --> LLM["llms.txt\nLLM-readable index"]
-
-    CAT --> HARVEST["Search · Discover · Download · Cite · Harvest"]
-    MLDC --> HARVEST
-    LLM --> HARVEST
-
-    HARVEST -.->|planned| FDP["FDP / SPARQL\ndownstream portals · AI agents"]
+```
+GitHub Issue (suggest an entry)
+         │
+         ▼ Maintainer approves → CI harvests from source systems
+         │
+         ▼
+      DuckDB  ←  GitHub API · PyPI · OpenAlex · arXiv
+         │
+         ├── Scoring (Adopt / Assess / Caution)
+         ├── Validation
+         └── Draft PR → Maintainer reviews → Merges
+                  │
+                  ▼
+         Catalog goes live
+         ├── GitHub Pages (searchable UI)
+         ├── JSON-LD entries (this repo)
+         ├── FDP / SPARQL endpoint (Phase 2)
+         └── MCP server (Phase 2)
 ```
 
 ---
 
 ## Contributing
 
-Suggest an entry via a [GitHub issue](https://github.com/FORSE-H/MACH/issues/new/choose) — fill in the template and curators will handle the rest.
+**Suggest an entry** via a [GitHub Issue](https://github.com/FORSE-H/MACH/issues/new/choose) — fill in the template with a name and source URL. The CI pipeline handles harvesting and metadata enrichment; a curator reviews before anything goes live.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, including the entry checklist and editorial judgement criteria.
+**Prerequisites for contributors:**
+- A GitHub account
+- Familiarity with JSON (entries are JSON-LD files)
+- Access to the project's source URL for the tool you're suggesting
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full entry checklist, judgement criteria, and conflict-of-interest policy.
 
 ---
 
 ## License
 
-- **Code** (CI pipeline, adapters, site tooling): [Apache-2.0](LICENSE)
-- **Catalog data** (all `entries/` JSON-LD files): [CC-BY-4.0](LICENSE-DATA)
+| What | Licence |
+|---|---|
+| Code (CI pipeline, scripts, site tooling) | [Apache-2.0](LICENSE) |
+| Catalog data (`entries/` JSON-LD files) | [CC-BY-4.0](LICENSE-DATA) |
 
-Attribution: *MACH - Machine-Actionable Catalog for Healthcare, FORSE-H, https://github.com/FORSE-H/MACH*
+Attribution for data reuse:
+> *MACH — Machine-Actionable Catalog for Healthcare, FORSE-H, https://github.com/FORSE-H/MACH*
 
 ---
 
 ## Cite this catalog
 
 ```bibtex
-@misc{mach2025,
-  title        = {MACH: Machine-Actionable Catalog for Healthcare},
-  author       = {{Priyanka Ojha}},
-  year         = {2026},
-  doi          = {10.5281/zenodo.20155320},
-  url          = {https://zenodo.org/records/20155320},
-  orcid        = {https://orcid.org/0000-0002-6844-6493},
-  note         = {CC-BY-4.0, v0.1.0 pre-release}
+@misc{mach2026,
+  title   = {MACH: Machine-Actionable Catalog for Healthcare},
+  author  = {Ojha, Priyanka},
+  year    = {2026},
+  doi     = {10.5281/zenodo.20155320},
+  url     = {https://zenodo.org/records/20155320},
+  orcid   = {https://orcid.org/0000-0002-6844-6493},
+  note    = {CC-BY-4.0}
 }
 ```
 
 ---
 
-## Acknowledgements
+## Contact & community
 
-Inspired by [CNCF Landscape](https://landscape.cncf.io/), [Data Landscape (Entropy Data)](https://www.data-landscape.com/), [ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar), [Research Software Directory](https://research-software-directory.org/) (Netherlands eScience Center), and [bio.tools](https://bio.tools/) (ELIXIR). Metadata standards: [MLDCAT-AP](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) (SEMIC/EU), [CodeMeta](https://codemeta.github.io/), [DCAT-AP](https://semiceu.github.io/DCAT-AP/), [Croissant](https://mlcommons.org/working-groups/data/croissant/) (MLCommons), [Bitol ODPS](https://github.com/bitol-io/open-data-product-standard), [ODRL](https://www.w3.org/TR/odrl-model/) (W3C), [FAIR Data Point spec](https://specs.fairdatapoint.org/).
-
-Accessibility testing is powered by [pa11y](https://github.com/pa11y/pa11y), an open-source automated accessibility testing tool, running WCAG 2.1 AA checks in CI on every change to the site.
-
-MACH uses [Software Heritage](https://www.softwareheritage.org/) identifiers (SWHIDs) as persistent archival references for catalog entries. SWHIDs are an ISO/IEC 18670 standard; the Software Heritage logo displayed in the catalog is used under their [CC-BY communication kit](https://www.softwareheritage.org/software-heritage-communication-kit/). We thank Software Heritage for their work on universal software preservation.
-
-Parts of this project, including catalog entries, tooling scripts, and scoring methodology, were developed with assistance from [Claude](https://claude.ai) by [Anthropic](https://www.anthropic.com), specifically Claude Sonnet 4.6 via [Claude Code](https://github.com/anthropics/claude-code). All content has been reviewed and is the intellectual responsibility of the project curator.
+- **Issues / suggestions:** [GitHub Issues](https://github.com/FORSE-H/MACH/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/FORSE-H/MACH/discussions)
+- **Maintainer:** Priyanka Ojha · [ORCID 0000-0002-6844-6493](https://orcid.org/0000-0002-6844-6493)
 
 ---
 
-## References
+## Acknowledgements
 
-Academic and community standards informing the MACH scoring methodology and metadata design:
+Inspired by [CNCF Landscape](https://landscape.cncf.io/), [ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar), [Research Software Directory](https://research-software-directory.org/) (Netherlands eScience Center), and [bio.tools](https://bio.tools/) (ELIXIR).
 
-| Reference | Description |
-|---|---|
-| Martin del Pico E., Gelpi J.L., Capella-Gutierrez S. (2024). *FAIRsoft—a practical implementation of FAIR principles for research software*. Bioinformatics, 40(8). [doi:10.1093/bioinformatics/btae464](https://doi.org/10.1093/bioinformatics/btae464) | FAIRsoft: 12 measurable FAIR indicators for research software (F/A/I/R axis breakdown) |
-| Chue Hong N.P. et al. (2022). *FAIR Principles for Research Software (FAIR4RS Principles)*. ReSA / RDA / FORCE11. [doi:10.15497/RDA00068](https://doi.org/10.15497/RDA00068) | Foundational FAIR4RS principles adapted from FAIR data to research software |
-| [howfairis v0.15](https://github.com/fair-software/howfairis) (2025). Netherlands eScience Center. | Automated tool implementing 5 FAIR software recommendations from fair-software.nl |
-| [fair-software.nl recommendations](https://fair-software.nl) | Five practical FAIR software recommendations: repository, license, registry, citation, checklist |
-| [OpenSSF Scorecard](https://scorecard.dev) | Automated security and best-practices checks for open source projects |
-| [Citation File Format (CFF)](https://citation-file-format.github.io/) | CITATION.cff standard for software citation metadata |
-| [Software Heritage](https://www.softwareheritage.org/) | Universal software archive; MACH uses SWHIDs (ISO/IEC 18670) as persistent archival identifiers in catalog entries |
+Metadata standards: [MLDCAT-AP](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) (SEMIC/EU) · [CodeMeta](https://codemeta.github.io/) · [DCAT-AP](https://semiceu.github.io/DCAT-AP/) · [Croissant](https://mlcommons.org/working-groups/data/croissant/) · [FAIR Data Point](https://specs.fairdatapoint.org/) · [ODRL](https://www.w3.org/TR/odrl-model/) (W3C).
 
-### Harvesting Infrastructure
+FAIR scoring informed by [FAIRsoft](https://doi.org/10.1093/bioinformatics/btae464) (Martin del Pico et al., 2024), [FAIR4RS](https://doi.org/10.15497/RDA00068) (Chue Hong et al., 2022), and [howfairis](https://github.com/fair-software/howfairis) (Netherlands eScience Center).
 
-Tools informing MACH's metadata harvesting pipeline design (Phase 2). MACH operates primarily as a harvester — sourcing raw metadata from repositories and portals, with editorial curation limited to judgement, categorisation, and evidence.
+Persistent archival via [Software Heritage](https://www.softwareheritage.org/) (SWHIDs, ISO/IEC 18670) and [Zenodo](https://zenodo.org).
 
-| Tool | License | Role in MACH |
-|---|---|---|
-| [SOMEF](https://github.com/KnowledgeCaptureAndDiscovery/somef) — Mao et al. Software Metadata Extraction Framework. | MIT | Extracts 50+ metadata fields from README files, GitHub API, and package manifests (`setup.py`, `pyproject.toml`, `CITATION.cff`, `pom.xml`) using supervised classifiers and header analysis. Outputs CodeMeta JSON and JSON-LD. MACH's harvest pipeline uses SOMEF for GitHub-hosted entries to populate `repo_artifacts` and fill gaps in editorial fields. GitLab support is partial — a future contribution target. Non-repo entry types (specs, data portals) are not in scope for SOMEF. |
-| [codemeta-harvester](https://github.com/proycon/codemeta-harvester) — Maarten van Gompel, KNAW HuC. | GPL-3.0 | Aggregates `codemeta.json`, `CITATION.cff`, `setup.py`, `pyproject.toml`, `pom.xml`, `package.json`, LICENSE, and README into a single `codemeta.json` with defined source priority rules. Used server-side (not embedded) in MACH's planned `GET /{type}/{id}/codemeta.json` export endpoint. GPL-3.0 is compatible with server-side use; the code is not incorporated into MACH's Apache-2.0 codebase. |
-| [SOCA](https://github.com/oeg-upm/soca) — OEG-UPM. | Apache-2.0 | Software Catalog Creator built on SOMEF. Informed MACH's `fetch → extract → display` harvest pipeline architecture and entry completeness scoring approach. Apache-2.0 compatible with MACH. |
+Parts of this project were developed with assistance from [Claude](https://claude.ai) by [Anthropic](https://www.anthropic.com). All content has been reviewed and is the intellectual responsibility of the project curator.

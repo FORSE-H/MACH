@@ -39,9 +39,6 @@ judgements:
     description: >
       Production-ready, well-governed, recommended for new work. Proven at scale,
       actively maintained, clearly the default for its slot.
-  - id: Situational
-    description: >
-      Right in specific contexts but not a general default. Pick deliberately.
   - id: Assess
     description: >
       Promising but not yet proven for production-default use. Track it and prototype,
@@ -50,6 +47,19 @@ judgements:
     description: >
       Avoid for new work. Either superseded, unmaintained (>18 months), or fading.
       Listed because it is still encountered in existing systems.
+
+applicability_values:
+  - id: general
+    description: >
+      Relevant across most healthcare deployment contexts. Default — omit this
+      field or set to general for entries suitable for a broad range of projects.
+  - id: specialist
+    description: >
+      Production-ready and well-governed but only relevant in specific
+      infrastructure or regulatory contexts (e.g. EU Health Data Space,
+      OMOP pipelines, clinical trial submission, consent infrastructure).
+      Agents and curators should surface the mach:judgementReason to explain
+      which context makes this entry applicable.
 
 maturity_levels:
   - experimental

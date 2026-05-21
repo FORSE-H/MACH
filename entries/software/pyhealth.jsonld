@@ -58,7 +58,7 @@
   },
   "mach:governance": "academic",
   "mach:foundation": "Sun Lab, UIUC (John Wu)",
-  "mach:category": "tooling-infrastructure",
+  "mach:category": "software",
   "mach:subcategory": "pipeline",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

@@ -28,7 +28,7 @@
 
   "mach:governance": "foundation",
   "mach:foundation": "Foundation Name (if applicable)",
-  "mach:category": "clinical-systems",
+  "mach:category": "software",
   "mach:subcategory": "ehr",
   "mach:maturity": "production",
   "mach:judgement": "Assess",

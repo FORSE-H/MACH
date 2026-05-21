@@ -33,7 +33,7 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:category": "datasets-benchmarks",
+  "mach:category": "datasets",
   "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted",

@@ -33,7 +33,7 @@
   ],
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:maturity": "experimental",
   "mach:deploymentContext": [
     "self-hosted"

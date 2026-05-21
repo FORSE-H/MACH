@@ -9,6 +9,7 @@
   "name": "Virchow2",
   "description": "Second-generation Virchow pathology foundation model — ViT-H/14 (632M parameters) pretrained on 3.1M whole-slide images from Memorial Sloan Kettering Cancer Center at multiple magnifications (5×, 10×, 20×, 40×). Doubles training data and adds multi-magnification pretraining over the original Virchow. 91k+ monthly HuggingFace downloads. Paige + Microsoft Research, arXiv 2024. Note: licence changed from Virchow's Apache 2.0 to CC-BY-NC-ND 4.0 — non-commercial and academic use only. Institutional email and individual registration required.",
   "url": "https://huggingface.co/paige-ai/Virchow2",
+  "codeRepository": "https://github.com/Paige-AI/paige-ml-sdk",
   "relatedLink": [
     "https://arxiv.org/abs/2408.00738"
   ],

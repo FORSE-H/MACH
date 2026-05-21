@@ -42,7 +42,7 @@
   "mach:mcpSpecVersion": "2025-03-26",
   "mach:governance": "vendor-led",
   "mach:foundation": "Cadasto",
-  "mach:category": "mcp-servers-ai-interfaces",
+  "mach:category": "mcp-servers",
   "mach:subcategory": "openehr-mcp",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",

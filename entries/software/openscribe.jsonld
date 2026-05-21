@@ -38,7 +38,7 @@
     "name": "Sam Margolis"
   },
   "mach:governance": "individual",
-  "mach:category": "clinical-systems",
+  "mach:category": "software",
   "mach:subcategory": "ehr",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",

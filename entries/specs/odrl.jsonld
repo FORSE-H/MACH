@@ -32,8 +32,9 @@
   "mach:category": "specs",
   "mach:subcategory": "data-governance",
   "mach:maturity": "production",
-  "mach:judgement": "Situational",
-  "mach:judgementReason": "Relevant specifically for projects that need machine-readable data access policies: EU Health Data Space implementations, IDS/Gaia-X health data connectors, and DCAT-AP dataset entries expressing access conditions via odrl:Policy. Not a general-purpose healthcare interoperability standard — adopt only when building data-space or consent infrastructure.",
+  "mach:applicability": "specialist",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Mature W3C recommendation (2018) with stable governance and permissive licensing, but narrow in scope: primarily relevant for EU Health Data Space implementations, IDS/Gaia-X health data connectors, and DCAT-AP dataset entries expressing access conditions via odrl:Policy. Not a general-purpose healthcare interoperability standard — evaluate only when building data-space or consent infrastructure.",
   "mach:editorialReviewedAt": "2026-05-11",
   "mach:clinicalDomain": [
     "research",

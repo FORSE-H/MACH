@@ -21,7 +21,7 @@ def _load():
 
 
 def category_labels() -> dict[str, str]:
-    """Return {slug: display_name} for all 14 categories."""
+    """Return {slug: display_name} for all 7 categories."""
     return {c["id"]: c["name"] for c in _load()["categories"]}
 
 
@@ -31,7 +31,7 @@ def category_ids() -> list[str]:
 
 
 def judgement_ids() -> list[str]:
-    """Return valid judgement values: Adopt, Situational, Assess, Caution."""
+    """Return valid judgement values: Adopt, Assess, Caution."""
     return [j["id"] for j in _load()["judgements"]]
 
 

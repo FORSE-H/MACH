@@ -43,7 +43,7 @@
   },
   "mach:governance": "foundation",
   "mach:foundation": "Chan Zuckerberg Initiative",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:subcategory": "pathology",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

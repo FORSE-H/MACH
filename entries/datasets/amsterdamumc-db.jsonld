@@ -36,7 +36,7 @@
   ],
   "mach:governance": "academic",
   "mach:foundation": "Amsterdam University Medical Centers",
-  "mach:category": "datasets-benchmarks",
+  "mach:category": "datasets",
   "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted"

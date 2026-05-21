@@ -52,7 +52,7 @@
   },
   "mach:governance": "community",
   "mach:foundation": "vantage6 community (originally iknl / Netherlands eScience Center)",
-  "mach:category": "tooling-infrastructure",
+  "mach:category": "software",
   "mach:subcategory": "federated-learning",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

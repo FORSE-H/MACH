@@ -39,7 +39,7 @@
   "mach:authMethod": "env-config",
   "mach:mcpSpecVersion": "2024-11-05",
   "mach:governance": "individual",
-  "mach:category": "mcp-servers-ai-interfaces",
+  "mach:category": "mcp-servers",
   "mach:subcategory": "openehr-mcp",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",

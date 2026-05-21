@@ -41,7 +41,7 @@
   },
   "mach:governance": "academic",
   "mach:foundation": "Netherlands Cancer Institute / AI for Oncology",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:subcategory": "radiology",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",

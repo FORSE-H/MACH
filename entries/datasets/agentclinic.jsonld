@@ -33,7 +33,7 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:category": "datasets-benchmarks",
+  "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",

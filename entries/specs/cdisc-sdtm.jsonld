@@ -53,6 +53,7 @@
     "pharmacology",
     "oncology"
   ],
+  "mach:applicability": "specialist",
   "mach:judgement": "Adopt",
   "mach:judgementReason": "Mandatory for FDA and EMA clinical trial data submissions — if your team touches drug development or regulatory-grade clinical trial data, SDTM is non-negotiable. Freely available to implement (CDISC IP License). The open-source CDISC Rules Engine (MIT) validates SDTM datasets against conformance rules. Adopt as the reference standard for any pipeline ingesting or producing clinical trial tabulation data.",
   "mach:editorialReviewedAt": "2026-05-18",

@@ -46,7 +46,7 @@
   },
   "mach:governance": "academic",
   "mach:foundation": "University of Groningen",
-  "mach:category": "data-models-research",
+  "mach:category": "software",
   "mach:subcategory": "research-platform",
   "mach:maturity": "production",
   "mach:judgement": "Assess",

@@ -45,7 +45,7 @@
   "mach:aiActRiskClass": "high-risk-candidate",
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "ai-ml-models",
   "mach:subcategory": "imaging-model",
   "mach:maturity": "beta",
   "mach:deploymentContext": [

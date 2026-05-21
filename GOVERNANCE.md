@@ -1,15 +1,15 @@
 # Governance
 
-MACH is an editorially independent open-source project. This document describes how decisions
-are made and how the catalog maintains its integrity.
+MACH is an open-source project. This document describes how decisions are made and how the
+catalog maintains its integrity.
 
 ---
 
 ## Editorial independence
 
-Sponsorships, donations, and partnerships have **no influence** on editorial decisions.
-No sponsor, partner, or funder may request that an entry be added, upgraded, downgraded,
-or removed. Violations of this principle are grounds for immediate removal of the sponsor
+Sponsorships, donations, and partnerships have **no influence** on which entries are included
+or how they are rated. No sponsor or funder may request that an entry be added, upgraded,
+downgraded, or removed. Violations of this principle are grounds for immediate removal of the
 relationship and public disclosure.
 
 ---
@@ -17,23 +17,25 @@ relationship and public disclosure.
 ## Roles
 
 ### Founder / Lead Curator
-Currently: the founding maintainer (see repo). Responsible for final editorial decisions,
+Currently Priyanka Ojha (see README). Responsible for final editorial decisions,
 release management, and fiscal oversight.
 
 ### Curators
-Individuals with merge rights who review and approve PRs. Curators are nominated by the
-lead curator and accepted by simple majority of existing curators. A curator may be removed
-by a two-thirds majority vote for sustained inactivity (>6 months) or breach of this policy.
+As the project grows, curators are individuals with merge rights who review and approve
+contributions. Curators are nominated by the lead curator and accepted by simple majority
+of existing curators. A curator may be removed by a two-thirds majority vote for sustained
+inactivity (>6 months) or breach of this policy.
 
 ### Contributors
-Anyone who submits a pull request. No special rights. All contributions welcome.
+Anyone who suggests an entry via a GitHub Issue. The lead curator or a curator reviews
+each suggestion, and creates the catalog entry if accepted. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
 ## Decision-making
 
-**Routine entries** (new entry, minor update): any single curator may approve and merge,
-provided the entry checklist in CONTRIBUTING.md is satisfied.
+**New entries**: the lead curator reviews the suggestion and either accepts, requests more
+information, or declines with a reason.
 
 **Judgement changes** (upgrading or downgrading an existing entry): requires a second
 curator's approval or a 7-day comment period with no objection from the community.
@@ -53,7 +55,8 @@ Any curator who has a financial, employment, or personal relationship with an or
 behind an entry **must** disclose this before reviewing that entry and **must not** be the
 sole approver of a decision affecting that entry.
 
-Disclosures are made in the PR thread and are permanently part of the Git history.
+Disclosures are made in the relevant GitHub Issue or PR thread and are permanently part of
+the Git history.
 
 ---
 
@@ -71,16 +74,5 @@ is incorrect or biased, they may:
 
 ## Fiscal policy
 
-MACH is currently an unincorporated community project. All financial relationships
-(grants, sponsorships, donations) are disclosed publicly in the [SUPPORTERS.md](SUPPORTERS.md)
-file, including amounts and dates.
-
-The long-term goal is fiscal sponsorship under a neutral home (LF Public Health,
-LF AI & Data, or Open Collective). This document will be updated when that transition occurs.
-
----
-
-## Code of conduct
-
-This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
-Violations may be reported to the lead curator.
+MACH is currently a solo-run project. Grants, sponsorships, and donations will be
+disclosed publicly when they are established.

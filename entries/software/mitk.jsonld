@@ -53,7 +53,7 @@
   },
   "mach:governance": "academic",
   "mach:foundation": "Division of Medical Image Computing, DKFZ Heidelberg",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:subcategory": "dicom-viewer",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

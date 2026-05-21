@@ -42,7 +42,7 @@
     "name": "neuropsychology (Dominique Makowski et al.)"
   },
   "mach:governance": "academic",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:subcategory": "signal-processing",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

@@ -44,7 +44,7 @@
   },
   "mach:governance": "academic",
   "mach:foundation": "Dana-Farber Cancer Institute",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:subcategory": "imaging-model",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",

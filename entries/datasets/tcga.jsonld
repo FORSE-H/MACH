@@ -43,7 +43,7 @@
     }
   ],
   "mach:governance": "government",
-  "mach:category": "datasets-benchmarks",
+  "mach:category": "datasets",
   "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud-only"

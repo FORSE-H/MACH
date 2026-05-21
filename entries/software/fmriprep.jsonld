@@ -43,7 +43,7 @@
   },
   "mach:governance": "community",
   "mach:foundation": "NiPreps / Stanford University",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:subcategory": "signal-processing",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

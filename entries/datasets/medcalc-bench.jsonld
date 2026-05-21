@@ -42,7 +42,7 @@
   ],
   "mach:governance": "government",
   "mach:foundation": "National Institutes of Health / NLM",
-  "mach:category": "datasets-benchmarks",
+  "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

@@ -35,7 +35,7 @@
   ],
   "mach:governance": "academic",
   "mach:foundation": "Stanford University",
-  "mach:category": "datasets-benchmarks",
+  "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
   "mach:maturity": "production",
   "mach:deploymentContext": [

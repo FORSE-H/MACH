@@ -47,7 +47,7 @@
   },
   "mach:governance": "academic",
   "mach:foundation": "Division of Medical Image Computing, DKFZ (Hanno Gao, Philipp Schader et al.)",
-  "mach:category": "tooling-infrastructure",
+  "mach:category": "software",
   "mach:subcategory": "federated-learning",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",

@@ -40,7 +40,7 @@
     "name": "histolab community (Marcolini et al.)"
   },
   "mach:governance": "community",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:subcategory": "imaging-model",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",

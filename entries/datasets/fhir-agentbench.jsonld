@@ -43,7 +43,7 @@
   ],
   "mach:governance": "vendor-led",
   "mach:foundation": "Verily (Alphabet)",
-  "mach:category": "datasets-benchmarks",
+  "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
   "mach:maturity": "beta",
   "mach:judgement": "Adopt",

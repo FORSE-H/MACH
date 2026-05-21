@@ -42,7 +42,7 @@
   },
   "mach:governance": "foundation",
   "mach:foundation": "BBMRI-ERIC",
-  "mach:category": "compliance-governance",
+  "mach:category": "software",
   "mach:subcategory": "data-access",
   "mach:maturity": "production",
   "mach:judgement": "Assess",

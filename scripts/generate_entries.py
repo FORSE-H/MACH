@@ -20,10 +20,9 @@ from taxonomy import category_labels, label as category_label
 CATEGORY_LABELS = category_labels()
 
 JUDGEMENT_BADGE = {
-    "Adopt":       "badge-adopt",
-    "Situational": "badge-situational",
-    "Assess":      "badge-assess",
-    "Caution":     "badge-caution",
+    "Adopt":   "badge-adopt",
+    "Assess":  "badge-assess",
+    "Caution": "badge-caution",
 }
 
 import yaml as _yaml

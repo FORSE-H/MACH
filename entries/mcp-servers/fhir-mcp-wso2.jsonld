@@ -35,7 +35,7 @@
   "mach:mcpSpecVersion": "2024-11-05",
   "mach:governance": "vendor-led",
   "mach:foundation": "WSO2",
-  "mach:category": "mcp-servers-ai-interfaces",
+  "mach:category": "mcp-servers",
   "mach:subcategory": "fhir-mcp",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",

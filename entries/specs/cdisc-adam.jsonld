@@ -53,6 +53,7 @@
     "pharmacology",
     "oncology"
   ],
+  "mach:applicability": "specialist",
   "mach:judgement": "Adopt",
   "mach:judgementReason": "Required alongside SDTM for FDA and EMA drug approval submissions — ADaM is the analysis layer that makes SDTM trial data machine-auditable and reproducible. Any team building statistical analysis pipelines, AI-assisted trial analytics, or regulatory-grade reporting tools must understand ADaM structure. The pair SDTM + ADaM defines the complete data lifecycle for regulated clinical trials.",
   "mach:editorialReviewedAt": "2026-05-18",

@@ -62,7 +62,7 @@
   ],
   "mach:governance": "academic",
   "mach:foundation": "Division of Medical Image Computing, DKFZ (Fabian Isensee et al.)",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "ai-ml-models",
   "mach:subcategory": "imaging-model",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

@@ -42,7 +42,7 @@
     "name": "RDKit community (Greg Landrum et al.)"
   },
   "mach:governance": "community",
-  "mach:category": "tooling-infrastructure",
+  "mach:category": "software",
   "mach:subcategory": "pipeline-tools",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

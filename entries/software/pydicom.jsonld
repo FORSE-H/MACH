@@ -42,7 +42,7 @@
     "name": "pydicom community"
   },
   "mach:governance": "community",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:subcategory": "dicom",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

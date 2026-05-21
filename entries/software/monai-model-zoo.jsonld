@@ -52,7 +52,7 @@
     "name": "Project-MONAI"
   },
   "mach:governance": "community",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:subcategory": "imaging-model",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

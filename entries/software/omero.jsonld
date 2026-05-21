@@ -49,7 +49,7 @@
   },
   "mach:governance": "academic",
   "mach:foundation": "University of Dundee, with contributions from EMBL-EBI, Institut Pasteur, and others",
-  "mach:category": "medical-imaging-signals",
+  "mach:category": "software",
   "mach:subcategory": "pacs",
   "mach:maturity": "production",
   "mach:judgement": "Adopt",

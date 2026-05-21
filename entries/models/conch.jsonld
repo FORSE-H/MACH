@@ -14,7 +14,8 @@
   "url": "https://huggingface.co/MahmoodLab/CONCH",
   "codeRepository": "https://github.com/mahmoodlab/CONCH",
   "relatedLink": [
-    "https://www.nature.com/articles/s41591-024-02856-4"
+    "https://www.nature.com/articles/s41591-024-02856-4",
+    "https://huggingface.co/MahmoodLab/conchv1_5"
   ],
   "license": "CC-BY-NC-ND-4.0",
   "keywords": [
@@ -44,8 +45,9 @@
     "cloud-only"
   ],
   "mach:judgement": "Assess",
-  "mach:judgementReason": "The leading vision-language pathology foundation model — 86k+ monthly HuggingFace downloads, Nature Medicine 2024, state-of-the-art across 14 tasks, trained on PMC open-access image-caption pairs (unlike PLIP's Twitter data). Assess rather than Adopt due to CC-BY-NC-ND-4.0 licence: non-commercial and no-derivatives restrictions. Complements UNI in the MACH catalog: UNI is the vision-only encoder; CONCH adds language understanding for zero-shot and retrieval tasks.",
-  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:judgementReason": "The leading vision-language pathology foundation model — 86k+ monthly HuggingFace downloads, Nature Medicine 2024, state-of-the-art across 14 tasks, trained on PMC open-access image-caption pairs (unlike PLIP's Twitter data). Assess rather than Adopt due to CC-BY-NC-ND-4.0 licence: free for non-commercial academic research only. Commercial rights are exclusively held by Modella AI (Mahmood Lab spin-off, since acquired by AstraZeneca) — commercial use requires approval via the Mass General Brigham Innovation Office. Complements UNI: UNI is the vision-only encoder; CONCH adds language understanding for zero-shot classification and retrieval tasks. Organisations seeking commercial deployment must engage MGB Innovation.",
+  "mach:editorialReviewedAt": "2026-05-21",
+  "schema:comment": "CONCHv1.5 (MahmoodLab/conchv1_5 on HuggingFace) exists as a successor — ViT-L/16, CoCa fine-tuned on UNI checkpoint, 1.17M image-caption pairs. Not yet catalogable: GitHub repo and paper both listed as TBD as of May 2026. Re-assess when released.",
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
