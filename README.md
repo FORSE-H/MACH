@@ -185,9 +185,6 @@ Attribution for data reuse:
 - [FAIR4RS principles](https://doi.org/10.15497/RDA00068) — Chue Hong et al., RDA/FORCE11/ReSA, 2022
 - [howfairis](https://github.com/fair-software/howfairis) — Netherlands eScience Center
 
-**Regulatory reference**
-- [EU AI Act Annex III](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#anx_III) — high-risk AI system classification used in model scoring
-
 **Archival & indexing**
 - [Software Heritage](https://www.softwareheritage.org/) — persistent SWHIDs (ISO/IEC 18670)
 
