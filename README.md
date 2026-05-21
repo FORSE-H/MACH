@@ -166,14 +166,46 @@ Attribution for data reuse:
 
 ---
 
-## Acknowledgements
+## Acknowledgements & references
 
-Inspired by [CNCF Landscape](https://landscape.cncf.io/), [ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar), [Research Software Directory](https://research-software-directory.org/) (Netherlands eScience Center), and [bio.tools](https://bio.tools/) (ELIXIR).
+**Design inspiration**
+- [ThoughtWorks Technology Radar](https://www.thoughtworks.com/radar) — three-ring Adopt / Assess / Caution editorial model
+- [CNCF Landscape](https://landscape.cncf.io/) — category-based open ecosystem catalog design
+- [bio.tools](https://bio.tools/) (ELIXIR) — bioinformatics tool registry and controlled vocabulary
+- [Research Software Directory](https://research-software-directory.org/) (Netherlands eScience Center) — FAIR research software catalog
 
-Metadata standards: [MLDCAT-AP](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) (SEMIC/EU) · [CodeMeta](https://codemeta.github.io/) · [DCAT-AP](https://semiceu.github.io/DCAT-AP/) · [Croissant](https://mlcommons.org/working-groups/data/croissant/) · [FAIR Data Point](https://specs.fairdatapoint.org/) · [ODRL](https://www.w3.org/TR/odrl-model/) (W3C).
+**Metadata standards**
+- [CodeMeta 3.0](https://codemeta.github.io/) — software metadata crosswalk (schema.org + W3C)
+- [MLDCAT-AP 3.0](https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/) (SEMIC / EU) — ML model metadata, EU AI Act aligned
+- [DCAT-AP 3.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/) (SEMIC / EU) — dataset and catalog metadata
+- [MLCommons Croissant](https://mlcommons.org/working-groups/data/croissant/) — ML dataset metadata format
+- [FAIR Data Point Specification](https://specs.fairdatapoint.org/) — machine-readable data catalog protocol
+- [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/) / [schema.org](https://schema.org) (W3C) — linked data serialisation
+- [ODRL](https://www.w3.org/TR/odrl-model/) (W3C) — open digital rights language
 
-FAIR scoring informed by [FAIRsoft](https://doi.org/10.1093/bioinformatics/btae464) (Martin del Pico et al., 2024), [FAIR4RS](https://doi.org/10.15497/RDA00068) (Chue Hong et al., 2022), and [howfairis](https://github.com/fair-software/howfairis) (Netherlands eScience Center).
+**Healthcare interoperability standards** *(referenced in catalog entries)*
+- [HL7 FHIR R4](https://hl7.org/fhir/R4/) — healthcare data exchange
+- [OMOP CDM](https://ohdsi.github.io/CommonDataModel/) — observational health data model
+- [CDISC SDTM / ADaM](https://www.cdisc.org/) — clinical trial data standards
+- [openEHR](https://www.openehr.org/) — open EHR specifications
+- [SNOMED CT](https://www.snomed.org/) — clinical terminology
+- [DICOM](https://www.dicomstandard.org/) — medical imaging standard
 
-Persistent archival via [Software Heritage](https://www.softwareheritage.org/) (SWHIDs, ISO/IEC 18670) and [Zenodo](https://zenodo.org).
+**FAIR scoring**
+- [FAIRsoft indicators](https://doi.org/10.1093/bioinformatics/btae464) — Martin del Pico et al., 2024
+- [FAIR4RS principles](https://doi.org/10.15497/RDA00068) — Chue Hong et al., RDA/FORCE11/ReSA, 2022
+- [howfairis](https://github.com/fair-software/howfairis) — Netherlands eScience Center
 
-Parts of this project were developed with assistance from [Claude](https://claude.ai) by [Anthropic](https://www.anthropic.com). All content has been reviewed and is the intellectual responsibility of the project curator.
+**Regulatory reference**
+- [EU AI Act Annex III](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#anx_III) — high-risk AI system classification used in model scoring
+
+**Archival & indexing**
+- [Software Heritage](https://www.softwareheritage.org/) — persistent SWHIDs (ISO/IEC 18670)
+- [Zenodo](https://zenodo.org) — DOI archival (DOI: 10.5281/zenodo.20155320)
+- [OpenAIRE](https://explore.openaire.eu) — open science graph indexing
+
+**Funding**
+- [NLnet NGI0 Commons Fund](https://nlnet.nl/commonsfund/) — application submitted June 2026 (decision pending)
+
+**AI assistance**
+- Parts of this project were developed with assistance from [Claude](https://claude.ai) (Anthropic). All content has been reviewed and is the intellectual responsibility of the project curator.
