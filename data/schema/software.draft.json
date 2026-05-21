@@ -135,20 +135,13 @@
       "enum": [
         "software",
         "ai-ml-models",
-        "datasets-benchmarks",
+        "datasets",
         "mcp-servers",
-        "specs",
-        "tooling-infrastructure",
-        "clinical-systems",
-        "medical-imaging-signals",
-        "public-health-epi",
-        "patient-facing-mhealth",
-        "deidentification-privacy",
-        "quality-conformance",
-        "terminologies-ontologies",
-        "compliance-governance"
+        "data-sources",
+        "catalogs",
+        "specs"
       ],
-      "description": "Primary MACH taxonomy category. Software entries should use 'software'."
+      "description": "Primary MACH taxonomy category. Must match a category id in data/taxonomy/categories.yaml."
     },
     "mach:governance": {
       "type": "string",
@@ -174,11 +167,13 @@
         "enum": [
           "self-hosted",
           "cloud",
+          "cloud-only",
           "hybrid",
           "offline-capable",
           "embedded",
           "saas",
-          "kubernetes"
+          "kubernetes",
+          "hipaa-ready"
         ]
       },
       "description": "How the software is typically deployed."
@@ -188,10 +183,20 @@
       "items": { "type": "string" },
       "description": "Clinical or research domains the software serves. Free-text for now; will be constrained to a controlled vocabulary in Phase 2."
     },
+    "mach:applicability": {
+      "type": "string",
+      "enum": ["general", "specialist"],
+      "default": "general",
+      "description": "Breadth of applicability. 'general' = relevant across most healthcare contexts (default, may be omitted). 'specialist' = production-ready but only relevant in a specific infrastructure or regulatory context (e.g. EU Health Data Space, OMOP pipelines, clinical trial submission). Always pair with a mach:judgementReason that names the context."
+    },
+    "mach:benchmarkClaim": {
+      "type": "string",
+      "description": "Human-verified benchmark performance claim, stated exactly as in the source paper or README. Used verbatim in judgementReason — do not paraphrase or infer. Example: 'SOTA on 10 of 12 biomedical NER benchmarks (arXiv:2508.01630 Table 2)'. Must cite the source inline. Leave blank if no verified benchmark claim exists."
+    },
     "mach:judgement": {
       "type": "string",
-      "enum": ["Adopt", "Assess", "Situational", "Caution"],
-      "description": "MACH editorial recommendation ring. Adopt=ready for production use; Assess=worth evaluating; Situational=right tool for specific contexts; Caution=significant barriers (license, maintenance, safety)."
+      "enum": ["Adopt", "Assess", "Caution"],
+      "description": "MACH data-driven recommendation. Adopt=production-ready, recommended for new work; Assess=promising, worth tracking and prototyping; Caution=avoid for new work (unmaintained, superseded, or significant known issues)."
     },
     "mach:judgementReason": {
       "type": "string",
@@ -221,10 +226,19 @@
               "primary-repo",
               "documentation",
               "academic-reference",
-              "clinical-trial",
-              "benchmark",
               "package-registry",
-              "community-forum"
+              "specification",
+              "deployment-evidence",
+              "model-hub",
+              "zenodo-doi",
+              "research-software-directory",
+              "release",
+              "regulatory-reference",
+              "related-resource",
+              "primary-instance",
+              "project-site",
+              "clinical-trial",
+              "benchmark"
             ]
           },
           "schema:name": { "type": "string" }
