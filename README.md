@@ -180,14 +180,6 @@ Attribution for data reuse:
 - [DCAT-AP 3.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/) (SEMIC / EU) — dataset and catalog metadata
 - [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/) / [schema.org](https://schema.org) (W3C) — linked data serialisation
 
-**Healthcare interoperability standards** *(referenced in catalog entries)*
-- [HL7 FHIR R4](https://hl7.org/fhir/R4/) — healthcare data exchange
-- [OMOP CDM](https://ohdsi.github.io/CommonDataModel/) — observational health data model
-- [CDISC SDTM / ADaM](https://www.cdisc.org/) — clinical trial data standards
-- [openEHR](https://www.openehr.org/) — open EHR specifications
-- [SNOMED CT](https://www.snomed.org/) — clinical terminology
-- [DICOM](https://www.dicomstandard.org/) — medical imaging standard
-
 **FAIR scoring**
 - [FAIRsoft indicators](https://doi.org/10.1093/bioinformatics/btae464) — Martin del Pico et al., 2024
 - [FAIR4RS principles](https://doi.org/10.15497/RDA00068) — Chue Hong et al., RDA/FORCE11/ReSA, 2022
