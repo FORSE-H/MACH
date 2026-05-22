@@ -1,0 +1,60 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/suyashkumar-dicom",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "suyashkumar-dicom",
+  "name": "dicom (suyashkumar)",
+  "alternateName": [
+    "go-dicom",
+    "suyashkumar/dicom"
+  ],
+  "description": "High-performance Go library for reading, writing, and processing DICOM medical image files. Supports parsing of multi-frame imagery (encapsulated and native pixel data), channel-based streaming of image frames during parse, writing datasets back to DICOM, JSON-serialisable dataset and element representations, and flat iteration over nested sequences. Ships a CLI tool (dicomutil) for extracting imagery and metadata without writing code. The reference DICOM library for the Go ecosystem — a ground-up rewrite of the originally unmaintained go-dicom, now at v1.x stable with 1.1k GitHub stars.",
+  "url": "https://github.com/suyashkumar/dicom",
+  "codeRepository": "https://github.com/suyashkumar/dicom",
+  "license": "MIT",
+  "version": "1.1.0",
+  "dateModified": "2025-09-25",
+  "keywords": [
+    "dicom",
+    "medical-imaging",
+    "golang",
+    "imaging",
+    "parser",
+    "pixel-data",
+    "radiology",
+    "library",
+    "sdk"
+  ],
+  "copyrightHolder": {
+    "@type": "Person",
+    "name": "Suyash Kumar",
+    "url": "https://github.com/suyashkumar"
+  },
+  "mach:governance": "individual",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "radiology"
+  ],
+  "mach:deploymentContext": [
+    "embedded-library"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The reference DICOM parsing library for Go — MIT, stable v1.1.0, 1.1k stars, actively maintained with a complete rewrite history showing long-term commitment. DICOM is the core medical imaging standard so this is a genuine healthcare infrastructure need. Assess rather than Adopt due to individual governance (single maintainer sustainability risk) and the library nature of the project, which makes adoption dependent on the Go stack being in use.",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/suyashkumar/dicom",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pkg.go.dev/github.com/suyashkumar/dicom",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
