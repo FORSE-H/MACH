@@ -35,7 +35,7 @@ Open source enables transparency, reuse, and collaborative improvement. These pr
 
 - **UK Government (DSIT/GDS, 2026)** · [AI, open code and vulnerability risk in the public sector](https://www.gov.uk/guidance/ai-open-code-and-vulnerability-risk-in-the-public-sector): Recommends "open by default" even in an AI-accelerated threat landscape. Closing source does not remove vulnerabilities. It removes the external scrutiny that helps find and fix them.
 
-- **Ibrahim Haddad, LF AI & Data Foundation (2026)** · [Governing Our Digital Future: Every Government Needs an Open Source Program Office](https://www.ibrahimatlinux.com/publications/governing-our-digital-future-every-government-needs-an-open-source-program-office/): Open source redistributes cost from vendor licensing to internal capability. Without deliberate governance, those costs accumulate as security and operational risk.
+- **Ibrahim Haddad, LF AI & Data Foundation (2026)** · [Governing Our Digital Future: Every Government Needs an Open Source Program Office](https://www.linkedin.com/feed/update/urn:li:activity:7463264854640971777/): Open source redistributes cost from vendor licensing to internal capability. Without deliberate governance, those costs accumulate as security and operational risk.
 
 ---
 
