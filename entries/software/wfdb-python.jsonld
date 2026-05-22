@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/wfdb-python",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "wfdb-python",
+  "name": "WFDB Python",
+  "alternateName": [
+    "wfdb",
+    "Waveform Database Python"
+  ],
+  "description": "Native Python implementation of the Waveform Database (WFDB) standard for reading, writing, and processing physiological signal data. The primary I/O library for PhysioNet datasets — including MIMIC-III Waveforms, MIT-BIH Arrhythmia Database, and PTB-XL ECG dataset. Supports ECG, arterial blood pressure, EEG, and other time-series waveforms alongside their clinical annotations (beat labels, rhythm labels, clinical events). Maintained by the MIT Laboratory for Computational Physiology, the same group behind MIMIC and PhysioNet.",
+  "url": "https://wfdb.io",
+  "codeRepository": "https://github.com/MIT-LCP/wfdb-python",
+  "license": "MIT",
+  "version": "4.3.1",
+  "dateModified": "2026-02-03",
+  "keywords": [
+    "ecg",
+    "waveform",
+    "physionet",
+    "cardiology",
+    "python",
+    "signal-processing",
+    "arrhythmia",
+    "icu",
+    "physiological-signals",
+    "wfdb"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "MIT Laboratory for Computational Physiology",
+    "url": "https://lcp.mit.edu"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "cardiology",
+    "critical-care",
+    "neuroscience",
+    "clinical-research"
+  ],
+  "mach:deploymentContext": [
+    "embedded-library"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The standard Python library for reading and writing WFDB-format physiological signals — the I/O layer for PhysioNet datasets (MIT-BIH, MIMIC waveforms, PTB-XL). MIT license, MIT LCP governance, 836 stars, v4.3.1 (February 2026). Assess rather than Adopt due to narrower scope (waveform signal I/O) compared to general imaging libraries, but essential for any team building ECG or ICU alarm AI on PhysioNet data.",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/MIT-LCP/wfdb-python",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://wfdb.readthedocs.io",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
