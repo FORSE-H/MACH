@@ -1,0 +1,66 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/dcm2niix",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "dcm2niix",
+  "name": "dcm2niix",
+  "description": "De facto standard tool for converting DICOM neuroimaging data to NIfTI format with BIDS-compliant JSON sidecars. Handles vendor-specific DICOM quirks across GE, Siemens, Philips, and Canon scanners, producing vendor-neutral NIfTI output with complete acquisition metadata. Embedded in 100+ downstream neuroimaging tools and pipelines including fMRIprep, FreeSurfer, SPM12, AFNI, and heudiconv. Available as a standalone CLI, as a library, and bundled in Docker-based BIDS conversion pipelines. Developed and maintained by Chris Rorden's lab (University of South Carolina).",
+  "url": "https://github.com/rordenlab/dcm2niix",
+  "codeRepository": "https://github.com/rordenlab/dcm2niix",
+  "license": "BSD-2-Clause",
+  "version": "1.0.20260416",
+  "dateModified": "2026-05-07",
+  "keywords": [
+    "dicom",
+    "nifti",
+    "neuroimaging",
+    "bids",
+    "conversion",
+    "medical-imaging",
+    "mri",
+    "fmri",
+    "cpp",
+    "radiology"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Chris Rorden's Lab, University of South Carolina",
+    "url": "https://github.com/rordenlab"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "radiology",
+    "neuroscience"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "embedded-library",
+    "cloud-deployable"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference DICOM-to-NIfTI converter for neuroimaging — embedded in 100+ downstream tools including fMRIprep, FreeSurfer, SPM12, AFNI, and heudiconv. BSD-2-Clause, actively maintained by Chris Rorden's lab with frequent releases (v1.0.20260416, May 2026), 1.2k stars. Handles vendor-specific DICOM divergences across all major scanner manufacturers. No credible open-source alternative at this level of adoption, reliability, and breadth of scanner support. The starting point for any neuroimaging data pipeline.",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/rordenlab/dcm2niix",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1016/j.jneumeth.2016.03.001",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "A reproducible evaluation of ANTs similarity metric performance in brain image registration. J Neurosci Methods 2016."
+    }
+  ]
+}
