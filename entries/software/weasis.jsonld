@@ -6,21 +6,23 @@
   ],
   "identifier": "weasis",
   "name": "Weasis",
-  "description": "Web-based DICOM viewer for advanced medical imaging and seamless PACS integration. Supports most DICOM file types including CT, MRI, PET, ultrasound, and X-ray. Features include measurement and annotation tools, 3D volume rendering, multi-planar reconstruction, and DICOMweb/WADO integration. Runs on Windows, macOS, and Linux as a desktop application. Dual-licensed EPL 2.0 / Apache 2.0. Java-based, 1.2k stars, 359 forks, v4.6.6 (December 2025).",
-  "url": "https://weasis.org/",
+  "description": "Comprehensive open-source DICOM viewer available as a desktop application and web-based deployment. Supports the full DICOM stack: 2D/3D image viewing, multiplanar reconstruction, volume rendering, structured reports, DICOM ECG waveform display and measurement, radiotherapy structures and dose (DVH), and SUV calculations. Integrates with PACS systems via DICOMweb and WADO. Dual-licensed EPL-2.0 and Apache-2.0. Maintained by Nicolas Roduit; used in hospital and research deployments as a lightweight alternative to commercial PACS viewers.",
+  "url": "https://nroduit.github.io/en/",
   "codeRepository": "https://github.com/nroduit/Weasis",
-  "license": "EPL-2.0",
+  "license": "Apache-2.0",
   "version": "4.6.6",
   "dateModified": "2025-12-29",
   "keywords": [
     "dicom",
     "medical-imaging",
-    "pacs",
     "viewer",
-    "java",
-    "3d-rendering",
     "radiology",
-    "dicomweb"
+    "ecg",
+    "pacs",
+    "radiation-therapy",
+    "dicomweb",
+    "wado",
+    "desktop"
   ],
   "copyrightHolder": {
     "@type": "Person",
@@ -30,12 +32,19 @@
   "mach:governance": "individual",
   "mach:maturity": "production",
   "mach:category": "software",
-  "mach:deploymentContext": [
-    "self-hosted"
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "radiology",
+    "cardiology",
+    "radiation-therapy"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "Mature, feature-rich DICOM viewer with DICOMweb/WADO integration and 3D volume rendering. Dual EPL-2.0/Apache-2.0, v4.6.6 (December 2025), 1.2k stars, 359 forks. Complements Orthanc in the MACH catalog: Orthanc is the DICOM server; Weasis is the DICOM viewer that integrates with PACS systems. Widely used in radiology departments and research contexts.",
-  "mach:editorialReviewedAt": "2026-05-14",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-deployable"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The most widely used open-source desktop DICOM viewer — fills the gap left by OHIF Viewers (web-only). Dual-licensed EPL-2.0/Apache-2.0, 1.3k stars, actively maintained (v4.6.6, December 2025). Assess rather than Adopt due to individual governance (single maintainer) and the EPL-2.0 component which requires attention in commercial contexts. Strong choice for institutions needing a deployable desktop or web DICOM viewer without a commercial PACS licence.",
+  "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
@@ -44,14 +53,8 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://weasis.org/",
-      "mach:evidenceType": "primary-instance"
-    },
-    {
-      "@type": "schema:WebPage",
-      "url": "https://weasis.org/en/getting-started/",
+      "url": "https://nroduit.github.io/en/",
       "mach:evidenceType": "documentation"
     }
-  ],
-  "mach:swhid": "swh:1:ori:4ccdc5af96b33f3d7847c14bfbd0472ccd2d84f8"
+  ]
 }
