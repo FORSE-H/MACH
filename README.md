@@ -193,5 +193,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full entry checklist, judgement c
 **Archival & indexing**
 - [Software Heritage](https://www.softwareheritage.org/) — persistent SWHIDs (ISO/IEC 18670)
 
+**License integrity**
+- Jewitt et al. (KDD 2026) — [Permissive-Washing in the Open AI Supply Chain: A Large-Scale Audit of License Integrity](https://arxiv.org/abs/2602.08816) — informed the addition of `mach:licenseUrl` and `mach:licenseVerified` fields and MACH's decision to verify actual LICENSE files, not just metadata tags
+
 **AI assistance**
 - Parts of this project were developed with assistance from [Claude](https://claude.ai) (Anthropic). All content has been reviewed and is the intellectual responsibility of the project curator.
