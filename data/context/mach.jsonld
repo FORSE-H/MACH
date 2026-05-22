@@ -63,6 +63,9 @@
     "mach:mcpSpecVersion":      { "@id": "mach:mcpSpecVersion" },
 
     "mach:huggingFaceUrl":      { "@id": "mach:huggingFaceUrl" },
-    "mach:swhid":               { "@id": "mach:swhid" }
+    "mach:swhid":               { "@id": "mach:swhid" },
+
+    "mach:licenseUrl":          { "@id": "mach:licenseUrl" },
+    "mach:licenseVerified":     { "@id": "mach:licenseVerified" }
   }
 }
