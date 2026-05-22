@@ -1,7 +1,7 @@
 # MACH — Machine-Actionable Catalog for Healthcare
 
 [![License: Apache-2.0](https://img.shields.io/badge/Code-Apache_2.0-blue.svg)](LICENSE)
-[![Data License: CC-BY-4.0](https://img.shields.io/badge/Data-CC--BY--4.0-lightgrey.svg)](LICENSE-DATA)
+[![Data License: CC0-1.0](https://img.shields.io/badge/Data-CC0_1.0-lightgrey.svg)](LICENSE-DATA)
 [![Validate](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml/badge.svg)](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20155320.svg)](https://doi.org/10.5281/zenodo.20155320)
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/FORSE-H/MACH/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/FORSE-H/MACH)
@@ -145,10 +145,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full entry checklist, judgement c
 | What | Licence |
 |---|---|
 | Code (CI pipeline, scripts, site tooling) | [Apache-2.0](LICENSE) |
-| Catalog data (`entries/` JSON-LD files) | [CC-BY-4.0](LICENSE-DATA) |
-
-Attribution for data reuse:
-> *MACH — Machine-Actionable Catalog for Healthcare, FORSE-H, https://github.com/FORSE-H/MACH*
+| Catalog data (`entries/` JSON-LD files) | [CC0-1.0](LICENSE-DATA) — no rights reserved |
 
 ---
 
@@ -162,7 +159,7 @@ Attribution for data reuse:
   doi     = {10.5281/zenodo.20155320},
   url     = {https://zenodo.org/records/20155320},
   orcid   = {https://orcid.org/0000-0002-6844-6493},
-  note    = {CC-BY-4.0}
+  note    = {CC0-1.0}
 }
 ```
 

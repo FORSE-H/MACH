@@ -1,6 +1,6 @@
 {
   "title": "MACH: Machine-Actionable Catalog for Healthcare",
-  "description": "An open, machine-actionable catalog of open-source healthcare software, AI/ML models, clinical standards, datasets, tooling, and MCP servers — curated for humans, queryable by agents. Every entry is a structured JSON-LD record aligned with established open metadata standards (CodeMeta, MLDCAT-AP, Croissant, DCAT-AP), enabling discovery by hospitals, researchers, governments, and AI agents. Catalog data (entries/) is licensed CC-BY-4.0; pipeline code is Apache-2.0.",
+  "description": "An open, machine-actionable catalog of open-source healthcare software, AI/ML models, clinical standards, datasets, tooling, and MCP servers — curated for humans, queryable by agents. Every entry is a structured JSON-LD record aligned with established open metadata standards (CodeMeta, MLDCAT-AP, Croissant, DCAT-AP), enabling discovery by hospitals, researchers, governments, and AI agents. Catalog data (entries/) is CC0-1.0 (no rights reserved); pipeline code is Apache-2.0.",
   "upload_type": "software",
   "creators": [
     {
@@ -8,7 +8,7 @@
       "orcid": "0000-0002-6844-6493"
     }
   ],
-  "license": "cc-by-4.0",
+  "license": "cc-zero",
   "version": "0.1.0",
   "keywords": [
     "healthcare",
