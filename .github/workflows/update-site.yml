@@ -6,7 +6,6 @@ on:
     paths:
       - 'entries/**'
       - 'scripts/generate_entries.py'
-      - 'scripts/fetch_swhids.py'
       - 'scripts/taxonomy.py'
       - 'data/taxonomy/categories.yaml'
       - 'index.html'
@@ -36,9 +35,6 @@ jobs:
 
       - name: Install dependencies
         run: pip install pyyaml requests
-
-      - name: Compute and add SWHIDs for new entries
-        run: python scripts/fetch_swhids.py
 
       - name: Run generate_entries.py
         run: python scripts/generate_entries.py
