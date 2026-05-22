@@ -1,0 +1,70 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/xnat",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "xnat",
+  "name": "XNAT",
+  "alternateName": [
+    "XNAT Imaging Informatics Platform"
+  ],
+  "description": "Open-source biomedical imaging informatics platform developed by the Neuroinformatics Research Group (NRG) at Washington University School of Medicine. Provides end-to-end management of medical imaging data: DICOM ingestion and anonymisation, quality control, automated pipeline processing (container service, HPC integration), integrated search across imaging and clinical metadata, and secure multi-site data sharing with granular role-based access controls. Widely deployed across academic medical centres, national biobanks, and multi-site clinical research consortia globally. Modular architecture supports extensions via plugins; XNAT Works offers a commercial hosted and supported offering built on the open-source core.",
+  "url": "https://www.xnat.org",
+  "codeRepository": "https://github.com/NrgXnat/xnat",
+  "license": "BSD-2-Clause",
+  "version": "1.10.0",
+  "dateModified": "2025-03-10",
+  "keywords": [
+    "imaging",
+    "dicom",
+    "neuroimaging",
+    "data-management",
+    "pipeline",
+    "federated",
+    "qc",
+    "anonymisation",
+    "java",
+    "research-platform",
+    "multi-site",
+    "biobank"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Washington University School of Medicine",
+    "url": "https://www.mir.wustl.edu/research/research-support-facilities/neuroinformatics-research-group/"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "radiology",
+    "neuroscience",
+    "clinical-research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-deployable"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "De facto open-source platform for biomedical imaging data management in research, with 20+ years of active development and deployment across hundreds of academic medical centres and multi-site consortia globally. BSD-2-Clause, academic governance (WashU NRG), actively maintained (v1.10.0 on Java 21). Covers the full imaging data lifecycle: ingestion, QC, processing pipelines, and federated sharing. The reference choice for any institution building a research imaging data infrastructure on open-source foundations.",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/NrgXnat/xnat",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.xnat.org",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://wiki.xnat.org/documentation/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
