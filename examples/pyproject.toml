@@ -1,0 +1,13 @@
+[project]
+name = "mach-examples"
+version = "0.1.0"
+description = "MACH MCP server example notebooks"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=3.3.1",
+    "ipykernel>=6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
