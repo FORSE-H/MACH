@@ -1,0 +1,61 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/cornerstone3d",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "cornerstone3d",
+  "name": "Cornerstone3D",
+  "alternateName": [
+    "cornerstone.js",
+    "CornerstoneJS"
+  ],
+  "description": "High-performance TypeScript framework for building web-based medical imaging applications, providing the rendering engine underlying the OHIF Viewer. Delivers GPU-accelerated 2D/3D volume rendering via WebGL and WebAssembly, multiplanar reconstruction, segmentation tools, and measurement annotations. DICOMweb-native with customisable image and metadata loaders. Maintained by the Open Health Imaging Foundation (OHIF) as the foundational layer for web medical imaging development.",
+  "url": "https://www.cornerstonejs.org",
+  "codeRepository": "https://github.com/cornerstonejs/cornerstone3D",
+  "license": "MIT",
+  "version": "4.16.0",
+  "dateModified": "2026-02-11",
+  "keywords": [
+    "dicom",
+    "medical-imaging",
+    "webgl",
+    "webassembly",
+    "typescript",
+    "viewer",
+    "rendering",
+    "dicomweb",
+    "radiology",
+    "framework"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Open Health Imaging Foundation (OHIF)",
+    "url": "https://ohif.org"
+  },
+  "mach:governance": "foundation",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "radiology"
+  ],
+  "mach:deploymentContext": [
+    "embedded-library"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The rendering engine behind OHIF Viewers — MIT, OHIF foundation governance, 1.1k stars, actively maintained (v4.16.0, February 2026). Assess rather than Adopt because it is a developer framework rather than a deployable application; teams integrating medical imaging into custom web apps will need it, but end users reach it indirectly via OHIF Viewers (already Adopt).",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/cornerstonejs/cornerstone3D",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.cornerstonejs.org",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

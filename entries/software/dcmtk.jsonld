@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/dcmtk",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "dcmtk",
+  "name": "DCMTK",
+  "alternateName": [
+    "DICOM Toolkit",
+    "dcmtk"
+  ],
+  "description": "Reference C/C++ implementation of the DICOM standard — a comprehensive collection of libraries and command-line tools covering DICOM data encoding and decoding, image processing, networking (DIMSE, DICOMweb), compression, digital signatures, structured reporting, and radiation therapy data. Developed and maintained by OFFIS e.V. (Germany) since the 1990s. Ships 23 specialised sub-packages. Used as the foundation for many commercial and open-source PACS, modality, and imaging middleware systems.",
+  "url": "https://dicom.offis.de/dcmtk",
+  "codeRepository": "https://github.com/DCMTK/dcmtk",
+  "license": "BSD-3-Clause",
+  "version": "3.7.0",
+  "dateModified": "2026-01-23",
+  "keywords": [
+    "dicom",
+    "medical-imaging",
+    "pacs",
+    "networking",
+    "cpp",
+    "c",
+    "radiology",
+    "toolkit",
+    "dimse",
+    "dicomweb",
+    "structured-reporting"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "OFFIS e.V.",
+    "url": "https://www.offis.de"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "radiology"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "embedded-library"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The original and most comprehensive open-source implementation of the DICOM standard, maintained by OFFIS e.V. since the 1990s. BSD-3-Clause, 879 stars, actively maintained (v3.7.0, January 2026). Covers the full DICOM stack: encoding, networking, compression, structured reporting, and RT. Underpins many commercial PACS and imaging middleware systems. The reference toolkit for any team implementing DICOM at the protocol level.",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/DCMTK/dcmtk",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://dicom.offis.de/dcmtk",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}

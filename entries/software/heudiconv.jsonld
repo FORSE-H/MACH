@@ -1,0 +1,62 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/heudiconv",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "heudiconv",
+  "name": "HeuDiConv",
+  "alternateName": [
+    "Heuristic DICOM Converter"
+  ],
+  "description": "Heuristic-driven DICOM-to-BIDS converter for neuroimaging. Converts raw DICOM acquisitions into BIDS-compliant datasets using customisable Python heuristic scripts that control file naming and directory organisation. Integrates with dcm2niix for fast NIfTI conversion and DataLad for versioned data management. The ReproIn heuristic supports both prospective (scanner-side naming) and retrospective conversions. Widely used in multi-site neuroimaging studies and reproducible research pipelines. Maintained by the nipy community.",
+  "url": "https://heudiconv.readthedocs.io",
+  "codeRepository": "https://github.com/nipy/heudiconv",
+  "license": "Apache-2.0",
+  "version": "1.4.0",
+  "dateModified": "2026-04-28",
+  "keywords": [
+    "dicom",
+    "bids",
+    "neuroimaging",
+    "conversion",
+    "nifti",
+    "mri",
+    "fmri",
+    "python",
+    "reproducibility",
+    "datalad"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "nipy community",
+    "url": "https://github.com/nipy"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "neuroscience",
+    "clinical-research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-deployable"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The standard DICOM-to-BIDS conversion tool for neuroimaging research — actively maintained (v1.4.0, April 2026), Apache-2.0, widely used in multi-site fMRI and structural MRI studies. Assess rather than Adopt due to 279 stars and community governance with a small core maintainer group. Pairs closely with dcm2niix (already Adopt) as the heuristic orchestration layer on top.",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/nipy/heudiconv",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://heudiconv.readthedocs.io",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

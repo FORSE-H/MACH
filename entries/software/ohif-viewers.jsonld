@@ -1,0 +1,70 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/ohif-viewers",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "ohif-viewers",
+  "name": "OHIF Viewers",
+  "alternateName": [
+    "OHIF Viewer",
+    "Open Health Imaging Foundation Viewer"
+  ],
+  "description": "Zero-footprint, web-based medical image viewer from the Open Health Imaging Foundation (OHIF). A configurable progressive web application with built-in DICOMweb support, 2D/3D rendering, multiplanar reconstruction, segmentation, measurement tracking, structured reports, and whole slide microscopy. Built on Cornerstone3D (WebGL/WebAssembly), extensible via a plugin architecture for custom clinical workflows. Widely embedded in research infrastructure including NCI Imaging Data Commons. NIH/NCI ITCR-funded.",
+  "url": "https://ohif.org",
+  "codeRepository": "https://github.com/OHIF/Viewers",
+  "license": "MIT",
+  "version": "3.12.2",
+  "dateModified": "2026-05-18",
+  "keywords": [
+    "dicom",
+    "medical-imaging",
+    "viewer",
+    "dicomweb",
+    "radiology",
+    "zero-footprint",
+    "web",
+    "typescript",
+    "react",
+    "3d-rendering",
+    "segmentation"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Open Health Imaging Foundation (OHIF)",
+    "url": "https://ohif.org"
+  },
+  "mach:governance": "foundation",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "radiology",
+    "pathology",
+    "clinical-research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-deployable"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference open-source zero-footprint DICOM viewer — 4.2k stars, foundation governance (OHIF), NIH/NCI ITCR funded, and widely embedded in research and clinical infrastructure including NCI Imaging Data Commons. MIT licensed. Supports the full imaging workflow from 2D/3D rendering and MPR to segmentation, structured reports, and whole slide microscopy. The default choice for institutions building web-based imaging viewers on open-source foundations.",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/OHIF/Viewers",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.ohif.org",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://viewer.ohif.org",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}

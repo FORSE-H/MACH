@@ -1,0 +1,59 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/niivue",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "niivue",
+  "name": "NiiVue",
+  "description": "Browser-based medical image visualisation library supporting 30+ neuroimaging formats including NIfTI, DICOM, MGH, NRRD, tractography, and surface meshes. Built on WebGL2 with active migration to a monorepo architecture adding WebGPU support and smaller bundle sizes. Designed for embedding in web applications, Jupyter notebooks, and VSCode extensions. Developed by a community spanning multiple neuroimaging institutions. Complements OHIF Viewers for NIfTI-first neuroimaging workflows where DICOM is not the primary format.",
+  "url": "https://niivue.github.io/niivue/",
+  "codeRepository": "https://github.com/niivue/niivue",
+  "license": "BSD-2-Clause",
+  "version": "0.69.0",
+  "dateModified": "2026-05-20",
+  "keywords": [
+    "neuroimaging",
+    "nifti",
+    "dicom",
+    "webgl",
+    "webgpu",
+    "viewer",
+    "typescript",
+    "browser",
+    "tractography",
+    "mesh"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "niivue contributors",
+    "url": "https://github.com/niivue"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "beta",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "neuroscience",
+    "radiology"
+  ],
+  "mach:deploymentContext": [
+    "embedded-library",
+    "cloud-deployable"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Modern WebGL2/WebGPU neuroimaging viewer supporting 30+ formats — BSD-2-Clause, 451 stars, actively maintained (v0.69.0, May 2026). Assess due to pre-1.0 versioning and an ongoing architecture migration to a monorepo. The go-to embeddable viewer for NIfTI-first neuroimaging web applications; distinct from OHIF Viewers which is DICOM-first.",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/niivue/niivue",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://niivue.github.io/niivue/",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}

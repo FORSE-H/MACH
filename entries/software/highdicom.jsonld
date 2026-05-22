@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/highdicom",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "highdicom",
+  "name": "highdicom",
+  "description": "High-level Python library built on pydicom for creating and reading derived DICOM objects — segmentations (SEG), parametric maps, structured reports (SR), comprehensive 3D SR, and annotation objects. Enables computational pathology and radiology pipelines to store analysis results in standards-compliant DICOM rather than proprietary formats, ensuring interoperability with PACS and clinical systems. Maintained by NCI Imaging Data Commons with support from the Alliance for Digital Pathology, QIICR, and MGB AI.",
+  "url": "https://highdicom.readthedocs.io",
+  "codeRepository": "https://github.com/ImagingDataCommons/highdicom",
+  "license": "MIT",
+  "version": "0.27.0",
+  "dateModified": "2025-10-24",
+  "keywords": [
+    "dicom",
+    "segmentation",
+    "structured-reporting",
+    "python",
+    "pydicom",
+    "pathology",
+    "radiology",
+    "imaging-data-commons",
+    "parametric-maps"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "NCI Imaging Data Commons",
+    "url": "https://datacommons.cancer.gov/repository/imaging-data-commons"
+  },
+  "mach:governance": "government",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "radiology",
+    "pathology",
+    "clinical-research"
+  ],
+  "mach:deploymentContext": [
+    "embedded-library"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The standard Python library for creating standards-compliant derived DICOM objects (segmentations, structured reports, parametric maps) — MIT, NCI-backed, 225 stars, 46 releases. Assess rather than Adopt due to lower star count and niche scope (primarily relevant for teams storing AI/ML analysis results back into DICOM). Essential for any pipeline that needs to write DICOM SR or SEG objects interoperably.",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ImagingDataCommons/highdicom",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://highdicom.readthedocs.io",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
