@@ -1,0 +1,59 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/dicom",
+  "@type": [
+    "schema:TechArticle",
+    "mach:Spec"
+  ],
+  "identifier": "dicom",
+  "name": "DICOM",
+  "alternateName": [
+    "Digital Imaging and Communications in Medicine",
+    "DICOM Standard"
+  ],
+  "description": "The international standard for transmitting, storing, retrieving, printing, processing, and displaying medical imaging information. Defines file formats, network protocols (DIMSE, DICOMweb), and data models for medical images and associated metadata. Published in 22 parts covering everything from data encoding and networking (DIMSE, REST/DICOMweb) to structured reporting, segmentation, radiation therapy, and real-time communication. Maintained by NEMA as a living standard with continuous updates through dedicated working groups. Universally adopted by imaging devices, PACS, RIS, and modality systems worldwide.",
+  "url": "https://www.dicomstandard.org",
+  "license": "LicenseRef-NEMA-free-to-use",
+  "dateModified": "2024-01-01",
+  "keywords": [
+    "dicom",
+    "medical-imaging",
+    "radiology",
+    "pacs",
+    "interoperability",
+    "networking",
+    "structured-reporting",
+    "dicomweb",
+    "dimse"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "National Electrical Manufacturers Association (NEMA)",
+    "url": "https://www.nema.org"
+  },
+  "mach:governance": "foundation",
+  "mach:category": "specs",
+  "mach:maturity": "production",
+  "mach:clinicalDomain": [
+    "medical-imaging",
+    "radiology",
+    "pathology",
+    "cardiology",
+    "radiation-therapy"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The universal standard for medical imaging — every PACS, modality, RIS, and imaging AI pipeline interoperates through DICOM. Maintained by NEMA since 1993 as a living standard (22 parts, continuously updated). Free to download and use. No viable alternative exists for any team working with clinical imaging data.",
+  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.dicomstandard.org/current",
+      "mach:evidenceType": "specification"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.dicomstandard.org",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
