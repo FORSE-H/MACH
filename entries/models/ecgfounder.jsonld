@@ -1,0 +1,67 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/ecgfounder",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "ecgfounder",
+  "name": "ECGFounder",
+  "description": "Foundation model for electrocardiogram analysis pretrained on over 10 million ECG recordings. Evaluated across multiple clinical domains including arrhythmia detection, myocardial infarction, and cardiac function assessment. Pretrained weights available on Hugging Face. Published in NEJM AI (2025). Developed by PKU Digital Health (Peking University).",
+  "url": "https://github.com/NickLJLee/ECGFounder",
+  "codeRepository": "https://github.com/NickLJLee/ECGFounder",
+  "license": "MIT",
+  "dateModified": "2025-03-01",
+  "keywords": [
+    "ecg",
+    "foundation-model",
+    "cardiology",
+    "arrhythmia",
+    "deep-learning",
+    "transformer",
+    "python",
+    "clinical-ai",
+    "electrocardiogram"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "PKU Digital Health, Peking University",
+    "url": "https://github.com/NickLJLee"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "beta",
+  "mach:category": "models",
+  "mach:weightsLicense": "MIT",
+  "mach:trainingDataSummary": "Pretrained on 10 million+ ECG recordings across multiple clinical sources. Fine-tuned and evaluated across multiple cardiac domains including arrhythmia detection and myocardial infarction.",
+  "mach:intendedUse": "ECG interpretation and cardiac function assessment in clinical research and AI-assisted diagnostics. Not validated for autonomous clinical decision-making.",
+  "mach:clinicalDomain": [
+    "cardiology",
+    "medical-imaging",
+    "clinical-research"
+  ],
+  "mach:deploymentContext": [
+    "embedded-library",
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Strong clinical foundation model for ECG — published in NEJM AI (2025), pretrained on 10M+ recordings, MIT license, HuggingFace weights, Peking University Digital Health governance. Assess rather than Adopt due to 25 stars, no versioned releases, and limited external validation outside the paper. The NEJM AI publication is a meaningful quality signal that outweighs the low star count. Leading open foundation model for 12-lead ECG analysis.",
+  "mach:editorialReviewedAt": "2026-05-24",
+  "mach:huggingFaceUrl": "https://huggingface.co/PKUDigitalHealth/ECGFounder",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/NickLJLee/ECGFounder",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2410.04133",
+      "mach:evidenceType": "paper",
+      "schema:name": "An Electrocardiogram Foundation Model Built on over 10 Million Recordings with External Evaluation across Multiple Domains. NEJM AI, 2025."
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/PKUDigitalHealth/ECGFounder",
+      "mach:evidenceType": "model-weights"
+    }
+  ]
+}
