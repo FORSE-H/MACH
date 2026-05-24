@@ -1,0 +1,61 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/trialgpt",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "trialgpt",
+  "name": "TrialGPT",
+  "description": "End-to-end LLM framework for zero-shot patient-to-clinical-trial matching. Comprises three stages: retrieval (recalls 90%+ of relevant trials using under 6% of the collection), criterion-level eligibility matching (87.3% accuracy, close to expert performance), and trial-level ranking (outperforms competing models by 28.8–53.5%). A user study demonstrated 42.6% reduction in clinical trial screening time. Published in Nature Communications (2024). Maintained by NCBI/NLM as a US Government work in the public domain.",
+  "url": "https://www.ncbi.nlm.nih.gov/research/trialgpt/",
+  "codeRepository": "https://github.com/ncbi-nlp/TrialGPT",
+  "license": "LicenseRef-US-Government-public-domain",
+  "version": "1.0.0",
+  "dateModified": "2024-08-08",
+  "keywords": [
+    "clinical-trials",
+    "patient-matching",
+    "llm",
+    "nlp",
+    "eligibility-criteria",
+    "clinical-research",
+    "python",
+    "ncbi"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "National Center for Biotechnology Information (NCBI), NLM/NIH",
+    "url": "https://www.ncbi.nlm.nih.gov"
+  },
+  "mach:governance": "government",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "clinical-research",
+    "oncology",
+    "primary-care"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The leading open-source framework for clinical trial matching — government-backed (NCBI/NIH), published in Nature Communications (2024), v1.0.0 released. Demonstrates 42.6% reduction in screening time and near-expert criterion-level accuracy. Public domain (US Government work). High clinical research value for any team working on trial recruitment or eligibility screening.",
+  "mach:editorialReviewedAt": "2026-05-24",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ncbi-nlp/TrialGPT",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.nature.com/articles/s41467-024-53081-z",
+      "mach:evidenceType": "paper"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ncbi.nlm.nih.gov/research/trialgpt/",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}
