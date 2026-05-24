@@ -1,0 +1,59 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@type": "schema:SoftwareApplication",
+  "identifier": "esm2",
+  "name": "ESM-2",
+  "alternateName": ["Evolutionary Scale Modeling 2", "facebook/esm2"],
+  "description": "State-of-the-art protein language model family from Meta AI, trained on 250 million protein sequences using masked language modelling. Available in six sizes (8M–15B parameters). Enables protein structure prediction, function prediction, and variant effect estimation directly from amino acid sequences — without requiring multiple sequence alignments. Foundation for ESMFold (structure prediction) and widely used for fine-tuning across drug discovery and genomics tasks. 2.5M+ HuggingFace downloads per month.",
+  "url": "https://github.com/facebookresearch/esm",
+  "codeRepository": "https://github.com/facebookresearch/esm",
+  "license": "MIT",
+  "mach:licenseUrl": "https://github.com/facebookresearch/esm/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "softwareVersion": "1.0.3",
+  "dateModified": "2022-10-18",
+  "programmingLanguage": ["Python"],
+  "keywords": ["protein language model", "protein structure", "genomics", "drug discovery", "variant effect", "foundation model", "bioinformatics"],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "Meta AI (FAIR Protein Team)",
+      "url": "https://github.com/facebookresearch"
+    }
+  ],
+  "mach:huggingFaceUrl": "https://huggingface.co/facebook/esm2_t33_650M_UR50D",
+  "mach:category": "models",
+  "mach:subcategory": "protein-language-model",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The dominant open protein language model — 4.1k GitHub stars, 2.5M+ monthly HuggingFace downloads, 32 fine-tuned variants, and a landmark Science 2023 publication (Lin et al., DOI: 10.1126/science.ade2574). Six model sizes from 8M to 15B parameters make it accessible across compute budgets. MIT license with no restrictions. Outperforms all tested single-sequence protein language models on structure prediction benchmarks. Standard foundation for drug target discovery, variant effect prediction, and protein engineering pipelines. Adopt for any team working on genomics, proteomics, or computational drug discovery.",
+  "mach:maturity": "production",
+  "mach:governance": "vendor-led",
+  "mach:clinicalDomain": ["genomics", "drug-discovery"],
+  "mach:deploymentContext": ["research", "cloud"],
+  "mach:weightsLicense": "MIT",
+  "mach:trainingDataSummary": "250 million protein sequences from UniRef50 (UR50D split); self-supervised masked language modelling",
+  "mach:intendedUse": "Protein structure prediction, function annotation, variant effect estimation, fine-tuning for downstream drug discovery and genomics tasks",
+  "mach:aiActRiskClass": "minimal",
+  "mach:editorialReviewedAt": "2026-05-24",
+  "mach:evidence": [
+    {
+      "@type": "schema:ScholarlyArticle",
+      "name": "Evolutionary-scale prediction of atomic-level protein structure with a language model",
+      "url": "https://doi.org/10.1126/science.ade2574",
+      "mach:evidenceType": "peer-reviewed-paper",
+      "description": "Lin et al., Science 379(6637):1123-1130, 2023 — ESM-2 and ESMFold landmark paper"
+    },
+    {
+      "@type": "schema:WebPage",
+      "name": "HuggingFace — facebook/esm2_t33_650M_UR50D (2.5M+ downloads/month)",
+      "url": "https://huggingface.co/facebook/esm2_t33_650M_UR50D",
+      "mach:evidenceType": "model-card"
+    },
+    {
+      "@type": "schema:WebPage",
+      "name": "GitHub — facebookresearch/esm v1.0.3",
+      "url": "https://github.com/facebookresearch/esm/releases/tag/v1.0.3",
+      "mach:evidenceType": "release"
+    }
+  ]
+}
