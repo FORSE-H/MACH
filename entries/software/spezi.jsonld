@@ -1,0 +1,55 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@type": "schema:SoftwareApplication",
+  "identifier": "spezi",
+  "name": "Spezi",
+  "description": "Open-source Swift framework for rapid development of modular, interoperable digital health applications on iOS and macOS. Provides reusable components for onboarding, consent management, HealthKit integration, questionnaires (ResearchKit-compatible), account management, and FHIR data exchange (via SpeziFHIR). Designed for clinical research apps, digital therapeutics, and patient-facing health tools.",
+  "url": "https://github.com/StanfordSpezi/Spezi",
+  "codeRepository": "https://github.com/StanfordSpezi/Spezi",
+  "license": "MIT",
+  "mach:licenseUrl": "https://github.com/StanfordSpezi/Spezi/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "softwareVersion": "1.10.2",
+  "dateModified": "2026-04-11",
+  "programmingLanguage": ["Swift"],
+  "operatingSystem": ["iOS", "macOS"],
+  "applicationCategory": "Digital health application framework",
+  "keywords": ["iOS", "Swift", "digital health", "FHIR", "HealthKit", "clinical research", "patient app", "mHealth"],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "Stanford Biodesign Digital Health",
+      "url": "https://github.com/StanfordSpezi"
+    }
+  ],
+  "mach:category": "software",
+  "mach:subcategory": "mhealth-framework",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The most structured open-source framework available for building clinical-grade iOS digital health apps. 248 stars, 49 releases, and active maintenance from Stanford Biodesign Digital Health. Modular ecosystem (SpeziFHIR, SpeziLLM, SpeziHealthKit, etc.) enables rapid composition of research and patient-facing apps aligned with FHIR R4. Constraint: Swift/iOS only — not applicable to Android, web, or backend systems. Best evaluated by teams building iOS research apps or patient engagement tools.",
+  "mach:maturity": "production",
+  "mach:governance": "academic",
+  "mach:clinicalDomain": ["digital-health", "clinical-research", "patient-engagement"],
+  "mach:deploymentContext": ["mobile", "research"],
+  "mach:supportsSpec": ["FHIR R4"],
+  "mach:editorialReviewedAt": "2026-05-24",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "name": "Spezi GitHub — v1.10.2 release (April 2026)",
+      "url": "https://github.com/StanfordSpezi/Spezi/releases/tag/1.10.2",
+      "mach:evidenceType": "release"
+    },
+    {
+      "@type": "schema:WebPage",
+      "name": "StanfordSpezi ecosystem — module catalogue",
+      "url": "https://github.com/StanfordSpezi",
+      "mach:evidenceType": "project-page"
+    },
+    {
+      "@type": "schema:WebPage",
+      "name": "Zenodo archive (DOI)",
+      "url": "https://doi.org/10.5281/zenodo.549199889",
+      "mach:evidenceType": "archive"
+    }
+  ]
+}

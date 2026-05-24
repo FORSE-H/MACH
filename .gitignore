@@ -16,3 +16,4 @@ scripts/fetch_swhids.py
 watchlist.csv
 graveyard.csv
 data/compliance-standards.csv
+mach_catalog_dump_*.json
