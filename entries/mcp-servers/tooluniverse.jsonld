@@ -1,0 +1,77 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/tooluniverse",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode",
+    "mach:MCPServer"
+  ],
+  "identifier": "tooluniverse",
+  "name": "ToolUniverse",
+  "description": "Native MCP server exposing 211+ expert-curated biomedical tools to any MCP-compatible AI agent. Tools span drug discovery, therapeutic reasoning, precision oncology, rare disease diagnosis, pharmacovigilance, multi-omics analysis, protein docking, and literature search across PubMed, Semantic Scholar, ArXiv, BioRxiv, and Europe PMC. Supports MCP Tasks for non-blocking execution of long-running operations such as molecular simulations and protein docking. Developed by the Zitnik Lab at Harvard Medical School as infrastructure for AI scientist systems. Powers TxAgent's therapeutic reasoning capabilities.",
+  "url": "https://zitniklab.hms.harvard.edu/TxAgent/",
+  "codeRepository": "https://github.com/mims-harvard/ToolUniverse",
+  "license": "Apache-2.0",
+  "softwareVersion": "1.2.1",
+  "dateModified": "2026-05-22",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "mcp-server",
+    "biomedical-tools",
+    "drug-discovery",
+    "therapeutic-reasoning",
+    "clinical-ai",
+    "llm-agent",
+    "precision-medicine",
+    "protein-docking",
+    "pharmacovigilance",
+    "pubmed"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Zitnik Lab, Harvard Medical School",
+    "url": "https://zitniklab.hms.harvard.edu"
+  },
+  "mach:transport": "http",
+  "mach:authMethod": "api-key",
+  "mach:mcpSpecVersion": "2024-11-05",
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "mcp-servers",
+  "mach:applicability": "specialist",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The most comprehensive open biomedical MCP server available — Apache-2.0, 1.4k stars, v1.2.1 (May 2026), Harvard Zitnik Lab governance. Exposes 211 curated biomedical tools (openFDA, Open Targets, protein docking, PubMed, pharmacovigilance) as MCP endpoints, enabling any MCP-compatible agent to call clinical-grade biomedical infrastructure directly. MCP Tasks support for long-running async operations is production-ready. This is the plumbing layer for clinical AI agents — not a demo, but connective infrastructure with real scientific depth behind each tool.",
+  "mach:editorialReviewedAt": "2026-05-24",
+  "mach:clinicalDomain": [
+    "pharmacology",
+    "oncology",
+    "clinical-research",
+    "genomics",
+    "rare-diseases"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-deployable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/mims-harvard/ToolUniverse",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://zitniklab.hms.harvard.edu/ToolUniverse/expand_tooluniverse/remote_tools/mcp_integration.html",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2509.23426",
+      "mach:evidenceType": "paper",
+      "schema:name": "Democratizing AI scientists using ToolUniverse. arXiv 2025."
+    }
+  ],
+  "relatedLink": "https://github.com/FORSE-H/MACH/tree/main/entries/software/txagent"
+}
