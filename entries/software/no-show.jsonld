@@ -1,0 +1,56 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/no-show",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "no-show",
+  "name": "No-Show Prediction",
+  "alternateName": [
+    "UMCU No-Show",
+    "No_Show"
+  ],
+  "description": "Machine learning model for predicting patient no-shows at clinical appointments, actively deployed at UMC Utrecht. Identifies patients at high risk of missing appointments within a 3–10 day window, enabling proactive staff outreach. Ships as a FastAPI prediction service with a Streamlit calling dashboard for clinical staff. Developed and maintained by the UMCU Digital Health AI For Health team.",
+  "url": "https://github.com/UMCU-Digital-Health/No_Show",
+  "codeRepository": "https://github.com/UMCU-Digital-Health/No_Show",
+  "license": "MIT",
+  "version": "1.2.9",
+  "dateModified": "2024-07-17",
+  "keywords": [
+    "no-show",
+    "appointment",
+    "prediction",
+    "machine-learning",
+    "clinical-ai",
+    "fastapi",
+    "streamlit",
+    "python",
+    "hospital",
+    "operations"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "UMC Utrecht Digital Health",
+    "url": "https://github.com/UMCU-Digital-Health"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Production ML system actively deployed at UMC Utrecht for clinical appointment no-show prediction — MIT, v1.2.9 (July 2024), FastAPI + Streamlit stack. Assess rather than Adopt due to 13 stars and single-institution deployment. Production deployment in a real hospital is a stronger signal than star count for this type of operational clinical AI tool. Relevant for any hospital or clinic seeking to reduce missed appointments with an open, auditable model.",
+  "mach:editorialReviewedAt": "2026-05-24",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/UMCU-Digital-Health/No_Show",
+      "mach:evidenceType": "primary-repo"
+    }
+  ]
+}
