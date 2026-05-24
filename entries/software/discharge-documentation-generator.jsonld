@@ -1,0 +1,52 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/discharge-documentation-generator",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "discharge-documentation-generator",
+  "name": "Discharge Documentation Generator",
+  "description": "LLM-powered tool for generating draft clinical discharge letters from electronic health record notes. Synthesises medical notes from hospital admissions into structured discharge summaries for clinician review. Deployed at UMC Utrecht across three departments: Intensive Care Unit (ICU), Neonatal Intensive Care Unit (NICU), and Cardiology. Built on FastAPI with Alembic for database migrations and deployment via PositConnect. Ships with model card and dataset card. Designed as a clinician-in-the-loop system — drafts require clinical review before use.",
+  "url": "https://github.com/UMCU-Digital-Health/discharge-documentation-generator",
+  "codeRepository": "https://github.com/UMCU-Digital-Health/discharge-documentation-generator",
+  "license": "MIT",
+  "dateModified": "2026-05-04",
+  "keywords": [
+    "discharge-letter",
+    "clinical-documentation",
+    "llm",
+    "ehr",
+    "nlp",
+    "fastapi",
+    "python",
+    "icu",
+    "cardiology",
+    "clinical-ai"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "UMC Utrecht Digital Health",
+    "url": "https://github.com/UMCU-Digital-Health"
+  },
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "secondary-care",
+    "critical-care",
+    "cardiology"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Production LLM tool for clinical discharge letter generation, actively deployed at UMC Utrecht across ICU, NICU, and Cardiology — MIT, 8 releases, 145 commits, actively maintained (May 2026). Assess rather than Adopt due to 27 stars and single-institution deployment. Includes model card and dataset card — good practice for clinical AI transparency. Clinician-in-the-loop design is the right safety posture. Relevant for any hospital seeking to reduce documentation burden with an auditable, open-source LLM tool.",
+  "mach:editorialReviewedAt": "2026-05-24",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/UMCU-Digital-Health/discharge-documentation-generator",
+      "mach:evidenceType": "primary-repo"
+    }
+  ]
+}
