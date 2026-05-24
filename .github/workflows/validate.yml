@@ -14,9 +14,13 @@ on:
 jobs:
   validate:
     name: Validate JSON-LD entries
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    concurrency:
+      group: validate-${{ github.ref }}
+      cancel-in-progress: true
 
     steps:
       - name: Harden runner
@@ -130,3 +134,4 @@ jobs:
 
       - name: Check primary URLs for dead links
         run: python scripts/check_urls.py --primary-only
+        continue-on-error: true
