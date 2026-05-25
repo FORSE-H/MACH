@@ -1,0 +1,78 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/healthbench",
+  "@type": [
+    "schema:Dataset",
+    "mach:Benchmark"
+  ],
+  "identifier": "healthbench",
+  "name": "HealthBench",
+  "alternateName": [
+    "OpenAI HealthBench"
+  ],
+  "description": "Physician-curated benchmark for evaluating large language models on realistic health conversations. Contains 5,000 multi-turn conversations between a model and a user or healthcare professional, each graded by 48,562 unique rubric criteria written by 262 physicians who have practiced in 60 countries. Covers general health, emergency medicine, chronic disease, mental health, rare disease, and global health contexts. Evaluation code ships in the openai/simple-evals repository. Unlike multiple-choice benchmarks, HealthBench uses open-ended, graded rubrics to assess both accuracy and safety of model responses. Published by OpenAI in May 2025.",
+  "url": "https://openai.com/index/healthbench/",
+  "codeRepository": "https://github.com/openai/simple-evals",
+  "relatedLink": [
+    "https://arxiv.org/abs/2505.08775",
+    "https://github.com/openai/simple-evals/blob/main/healthbench_eval.py",
+    "https://huggingface.co/datasets/openai/healthbench-professional"
+  ],
+  "mach:huggingFaceUrl": "https://huggingface.co/datasets/openai/healthbench",
+  "license": "MIT",
+  "mach:licenseUrl": "https://github.com/openai/simple-evals/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "keywords": [
+    "benchmark",
+    "llm-evaluation",
+    "clinical-conversations",
+    "physician-curated",
+    "multi-turn",
+    "safety",
+    "medical-ai",
+    "openai",
+    "rubric-based"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "OpenAI",
+      "url": "https://openai.com/"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:category": "datasets",
+  "mach:subcategory": "clinical-benchmark",
+  "mach:maturity": "production",
+  "mach:deploymentContext": [
+    "cloud",
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "emergency-medicine",
+    "mental-health",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The most rigorous open benchmark for evaluating LLMs on health conversations to date — 5,000 multi-turn cases with 48,562 physician-written rubric criteria across 262 physicians in 60 countries. MIT licence, ships with evaluation code in openai/simple-evals. Rubric-based grading captures nuance that multiple-choice benchmarks miss, making it directly applicable to assessing clinical AI safety and accuracy. Already adopted by major model providers and research groups as a standard reference. Adopt as the primary benchmark for any team evaluating LLMs on clinical dialogue.",
+  "mach:editorialReviewedAt": "2026-05-25",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://openai.com/index/healthbench/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/openai/simple-evals",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2505.08775",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "HealthBench: Evaluating Large Language Models Towards Improved Human Health. OpenAI 2025."
+    }
+  ]
+}
