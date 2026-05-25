@@ -62,5 +62,6 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "A reproducible evaluation of ANTs similarity metric performance in brain image registration. J Neurosci Methods 2016."
     }
-  ]
+  ],
+  "mach:licenseVerified": false
 }

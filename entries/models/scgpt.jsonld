@@ -70,5 +70,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "scGPT: Towards Building a Foundation Model for Single-Cell Multi-omics Using Generative AI. bioRxiv 2023."
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/bowang-lab/scGPT/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

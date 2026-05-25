@@ -59,5 +59,7 @@
       "url": "https://wfdb.readthedocs.io",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/MIT-LCP/wfdb-python/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

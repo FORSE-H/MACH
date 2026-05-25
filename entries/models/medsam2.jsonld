@@ -78,5 +78,7 @@
   "mach:alternativeTo": [
     "medsam",
     "nnunet"
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/bowang-lab/MedSAM2/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

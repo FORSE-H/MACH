@@ -127,7 +127,15 @@ def build_entries_html(entries):
         jsonld_url  = get_jsonld_url(e)
         url_links   = build_url_links(e)
 
-        lic_tag       = f'<span class="entry-lic">{license_str}</span>' if license_str else ""
+        license_url   = e.get("mach:licenseUrl")
+        lic_verified  = e.get("mach:licenseVerified", None)
+        if license_str and license_url:
+            verified_title = "License file verified" if lic_verified else "License file not yet verified"
+            lic_tag = f'<a href="{license_url}" target="_blank" rel="noopener" class="entry-lic" title="{verified_title}">{license_str}</a>'
+        elif license_str:
+            lic_tag = f'<span class="entry-lic">{license_str}</span>'
+        else:
+            lic_tag = ""
         name_href     = jsonld_url if jsonld_url else e.get("url", e.get("codeRepository", "#"))
         links_html    = f'<div class="entry-card-links">{url_links}</div>' if url_links else ""
 

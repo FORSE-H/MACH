@@ -70,5 +70,7 @@
   "mach:alternativeTo": [
     "pathml"
   ],
-  "mach:swhid": "swh:1:ori:ac9ede1ea727e2a435c6187dec2d7da58484d82e"
+  "mach:swhid": "swh:1:ori:ac9ede1ea727e2a435c6187dec2d7da58484d82e",
+  "mach:licenseUrl": "https://github.com/histolab/histolab/blob/main/LICENSE.txt",
+  "mach:licenseVerified": true
 }

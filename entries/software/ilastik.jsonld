@@ -70,5 +70,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:1a0f9e55ae15248b77fa2c3d59abaf400a7da5c8"
+  "mach:swhid": "swh:1:ori:1a0f9e55ae15248b77fa2c3d59abaf400a7da5c8",
+  "mach:licenseUrl": "https://github.com/ilastik/ilastik/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

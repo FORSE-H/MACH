@@ -67,5 +67,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "MedRAX: Medical Reasoning Agent for Chest X-Ray. ICML 2025."
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/bowang-lab/MedRAX/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

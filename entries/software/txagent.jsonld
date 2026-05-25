@@ -52,5 +52,7 @@
       "url": "https://arxiv.org/abs/2503.10970",
       "mach:evidenceType": "paper"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/mims-harvard/TxAgent/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

@@ -67,5 +67,7 @@
       "mach:evidenceType": "package-registry"
     }
   ],
-  "mach:swhid": "swh:1:ori:44448b42bffd1287b21a27e60218a4503a74ffc2"
+  "mach:swhid": "swh:1:ori:44448b42bffd1287b21a27e60218a4503a74ffc2",
+  "mach:licenseUrl": "https://github.com/MIC-DKFZ/batchgenerators/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

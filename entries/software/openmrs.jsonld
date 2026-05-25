@@ -66,5 +66,7 @@
       "schema:name": "OpenMRS as a global good: Impact, opportunities, challenges, and lessons learned from fifteen years of implementation. Int J Med Inform 2021."
     }
   ],
-  "mach:swhid": "swh:1:ori:8843271fde3f2179b9cb4c2682db9663b739574c"
+  "mach:swhid": "swh:1:ori:8843271fde3f2179b9cb4c2682db9663b739574c",
+  "mach:licenseUrl": "https://github.com/openmrs/openmrs-core/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

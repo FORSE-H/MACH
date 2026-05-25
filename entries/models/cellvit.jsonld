@@ -56,5 +56,7 @@
       "url": "https://doi.org/10.1016/j.media.2024.103143",
       "mach:evidenceType": "academic-reference"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/TIO-IKIM/CellViT/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

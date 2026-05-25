@@ -88,5 +88,7 @@
     "nnunet",
     "monai",
     "medsam2"
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/bowang-lab/MedSAM/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

@@ -50,5 +50,7 @@
       "url": "https://github.com/bowang-lab/MedRAX2",
       "mach:evidenceType": "primary-repo"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/bowang-lab/MedRAX2/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

@@ -70,5 +70,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:a71470b5e4a4e1319e3067f657638f96dab2e19d"
+  "mach:swhid": "swh:1:ori:a71470b5e4a4e1319e3067f657638f96dab2e19d",
+  "mach:licenseUrl": "https://github.com/CellProfiler/CellProfiler/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

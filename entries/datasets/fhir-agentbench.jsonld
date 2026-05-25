@@ -74,5 +74,7 @@
       "url": "https://verily.com/perspectives/Introducing-FHIR-AgentBench",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/glee4810/FHIR-AgentBench/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

@@ -72,5 +72,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:cbc599809bac5d4e779e0e8446f49895856bcb87"
+  "mach:swhid": "swh:1:ori:cbc599809bac5d4e779e0e8446f49895856bcb87",
+  "mach:licenseUrl": "https://github.com/UCL/STIR/blob/master/LICENSE.txt",
+  "mach:licenseVerified": true
 }

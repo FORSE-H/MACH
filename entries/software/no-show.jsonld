@@ -52,5 +52,7 @@
       "url": "https://github.com/UMCU-Digital-Health/No_Show",
       "mach:evidenceType": "primary-repo"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/UMCU-Digital-Health/No_Show/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

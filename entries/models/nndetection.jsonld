@@ -84,5 +84,6 @@
     "nnunet",
     "monai-detection"
   ],
-  "mach:swhid": "swh:1:ori:df46cb11d6cbe51f5e974312548f4f4068f243b8"
+  "mach:swhid": "swh:1:ori:df46cb11d6cbe51f5e974312548f4f4068f243b8",
+  "mach:licenseVerified": false
 }

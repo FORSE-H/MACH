@@ -66,5 +66,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "EHRSHOT: An EHR Benchmark for Few-Shot Evaluation of Foundation Models. NeurIPS 2023."
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/som-shahlab/ehrshot-benchmark/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

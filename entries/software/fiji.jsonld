@@ -75,5 +75,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:fd6bff78bd117ffdf7ec2586a69f862062347843"
+  "mach:swhid": "swh:1:ori:fd6bff78bd117ffdf7ec2586a69f862062347843",
+  "mach:licenseUrl": "https://github.com/fiji/fiji/blob/main/LICENSE.txt",
+  "mach:licenseVerified": true
 }

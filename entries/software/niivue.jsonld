@@ -55,5 +55,7 @@
       "url": "https://niivue.github.io/niivue/",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/niivue/niivue/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

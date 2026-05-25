@@ -73,5 +73,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:476a66a51ca3a7251f8aed4067450a4b1252bfa9"
+  "mach:swhid": "swh:1:ori:476a66a51ca3a7251f8aed4067450a4b1252bfa9",
+  "mach:licenseUrl": "https://github.com/SlicerIGT/SlicerIGT/blob/master/LICENSE.txt",
+  "mach:licenseVerified": true
 }

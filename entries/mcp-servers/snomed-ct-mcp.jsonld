@@ -51,5 +51,7 @@
       "url": "https://github.com/eigenbau/mcp-snomed-ct",
       "mach:evidenceType": "primary-repo"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/eigenbau/mcp-snomed-ct/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

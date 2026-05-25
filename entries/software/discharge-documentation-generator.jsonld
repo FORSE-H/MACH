@@ -48,5 +48,7 @@
       "url": "https://github.com/UMCU-Digital-Health/discharge-documentation-generator",
       "mach:evidenceType": "primary-repo"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/UMCU-Digital-Health/discharge-documentation-generator/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

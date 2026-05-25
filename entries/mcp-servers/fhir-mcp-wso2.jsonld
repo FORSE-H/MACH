@@ -63,5 +63,7 @@
     "fhir-mcp-momentum",
     "fhir-mcp-flexpa"
   ],
-  "mach:swhid": "swh:1:ori:9e35676f66b95dc3a65ecc87e5befde0a4728c20"
+  "mach:swhid": "swh:1:ori:9e35676f66b95dc3a65ecc87e5befde0a4728c20",
+  "mach:licenseUrl": "https://github.com/wso2/fhir-mcp-server/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

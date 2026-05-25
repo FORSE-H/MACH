@@ -112,5 +112,7 @@
     "pysyft",
     "substra"
   ],
-  "mach:swhid": "swh:1:ori:c55613f6fc1190eae2efbafa315912af46f7112a"
+  "mach:swhid": "swh:1:ori:c55613f6fc1190eae2efbafa315912af46f7112a",
+  "mach:licenseUrl": "https://github.com/vantage6/vantage6/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

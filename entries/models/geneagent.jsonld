@@ -69,5 +69,7 @@
       "url": "https://www.ncbi.nlm.nih.gov/CBBresearch/Lu/Demo/GeneAgent/",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/ncbi-nlp/GeneAgent/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

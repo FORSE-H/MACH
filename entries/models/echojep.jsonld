@@ -70,5 +70,6 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "EchoJEPA: A Latent Predictive Foundation Model for Echocardiography. arXiv 2026."
     }
-  ]
+  ],
+  "mach:licenseVerified": false
 }

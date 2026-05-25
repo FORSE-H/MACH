@@ -64,5 +64,7 @@
       "url": "https://agentclinic.github.io/",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/SamuelSchmidgall/AgentClinic/blob/main/LICENSE.txt",
+  "mach:licenseVerified": true
 }

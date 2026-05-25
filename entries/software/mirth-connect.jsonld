@@ -55,5 +55,6 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:8da1ea839683aa6709744f73d95b24001c6f78c4"
+  "mach:swhid": "swh:1:ori:8da1ea839683aa6709744f73d95b24001c6f78c4",
+  "mach:licenseVerified": false
 }

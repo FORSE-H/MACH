@@ -54,5 +54,7 @@
       "url": "https://highdicom.readthedocs.io",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/ImagingDataCommons/highdicom/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

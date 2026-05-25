@@ -56,5 +56,7 @@
       "url": "https://pkg.go.dev/github.com/suyashkumar/dicom",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/suyashkumar/dicom/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

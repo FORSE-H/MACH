@@ -57,5 +57,7 @@
       "url": "https://cran.r-project.org/package=nlmixr2",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/nlmixr2/nlmixr2/blob/main/LICENSE.md",
+  "mach:licenseVerified": true
 }

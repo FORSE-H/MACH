@@ -63,5 +63,7 @@
       "url": "https://huggingface.co/PKUDigitalHealth/ECGFounder",
       "mach:evidenceType": "model-weights"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/NickLJLee/ECGFounder/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

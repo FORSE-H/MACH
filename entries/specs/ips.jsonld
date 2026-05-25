@@ -87,5 +87,7 @@
       "mach:evidenceType": "regulatory-reference"
     }
   ],
-  "mach:swhid": "swh:1:ori:7cb6fd76ce8e2dab4357ab04327ffe9cb595be78"
+  "mach:swhid": "swh:1:ori:7cb6fd76ce8e2dab4357ab04327ffe9cb595be78",
+  "mach:licenseUrl": "https://github.com/HL7/fhir-ips/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

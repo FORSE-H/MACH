@@ -88,5 +88,7 @@
     "fhir-r4"
   ],
   "schema:comment": "The openEHR Clinical Knowledge Manager (CKM) at https://ckm.openehr.org warrants a separate MACH entry under data-models-research as a curated archetype library. EHRbase (https://github.com/ehrbase/ehrbase), the leading open-source openEHR CDR, also warrants a separate entry under clinical-systems.",
-  "mach:swhid": "swh:1:ori:1b3fec1c8594358d0008802596bb0d2c4bd7c243"
+  "mach:swhid": "swh:1:ori:1b3fec1c8594358d0008802596bb0d2c4bd7c243",
+  "mach:licenseUrl": "https://github.com/openEHR/specifications-RM/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

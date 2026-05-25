@@ -59,5 +59,6 @@
       "url": "https://dicom.offis.de/dcmtk",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:licenseVerified": false
 }

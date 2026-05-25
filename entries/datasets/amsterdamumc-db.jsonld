@@ -61,5 +61,7 @@
       "schema:name": "AmsterdamUMCdb: A Freely Accessible and Privacy-Preserving Intensive Care Database. Critical Care Medicine, 2021."
     }
   ],
-  "mach:swhid": "swh:1:ori:3c01a6c4379c8313540fe1cbb476f8f0c881b099"
+  "mach:swhid": "swh:1:ori:3c01a6c4379c8313540fe1cbb476f8f0c881b099",
+  "mach:licenseUrl": "https://github.com/AmsterdamUMC/AmsterdamUMCdb/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

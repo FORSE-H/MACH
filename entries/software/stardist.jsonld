@@ -55,5 +55,7 @@
       "mach:evidenceType": "academic-reference"
     }
   ],
-  "mach:swhid": "swh:1:ori:130daafc20a0e0548c726aec732c74f7f4bd8787"
+  "mach:swhid": "swh:1:ori:130daafc20a0e0548c726aec732c74f7f4bd8787",
+  "mach:licenseUrl": "https://github.com/stardist/stardist/blob/main/LICENSE.txt",
+  "mach:licenseVerified": true
 }

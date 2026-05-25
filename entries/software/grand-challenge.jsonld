@@ -80,5 +80,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:273c545f6336388e991aba06bac9e81a6423280f"
+  "mach:swhid": "swh:1:ori:273c545f6336388e991aba06bac9e81a6423280f",
+  "mach:licenseUrl": "https://github.com/comic/grand-challenge.org/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

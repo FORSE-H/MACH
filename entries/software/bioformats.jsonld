@@ -72,5 +72,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:88972ad5d906f74bdce0ae152786d8612acbc110"
+  "mach:swhid": "swh:1:ori:88972ad5d906f74bdce0ae152786d8612acbc110",
+  "mach:licenseUrl": "https://github.com/ome/bioformats/blob/master/LICENSE.txt",
+  "mach:licenseVerified": true
 }

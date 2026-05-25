@@ -77,5 +77,7 @@
       "mach:evidenceType": "project-site"
     }
   ],
-  "mach:swhid": "swh:1:ori:c0e198ef7ba41275e2b69aa2e2fb5428385729ef"
+  "mach:swhid": "swh:1:ori:c0e198ef7ba41275e2b69aa2e2fb5428385729ef",
+  "mach:licenseUrl": "https://github.com/maziyarpanahi/openmed/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

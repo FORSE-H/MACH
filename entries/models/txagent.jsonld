@@ -71,5 +71,7 @@
       "url": "https://zitniklab.hms.harvard.edu/TxAgent",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/mims-harvard/TxAgent/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

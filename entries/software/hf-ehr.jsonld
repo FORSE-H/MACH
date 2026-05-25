@@ -64,5 +64,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "Context Clues: Evaluating Long Context Models for Clinical Prediction Tasks on EHRs. arXiv 2024."
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/som-shahlab/hf_ehr/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

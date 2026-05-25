@@ -93,5 +93,7 @@
     "nnunet",
     "medsam"
   ],
-  "mach:swhid": "swh:1:ori:98b121215e6edcf92020c17b4be4630649dd2b3a"
+  "mach:swhid": "swh:1:ori:98b121215e6edcf92020c17b4be4630649dd2b3a",
+  "mach:licenseUrl": "https://github.com/Project-MONAI/model-zoo/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

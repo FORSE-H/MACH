@@ -57,5 +57,7 @@
       "url": "https://www.cornerstonejs.org",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/cornerstonejs/cornerstone3D/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

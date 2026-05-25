@@ -66,5 +66,7 @@
       "url": "https://viewer.ohif.org",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/OHIF/Viewers/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

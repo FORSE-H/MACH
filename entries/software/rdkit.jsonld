@@ -73,5 +73,6 @@
       "mach:evidenceType": "package-registry"
     }
   ],
-  "mach:swhid": "swh:1:ori:0df93a544c70912c7917fe39fc9d3b210d173dd2"
+  "mach:swhid": "swh:1:ori:0df93a544c70912c7917fe39fc9d3b210d173dd2",
+  "mach:licenseVerified": false
 }

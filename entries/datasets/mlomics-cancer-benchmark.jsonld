@@ -91,5 +91,6 @@
       "mach:evidenceType": "model-hub"
     }
   ],
-  "mach:swhid": "swh:1:ori:1908417582a9997ba665d7eb5a4dec717821698e"
+  "mach:swhid": "swh:1:ori:1908417582a9997ba665d7eb5a4dec717821698e",
+  "mach:licenseVerified": false
 }

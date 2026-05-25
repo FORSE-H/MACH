@@ -57,5 +57,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:d7e4784ec0c4ddce5f43cb26440b510d6cd0c7b7"
+  "mach:swhid": "swh:1:ori:d7e4784ec0c4ddce5f43cb26440b510d6cd0c7b7",
+  "mach:licenseUrl": "https://github.com/Project-MONAI/monai-deploy/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

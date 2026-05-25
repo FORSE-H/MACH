@@ -74,5 +74,7 @@
   "mach:alternativeTo": [
     "histolab"
   ],
-  "mach:swhid": "swh:1:ori:848b4e9c20fa1d00848bf51db71e01409aad832c"
+  "mach:swhid": "swh:1:ori:848b4e9c20fa1d00848bf51db71e01409aad832c",
+  "mach:licenseUrl": "https://github.com/Dana-Farber-AIOS/pathml/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

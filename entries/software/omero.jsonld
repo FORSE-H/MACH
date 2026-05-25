@@ -85,5 +85,7 @@
   "mach:alternativeTo": [
     "orthanc"
   ],
-  "mach:swhid": "swh:1:ori:8967060584bb273ec77aa6182ebc3cc23577f330"
+  "mach:swhid": "swh:1:ori:8967060584bb273ec77aa6182ebc3cc23577f330",
+  "mach:licenseUrl": "https://github.com/ome/openmicroscopy/blob/master/LICENSE.txt",
+  "mach:licenseVerified": true
 }

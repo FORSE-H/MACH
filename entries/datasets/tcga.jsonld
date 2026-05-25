@@ -68,5 +68,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:c27fb46b1da361cc06ca0c4ea47d69f803f4e441"
+  "mach:swhid": "swh:1:ori:c27fb46b1da361cc06ca0c4ea47d69f803f4e441",
+  "mach:licenseUrl": "https://github.com/NCI-GDC/gdc-client/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

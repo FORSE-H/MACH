@@ -79,5 +79,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:fefab2e3a4665e465b42617db0f2a2b294ae9275"
+  "mach:swhid": "swh:1:ori:fefab2e3a4665e465b42617db0f2a2b294ae9275",
+  "mach:licenseUrl": "https://github.com/nightscout/cgm-remote-monitor/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

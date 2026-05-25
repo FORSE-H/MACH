@@ -1,0 +1,48 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@type": "schema:Dataset",
+  "identifier": "chembl",
+  "name": "ChEMBL",
+  "description": "Manually curated database of bioactive molecules with drug-like properties, maintained by EMBL-EBI. Integrates chemical, bioactivity, and genomic data to support drug discovery and development. Includes compound structures, binding assays, ADMET properties, and clinical candidate data. Accessible via REST API and bulk downloads. A Global Core Biodata Resource and part of the ELIXIR infrastructure.",
+  "url": "https://www.ebi.ac.uk/chembl/",
+  "license": "CC-BY-SA-3.0",
+  "mach:licenseUrl": "https://www.ebi.ac.uk/chembl/db_info",
+  "mach:licenseVerified": true,
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "EMBL-EBI",
+      "url": "https://www.ebi.ac.uk/"
+    }
+  ],
+  "mach:category": "data-sources",
+  "mach:subcategory": "drug-discovery",
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The definitive open database for bioactive molecules in drug discovery — maintained by EMBL-EBI, a Global Core Biodata Resource, and part of ELIXIR infrastructure. CC-BY-SA-3.0 data license. Covers compound structures, binding assays, ADMET properties, and approved drug clinical data. REST API and bulk downloads available. Cited in the landmark 2023 NAR paper (DOI: 10.1093/nar/gkad1004). Essential for any computational drug discovery, target validation, or cheminformatics pipeline. No viable open alternative at this scale.",
+  "mach:maturity": "production",
+  "mach:governance": "academic",
+  "mach:clinicalDomain": ["drug-discovery", "genomics", "pharmacology"],
+  "mach:deploymentContext": ["research", "cloud"],
+  "mach:editorialReviewedAt": "2026-05-25",
+  "mach:evidence": [
+    {
+      "@type": "schema:ScholarlyArticle",
+      "name": "The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods",
+      "url": "https://doi.org/10.1093/nar/gkad1004",
+      "mach:evidenceType": "peer-reviewed-paper",
+      "description": "NAR 2023 landmark paper describing ChEMBL data coverage and API"
+    },
+    {
+      "@type": "schema:WebPage",
+      "name": "ChEMBL REST API documentation",
+      "url": "https://www.ebi.ac.uk/chembl/api/data/docs",
+      "mach:evidenceType": "api-docs"
+    },
+    {
+      "@type": "schema:WebPage",
+      "name": "ChEMBL — ELIXIR Core Data Resource",
+      "url": "https://elixir-europe.org/platforms/data/core-data-resources",
+      "mach:evidenceType": "project-page"
+    }
+  ]
+}

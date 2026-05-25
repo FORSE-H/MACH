@@ -61,5 +61,7 @@
       "url": "https://github.com/mahmoodlab/UNI",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/mahmoodlab/UNI/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

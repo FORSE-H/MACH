@@ -1,0 +1,48 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@type": "schema:Dataset",
+  "identifier": "synapse",
+  "name": "Synapse",
+  "description": "Open research data platform by Sage Bionetworks for storing, sharing, and collaborating on scientific data. Hosts DREAM Challenge datasets, multi-omics research data, and clinical trial datasets with fine-grained access control. Provides REST API, Python and R clients, and supports FAIR data sharing with DOI minting and provenance tracking. Used widely in computational biology, genomics, and collaborative biomedical research.",
+  "url": "https://www.synapse.org",
+  "codeRepository": "https://github.com/Sage-Bionetworks/Synapse-Repository-Services",
+  "license": "Apache-2.0",
+  "mach:licenseUrl": "https://github.com/Sage-Bionetworks/Synapse-Repository-Services/blob/develop/LICENSE",
+  "mach:licenseVerified": true,
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "Sage Bionetworks",
+      "url": "https://sagebionetworks.org/"
+    }
+  ],
+  "mach:category": "data-sources",
+  "mach:subcategory": "research-data-platform",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Well-established open research data platform from Sage Bionetworks, widely used for DREAM Challenges, multi-omics datasets, and collaborative biomedical research. Apache-2.0 backend, Python/R clients available. Supports DOI minting, provenance tracking, and fine-grained access control — strong FAIR alignment. Assess rather than Adopt because dataset access requires individual registration and some datasets have additional governance agreements. Backend repo has modest GitHub stars (44) reflecting its infrastructure nature rather than direct researcher use. Strong choice for teams sharing or accessing challenge datasets and multi-institutional research data.",
+  "mach:maturity": "production",
+  "mach:governance": "academic",
+  "mach:clinicalDomain": ["genomics", "drug-discovery", "clinical-research"],
+  "mach:deploymentContext": ["research", "cloud"],
+  "mach:editorialReviewedAt": "2026-05-25",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "name": "Synapse platform — Sage Bionetworks",
+      "url": "https://www.synapse.org",
+      "mach:evidenceType": "project-page"
+    },
+    {
+      "@type": "schema:WebPage",
+      "name": "GitHub — Sage-Bionetworks/Synapse-Repository-Services (Apache-2.0)",
+      "url": "https://github.com/Sage-Bionetworks/Synapse-Repository-Services",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "name": "DREAM Challenges hosted on Synapse",
+      "url": "https://dreamchallenges.org/",
+      "mach:evidenceType": "adoption"
+    }
+  ]
+}

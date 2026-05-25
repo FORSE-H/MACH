@@ -70,5 +70,7 @@
       "mach:evidenceType": "package-registry"
     }
   ],
-  "mach:swhid": "swh:1:ori:9cee6d7cfc3e31b0238662c220f0ae341ff7d7bb"
+  "mach:swhid": "swh:1:ori:9cee6d7cfc3e31b0238662c220f0ae341ff7d7bb",
+  "mach:licenseUrl": "https://github.com/neuropsychology/NeuroKit/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

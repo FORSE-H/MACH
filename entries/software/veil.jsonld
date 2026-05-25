@@ -55,5 +55,7 @@
       "mach:evidenceType": "primary-instance"
     }
   ],
-  "mach:swhid": "swh:1:ori:07cd509c5bf97cbf310f42c052e3e04caf33fb36"
+  "mach:swhid": "swh:1:ori:07cd509c5bf97cbf310f42c052e3e04caf33fb36",
+  "mach:licenseUrl": "https://github.com/MAYA-DATA-PRIVACY/Veil/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

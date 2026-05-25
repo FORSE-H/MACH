@@ -65,5 +65,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:cde7b1bc024973d272c7d61ca01c7aef3f82d338"
+  "mach:swhid": "swh:1:ori:cde7b1bc024973d272c7d61ca01c7aef3f82d338",
+  "mach:licenseUrl": "https://github.com/ohcnetwork/care/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

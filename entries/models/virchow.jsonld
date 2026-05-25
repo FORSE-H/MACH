@@ -55,5 +55,7 @@
       "url": "https://doi.org/10.1038/s41591-024-03141-0",
       "mach:evidenceType": "academic-reference"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/Paige-AI/paige-ml-sdk/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

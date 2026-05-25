@@ -19,6 +19,8 @@
     "https://wfdb.readthedocs.io/"
   ],
   "license": "CC-BY-4.0",
+  "mach:licenseUrl": "https://physionet.org/about/licenses/",
+  "mach:licenseVerified": true,
   "keywords": [
     "ecg",
     "icu",

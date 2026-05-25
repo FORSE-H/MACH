@@ -60,5 +60,7 @@
       "mach:evidenceType": "primary-repo"
     }
   ],
-  "mach:swhid": "swh:1:ori:941d0cebf7be15c329a2bac1a092398fb13f8f47"
+  "mach:swhid": "swh:1:ori:941d0cebf7be15c329a2bac1a092398fb13f8f47",
+  "mach:licenseUrl": "https://github.com/sammargolis/OpenScribe/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

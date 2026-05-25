@@ -59,5 +59,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:fda01928639f5f778fb3c6762fa8fbd2f98fff5f"
+  "mach:swhid": "swh:1:ori:fda01928639f5f778fb3c6762fa8fbd2f98fff5f",
+  "mach:licenseUrl": "https://github.com/openemr/openemr/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

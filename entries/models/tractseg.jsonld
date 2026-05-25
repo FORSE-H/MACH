@@ -77,5 +77,7 @@
     "mrtrix3",
     "fsl-xtract"
   ],
-  "mach:swhid": "swh:1:ori:155dc02dcea4e8cef824cad80468b50508c79058"
+  "mach:swhid": "swh:1:ori:155dc02dcea4e8cef824cad80468b50508c79058",
+  "mach:licenseUrl": "https://github.com/MIC-DKFZ/TractSeg/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

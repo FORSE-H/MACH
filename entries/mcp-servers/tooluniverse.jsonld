@@ -73,5 +73,7 @@
       "schema:name": "Democratizing AI scientists using ToolUniverse. arXiv 2025."
     }
   ],
-  "relatedLink": "https://github.com/FORSE-H/MACH/tree/main/entries/software/txagent"
+  "relatedLink": "https://github.com/FORSE-H/MACH/tree/main/entries/software/txagent",
+  "mach:licenseUrl": "https://github.com/mims-harvard/ToolUniverse/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

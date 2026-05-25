@@ -73,5 +73,7 @@
       "mach:evidenceType": "package-registry"
     }
   ],
-  "mach:swhid": "swh:1:ori:d2c9316c97ed5eb680282790345b343ca59ee5f7"
+  "mach:swhid": "swh:1:ori:d2c9316c97ed5eb680282790345b343ca59ee5f7",
+  "mach:licenseUrl": "https://github.com/snap-stanford/biomni/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

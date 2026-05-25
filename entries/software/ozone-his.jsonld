@@ -57,5 +57,7 @@
       "url": "https://docs.ozone-his.com/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/ozone-his/ozone/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

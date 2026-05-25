@@ -74,5 +74,7 @@
       "schema:name": "MedHELM: Holistic Evaluation of Large Language Models for Medical Tasks. Nature Medicine 2025."
     }
   ],
-  "mach:swhid": "swh:1:ori:c2e750a032145bc822eb5ab2115e8ff7406bc8de"
+  "mach:swhid": "swh:1:ori:c2e750a032145bc822eb5ab2115e8ff7406bc8de",
+  "mach:licenseUrl": "https://github.com/stanford-crfm/helm/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

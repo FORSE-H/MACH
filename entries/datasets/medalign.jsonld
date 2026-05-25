@@ -56,5 +56,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "MedAlign: A Clinician-Generated Dataset for Instruction Following with Electronic Medical Records. AAAI 2024."
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/som-shahlab/medalign/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

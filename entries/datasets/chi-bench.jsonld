@@ -59,5 +59,7 @@
       "mach:evidenceType": "paper",
       "schema:name": "Chi-Bench: Benchmarking AI Agents on Healthcare Workflows. arXiv 2025."
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/actava-ai/chi-bench/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

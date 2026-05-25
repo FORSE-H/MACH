@@ -60,5 +60,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:c31d9bde6ee14ed592c4ed5a2217dbf0d1c2d292"
+  "mach:swhid": "swh:1:ori:c31d9bde6ee14ed592c4ed5a2217dbf0d1c2d292",
+  "mach:licenseUrl": "https://github.com/medplum/medplum/blob/main/LICENSE.txt",
+  "mach:licenseVerified": true
 }

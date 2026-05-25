@@ -79,5 +79,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "Closed-Loop Insulin Delivery in Suboptimally Controlled Type 1 Diabetes (CREATE trial). New England Journal of Medicine 2022."
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/nightscout/AndroidAPS/blob/master/LICENSE.txt",
+  "mach:licenseVerified": true
 }

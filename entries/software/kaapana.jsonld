@@ -94,5 +94,7 @@
     "substra",
     "flower-federated-learning"
   ],
-  "mach:swhid": "swh:1:ori:f1625918c14698c1e423a7f0465995c75b4136ce"
+  "mach:swhid": "swh:1:ori:f1625918c14698c1e423a7f0465995c75b4136ce",
+  "mach:licenseUrl": "https://github.com/kaapana/kaapana/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

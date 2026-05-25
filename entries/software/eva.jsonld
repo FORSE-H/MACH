@@ -57,7 +57,7 @@
     "pathology"
   ],
   "mach:judgement": "Assess",
-  "mach:judgementReason": "The dedicated evaluation framework for oncology foundation models \u2014 Apache-2.0, v0.4.5 April 2026, MIDL 2024 peer-reviewed. Provides standardised benchmarking across patch/slide/scan classification, segmentation, and VQA for both pathology and radiology FMs. 156 stars is modest but Kaiko is a credible pathology AI company and the tool fills a real gap as the evaluation counterpart to TRIDENT. Assess for teams building or comparing foundation models across oncology imaging tasks.",
+  "mach:judgementReason": "The dedicated evaluation framework for oncology foundation models — Apache-2.0, v0.4.5 April 2026, MIDL 2024 peer-reviewed. Provides standardised benchmarking across patch/slide/scan classification, segmentation, and VQA for both pathology and radiology FMs. 156 stars is modest but Kaiko is a credible pathology AI company and the tool fills a real gap as the evaluation counterpart to TRIDENT. Assess for teams building or comparing foundation models across oncology imaging tasks.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -71,5 +71,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "eva: Evaluation framework for medical imaging foundation models. MIDL 2024."
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/kaiko-ai/eva/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

@@ -68,5 +68,7 @@
       "url": "https://learn.canceridc.dev/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/ImagingDataCommons/idc-index/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

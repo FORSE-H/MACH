@@ -64,5 +64,7 @@
       "mach:evidenceType": "primary-repo"
     }
   ],
-  "mach:swhid": "swh:1:ori:f6c4e32e998ac8d7f236161fec60b4e347f6aa96"
+  "mach:swhid": "swh:1:ori:f6c4e32e998ac8d7f236161fec60b4e347f6aa96",
+  "mach:licenseUrl": "https://github.com/DIAGNijmegen/pathology-whole-slide-data/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

@@ -60,5 +60,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:d90f57bf2cd17b0f4b2c6e1c11ba04ca9c20d60b"
+  "mach:swhid": "swh:1:ori:d90f57bf2cd17b0f4b2c6e1c11ba04ca9c20d60b",
+  "mach:licenseUrl": "https://github.com/openaps/oref0/blob/master/LICENSE.txt",
+  "mach:licenseVerified": true
 }

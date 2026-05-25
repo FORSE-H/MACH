@@ -72,5 +72,7 @@
       "url": "https://fastdatascience.com/drug-named-entity-recognition-python-library/",
       "mach:evidenceType": "project-website"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/fastdatascience/drug_named_entity_recognition/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

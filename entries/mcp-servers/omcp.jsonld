@@ -92,5 +92,7 @@
   "mach:alternativeTo": [
     "fhir-mcp-wso2"
   ],
-  "schema:comment": "Add 'omop-mcp' to data/taxonomy/categories.yaml under mcp-servers-ai-interfaces subcategories. Also add 'experimental' to maturity_levels in taxonomy."
+  "schema:comment": "Add 'omop-mcp' to data/taxonomy/categories.yaml under mcp-servers-ai-interfaces subcategories. Also add 'experimental' to maturity_levels in taxonomy.",
+  "mach:licenseUrl": "https://github.com/fastomop/omcp/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

@@ -57,5 +57,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:e6ccc0a0764023c1391eb23c3e65908522ea76e0"
+  "mach:swhid": "swh:1:ori:e6ccc0a0764023c1391eb23c3e65908522ea76e0",
+  "mach:licenseUrl": "https://github.com/WorldVistA/VistA/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

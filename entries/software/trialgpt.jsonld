@@ -57,5 +57,7 @@
       "url": "https://www.ncbi.nlm.nih.gov/research/trialgpt/",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/ncbi-nlp/TrialGPT/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

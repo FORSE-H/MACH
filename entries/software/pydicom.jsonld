@@ -78,5 +78,7 @@
     }
   ],
   "mach:alternativeTo": [],
-  "mach:swhid": "swh:1:ori:bd71a2e4880057a2e78742ecf791c63288427efb"
+  "mach:swhid": "swh:1:ori:bd71a2e4880057a2e78742ecf791c63288427efb",
+  "mach:licenseUrl": "https://github.com/pydicom/pydicom/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

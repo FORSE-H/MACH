@@ -64,5 +64,7 @@
       "url": "https://github.com/mahmoodlab/CONCH",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/mahmoodlab/CONCH/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

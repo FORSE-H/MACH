@@ -59,5 +59,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:3803eb9cf5dbaf7b2fe647e0ca98c3ff5f176562"
+  "mach:swhid": "swh:1:ori:3803eb9cf5dbaf7b2fe647e0ca98c3ff5f176562",
+  "mach:licenseUrl": "https://github.com/InsightSoftwareConsortium/ITK/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

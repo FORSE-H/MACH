@@ -66,5 +66,6 @@
       "url": "https://wiki.xnat.org/documentation/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:licenseVerified": false
 }

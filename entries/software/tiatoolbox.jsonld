@@ -70,5 +70,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:460cc70e87c788df9df943fd780f7f14b51df719"
+  "mach:swhid": "swh:1:ori:460cc70e87c788df9df943fd780f7f14b51df719",
+  "mach:licenseUrl": "https://github.com/TissueImageAnalytics/tiatoolbox/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }

@@ -68,5 +68,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "BioReason: Incentivizing Multimodal Biological Reasoning within a DNA-LLM Model. NeurIPS 2025."
     }
-  ]
+  ],
+  "mach:licenseUrl": "https://github.com/bowang-lab/BioReason/blob/main/LICENSE",
+  "mach:licenseVerified": true
 }

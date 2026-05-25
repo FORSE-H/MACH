@@ -53,5 +53,7 @@
       "mach:evidenceType": "academic-reference"
     }
   ],
-  "mach:swhid": "swh:1:ori:2d2f0f5effd95ff2de818a0141ec187df677e831"
+  "mach:swhid": "swh:1:ori:2d2f0f5effd95ff2de818a0141ec187df677e831",
+  "mach:licenseUrl": "https://github.com/vqdang/hover_net/blob/master/LICENSE",
+  "mach:licenseVerified": true
 }
