@@ -1,0 +1,79 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/blaze",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "blaze",
+  "name": "Blaze",
+  "alternateName": [
+    "Blaze FHIR Server"
+  ],
+  "description": "High-performance FHIR R4 server with an integrated CQL (Clinical Quality Language) evaluation engine, designed for population-wide aggregate queries across millions of patient records. Supports $evaluate-measure, $everything, $validate-code, terminology services (LOINC, SNOMED CT), and horizontal scalability via a distributed storage variant. Built in Clojure. Single-command Docker deployment. Extensively deployed within Germany's Medical Informatics Initiative (MII) and European biobank infrastructure. Apache-2.0, 219 stars, v1.7.0 (April 2026). Commercial support via KF Digital Health GmbH.",
+  "url": "https://github.com/samply/blaze",
+  "codeRepository": "https://github.com/samply/blaze",
+  "license": "Apache-2.0",
+  "mach:licenseUrl": "https://github.com/samply/blaze/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "1.7.0",
+  "dateModified": "2026-04-28",
+  "programmingLanguage": [
+    "Clojure",
+    "Java"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows",
+    "Docker"
+  ],
+  "keywords": [
+    "fhir",
+    "hl7",
+    "fhir-server",
+    "cql",
+    "clinical-quality-language",
+    "population-health",
+    "biobank",
+    "mii",
+    "interoperability",
+    "clojure"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Samply / KF Digital Health GmbH",
+      "url": "https://github.com/samply"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "oncology",
+    "public-health",
+    "genomics"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Distinctive FHIR R4 server with a built-in CQL evaluation engine — the key differentiator over HAPI FHIR is efficient population-wide aggregate queries for research and quality measurement. Apache-2.0, production-deployed across Germany's Medical Informatics Initiative and European biobanks. Assess rather than Adopt because community is small (219 stars) and Clojure stack limits contributor pool. Strong choice for teams doing population health analytics, CQL-based quality measures, or BBMRI biobank infrastructure.",
+  "mach:editorialReviewedAt": "2026-05-28",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/samply/blaze",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/samply/blaze/wiki",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

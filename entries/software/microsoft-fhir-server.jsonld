@@ -1,0 +1,74 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/microsoft-fhir-server",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "microsoft-fhir-server",
+  "name": "Microsoft FHIR Server",
+  "alternateName": [
+    "FHIR Server for Azure",
+    "Azure Health Data Services FHIR"
+  ],
+  "description": ".NET Core implementation of the HL7 FHIR standard maintained by Microsoft Healthcare. Supports FHIR R4 and R5 with pluggable persistence (SQL Server and Cosmos DB), role-based access control via Azure AAD, bulk export, and data conversion operations. Actively developed with 377 releases and CI/CD. Note: CosmosDB provider support ends September 2026. MIT licence, 1.4k stars, 583 forks, v4.0.770 (May 2026).",
+  "url": "https://github.com/microsoft/fhir-server",
+  "codeRepository": "https://github.com/microsoft/fhir-server",
+  "license": "MIT",
+  "mach:licenseUrl": "https://github.com/microsoft/fhir-server/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "4.0.770",
+  "dateModified": "2026-05-24",
+  "programmingLanguage": [
+    "C#",
+    ".NET"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "Windows",
+    "Docker"
+  ],
+  "keywords": [
+    "fhir",
+    "hl7",
+    "fhir-server",
+    "dotnet",
+    "azure",
+    "interoperability",
+    "fhir-r4",
+    "fhir-r5",
+    "healthcare-api",
+    "microsoft"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Microsoft Healthcare",
+      "url": "https://microsoft.com/health"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "cloud",
+    "self-hosted",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "public-health",
+    "research"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Solid MIT-licensed FHIR server from Microsoft Healthcare — R4/R5 support, SQL and Cosmos DB backends, Azure AAD RBAC, bulk export. Actively maintained (v4.0.770, May 2026). Assess rather than Adopt because it is vendor-led (Microsoft), optimised for Azure infrastructure, and the CosmosDB backend is being deprecated. Teams running on Azure infrastructure with existing AAD will find this a natural fit; teams wanting cloud-neutral FHIR infrastructure should prefer HAPI FHIR.",
+  "mach:editorialReviewedAt": "2026-05-28",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/microsoft/fhir-server",
+      "mach:evidenceType": "primary-repo"
+    }
+  ]
+}

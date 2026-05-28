@@ -1,0 +1,88 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/hapi-fhir",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "hapi-fhir",
+  "name": "HAPI FHIR",
+  "alternateName": [
+    "HAPI FHIR JPA Server",
+    "HAPI FHIR Client"
+  ],
+  "description": "The most widely used open-source Java implementation of the HL7 FHIR standard. Provides both a client library and a full JPA server with database persistence, supporting FHIR DSTU2, DSTU3, R4, R4B, and R5. Includes REST API, validation, search parameters, batch processing, and Spring Boot integration. The de facto reference implementation for FHIR servers in open-source healthcare infrastructure — used by academic medical centres, national health systems, and open health platforms worldwide. Apache-2.0, 2.3k stars, 1.5k forks, v8.0.0 (May 2026). Commercial support available through Smile CDR (the primary maintainer).",
+  "url": "https://hapifhir.io/",
+  "codeRepository": "https://github.com/hapifhir/hapi-fhir",
+  "relatedLink": [
+    "https://hapifhir.io/hapi-fhir/docs/",
+    "https://hapi.fhir.org/"
+  ],
+  "license": "Apache-2.0",
+  "mach:licenseUrl": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "mach:licenseVerified": true,
+  "version": "8.0.0",
+  "dateModified": "2026-05-21",
+  "programmingLanguage": [
+    "Java"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "keywords": [
+    "fhir",
+    "hl7",
+    "interoperability",
+    "fhir-server",
+    "java",
+    "jpa-server",
+    "fhir-r4",
+    "fhir-r5",
+    "healthcare-api",
+    "rest-api",
+    "spring-boot"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Smile CDR / HAPI FHIR community",
+      "url": "https://smilecdr.com/"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "public-health",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference open-source FHIR server implementation — if you need a FHIR server, HAPI FHIR is the default starting point. Apache-2.0, supports all FHIR versions from DSTU2 through R5, JPA persistence, full REST API, and Spring Boot integration. 2.3k stars, 1.5k forks, v8.0.0 released May 2026 — actively maintained by Smile CDR with broad community contribution. Used by national health systems, academic medical centres, and open platforms worldwide. Adopt as the standard FHIR server for any team building FHIR-native infrastructure in Java.",
+  "mach:editorialReviewedAt": "2026-05-28",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/hapifhir/hapi-fhir",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://hapifhir.io/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://hapi.fhir.org/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
