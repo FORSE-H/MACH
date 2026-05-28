@@ -1,0 +1,71 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/spark-fhir",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "spark-fhir",
+  "name": "Spark FHIR Server",
+  "alternateName": [
+    "Spark",
+    "Firely Spark"
+  ],
+  "description": "Open-source FHIR server built in C# by Firely and now maintained by Incendi. Supports FHIR R4 and STU3, available as NuGet packages or Docker images. Validated through HL7 WGM Connectathons. BSD-3-Clause, 278 stars, v2.4.1-r4 (April 2026). Community maintained with Discord support channel.",
+  "url": "https://github.com/FirelyTeam/spark",
+  "codeRepository": "https://github.com/FirelyTeam/spark",
+  "license": "BSD-3-Clause",
+  "mach:licenseUrl": "https://github.com/FirelyTeam/spark/blob/master/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "2.4.1-r4",
+  "dateModified": "2026-04-08",
+  "programmingLanguage": [
+    "C#"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows",
+    "Docker"
+  ],
+  "keywords": [
+    "fhir",
+    "hl7",
+    "fhir-server",
+    "dotnet",
+    "csharp",
+    "interoperability",
+    "fhir-r4",
+    "connectathon"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Incendi / Firely",
+      "url": "https://github.com/FirelyTeam"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "research"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Connectathon-validated open-source FHIR server in C#, originally by Firely and now maintained by Incendi. BSD-3-Clause, R4 and STU3 support, Docker deployment. Assess rather than Adopt due to smaller community (278 stars) compared to HAPI FHIR. Good fit for teams in the .NET/C# ecosystem who want a community-governed alternative to Microsoft's FHIR Server.",
+  "mach:editorialReviewedAt": "2026-05-28",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/FirelyTeam/spark",
+      "mach:evidenceType": "primary-repo"
+    }
+  ]
+}
