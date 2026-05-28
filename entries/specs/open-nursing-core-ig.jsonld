@@ -1,0 +1,65 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/open-nursing-core-ig",
+  "@type": [
+    "schema:TechArticle",
+    "mach:Spec"
+  ],
+  "identifier": "open-nursing-core-ig",
+  "name": "Open Nursing Core Implementation Guide",
+  "alternateName": [
+    "ONC-IG",
+    "Open Nursing Core IG"
+  ],
+  "description": "FHIR R4 implementation guide defining a standardised nursing data model covering the complete nursing process (ADPIE — Assessment, Diagnosis, Planning, Implementation, Evaluation). Provides 25+ profiles across four domains: foundation and safety (NEWS2, Braden Scale, Waterlow Score), relational and inclusive care (patient preferences, capacity assessments), fundamental care (elimination, hydration, pain, oral health, sleep), and specialised and mental health assessments. NHS-aligned, including CareConnect-NEWS2-Observation-1. Hosted on the UNICC open source portal, maintained by the Open Nursing Community. MIT, v1.0.0 (January 2026).",
+  "url": "https://opennursingcoreig.com/",
+  "codeRepository": "https://opensource.unicc.org/nursecitizendeveloper/open-nursing-core-ig",
+  "license": "MIT",
+  "mach:licenseVerified": false,
+  "keywords": [
+    "fhir",
+    "nursing",
+    "implementation-guide",
+    "nhs",
+    "news2",
+    "fhir-r4",
+    "adpie",
+    "clinical-assessment",
+    "person-centred-care",
+    "uk-health"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Open Nursing Community / Nurse Citizen Developer",
+      "url": "https://opensource.unicc.org/nursecitizendeveloper"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:maturity": "beta",
+  "mach:category": "specs",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "mental-health"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The only open FHIR R4 implementation guide dedicated to nursing — 25+ profiles covering the full ADPIE nursing process, NHS-aligned (NEWS2, Braden, Waterlow), hosted on the UNICC open source portal. v1.0.0 released January 2026. MIT licence. Assess at launch due to very early community adoption; the institutional backing of UNICC and the absence of any comparable open nursing IG gives it strong potential. Worth tracking as the first mover in a gap that affects every nurse-facing EHR implementation.",
+  "mach:editorialReviewedAt": "2026-05-28",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://opennursingcoreig.com/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://opensource.unicc.org/nursecitizendeveloper/open-nursing-core-ig",
+      "mach:evidenceType": "primary-repo"
+    }
+  ]
+}
