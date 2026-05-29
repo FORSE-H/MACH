@@ -1,0 +1,86 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/mriqc",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "mriqc",
+  "name": "MRIQC",
+  "alternateName": [
+    "MRI Quality Control"
+  ],
+  "description": "Automated MRI quality control tool that extracts image quality metrics (IQMs) and generates visual reports for structural (T1w, T2w) and functional brain MRI scans. Runs before any preprocessing as a first-pass quality gate. BIDS-compliant, containerised via Docker, and integrates with Nipype workflows using ANTs and AFNI. Produces no-reference IQMs without requiring a ground-truth reference scan. NIH-funded (NIBIB, NIMH, NINDS), maintained by the NiPreps Community. Apache-2.0, 363 stars, v24.0.2. Used alongside fMRIPrep in standard neuroimaging pipelines.",
+  "url": "https://mriqc.readthedocs.io/",
+  "codeRepository": "https://github.com/nipreps/mriqc",
+  "relatedLink": [
+    "https://doi.org/10.1371/journal.pone.0184661",
+    "https://www.nipreps.org/"
+  ],
+  "license": "Apache-2.0",
+  "mach:licenseUrl": "https://github.com/nipreps/mriqc/blob/master/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "24.0.2",
+  "dateModified": "2024-08-26",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Docker"
+  ],
+  "keywords": [
+    "mri",
+    "quality-control",
+    "neuroimaging",
+    "bids",
+    "fmri",
+    "structural-mri",
+    "image-quality-metrics",
+    "nipype",
+    "nipreps",
+    "brain-imaging"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "NiPreps Community",
+      "url": "https://www.nipreps.org/"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "radiology",
+    "research",
+    "neurology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The standard quality control step for neuroimaging pipelines — run MRIQC before fMRIPrep to catch bad scans before preprocessing wastes compute. BIDS-compliant, Docker-containerised, NIH-funded, Apache-2.0. 363 stars, actively maintained by the NiPreps Community. Published in PLOS ONE 2017. Adopt as the first step in any structural or functional MRI research pipeline.",
+  "mach:editorialReviewedAt": "2026-05-29",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/nipreps/mriqc",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://mriqc.readthedocs.io/",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1371/journal.pone.0184661",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MRIQC: Advancing the Automatic Prediction of Image Quality in MRI from Unseen Sites. PLOS ONE 2017."
+    }
+  ]
+}
