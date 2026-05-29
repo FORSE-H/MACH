@@ -1,0 +1,78 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/nibabies",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "nibabies",
+  "name": "NiBabies",
+  "alternateName": [
+    "NiBabies Infant fMRIPrep"
+  ],
+  "description": "Specialised MRI preprocessing pipeline for human infant neuroimaging (0–2 years old), part of the NiPreps ecosystem. Handles the unique challenges of neonatal and infant brain MRI — inverted tissue contrast, incomplete myelination, and motion artefacts — that make adult-oriented tools like fMRIPrep unsuitable. Supports both anatomical and functional MRI. BIDS-compliant, Docker-containerised, Apache-2.0, 39 stars, v25.2.1 (October 2025). Actively maintained with 36 releases.",
+  "url": "https://nibabies.readthedocs.io/",
+  "codeRepository": "https://github.com/nipreps/nibabies",
+  "relatedLink": [
+    "https://www.nipreps.org/"
+  ],
+  "license": "Apache-2.0",
+  "mach:licenseUrl": "https://github.com/nipreps/nibabies/blob/master/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "25.2.1",
+  "dateModified": "2025-10-22",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Docker"
+  ],
+  "keywords": [
+    "neuroimaging",
+    "infant",
+    "neonatal",
+    "fmri",
+    "structural-mri",
+    "preprocessing",
+    "bids",
+    "nipreps",
+    "pediatric"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "NiPreps Community",
+      "url": "https://www.nipreps.org/"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "neurology",
+    "pediatrics"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The only open-source MRI preprocessing pipeline purpose-built for infant neuroimaging (0–2 years) — fills a genuine gap since fMRIPrep is not suitable for neonatal/infant data due to inverted tissue contrast and incomplete myelination. Apache-2.0, BIDS-compliant, 36 releases showing active development. Assess due to small community (39 stars) reflecting the niche population. Essential for any team working on infant brain development, neonatal outcomes research, or early neurodevelopment studies.",
+  "mach:editorialReviewedAt": "2026-05-29",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/nipreps/nibabies",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://nibabies.readthedocs.io/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/smriprep",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "smriprep",
+  "name": "sMRIPrep",
+  "alternateName": [
+    "Structural MRI PREProcessing"
+  ],
+  "description": "Structural MRI preprocessing pipeline from the NiPreps ecosystem. Performs skull stripping, tissue segmentation, and spatial normalisation across diverse scanner protocols with minimal user input. Built on Nipype, integrates FSL, ANTs, FreeSurfer, and Connectome Workbench. BIDS-compliant with visual QC reports. Serves as the shared anatomical preprocessing backbone for fMRIPrep and dMRIPrep. Apache-2.0, 166 stars, v0.19.1 (September 2025).",
+  "url": "https://nipreps.org/smriprep/",
+  "codeRepository": "https://github.com/nipreps/smriprep",
+  "relatedLink": [
+    "https://www.nipreps.org/"
+  ],
+  "license": "Apache-2.0",
+  "mach:licenseUrl": "https://github.com/nipreps/smriprep/blob/master/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "0.19.1",
+  "dateModified": "2025-09-19",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Docker"
+  ],
+  "keywords": [
+    "structural-mri",
+    "neuroimaging",
+    "preprocessing",
+    "bids",
+    "nipreps",
+    "freesurfer",
+    "ants",
+    "fsl",
+    "brain-imaging"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "NiPreps Community",
+      "url": "https://www.nipreps.org/"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "radiology",
+    "research",
+    "neurology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The shared structural MRI preprocessing backbone used by fMRIPrep and dMRIPrep — teams using either of those tools already depend on sMRIPrep indirectly. Apache-2.0, BIDS-compliant, integrates FreeSurfer/ANTs/FSL. Assess rather than Adopt because it functions more as middleware than a standalone end-user tool — most researchers interact with it through fMRIPrep rather than directly.",
+  "mach:editorialReviewedAt": "2026-05-29",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/nipreps/smriprep",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://nipreps.org/smriprep/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
