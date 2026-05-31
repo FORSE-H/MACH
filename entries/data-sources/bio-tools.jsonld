@@ -1,0 +1,68 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/bio-tools",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "bio-tools",
+  "name": "bio.tools",
+  "alternateName": [
+    "ELIXIR Tools Registry"
+  ],
+  "description": "ELIXIR's registry of bioinformatics and life science software, hosting over 33,000 tools. Each entry is structured using biotoolsSchema and classified with the EDAM ontology (operations, data types, formats, topics). Covers tools relevant to medical informatics, genomics, proteomics, imaging, and computational biology. Fully public REST API with no authentication required for reads — supports filtering by topic, operation, license, programming language, and 40+ other fields. Data released under CC-BY-SA-4.0. Governed by the Danish ELIXIR Node and ELIXIR Tools Platform.",
+  "url": "https://bio.tools/",
+  "relatedLink": [
+    "https://bio.tools/api/t/?format=json",
+    "https://biotools.readthedocs.io/en/latest/api_reference.html",
+    "https://github.com/edamontology/edamontology"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "mach:licenseUrl": "https://biotools.readthedocs.io/en/latest/what_is_biotools.html",
+  "mach:licenseVerified": true,
+  "keywords": [
+    "bioinformatics",
+    "life-science",
+    "software-registry",
+    "edam",
+    "elixir",
+    "ontology",
+    "genomics",
+    "medical-informatics",
+    "rest-api",
+    "open-data"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "ELIXIR",
+      "url": "https://elixir-europe.org/"
+    }
+  ],
+  "mach:governance": "foundation",
+  "mach:maturity": "production",
+  "mach:category": "data-sources",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "genomics",
+    "public-health"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "ELIXIR's canonical registry for bioinformatics and life science software — 33,000+ tools, fully public REST API, EDAM-classified, CC-BY-SA-4.0. A ready-made discovery pipeline for MACH's Phase 2 harvester: query by topic (e.g. 'Medical informatics') to surface healthcare-adjacent tool candidates. EDAM topic and operation terms are a reference vocabulary for MACH's own clinical domain classifier. Cross-referencing MACH entries with their biotoolsID provides free enrichment (publications, operations metadata). Adopt as a harvester source and schema reference.",
+  "mach:editorialReviewedAt": "2026-05-29",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://bio.tools/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://biotools.readthedocs.io/en/latest/api_reference.html",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}
