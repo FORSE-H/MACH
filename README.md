@@ -37,9 +37,6 @@ Open source enables transparency, reuse, and collaborative improvement. These pr
 
 - **Ibrahim Haddad, LF AI & Data Foundation (2026)** · [Governing Our Digital Future: Every Government Needs an Open Source Program Office](https://www.linkedin.com/feed/update/urn:li:activity:7463264854640971777/): Open source redistributes cost from vendor licensing to internal capability. Without deliberate governance, those costs accumulate as security and operational risk.
 
-- **Adler-Milstein, Murray & Wachter, JAMA (2026)** · [The Market Dynamics for Third-Party AI Tools Trying to Compete With Electronic Health Record Developers](https://doi.org/10.1001/jama.2026.2394): 79% of hospitals use AI tools bundled by their EHR vendor, even when third-party alternatives are superior. Structural lock-in — not clinical evidence — drives adoption. Open standards and open-source alternatives are the primary counterweight.
-
-- **Leupen & Van Poll, Het Financieele Dagblad (2026)** · [Hoe een vader en zoon buiten de schijnwerpers een software-imperium bouwden](https://fd.nl/bedrijfsleven/1597084/hoe-een-vader-en-zoon-buiten-de-schijnwerpers-een-software-imperium-bouwden) *(paywalled, Dutch)*: ChipSoft — a secretive family-owned company — controls the EHR systems of most Dutch hospitals, with no governance guarantees, no public accountability, and a ransomware attack that cost €3–5M. Hospitals have no viable alternative. The article ends with a hospital CIO asking: *"Why don't hospitals organise themselves?"* — the answer is what MACH is building toward.
 
 ---
 
