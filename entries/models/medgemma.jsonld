@@ -1,0 +1,90 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/medgemma",
+  "@type": [
+    "schema:SoftwareApplication",
+    "mach:MLModel"
+  ],
+  "identifier": "medgemma",
+  "name": "MedGemma",
+  "alternateName": [
+    "Health AI Developer Foundations MedGemma",
+    "HAI-DEF MedGemma"
+  ],
+  "description": "Google's family of Gemma 3 variants fine-tuned for medical text and image comprehension, released under the Health AI Developer Foundations (HAI-DEF) initiative. Available in 4B multimodal (text + medical images) and 27B multimodal/text-only variants. Supports chest X-ray report generation, medical visual QA, radiology/dermatology/pathology/ophthalmology image analysis, and EHR/FHIR record comprehension. MedGemma 4B scores 88.9 F1 on MIMIC-CXR and 64.4% on MedQA — significantly outperforming base Gemma 3 4B. 477k+ monthly HuggingFace downloads. Code Apache-2.0; model weights under Health AI Developer Foundations licence.",
+  "url": "https://developers.google.com/health-ai-developer-foundations/medgemma",
+  "codeRepository": "https://github.com/google-health/medgemma",
+  "relatedLink": [
+    "https://huggingface.co/google/medgemma-4b-it",
+    "https://huggingface.co/google/medgemma-27b-it",
+    "https://arxiv.org/abs/2507.05201"
+  ],
+  "license": "custom",
+  "mach:licenseUrl": "https://developers.google.com/health-ai-developer-foundations/terms",
+  "mach:licenseVerified": true,
+  "version": "1.0.0",
+  "dateModified": "2025-07-09",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "medical-imaging",
+    "llm",
+    "multimodal",
+    "radiology",
+    "chest-xray",
+    "pathology",
+    "ophthalmology",
+    "dermatology",
+    "fhir",
+    "ehr",
+    "foundation-model",
+    "google-health",
+    "gemma"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Google Health",
+      "url": "https://health.google/"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:maturity": "beta",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "cloud",
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "radiology",
+    "pathology",
+    "research",
+    "primary-care",
+    "oncology"
+  ],
+  "mach:weightsLicense": "Health AI Developer Foundations Licence (custom, non-SPDX) — permits research and commercial use with restrictions on standalone clinical deployment without validation",
+  "mach:trainingDataSummary": "De-identified chest X-rays, dermatology, ophthalmology and histopathology images; medical literature; FHIR-based EHR data; public datasets including MIMIC-CXR, SLAKE, PAD-UFES-20, TCGA, CAMELYON, PMC-OA",
+  "mach:intendedUse": "Developer foundation model for building healthcare AI applications — not intended for direct clinical use without independent validation. Intended for researchers and developers accelerating health AI development.",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Google's most capable open-weight medical foundation model — 4B and 27B variants covering radiology, pathology, dermatology, ophthalmology and EHR/FHIR comprehension. 477k+ monthly HuggingFace downloads, 1.5k GitHub stars. Strong benchmark performance (MedQA 64.4%, MIMIC-CXR F1 88.9%). Assess rather than Adopt for two reasons: model weights use a custom Health AI Developer Foundations licence (not a standard SPDX open licence), and Google explicitly states it is not validated for direct clinical deployment. Essential reference model for any team building health AI applications; assess fit for your use case and validate independently before clinical use.",
+  "mach:editorialReviewedAt": "2026-06-01",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/google-health/medgemma",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/google/medgemma-4b-it",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://developers.google.com/health-ai-developer-foundations/medgemma",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

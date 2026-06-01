@@ -1,0 +1,81 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/deepvariant",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "deepvariant",
+  "name": "DeepVariant",
+  "alternateName": [
+    "Google DeepVariant"
+  ],
+  "description": "Deep learning-based DNA variant caller from Google Health. Processes aligned sequencing reads (BAM/CRAM), generates pileup image tensors, and classifies genetic variants using a convolutional neural network, outputting VCF/gVCF files. Supports Illumina, PacBio, Oxford Nanopore, and other sequencing platforms for whole genome and whole exome analysis. Includes DeepTrio for trio/duo variant calling. Won the 2020 PrecisionFDA Truth Challenge V2. BSD-3-Clause, 3.7k stars, v1.10.0 (March 2026), Docker-containerised, GPU/TPU acceleration available.",
+  "url": "https://github.com/google/deepvariant",
+  "codeRepository": "https://github.com/google/deepvariant",
+  "relatedLink": [
+    "https://www.nature.com/articles/nbt.4235"
+  ],
+  "license": "BSD-3-Clause",
+  "mach:licenseUrl": "https://github.com/google/deepvariant/blob/r1.10/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "1.10.0",
+  "dateModified": "2026-03-05",
+  "programmingLanguage": [
+    "Python",
+    "C++"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "Docker"
+  ],
+  "keywords": [
+    "genomics",
+    "variant-calling",
+    "deep-learning",
+    "dna-sequencing",
+    "whole-genome-sequencing",
+    "bioinformatics",
+    "nanopore",
+    "pacbio",
+    "illumina",
+    "google-health"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Google Health",
+      "url": "https://health.google/"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "genomics",
+    "research",
+    "rare-disease",
+    "oncology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference deep learning variant caller for DNA sequencing — 3.7k stars, 25 releases, v1.10.0 (March 2026), actively maintained by Google Health. Supports all major sequencing platforms (Illumina, PacBio, ONT). Won the 2020 PrecisionFDA Truth Challenge V2. BSD-3-Clause, Docker-containerised, GPU/TPU-accelerated. Part of Google's genomics infrastructure that has collectively processed exomes and whole genomes of 2.5 million individuals globally. Adopt for any genomics pipeline requiring high-accuracy variant calling.",
+  "mach:editorialReviewedAt": "2026-06-01",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/google/deepvariant",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://www.nature.com/articles/nbt.4235",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "A universal SNP and small-indel variant caller using deep neural networks. Nature Biotechnology, 2018."
+    }
+  ]
+}
