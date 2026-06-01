@@ -200,5 +200,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full entry checklist, judgement c
 **License integrity**
 - Jewitt et al. (KDD 2026) — [Permissive-Washing in the Open AI Supply Chain: A Large-Scale Audit of License Integrity](https://arxiv.org/abs/2602.08816) — informed the addition of `mach:licenseUrl` and `mach:licenseVerified` fields and MACH's decision to verify actual LICENSE files, not just metadata tags
 
+**Provenance & scholarly trust**
+- [openRxiv Re:Port Newsletter — Inaugural Issue](https://openrxiv.org/wp-content/uploads/Introducing-openRxivs-Re_Port-Newsletter-Inaugural-Issue.html) (openRxiv, 2026)
+- [Trust Signals and Accountability](https://openrxiv.org/trust-signals-and-accountability/) (openRxiv, 2026)
+
 **AI assistance**
 - Parts of this project were developed with assistance from [Claude](https://claude.ai) (Anthropic). All content has been reviewed and is the intellectual responsibility of the project curator.
