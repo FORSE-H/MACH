@@ -1,0 +1,72 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/vivli",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "vivli",
+  "name": "Vivli",
+  "alternateName": [
+    "Vivli Center for Global Clinical Research Data"
+  ],
+  "description": "Global clinical trial data sharing platform operated as an independent nonprofit. Hosts 8,000+ clinical trials representing 5.2 million participants, contributed by 55+ member organisations including Pfizer, Roche, GSK, Novartis, NIH HEAL Initiative, and academic institutions including Harvard, Johns Hopkins, and Stanford. Data access is controlled: requestors submit a research proposal reviewed by the contributing organisation and an Independent Review Panel (IRP), then execute a non-negotiable Data Use Agreement (DUA). Implements the Five Safes Framework for data protection. Endorsed by NIH as an approved generalist repository for data sharing under the NIH Data Management and Sharing Policy. Search interface at search.vivli.org; no public API.",
+  "url": "https://vivli.org",
+  "relatedLink": [
+    "https://search.vivli.org"
+  ],
+  "license": "custom",
+  "mach:licenseUrl": "https://vivli.org/resources/vivli-data-use-agreement/",
+  "mach:licenseVerified": false,
+  "keywords": [
+    "clinical-trials",
+    "individual-patient-data",
+    "ipd",
+    "controlled-access",
+    "data-sharing",
+    "five-safes",
+    "nih-approved",
+    "pharma",
+    "research-data"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "Vivli",
+      "url": "https://vivli.org"
+    }
+  ],
+  "mach:governance": "foundation",
+  "mach:maturity": "production",
+  "mach:category": "data-sources",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "clinical-trials",
+    "research",
+    "pharmacology",
+    "oncology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The primary platform for individual patient data (IPD) sharing from clinical trials — 8,000+ trials, 5.2 million participants, 530+ resulting publications. Endorsed by NIH as an approved data sharing repository. Supported by 55+ members spanning major pharma (Pfizer, Roche, GSK, Novartis) and top academic institutions. Implements Five Safes Framework. Assess rather than Adopt for three reasons: access is entirely controlled (no open data tier), DUA is custom and non-negotiable (not a standard open licence), and there is no public API for programmatic discovery. Essential reference for any team requiring clinical trial IPD — assess whether your research plan meets the access criteria and institutional DUA requirements before submitting.",
+  "mach:editorialReviewedAt": "2026-06-02",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://vivli.org",
+      "mach:evidenceType": "project-page"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://search.vivli.org",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.nlm.nih.gov/NIHbmic/generalist_repositories.html",
+      "mach:evidenceType": "adoption",
+      "schema:name": "NIH NLM — Generalist Repositories (NIH-approved for Data Management and Sharing Policy compliance)"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/opal",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "opal",
+  "name": "Opal",
+  "alternateName": [
+    "OBiBa Opal"
+  ],
+  "description": "Core database application for biobanks and epidemiological studies, developed under the OBiBa initiative (Maelstrom Research / McGill University Health Centre). Provides an integrated platform for the full research data lifecycle: import and validation from heterogeneous sources, data harmonisation, derivation, querying, and analysis. Supports MongoDB, MySQL, and MariaDB backends. Exposes a REST API and integrates natively with DataSHIELD for federated privacy-preserving analysis across distributed sites, and with Rock (R computation server) for in-situ statistical analysis. Deployed in major international research networks including CanPath (Canada's national cohort), EUCAN-Connect, and SYNCHROS. GPL-3.0, v5.7.2, Java/Vue, actively maintained.",
+  "url": "https://www.obiba.org/pages/products/opal/",
+  "codeRepository": "https://github.com/obiba/opal",
+  "relatedLink": [
+    "https://opaldoc.obiba.org",
+    "https://www.datashield.org"
+  ],
+  "license": "GPL-3.0",
+  "mach:licenseUrl": "https://github.com/obiba/opal/blob/master/LICENSE.txt",
+  "mach:licenseVerified": true,
+  "version": "5.7.2",
+  "dateModified": "2026-05-29",
+  "programmingLanguage": [
+    "Java",
+    "Vue"
+  ],
+  "keywords": [
+    "biobank",
+    "epidemiology",
+    "data-harmonisation",
+    "federated-data",
+    "datashield",
+    "rest-api",
+    "r-integration",
+    "population-health",
+    "research-data-management",
+    "obiba",
+    "maelstrom"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "Maelstrom Research / McGill University Health Centre",
+      "url": "https://www.maelstrom-research.org/"
+    },
+    {
+      "@type": "schema:Organization",
+      "name": "Epigeny",
+      "url": "https://www.epigeny.io/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "population-health",
+    "genomics",
+    "epidemiology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The de facto open-source platform for biobank and epidemiological cohort data management — production-grade, v5.7.2, actively maintained by Maelstrom Research (McGill) and Epigeny. Deployed in CanPath (Canada's national population cohort), EUCAN-Connect, and SYNCHROS EU federated networks. Covers the full research data lifecycle: multi-source import, harmonisation, derivation, querying, REST API, R integration via Rock, and native DataSHIELD support for federated privacy-preserving analysis. GPL-3.0. GitHub stars (31) understate institutional adoption — Opal is the infrastructure backbone for major multi-country cohort studies. Adopt for any team building biobank infrastructure or federated epidemiological data platforms.",
+  "mach:editorialReviewedAt": "2026-06-02",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/obiba/opal",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://opaldoc.obiba.org",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.canpath.ca",
+      "mach:evidenceType": "adoption",
+      "schema:name": "CanPath — Canada's national population health study, deploys Opal"
+    }
+  ]
+}

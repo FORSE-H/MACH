@@ -1,0 +1,77 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/datashield",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "datashield",
+  "name": "DataSHIELD",
+  "description": "Infrastructure and R package suite enabling non-disclosive federated analysis of sensitive research data across distributed sites. Analysts run statistical analyses simultaneously across multiple data nodes without raw patient data ever leaving each institution — individual-level data is never pooled or transmitted. Uses privacy-by-design principles with automated statistical disclosure control (output checking) to prevent re-identification. The dsBase package (server-side) runs over 12,000 validation tests per release. Built on OBiBa Opal and Molgenis as data node backends. Governed by an advisory board and steering committee based at the University of Liverpool; over a decade of production use with real-world consented data across EU and international research networks. GPL-3.0, R-based client/server architecture.",
+  "url": "https://www.datashield.org",
+  "codeRepository": "https://github.com/datashield/dsBase",
+  "relatedLink": [
+    "https://github.com/datashield/dsBaseClient",
+    "https://github.com/datashield",
+    "https://www.obiba.org/pages/products/opal/"
+  ],
+  "license": "GPL-3.0",
+  "mach:licenseUrl": "https://github.com/datashield/dsBase/blob/master/LICENSE",
+  "mach:licenseVerified": true,
+  "programmingLanguage": [
+    "R",
+    "Java"
+  ],
+  "keywords": [
+    "federated-analysis",
+    "privacy-preserving",
+    "distributed-computing",
+    "statistical-disclosure-control",
+    "population-health",
+    "epidemiology",
+    "r-packages",
+    "biobank",
+    "five-safes"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "University of Liverpool — Department of Public Health Policy and Systems",
+      "url": "https://www.liverpool.ac.uk/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "population-health",
+    "epidemiology",
+    "genomics"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The reference implementation for federated privacy-preserving analysis in European epidemiological and clinical research — over a decade of production use with real-world consented data. Enables simultaneous multi-site analysis without any individual-level data leaving each institution. Automated statistical disclosure control prevents re-identification. dsBase (server-side) ships with 12,000+ validation tests. Governed by an advisory board and steering committee at the University of Liverpool. GPL-3.0. Deployed across major EU research networks (EUCAN-Connect, SYNCHROS) via OBiBa Opal nodes. Adopt for any team requiring federated analysis across distributed sensitive health datasets without data pooling.",
+  "mach:editorialReviewedAt": "2026-06-02",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/datashield/dsBase",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.datashield.org",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/datashield",
+      "mach:evidenceType": "primary-repo",
+      "schema:name": "DataSHIELD GitHub organisation — 84 repositories across R, Python, and Docker"
+    }
+  ]
+}
