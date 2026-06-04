@@ -1,28 +1,37 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@type": "schema:SoftwareApplication",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/open-ecg-digitizer",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
   "identifier": "open-ecg-digitizer",
   "name": "Open-ECG-Digitizer",
-  "description": "Tool for converting scanned or photographed paper ECGs into digital time-series data. Uses a U-Net segmentation model with perspective correction to extract waveforms from images, enabling retrospective digitisation of historical paper ECG archives. Includes a training dataset published on HuggingFace under Apache-2.0.",
+  "description": "Open-source tool for automatically extracting raw time-series voltage data from paper ECG images — scanned or photographed. Uses semantic segmentation to handle perspective distortions, variable image quality, and any subset of the standard 12 leads. Outputs values in microvolts, configurable via YAML. Enables digitisation of historical paper ECG archives for clinical research and AI model training at scale. Published in npj Digital Medicine 2026 (Stenhede et al.). v1.9.3, 87 stars, Python, Akershus University Hospital AIM Lab (Norway). CC BY-SA 4.0.",
   "url": "https://github.com/Ahus-AIM/Open-ECG-Digitizer",
   "codeRepository": "https://github.com/Ahus-AIM/Open-ECG-Digitizer",
-  "license": "LicenseRef-no-license-file",
-  "mach:licenseUrl": null,
-  "mach:licenseVerified": false,
-  "softwareVersion": "1.9.2",
-  "dateModified": "2025-10-01",
+  "relatedLink": [
+    "https://huggingface.co/datasets/Ahus-AIM/Open-ECG-Digitizer",
+    "https://doi.org/10.1038/s41746-025-02327-1"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "mach:licenseUrl": "https://github.com/Ahus-AIM/Open-ECG-Digitizer/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "1.9.3",
+  "dateModified": "2026-06-04",
   "programmingLanguage": [
     "Python"
   ],
-  "applicationCategory": "Medical imaging / ECG digitisation",
   "keywords": [
-    "ECG",
-    "electrocardiogram",
+    "ecg",
     "digitisation",
-    "paper ECG",
-    "U-Net",
+    "paper-ecg",
     "cardiology",
-    "waveform"
+    "time-series",
+    "semantic-segmentation",
+    "clinical-research",
+    "norway",
+    "akershus"
   ],
   "author": [
     {
@@ -31,40 +40,36 @@
       "url": "https://github.com/Ahus-AIM"
     }
   ],
-  "mach:category": "software",
-  "mach:subcategory": "cardiology",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Novel and practically relevant tool for retrospective digitisation of paper ECG archives, validated in a peer-reviewed npj Digital Medicine 2026 paper. 85 stars and active development from a Norwegian university hospital lab. However, the repository has no LICENSE file — the code's legal status is unclear (all-rights-reserved by default). The accompanying training dataset is separately licensed under Apache-2.0 on HuggingFace. Suitable for research evaluation; legal review required before production or redistribution use.",
-  "mach:maturity": "beta",
   "mach:governance": "academic",
+  "mach:maturity": "beta",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
   "mach:clinicalDomain": [
     "cardiology",
-    "medical-imaging"
+    "research"
   ],
-  "mach:deploymentContext": [
-    "research",
-    "hospital"
-  ],
-  "mach:editorialReviewedAt": "2026-05-22",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Practical open tool for digitising historical paper ECG archives — a real bottleneck in cardiology AI research where large historical collections exist only on paper. Uses semantic segmentation with perspective correction; configurable for any 12-lead subset. Peer-reviewed in npj Digital Medicine 2026. 87 stars, versioned releases (v1.9.3 June 2026), institutional backing from Akershus University Hospital AIM Lab. Training dataset separately available on HuggingFace (Apache-2.0). Assess rather than Adopt for two reasons: CC BY-SA 4.0 is a non-standard software licence (Creative Commons discourages CC for code; not OSI-approved; ShareAlike restricts commercial derivative works), and approximately half the codebase is Jupyter notebooks, limiting reuse as a clean Python library. Assess for research pipelines digitising historical ECG collections; verify licence compatibility before embedding in commercial workflows.",
+  "mach:editorialReviewedAt": "2026-06-04",
   "mach:evidence": [
     {
-      "@type": "schema:ScholarlyArticle",
-      "name": "Open-ECG-Digitizer: a deep learning tool for digitising paper electrocardiograms",
-      "url": "https://doi.org/10.1038/s41746-025-02327-1",
-      "mach:evidenceType": "peer-reviewed-paper",
-      "description": "npj Digital Medicine 2026 validation of the U-Net digitisation pipeline"
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Ahus-AIM/Open-ECG-Digitizer",
+      "mach:evidenceType": "primary-repo"
     },
     {
-      "@type": "schema:DataDownload",
-      "name": "Open-ECG-Digitizer training dataset (HuggingFace, Apache-2.0)",
-      "url": "https://huggingface.co/datasets/Ahus-AIM/Open-ECG-Digitizer",
-      "mach:evidenceType": "dataset"
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/s41746-025-02327-1",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Stenhede et al. Digitizing Paper ECGs at Scale: An Open-Source Algorithm for Clinical Research. npj Digital Medicine, 2026."
     },
     {
       "@type": "schema:WebPage",
-      "name": "GitHub release v1.9.2",
-      "url": "https://github.com/Ahus-AIM/Open-ECG-Digitizer/releases/tag/v1.9.2",
-      "mach:evidenceType": "release"
+      "url": "https://huggingface.co/datasets/Ahus-AIM/Open-ECG-Digitizer",
+      "mach:evidenceType": "primary-instance",
+      "schema:name": "Open-ECG-Digitizer training dataset (HuggingFace, Apache-2.0)"
     }
   ]
 }
