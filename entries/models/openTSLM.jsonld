@@ -1,0 +1,85 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/openTSLM",
+  "@type": [
+    "schema:SoftwareApplication",
+    "mach:MLModel"
+  ],
+  "identifier": "openTSLM",
+  "name": "OpenTSLM",
+  "alternateName": [
+    "Open Time Series Language Models",
+    "TSLMs"
+  ],
+  "description": "Family of Time Series Language Models (TSLMs) from Stanford Biodesign for Digital Health (BDHG) that integrate time series as a native modality into pretrained LLMs, enabling natural-language prompting and reasoning over multivariate clinical time series of any length. Supports 12-lead ECG question answering, EEG sleep stage classification, and human activity recognition from accelerometry. Two architecture variants: Soft Prompt (SP) and Flamingo. Available as Llama 3.2 (1B/3B) and Gemma 3 fine-tuned variants on HuggingFace. Accepted at ICML 2026 (Deep Learning / LLM main track). 1,200+ GitHub stars. Real-world adoption: Seattle Children's Hospital adopted OpenTSLM for pediatric ECG analysis toward a cardiac ICU clinical decision-support foundation model. Consortium includes researchers from major frontier AI labs and universities. MIT, Python.",
+  "url": "https://github.com/StanfordBDHG/OpenTSLM",
+  "codeRepository": "https://github.com/StanfordBDHG/OpenTSLM",
+  "relatedLink": [
+    "https://huggingface.co/OpenTSLM",
+    "https://arxiv.org/abs/2510.02410",
+    "https://www.timenet.ai/"
+  ],
+  "license": "MIT",
+  "mach:licenseUrl": "https://github.com/StanfordBDHG/OpenTSLM/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "time-series",
+    "foundation-model",
+    "ecg",
+    "eeg",
+    "multimodal",
+    "llm",
+    "clinical-reasoning",
+    "cardiology",
+    "critical-care",
+    "stanford",
+    "icml"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "Stanford Biodesign for Digital Health (BDHG)",
+      "url": "https://bdhg.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "beta",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "cardiology",
+    "critical-care",
+    "research"
+  ],
+  "mach:weightsLicense": "MIT — same licence as code; weights available on HuggingFace under OpenTSLM organisation",
+  "mach:trainingDataSummary": "Curriculum learning across five progressive stages on: TSQA, M4 (forecasting), HAR (human activity recognition), SleepEDF (EEG sleep staging), and ECG QA datasets. No proprietary clinical data in base training.",
+  "mach:intendedUse": "Foundation model for reasoning over multivariate medical time series and text — intended for researchers and developers building clinical decision-support tools. Not validated for direct clinical deployment. Base models require task-specific fine-tuning and independent clinical validation.",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Stanford BDHG's time series language model family — the first open model capable of native multimodal reasoning over clinical time series (ECG, EEG, accelerometry) and text. Accepted at ICML 2026 Deep Learning/LLM main track. MIT license, 1,200+ GitHub stars, weights on HuggingFace (Llama 3.2 and Gemma 3 variants). Real-world adoption: Seattle Children's Hospital is using OpenTSLM for pediatric ECG analysis toward a cardiac ICU foundation model. Assess rather than Adopt: no versioned releases yet, explicitly described as a first step toward frontier TSLMs rather than a production-ready clinical tool, and downstream clinical use requires independent validation. Essential reference model for any team working on clinical time series AI.",
+  "mach:editorialReviewedAt": "2026-06-03",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/StanfordBDHG/OpenTSLM",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2510.02410",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Time Series Language Models for Reasoning over Multivariate Medical Text- and Time-Series Data. ICML 2026."
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/OpenTSLM",
+      "mach:evidenceType": "primary-instance"
+    }
+  ]
+}
