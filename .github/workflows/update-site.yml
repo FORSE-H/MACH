@@ -10,6 +10,10 @@ on:
       - 'data/taxonomy/categories.yaml'
       - 'index.html'
 
+concurrency:
+  group: update-site
+  cancel-in-progress: true
+
 jobs:
   update-site:
     name: Regenerate entries in index.html
