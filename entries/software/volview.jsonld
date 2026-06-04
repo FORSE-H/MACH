@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/volview",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "volview",
+  "name": "VolView",
+  "description": "Open-source browser-based 3D radiological viewer for DICOM data with interactive cinematic volume rendering. All processing runs locally in the browser — no software installation required and no data leaves the user's machine. Supports drag-and-drop DICOM loading, three cinematic rendering modes with lighting controls, annotation tools (painting, measuring, cropping), and GPU acceleration with CPU fallback. Customisable for commercial and academic deployments. Live instance at volview.kitware.app. Published at MICCAI 2022 AE-CAI Workshop. NIH-funded (NIBIB, NIGMS, NCI, NINDS). v4.4.0, 283 stars, TypeScript/Vue, Apache-2.0. Kitware.",
+  "url": "https://volview.kitware.app/",
+  "codeRepository": "https://github.com/Kitware/VolView",
+  "license": "Apache-2.0",
+  "mach:licenseUrl": "https://github.com/Kitware/VolView/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "4.4.0",
+  "dateModified": "2025-07-31",
+  "programmingLanguage": [
+    "TypeScript",
+    "Vue"
+  ],
+  "keywords": [
+    "dicom",
+    "volume-rendering",
+    "radiology",
+    "medical-imaging",
+    "browser-based",
+    "cinematic-rendering",
+    "vtk",
+    "kitware",
+    "3d-viewer",
+    "webgl"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "Kitware",
+      "url": "https://www.kitware.com/"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "cloud",
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "radiology",
+    "research"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Browser-native 3D DICOM viewer from Kitware (VTK/ITK/ParaView lineage) with a clear differentiator: cinematic volume rendering running entirely client-side with no data upload, no installation, and no server dependency. NIH-funded, MICCAI 2022 paper, v4.4.0, Apache-2.0. Assess rather than Adopt: 283 stars and DICOM-only format support (no NIfTI/NRRD), which limits it to radiology workflows vs. broader neuroimaging use cases covered by NiiVue or 3D Slicer (both already in MACH). The zero-install local-processing model is a strong fit for privacy-sensitive clinical environments. Adopt OHIF Viewer for full-featured DICOM worklist and annotation; Assess VolView for lightweight 3D rendering without infrastructure.",
+  "mach:editorialReviewedAt": "2026-06-04",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Kitware/VolView",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://volview.kitware.app/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.5281/zenodo.248073292",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Interactive, in-browser cinematic volume rendering of medical images. MICCAI AE-CAI Workshop, 2022."
+    }
+  ]
+}
