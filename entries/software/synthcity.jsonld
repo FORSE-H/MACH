@@ -1,0 +1,70 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/synthcity",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "synthcity",
+  "name": "SynthCity",
+  "description": "Open-source Python library for generating and evaluating synthetic tabular data across multiple modalities — tabular, time series, survival analysis, and images. Pluginable architecture with 20+ generative models including GAN-based (CTGAN, PATEGAN, DP-GAN, SurvivalGAN), VAE-based (TVAE, SurvAE), diffusion (DDPM), LLM-based (GReaT), and time-series methods (TimeGAN, TimeVAE). Includes comprehensive evaluation metrics for privacy, fidelity, and utility. Directly applicable to clinical trial data augmentation, privacy-preserving dataset sharing, and synthetic EHR generation. NeurIPS 2023 paper. pip-installable. 664 stars. Apache-2.0. van der Schaar Lab, University of Cambridge.",
+  "url": "https://github.com/vanderschaarlab/synthcity",
+  "codeRepository": "https://github.com/vanderschaarlab/synthcity",
+  "license": "Apache-2.0",
+  "mach:licenseUrl": "https://github.com/vanderschaarlab/synthcity/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "0.2.12",
+  "dateModified": "2025-05-08",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "synthetic-data",
+    "privacy-preserving",
+    "tabular-data",
+    "time-series",
+    "survival-analysis",
+    "clinical-trials",
+    "gan",
+    "vae",
+    "diffusion",
+    "data-augmentation",
+    "ehr",
+    "van-der-schaar"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "van der Schaar Lab, University of Cambridge",
+      "url": "https://www.vanderschaar-lab.com/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "beta",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "clinical-trials",
+    "epidemiology"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The most comprehensive open-source library for synthetic tabular data generation — 20+ generative models covering GANs, VAEs, diffusion, and LLM-based methods, with built-in evaluation metrics for privacy, fidelity, and utility. NeurIPS 2023 paper. 664 stars, Apache-2.0, pip-installable. Directly relevant for healthcare teams needing privacy-preserving synthetic EHR data, clinical trial augmentation, or synthetic datasets for model testing. Assess rather than Adopt: pre-1.0 (v0.2.12), no formal clinical validation or regulatory clearance, and does not handle missing data internally (requires separate imputation). Assess for any pipeline requiring synthetic tabular health data — particularly useful where real patient data cannot be shared.",
+  "mach:editorialReviewedAt": "2026-06-04",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/vanderschaarlab/synthcity",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2301.07573",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Synthcity: Facilitating Innovative Use Cases of Synthetic Data in Different Data Modalities. NeurIPS 2023."
+    }
+  ]
+}
