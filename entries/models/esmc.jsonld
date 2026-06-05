@@ -1,0 +1,88 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/esmc",
+  "@type": [
+    "schema:SoftwareApplication",
+    "mach:MLModel"
+  ],
+  "identifier": "esmc",
+  "name": "ESMC",
+  "alternateName": [
+    "ESM Cambrian",
+    "EvolutionaryScale ESMC",
+    "ESM3"
+  ],
+  "description": "State-of-the-art protein language model from EvolutionaryScale (Biohub) trained on ~2.8 billion protein sequences. Generates embeddings that capture structural and functional relationships across atomic to evolutionary scales. Serves as the foundational model for ESMFold2, a diffusion-based structure prediction system that matches or exceeds AlphaFold3 performance. ESMFold2 validated on five therapeutic targets, producing de novo minibinders and antibody-derived scFvs with nanomolar affinities and high hit rates. 160K+ HuggingFace downloads. MIT, v3.2.2, 2.7k GitHub stars. Candido et al. 2026.",
+  "url": "https://github.com/evolutionaryscale/esm",
+  "codeRepository": "https://github.com/evolutionaryscale/esm",
+  "relatedLink": [
+    "https://huggingface.co/biohub/ESMC-6B",
+    "https://huggingface.co/biohub/ESMFold2",
+    "https://biohub.ai/papers/esm_protein.pdf"
+  ],
+  "license": "MIT",
+  "mach:licenseUrl": "https://github.com/evolutionaryscale/esm/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "version": "3.2.2",
+  "dateModified": "2025-09-22",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "protein",
+    "protein-language-model",
+    "structure-prediction",
+    "drug-discovery",
+    "foundation-model",
+    "esmfold",
+    "biohub",
+    "evolutionary-scale",
+    "antibody",
+    "therapeutic"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "EvolutionaryScale / Biohub",
+      "url": "https://www.evolutionaryscale.ai/"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:maturity": "production",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "cloud",
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "drug-discovery",
+    "genomics",
+    "research",
+    "oncology"
+  ],
+  "mach:weightsLicense": "MIT — weights available on HuggingFace under biohub organisation (ESMC-6B, ESMFold2)",
+  "mach:trainingDataSummary": "~2.8 billion protein sequences from evolutionary databases. No proprietary clinical data.",
+  "mach:intendedUse": "Foundation model for protein representation learning and structure prediction. Intended for researchers and developers in drug discovery, protein engineering, and computational biology. Not a clinical diagnostic tool.",
+  "mach:aiActRiskClass": "minimal-risk",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "EvolutionaryScale's leading protein language model — 2.7k stars, MIT, 160K+ HuggingFace downloads, and the foundation for ESMFold2 which matches or exceeds AlphaFold3 on structure prediction. Validated on five therapeutic targets with nanomolar-affinity hits for minibinders and scFvs. Candido et al. 2026 paper. Assess rather than Adopt: EvolutionaryScale is a commercial entity (vendor-led governance), and ESMC is a protein research tool rather than a directly clinical application — downstream drug discovery use requires independent validation. Essential reference model for any team working on protein structure, drug discovery, or therapeutic design.",
+  "mach:editorialReviewedAt": "2026-06-05",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/evolutionaryscale/esm",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/biohub/ESMC-6B",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://biohub.ai/papers/esm_protein.pdf",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Candido et al. ESM: Evolutionary Scale Modeling of Protein Structure and Function. 2026."
+    }
+  ]
+}
