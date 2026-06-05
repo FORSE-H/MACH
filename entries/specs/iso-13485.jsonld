@@ -1,0 +1,64 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/iso-13485",
+  "@type": [
+    "schema:TechArticle",
+    "mach:Spec"
+  ],
+  "identifier": "iso-13485",
+  "name": "ISO 13485:2016",
+  "alternateName": [
+    "ISO 13485",
+    "Medical devices — Quality management systems — Requirements for regulatory purposes"
+  ],
+  "description": "The international quality management system (QMS) standard for organisations in the medical device lifecycle — design, production, storage, distribution, installation, and servicing. Harmonised with EU MDR (2017/745) and IVDR (2017/746); compliance is a prerequisite for CE marking. Recognised by regulatory bodies in the EU, Canada (MDSAP), Australia (TGA), and Japan (JPAL). Covers document control, design and development controls, purchasing controls, production controls, and post-market surveillance. Applies to manufacturers of hardware, software, and AI-enabled medical devices. Published by ISO. Paid standard — purchase required.",
+  "url": "https://www.iso.org/standard/59752.html",
+  "license": "LicenseRef-ISO-copyright",
+  "mach:licenseUrl": "https://www.iso.org/standard/59752.html",
+  "mach:licenseVerified": true,
+  "mach:accessModel": "paid",
+  "mach:specPrice": "Approx. CHF 158 from ISO; available via national standards bodies (BSI, DIN, NEN, etc.)",
+  "dateModified": "2016-03-01",
+  "keywords": [
+    "quality-management",
+    "qms",
+    "medical-devices",
+    "samd",
+    "mdr",
+    "ivdr",
+    "ce-marking",
+    "mdsap",
+    "iso",
+    "regulatory"
+  ],
+  "copyrightHolder": {
+    "@type": "schema:Organization",
+    "name": "International Organization for Standardization (ISO)",
+    "url": "https://www.iso.org/"
+  },
+  "mach:governance": "government",
+  "mach:category": "specs",
+  "mach:maturity": "production",
+  "mach:clinicalDomain": [
+    "medical-devices",
+    "primary-care",
+    "secondary-care",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The foundational QMS standard for any organisation manufacturing medical devices — hardware, SaMD, or AI/ML systems. Harmonised with EU MDR/IVDR and recognised across MDSAP participating jurisdictions (EU, Canada, Australia, Japan, Brazil). Compliance is a prerequisite for CE marking and market access in most regulated markets. Applies to the full device lifecycle including design, development, and post-market surveillance. Note: this is a paid ISO standard (approx. CHF 158); unlike open interoperability standards such as FHIR or DICOM it is not freely available. Adopt means compliance is mandatory for any team building regulated medical device software — not that the standard is open access.",
+  "mach:editorialReviewedAt": "2026-06-05",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.iso.org/standard/59752.html",
+      "mach:evidenceType": "specification"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
+      "mach:evidenceType": "regulatory-reference",
+      "schema:name": "EU MDR 2017/745 — harmonised with ISO 13485 for QMS compliance"
+    }
+  ]
+}

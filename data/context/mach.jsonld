@@ -66,6 +66,9 @@
     "mach:swhid":               { "@id": "mach:swhid" },
 
     "mach:licenseUrl":          { "@id": "mach:licenseUrl" },
-    "mach:licenseVerified":     { "@id": "mach:licenseVerified" }
+    "mach:licenseVerified":     { "@id": "mach:licenseVerified" },
+
+    "mach:accessModel":         { "@id": "mach:accessModel" },
+    "mach:specPrice":           { "@id": "mach:specPrice" }
   }
 }

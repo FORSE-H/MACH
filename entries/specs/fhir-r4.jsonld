@@ -28,6 +28,7 @@
     "@type": "Organization",
     "name": "Health Level Seven International (HL7)"
   },
+  "mach:accessModel": "open",
   "mach:governance": "foundation",
   "mach:foundation": "Health Level Seven International (HL7)",
   "mach:category": "specs",

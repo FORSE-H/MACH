@@ -1,0 +1,75 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/iso-14971",
+  "@type": [
+    "schema:TechArticle",
+    "mach:Spec"
+  ],
+  "identifier": "iso-14971",
+  "name": "ISO 14971:2019",
+  "alternateName": [
+    "ISO 14971",
+    "Medical devices — Application of risk management to medical devices"
+  ],
+  "description": "The international standard for risk management of medical devices, including software as a medical device (SaMD) and AI/ML-enabled devices. Defines a systematic process for identifying hazards, estimating and evaluating risks, controlling risks, and monitoring effectiveness. Mandatory for CE marking under EU MDR (2017/745) and IVDR (2017/746), and aligned with FDA guidance on device risk management. Applies to hardware, software, and AI systems that meet the definition of a medical device. Accompanied by ISO/TR 24971:2020 (implementation guidance). Published by ISO. Paid standard — purchase required.",
+  "url": "https://www.iso.org/standard/72704.html",
+  "relatedLink": [
+    "https://www.iso.org/standard/80536.html"
+  ],
+  "license": "LicenseRef-ISO-copyright",
+  "mach:licenseUrl": "https://www.iso.org/standard/72704.html",
+  "mach:licenseVerified": true,
+  "mach:accessModel": "paid",
+  "mach:specPrice": "Approx. CHF 148 from ISO; available via national standards bodies (BSI, DIN, NEN, etc.)",
+  "dateModified": "2019-12-01",
+  "keywords": [
+    "risk-management",
+    "medical-devices",
+    "samd",
+    "ai-ml",
+    "mdr",
+    "ivdr",
+    "fda",
+    "ce-marking",
+    "patient-safety",
+    "iso"
+  ],
+  "copyrightHolder": {
+    "@type": "schema:Organization",
+    "name": "International Organization for Standardization (ISO)",
+    "url": "https://www.iso.org/"
+  },
+  "mach:governance": "government",
+  "mach:category": "specs",
+  "mach:maturity": "production",
+  "mach:accessModel": "paid",
+  "mach:clinicalDomain": [
+    "medical-devices",
+    "research",
+    "oncology",
+    "primary-care",
+    "secondary-care"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The mandatory risk management standard for any medical device — hardware, SaMD, or AI/ML system — seeking CE marking under EU MDR/IVDR or FDA clearance/approval. Defines the full risk management lifecycle: hazard identification, risk estimation, risk evaluation, risk controls, and post-market monitoring. Non-compliance blocks regulatory approval. Note: this is a paid ISO standard (approx. CHF 148); unlike FHIR or DICOM it is not freely available. Adopt means compliance is mandatory for regulated medical device development — not that the standard document is open access. ISO/TR 24971:2020 provides free implementation guidance excerpts.",
+  "mach:editorialReviewedAt": "2026-06-05",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.iso.org/standard/72704.html",
+      "mach:evidenceType": "specification"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.fda.gov/medical-devices/quality-system-qs-regulationmedical-device-good-manufacturing-practices/risk-management",
+      "mach:evidenceType": "regulatory-reference",
+      "schema:name": "FDA — Risk Management for Medical Devices"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
+      "mach:evidenceType": "regulatory-reference",
+      "schema:name": "EU MDR 2017/745 — references ISO 14971 for risk management compliance"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/iso-15189",
+  "@type": [
+    "schema:TechArticle",
+    "mach:Spec"
+  ],
+  "identifier": "iso-15189",
+  "name": "ISO 15189:2022",
+  "alternateName": [
+    "ISO 15189",
+    "Medical laboratories — Requirements for quality and competence"
+  ],
+  "description": "The international accreditation standard for medical laboratories, defining requirements for quality and competence in clinical testing. Covers personnel competence, equipment validation, method verification, result reporting, and patient data management. Used as the basis for laboratory accreditation by national accreditation bodies (UKAS, DAkkS, RvA, COFRAC, etc.) in over 100 countries. The 2022 revision adds explicit requirements for laboratory information systems (LIS) and digital result reporting, making it directly relevant to teams building clinical laboratory software and AI diagnostics. Paid standard — purchase required from ISO or national body.",
+  "url": "https://www.iso.org/standard/76677.html",
+  "license": "LicenseRef-ISO-copyright",
+  "mach:licenseUrl": "https://www.iso.org/standard/76677.html",
+  "mach:licenseVerified": true,
+  "mach:accessModel": "paid",
+  "mach:specPrice": "Approx. CHF 178 from ISO; available via national standards bodies (BSI, DIN, NEN, etc.)",
+  "dateModified": "2022-12-01",
+  "keywords": [
+    "medical-laboratory",
+    "accreditation",
+    "quality-management",
+    "clinical-testing",
+    "lis",
+    "diagnostics",
+    "iso",
+    "pathology",
+    "point-of-care"
+  ],
+  "copyrightHolder": {
+    "@type": "schema:Organization",
+    "name": "International Organization for Standardization (ISO)",
+    "url": "https://www.iso.org/"
+  },
+  "mach:governance": "government",
+  "mach:category": "specs",
+  "mach:maturity": "production",
+  "mach:clinicalDomain": [
+    "pathology",
+    "genomics",
+    "oncology",
+    "primary-care",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The universal accreditation standard for medical laboratories — required for accreditation in 100+ countries via national bodies (UKAS, DAkkS, RvA, etc.). The 2022 revision explicitly addresses laboratory information systems and digital result reporting, making it directly relevant to teams building LIS software, AI diagnostics, or clinical genomics pipelines operating within accredited labs. Non-compliance prevents laboratory accreditation and restricts clinical use of results. Note: paid ISO standard (approx. CHF 178) — not freely available unlike open standards such as DICOM or openEHR. Adopt means accreditation compliance is mandatory for clinical laboratory operation — not that the document is open access.",
+  "mach:editorialReviewedAt": "2026-06-05",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.iso.org/standard/76677.html",
+      "mach:evidenceType": "specification"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ukas.com/accreditation/accreditation-by-standard/iso-15189/",
+      "mach:evidenceType": "adoption",
+      "schema:name": "UKAS — ISO 15189 accreditation programme (UK national accreditation body)"
+    }
+  ]
+}
