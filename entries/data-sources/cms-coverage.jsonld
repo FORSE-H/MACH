@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/cms-coverage",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "cms-coverage",
+  "name": "CMS Medicare Coverage Database",
+  "alternateName": [
+    "CMS MCD",
+    "Medicare Coverage Database",
+    "LCD",
+    "NCD"
+  ],
+  "description": "The authoritative US federal database of Medicare coverage determinations — National Coverage Determinations (NCDs) and Local Coverage Determinations (LCDs) — maintained by the Centers for Medicare and Medicaid Services (CMS). NCDs are nationwide policies determining whether Medicare covers a specific item or service; LCDs are regional contractor-level decisions. Covers 100+ active NCDs and 1,000+ LCDs across medical procedures, diagnostic tests, durable medical equipment, drugs, and devices. Available via the CMS Coverage Database web interface and CMS open data APIs (data.cms.gov). US Government work — public domain. Used in clinical decision support, prior authorisation automation, and AI agent workflows querying Medicare reimbursement policy in plain language.",
+  "url": "https://www.cms.gov/medicare-coverage-database/",
+  "relatedLink": [
+    "https://data.cms.gov/",
+    "https://www.cms.gov/medicare/coverage/"
+  ],
+  "license": "LicenseRef-US-Government-Public-Domain",
+  "mach:licenseUrl": "https://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/CMSNondiscriminationNotice",
+  "mach:licenseVerified": false,
+  "mach:accessModel": "open",
+  "keywords": [
+    "medicare",
+    "coverage-determination",
+    "ncd",
+    "lcd",
+    "prior-authorisation",
+    "us-health-policy",
+    "cms",
+    "reimbursement",
+    "clinical-decision-support",
+    "health-policy"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "Centers for Medicare and Medicaid Services (CMS)",
+      "url": "https://www.cms.gov/"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:maturity": "production",
+  "mach:category": "data-sources",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "primary-care",
+    "secondary-care",
+    "oncology",
+    "research"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The authoritative source for US Medicare coverage policy — the ground truth for whether a procedure, diagnostic, drug, or device is reimbursable under Medicare. NCDs and LCDs are US Government works (public domain). Directly relevant for clinical decision support systems, prior authorisation automation, and AI agents answering coverage questions for US healthcare workflows. Used by Climb in its Databricks Marketplace MCP connector for plain-language Medicare coverage queries. Adopt for any team building US clinical AI tools where reimbursement eligibility is a decision factor.",
+  "mach:editorialReviewedAt": "2026-06-12",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.cms.gov/medicare-coverage-database/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://data.cms.gov/",
+      "mach:evidenceType": "documentation",
+      "schema:name": "CMS Open Data Portal"
+    }
+  ]
+}

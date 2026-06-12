@@ -1,0 +1,75 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/bioportal",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "bioportal",
+  "name": "NCBO BioPortal",
+  "alternateName": [
+    "BioPortal",
+    "National Center for Biomedical Ontology BioPortal"
+  ],
+  "description": "The world's largest repository of biomedical ontologies and terminologies, maintained by the National Center for Biomedical Ontology (NCBO) at Stanford University. Hosts 1,000+ ontologies including OBO Foundry standards (GO, CHEBI, HP, MONDO, UBERON, OBI), clinical terminologies (SNOMED CT, LOINC, RxNorm, ICD), and disease ontologies. Free REST API (data.bioontology.org) provides ontology search, concept lookup, semantic annotation of text, cross-ontology mapping, and ontology recommender. API key required (free registration). Widely used in biomedical NLP, clinical terminology lookup, and knowledge graph construction. NIH-funded (NCBO is an NIH National Center). Used by Elicit, Climb, and major clinical AI platforms as the ontology resolution layer.",
+  "url": "https://bioportal.bioontology.org/",
+  "relatedLink": [
+    "https://data.bioontology.org/",
+    "https://github.com/ncbo",
+    "https://www.bioontology.org/"
+  ],
+  "license": "LicenseRef-NCBO-terms",
+  "mach:licenseUrl": "https://bioportal.bioontology.org/license",
+  "mach:licenseVerified": false,
+  "mach:accessModel": "registration-required",
+  "keywords": [
+    "ontology",
+    "biomedical-ontology",
+    "snomed-ct",
+    "loinc",
+    "rxnorm",
+    "obo-foundry",
+    "terminology",
+    "annotation",
+    "knowledge-graph",
+    "ncbo",
+    "stanford",
+    "nih"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "National Center for Biomedical Ontology (NCBO), Stanford University",
+      "url": "https://www.bioontology.org/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "production",
+  "mach:category": "data-sources",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "genomics",
+    "oncology",
+    "primary-care",
+    "drug-discovery"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The authoritative repository for biomedical ontologies — 1,000+ terminologies including OBO Foundry standards, SNOMED CT, LOINC, RxNorm, and ICD. NIH-funded, Stanford-maintained, production REST API. Used as the ontology resolution layer by major clinical AI platforms including Elicit and Climb. Free API key required (registration, no charge). Adopt for any team doing clinical NLP, concept normalisation, entity linking, or knowledge graph construction — BioPortal provides the fastest path to cross-ontology concept lookup and semantic text annotation without building terminology infrastructure from scratch.",
+  "mach:editorialReviewedAt": "2026-06-12",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://bioportal.bioontology.org/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://data.bioontology.org/",
+      "mach:evidenceType": "documentation",
+      "schema:name": "BioPortal REST API"
+    }
+  ]
+}
