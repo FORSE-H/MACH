@@ -1,0 +1,74 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/pubmed",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "pubmed",
+  "name": "PubMed",
+  "alternateName": [
+    "MEDLINE",
+    "PubMed Central",
+    "PMC",
+    "NCBI PubMed"
+  ],
+  "description": "The authoritative biomedical and life sciences literature index maintained by the US National Library of Medicine (NLM/NCBI). Covers 35M+ citations from MEDLINE, PubMed Central (PMC), and in-process records. Structured with MeSH (Medical Subject Headings) controlled vocabulary enabling precise clinical and biomedical retrieval. Free E-utilities API (eutils.ncbi.nlm.nih.gov) with no authentication required for basic access; API key available for higher rate limits. PMC provides open-access full text for 4M+ articles. The primary source for verifying peer-reviewed biomedical literature — gold standard for discovering papers associated with clinical software, AI models, and healthcare tools. Used by Elicit, Europe PMC, and virtually every biomedical literature discovery platform as the foundational data source.",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/",
+  "relatedLink": [
+    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+    "https://www.ncbi.nlm.nih.gov/pmc/",
+    "https://www.nlm.nih.gov/bsd/mms/medlineelements.html"
+  ],
+  "license": "LicenseRef-NLM-freely-reusable",
+  "mach:licenseUrl": "https://www.nlm.nih.gov/databases/download/terms_and_conditions.html",
+  "mach:licenseVerified": true,
+  "keywords": [
+    "biomedical-literature",
+    "medline",
+    "mesh",
+    "citations",
+    "nlm",
+    "ncbi",
+    "clinical-research",
+    "open-access",
+    "e-utilities",
+    "pubmed-central"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "US National Library of Medicine (NLM/NCBI)",
+      "url": "https://www.nlm.nih.gov/"
+    }
+  ],
+  "mach:governance": "government",
+  "mach:maturity": "production",
+  "mach:category": "data-sources",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "primary-care",
+    "oncology",
+    "genomics",
+    "epidemiology"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The gold-standard biomedical literature index — 35M+ citations, MeSH controlled vocabulary, free E-utilities API, maintained by NLM/NCBI. The primary source for verifying and discovering peer-reviewed papers associated with clinical tools, AI models, and healthcare software. MeSH terms enable clinical precision that general academic indexes lack. PMC provides open-access full text for 4M+ articles. Adopt as the primary paper verification source for any system cataloging biomedical research software — use alongside OpenAlex (which adds citation graph, ROR affiliations, and funder metadata that PubMed does not provide).",
+  "mach:editorialReviewedAt": "2026-06-12",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "mach:evidenceType": "documentation",
+      "schema:name": "NCBI E-utilities API"
+    }
+  ]
+}

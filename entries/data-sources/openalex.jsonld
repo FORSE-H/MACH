@@ -1,0 +1,71 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/openalex",
+  "@type": [
+    "schema:DataCatalog",
+    "mach:DataSource"
+  ],
+  "identifier": "openalex",
+  "name": "OpenAlex",
+  "description": "Free, fully open academic knowledge graph covering 250M+ scholarly works, 250M+ authors, 100K+ institutions (with ROR IDs), and 30K+ journals. Successor to Microsoft Academic Graph (MAG), maintained by OurResearch (non-profit). CC0 data licence — bulk snapshots freely downloadable from S3. REST API requires no authentication (polite pool with email in User-Agent header). Covers all academic disciplines. Key signals for research software discovery: citation counts, author institution affiliations (ROR-resolved), funder metadata, open-access status, and concept/topic tags. Used by MACH as the primary scholarly enrichment source for governance inference (ROR IDs), citation scoring, and linking catalog entries to their foundational papers.",
+  "url": "https://openalex.org",
+  "codeRepository": "https://github.com/ourresearch/openalex-api-tutorials",
+  "relatedLink": [
+    "https://api.openalex.org",
+    "https://docs.openalex.org"
+  ],
+  "license": "CC0-1.0",
+  "mach:licenseUrl": "https://docs.openalex.org/license",
+  "mach:licenseVerified": true,
+  "keywords": [
+    "academic-knowledge-graph",
+    "scholarly-literature",
+    "citation-graph",
+    "ror",
+    "open-access",
+    "rest-api",
+    "bibliometrics",
+    "research-software",
+    "pubmed",
+    "crossref"
+  ],
+  "author": [
+    {
+      "@type": "schema:Organization",
+      "name": "OurResearch",
+      "url": "https://ourresearch.org/"
+    }
+  ],
+  "mach:governance": "foundation",
+  "mach:maturity": "production",
+  "mach:category": "data-sources",
+  "mach:deploymentContext": [
+    "cloud"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "epidemiology",
+    "genomics"
+  ],
+  "mach:judgement": "Adopt",
+  "mach:judgementReason": "The definitive open academic knowledge graph — 250M+ works, CC0, free REST API, no authentication required. Unique value for research software cataloging: ROR institution IDs on author affiliations (enabling governance inference), funder metadata (grant → institution → governance), citation counts (adoption signal), and open-access PDF links. Successor to Microsoft Academic Graph with better coverage and open licensing. Used by Elicit, Semantic Scholar, and major academic discovery platforms as a data layer. Adopt as the primary scholarly enrichment source for any system linking research software to its academic literature.",
+  "mach:editorialReviewedAt": "2026-06-12",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://api.openalex.org",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://docs.openalex.org",
+      "mach:evidenceType": "documentation"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2205.01833",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Priem et al. OpenAlex: A fully-open index of the global research system. arXiv 2205.01833."
+    }
+  ]
+}
