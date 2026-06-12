@@ -35,6 +35,7 @@
     "name": "W3C / FAIRDataTeam",
     "url": "https://www.w3.org"
   },
+  "mach:accessModel": "open",
   "mach:governance": "community",
   "mach:maturity": "beta",
   "mach:category": "specs",

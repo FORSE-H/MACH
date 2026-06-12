@@ -35,6 +35,7 @@
     "name": "hitontology",
     "url": "https://hitontology.eu/"
   },
+  "mach:accessModel": "open",
   "mach:governance": "academic",
   "mach:maturity": "production",
   "mach:category": "specs",

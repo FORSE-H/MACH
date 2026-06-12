@@ -35,6 +35,7 @@
       "url": "https://opensource.unicc.org/nursecitizendeveloper"
     }
   ],
+  "mach:accessModel": "open",
   "mach:governance": "community",
   "mach:maturity": "beta",
   "mach:category": "specs",

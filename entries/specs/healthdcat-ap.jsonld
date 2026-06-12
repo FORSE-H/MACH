@@ -35,6 +35,7 @@
     "name": "European Commission, DG SANTE",
     "url": "https://health.ec.europa.eu"
   },
+  "mach:accessModel": "open",
   "mach:governance": "government",
   "mach:maturity": "production",
   "mach:category": "specs",

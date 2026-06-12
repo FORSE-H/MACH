@@ -31,6 +31,7 @@
     "name": "National Electrical Manufacturers Association (NEMA)",
     "url": "https://www.nema.org"
   },
+  "mach:accessModel": "open",
   "mach:governance": "foundation",
   "mach:category": "specs",
   "mach:maturity": "production",

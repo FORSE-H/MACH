@@ -37,6 +37,7 @@
     "@type": "Organization",
     "name": "openEHR Foundation"
   },
+  "mach:accessModel": "open",
   "mach:governance": "foundation",
   "mach:foundation": "openEHR Foundation (non-profit, est. 2003)",
   "mach:category": "specs",

@@ -39,6 +39,7 @@
     "name": "Clinical Data Interchange Standards Consortium (CDISC)",
     "url": "https://www.cdisc.org"
   },
+  "mach:accessModel": "open",
   "mach:governance": "foundation",
   "mach:foundation": "Clinical Data Interchange Standards Consortium (CDISC)",
   "mach:category": "specs",

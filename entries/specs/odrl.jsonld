@@ -27,6 +27,7 @@
     "@type": "Organization",
     "name": "World Wide Web Consortium (W3C)"
   },
+  "mach:accessModel": "open",
   "mach:governance": "foundation",
   "mach:foundation": "World Wide Web Consortium (W3C)",
   "mach:category": "specs",
