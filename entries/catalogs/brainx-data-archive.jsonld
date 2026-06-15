@@ -1,0 +1,56 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/catalogs/brainx-data-archive",
+  "@type": [
+    "schema:DataCatalog"
+  ],
+  "identifier": "brainx-data-archive",
+  "name": "BrainX Community Data Archive",
+  "alternateName": [
+    "BrainX Data Archive",
+    "brainxai.org/data"
+  ],
+  "description": "Clinician-curated discovery archive of links to open healthcare and biomedical datasets, maintained by the BrainX Community — a ~5,000-member international group for AI in healthcare co-founded by Dr. Frank Papay and Dr. Piyush Mathur. The archive does not host data itself; it organises and links out to datasets held on Hugging Face, PhysioNet, Zenodo, TCIA, and institutional repositories, spanning medical imaging (CT, MRI, X-ray, ultrasound, pathology), clinical notes and EHR data, surgical video, genomics, and wearable-sensor data across many clinical specialties. Notable surfaced items include HC4 (a 65-billion-token healthcare pretraining corpus), a Synthea-generated synthetic cohort of ~575,000 patients with complete histories, and MIMIC-IV-Ext clinical time-series collections. The archive page is publicly browsable without registration; licences and access conditions vary per linked dataset and are governed by each host repository rather than by BrainX.",
+  "url": "https://brainxai.org/data/",
+  "license": "LicenseRef-no-license-file",
+  "mach:licenseVerified": false,
+  "keywords": [
+    "healthcare-ai",
+    "medical-datasets",
+    "dataset-discovery",
+    "data-catalogue",
+    "medical-imaging",
+    "ehr",
+    "clinical-notes",
+    "genomics",
+    "synthetic-data",
+    "open-data",
+    "community-curated"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "BrainX Community",
+    "url": "https://brainxai.org/"
+  },
+  "mach:governance": "community",
+  "mach:maturity": "production",
+  "mach:category": "catalogs",
+  "mach:deploymentContext": [
+    "cloud-only"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "A clinician-curated discovery layer that surfaces open healthcare and biomedical datasets across many specialties, run by an active ~5,000-member community of practising clinicians and researchers. Its value is the human curation and the unique items it foregrounds — the HC4 65B-token healthcare pretraining corpus, a ~575,000-patient Synthea synthetic cohort, and MIMIC-IV-Ext clinical time-series sets — alongside pointers to the major open repositories. Marked Assess rather than Adopt for three reasons: it hosts no data and exposes no API or structured, harvestable metadata (it is a curated web page, not a machine-actionable catalog); it asserts no catalog-level licence, with terms varying per linked dataset and governed entirely by the host repositories; and there is no per-dataset licence or quality discipline carried at the archive level. It is best treated as a 'where to find more' starting point for teams building healthcare AI, not as a substitute for direct, evidence-backed dataset entries — datasets it links (e.g. TCIA, PhysioNet collections) should still be cataloged individually where they merit it.",
+  "mach:editorialReviewedAt": "2026-06-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://brainxai.org/data/",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://brainxai.org/",
+      "mach:evidenceType": "documentation"
+    }
+  ]
+}

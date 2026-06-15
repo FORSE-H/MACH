@@ -1,0 +1,75 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/medvidbench",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "medvidbench",
+  "name": "MedVidBench",
+  "alternateName": [
+    "Medical Video Understanding Benchmark"
+  ],
+  "description": "Large-scale benchmark for heterogeneous medical and surgical video understanding, comprising 531,850 video-instruction pairs assembled from 8 source datasets (AVOS, CholecT50, CholecTrack20, Cholec80-CVS, CoPESD, EgoSurgery, JIGSAWS, NurViD) and spanning video-, segment-, and frame-level tasks: temporal action localization, spatiotemporal grounding, video summarization, region captioning, and surgical skill / Critical View of Safety (CVS) assessment. Released alongside the MedGRPO model by Northeastern University and United Imaging Intelligence (CVPR 2026). The public Hugging Face distribution provides a ~18 GB archive (103,742 video frames; 6,245 test samples across 8 surgical-video tasks) downloadable as ZIP or via Git LFS. Licensed CC-BY-NC-SA-4.0; individual source datasets retain their own upstream licences and must be complied with separately.",
+  "url": "https://huggingface.co/datasets/UII-AI/MedVidBench",
+  "relatedLink": [
+    "https://arxiv.org/abs/2512.06581",
+    "https://yuhaosu.github.io/MedGRPO/",
+    "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "keywords": [
+    "medical-video",
+    "surgical-video",
+    "benchmark",
+    "video-understanding",
+    "temporal-grounding",
+    "cvs-assessment",
+    "video-captioning",
+    "cvpr-2026",
+    "united-imaging",
+    "huggingface"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Northeastern University / United Imaging Intelligence",
+      "url": "https://yuhaosu.github.io/MedGRPO/"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://huggingface.co/datasets/UII-AI/MedVidBench",
+      "schema:encodingFormat": "application/zip"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets",
+  "mach:maturity": "beta",
+  "mach:clinicalDomain": [
+    "surgery",
+    "radiology",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "A large and timely open benchmark for medical and surgical video understanding — 531,850 video-instruction pairs across 8 source datasets and five task types, with a publicly downloadable ~18 GB Hugging Face distribution. It fills a real gap: most medical-imaging benchmarks are static (CT/MRI/WSI), whereas MedVidBench targets temporal and spatiotemporal video tasks including CVS and surgical skill assessment. Marked Assess rather than Adopt because: it is a beta release tied to a CVPR 2026 paper with no independent adoption track record yet; the CC-BY-NC-SA-4.0 licence restricts use to non-commercial settings, ruling out commercial AI development pipelines; and it is a curated aggregation of 8 upstream datasets that each carry their own licences, so downstream users must verify upstream terms per source. Valuable now for academic teams training and evaluating surgical-video models; commercial users are blocked by the non-commercial clause. Companion model cataloged separately as uai-nexus-medvlm-medgrpo (ai-ml-models).",
+  "mach:editorialReviewedAt": "2026-06-15",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/datasets/UII-AI/MedVidBench",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2512.06581",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MedGRPO: Multi-Task Reinforcement Learning for Heterogeneous Medical Video Understanding. arXiv:2512.06581 (CVPR 2026)."
+    }
+  ]
+}

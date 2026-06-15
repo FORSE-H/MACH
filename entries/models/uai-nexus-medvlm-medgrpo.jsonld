@@ -1,0 +1,83 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/uai-nexus-medvlm-medgrpo",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "uai-nexus-medvlm-medgrpo",
+  "name": "uAI-NEXUS-MedVLM (MedGRPO)",
+  "alternateName": [
+    "MedGRPO",
+    "uAI-NEXUS-MedVLM-1.0a-7B-RL"
+  ],
+  "description": "Vision-language model for heterogeneous medical and surgical video understanding, built on Qwen2.5-VL-7B-Instruct and trained with supervised fine-tuning followed by MedGRPO — a Group Relative Policy Optimization variant introducing cross-dataset reward normalization (mapping each dataset's median performance to a common reward) and a medical LLM judge that scores caption quality across five clinical dimensions. Trained on the MedVidBench Standard split (51,505 balanced video-instruction pairs across 8 surgical-video sources: AVOS, CholecT50, CholecTrack20, Cholec80-CVS, CoPESD, EgoSurgery, JIGSAWS, NurViD). Targets temporal action localization, spatiotemporal grounding, video summarization, region captioning, and surgical skill / Critical View of Safety (CVS) assessment. On the authors' MedVidBench benchmark the SFT baseline reportedly outperforms GPT-4.1 and Gemini-2.5-Flash across all tasks, with MedGRPO further improving grounding and captioning. Released as an alpha (v1.0a). Northeastern University and United Imaging Intelligence; CVPR 2026.",
+  "url": "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL",
+  "codeRepository": "https://github.com/UII-AI/MedGRPO-Code",
+  "relatedLink": [
+    "https://arxiv.org/abs/2512.06581",
+    "https://yuhaosu.github.io/MedGRPO/",
+    "https://huggingface.co/datasets/UII-AI/MedVidBench"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "medical-video-understanding",
+    "surgical-video",
+    "vision-language-model",
+    "reinforcement-learning",
+    "grpo",
+    "qwen2.5-vl",
+    "temporal-grounding",
+    "cvs-assessment",
+    "cvpr-2026",
+    "united-imaging"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Northeastern University / United Imaging Intelligence",
+      "url": "https://yuhaosu.github.io/MedGRPO/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:maturity": "beta",
+  "mach:category": "ai-ml-models",
+  "mach:clinicalDomain": [
+    "surgery",
+    "radiology",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-only"
+  ],
+  "mach:weightsLicense": "Apache-2.0",
+  "mach:trainingDataSummary": "Supervised fine-tuning and MedGRPO reinforcement learning on the MedVidBench Standard split — 51,505 balanced video-instruction pairs drawn from 8 open surgical-video source datasets (AVOS, CholecT50, CholecTrack20, Cholec80-CVS, CoPESD, EgoSurgery, JIGSAWS, NurViD). Base model: Qwen2.5-VL-7B-Instruct. Note: while the released weights are Apache-2.0, the MedVidBench training/evaluation corpus is CC-BY-NC-SA-4.0 (non-commercial), and individual source datasets carry their own upstream licences.",
+  "mach:intendedUse": "Research on medical and surgical video understanding: temporal action localization, spatiotemporal grounding, video summarization, region captioning, and surgical skill / Critical View of Safety assessment. Not validated or cleared for clinical decision-making.",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "A current (CVPR 2026) open vision-language model for surgical and medical video understanding with permissively licensed (Apache-2.0) weights, real released code, and ~7,000 monthly HuggingFace downloads. The MedGRPO training method (cross-dataset reward normalization + a medical LLM judge) is a substantive contribution, and the SFT baseline reportedly beats GPT-4.1 and Gemini-2.5-Flash on the authors' MedVidBench. Marked Assess, not Adopt, for several converging reasons. (1) It is an explicit alpha release (v1.0a) — the maintainers' own versioning signals it is not production-stable. (2) Evidence is strong but self-reported on the authors' own benchmark; there is no independent or peer-reviewed clinical validation yet. (3) Under the EU AI Act risk cap, surgical CVS/skill assessment is high-risk-candidate territory and is held at Assess until peer-reviewed clinical validation exists. (4) A licence split is a real consumer trap: the weights are Apache-2.0 (permissive), but the MedVidBench data needed to reproduce or fine-tune is CC-BY-NC-SA-4.0 (non-commercial), and the code repository has no visible LICENSE file as of review. Useful now for research teams building surgical-video AI; commercial users must check the data and code licensing carefully. The companion benchmark is cataloged separately as MedVidBench (datasets).",
+  "mach:editorialReviewedAt": "2026-06-15",
+  "schema:comment": "Code repository UII-AI/MedGRPO-Code has no visible LICENSE file as of 2026-06-15 — code reuse terms unstated even though the weights are Apache-2.0. Re-verify on next review; if a LICENSE is added, set mach:licenseVerified accordingly.",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2512.06581",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MedGRPO: Multi-Task Reinforcement Learning for Heterogeneous Medical Video Understanding. arXiv:2512.06581 (CVPR 2026)."
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/UII-AI/MedGRPO-Code",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:huggingFaceUrl": "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL",
+  "mach:licenseUrl": "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL/blob/main/README.md",
+  "mach:licenseVerified": true
+}
