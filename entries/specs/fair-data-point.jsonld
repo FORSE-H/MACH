@@ -11,7 +11,7 @@
     "FAIRDataPoint"
   ],
   "description": "W3C Unofficial Proposal Draft specification for a metadata service that exposes digital objects following FAIR principles (Findable, Accessible, Interoperable, Reusable) via REST APIs. Defines how data publishers serve standardised metadata and how consumers discover it. Builds on DCAT v2, RDF, SHACL, and LDP (Linked Data Platform). Widely adopted in European research data infrastructure, including national health data catalogues (e.g. Health-RI), biobanks, and ELIXIR nodes. A Java reference implementation (MIT, github.com/FAIRDataTeam/FAIRDataPoint) exists with 40+ releases; the spec itself is published under the W3C Software and Document License.",
-  "url": "https://specs.fairdatapoint.org/",
+  "url": "https://fairdatapoint.readthedocs.io/",
   "codeRepository": "https://github.com/FAIRDataTeam/FAIRDataPoint",
   "license": "W3C",
   "dateModified": "2026-03-12",
@@ -45,7 +45,7 @@
   "mach:evidence": [
     {
       "@type": "schema:WebPage",
-      "url": "https://specs.fairdatapoint.org/",
+      "url": "https://fairdatapoint.readthedocs.io/",
       "mach:evidenceType": "specification"
     },
     {

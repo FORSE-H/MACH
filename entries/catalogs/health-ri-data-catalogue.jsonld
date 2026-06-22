@@ -52,7 +52,7 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://specs.fairdatapoint.org/",
+      "url": "https://fairdatapoint.readthedocs.io/",
       "mach:evidenceType": "specification"
     }
   ]
