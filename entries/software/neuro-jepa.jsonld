@@ -1,0 +1,82 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/neuro-jepa",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "neuro-jepa",
+  "name": "Neuro-JEPA (code)",
+  "alternateName": [
+    "Neuro-JEPA training and evaluation code"
+  ],
+  "description": "Reference implementation for Neuro-JEPA, a sparse latent predictive foundation model for multimodal volumetric brain MRI that extends V-JEPA 2 to 3D with a Mixture-of-Experts backbone. The repository provides pretraining, fine-tuning, and evaluation code for T1w/T2w/FLAIR neuroimaging, including foreground-aware masking strategies and the 47-task downstream evaluation harness described in the paper. Python (PyTorch). The code is MIT-licensed; the associated pretrained model weights are released separately under a gated, non-commercial CC-BY-NC-ND-4.0 licence.",
+  "url": "https://github.com/NYUMedML/Neuro-JEPA",
+  "codeRepository": "https://github.com/NYUMedML/Neuro-JEPA",
+  "license": "MIT",
+  "relatedLink": [
+    "https://arxiv.org/abs/2606.14957",
+    "https://huggingface.co/NYUMedML/Neuro-JEPA"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "neuroimaging",
+    "brain-mri",
+    "foundation-model",
+    "jepa",
+    "v-jepa-2",
+    "mixture-of-experts",
+    "self-supervised",
+    "pytorch",
+    "open-source"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "NYU Langone Health / NYU MedML"
+  },
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "NYU Langone Health / NYU MedML",
+      "url": "https://github.com/NYUMedML"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "NYU Langone Health",
+  "mach:category": "software",
+  "mach:subcategory": "medical-imaging",
+  "mach:maturity": "beta",
+  "mach:clinicalDomain": [
+    "neurology",
+    "radiology",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "The openly licensed (MIT) half of the Neuro-JEPA release: the pretraining, fine-tuning, and 47-task evaluation code for a current (June 2026) 3D brain-MRI foundation model that adapts V-JEPA 2 with a sparse Mixture-of-Experts backbone and reports consistent gains over prior neuroimaging foundation models. Unlike the model weights — which are gated and CC-BY-NC-ND-4.0 (cataloged separately, judged Caution) — the code carries a permissive MIT licence, so research teams can read, adapt, and reuse the methods freely. Marked Assess rather than Adopt because the project is new with no versioned releases yet, the paper is an unpeer-reviewed arXiv preprint, and the code's practical value is partly tied to weights that cannot be reproduced without the private NYU Langone PHI pretraining corpus. A useful reference implementation for teams building 3D JEPA-style neuroimaging models. The pretrained weights are cataloged separately as neuro-jepa (models).",
+  "mach:editorialReviewedAt": "2026-06-19",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/NYUMedML/Neuro-JEPA",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2606.14957",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Learning Sparse Latent Predictive Foundation Model for Multimodal Neuroimaging. arXiv:2606.14957 (2026)."
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/NYUMedML/Neuro-JEPA/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "mach:alternativeTo": []
+}
