@@ -11,7 +11,7 @@
     "Deep Image REConstruction Toolkit"
   ],
   "description": "PyTorch-based deep learning framework for accelerated MRI reconstruction from undersampled k-space data. Implements a range of state-of-the-art inverse-problem approaches including unrolled networks, diffusion models, and physics-informed architectures. Participated in the fastMRI challenge. Developed by the AI for Oncology group at the Netherlands Cancer Institute (NKI).",
-  "url": "https://docs.aiforoncology.nl/direct",
+  "url": "https://docs.aiforoncology.nl/direct/",
   "codeRepository": "https://github.com/NKI-AI/direct",
   "license": "Apache-2.0",
   "softwareVersion": "2.1.0",
@@ -63,7 +63,7 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://docs.aiforoncology.nl/direct",
+      "url": "https://docs.aiforoncology.nl/direct/",
       "mach:evidenceType": "project-website"
     }
   ],
