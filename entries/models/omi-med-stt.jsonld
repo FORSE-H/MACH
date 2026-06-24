@@ -1,0 +1,75 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/omi-med-stt",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "omi-med-stt",
+  "name": "Omi Med STT v1",
+  "alternateName": [
+    "omi-med-stt-v1",
+    "Omi Medical Speech-to-Text"
+  ],
+  "description": "Medical speech-to-text model from Omi Health for transcribing clinical dialogue, built on NVIDIA Parakeet TDT 0.6B v2 (~0.6B params). Specialised for GP-style consultations, medication review, clinical dictation, and procedure/device/test language. Evaluated on 7.18 hours of real and synthetic clinical speech across dialogue, dictation, medication review, procedures/devices/tests, and general speech. Designed for local, on-device transcription; the canonical NeMo checkpoint is openly downloadable on Hugging Face with no gating, plus exportable MLX and GGUF variants. Explicitly not a diagnostic, triage, prescribing, or clinical-decision model — transcripts must be reviewed before any clinical use. CC-BY-4.0.",
+  "url": "https://huggingface.co/omi-health/omi-med-stt-v1",
+  "codeRepository": "https://github.com/Omi-Health/medical-note-eval",
+  "relatedLink": [
+    "https://omi.health/research/note-eval-v2/",
+    "https://huggingface.co/omi-health"
+  ],
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "speech-to-text",
+    "medical-asr",
+    "clinical-transcription",
+    "parakeet",
+    "nemo",
+    "ambient-scribe",
+    "on-device",
+    "omi-health"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Omi Health",
+      "url": "https://omi.health"
+    }
+  ],
+  "mach:weightsLicense": "CC-BY-4.0",
+  "mach:trainingDataSummary": "Built on NVIDIA Parakeet TDT 0.6B v2. Full training-data composition is not specified in the model card; the published evaluation uses 7.18 hours of real and synthetic clinical speech spanning dialogue, dictation, medication review, procedures/devices/tests, and general speech. Specialised vocabulary covers GP consultations, medication, and procedure/device/test terminology.",
+  "mach:intendedUse": "Local transcription of clinical conversations and medical dictation (ambient-scribe and documentation workflows). Not a diagnostic, triage, prescribing, or clinical-decision model; the authors require human review of transcripts before any clinical use. Not a cleared medical device.",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:governance": "vendor-led",
+  "mach:foundation": "Omi Health",
+  "mach:category": "ai-ml-models",
+  "mach:subcategory": "speech-model",
+  "mach:maturity": "beta",
+  "mach:clinicalDomain": [
+    "primary-care",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable",
+    "embedded-library"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "A current (2026) openly licensed medical speech-to-text model with ungated CC-BY-4.0 weights and practical on-device deployment options (NeMo, MLX, GGUF), targeting a real and high-value clinical workflow — ambient/dictation transcription for GP consultations, medication review, and procedure language. Built on the well-regarded NVIDIA Parakeet TDT backbone. Marked Assess rather than Adopt for several reasons. (1) It is a v1/beta release from a single vendor (Omi Health) with no independent benchmarking or adoption track record yet. (2) The reported evaluation is small (7.18 hours) and partly synthetic, and full training-data provenance is not disclosed, so generalisation to real clinical accents/noise is unverified. (3) Clinical transcription sits in EU AI Act high-risk-candidate territory; the authors themselves require human review and disclaim clinical-decision use. Useful now for teams prototyping local medical-scribe pipelines who can validate accuracy on their own data; revisit for Adopt once independent evaluation and broader adoption exist. The companion clinical-note safety benchmark is cataloged separately as medical-note-eval (datasets).",
+  "mach:editorialReviewedAt": "2026-06-24",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/omi-health/omi-med-stt-v1",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://omi.health/research/note-eval-v2/",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:huggingFaceUrl": "https://huggingface.co/omi-health/omi-med-stt-v1",
+  "mach:licenseUrl": "https://huggingface.co/omi-health/omi-med-stt-v1",
+  "mach:licenseVerified": true
+}

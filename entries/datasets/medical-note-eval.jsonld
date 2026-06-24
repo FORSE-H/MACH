@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "medical-note-eval",
+  "name": "Medical Note-Eval (Note-Eval v2)",
+  "alternateName": [
+    "Note-Eval v2",
+    "Omi medical-note-eval"
+  ],
+  "description": "Open benchmark and reproducible evaluation framework from Omi Health for the safety of AI-generated clinical notes. It runs 8 frontier writer models over 300 synthetic ambulatory primary-care doctor-patient dialogues and scores the generated SOAP notes for prose quality, hallucinations, and omitted safety-critical information using a 4-verifier cross-family LLM judge panel plus clinician-blind prose scoring. Headline finding: across 2,400 notes, omissions were ~43× more common than fabrications (520 safety-relevant facts dropped vs 12 confirmed high-impact hallucinations). Also evaluates 'Omi Guard', a transcript-grounded safety layer that recovered all 520 omitted facts with zero new hallucinations. The repository publishes all 4,800 before/after notes, token data, and scoring scripts for independent verification. MIT-licensed. Note: the benchmark evaluates several proprietary models (e.g. GPT, Claude, Gemini, DeepSeek), but the benchmark corpus and code themselves are open.",
+  "url": "https://github.com/Omi-Health/medical-note-eval",
+  "codeRepository": "https://github.com/Omi-Health/medical-note-eval",
+  "relatedLink": [
+    "https://omi.health/research/note-eval-v2/",
+    "https://huggingface.co/omi-health"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "benchmark",
+    "clinical-notes",
+    "soap-notes",
+    "hallucination",
+    "safety-evaluation",
+    "llm-judge",
+    "ambient-scribe",
+    "primary-care",
+    "omi-health"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Omi Health",
+      "url": "https://omi.health"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://github.com/Omi-Health/medical-note-eval",
+      "schema:encodingFormat": "application/json"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:category": "datasets",
+  "mach:maturity": "beta",
+  "mach:clinicalDomain": [
+    "primary-care",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "A timely, fully open (MIT) benchmark for a safety problem that matters for ambient clinical scribes: whether AI-written SOAP notes drop safety-critical facts or fabricate them. Its design is sound and reproducible — 300 synthetic primary-care dialogues, 4,800 published before/after notes, scoring scripts, and a cross-family 4-verifier LLM judge panel to reduce single-model bias — and its central, well-quantified finding (omissions ~43× more common than hallucinations) is a genuinely useful contribution to clinical-documentation safety. It is cataloged as an open benchmark, not an endorsement of the proprietary models it tests. Marked Assess rather than Adopt because: it is a recent v2 release from a single vendor (Omi Health) with no independent reproduction yet; the corpus is synthetic, so findings need confirmation on real clinical transcripts; and the evaluation is partly self-referential (it also showcases the vendor's own 'Omi Guard' layer). Valuable now for teams building or vetting clinical-note generation who need a public safety harness. Companion speech-to-text model cataloged separately as omi-med-stt (ai-ml-models).",
+  "mach:editorialReviewedAt": "2026-06-24",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Omi-Health/medical-note-eval",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://omi.health/research/note-eval-v2/",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/Omi-Health/medical-note-eval/blob/main/LICENSE",
+  "mach:licenseVerified": true
+}
