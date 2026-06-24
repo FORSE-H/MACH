@@ -1,0 +1,74 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "finemed",
+  "name": "FineMed",
+  "alternateName": [
+    "finemed-fr",
+    "FineMed-fr French Medical Corpus"
+  ],
+  "description": "Large curated French medical pretraining corpus from Doctolib Lab — 21.1M documents and 19.2B words (81.6 GB) of real-world medical writing, assembled from FineWeb-2, FinePDFs, and FineWiki. Every document is labelled across three dimensions: medical subdomain (15 categories), educational quality (0–5), and medical-term density, enabling users to apply custom thresholds. Released unfiltered alongside a rephrased variant (finemed-rephrased-fr) in which an LLM rewrites documents into denser medical text. Produced via the data-curation recipe in the paper 'Where Does the Signal Live?' and used to pretrain the DoctoBERT encoder family. Three configs: fineweb-2 (18.9M docs), finepdfs (2.14M docs), finewiki (38.6k docs). Openly downloadable. Dual-licensed: fineweb-2 and finepdfs under ODC-BY-1.0; finewiki under CC-BY-SA-4.0.",
+  "url": "https://huggingface.co/datasets/doctolib-lab/finemed-fr",
+  "relatedLink": [
+    "https://arxiv.org/abs/2606.22079",
+    "https://huggingface.co/datasets/doctolib-lab/finemed-rephrased-fr",
+    "https://huggingface.co/doctolib-lab",
+    "https://huggingface.co/blog/bofenghuang/doctobert-fr-release"
+  ],
+  "license": "ODC-BY-1.0",
+  "keywords": [
+    "medical-corpus",
+    "french",
+    "pretraining-data",
+    "clinical-nlp",
+    "fineweb",
+    "open-data",
+    "language-model-training",
+    "doctolib",
+    "huggingface"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Doctolib Lab",
+      "url": "https://huggingface.co/doctolib-lab"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": "schema:DataDownload",
+      "schema:contentUrl": "https://huggingface.co/datasets/doctolib-lab/finemed-fr",
+      "schema:encodingFormat": "application/parquet"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:category": "datasets",
+  "mach:maturity": "beta",
+  "mach:clinicalDomain": [
+    "research",
+    "primary-care"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "A substantial and openly licensed French medical pretraining corpus — 21.1M documents / 19.2B words with per-document annotations (subdomain, educational quality, medical-term density) that let users filter to their own thresholds, plus an LLM-rephrased dense variant. It fills a real gap in non-English open clinical NLP resources and is the verifiable training base for the DoctoBERT encoders, which strengthens its provenance. Marked Assess rather than Adopt for two reasons. (1) Licensing is a genuine consumer trap: the corpus is dual-licensed — ODC-BY-1.0 for the fineweb-2 and finepdfs configs, CC-BY-SA-4.0 for finewiki — and is derived from upstream web sources, so downstream users must honour the per-config terms (the share-alike clause on finewiki in particular propagates to derivatives). (2) It is web-derived medical text, not clinically validated or de-identified clinical records, so quality and safety for any clinical use must be assessed by the user. Valuable now for teams training French medical language models who can comply with the per-config licences. Companion model cataloged separately as doctobert (ai-ml-models).",
+  "mach:editorialReviewedAt": "2026-06-24",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/datasets/doctolib-lab/finemed-fr",
+      "mach:evidenceType": "primary-instance"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2606.22079",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Where Does the Signal Live? A Web Data Recipe for Medical Encoder Pretraining. arXiv:2606.22079 (2026)."
+    }
+  ]
+}

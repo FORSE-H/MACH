@@ -1,0 +1,84 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/doctobert",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "doctobert",
+  "name": "DoctoBERT",
+  "alternateName": [
+    "doctobert-fr",
+    "doctomodernbert-fr",
+    "DoctoBERT French Medical Encoder"
+  ],
+  "description": "Family of French medical encoder (fill-mask) models from Doctolib Lab, pretrained from scratch on curated open-web medical text. Two variants — doctobert-fr-base (RoBERTa-style, ~111M params) and doctomodernbert-fr-base (ModernBERT architecture) — trained over ~700B tokens in two phases (general pretraining then biomedical/clinical annealing) on the FineMed-fr and FineMed-rephrased-fr corpora. Designed for biomedical and clinical NLP tasks: named entity recognition, classification, and retrieval. Evaluated on the public DrBenchmark suite and proprietary clinical NER, where medical-term-density filtering plus LLM rephrasing of training data yielded state-of-the-art French medical encoder results. Explicitly not generative and not a medical device. Apache-2.0, open ungated weights on Hugging Face.",
+  "url": "https://huggingface.co/doctolib-lab/doctobert-fr-base",
+  "codeRepository": "https://github.com/doctolib-lab/doctobert",
+  "relatedLink": [
+    "https://arxiv.org/abs/2606.22079",
+    "https://huggingface.co/doctolib-lab",
+    "https://huggingface.co/blog/bofenghuang/doctobert-fr-release"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "medical-nlp",
+    "clinical-nlp",
+    "french",
+    "encoder",
+    "bert",
+    "modernbert",
+    "fill-mask",
+    "named-entity-recognition",
+    "foundation-model",
+    "doctolib"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Doctolib Lab",
+      "url": "https://huggingface.co/doctolib-lab"
+    }
+  ],
+  "mach:weightsLicense": "Apache-2.0",
+  "mach:trainingDataSummary": "Pretrained from scratch on the FineMed-fr and FineMed-rephrased-fr corpora (curated French medical text derived from FineWeb-2, FinePDFs, and FineWiki), ~700B tokens across two phases: initial pretraining followed by biomedical/clinical annealing. Training data is openly released as the FineMed dataset (cataloged separately).",
+  "mach:intendedUse": "French biomedical and clinical NLP research: named entity recognition, text classification, and retrieval over medical text. An encoder for downstream fine-tuning. Not generative, not a diagnostic or clinical-decision tool, and not a cleared medical device.",
+  "mach:aiActRiskClass": "limited-risk",
+  "mach:governance": "vendor-led",
+  "mach:foundation": "Doctolib Lab",
+  "mach:category": "ai-ml-models",
+  "mach:subcategory": "language-model",
+  "mach:maturity": "beta",
+  "mach:clinicalDomain": [
+    "research",
+    "primary-care"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "A current (June 2026) and openly licensed French medical encoder family — Apache-2.0 with ungated weights, a reproducible data-curation recipe, and openly released training corpora (FineMed). It addresses a genuine gap: most open clinical encoders are English, and DoctoBERT is purpose-built for French biomedical/clinical NLP, reporting state-of-the-art results on the public DrBenchmark. The accompanying paper substantiates a clear methodological contribution (medical-term-density filtering plus LLM rephrasing). Marked Assess rather than Adopt because it is a recent beta release from an industry lab (Doctolib) with no independent adoption track record yet, the headline benchmark gains are partly self-reported including a proprietary clinical NER set, and as an encoder it requires downstream fine-tuning to deliver task value. A strong starting point for teams building French clinical NLP; revisit for Adopt once external adoption and reproduction accrue. Training data cataloged separately as finemed (datasets); curation code as doctobert-finemed (software).",
+  "mach:editorialReviewedAt": "2026-06-24",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/doctolib-lab/doctobert-fr-base",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2606.22079",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Where Does the Signal Live? A Web Data Recipe for Medical Encoder Pretraining. arXiv:2606.22079 (2026)."
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/blog/bofenghuang/doctobert-fr-release",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:huggingFaceUrl": "https://huggingface.co/doctolib-lab/doctobert-fr-base",
+  "mach:licenseUrl": "https://huggingface.co/doctolib-lab/doctobert-fr-base",
+  "mach:licenseVerified": true
+}

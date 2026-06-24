@@ -1,0 +1,82 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/doctobert-finemed",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "doctobert-finemed",
+  "name": "DoctoBERT / FineMed pipeline",
+  "alternateName": [
+    "FineMed data-curation pipeline"
+  ],
+  "description": "Reproducible data-curation and pretraining pipeline behind DoctoBERT and the FineMed corpus, from Doctolib Lab. Scores medical documents across three axes — subdomain, educational quality, and medical-term density — then uses an LLM to rephrase documents into denser variants, and pretrains encoders on the result (built on the ModernBERT codebase). Includes components for training medical entity extractors (GLiNER), subdomain and educational-quality classifiers, and generating synthetic clinical documents. Python and Shell. Note: the repository has no LICENSE file at review time, so code reuse terms are unstated even though the released models (Apache-2.0) and data (ODC-BY-1.0 / CC-BY-SA-4.0) are licensed.",
+  "url": "https://github.com/doctolib-lab/doctobert",
+  "codeRepository": "https://github.com/doctolib-lab/doctobert",
+  "license": "LicenseRef-no-license-file",
+  "relatedLink": [
+    "https://arxiv.org/abs/2606.22079",
+    "https://huggingface.co/doctolib-lab",
+    "https://huggingface.co/blog/bofenghuang/doctobert-fr-release"
+  ],
+  "programmingLanguage": [
+    "Python",
+    "Shell"
+  ],
+  "operatingSystem": [
+    "Linux"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "medical-nlp",
+    "data-curation",
+    "pretraining-pipeline",
+    "modernbert",
+    "french",
+    "gliner",
+    "llm-rephrasing",
+    "doctolib"
+  ],
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Doctolib Lab"
+  },
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Doctolib Lab",
+      "url": "https://huggingface.co/doctolib-lab"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:foundation": "Doctolib Lab",
+  "mach:category": "software",
+  "mach:subcategory": "pipeline-tools",
+  "mach:maturity": "beta",
+  "mach:clinicalDomain": [
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:judgement": "Caution",
+  "mach:judgementReason": "The reproducible pipeline that produced DoctoBERT and FineMed — a genuinely useful, current (June 2026) reference for medical-encoder data curation: multi-axis document scoring, LLM rephrasing, and ModernBERT-based pretraining, with a paper documenting the method. It is marked Caution, not Assess, for one decisive reason: the repository has no LICENSE file at review time, and GitHub displays no licence. Without a licence, default copyright applies — there is no grant to use, modify, or redistribute the code, regardless of the permissively licensed models and data it produces. Teams can read it as a reference, but cannot safely reuse or build on the code until the authors add a licence. The companion model (doctobert, Apache-2.0) and dataset (finemed, ODC-BY-1.0 / CC-BY-SA-4.0) are properly licensed and cataloged separately. Re-verify on next review; if a permissive LICENSE is added, this should be re-rated to Assess.",
+  "mach:editorialReviewedAt": "2026-06-24",
+  "schema:comment": "No LICENSE file in github.com/doctolib-lab/doctobert as of 2026-06-24 (GitHub shows no licence; /blob/main/LICENSE is 404). Code reuse terms unstated. Re-verify next review; if a LICENSE is added set license + licenseVerified accordingly and reconsider judgement.",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/doctolib-lab/doctobert",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2606.22079",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Where Does the Signal Live? A Web Data Recipe for Medical Encoder Pretraining. arXiv:2606.22079 (2026)."
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/doctolib-lab/doctobert",
+  "mach:licenseVerified": false,
+  "mach:alternativeTo": []
+}
