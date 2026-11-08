@@ -41,6 +41,9 @@ jobs:
 
   deploy:
     needs: build
+    # Only publish to the live Pages site from main. On any other branch the
+    # build still runs (so we can verify it compiles) but nothing is published.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
