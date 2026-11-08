@@ -10,6 +10,10 @@ on:
     paths:
       - "site/**"
       - ".github/workflows/deploy-site.yml"
+  pull_request:
+    paths:
+      - "site/**"
+      - ".github/workflows/deploy-site.yml"
   workflow_dispatch: # manual rebuild (e.g. to pick up fresh catalogue data)
 
 permissions:
