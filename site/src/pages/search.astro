@@ -1,0 +1,94 @@
+---
+import Layout from "../components/Layout.astro";
+import { apiBase } from "../lib/catalog.js";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout title="Search">
+  <div class="wrap">
+    <h1>Search</h1>
+    <p class="lead">
+      Semantic search over the catalogue — matches by meaning, not keywords.
+      Runs live against the MACH API.
+    </p>
+
+    <form class="searchbox" id="f">
+      <input
+        id="q"
+        type="text"
+        name="q"
+        placeholder="e.g. actively maintained DICOM server"
+        aria-label="Search query"
+        autocomplete="off"
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <p class="status muted" id="status"></p>
+    <ul class="results" id="results"></ul>
+  </div>
+
+  <style>
+    .searchbox { display: flex; gap: 8px; margin: 18px 0 12px; }
+    .searchbox input {
+      flex: 1; padding: 12px 14px; font-size: 1rem; font-family: var(--sans);
+      border: 1px solid var(--line); border-radius: var(--radius);
+      background: var(--bg); color: var(--fg);
+    }
+    .searchbox button {
+      padding: 12px 20px; font-weight: 600; cursor: pointer; border: none;
+      border-radius: var(--radius); background: var(--accent); color: #fff;
+    }
+    .results { list-style: none; padding: 0; margin: 0; }
+    .results li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .results a { font-weight: 600; }
+    .results .meta { font-size: 0.82rem; color: var(--muted); display: flex; gap: 10px; align-items: center; margin-top: 2px; }
+    .score { font-family: var(--mono); }
+  </style>
+
+  <script define:vars={{ apiBase, base }}>
+    const form = document.getElementById("f");
+    const input = document.getElementById("q");
+    const status = document.getElementById("status");
+    const results = document.getElementById("results");
+
+    // prefill from ?q= (home page sends queries here)
+    const initial = new URLSearchParams(location.search).get("q");
+    if (initial) { input.value = initial; run(initial); }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const q = input.value.trim();
+      if (q) { history.replaceState(null, "", `?q=${encodeURIComponent(q)}`); run(q); }
+    });
+
+    async function run(q) {
+      results.innerHTML = "";
+      status.textContent = "Searching… (the API may take ~50s to wake if idle)";
+      try {
+        const res = await fetch(`${apiBase}/search`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: q, limit: 10 }),
+        });
+        if (!res.ok) throw new Error(res.status);
+        const hits = await res.json();
+        status.textContent = hits.length ? `${hits.length} results for "${q}"` : `No results for "${q}".`;
+        for (const h of hits) {
+          const li = document.createElement("li");
+          const pct = Math.round(h.score * 100);
+          li.innerHTML =
+            `<a href="${base}/entry/${h.identifier}/">${escapeHtml(h.name)}</a>` +
+            `<div class="meta"><span>${escapeHtml(h.category)}</span>` +
+            `<span class="score">match ${pct}%</span></div>`;
+          results.appendChild(li);
+        }
+      } catch (err) {
+        status.textContent = "Search failed — the API may be waking up. Try again in a moment.";
+      }
+    }
+    function escapeHtml(s) {
+      return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+    }
+  </script>
+</Layout>

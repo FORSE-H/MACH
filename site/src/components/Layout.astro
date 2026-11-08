@@ -1,0 +1,116 @@
+---
+const { title, description } = Astro.props;
+const fullTitle = title ? `${title} · MACH` : "MACH — Machine-Actionable Catalog for Healthcare";
+const base = import.meta.env.BASE_URL; // honours the Pages subpath
+const u = (p) => `${base.replace(/\/$/, "")}${p}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta
+      name="description"
+      content={description ||
+        "An open, evidence-based catalogue of open-source healthcare software, AI models, datasets and standards — with machine-readable judgements and verifiable data lineage."}
+    />
+    <style is:global>
+      :root {
+        --bg: #ffffff;
+        --fg: #1a2027;
+        --muted: #5b6672;
+        --line: #e4e8ec;
+        --accent: #1d6fe0;
+        --adopt: #1d9e75;
+        --assess: #c98a12;
+        --caution: #d64545;
+        --radius: 10px;
+        --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+        --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #0e1217;
+          --fg: #e6edf3;
+          --muted: #8b98a6;
+          --line: #232a32;
+          --accent: #58a6ff;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: var(--sans);
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+      header.site {
+        border-bottom: 1px solid var(--line);
+        position: sticky; top: 0; background: var(--bg); z-index: 10;
+      }
+      header.site .wrap { display: flex; align-items: center; gap: 24px; height: 58px; }
+      header.site .logo { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; }
+      header.site .logo span { color: var(--accent); }
+      header.site nav { display: flex; gap: 20px; font-size: 0.9rem; }
+      header.site nav a { color: var(--muted); }
+      header.site nav a:hover { color: var(--fg); text-decoration: none; }
+      main { padding: 40px 0 80px; }
+      h1 { font-size: 2rem; letter-spacing: -0.02em; margin: 0 0 8px; }
+      h2 { font-size: 1.3rem; letter-spacing: -0.01em; margin: 40px 0 14px; }
+      .lead { font-size: 1.12rem; color: var(--muted); max-width: 42rem; }
+      .ring {
+        display: inline-block; font-size: 0.72rem; font-weight: 700;
+        padding: 2px 9px; border-radius: 999px; text-transform: uppercase;
+        letter-spacing: 0.04em; border: 1px solid;
+      }
+      .ring.Adopt { color: var(--adopt); border-color: var(--adopt); background: color-mix(in srgb, var(--adopt) 10%, transparent); }
+      .ring.Assess { color: var(--assess); border-color: var(--assess); background: color-mix(in srgb, var(--assess) 10%, transparent); }
+      .ring.Caution { color: var(--caution); border-color: var(--caution); background: color-mix(in srgb, var(--caution) 10%, transparent); }
+      .muted { color: var(--muted); }
+      .mono { font-family: var(--mono); }
+      code {
+        font-family: var(--mono); font-size: 0.86em;
+        background: color-mix(in srgb, var(--fg) 7%, transparent);
+        padding: 1px 5px; border-radius: 5px;
+      }
+      pre {
+        background: color-mix(in srgb, var(--fg) 6%, transparent);
+        border: 1px solid var(--line); border-radius: var(--radius);
+        padding: 14px 16px; overflow-x: auto; font-size: 0.85rem;
+      }
+      footer.site {
+        border-top: 1px solid var(--line); color: var(--muted);
+        font-size: 0.85rem; padding: 24px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <a href={u("/")} class="logo">MA<span>C</span>H</a>
+        <nav>
+          <a href={u("/catalog/")}>Catalog</a>
+          <a href={u("/search/")}>Search</a>
+          <a href={u("/about/")}>About</a>
+          <a href="https://mach-render-deploy.onrender.com/docs">API</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        MACH — Machine-Actionable Catalog for Healthcare · Apache-2.0 / CC-BY-4.0 ·
+        Every judgement is derived deterministically from sourced signals.
+      </div>
+    </footer>
+  </body>
+</html>

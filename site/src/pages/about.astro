@@ -1,0 +1,60 @@
+---
+import Layout from "../components/Layout.astro";
+---
+
+<Layout title="About">
+  <div class="wrap prose">
+    <h1>About MACH</h1>
+    <p class="lead">
+      MACH — the Machine-Actionable Catalog for Healthcare — is an open,
+      evidence-based catalogue of open-source healthcare software, AI/ML models,
+      datasets, standards, and data sources.
+    </p>
+
+    <h2>What makes it different</h2>
+    <p>
+      Most directories are lists. MACH judges every entry — <strong>Adopt</strong>,
+      <strong>Assess</strong>, or <strong>Caution</strong> — and the judgement is a
+      pure, deterministic function of measured signals: how actively a project is
+      maintained, how widely it is adopted and used, and how it is licensed. No
+      prose, no LLM: the same facts always produce the same verdict, and you can ask
+      the catalogue to explain every rule that fired.
+    </p>
+
+    <h2>Verifiable lineage</h2>
+    <p>
+      Every harvested value — stars, downloads, licence, last commit — records the
+      authoritative source it came from (GitHub, PyPI, Hugging Face). You can always
+      answer "where did this number come from?" The hand-authored seed (name, URL,
+      category) is the only human input; everything else is regenerated from sources.
+    </p>
+
+    <h2>Built for machines</h2>
+    <p>
+      MACH is served as a REST API and as a <strong>Model Context Protocol (MCP)</strong>
+      server, so AI agents can search and vet healthcare tools directly — using their
+      own model, at no cost to the catalogue.
+    </p>
+    <pre><code>{`{ "mcpServers": { "mach": { "url": "https://mach-render-deploy.onrender.com/mcp" } } }`}</code></pre>
+    <p>
+      Tools exposed: <code>search_catalog</code>, <code>get_entry</code>,
+      <code>list_entries</code>, and <code>explain_scoring</code>.
+    </p>
+
+    <h2>Open</h2>
+    <p>
+      Code is Apache-2.0; the catalogue data is CC-BY-4.0. Entries are proposed via
+      GitHub Issues and curated into the catalogue.
+    </p>
+
+    <p class="muted">
+      <a href="https://github.com/FORSE-H/MACH">github.com/FORSE-H/MACH</a> ·
+      <a href="https://mach-render-deploy.onrender.com/docs">API docs</a>
+    </p>
+  </div>
+
+  <style>
+    .prose p { max-width: 42rem; }
+    .prose h2 { margin-top: 32px; }
+  </style>
+</Layout>

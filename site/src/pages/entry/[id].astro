@@ -1,0 +1,107 @@
+---
+import Layout from "../../components/Layout.astro";
+import { loadCatalog } from "../../lib/catalog.js";
+
+export async function getStaticPaths() {
+  const entries = await loadCatalog();
+  return entries.map((e) => ({ params: { id: e.identifier }, props: { entry: e } }));
+}
+
+const { entry } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+function fmtDate(iso) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  return isNaN(d) ? iso : d.toISOString().slice(0, 10);
+}
+function monthsAgo(iso) {
+  if (!iso) return null;
+  const months = (Date.now() - new Date(iso)) / (1000 * 60 * 60 * 24 * 30.44);
+  return Math.round(months);
+}
+const commitMonths = monthsAgo(entry.lastCommit);
+const downloads = entry.pypiDownloads ?? entry.hfDownloads;
+---
+
+<Layout title={entry.name} description={entry.description}>
+  <div class="wrap">
+    <p class="crumb"><a href={`${base}/catalog/`}>Catalog</a> / {entry.category}</p>
+    <div class="head">
+      <h1>{entry.name}</h1>
+      {entry.judgement && <span class={`ring ${entry.judgement}`}>{entry.judgement}</span>}
+    </div>
+    {entry.description && <p class="lead">{entry.description}</p>}
+
+    <div class="links">
+      {entry.url && <a href={entry.url}>↗ Website</a>}
+      {entry.codeRepository && <a href={entry.codeRepository}>↗ Repository</a>}
+    </div>
+
+    {
+      entry.judgement && (
+        <section class="judgement">
+          <h2>Judgement: {entry.judgement}</h2>
+          <p class="reason">{entry.judgementReason}</p>
+          <p class="attrib muted">
+            Derived deterministically by the MACH scorer from the signals below —
+            not written prose.
+          </p>
+        </section>
+      )
+    }
+
+    <h2>Signals &amp; lineage</h2>
+    <p class="muted">Every value records the source it was harvested from.</p>
+    <table class="facts">
+      <thead>
+        <tr><th>Field</th><th>Value</th><th>Source</th></tr>
+      </thead>
+      <tbody>
+        {
+          entry.facts.map((f) => (
+            <tr>
+              <td class="mono">{f.field}</td>
+              <td>
+                {f.field === "repo_last_commit"
+                  ? `${fmtDate(f.value)}${commitMonths != null ? ` (~${commitMonths} mo ago)` : ""}`
+                  : f.value}
+              </td>
+              <td><code>{f.source}</code></td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+
+    {
+      (entry.stars != null || downloads != null) && (
+        <p class="summary muted">
+          {entry.stars != null && <>★ {entry.stars.toLocaleString()} stars</>}
+          {downloads != null && <> · {downloads.toLocaleString()} monthly downloads</>}
+          {entry.license && <> · {entry.license}</>}
+          {entry.archived && <> · ⚠ archived</>}
+        </p>
+      )
+    }
+  </div>
+
+  <style>
+    .crumb { font-size: 0.85rem; color: var(--muted); margin: 0 0 12px; }
+    .head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .head h1 { margin: 0; }
+    .links { display: flex; gap: 16px; margin: 14px 0 8px; font-size: 0.92rem; }
+    .judgement {
+      margin: 28px 0; padding: 18px 20px; border: 1px solid var(--line);
+      border-radius: var(--radius); background: color-mix(in srgb, var(--fg) 3%, transparent);
+    }
+    .judgement h2 { margin: 0 0 8px; font-size: 1.15rem; }
+    .reason { margin: 0; font-size: 1rem; }
+    .attrib { font-size: 0.82rem; margin: 10px 0 0; }
+    table.facts { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 10px 0; }
+    table.facts th { text-align: left; color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid var(--line); padding: 6px 10px; }
+    table.facts td { padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    table.facts td:first-child { white-space: nowrap; color: var(--muted); }
+    .summary { margin-top: 14px; font-size: 0.9rem; }
+  </style>
+</Layout>

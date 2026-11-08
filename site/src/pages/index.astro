@@ -1,0 +1,111 @@
+---
+import Layout from "../components/Layout.astro";
+import { loadCatalog, catalogStats } from "../lib/catalog.js";
+
+const entries = await loadCatalog();
+const stats = catalogStats(entries);
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout>
+  <div class="wrap">
+    <h1>The machine-actionable catalog<br />for open healthcare software.</h1>
+    <p class="lead">
+      An open, evidence-based catalogue of open-source healthcare software, AI
+      models, datasets and standards. Every entry carries a deterministic
+      <strong>Adopt / Assess / Caution</strong> judgement derived from verifiable
+      signals — and every fact records the source it came from.
+    </p>
+
+    <div class="stats">
+      <a class="stat" href={`${base}/catalog/`}>
+        <div class="num">{stats.total}</div>
+        <div class="label">entries</div>
+      </a>
+      <a class="stat" href={`${base}/catalog/?ring=Adopt`}>
+        <div class="num" style="color:var(--adopt)">{stats.rings.Adopt}</div>
+        <div class="label">Adopt</div>
+      </a>
+      <a class="stat" href={`${base}/catalog/?ring=Assess`}>
+        <div class="num" style="color:var(--assess)">{stats.rings.Assess}</div>
+        <div class="label">Assess</div>
+      </a>
+      <a class="stat" href={`${base}/catalog/?ring=Caution`}>
+        <div class="num" style="color:var(--caution)">{stats.rings.Caution}</div>
+        <div class="label">Caution</div>
+      </a>
+    </div>
+
+    <form action={`${base}/search/`} method="get" class="searchbox">
+      <input
+        type="text"
+        name="q"
+        placeholder="Search — e.g. federated learning for hospitals, DICOM server…"
+        aria-label="Search the catalog"
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <h2>Why MACH is different</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Evidence-based judgements</h3>
+        <p class="muted">
+          Adopt / Assess / Caution is computed deterministically from maintenance,
+          adoption, real usage and licence — never prose, never an LLM. Ask it
+          <em>why</em> and it shows every rule that fired.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Verifiable lineage</h3>
+        <p class="muted">
+          Every harvested fact — stars, downloads, licence, last commit — records
+          the source it came from. You can always answer "where did this number
+          come from?"
+        </p>
+      </div>
+      <div class="card">
+        <h3>Built for machines</h3>
+        <p class="muted">
+          A REST API and an MCP server, so AI agents can search and vet healthcare
+          tools directly — using their own model, at no cost to us.
+        </p>
+      </div>
+    </div>
+
+    <h2>Connect your AI</h2>
+    <p class="muted">
+      MACH is an MCP server. Point Claude Desktop, Cursor, or any MCP client at it
+      and your assistant can search the catalogue and explain any judgement — using
+      your own model.
+    </p>
+    <pre><code>{`{ "mcpServers": { "mach": { "url": "https://mach-render-deploy.onrender.com/mcp" } } }`}</code></pre>
+  </div>
+
+  <style>
+    .wrap > h1 { margin-top: 24px; }
+    .stats { display: flex; gap: 12px; margin: 28px 0; flex-wrap: wrap; }
+    .stat {
+      flex: 1; min-width: 100px; text-align: center; padding: 16px;
+      border: 1px solid var(--line); border-radius: var(--radius);
+      color: inherit; text-decoration: none;
+    }
+    .stat:hover { border-color: var(--accent); text-decoration: none; }
+    .stat .num { font-size: 1.9rem; font-weight: 700; }
+    .stat .label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .searchbox { display: flex; gap: 8px; margin: 8px 0 8px; }
+    .searchbox input {
+      flex: 1; padding: 12px 14px; font-size: 1rem; font-family: var(--sans);
+      border: 1px solid var(--line); border-radius: var(--radius);
+      background: var(--bg); color: var(--fg);
+    }
+    .searchbox button {
+      padding: 12px 20px; font-size: 1rem; font-weight: 600; cursor: pointer;
+      border: none; border-radius: var(--radius); background: var(--accent); color: #fff;
+    }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .card { border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+    .card h3 { margin: 0 0 8px; font-size: 1rem; }
+    .card p { margin: 0; font-size: 0.92rem; }
+  </style>
+</Layout>

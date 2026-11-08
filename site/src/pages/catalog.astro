@@ -1,0 +1,110 @@
+---
+import Layout from "../components/Layout.astro";
+import { loadCatalog, catalogStats } from "../lib/catalog.js";
+
+const entries = await loadCatalog();
+const stats = catalogStats(entries);
+const categories = Object.keys(stats.categories).sort();
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout title="Catalog">
+  <div class="wrap">
+    <h1>Catalog</h1>
+    <p class="lead">{stats.total} entries. Filter by category or judgement.</p>
+
+    <div class="filters" role="group" aria-label="Filters">
+      <div class="frow">
+        <span class="flabel">Ring:</span>
+        <button class="chip" data-ring="all" aria-pressed="true">All</button>
+        <button class="chip" data-ring="Adopt">Adopt</button>
+        <button class="chip" data-ring="Assess">Assess</button>
+        <button class="chip" data-ring="Caution">Caution</button>
+      </div>
+      <div class="frow">
+        <span class="flabel">Category:</span>
+        <button class="chip" data-cat="all" aria-pressed="true">All</button>
+        {categories.map((c) => <button class="chip" data-cat={c}>{c}</button>)}
+      </div>
+    </div>
+
+    <ul class="entries">
+      {
+        entries.map((e) => (
+          <li class="entry" data-ring={e.judgement || "none"} data-cat={e.category}>
+            <a href={`${base}/entry/${e.identifier}/`}>
+              <div class="erow">
+                <span class="ename">{e.name}</span>
+                {e.judgement && <span class={`ring ${e.judgement}`}>{e.judgement}</span>}
+                <span class="ecat muted">{e.category}</span>
+                {e.stars != null && <span class="estars muted">★ {e.stars.toLocaleString()}</span>}
+              </div>
+              {e.description && <p class="edesc muted">{e.description}</p>}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="muted empty" hidden>No entries match these filters.</p>
+  </div>
+
+  <style>
+    .filters { margin: 18px 0 24px; display: flex; flex-direction: column; gap: 10px; }
+    .frow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .flabel { font-size: 0.8rem; color: var(--muted); width: 72px; }
+    .chip {
+      font-size: 0.82rem; padding: 4px 11px; border-radius: 999px; cursor: pointer;
+      border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+    }
+    .chip[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+    .entries { list-style: none; padding: 0; margin: 0; }
+    .entry a { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); color: inherit; }
+    .entry a:hover { text-decoration: none; }
+    .entry a:hover .ename { color: var(--accent); }
+    .erow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .ename { font-weight: 600; }
+    .ecat { font-size: 0.8rem; }
+    .estars { font-size: 0.8rem; margin-left: auto; }
+    .edesc {
+      margin: 4px 0 0; font-size: 0.9rem;
+      display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+    }
+  </style>
+
+  <script>
+    const chips = document.querySelectorAll(".chip");
+    const items = document.querySelectorAll(".entry");
+    const empty = document.querySelector(".empty");
+    let ring = "all", cat = "all";
+
+    // honour ?ring= from the home page stat links
+    const params = new URLSearchParams(location.search);
+    if (params.get("ring")) ring = params.get("ring");
+
+    function press(attr, val) {
+      document.querySelectorAll(`.chip[data-${attr}]`).forEach((c) => {
+        c.setAttribute("aria-pressed", c.getAttribute(`data-${attr}`) === val ? "true" : "false");
+      });
+    }
+    function apply() {
+      let shown = 0;
+      items.forEach((el) => {
+        const ok =
+          (ring === "all" || el.getAttribute("data-ring") === ring) &&
+          (cat === "all" || el.getAttribute("data-cat") === cat);
+        el.hidden = !ok;
+        if (ok) shown++;
+      });
+      if (empty) empty.hidden = shown !== 0;
+    }
+    chips.forEach((c) => {
+      c.addEventListener("click", () => {
+        if (c.dataset.ring !== undefined) { ring = c.dataset.ring; press("ring", ring); }
+        if (c.dataset.cat !== undefined) { cat = c.dataset.cat; press("cat", cat); }
+        apply();
+      });
+    });
+    press("ring", ring);
+    apply();
+  </script>
+</Layout>
