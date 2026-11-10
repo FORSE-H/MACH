@@ -6,10 +6,21 @@ const API = import.meta.env.PUBLIC_MACH_API || "https://mach-render-deploy.onren
 
 export const apiBase = API;
 
-async function getJson(path) {
-  const res = await fetch(`${API}${path}`);
-  if (!res.ok) throw new Error(`${path} -> ${res.status}`);
-  return res.json();
+// Fetch JSON with retries — the free-tier API may be cold-starting at build time
+// (first request can take ~50s), so a single failed fetch shouldn't fail the build.
+async function getJson(path, { retries = 4 } = {}) {
+  let lastErr;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(`${API}${path}`, { signal: AbortSignal.timeout(90000) });
+      if (!res.ok) throw new Error(`${path} -> HTTP ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      lastErr = err;
+      if (attempt < retries) await new Promise((r) => setTimeout(r, 3000 * (attempt + 1)));
+    }
+  }
+  throw new Error(`Failed to fetch ${path} after ${retries + 1} attempts: ${lastErr}`);
 }
 
 // Reshape an entry's flat facts into a convenient object + a facts list that
@@ -56,9 +67,16 @@ let _cache = null;
 export async function loadCatalog() {
   if (_cache) return _cache;
   const list = await getJson("/catalog");
-  const entries = await Promise.all(
-    list.map((item) => getJson(`/dataset/${item.identifier}`).then(shapeEntry)),
-  );
+  // Fetch in small batches, not 200+ at once — gentler on the free-tier API.
+  const entries = [];
+  const BATCH = 8;
+  for (let i = 0; i < list.length; i += BATCH) {
+    const slice = list.slice(i, i + BATCH);
+    const got = await Promise.all(
+      slice.map((item) => getJson(`/dataset/${item.identifier}`).then(shapeEntry)),
+    );
+    entries.push(...got);
+  }
   // stable order: judgement (Adopt first), then stars desc, then name
   const ringRank = { Adopt: 0, Assess: 1, Caution: 2 };
   entries.sort((a, b) => {
