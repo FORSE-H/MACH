@@ -779,6 +779,21 @@
   }
   .search-wrap input:focus { border-color: var(--teal-500); }
   .search-wrap input::placeholder { color: var(--gray-300); }
+  .search-input-row { display: flex; gap: .5rem; }
+  .search-input-row input { flex: 1; }
+  .semantic-btn {
+    padding: .6rem 1rem; font-family: 'DM Sans', sans-serif; font-size: .9rem;
+    font-weight: 400; white-space: nowrap; cursor: pointer;
+    border: 1px solid var(--teal-500); border-radius: 6px;
+    background: var(--teal-50); color: var(--teal-700); transition: background .15s;
+  }
+  .semantic-btn:hover { background: var(--teal-100); }
+  .semantic-btn:disabled { opacity: .6; cursor: default; }
+  .semantic-status {
+    margin-top: .5rem; font-size: .82rem; color: var(--gray-500);
+    font-family: 'DM Mono', monospace;
+  }
+  .semantic-status a { cursor: pointer; }
 
   /* ── FILTER BARS ── */
   .filter-rows { margin-bottom: 1.5rem; }
@@ -1188,7 +1203,11 @@
 
   <div class="search-wrap">
     <label for="entry-search" class="search-label">Search</label>
-    <input type="text" id="entry-search" placeholder="Search by name…" autocomplete="off" spellcheck="false">
+    <div class="search-input-row">
+      <input type="text" id="entry-search" placeholder="Filter by name… or search by meaning →" autocomplete="off" spellcheck="false">
+      <button type="button" id="semantic-btn" class="semantic-btn" title="Search by meaning using the MACH API">⌕ Semantic</button>
+    </div>
+    <p id="semantic-status" class="semantic-status" hidden></p>
   </div>
 
   <div class="filter-rows">
@@ -3379,6 +3398,95 @@
   }
 
   renderPage();
+})();
+
+// ── SEMANTIC SEARCH (calls the live MACH API; falls back gracefully) ──────────
+(function () {
+  const API = 'https://mach-render-deploy.onrender.com';
+  const input  = document.getElementById('entry-search');
+  const btn    = document.getElementById('semantic-btn');
+  const status = document.getElementById('semantic-status');
+  const grid   = document.querySelector('.entries-grid');
+  const pager  = document.getElementById('pagination');
+  if (!input || !btn || !grid) return;
+
+  const cards = Array.from(grid.querySelectorAll('.entry-card'));
+  // map each card to its identifier (from the JSON-LD link) and, as a fallback
+  // for entries whose name links straight to the project, by lowercased name.
+  const idOf = (card) => {
+    const a = card.querySelector('.entry-name a');
+    const m = a && a.href.match(/\/([^\/]+)\.jsonld/);
+    return m ? m[1] : null;
+  };
+  const nameOf = (card) => {
+    const a = card.querySelector('.entry-name a');
+    return a ? a.textContent.trim().toLowerCase() : null;
+  };
+  const byId = {}, byName = {};
+  cards.forEach((c) => {
+    const id = idOf(c); if (id) byId[id] = c;
+    const nm = nameOf(c); if (nm) byName[nm] = c;
+  });
+  // resolve an API hit to a card: by identifier, else by matching name.
+  const cardForHit = (h) => byId[h.identifier] || byName[(h.name || '').trim().toLowerCase()] || null;
+
+  let semanticOn = false;
+
+  function clearSemantic() {
+    semanticOn = false;
+    status.hidden = true;
+    grid.classList.remove('semantic-active');
+    cards.forEach((c) => { c.style.display = ''; c.style.order = ''; });
+    if (pager) pager.style.display = '';
+    input.dispatchEvent(new Event('input')); // let the name-filter re-render
+  }
+
+  async function runSemantic() {
+    const q = input.value.trim();
+    if (!q) { clearSemantic(); return; }
+    btn.disabled = true;
+    status.hidden = false;
+    status.textContent = 'Searching by meaning… (the API may take ~50s to wake if idle)';
+    try {
+      const res = await fetch(API + '/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: q, limit: 24 }),
+      });
+      if (!res.ok) throw new Error(res.status);
+      const raw = await res.json();
+      // Relevance threshold: cosine search always returns *something*, so drop
+      // weak matches (noise / gibberish) and keep only genuinely-relevant hits.
+      const THRESHOLD = 0.30;
+      const hits = raw.filter((h) => h.score >= THRESHOLD);
+      semanticOn = true;
+      if (pager) pager.style.display = 'none';          // semantic mode shows matches, no paging
+      grid.classList.add('semantic-active');
+      cards.forEach((c) => { c.style.display = 'none'; });
+      let shown = 0;
+      hits.forEach((h, i) => {
+        const c = cardForHit(h);
+        if (c) { c.style.display = ''; c.style.order = i; shown++; }
+      });
+      const safeQ = q.replace(/[<>&]/g, '');
+      if (shown === 0) {
+        status.innerHTML = `No strong matches for "${safeQ}". Try a fuller phrase (e.g. "diabetes management app"), or <a id="sem-clear">browse all</a>.`;
+      } else {
+        const tip = shown <= 2 ? ' Tip: a fuller phrase finds more.' : '';
+        status.innerHTML = `${shown} relevant ${shown === 1 ? 'result' : 'results'} for "${safeQ}", ranked by meaning.${tip} <a id="sem-clear">Clear</a>`;
+      }
+      document.getElementById('sem-clear').addEventListener('click', clearSemantic);
+    } catch (err) {
+      status.textContent = 'Semantic search is temporarily unavailable — use the name filter above, or try again shortly.';
+    } finally {
+      btn.disabled = false;
+    }
+  }
+
+  btn.addEventListener('click', runSemantic);
+  input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); runSemantic(); } });
+  // typing a plain name filter exits semantic mode
+  input.addEventListener('input', () => { if (semanticOn) clearSemantic(); });
 })();
 
 // ── Formspree AJAX submission ─────────────────────────────────────────────
