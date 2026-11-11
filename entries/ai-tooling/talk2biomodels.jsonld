@@ -1,6 +1,6 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/talk2biomodels",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/talk2biomodels",
   "@type": [
     "schema:SoftwareApplication",
     "schema:SoftwareSourceCode"
@@ -42,8 +42,8 @@
   ],
   "mach:governance": "academic",
   "mach:foundation": "EMBL-EBI",
-  "mach:category": "software",
-  "mach:subcategory": "pipeline-tools",
+  "mach:category": "ai-tooling",
+  "mach:subcategory": "ai-agent",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",
   "mach:judgementReason": "Unique natural-language interface to the BioModels database — the authoritative repository for curated mathematical models in biology. Bridges quantitative pharmacology and LLM-based reasoning, enabling non-programmer researchers to query and simulate published QSP models. MIT licence, backed by EMBL-EBI, published in BMC Bioinformatics 2025. 83 stars, early-stage adoption. Assess for teams building drug-discovery or pharmacokinetics pipelines who need LLM access to systems biology knowledge.",

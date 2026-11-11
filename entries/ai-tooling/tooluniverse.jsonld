@@ -1,6 +1,6 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/tooluniverse",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/tooluniverse",
   "@type": [
     "schema:SoftwareApplication",
     "schema:SoftwareSourceCode",
@@ -39,7 +39,7 @@
   "mach:mcpSpecVersion": "2024-11-05",
   "mach:governance": "academic",
   "mach:maturity": "production",
-  "mach:category": "mcp-servers",
+  "mach:category": "ai-tooling",
   "mach:applicability": "specialist",
   "mach:judgement": "Adopt",
   "mach:judgementReason": "The most comprehensive open biomedical MCP server available — Apache-2.0, 1.4k stars, v1.2.1 (May 2026), Harvard Zitnik Lab governance. Exposes 211 curated biomedical tools (openFDA, Open Targets, protein docking, PubMed, pharmacovigilance) as MCP endpoints, enabling any MCP-compatible agent to call clinical-grade biomedical infrastructure directly. MCP Tasks support for long-running async operations is production-ready. This is the plumbing layer for clinical AI agents — not a demo, but connective infrastructure with real scientific depth behind each tool.",
@@ -75,5 +75,6 @@
   ],
   "relatedLink": "https://github.com/FORSE-H/MACH/tree/main/entries/software/txagent",
   "mach:licenseUrl": "https://github.com/mims-harvard/ToolUniverse/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseVerified": true,
+  "mach:subcategory": "mcp-server"
 }

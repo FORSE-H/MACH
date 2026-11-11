@@ -1,6 +1,6 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/fhir-mcp-wso2",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/fhir-mcp-wso2",
   "@type": [
     "schema:SoftwareApplication",
     "mach:MCPServer"
@@ -35,8 +35,8 @@
   "mach:mcpSpecVersion": "2024-11-05",
   "mach:governance": "vendor-led",
   "mach:foundation": "WSO2",
-  "mach:category": "mcp-servers",
-  "mach:subcategory": "fhir-mcp",
+  "mach:category": "ai-tooling",
+  "mach:subcategory": "mcp-server",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",
   "mach:judgementReason": "Well-structured implementation with OAuth2 support and Docker compose for rapid local setup. MCP is itself an emerging standard (2024), and healthcare MCP servers are pre-production as of early 2026. Track this space actively; do not commit to production clinical workflows until the MCP ecosystem matures.",

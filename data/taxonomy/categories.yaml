@@ -9,15 +9,18 @@ categories:
     folder: models
     description: Clinical AI models, medical imaging models, biomedical NLP, foundation models
 
+  - id: ai-tooling
+    name: AI Tooling
+    folder: ai-tooling
+    description: >
+      AI agents, agent-skill libraries, MCP servers, and orchestration/swarm
+      frameworks for healthcare AI. Subcategories: ai-agent, agent-skills,
+      mcp-server, ai-swarm.
+
   - id: datasets
     name: Datasets
     folder: datasets
     description: Healthcare datasets, clinical benchmarks, and evaluation corpora
-
-  - id: mcp-servers
-    name: MCP Servers
-    folder: mcp-servers
-    description: Model Context Protocol servers exposing healthcare data and APIs to AI agents
 
   - id: data-sources
     name: Data Sources
