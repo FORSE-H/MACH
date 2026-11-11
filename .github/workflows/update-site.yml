@@ -6,10 +6,15 @@ on:
     paths:
       - 'entries/**'
       - 'scripts/generate_entries.py'
+      - 'scripts/generate_entry_pages.py'
       - 'scripts/generate_dashboard.py'
       - 'scripts/taxonomy.py'
       - 'data/taxonomy/categories.yaml'
+      - 'data/signals.json'
       - 'index.html'
+  schedule:
+    - cron: '0 6 * * 1'   # Mondays 06:00 UTC — pick up fresh harvested signals
+  workflow_dispatch:
 
 concurrency:
   group: update-site
@@ -41,8 +46,20 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml requests
 
+      - name: Fetch harvested signals from the harvester repo
+        # signals.json is produced by the harvest workflow in mach-render-deploy
+        # (public). Fetch the latest; if unavailable, keep any committed copy so
+        # the build still succeeds.
+        run: |
+          curl -fsSL -o data/signals.json \
+            https://raw.githubusercontent.com/FORSE-H/mach-render-deploy/main/data/signals.json \
+            || echo "WARN: could not fetch signals.json; using committed copy if present"
+
       - name: Run generate_entries.py
         run: python scripts/generate_entries.py
+
+      - name: Run generate_entry_pages.py
+        run: python scripts/generate_entry_pages.py
 
       - name: Run generate_dashboard.py
         run: python scripts/generate_dashboard.py
@@ -69,7 +86,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add entries/ index.html mach-dashboard.html
-          git diff --staged --quiet || git commit -m "ci: regenerate index.html and dashboard [skip ci]"
+          git add entries/ index.html mach-dashboard.html data/signals.json entry/
+          git diff --staged --quiet || git commit -m "ci: regenerate site, entry pages, and signals [skip ci]"
           git pull --rebase origin main
           git push

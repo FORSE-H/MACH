@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECG-FM — MACH</title>
+<style>
+  :root {
+    --teal-700:#0F6E56; --teal-300:#5EC9A6; --teal-50:#E1F5EE;
+    --amber-dark:#B45309; --amber-light:#FFFBEB; --rose:#BE123C; --rose-light:#FFF1F2;
+    --ink:#1a2027; --muted:#6b7684; --border:#e4e8ec; --bg:#fbfcfd; --card:#fff;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,'Segoe UI',system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+  .wrap { max-width:860px; margin:0 auto; padding:32px 16px 64px; }
+  a { color:var(--teal-700); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .back { font-size:0.85rem; color:var(--muted); }
+  h1 { font-size:2rem; margin:12px 0 4px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .desc { color:#39434d; margin:8px 0 16px; }
+  .links { display:flex; gap:18px; flex-wrap:wrap; font-size:0.9rem; margin-bottom:20px; }
+  .ring { font-family:'DM Mono',monospace; font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; padding:3px 10px; border-radius:999px; border:1px solid; }
+  .ring-adopt { color:var(--teal-700); border-color:var(--teal-300); background:var(--teal-50); }
+  .ring-assess { color:var(--amber-dark); border-color:#FCD34D; background:var(--amber-light); }
+  .ring-caution { color:var(--rose); border-color:#FDA4AF; background:var(--rose-light); }
+  .ring-none { color:var(--muted); border-color:var(--border); background:#f3f5f7; }
+  .verdict { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px 20px; margin:16px 0 28px; }
+  .verdict h2 { font-size:1.05rem; margin-bottom:8px; }
+  .muted { color:var(--muted); font-size:0.85rem; }
+  section { margin:28px 0; }
+  h3 { font-size:1rem; margin-bottom:6px; }
+  table.lineage { width:100%; border-collapse:collapse; margin-top:12px; font-size:0.85rem; }
+  table.lineage th { text-align:left; color:var(--muted); font-weight:600; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.05em; padding:8px 10px; border-bottom:2px solid var(--border); }
+  table.lineage td { padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  td.field { font-family:'DM Mono',monospace; color:#39434d; white-space:nowrap; }
+  td.value { word-break:break-word; }
+  td.source code, td code { font-family:'DM Mono',monospace; font-size:0.78rem; background:#f0f3f5; padding:2px 6px; border-radius:4px; color:#4a5560; }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--border); font-size:0.8rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../index.html#catalog">&#8592; Back to catalog</a>
+    <h1>ECG-FM <span class="ring ring-assess">Assess</span></h1>
+    <p class="desc">Open foundation model for electrocardiogram (ECG) analysis with 90.9 million parameters built on the wav2vec 2.0 architecture. Pre-trained on MIMIC-IV-ECG and PhysioNet datasets using W2V+CMSC+RLM methodology. Pre-trained and fine-tuned model checkpoints available via HuggingFace. Designed for clinical ECG signal processing tasks including arrhythmia detection, cardiac condition classification, and signal quality assessment. MIT licensed.</p>
+    <div class="links"><a href="https://github.com/bowang-lab/ecg-fm" target="_blank" rel="noopener">&#8599; Repository</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/models/ecg-fm.jsonld" target="_blank" rel="noopener">&#123;&#125; View JSON-LD</a></div>
+    <div class="verdict">
+      <h2>Judgement: Assess</h2>
+      <p>Assess — last commit ~10 months ago; 323 stars; permissive licence (MIT).</p>
+      <p class="muted">Derived deterministically by the MACH scorer from the signals below — not written prose.</p>
+    </div>
+    <section>
+      <h3>Signals &amp; lineage</h3>
+      <p class="muted">Every value records the source it was harvested from.</p>
+      <table class="lineage">
+        <thead><tr><th>Field</th><th>Value</th><th>Source</th></tr></thead>
+        <tbody><tr><td class="field">description</td><td class="value">An electrocardiogram analysis foundation model.</td><td class="source"><code>github_api</code></td></tr><tr><td class="field">HuggingFace downloads (monthly)</td><td class="value"><span class="muted">not_found</span></td><td class="source"><code>huggingface</code></td></tr><tr><td class="field">judgement</td><td class="value">Assess</td><td class="source"><code>mach_scorer</code></td></tr><tr><td class="field">judgement reason</td><td class="value">Assess — last commit ~10 months ago; 323 stars; permissive licence (MIT).</td><td class="source"><code>mach_scorer</code></td></tr><tr><td class="field">license</td><td class="value">MIT</td><td class="source"><code>github_api</code></td></tr><tr><td class="field">PyPI downloads (monthly)</td><td class="value"><span class="muted">not_found</span></td><td class="source"><code>pypi</code></td></tr><tr><td class="field">archived</td><td class="value">False</td><td class="source"><code>github_api</code></td></tr><tr><td class="field">GitHub forks</td><td class="value">40</td><td class="source"><code>github_api</code></td></tr><tr><td class="field">last commit</td><td class="value">2026-01-14T23:25:07Z</td><td class="source"><code>github_api</code></td></tr><tr><td class="field">GitHub stars</td><td class="value">323</td><td class="source"><code>github_api</code></td></tr></tbody>
+      </table>
+    </section>
+    <section>
+      <h3>Change history</h3>
+      <p class="muted">No recorded deviations yet — values have not changed since first harvest.</p>
+    </section>
+    <footer>MACH — Machine-Actionable Catalog for Healthcare · Judgement is rule-based, derived from harvested signals · <a href="../index.html">machcatalog.org</a></footer>
+  </div>
+</body>
+</html>
