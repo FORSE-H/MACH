@@ -1,0 +1,70 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/noodle-mcp",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "noodle-mcp",
+  "name": "Noodle Biomedical Literature Discovery MCP",
+  "alternateName": [
+    "noodle-mcp"
+  ],
+  "description": "MCP server for source-linked biomedical literature discovery across a PubMed-derived corpus, from Helena Bioinformatics. Lets LLM agents search by natural language or identifiers, retrieve publication records, check corpus coverage, and explore bounded citation and semantic-graph neighbourhoods with provenance (seven tools over a read-only Streamable HTTP endpoint). The Apache-2.0 repository holds the official adapter, packaging, a 60-prompt benchmark, CI, a Dockerfile, and a citable DOI. Important: the service itself runs at a hosted endpoint (api.helena.bio/noodle) rather than from the open repository — the adapter is open, the backing service is vendor-operated. Accepts no patient, private case, credential, or uploaded content.",
+  "url": "https://noodle.helena.bio",
+  "codeRepository": "https://github.com/helena-bioinformatics/noodle-mcp",
+  "license": "Apache-2.0",
+  "relatedLink": [
+    "https://api.helena.bio/noodle/v1/mcp"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "mcp",
+    "literature-discovery",
+    "pubmed",
+    "biomedical-literature",
+    "citation-graph",
+    "semantic-search",
+    "llm-agent",
+    "provenance"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Helena Bioinformatics",
+    "url": "https://noodle.helena.bio"
+  },
+  "mach:transport": "http",
+  "mach:authMethod": "none",
+  "mach:governance": "vendor-led",
+  "mach:category": "mcp-servers",
+  "mach:subcategory": "literature-mcp",
+  "mach:maturity": "beta",
+  "mach:aiActRiskClass": "limited-risk",
+  "mach:judgement": "Caution",
+  "mach:judgementReason": "A current, substantive (Apache-2.0, tests, CI, a 60-prompt benchmark, a citable DOI) MCP server that gives LLM agents provenance-linked access to a PubMed-derived literature corpus — a useful, lower-risk capability (read-only, no authentication, no patient data). Marked Caution rather than Assess for one decisive reason: like its sibling Folklore, the open repository is only the adapter/packaging — the actual discovery service runs on Helena Bioinformatics' hosted endpoint (api.helena.bio/noodle), a proprietary vendor-operated backend. So the code you can audit is the connector, not the service doing the work, and the capability depends on that hosted service remaining available. Genuinely useful for agents that need cited biomedical literature retrieval; users should understand they are relying on a hosted service, not self-hostable open infrastructure. Submitted via the MACH form with a disclosed maintainer affiliation.",
+  "mach:editorialReviewedAt": "2026-11-11",
+  "schema:comment": "Apache-2.0 MCP adapter to a CLOSED hosted service (api.helena.bio/noodle); backing service is not open. Submitted via MACH form (issue #7) by the maintainer. Re-verify hosting/licence on next review.",
+  "mach:clinicalDomain": [
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "cloud-only"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/helena-bioinformatics/noodle-mcp",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://noodle.helena.bio",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/helena-bioinformatics/noodle-mcp/blob/main/LICENSE",
+  "mach:licenseVerified": true
+}

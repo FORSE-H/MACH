@@ -1,0 +1,72 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/openonco",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "openonco",
+  "name": "OpenOnco",
+  "alternateName": [
+    "Open Oncology knowledge base"
+  ],
+  "description": "Open-source oncology knowledge base and decision-support project for tumor-board discussion. A deterministic Python rule engine drafts alternative treatment plans from versioned YAML specifications (an LLM does not select regimens or doses); it ships an Onco Wiki, a Plan Builder, and an MCP server. Reports coverage of 103 diseases, 831 indications, 404 regimens, 321 drugs, 189 algorithms, and 542 sources. Source-cited plan drafts are explicitly for clinician discussion and require verification — the maintainer states the project is early-stage, clinical content may be draft or awaiting review, and technical checks are not clinical validation. MIT-licensed code; specifications and generated content CC-BY-4.0.",
+  "url": "https://openonco.info",
+  "codeRepository": "https://github.com/romeo111/OpenOnco",
+  "license": "MIT",
+  "relatedLink": [
+    "https://openonco.info"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "oncology",
+    "decision-support",
+    "tumor-board",
+    "clinical-knowledge-base",
+    "rule-engine",
+    "treatment-regimens",
+    "mcp-server",
+    "cancer"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "OpenOnco"
+  },
+  "mach:governance": "individual",
+  "mach:category": "software",
+  "mach:subcategory": "clinical-decision-support",
+  "mach:maturity": "beta",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "A genuinely open (MIT), unusually substantive oncology decision-support project — a deterministic rule engine (not an LLM) drafting tumor-board plans from versioned YAML, with a wiki, plan builder, MCP server, broad content coverage (103 diseases, 404 regimens, 542 cited sources), and a very active history (~1,981 commits). The deterministic-engine design and explicit source citation are commendable, and the maintainer is refreshingly honest about limits (clinical content may be draft; technical checks are not clinical validation; outputs require clinician verification). Marked Assess rather than Adopt because it is early-stage and self-describedly draft in places, from an individual maintainer with no institutional validation, and — critically — oncology treatment decision-support is EU AI Act high-risk-candidate territory where un-validated clinical outputs carry real risk. A promising, truly-open project worth tracking and evaluating for tumor-board research/education; it must not be used for clinical prescribing without qualified review and formal validation. Submitted via the MACH form with a disclosed maintainer affiliation.",
+  "mach:editorialReviewedAt": "2026-11-11",
+  "schema:comment": "MIT code + CC-BY-4.0 specs/content; genuinely open. High-risk oncology decision-support, early-stage, maintainer-disclosed draft status. Submitted via MACH form (issue #9) by the maintainer. Re-verify maturity/validation on next review.",
+  "mach:clinicalDomain": [
+    "oncology",
+    "secondary-care",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/romeo111/OpenOnco",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://openonco.info",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/romeo111/OpenOnco/blob/main/LICENSE",
+  "mach:licenseVerified": true
+}
