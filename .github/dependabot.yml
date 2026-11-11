@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # Keep GitHub Actions pinned by SHA up to date with security patches.
+  # Dependabot opens a PR when a pinned action has a newer release, updating
+  # the SHA and the # vX comment together, so pins stay current without losing
+  # the SHA-pinning discipline.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "ci"
