@@ -1,6 +1,6 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/omcp",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/omcp",
   "@type": [
     "schema:SoftwareApplication",
     "schema:SoftwareSourceCode",
@@ -51,8 +51,8 @@
   "mach:mcpSpecVersion": "2024-11-05",
   "mach:governance": "individual",
   "mach:foundation": "FastOMOP (Niko Moeller-Grell et al., NHS / King's College London affiliation)",
-  "mach:category": "mcp-servers",
-  "mach:subcategory": "omop-mcp",
+  "mach:category": "ai-tooling",
+  "mach:subcategory": "mcp-server",
   "mach:maturity": "experimental",
   "mach:applicability": "specialist",
   "mach:judgement": "Assess",

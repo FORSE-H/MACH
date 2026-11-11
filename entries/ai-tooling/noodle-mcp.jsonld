@@ -1,6 +1,6 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/noodle-mcp",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/noodle-mcp",
   "@type": [
     "schema:SoftwareApplication",
     "schema:SoftwareSourceCode"
@@ -39,8 +39,8 @@
   "mach:transport": "http",
   "mach:authMethod": "none",
   "mach:governance": "vendor-led",
-  "mach:category": "mcp-servers",
-  "mach:subcategory": "literature-mcp",
+  "mach:category": "ai-tooling",
+  "mach:subcategory": "mcp-server",
   "mach:maturity": "beta",
   "mach:aiActRiskClass": "limited-risk",
   "mach:judgement": "Caution",

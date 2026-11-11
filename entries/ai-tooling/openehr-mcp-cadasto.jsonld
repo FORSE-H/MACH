@@ -1,6 +1,6 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/openehr-mcp-cadasto",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/openehr-mcp-cadasto",
   "@type": [
     "schema:SoftwareApplication",
     "mach:MCPServer"
@@ -42,8 +42,8 @@
   "mach:mcpSpecVersion": "2025-03-26",
   "mach:governance": "vendor-led",
   "mach:foundation": "Cadasto",
-  "mach:category": "mcp-servers",
-  "mach:subcategory": "openehr-mcp",
+  "mach:category": "ai-tooling",
+  "mach:subcategory": "mcp-server",
   "mach:maturity": "beta",
   "mach:judgement": "Assess",
   "mach:judgementReason": "The first MCP server focused on openEHR design-time knowledge — CKM archetypes, templates, and terminology. Fills a genuine gap for AI agents working with openEHR artefacts. Pre-release (v0.x, breaking changes expected), maintained by Cadasto (small org, unclear long-term sustainability), and written in PHP which limits the contributor pool. Hosted endpoint available for quick evaluation. Track alongside the openEHR CDR-focused counterpart (deak-ai). Do not use in production clinical workflows until v1.0.",

@@ -58,7 +58,7 @@
   <h1>MACH <span>Catalog Intelligence</span> Dashboard</h1>
   <p>Machine-Actionable Catalog for Healthcare · Open-source tools, models, datasets, and standards</p>
   <div class="badges">
-    <span class="badge">209 Entries Analysed</span>
+    <span class="badge">213 Entries Analysed</span>
     <span class="badge">7 Entry Categories</span>
     <span class="badge">39 Clinical Domains</span>
     <span class="badge">Verified Metadata · CC-BY-4.0</span>
@@ -68,33 +68,33 @@
 
 <!-- KPI Row -->
 <div class="kpi-grid">
-  <div class="kpi"><div class="num" style="color:#58a6ff">209</div><div class="label">Total Entries</div></div>
+  <div class="kpi"><div class="num" style="color:#58a6ff">213</div><div class="label">Total Entries</div></div>
   <div class="kpi"><div class="num" style="color:#3fb950">110</div><div class="label">Adopt</div></div>
-  <div class="kpi"><div class="num" style="color:#e3b341">93</div><div class="label">Assess</div></div>
-  <div class="kpi"><div class="num" style="color:#f85149">6</div><div class="label">Caution</div></div>
-  <div class="kpi"><div class="num" style="color:#a371f7">106</div><div class="label">Software Tools</div></div>
-  <div class="kpi"><div class="num" style="color:#f78166">30</div><div class="label">AI/ML Models</div></div>
+  <div class="kpi"><div class="num" style="color:#e3b341">95</div><div class="label">Assess</div></div>
+  <div class="kpi"><div class="num" style="color:#f85149">8</div><div class="label">Caution</div></div>
+  <div class="kpi"><div class="num" style="color:#a371f7">102</div><div class="label">Software Tools</div></div>
+  <div class="kpi"><div class="num" style="color:#f78166">31</div><div class="label">AI/ML Models</div></div>
 </div>
 
 <!-- Intelligence Findings -->
 <div class="insights">
-  <h3>🔍 Top Intelligence Findings from 209 MACH Entries</h3>
-  <div class="insight-item">— <strong>Academic governance leads:</strong> academic accounts for 95 of 209 entries (45.5%) — reflecting the research-first origins of open-source healthcare tooling. 25 are vendor-led.</div>
-  <div class="insight-item">— <strong>Research is the most represented clinical domain</strong> with 98 entries.</div>
-  <div class="insight-item">— <strong>Apache-2.0 is the dominant licence</strong> (65 entries, 31.1%). MIT follows at 39. Only 7 entries use copyleft (GPL-3.0), reducing commercial-adoption friction.</div>
-  <div class="insight-item">— <strong>Python dominates healthcare AI tooling:</strong> 68 of 109 declared-language mentions are Python (62.4%).</div>
-  <div class="insight-item">— <strong>Production maturity is the norm:</strong> 159 of 209 entries (76.1%) are rated production — MACH deliberately excludes prototype-only tools, so this reflects curation, not field-wide maturity.</div>
+  <h3>🔍 Top Intelligence Findings from 213 MACH Entries</h3>
+  <div class="insight-item">— <strong>Academic governance leads:</strong> academic accounts for 97 of 213 entries (45.5%) — reflecting the research-first origins of open-source healthcare tooling. 26 are vendor-led.</div>
+  <div class="insight-item">— <strong>Research is the most represented clinical domain</strong> with 102 entries.</div>
+  <div class="insight-item">— <strong>Apache-2.0 is the dominant licence</strong> (65 entries, 30.5%). MIT follows at 41. Only 7 entries use copyleft (GPL-3.0), reducing commercial-adoption friction.</div>
+  <div class="insight-item">— <strong>Python dominates healthcare AI tooling:</strong> 70 of 113 declared-language mentions are Python (61.9%).</div>
+  <div class="insight-item">— <strong>Production maturity is the norm:</strong> 159 of 213 entries (74.6%) are rated production — MACH deliberately excludes prototype-only tools, so this reflects curation, not field-wide maturity.</div>
   <div class="insight-item">— <strong>FHIR adoption is real but not dominant:</strong> 21 entries carry the "fhir" keyword; interoperability remains a gap (13 tagged "interoperability").</div>
-  <div class="insight-item">— <strong>Self-hosted deployment dominates (166 entries):</strong> healthcare data-sovereignty concerns drive on-premise preference; only 41 are cloud-only.</div>
+  <div class="insight-item">— <strong>Self-hosted deployment dominates (169 entries):</strong> healthcare data-sovereignty concerns drive on-premise preference; only 42 are cloud-only.</div>
 </div>
 
 <!-- Judgement Section -->
 <div class="section">
   <div class="section-title">Editorial Judgement Distribution — <span>What MACH Recommends</span></div>
   <div class="judgement-grid">
-    <div class="judgement-card adopt"><div class="num">110</div><div class="label">Adopt</div><div class="pct">52.6% of catalog</div></div>
-    <div class="judgement-card assess"><div class="num">93</div><div class="label">Assess</div><div class="pct">44.5% of catalog</div></div>
-    <div class="judgement-card caution"><div class="num">6</div><div class="label">Caution</div><div class="pct">2.9% of catalog</div></div>
+    <div class="judgement-card adopt"><div class="num">110</div><div class="label">Adopt</div><div class="pct">51.6% of catalog</div></div>
+    <div class="judgement-card assess"><div class="num">95</div><div class="label">Assess</div><div class="pct">44.6% of catalog</div></div>
+    <div class="judgement-card caution"><div class="num">8</div><div class="label">Caution</div><div class="pct">3.8% of catalog</div></div>
   </div>
   <div class="chart-grid-2">
     <div class="chart-box"><h4>Entries by Category</h4><canvas id="catChart"></canvas></div>
@@ -153,16 +153,16 @@ const TICK = { color: '#8b949e', font: { size: 11 } };
 
 new Chart(document.getElementById('catChart'), {
   type: 'doughnut',
-  data: { labels: ["Software (106)", "AI / ML Models (30)", "Datasets (27)", "Data Sources (21)", "Specs (14)", "MCP Servers (8)", "Catalogs (3)"], datasets: [{ data: [106, 30, 27, 21, 14, 8, 3], backgroundColor: COLORS, borderWidth: 2, borderColor: '#161b22' }] },
+  data: { labels: ["Software (102)", "AI / ML Models (31)", "Datasets (27)", "Data Sources (21)", "AI Tooling (15)", "Specs (14)", "Catalogs (3)"], datasets: [{ data: [102, 31, 27, 21, 15, 14, 3], backgroundColor: COLORS, borderWidth: 2, borderColor: '#161b22' }] },
   options: { plugins: { legend: { labels: { color: '#8b949e', font: { size: 11 }, boxWidth: 12 } } }, cutout: '60%' }
 });
 
 new Chart(document.getElementById('judgCatChart'), {
   type: 'bar',
-  data: { labels: ["Software", "AI / ML Models", "Datasets", "Data Sources", "Specs", "MCP Servers", "Catalogs"], datasets: [
-    { label: 'Adopt', data: [58, 8, 16, 17, 10, 1, 0], backgroundColor: '#2ea043' },
-    { label: 'Assess', data: [47, 21, 11, 2, 4, 5, 3], backgroundColor: '#d29922' },
-    { label: 'Caution', data: [1, 1, 0, 2, 0, 2, 0], backgroundColor: '#da3633' }
+  data: { labels: ["Software", "AI / ML Models", "Datasets", "Data Sources", "AI Tooling", "Specs", "Catalogs"], datasets: [
+    { label: 'Adopt', data: [57, 8, 16, 17, 2, 10, 0], backgroundColor: '#2ea043' },
+    { label: 'Assess', data: [44, 21, 11, 2, 10, 4, 3], backgroundColor: '#d29922' },
+    { label: 'Caution', data: [1, 2, 0, 2, 3, 0, 0], backgroundColor: '#da3633' }
   ] },
   options: { scales: { x: { stacked: true, ticks: TICK, grid: GRID }, y: { stacked: true, ticks: TICK, grid: GRID } },
     plugins: { legend: { labels: { color: '#8b949e', font: { size: 11 }, boxWidth: 12 } } } }
@@ -170,41 +170,41 @@ new Chart(document.getElementById('judgCatChart'), {
 
 new Chart(document.getElementById('govChart'), {
   type: 'doughnut',
-  data: { labels: ["academic (95)", "community (33)", "vendor-led (25)", "foundation (24)", "government (24)", "individual (8)"], datasets: [{ data: [95, 33, 25, 24, 24, 8], backgroundColor: COLORS, borderWidth: 2, borderColor: '#161b22' }] },
+  data: { labels: ["academic (97)", "community (33)", "vendor-led (26)", "government (24)", "foundation (24)", "individual (9)"], datasets: [{ data: [97, 33, 26, 24, 24, 9], backgroundColor: COLORS, borderWidth: 2, borderColor: '#161b22' }] },
   options: { plugins: { legend: { labels: { color: '#8b949e', font: { size: 10 }, boxWidth: 12 } } }, cutout: '60%' }
 });
 
 new Chart(document.getElementById('matChart'), {
   type: 'doughnut',
-  data: { labels: ["Production (159)", "Beta (45)", "Experimental (4)", "Legacy (1)"], datasets: [{ data: [159, 45, 4, 1], backgroundColor: ['#3fb950','#e3b341','#f85149','#6e7681'], borderWidth: 2, borderColor: '#161b22' }] },
+  data: { labels: ["Production (159)", "Beta (49)", "Experimental (4)", "Legacy (1)"], datasets: [{ data: [159, 49, 4, 1], backgroundColor: ['#3fb950','#e3b341','#f85149','#6e7681'], borderWidth: 2, borderColor: '#161b22' }] },
   options: { plugins: { legend: { labels: { color: '#8b949e', font: { size: 11 }, boxWidth: 12 } } }, cutout: '60%' }
 });
 
 new Chart(document.getElementById('licChart'), {
   type: 'bar',
-  data: { labels: ["Apache-2.0", "MIT", "BSD-3-Clause", "CC-BY-4.0", "CC0-1.0", "GPL-3.0", "custom", "CC-BY-NC-ND-4.0"], datasets: [{ data: [65, 39, 11, 10, 9, 7, 6, 5], backgroundColor: COLORS }] },
+  data: { labels: ["Apache-2.0", "MIT", "CC-BY-4.0", "BSD-3-Clause", "CC0-1.0", "GPL-3.0", "custom", "CC-BY-NC-ND-4.0"], datasets: [{ data: [65, 41, 11, 11, 9, 7, 6, 6], backgroundColor: COLORS }] },
   options: { indexAxis: 'y', scales: { x: { ticks: TICK, grid: GRID }, y: { ticks: TICK, grid: GRID } }, plugins: { legend: { display: false } } }
 });
 
 new Chart(document.getElementById('langChart'), {
   type: 'bar',
-  data: { labels: ["Python", "Java", "C++", "TypeScript", "Vue", "Swift", "Kotlin", "JavaScript"], datasets: [{ data: [68, 12, 9, 4, 3, 2, 2, 2], backgroundColor: '#58a6ff' }] },
+  data: { labels: ["Python", "Java", "C++", "TypeScript", "Vue", "Swift", "Kotlin", "JavaScript"], datasets: [{ data: [70, 12, 9, 5, 3, 2, 2, 2], backgroundColor: '#58a6ff' }] },
   options: { indexAxis: 'y', scales: { x: { ticks: TICK, grid: GRID }, y: { ticks: { ...TICK, font: { size: 10 } }, grid: GRID } }, plugins: { legend: { display: false } } }
 });
 
 new Chart(document.getElementById('deployChart'), {
   type: 'doughnut',
-  data: { labels: ["self-hosted (166)", "cloud (50)", "cloud-only (41)", "docker (33)", "offline-capable (31)", "embedded-library (8)", "cloud-deployable (7)", "gdpr-ready (5)", "research (4)", "hipaa-ready (3)", "mobile (2)", "kubernetes (1)", "eu-ai-act-documented (1)"], datasets: [{ data: [166, 50, 41, 33, 31, 8, 7, 5, 4, 3, 2, 1, 1], backgroundColor: COLORS, borderWidth: 2, borderColor: '#161b22' }] },
+  data: { labels: ["self-hosted (169)", "cloud (51)", "cloud-only (42)", "docker (33)", "offline-capable (31)", "embedded-library (8)", "cloud-deployable (7)", "gdpr-ready (5)", "research (4)", "hipaa-ready (3)", "mobile (2)", "offline (1)", "kubernetes (1)", "eu-ai-act-documented (1)"], datasets: [{ data: [169, 51, 42, 33, 31, 8, 7, 5, 4, 3, 2, 1, 1, 1], backgroundColor: COLORS, borderWidth: 2, borderColor: '#161b22' }] },
   options: { plugins: { legend: { labels: { color: '#8b949e', font: { size: 10 }, boxWidth: 12 } } }, cutout: '60%' }
 });
 
 new Chart(document.getElementById('osChart'), {
   type: 'bar',
-  data: { labels: ["Linux", "macOS", "Windows", "Docker", "Android", "Kubernetes", "iOS"], datasets: [{ data: [57, 43, 34, 14, 2, 1, 1], backgroundColor: '#a371f7' }] },
+  data: { labels: ["Linux", "macOS", "Windows", "Docker", "Android", "Kubernetes", "iOS"], datasets: [{ data: [58, 43, 34, 14, 2, 1, 1], backgroundColor: '#a371f7' }] },
   options: { scales: { x: { ticks: TICK, grid: GRID }, y: { ticks: TICK, grid: GRID } }, plugins: { legend: { display: false } } }
 });
 
-const domains = [["Research", 98], ["Oncology", 67], ["Primary Care", 36], ["Secondary Care", 32], ["Radiology", 30], ["Public Health", 26], ["Pathology", 26], ["Cardiology", 19], ["Genomics", 17], ["Rare Disease", 17], ["Neurology", 15], ["Medical Imaging", 12], ["Clinical Research", 11], ["Epidemiology", 9], ["Global Health", 8]];
+const domains = [["Research", 102], ["Oncology", 67], ["Primary Care", 37], ["Secondary Care", 33], ["Radiology", 32], ["Public Health", 26], ["Pathology", 26], ["Cardiology", 19], ["Rare Disease", 17], ["Genomics", 17], ["Neurology", 17], ["Medical Imaging", 12], ["Clinical Research", 11], ["Epidemiology", 9], ["Global Health", 8]];
 const domColors = ['#58a6ff','#f85149','#3fb950','#e3b341','#a371f7','#f78166','#56d364','#ffa657','#79c0ff','#58a6ff','#3fb950','#e3b341','#a371f7','#f78166','#56d364'];
 const maxD = domains.length ? domains[0][1] : 1;
 const domContainer = document.getElementById('domainBars');
@@ -212,7 +212,7 @@ domains.forEach(([name, val], i) => {
   domContainer.innerHTML += `<div class="bar-item"><div class="name">${name}</div><div class="bar-wrap"><div class="bar-fill" style="width:${(val/maxD*100).toFixed(1)}%;background:${domColors[i % domColors.length]}"></div></div><div class="val">${val}</div></div>`;
 });
 
-const keywords = [["medical-imaging", 32], ["digital-pathology", 32], ["ehr", 29], ["radiology", 28], ["dicom", 27], ["python", 26], ["whole-slide-imaging", 21], ["fhir", 21], ["benchmark", 20], ["mri", 18], ["deep-learning", 18], ["pytorch", 18], ["segmentation", 15], ["foundation-model", 14], ["ct", 13], ["interoperability", 13], ["open-data", 12], ["rest-api", 12], ["llm", 12], ["llm-agent", 11]];
+const keywords = [["medical-imaging", 32], ["digital-pathology", 32], ["ehr", 29], ["radiology", 28], ["dicom", 27], ["python", 26], ["fhir", 21], ["whole-slide-imaging", 21], ["benchmark", 20], ["pytorch", 19], ["mri", 18], ["deep-learning", 18], ["foundation-model", 16], ["segmentation", 15], ["ct", 13], ["interoperability", 13], ["neuroimaging", 13], ["llm", 12], ["llm-agent", 12], ["open-data", 12]];
 const maxK = keywords.length ? keywords[0][1] : 1;
 const kwContainer = document.getElementById('kwBars');
 keywords.forEach(([name, val], i) => {
