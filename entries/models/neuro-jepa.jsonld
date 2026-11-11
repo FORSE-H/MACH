@@ -1,0 +1,83 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/neuro-jepa",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "neuro-jepa",
+  "name": "Neuro-JEPA",
+  "alternateName": [
+    "Sparse Latent Predictive Foundation Model for Multimodal Neuroimaging"
+  ],
+  "description": "Foundation model for multimodal volumetric brain MRI that extends the V-JEPA 2 joint-embedding predictive architecture to 3D and combines a latent predictive objective with a sparse Mixture-of-Experts backbone (3D ViT-Base-MoE, 96×108×96 voxels). Adds foreground-aware objectives and improved masking for T1-weighted, T2-weighted, and FLAIR sequences. Pretrained on ~1.55 million curated scans from 428,647 studies across 282,693 patients at NYU Langone, and evaluated across 47 downstream tasks spanning diagnosis, prognosis, regression, multimodal learning, and time-to-event prediction over 12 public cohorts plus 3 large clinical cohorts (NYU Langone, NYU Long Island, Massachusetts General Hospital). Reports average gains of 4.4–6.4% AUROC on unimodal and 5.8–7.6% AUROC on multimodal tasks over prior neuroimaging foundation models and CNN baselines. Code is MIT; model weights are gated and released under CC-BY-NC-ND-4.0 (non-commercial, no derivatives).",
+  "url": "https://huggingface.co/NYUMedML/Neuro-JEPA",
+  "codeRepository": "https://github.com/NYUMedML/Neuro-JEPA",
+  "relatedLink": [
+    "https://arxiv.org/abs/2606.14957",
+    "https://github.com/NYUMedML/Neuro-JEPA"
+  ],
+  "license": "CC-BY-NC-ND-4.0",
+  "keywords": [
+    "neuroimaging",
+    "brain-mri",
+    "foundation-model",
+    "jepa",
+    "v-jepa-2",
+    "mixture-of-experts",
+    "self-supervised",
+    "multimodal",
+    "vision-transformer",
+    "neurology"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "NYU Langone Health / NYU MedML",
+      "url": "https://github.com/NYUMedML"
+    }
+  ],
+  "mach:weightsLicense": "CC-BY-NC-ND-4.0",
+  "mach:trainingDataSummary": "Self-supervised pretraining on ~1.55 million curated T1w, T2w, and FLAIR brain MRI scans from 428,647 studies across 282,693 patients at NYU Langone Health. The underlying clinical pretraining data is private/PHI and is not released; only model weights are distributed (gated, approval required). Base architecture: 3D ViT-Base with sparse Mixture-of-Experts (V-JEPA 2 latent-predictive objective).",
+  "mach:intendedUse": "Academic neuroimaging research — brain MRI feature extraction and downstream fine-tuning for diagnosis, prognosis, age prediction, time-to-event analysis, and multimodal learning across T1w/T2w/FLAIR. Restricted to non-commercial research use. Not a cleared medical device and not validated for clinical decision-making.",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:governance": "academic",
+  "mach:foundation": "NYU Langone Health",
+  "mach:category": "ai-ml-models",
+  "mach:subcategory": "imaging-model",
+  "mach:maturity": "beta",
+  "mach:clinicalDomain": [
+    "neurology",
+    "radiology",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud"
+  ],
+  "mach:judgement": "Caution",
+  "mach:judgementReason": "A current (June 2026) and technically strong neuroimaging foundation model — the V-JEPA 2 latent-predictive objective extended to 3D with a sparse Mixture-of-Experts backbone, pretrained on ~1.55M real clinical brain MRI scans and evaluated across 47 tasks with consistent gains over prior foundation models and CNN baselines. The training/evaluation code is openly MIT-licensed, which is a genuine plus. It is marked Caution rather than Assess because of the model weights: they are gated (institutional email and approval required, no redistribution) and licensed CC-BY-NC-ND-4.0 — both NonCommercial and NoDerivatives, which is not an open licence by the Open Source Definition or open-data norms. NoDerivatives in particular forbids fine-tuning and adaptation, the primary use case for a foundation model, and commercial use, monetization, and redistribution are all prohibited. The pretraining corpus is private PHI and unreleased, so results cannot be independently reproduced from the data. Evidence is currently the authors' own arXiv preprint (not yet peer-reviewed), and under the EU AI Act risk cap clinical neuroimaging diagnosis/prognosis is high-risk-candidate territory. Useful as a research starting point for academic teams who can accept the gated, non-commercial, no-derivatives terms; teams needing to fine-tune, deploy commercially, or redistribute should treat the weights as unusable and consider the openly licensed code instead. The MIT-licensed code is cataloged separately as neuro-jepa (software).",
+  "mach:editorialReviewedAt": "2026-06-19",
+  "schema:comment": "Weights are gated on HuggingFace (approval required) and licensed CC-BY-NC-ND-4.0; NoDerivatives forbids fine-tuning. Re-verify licence and gating on next review. Pretraining data is private NYU Langone PHI and not released.",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/NYUMedML/Neuro-JEPA",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2606.14957",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "Learning Sparse Latent Predictive Foundation Model for Multimodal Neuroimaging. arXiv:2606.14957 (2026)."
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/NYUMedML/Neuro-JEPA",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:huggingFaceUrl": "https://huggingface.co/NYUMedML/Neuro-JEPA",
+  "mach:licenseUrl": "https://huggingface.co/NYUMedML/Neuro-JEPA",
+  "mach:licenseVerified": true
+}
