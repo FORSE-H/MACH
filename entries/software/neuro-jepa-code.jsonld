@@ -1,11 +1,11 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/neuro-jepa",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/neuro-jepa-code",
   "@type": [
     "schema:SoftwareApplication",
     "schema:SoftwareSourceCode"
   ],
-  "identifier": "neuro-jepa",
+  "identifier": "neuro-jepa-code",
   "name": "Neuro-JEPA (code)",
   "alternateName": [
     "Neuro-JEPA training and evaluation code"
