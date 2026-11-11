@@ -36,7 +36,6 @@
   "mach:governance": "academic",
   "mach:foundation": "Stanford University",
   "mach:category": "software",
-  "mach:maturity": "beta",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud"
@@ -46,8 +45,6 @@
     "secondary-care",
     "research"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The most capable open framework for training EHR foundation models on structured data. Tightly integrated with the MEDS standard and the EHRSHOT benchmark (both from the same Shah Lab). Apache 2.0, 173 stars, v0.2.4. Assess rather than Adopt because it is pre-1.0 with a beta API and MEDS itself is still stabilising. Teams building clinical foundation models on structured EHR should evaluate this before building custom pipelines.",
   "mach:editorialReviewedAt": "2026-05-16",
   "mach:evidence": [
     {
@@ -57,6 +54,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:9b741685df88a449a445ad2b5d4cb012cf249668",
-  "mach:licenseUrl": "https://github.com/som-shahlab/femr/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/som-shahlab/femr/blob/main/LICENSE"
 }

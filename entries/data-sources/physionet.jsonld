@@ -20,7 +20,6 @@
   ],
   "license": "CC-BY-4.0",
   "mach:licenseUrl": "https://physionet.org/about/licenses/",
-  "mach:licenseVerified": true,
   "keywords": [
     "ecg",
     "icu",
@@ -44,7 +43,6 @@
   ],
   "mach:governance": "academic",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud"
   ],
@@ -53,8 +51,6 @@
     "critical-care",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The primary open repository for clinical physiological signal research — 130+ versioned, DOI-citable datasets covering ECG, ICU, and multimodal waveforms. Home to MIMIC-III/IV and PTB-XL, the most widely used open clinical datasets in the world. CC BY 4.0 for most datasets (some require free credentialing). REST API and WFDB library provide programmatic access. Adopt as the first stop for any team working on clinical signal AI, cardiac research, or critical care modelling.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {

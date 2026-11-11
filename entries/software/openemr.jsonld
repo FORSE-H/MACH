@@ -33,14 +33,11 @@
     "url": "https://open-emr.org/"
   },
   "mach:governance": "foundation",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The most popular open-source EHR by community size (5.1k stars, 2.9k forks), ONC Certified as of Version 8 (February 2026), and production-proven at international scale — International Planned Parenthood Federation, Peace Corps, and Siaya District Hospital among others. Foundation-governed (OpenEMR Foundation, Inc.), GPL-3.0, FHIR-integrated, and HIPAA billing compliant. Complements OpenMRS in the MACH catalog: OpenEMR is the reference choice for US practice management and ONC compliance; OpenMRS is the reference for LMIC and modular concept-driven deployments.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -60,6 +57,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:fda01928639f5f778fb3c6762fa8fbd2f98fff5f",
-  "mach:licenseUrl": "https://github.com/openemr/openemr/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/openemr/openemr/blob/master/LICENSE"
 }

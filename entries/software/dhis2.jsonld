@@ -34,14 +34,11 @@
     "url": "https://www.mn.uio.no/ifi/english/research/networks/hisp/"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference open-source HMIS platform for public health — deployed in 80+ countries, endorsed by WHO, World Bank, Gates Foundation, Gavi, UNICEF, and Wellcome Trust, and recognised as a Digital Public Good. 14,826 commits, FHIR-integrated, BSD 3-Clause. Led by the HISP Centre at the University of Oslo with a global network of implementers. Fills the public health surveillance slot in the MACH catalog that OpenMRS (clinical EMR) and OpenEMR (practice management) do not cover.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -61,6 +58,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:06ffa3f233a87c52674ac342f9cb011151d5d696",
-  "mach:licenseUrl": "https://github.com/dhis2/dhis2-core/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/dhis2/dhis2-core/blob/master/LICENSE"
 }

@@ -41,9 +41,6 @@
   "mach:governance": "individual",
   "mach:category": "ai-tooling",
   "mach:subcategory": "mcp-server",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The first MCP server for live EHRbase CDR interaction — covering the full composition lifecycle and AQL queries. Concretely useful for AI agents that need to read and write real patient data in an openEHR CDR. EHRbase-specific (not generic openEHR), which limits portability to other CDRs. Very early stage (14 commits, v0.1.0), individual maintainer, no auth mechanism documented. Complementary to Cadasto's design-time server. Evaluate alongside it; do not use with real patient data until auth and stability mature.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "primary-care",
@@ -68,6 +65,5 @@
     "openehr-mcp-cadasto"
   ],
   "mach:swhid": "swh:1:ori:1412de90d56ffa05fca10fdcdbcf33ce415a570d",
-  "mach:licenseUrl": "https://github.com/deak-ai/openehr-mcp-server/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/deak-ai/openehr-mcp-server/blob/main/LICENSE"
 }

@@ -35,13 +35,10 @@
     "url": "https://www.mayadataprivacy.com/"
   },
   "mach:governance": "vendor-led",
-  "mach:maturity": "beta",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Open-source PII redaction tool from MAYA Data Privacy, a commercial vendor whose closed-source products (AppSafe, FileSafe, AISafe) target enterprise HIPAA and GDPR compliance — Veil is their community offering. Directly relevant to safe AI use in healthcare: prevents patient or staff data from reaching external AI services inadvertently. All processing is local via GLiNER2 ONNX, MIT licensed, actively maintained (v1.2.8, April 2026, 11 releases). Marked Assess due to limited community adoption (2 GitHub stars) and narrow deployment as a Chrome extension only — watch for broader client or API support.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -56,6 +53,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:07cd509c5bf97cbf310f42c052e3e04caf33fb36",
-  "mach:licenseUrl": "https://github.com/MAYA-DATA-PRIVACY/Veil/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/MAYA-DATA-PRIVACY/Veil/blob/main/LICENSE"
 }

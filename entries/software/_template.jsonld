@@ -30,10 +30,9 @@
   "mach:foundation": "Foundation Name (if applicable)",
   "mach:category": "software",
   "mach:subcategory": "ehr",
-  "mach:maturity": "production",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Explain in 1–3 sentences why this judgement level was chosen.",
   "mach:editorialReviewedAt": "YYYY-MM-DD",
+
+  "_comment": "Judgement (Adopt/Assess/Caution) is assigned by the scorer from harvested signals — do NOT add mach:judgement, mach:judgementReason, mach:maturity, or mach:licenseVerified here. Remove this _comment before committing.",
 
   "mach:clinicalDomain": ["primary-care"],
   "mach:deploymentContext": ["self-hosted", "docker"],

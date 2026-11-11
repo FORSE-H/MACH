@@ -34,14 +34,11 @@
     }
   ],
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The most permissively licensed major pathology foundation model — Apache 2.0, unlike UNI (CC-BY-NC-ND) and CONCH (CC-BY-NC-ND). Published in Nature 2024, 46k+ monthly HuggingFace downloads, dual tile+slide encoder architecture. Trained on real clinical Providence data rather than academic collections, providing strong clinical validity. The open licence makes it the preferred choice for commercial and derivative pathology AI development where UNI's NC restriction is a blocker.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -60,6 +57,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/prov-gigapath/prov-gigapath/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/prov-gigapath/prov-gigapath/blob/main/LICENSE"
 }

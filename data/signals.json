@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-11T13:29:12.562074+00:00",
-  "entry_count": 206,
+  "generated_at": "2026-11-11T19:27:32.324318+00:00",
+  "entry_count": 209,
   "embedder_model": "sentence-transformers/all-MiniLM-L6-v2",
   "entries": [
     {
@@ -1470,6 +1470,202 @@
         }
       ],
       "history": []
+    },
+    {
+      "identifier": "clawbio",
+      "name": "ClawBio",
+      "url": "https://github.com/ClawBio/ClawBio",
+      "code_repository": "https://github.com/ClawBio/ClawBio",
+      "category": "ai-tooling",
+      "scored": true,
+      "judgement": "Adopt",
+      "judgement_reason": "Adopt — committed within 3 months; 1181 stars (strong community); permissive licence (MIT).",
+      "signals": {
+        "repo_stars": 1181,
+        "repo_forks": 292,
+        "repo_last_commit": "2026-11-11T17:59:15Z",
+        "repo_archived": false,
+        "license": "MIT",
+        "pypi_downloads": null,
+        "hf_downloads": null
+      },
+      "facts": [
+        {
+          "field_name": "description",
+          "value": "🦖 ClawBio - The first bioinformatics-native AI agent skill library. Local-first. Reproducible. Open. Free.",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "description",
+          "value": "🦖 ClawBio - The first bioinformatics-native AI agent skill library. Local-first. Reproducible. Open. Free.",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement",
+          "value": "Adopt",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement",
+          "value": "Adopt",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement_reason",
+          "value": "Adopt — committed within 3 months; 1181 stars (strong community); permissive licence (MIT).",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement_reason",
+          "value": "Adopt — committed within 3 months; 1181 stars (strong community); permissive licence (MIT).",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "license",
+          "value": "MIT",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "license",
+          "value": "MIT",
+          "source_id": "github_api+license_text",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_archived",
+          "value": "False",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_archived",
+          "value": "False",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_forks",
+          "value": "292",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_forks",
+          "value": "292",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_last_commit",
+          "value": "2026-11-11T17:59:15Z",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_last_commit",
+          "value": "2026-11-11T17:59:15Z",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_stars",
+          "value": "1181",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_stars",
+          "value": "1181",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        }
+      ],
+      "history": [
+        {
+          "field_name": "judgement",
+          "value": "Adopt",
+          "previous_value": "Assess",
+          "source_id": "mach_scorer",
+          "changed_at": "2026-11-11T20:26:31.613792"
+        },
+        {
+          "field_name": "judgement_reason",
+          "value": "Adopt — committed within 3 months; 1181 stars (strong community); permissive licence (MIT).",
+          "previous_value": "Assess — committed within 3 months; 1181 stars (strong community); no clear open licence. Capped: no clear open licence.",
+          "source_id": "mach_scorer",
+          "changed_at": "2026-11-11T20:26:31.613792"
+        },
+        {
+          "field_name": "license",
+          "value": "MIT",
+          "previous_value": "NOASSERTION",
+          "source_id": "github_api+license_text",
+          "changed_at": "2026-11-11T20:26:31.088729"
+        },
+        {
+          "field_name": "judgement",
+          "value": "Assess",
+          "previous_value": null,
+          "source_id": "mach_scorer",
+          "changed_at": "2026-11-11T20:22:08.512882"
+        },
+        {
+          "field_name": "judgement_reason",
+          "value": "Assess — committed within 3 months; 1181 stars (strong community); no clear open licence. Capped: no clear open licence.",
+          "previous_value": null,
+          "source_id": "mach_scorer",
+          "changed_at": "2026-11-11T20:22:08.512882"
+        },
+        {
+          "field_name": "description",
+          "value": "🦖 ClawBio - The first bioinformatics-native AI agent skill library. Local-first. Reproducible. Open. Free.",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.134975"
+        },
+        {
+          "field_name": "license",
+          "value": "NOASSERTION",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.134975"
+        },
+        {
+          "field_name": "repo_archived",
+          "value": "False",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.134975"
+        },
+        {
+          "field_name": "repo_forks",
+          "value": "292",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.134975"
+        },
+        {
+          "field_name": "repo_last_commit",
+          "value": "2026-11-11T17:59:15Z",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.134975"
+        },
+        {
+          "field_name": "repo_stars",
+          "value": "1181",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.134975"
+        }
+      ]
     },
     {
       "identifier": "clinicaltrials",
@@ -5952,6 +6148,181 @@
       "history": []
     },
     {
+      "identifier": "marc-v1",
+      "name": "MARC v1",
+      "url": "https://github.com/Penn-RAIL/MARC-v1",
+      "code_repository": "https://github.com/Penn-RAIL/MARC-v1",
+      "category": "ai-tooling",
+      "scored": true,
+      "judgement": "Assess",
+      "judgement_reason": "Assess — committed within 3 months; 11 stars (little traction); permissive licence (MIT).",
+      "signals": {
+        "repo_stars": 11,
+        "repo_forks": 6,
+        "repo_last_commit": "2026-08-14T19:45:54Z",
+        "repo_archived": false,
+        "license": "MIT",
+        "pypi_downloads": null,
+        "hf_downloads": null
+      },
+      "facts": [
+        {
+          "field_name": "description",
+          "value": "General purpose framework for multi-agent coordination",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "description",
+          "value": "General purpose framework for multi-agent coordination",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement",
+          "value": "Assess",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement",
+          "value": "Assess",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement_reason",
+          "value": "Assess — committed within 3 months; 11 stars (little traction); permissive licence (MIT).",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement_reason",
+          "value": "Assess — committed within 3 months; 11 stars (little traction); permissive licence (MIT).",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "license",
+          "value": "MIT",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "license",
+          "value": "MIT",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_archived",
+          "value": "False",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_archived",
+          "value": "False",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_forks",
+          "value": "6",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_forks",
+          "value": "6",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_last_commit",
+          "value": "2026-08-14T19:45:54Z",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_last_commit",
+          "value": "2026-08-14T19:45:54Z",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_stars",
+          "value": "11",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_stars",
+          "value": "11",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        }
+      ],
+      "history": [
+        {
+          "field_name": "judgement",
+          "value": "Assess",
+          "previous_value": null,
+          "source_id": "mach_scorer",
+          "changed_at": "2026-11-11T20:22:09.737793"
+        },
+        {
+          "field_name": "judgement_reason",
+          "value": "Assess — committed within 3 months; 11 stars (little traction); permissive licence (MIT).",
+          "previous_value": null,
+          "source_id": "mach_scorer",
+          "changed_at": "2026-11-11T20:22:09.737793"
+        },
+        {
+          "field_name": "description",
+          "value": "General purpose framework for multi-agent coordination",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:09.509060"
+        },
+        {
+          "field_name": "license",
+          "value": "MIT",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:09.509060"
+        },
+        {
+          "field_name": "repo_archived",
+          "value": "False",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:09.509060"
+        },
+        {
+          "field_name": "repo_forks",
+          "value": "6",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:09.509060"
+        },
+        {
+          "field_name": "repo_last_commit",
+          "value": "2026-08-14T19:45:54Z",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:09.509060"
+        },
+        {
+          "field_name": "repo_stars",
+          "value": "11",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:09.509060"
+        }
+      ]
+    },
+    {
       "identifier": "medagentbench",
       "name": "MedAgentBench",
       "url": "https://ai.nejm.org/doi/full/10.1056/AIdbp2500144",
@@ -9584,6 +9955,181 @@
         }
       ],
       "history": []
+    },
+    {
+      "identifier": "openclaw-medical-skills",
+      "name": "OpenClaw Medical Skills",
+      "url": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+      "code_repository": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+      "category": "ai-tooling",
+      "scored": true,
+      "judgement": "Assess",
+      "judgement_reason": "Assess — last commit ~4 months ago; 3102 stars (strong community); no clear open licence. Capped: no clear open licence.",
+      "signals": {
+        "repo_stars": 3102,
+        "repo_forks": 423,
+        "repo_last_commit": "2026-07-21T01:01:51Z",
+        "repo_archived": false,
+        "license": null,
+        "pypi_downloads": null,
+        "hf_downloads": null
+      },
+      "facts": [
+        {
+          "field_name": "description",
+          "value": "The largest open-source medical AI skills library for OpenClaw🦞.",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "description",
+          "value": "The largest open-source medical AI skills library for OpenClaw🦞.",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement",
+          "value": "Assess",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement",
+          "value": "Assess",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement_reason",
+          "value": "Assess — last commit ~4 months ago; 3102 stars (strong community); no clear open licence. Capped: no clear open licence.",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "judgement_reason",
+          "value": "Assess — last commit ~4 months ago; 3102 stars (strong community); no clear open licence. Capped: no clear open licence.",
+          "source_id": "mach_scorer",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "license",
+          "value": null,
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "license",
+          "value": null,
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_archived",
+          "value": "False",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_archived",
+          "value": "False",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_forks",
+          "value": "423",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_forks",
+          "value": "423",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_last_commit",
+          "value": "2026-07-21T01:01:51Z",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_last_commit",
+          "value": "2026-07-21T01:01:51Z",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_stars",
+          "value": "3102",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        },
+        {
+          "field_name": "repo_stars",
+          "value": "3102",
+          "source_id": "github_api",
+          "fetch_status": "ok"
+        }
+      ],
+      "history": [
+        {
+          "field_name": "judgement",
+          "value": "Assess",
+          "previous_value": null,
+          "source_id": "mach_scorer",
+          "changed_at": "2026-11-11T20:22:09.154704"
+        },
+        {
+          "field_name": "judgement_reason",
+          "value": "Assess — last commit ~4 months ago; 3102 stars (strong community); no clear open licence. Capped: no clear open licence.",
+          "previous_value": null,
+          "source_id": "mach_scorer",
+          "changed_at": "2026-11-11T20:22:09.154704"
+        },
+        {
+          "field_name": "description",
+          "value": "The largest open-source medical AI skills library for OpenClaw🦞.",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.889359"
+        },
+        {
+          "field_name": "license",
+          "value": null,
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.889359"
+        },
+        {
+          "field_name": "repo_archived",
+          "value": "False",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.889359"
+        },
+        {
+          "field_name": "repo_forks",
+          "value": "423",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.889359"
+        },
+        {
+          "field_name": "repo_last_commit",
+          "value": "2026-07-21T01:01:51Z",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.889359"
+        },
+        {
+          "field_name": "repo_stars",
+          "value": "3102",
+          "previous_value": null,
+          "source_id": "github_api",
+          "changed_at": "2026-11-11T20:22:08.889359"
+        }
+      ]
     },
     {
       "identifier": "opendata-nhs-scotland",

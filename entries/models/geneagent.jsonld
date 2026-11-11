@@ -41,9 +41,6 @@
   "mach:foundation": "National Institutes of Health / NLM",
   "mach:category": "ai-ml-models",
   "mach:subcategory": "genomics",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The leading open-source agent for gene-set functional analysis. Published in Nature Methods 2025 (top-tier methods journal) from NIH/NLM. Self-verification loop against Gene Ontology, KEGG, and NCBI databases reduces hallucinations by 40% over baseline LLMs — a critical property for genomics research. Public domain licence (US Government Work), freely usable without restriction. Live demo available at NCBI. Recommended for any team performing pathway analysis, biomarker annotation, or integrating genomic data into clinical or research pipelines.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -70,6 +67,5 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/ncbi-nlp/GeneAgent/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/ncbi-nlp/GeneAgent/blob/main/LICENSE"
 }

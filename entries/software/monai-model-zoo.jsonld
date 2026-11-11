@@ -54,9 +54,6 @@
   "mach:governance": "community",
   "mach:category": "software",
   "mach:subcategory": "imaging-model",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The most comprehensive open-source collection of production-ready medical imaging models. 30+ models in a standardised Bundle format (weights + configs + inference scripts) spanning CT, MRI, pathology, and endoscopy. Apache-2.0, highly active (315 stars, regular releases), distributed via GitHub, NVIDIA NGC, and Hugging Face. MONAI Bundle format enables reproducible deployment but lacks alignment with open metadata standards (no MLDCAT-AP, Croissant, or CodeMeta) — MACH partially fills that gap by providing standards-aligned metadata for individual zoo entries.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "radiology",
@@ -94,6 +91,5 @@
     "medsam"
   ],
   "mach:swhid": "swh:1:ori:98b121215e6edcf92020c17b4be4630649dd2b3a",
-  "mach:licenseUrl": "https://github.com/Project-MONAI/model-zoo/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/Project-MONAI/model-zoo/blob/master/LICENSE"
 }

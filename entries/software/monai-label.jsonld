@@ -50,14 +50,11 @@
     }
   ],
   "mach:governance": "community",
-  "mach:maturity": "beta",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "docker"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Purpose-built AI annotation server filling a distinct gap from MONAI core (training framework) — MONAI Label handles the data labeling workflow with active learning and integrates natively with 3D Slicer, OHIF, and QuPath. Apache 2.0, 844 stars, SAM2 integration added in 2025. Formal release cadence has slowed (last release v0.8.5, October 2023) but GitHub shows ongoing development. Assess until a new versioned release is published. Compare with 3D Slicer's built-in segmentation tools and CVAT for annotation alternatives.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -67,6 +64,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:eed761e71a0caab13a61c03acdf0006d91b26a1b",
-  "mach:licenseUrl": "https://github.com/Project-MONAI/MONAILabel/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/Project-MONAI/MONAILabel/blob/main/LICENSE"
 }

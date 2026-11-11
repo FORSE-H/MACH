@@ -33,7 +33,6 @@
     "url": "https://github.com/actava-ai"
   },
   "mach:governance": "vendor-led",
-  "mach:maturity": "beta",
   "mach:category": "datasets",
   "mach:clinicalDomain": [
     "clinical-research",
@@ -44,8 +43,6 @@
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The only open benchmark for AI agent performance on healthcare administrative workflows — prior auth, utilisation management, and population care management. Apache-2.0, v1.0.1, arXiv paper (2605.16679). Assess due to vendor-led governance (Actava AI), 26 stars, and a gated policy handbook dataset requiring Hugging Face access approval. The 28% best-agent pass@1 signals genuine task difficulty and benchmark rigour. No equivalent exists in the catalog — relevant for any team building healthcare workflow automation agents.",
   "mach:editorialReviewedAt": "2026-05-24",
   "mach:evidence": [
     {
@@ -60,6 +57,5 @@
       "schema:name": "Chi-Bench: Benchmarking AI Agents on Healthcare Workflows. arXiv 2025."
     }
   ],
-  "mach:licenseUrl": "https://github.com/actava-ai/chi-bench/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/actava-ai/chi-bench/blob/main/LICENSE"
 }

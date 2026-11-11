@@ -40,9 +40,6 @@
   "mach:governance": "individual",
   "mach:category": "software",
   "mach:subcategory": "ehr",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The leading open-source alternative to commercial AI clinical scribes. Local-first Electron app processes audio entirely on-device — no patient data leaves the clinic — a critical differentiator for practices subject to HIPAA, GDPR, or institutional data governance policies. 165 stars and 38 forks within 6 months of launch signals strong community demand. MIT licence, actively maintained. Individual-governed and no peer-reviewed publication yet; Assess pending community growth and clinical validation, but the privacy-preserving design makes it worth evaluating now for any team exploring ambient clinical documentation.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "primary-care",
@@ -61,6 +58,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:941d0cebf7be15c329a2bac1a092398fb13f8f47",
-  "mach:licenseUrl": "https://github.com/sammargolis/OpenScribe/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/sammargolis/OpenScribe/blob/main/LICENSE"
 }

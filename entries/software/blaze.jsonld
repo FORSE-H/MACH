@@ -15,7 +15,6 @@
   "codeRepository": "https://github.com/samply/blaze",
   "license": "Apache-2.0",
   "mach:licenseUrl": "https://github.com/samply/blaze/blob/main/LICENSE",
-  "mach:licenseVerified": true,
   "version": "1.7.0",
   "dateModified": "2026-04-28",
   "programmingLanguage": [
@@ -48,7 +47,6 @@
     }
   ],
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
@@ -61,8 +59,6 @@
     "public-health",
     "genomics"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Distinctive FHIR R4 server with a built-in CQL evaluation engine — the key differentiator over HAPI FHIR is efficient population-wide aggregate queries for research and quality measurement. Apache-2.0, production-deployed across Germany's Medical Informatics Initiative and European biobanks. Assess rather than Adopt because community is small (219 stars) and Clojure stack limits contributor pool. Strong choice for teams doing population health analytics, CQL-based quality measures, or BBMRI biobank infrastructure.",
   "mach:editorialReviewedAt": "2026-05-28",
   "mach:evidence": [
     {

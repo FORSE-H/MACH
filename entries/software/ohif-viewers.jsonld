@@ -35,7 +35,6 @@
     "url": "https://ohif.org"
   },
   "mach:governance": "foundation",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "medical-imaging",
@@ -47,8 +46,6 @@
     "self-hosted",
     "cloud-deployable"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference open-source zero-footprint DICOM viewer — 4.2k stars, foundation governance (OHIF), NIH/NCI ITCR funded, and widely embedded in research and clinical infrastructure including NCI Imaging Data Commons. MIT licensed. Supports the full imaging workflow from 2D/3D rendering and MPR to segmentation, structured reports, and whole slide microscopy. The default choice for institutions building web-based imaging viewers on open-source foundations.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -67,6 +64,5 @@
       "mach:evidenceType": "primary-instance"
     }
   ],
-  "mach:licenseUrl": "https://github.com/OHIF/Viewers/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/OHIF/Viewers/blob/master/LICENSE"
 }

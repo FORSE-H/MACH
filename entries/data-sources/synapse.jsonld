@@ -8,7 +8,6 @@
   "codeRepository": "https://github.com/Sage-Bionetworks/Synapse-Repository-Services",
   "license": "Apache-2.0",
   "mach:licenseUrl": "https://github.com/Sage-Bionetworks/Synapse-Repository-Services/blob/develop/LICENSE",
-  "mach:licenseVerified": true,
   "author": [
     {
       "@type": "schema:Organization",
@@ -18,12 +17,16 @@
   ],
   "mach:category": "data-sources",
   "mach:subcategory": "research-data-platform",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Well-established open research data platform from Sage Bionetworks, widely used for DREAM Challenges, multi-omics datasets, and collaborative biomedical research. Apache-2.0 backend, Python/R clients available. Supports DOI minting, provenance tracking, and fine-grained access control — strong FAIR alignment. Assess rather than Adopt because dataset access requires individual registration and some datasets have additional governance agreements. Backend repo has modest GitHub stars (44) reflecting its infrastructure nature rather than direct researcher use. Strong choice for teams sharing or accessing challenge datasets and multi-institutional research data.",
-  "mach:maturity": "production",
   "mach:governance": "academic",
-  "mach:clinicalDomain": ["genomics", "drug-discovery", "clinical-research"],
-  "mach:deploymentContext": ["research", "cloud"],
+  "mach:clinicalDomain": [
+    "genomics",
+    "drug-discovery",
+    "clinical-research"
+  ],
+  "mach:deploymentContext": [
+    "research",
+    "cloud"
+  ],
   "mach:editorialReviewedAt": "2026-05-25",
   "mach:evidence": [
     {

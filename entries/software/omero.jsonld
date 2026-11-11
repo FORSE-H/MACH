@@ -51,9 +51,6 @@
   "mach:foundation": "University of Dundee, with contributions from EMBL-EBI, Institut Pasteur, and others",
   "mach:category": "software",
   "mach:subcategory": "pacs",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The standard open-source image data management platform for microscopy and bioimaging. Deployed at hundreds of research institutions globally, supports 150+ formats via Bio-Formats, and provides Python/Java/MATLAB APIs for programmatic access. GPL-2.0; commercial support available via Glencoe Software. Primarily Linux server deployment. The go-to choice for any research institute managing large-scale microscopy or digital pathology data.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "pathology",
@@ -86,6 +83,5 @@
     "orthanc"
   ],
   "mach:swhid": "swh:1:ori:8967060584bb273ec77aa6182ebc3cc23577f330",
-  "mach:licenseUrl": "https://github.com/ome/openmicroscopy/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/ome/openmicroscopy/blob/master/LICENSE.txt"
 }

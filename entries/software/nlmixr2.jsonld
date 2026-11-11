@@ -33,13 +33,10 @@
     "name": "Matthew Fidler"
   },
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "Production-grade R pharmacometrics package explicitly targeting regulatory submissions — the primary open-source alternative to NONMEM and Monolix, both of which are expensive commercial tools with restrictive licensing. v5.0.0 on CRAN, 349 commits, community-governed with an advisory committee. Rich companion ecosystem: babelmixr2 handles bidirectional NONMEM and Monolix conversion, shinyMixR provides a Shiny GUI, xpose.nlmixr2 covers diagnostics, and nlmixr2lib provides a curated model library. Modest star count (87) reflects the specialist pharmacometrics audience, not limited quality or adoption.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -58,6 +55,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/nlmixr2/nlmixr2/blob/main/LICENSE.md",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/nlmixr2/nlmixr2/blob/main/LICENSE.md"
 }

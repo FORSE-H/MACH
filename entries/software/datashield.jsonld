@@ -17,7 +17,6 @@
   ],
   "license": "GPL-3.0",
   "mach:licenseUrl": "https://github.com/datashield/dsBase/blob/master/LICENSE",
-  "mach:licenseVerified": true,
   "programmingLanguage": [
     "R",
     "Java"
@@ -41,7 +40,6 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
@@ -53,8 +51,6 @@
     "epidemiology",
     "genomics"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference implementation for federated privacy-preserving analysis in European epidemiological and clinical research — over a decade of production use with real-world consented data. Enables simultaneous multi-site analysis without any individual-level data leaving each institution. Automated statistical disclosure control prevents re-identification. dsBase (server-side) ships with 12,000+ validation tests. Governed by an advisory board and steering committee at the University of Liverpool. GPL-3.0. Deployed across major EU research networks (EUCAN-Connect, SYNCHROS) via OBiBa Opal nodes. Adopt for any team requiring federated analysis across distributed sensitive health datasets without data pooling.",
   "mach:editorialReviewedAt": "2026-06-02",
   "mach:evidence": [
     {

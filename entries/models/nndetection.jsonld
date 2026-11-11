@@ -56,9 +56,6 @@
   "mach:foundation": "Division of Medical Image Computing, DKFZ",
   "mach:category": "ai-ml-models",
   "mach:subcategory": "imaging-model",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Applies nnU-Net's self-configuring philosophy to 3D detection, filling a genuine gap — detection benchmarks in medical imaging are far less standardised than segmentation. MICCAI 2021 paper, 630 stars, Apache-2.0. However, it has seen less community adoption than nnU-Net and the version has not progressed beyond 0.1. Worth tracking closely, especially for lung nodule and lesion detection pipelines.",
   "mach:editorialReviewedAt": "2026-05-11",
   "mach:clinicalDomain": [
     "radiology",
@@ -84,6 +81,5 @@
     "nnunet",
     "monai-detection"
   ],
-  "mach:swhid": "swh:1:ori:df46cb11d6cbe51f5e974312548f4f4068f243b8",
-  "mach:licenseVerified": false
+  "mach:swhid": "swh:1:ori:df46cb11d6cbe51f5e974312548f4f4068f243b8"
 }

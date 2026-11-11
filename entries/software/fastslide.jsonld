@@ -15,7 +15,6 @@
   ],
   "license": "Apache-2.0",
   "mach:licenseUrl": "https://github.com/NKI-AI/fastslide/blob/main/LICENSE",
-  "mach:licenseVerified": true,
   "version": "0.7.0",
   "programmingLanguage": [
     "C++",
@@ -42,7 +41,6 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "beta",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
@@ -52,8 +50,6 @@
     "oncology",
     "research"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Modern high-performance WSI reader from the Netherlands Cancer Institute AI division — designed specifically for AI/ML pathology workflows where OpenSlide's single-threaded design is a bottleneck. C++20 core with Python bindings, PyTorch DataLoader compatible, thread-safe, supports 11+ formats including iSyntax (Philips) and CZI (Zeiss) which OpenSlide does not cover. Apache-2.0. Assess rather than Adopt: pre-1.0 (v0.7.0), 38 GitHub stars, and no peer-reviewed paper yet. OpenSlide (Adopt in MACH) remains the production standard; FastSlide is the emerging alternative for teams hitting performance limits or needing broader format coverage. Assess for new AI/ML pathology pipelines where multi-worker loading and multi-dimensional image support are requirements.",
   "mach:editorialReviewedAt": "2026-06-04",
   "mach:evidence": [
     {

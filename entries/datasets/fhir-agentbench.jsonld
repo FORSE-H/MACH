@@ -45,9 +45,6 @@
   "mach:foundation": "Verily (Alphabet)",
   "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
-  "mach:maturity": "beta",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "Rigorous FHIR-native benchmark from Verily (Alphabet), KAIST, and MIT — published at ML4H (peer-reviewed). 3,000 Q&A pairs across 43,000+ FHIR records spanning 15 resource types, with methodology grounded in reverse-engineered real clinical data. Verily's own agent achieved 80% answer correctness vs. a 50% baseline, with findings integrated into the Verily Me production application. CC-BY-4.0. Complementary to MedAgentBench (clinical workflow tasks) — FHIR-AgentBench specifically stress-tests FHIR API retrieval and EHR question-answering accuracy. Essential for teams benchmarking agents against structured clinical data retrieval.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -75,6 +72,5 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/glee4810/FHIR-AgentBench/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/glee4810/FHIR-AgentBench/blob/master/LICENSE"
 }

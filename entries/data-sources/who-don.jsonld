@@ -39,7 +39,6 @@
   ],
   "mach:governance": "government",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:applicability": "specialist",
   "mach:deploymentContext": [
     "cloud"
@@ -50,8 +49,6 @@
     "global-health",
     "infectious-disease"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The authoritative international reference for confirmed disease outbreak intelligence, published by WHO and accessible via a public REST API and RSS feed under CC BY-NC-SA 3.0 IGO. UN-governed, indefinitely maintained, and widely used as ground-truth data in surveillance research. Adopt for public health intelligence systems, academic outbreak research, and as a validation baseline for automated surveillance tools. Coverage is deliberately conservative — pair with HealthMap or ECDC for broader signal capture.",
   "mach:editorialReviewedAt": "2026-05-21",
   "mach:evidence": [
     {

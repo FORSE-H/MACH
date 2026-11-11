@@ -44,7 +44,6 @@
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
   "mach:category": "ai-ml-models",
-  "mach:maturity": "beta",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud"
@@ -53,8 +52,6 @@
     "research",
     "oncology"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Genuinely novel multimodal architecture fusing DNA and LLM reasoning — strong benchmark results (98.28% KEGG pathway accuracy) and NeurIPS 2025 pedigree. Apache-2.0, 387 stars, HuggingFace collection. Sits at the genomics-clinical boundary (similar to scGPT) so clinical adoption pathways are less direct than imaging or EHR tools. BioReason-Pro (ESM3 + RL) is already out from the same lab — monitor which version the community converges on before upgrading to Adopt.",
   "mach:editorialReviewedAt": "2026-05-18",
   "mach:evidence": [
     {
@@ -69,6 +66,5 @@
       "schema:name": "BioReason: Incentivizing Multimodal Biological Reasoning within a DNA-LLM Model. NeurIPS 2025."
     }
   ],
-  "mach:licenseUrl": "https://github.com/bowang-lab/BioReason/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/bowang-lab/BioReason/blob/main/LICENSE"
 }

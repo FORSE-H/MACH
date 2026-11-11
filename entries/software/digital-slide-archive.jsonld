@@ -31,14 +31,11 @@
     "url": "https://www.kitware.com/"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The open-source web platform for institutional WSI management and collaborative annotation — the pathology equivalent of OMERO. Apache 2.0, NIH-funded, Kitware-maintained. Integrates directly with HistomicsTK for algorithm execution and provides a REST API for pipeline integration. Complements QuPath in the MACH catalog: QuPath is the desktop analysis tool; DSA is the server-side image management and annotation infrastructure.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -53,6 +50,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:ef8943df8ef565260c4bb51ca73dac11cb906086",
-  "mach:licenseUrl": "https://github.com/DigitalSlideArchive/digital_slide_archive/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/DigitalSlideArchive/digital_slide_archive/blob/master/LICENSE"
 }

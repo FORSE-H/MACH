@@ -30,14 +30,11 @@
     "url": "https://www.orthanc-server.com/"
   },
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference lightweight open-source DICOM server — widely embedded in hospital imaging workflows, research pipelines, and teleradiology platforms. GPL v3, 6,498 commits, v1.12.11, extensible plugin architecture. Originated at University Hospital of Liège; now maintained by Orthanc Team SRL with a commercial support tier. Complements dcm4che in the MACH catalog: Orthanc is the lightweight REST-first DICOM server; dcm4che is the comprehensive Java DICOM toolkit for enterprise PACS.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -56,6 +53,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:0ec70bc9cda7433bfb07bc5f5ae6f5184cee7d07",
-  "mach:licenseVerified": false
+  "mach:swhid": "swh:1:ori:0ec70bc9cda7433bfb07bc5f5ae6f5184cee7d07"
 }

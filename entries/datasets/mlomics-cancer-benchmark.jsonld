@@ -62,9 +62,6 @@
   "mach:governance": "academic",
   "mach:category": "datasets",
   "mach:subcategory": "omics-benchmark",
-  "mach:maturity": "production",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Well-structured multi-omics benchmark covering all 32 TCGA cancer types with standardised preprocessing and baseline implementations in Python and R. CC-BY-4.0 data license, distributed via Hugging Face and Figshare. Modest adoption (81 GitHub stars) and primarily a research benchmark rather than clinical data. Assess pending broader community uptake. A useful starting point for teams building cancer subtype classification or prognosis models who need a standardised multi-omics baseline.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "oncology",
@@ -91,6 +88,5 @@
       "mach:evidenceType": "model-hub"
     }
   ],
-  "mach:swhid": "swh:1:ori:1908417582a9997ba665d7eb5a4dec717821698e",
-  "mach:licenseVerified": false
+  "mach:swhid": "swh:1:ori:1908417582a9997ba665d7eb5a4dec717821698e"
 }

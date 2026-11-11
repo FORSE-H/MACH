@@ -37,10 +37,7 @@
   },
   "mach:accessModel": "open",
   "mach:governance": "government",
-  "mach:maturity": "production",
   "mach:category": "specs",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The mandated metadata standard for EHDS-compliant health data catalogues under EU Regulation 2025/327. Any organisation implementing a Health Data Access Body catalogue or participating in the European Health Data Space secondary-use infrastructure must use HealthDCAT-AP. Extends DCAT-AP 3.0 and is already implemented in the HealthData@EU Central Platform and national catalogues (e.g. Health-RI). The reference implementation, SHACL validator, and tooling are production-quality and maintained on EU infrastructure.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {

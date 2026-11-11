@@ -20,7 +20,6 @@
   ],
   "license": "Apache-2.0",
   "mach:licenseUrl": "https://github.com/google/android-fhir/blob/master/LICENSE",
-  "mach:licenseVerified": true,
   "version": "1.3.1",
   "dateModified": "2025-11-20",
   "programmingLanguage": [
@@ -50,7 +49,6 @@
     }
   ],
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "mobile",
@@ -62,8 +60,6 @@
     "global-health",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "Google's production-grade Android SDK for offline-capable FHIR mobile apps — the practical choice for building health worker tools in low-connectivity settings. Powers apps reaching 75+ million people across Sub-Saharan Africa and South/Southeast Asia. Apache-2.0, 590 stars, actively maintained with 37 releases. Four modular Kotlin libraries covering data sync, form rendering (FHIR Questionnaires), CQL clinical reasoning, and knowledge management. Kotlin Multiplatform (iOS/web) in alpha as of 2025. Adopt for any mobile FHIR application targeting LMIC or offline-first clinical workflows.",
   "mach:editorialReviewedAt": "2026-06-01",
   "mach:evidence": [
     {

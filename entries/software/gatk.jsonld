@@ -54,9 +54,6 @@
   "mach:foundation": "Broad Institute of MIT and Harvard",
   "mach:category": "software",
   "mach:subcategory": "pipeline-tools",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de-facto standard for clinical variant calling. GATK Best Practices pipelines are the reference methodology for germline and somatic variant discovery in clinical genomics labs globally. 1,900+ stars, Apache-2.0, Docker-distributed, Cromwell/WDL compatible. Used in the 100,000 Genomes Project, clinical diagnostic labs, and most large-scale genomics programmes. No credible open-source alternative matches its breadth and validation in clinical settings.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "oncology",
@@ -87,6 +84,5 @@
       "mach:evidenceType": "package-registry"
     }
   ],
-  "mach:swhid": "swh:1:ori:062ae9057dd25273d479e4bb5ae410dc9eded313",
-  "mach:licenseVerified": false
+  "mach:swhid": "swh:1:ori:062ae9057dd25273d479e4bb5ae410dc9eded313"
 }

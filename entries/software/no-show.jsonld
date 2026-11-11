@@ -34,7 +34,6 @@
     "url": "https://github.com/UMCU-Digital-Health"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "primary-care",
@@ -43,8 +42,6 @@
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Production ML system actively deployed at UMC Utrecht for clinical appointment no-show prediction — MIT, v1.2.9 (July 2024), FastAPI + Streamlit stack. Assess rather than Adopt due to 13 stars and single-institution deployment. Production deployment in a real hospital is a stronger signal than star count for this type of operational clinical AI tool. Relevant for any hospital or clinic seeking to reduce missed appointments with an open, auditable model.",
   "mach:editorialReviewedAt": "2026-05-24",
   "mach:evidence": [
     {
@@ -53,6 +50,5 @@
       "mach:evidenceType": "primary-repo"
     }
   ],
-  "mach:licenseUrl": "https://github.com/UMCU-Digital-Health/No_Show/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/UMCU-Digital-Health/No_Show/blob/main/LICENSE"
 }

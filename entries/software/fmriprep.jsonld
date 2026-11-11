@@ -45,9 +45,6 @@
   "mach:foundation": "NiPreps / Stanford University",
   "mach:category": "software",
   "mach:subcategory": "signal-processing",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de facto standard for fMRI preprocessing in academic and clinical neuroimaging. Published in Nature Methods 2019, 731 stars and 318 forks reflect deep institutional adoption across neuroimaging labs worldwide. BIDS-native design ensures interoperability with downstream analysis tools (FSL, FreeSurfer, nilearn). Apache-2.0, pip-installable, Docker and Singularity images available for HPC deployment. Part of the broader NiPreps ecosystem (sMRIPrep, MRIQC). Essential for any team building reproducible neuroimaging pipelines.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -76,6 +73,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:036da6a71398bcbe1fc15743863fc6dc9ca3e23d",
-  "mach:licenseUrl": "https://github.com/nipreps/fmriprep/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/nipreps/fmriprep/blob/master/LICENSE"
 }

@@ -29,7 +29,6 @@
     "url": "https://github.com/UMCU-Digital-Health"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "secondary-care",
@@ -39,8 +38,6 @@
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Production LLM tool for clinical discharge letter generation, actively deployed at UMC Utrecht across ICU, NICU, and Cardiology — MIT, 8 releases, 145 commits, actively maintained (May 2026). Assess rather than Adopt due to 27 stars and single-institution deployment. Includes model card and dataset card — good practice for clinical AI transparency. Clinician-in-the-loop design is the right safety posture. Relevant for any hospital seeking to reduce documentation burden with an auditable, open-source LLM tool.",
   "mach:editorialReviewedAt": "2026-05-24",
   "mach:evidence": [
     {
@@ -49,6 +46,5 @@
       "mach:evidenceType": "primary-repo"
     }
   ],
-  "mach:licenseUrl": "https://github.com/UMCU-Digital-Health/discharge-documentation-generator/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/UMCU-Digital-Health/discharge-documentation-generator/blob/main/LICENSE"
 }

@@ -35,9 +35,6 @@
   "mach:governance": "academic",
   "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Distinctive multimodal clinical benchmark combining EHR data, lab results, and medical imaging within realistic doctor-patient dialogue scenarios. Published in npj Digital Medicine 2026 (Nature portfolio). MIT licence, 304 GitHub stars. Notably models both physician and patient agent roles — a design choice that enables richer evaluation of clinical reasoning. Assess pending peer replication studies and broader adoption in the clinical NLP community.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -65,6 +62,5 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/SamuelSchmidgall/AgentClinic/blob/main/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/SamuelSchmidgall/AgentClinic/blob/main/LICENSE.txt"
 }

@@ -35,13 +35,10 @@
     "url": "https://www.sib.swiss"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "catalogs",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Switzerland's national FAIR Data Point for health research metadata, run by SIB for the SPHN initiative. Notable for implementing a custom schema that bridges DCAT-AP CH 2.0 (Swiss public sector), HealthDCAT-AP (EHDS), and the FDP ontology simultaneously — making it one of the few national deployments aligned with both Swiss and EU standards. Marked Assess because it is a hosted service rather than a deployable artifact; the SPHN schema (CC-BY 4.0) is the reusable output for other national deployments.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {

@@ -46,9 +46,6 @@
   "mach:foundation": "Dana-Farber Cancer Institute",
   "mach:category": "software",
   "mach:subcategory": "imaging-model",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Comprehensive computational pathology toolkit from a leading cancer institute. Covers the full WSI pipeline with PyTorch integration and strong documentation. 452 stars, GPL-2.0 (note licence implications for commercial use). Assess due to GPL licence and moderate community size. Strong institutional provenance from Dana-Farber makes it a credible choice for oncology research groups building pathology AI pipelines.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "pathology",
@@ -75,6 +72,5 @@
     "histolab"
   ],
   "mach:swhid": "swh:1:ori:848b4e9c20fa1d00848bf51db71e01409aad832c",
-  "mach:licenseUrl": "https://github.com/Dana-Farber-AIOS/pathml/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/Dana-Farber-AIOS/pathml/blob/master/LICENSE"
 }

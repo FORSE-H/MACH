@@ -16,7 +16,6 @@
   ],
   "license": "CC-BY-SA-4.0",
   "mach:licenseUrl": "https://github.com/Ahus-AIM/Open-ECG-Digitizer/blob/main/LICENSE",
-  "mach:licenseVerified": true,
   "version": "1.9.3",
   "dateModified": "2026-06-04",
   "programmingLanguage": [
@@ -41,7 +40,6 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "beta",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
@@ -50,8 +48,6 @@
     "cardiology",
     "research"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Practical open tool for digitising historical paper ECG archives — a real bottleneck in cardiology AI research where large historical collections exist only on paper. Uses semantic segmentation with perspective correction; configurable for any 12-lead subset. Peer-reviewed in npj Digital Medicine 2026. 87 stars, versioned releases (v1.9.3 June 2026), institutional backing from Akershus University Hospital AIM Lab. Training dataset separately available on HuggingFace (Apache-2.0). Assess rather than Adopt for two reasons: CC BY-SA 4.0 is a non-standard software licence (Creative Commons discourages CC for code; not OSI-approved; ShareAlike restricts commercial derivative works), and approximately half the codebase is Jupyter notebooks, limiting reuse as a clean Python library. Assess for research pipelines digitising historical ECG collections; verify licence compatibility before embedding in commercial workflows.",
   "mach:editorialReviewedAt": "2026-06-04",
   "mach:evidence": [
     {

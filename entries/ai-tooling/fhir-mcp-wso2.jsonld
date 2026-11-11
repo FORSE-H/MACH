@@ -37,9 +37,6 @@
   "mach:foundation": "WSO2",
   "mach:category": "ai-tooling",
   "mach:subcategory": "mcp-server",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Well-structured implementation with OAuth2 support and Docker compose for rapid local setup. MCP is itself an emerging standard (2024), and healthcare MCP servers are pre-production as of early 2026. Track this space actively; do not commit to production clinical workflows until the MCP ecosystem matures.",
   "mach:editorialReviewedAt": "2026-01-01",
   "mach:clinicalDomain": [
     "primary-care",
@@ -64,6 +61,5 @@
     "fhir-mcp-flexpa"
   ],
   "mach:swhid": "swh:1:ori:9e35676f66b95dc3a65ecc87e5befde0a4728c20",
-  "mach:licenseUrl": "https://github.com/wso2/fhir-mcp-server/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/wso2/fhir-mcp-server/blob/main/LICENSE"
 }

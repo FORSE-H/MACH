@@ -44,9 +44,6 @@
   "mach:governance": "community",
   "mach:category": "software",
   "mach:subcategory": "pipeline-tools",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de-facto standard for cheminformatics in Python. 3,400+ stars, BSD-3-Clause, conda/pip installable, quarterly releases. Used as a core dependency by virtually every drug discovery AI platform — DeepChem, REINVENT, TorchDrug, and most ADMET prediction tools depend on it. No credible open-source alternative matches its breadth. Essential for any team working on pharmaceutical AI, molecular property prediction, or computational drug design.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -73,6 +70,5 @@
       "mach:evidenceType": "package-registry"
     }
   ],
-  "mach:swhid": "swh:1:ori:0df93a544c70912c7917fe39fc9d3b210d173dd2",
-  "mach:licenseVerified": false
+  "mach:swhid": "swh:1:ori:0df93a544c70912c7917fe39fc9d3b210d173dd2"
 }

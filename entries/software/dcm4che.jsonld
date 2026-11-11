@@ -36,13 +36,10 @@
     "url": "https://github.com/dcm4che"
   },
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The foundational open-source DICOM toolkit for Java environments — widely embedded in hospital PACS systems, research imaging pipelines, and clinical data platforms, often invisibly. v5.34.3 released April 2026, 1.4k stars and 696 forks reflect a specialist infrastructure library rather than a consumer tool. The dcm4chee Archive 5 component is an IHE-compliant enterprise image archive deployable in production. No viable open-source alternative exists at this depth of DICOM coverage in Java.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -62,6 +59,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:b7fcda337d08e17b3a06d4b160ceeebbce9766ad",
-  "mach:licenseUrl": "https://github.com/dcm4che/dcm4che/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/dcm4che/dcm4che/blob/master/LICENSE.txt"
 }

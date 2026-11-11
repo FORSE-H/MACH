@@ -40,7 +40,6 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "beta",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
@@ -50,8 +49,6 @@
     "research",
     "pathology"
   ],
-  "mach:judgement": "Caution",
-  "mach:judgementReason": "The Mahmood Lab standard for large-scale WSI feature extraction with 22+ encoder integrations, multi-GPU support, v0.3.0 May 2026, backwards-compatible with CLAM. Practically the successor preprocessing pipeline for CLAM-based workflows. However, CC-BY-NC-ND 4.0 is highly restrictive: non-commercial and no-derivatives clauses mean commercial use requires prior written approval from Harvard. Unsuitable as a dependency in any commercial or production healthcare deployment without a separate licence agreement.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -66,6 +63,5 @@
       "schema:name": "Accelerating Data Processing and Benchmarking of AI Models for Pathology. arXiv 2502.06750."
     }
   ],
-  "mach:licenseUrl": "https://github.com/mahmoodlab/TRIDENT/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/mahmoodlab/TRIDENT/blob/main/LICENSE"
 }

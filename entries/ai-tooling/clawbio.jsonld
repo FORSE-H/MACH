@@ -41,9 +41,6 @@
   "mach:governance": "community",
   "mach:category": "ai-tooling",
   "mach:subcategory": "agent-skills",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Rule-based: judgement is assigned deterministically by the MACH scorer from harvested signals (stars, maintenance, licence). A genuinely open (MIT), actively developed bioinformatics agent-skill library with healthy adoption (~1.2k stars, 2000+ commits, versioned releases) and a reproducibility-first design. Research tooling, not a clinical device; skills run on the user's own agent/LLM and may carry their own sub-licences.",
   "mach:editorialReviewedAt": "2026-11-11",
   "schema:comment": "MIT; built on OpenClaw. Judgement is auto-scored by the harvester from signals. Individual skills may declare own licences + third-party tool deps. Re-verify on next review.",
   "mach:clinicalDomain": [
@@ -65,6 +62,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/ClawBio/ClawBio/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/ClawBio/ClawBio/blob/main/LICENSE"
 }

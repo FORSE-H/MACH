@@ -29,7 +29,6 @@
     "url": "https://datacommons.cancer.gov/repository/imaging-data-commons"
   },
   "mach:governance": "government",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "medical-imaging",
@@ -40,8 +39,6 @@
   "mach:deploymentContext": [
     "embedded-library"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The standard Python library for creating standards-compliant derived DICOM objects (segmentations, structured reports, parametric maps) — MIT, NCI-backed, 225 stars, 46 releases. Assess rather than Adopt due to lower star count and niche scope (primarily relevant for teams storing AI/ML analysis results back into DICOM). Essential for any pipeline that needs to write DICOM SR or SEG objects interoperably.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -55,6 +52,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/ImagingDataCommons/highdicom/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/ImagingDataCommons/highdicom/blob/master/LICENSE"
 }

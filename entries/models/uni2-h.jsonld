@@ -42,7 +42,6 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "mach:applicability": "specialist",
   "mach:deploymentContext": [
@@ -56,8 +55,6 @@
     "research"
   ],
   "mach:weightsLicense": "CC-BY-NC-ND-4.0",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The largest publicly available pathology vision foundation model (681M params, ViT-H/14), trained on 200M+ tiles from 300k+ slides — a significant scale-up from UNI. Same Mahmood Lab provenance and Nature Medicine lineage. Assess rather than Adopt for the same reasons as UNI: CC-BY-NC-ND-4.0, free for non-commercial academic research only. Commercial rights are exclusively held by Modella AI (Mahmood Lab spin-off, since acquired by AstraZeneca) — commercial use requires approval via the Mass General Brigham Innovation Office. Access requires institutional email via HuggingFace. Pre-extracted features for TCGA/CPTAC/PANDA lower the barrier to evaluation.",
   "mach:editorialReviewedAt": "2026-05-21",
   "mach:alternativeTo": [
     "uni"
@@ -80,6 +77,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/mahmoodlab/uni/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/mahmoodlab/uni/blob/main/LICENSE"
 }

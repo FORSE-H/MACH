@@ -38,7 +38,6 @@
   ],
   "mach:governance": "academic",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:applicability": "specialist",
   "mach:deploymentContext": [
     "cloud"
@@ -49,8 +48,6 @@
     "global-health",
     "infectious-disease"
   ],
-  "mach:judgement": "Caution",
-  "mach:judgementReason": "Historically the most important open outbreak surveillance resource (1994–2022), widely used by WHO, CDC, and researchers. Now Caution: the free RSS feed was permanently closed in 2023, the API is commercial-only via Samdesk and covers only post-January 2025 alerts, and STAT News reported the organisation was near financial collapse in 2023. The historical archive is not programmatically accessible under open terms. Teams needing open outbreak intelligence should evaluate HealthMap or WHO Disease Outbreak News as alternatives.",
   "mach:editorialReviewedAt": "2026-05-21",
   "mach:evidence": [
     {

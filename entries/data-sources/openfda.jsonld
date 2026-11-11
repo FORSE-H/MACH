@@ -31,12 +31,9 @@
   ],
   "mach:governance": "government",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The primary open API for US drug and device safety data — adverse events (FAERS), drug labels, recalls, and device reports. CC0 public domain, no API key required for basic use (1000 requests/day unauthenticated, 120,000/day with key), bulk downloads available. Essential for pharmacovigilance research, drug safety AI, and clinical decision support pipelines that need real-world adverse event data.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {

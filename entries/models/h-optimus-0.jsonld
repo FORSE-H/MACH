@@ -32,14 +32,11 @@
     }
   ],
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The largest publicly available pathology FM by parameter count (1.1B) — strong benchmark performance on mutation prediction and survival analysis. Apache 2.0 licence, but model file access currently requires a contact agreement with Bioptimus, which creates a practical friction not reflected in the formal licence. Assess until the access process is standardised. Technically compelling; worth tracking as Bioptimus opens access further.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {

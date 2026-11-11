@@ -35,7 +35,6 @@
     "url": "https://www.xnat.org/about/"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "medical-imaging",
@@ -47,8 +46,6 @@
     "self-hosted",
     "cloud-deployable"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "De facto open-source platform for biomedical imaging data management in research, with 20+ years of active development and deployment across hundreds of academic medical centres and multi-site consortia globally. BSD-2-Clause, academic governance (WashU NRG), actively maintained (v1.10.0 on Java 21). Covers the full imaging data lifecycle: ingestion, QC, processing pipelines, and federated sharing. The reference choice for any institution building a research imaging data infrastructure on open-source foundations.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -66,6 +63,5 @@
       "url": "https://wiki.xnat.org/documentation/",
       "mach:evidenceType": "documentation"
     }
-  ],
-  "mach:licenseVerified": false
+  ]
 }

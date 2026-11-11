@@ -44,9 +44,6 @@
   "mach:foundation": "Stanford University",
   "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The most clinically rigorous open benchmark for medical AI agents. Published in NEJM AI 2025 — the gold-standard journal for clinical AI. All 300 tasks were authored by practising physicians across 10 specialties and grounded in FHIR, making it the only benchmark natively aligned with real EHR interoperability standards. MIT licence, 269 stars, Stanford pedigree. Essential for any team benchmarking agents against clinical workflow tasks.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -70,6 +67,5 @@
       "mach:evidenceType": "academic-reference"
     }
   ],
-  "mach:licenseUrl": "https://github.com/stanfordmlgroup/MedAgentBench/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/stanfordmlgroup/MedAgentBench/blob/main/LICENSE"
 }

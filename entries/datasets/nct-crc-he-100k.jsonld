@@ -37,13 +37,10 @@
   ],
   "mach:governance": "academic",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted",
     "offline-capable"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The standard colorectal tissue classification benchmark — 100K CC-BY-4.0 patches across 9 classes, hosted on Zenodo, widely used to evaluate patch-level tissue type classifiers in computational pathology. Clean CC-BY-4.0 licence with no non-commercial restrictions. Complements PatchCamelyon (breast/lymph node) and PANDA (prostate) in the MACH pathology dataset cluster.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {

@@ -32,14 +32,11 @@
     }
   ],
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The most-downloaded Paige pathology FM (91k+ monthly downloads) with 3.1M slides and multi-magnification pretraining — technically superior to the original Virchow. However, Paige downgraded the licence from Apache 2.0 to CC-BY-NC-ND 4.0 for this version, restricting commercial and derivative use. Teams with commercial pipelines should use Virchow (Apache 2.0) or Prov-GigaPath (Apache 2.0) instead. Assess for academic research.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -53,6 +50,5 @@
       "mach:evidenceType": "academic-reference"
     }
   ],
-  "mach:licenseUrl": "https://github.com/Paige-AI/paige-ml-sdk/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/Paige-AI/paige-ml-sdk/blob/main/LICENSE"
 }

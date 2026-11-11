@@ -32,14 +32,11 @@
     "url": "https://fammed.mcmaster.ca/"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The dominant open-source EMR in Canadian primary care — thousands of physicians across Canada. GPL v2+, ISO 13485:2016 certified, academic roots at McMaster University. Marked Assess rather than Adopt because active deployment and maintenance has moved to WELL EMR Group's proprietary 'OSCAR Pro' fork, creating a vendor-dependency risk. The McMaster Bitbucket repo is the canonical open-source codebase but may lag the deployed version. Strong Canadian healthcare context; limited international relevance.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {

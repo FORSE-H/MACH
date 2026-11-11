@@ -35,14 +35,11 @@
     "url": "https://github.com/Project-MONAI"
   },
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference open-source deep learning framework for medical imaging — the foundation on which the MONAI Model Zoo, MONAI Label, and MONAI Deploy are built. PyTorch Ecosystem member, 8.2k stars, 1.5k forks, Apache 2.0, v1.5.2 released January 2026. Primary backer is NVIDIA with academic contributors from King's College London and Vanderbilt University. Widely used in medical imaging research and production pipelines across CT, MRI, pathology, and endoscopy.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -62,6 +59,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:d5118eba6654e6d3488010d9d81129124bfd708c",
-  "mach:licenseUrl": "https://github.com/Project-MONAI/MONAI/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/Project-MONAI/MONAI/blob/main/LICENSE"
 }

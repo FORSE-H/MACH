@@ -31,14 +31,11 @@
     "url": "https://github.com/Project-MONAI"
   },
   "mach:governance": "community",
-  "mach:maturity": "beta",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Fills a real gap in the MONAI ecosystem — bridges trained model development to clinical production via DICOM/FHIR gateway, workflow orchestration, and standardised app packaging. The Informatics Gateway's DICOM and FHIR integration is directly relevant for hospital deployments. Apache 2.0, part of Project-MONAI (NVIDIA-backed). Marked Assess due to pre-release versioning (v0.6.1), low community traction (117 stars), and explicit production caution in release notes.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -58,6 +55,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:d7e4784ec0c4ddce5f43cb26440b510d6cd0c7b7",
-  "mach:licenseUrl": "https://github.com/Project-MONAI/monai-deploy/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/Project-MONAI/monai-deploy/blob/main/LICENSE"
 }

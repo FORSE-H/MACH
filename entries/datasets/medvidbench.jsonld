@@ -46,7 +46,6 @@
   ],
   "mach:governance": "academic",
   "mach:category": "datasets",
-  "mach:maturity": "beta",
   "mach:clinicalDomain": [
     "surgery",
     "radiology",
@@ -56,8 +55,6 @@
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "A large and timely open benchmark for medical and surgical video understanding — 531,850 video-instruction pairs across 8 source datasets and five task types, with a publicly downloadable ~18 GB Hugging Face distribution. It fills a real gap: most medical-imaging benchmarks are static (CT/MRI/WSI), whereas MedVidBench targets temporal and spatiotemporal video tasks including CVS and surgical skill assessment. Marked Assess rather than Adopt because: it is a beta release tied to a CVPR 2026 paper with no independent adoption track record yet; the CC-BY-NC-SA-4.0 licence restricts use to non-commercial settings, ruling out commercial AI development pipelines; and it is a curated aggregation of 8 upstream datasets that each carry their own licences, so downstream users must verify upstream terms per source. Valuable now for academic teams training and evaluating surgical-video models; commercial users are blocked by the non-commercial clause. Companion model cataloged separately as uai-nexus-medvlm-medgrpo (ai-ml-models).",
   "mach:editorialReviewedAt": "2026-06-15",
   "mach:evidence": [
     {

@@ -21,7 +21,6 @@
   ],
   "license": "MIT",
   "mach:licenseUrl": "https://github.com/StanfordBDHG/OpenTSLM/blob/main/LICENSE",
-  "mach:licenseVerified": true,
   "programmingLanguage": [
     "Python"
   ],
@@ -46,7 +45,6 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "beta",
   "mach:category": "ai-ml-models",
   "mach:deploymentContext": [
     "self-hosted",
@@ -61,8 +59,6 @@
   "mach:trainingDataSummary": "Curriculum learning across five progressive stages on: TSQA, M4 (forecasting), HAR (human activity recognition), SleepEDF (EEG sleep staging), and ECG QA datasets. No proprietary clinical data in base training.",
   "mach:intendedUse": "Foundation model for reasoning over multivariate medical time series and text — intended for researchers and developers building clinical decision-support tools. Not validated for direct clinical deployment. Base models require task-specific fine-tuning and independent clinical validation.",
   "mach:aiActRiskClass": "high-risk-candidate",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Stanford BDHG's time series language model family — the first open model capable of native multimodal reasoning over clinical time series (ECG, EEG, accelerometry) and text. Accepted at ICML 2026 Deep Learning/LLM main track. MIT license, 1,200+ GitHub stars, weights on HuggingFace (Llama 3.2 and Gemma 3 variants). Real-world adoption: Seattle Children's Hospital is using OpenTSLM for pediatric ECG analysis toward a cardiac ICU foundation model. Assess rather than Adopt: no versioned releases yet, explicitly described as a first step toward frontier TSLMs rather than a production-ready clinical tool, and downstream clinical use requires independent validation. Essential reference model for any team working on clinical time series AI.",
   "mach:editorialReviewedAt": "2026-06-03",
   "mach:evidence": [
     {

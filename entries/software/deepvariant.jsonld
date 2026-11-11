@@ -18,7 +18,6 @@
   ],
   "license": "BSD-3-Clause",
   "mach:licenseUrl": "https://github.com/google/deepvariant/blob/r1.10/LICENSE",
-  "mach:licenseVerified": true,
   "version": "1.10.0",
   "dateModified": "2026-03-05",
   "programmingLanguage": [
@@ -49,7 +48,6 @@
     }
   ],
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
@@ -62,8 +60,6 @@
     "rare-disease",
     "oncology"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference deep learning variant caller for DNA sequencing — 3.7k stars, 25 releases, v1.10.0 (March 2026), actively maintained by Google Health. Supports all major sequencing platforms (Illumina, PacBio, ONT). Won the 2020 PrecisionFDA Truth Challenge V2. BSD-3-Clause, Docker-containerised, GPU/TPU-accelerated. Part of Google's genomics infrastructure that has collectively processed exomes and whole genomes of 2.5 million individuals globally. Adopt for any genomics pipeline requiring high-accuracy variant calling.",
   "mach:editorialReviewedAt": "2026-06-01",
   "mach:evidence": [
     {

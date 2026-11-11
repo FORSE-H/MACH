@@ -36,12 +36,9 @@
   ],
   "mach:governance": "government",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The authoritative open dataset for EU drug authorisations and safety signals — overnight-updated JSON covering approved medicines, EPARs, orphan designations, PSUSAs, DHPCs, and shortages. Free for commercial and non-commercial reuse with attribution. Pairs with OpenFDA in the MACH catalog for geographic coverage: OpenFDA covers US drug and device safety data; EMA Medicines Data covers EU. Essential for European pharmacovigilance research, market access analysis, and drug safety AI.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {

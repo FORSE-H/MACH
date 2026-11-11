@@ -28,7 +28,6 @@
     "url": "https://github.com/NickLJLee"
   },
   "mach:governance": "academic",
-  "mach:maturity": "beta",
   "mach:category": "ai-ml-models",
   "mach:weightsLicense": "MIT",
   "mach:trainingDataSummary": "Pretrained on 10 million+ ECG recordings across multiple clinical sources. Fine-tuned and evaluated across multiple cardiac domains including arrhythmia detection and myocardial infarction.",
@@ -42,8 +41,6 @@
     "embedded-library",
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Strong clinical foundation model for ECG — published in NEJM AI (2025), pretrained on 10M+ recordings, MIT license, HuggingFace weights, Peking University Digital Health governance. Assess rather than Adopt due to 25 stars, no versioned releases, and limited external validation outside the paper. The NEJM AI publication is a meaningful quality signal that outweighs the low star count. Leading open foundation model for 12-lead ECG analysis.",
   "mach:editorialReviewedAt": "2026-05-24",
   "mach:huggingFaceUrl": "https://huggingface.co/PKUDigitalHealth/ECGFounder",
   "mach:evidence": [
@@ -64,6 +61,5 @@
       "mach:evidenceType": "model-weights"
     }
   ],
-  "mach:licenseUrl": "https://github.com/NickLJLee/ECGFounder/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/NickLJLee/ECGFounder/blob/master/LICENSE"
 }

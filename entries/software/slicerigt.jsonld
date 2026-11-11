@@ -48,9 +48,6 @@
   "mach:foundation": "PerkLab / Queen's University",
   "mach:category": "software",
   "mach:subcategory": "medical-imaging",
-  "mach:maturity": "production",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The leading open-source toolkit for image-guided therapy research built on 3D Slicer. BSD-3-Clause licence, 110 stars, actively maintained (April 2026). Developed by PerkLab (Queen's University), a globally recognised group in surgical navigation and IGT research. Integrates with tracking hardware via OpenIGTLink and supports real-time needle, catheter, and instrument guidance workflows. Niche but authoritative for teams building intraoperative navigation or ultrasound-guided intervention pipelines; requires 3D Slicer as a runtime dependency.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -74,6 +71,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:476a66a51ca3a7251f8aed4067450a4b1252bfa9",
-  "mach:licenseUrl": "https://github.com/SlicerIGT/SlicerIGT/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/SlicerIGT/SlicerIGT/blob/master/LICENSE.txt"
 }

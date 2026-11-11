@@ -34,14 +34,11 @@
     "url": "https://medplum.com/"
   },
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "Modern FHIR-native developer platform for building custom clinical applications from scratch — the strongest open-source choice for teams who need a certified, API-first foundation rather than a configurable off-the-shelf EHR. ONC Certified (including HTI-4), SOC 2 Type II, HIPAA, CFR Part 11, and EPCS certified. v5.1.11, 272 releases, 2.4k stars, 150+ contributors, Apache 2.0. Production deployments include Ro, Rad AI, Summer Health, and Thirty Madison across telehealth, AI scribe, and population health use cases. Vendor-led by Orangebot Inc. with both self-hosted and managed cloud options.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -61,6 +58,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:c31d9bde6ee14ed592c4ed5a2217dbf0d1c2d292",
-  "mach:licenseUrl": "https://github.com/medplum/medplum/blob/main/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/medplum/medplum/blob/main/LICENSE.txt"
 }

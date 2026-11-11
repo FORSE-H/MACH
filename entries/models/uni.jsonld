@@ -36,14 +36,11 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The most widely adopted open pathology foundation model — 45k+ monthly HuggingFace downloads, Nature Medicine 2024, state-of-the-art across 34 clinical tasks. Assess rather than Adopt due to CC-BY-NC-ND-4.0 licence: free for non-commercial academic research only. Commercial rights are exclusively held by Modella AI (Mahmood Lab spin-off, since acquired by AstraZeneca) — commercial use requires approval via the Mass General Brigham Innovation Office. Registration with institutional email required for HuggingFace access. Benchmark-contamination-free by design. Essential reference model for computational pathology AI research; organisations seeking commercial deployment must engage MGB Innovation.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -62,6 +59,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/mahmoodlab/UNI/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/mahmoodlab/UNI/blob/main/LICENSE"
 }

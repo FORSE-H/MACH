@@ -30,7 +30,6 @@
     "url": "https://github.com/nroduit"
   },
   "mach:governance": "individual",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "medical-imaging",
@@ -42,8 +41,6 @@
     "self-hosted",
     "cloud-deployable"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The most widely used open-source desktop DICOM viewer — fills the gap left by OHIF Viewers (web-only). Dual-licensed EPL-2.0/Apache-2.0, 1.3k stars, actively maintained (v4.6.6, December 2025). Assess rather than Adopt due to individual governance (single maintainer) and the EPL-2.0 component which requires attention in commercial contexts. Strong choice for institutions needing a deployable desktop or web DICOM viewer without a commercial PACS licence.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -57,6 +54,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/nroduit/Weasis/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/nroduit/Weasis/blob/master/LICENSE"
 }

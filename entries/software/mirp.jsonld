@@ -50,14 +50,11 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "offline-capable"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "IBSI-compliant radiomics package with active maintenance — v2.6.0 released May 2026, JOSS 2024 peer-reviewed. Handles the full standardised radiomics pipeline from DICOM input through feature extraction, covering both classical radiomics and deep learning preprocessing. EUPL-1.2 is OSI-approved but copyleft, so commercial embedding requires attention. Modest adoption (84 stars) compared to PyRadiomics, but stronger IBSI compliance and more recent development. Assess for teams building standardised radiomic biomarker pipelines in oncology research.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -73,6 +70,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:bc37481c9919827bb717a1f8740fd1a3bfc3ef38",
-  "mach:licenseUrl": "https://github.com/oncoray/mirp/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/oncoray/mirp/blob/master/LICENSE.txt"
 }

@@ -36,14 +36,11 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The pioneering vision-language model for pathology — Nature Medicine 2023, 75k+ monthly HuggingFace downloads, zero-shot tissue classification from free-text prompts. Training data sourced from medical Twitter (now X), which raises questions about data provenance and long-term reproducibility. Assess pending cleaner dataset documentation and broader independent validation. Useful for teams prototyping zero-shot pathology classification pipelines before committing to task-specific fine-tuning.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -62,6 +59,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:7bf7b9104346965d6f5a13e1bfccb8c94e0d22d9",
-  "mach:licenseVerified": false
+  "mach:swhid": "swh:1:ori:7bf7b9104346965d6f5a13e1bfccb8c94e0d22d9"
 }

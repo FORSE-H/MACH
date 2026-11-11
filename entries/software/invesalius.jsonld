@@ -30,13 +30,10 @@
     "url": "https://www.cti.gov.br/"
   },
   "mach:governance": "government",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Specialised 3D reconstruction tool for surgical planning and biomedical research — notable for STL/mesh export for 3D printing of anatomical models. GPL-2.0, 785 stars, government-maintained (CTI Renato Archer, Brazil). Marked Assess rather than Adopt because release pace has slowed (v3.1.99998, April 2024) and the tool is more niche than general-purpose DICOM viewers. Strong in global south and 3D-printing-for-medicine contexts.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -51,6 +48,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:bad33cfc5f6225b393ccb4ae5c7f1dcd57da2587",
-  "mach:licenseUrl": "https://github.com/invesalius/invesalius3/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/invesalius/invesalius3/blob/master/LICENSE.txt"
 }

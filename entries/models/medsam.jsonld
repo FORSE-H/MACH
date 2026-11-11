@@ -54,7 +54,6 @@
   "mach:foundation": "Bo Wang Lab, University of Toronto",
   "mach:category": "ai-ml-models",
   "mach:subcategory": "imaging-model",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud",
@@ -68,8 +67,6 @@
     "surgery",
     "neurology"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de-facto open standard for promptable medical image segmentation. 4.3k stars, Nature Communications 2024, Apache-2.0, versioned release (v1.0.0). Covers 30+ modalities with bounding-box prompting and no per-dataset retraining. LiteMedSAM and 3D Slicer integration lower the barrier to clinical workflow use. Any medical imaging pipeline that needs flexible segmentation should benchmark against or build on MedSAM before choosing an alternative.",
   "mach:editorialReviewedAt": "2026-05-18",
   "mach:evidence": [
     {
@@ -89,6 +86,5 @@
     "monai",
     "medsam2"
   ],
-  "mach:licenseUrl": "https://github.com/bowang-lab/MedSAM/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/bowang-lab/MedSAM/blob/main/LICENSE"
 }

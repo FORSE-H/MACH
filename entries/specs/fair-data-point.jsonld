@@ -37,10 +37,7 @@
   },
   "mach:accessModel": "open",
   "mach:governance": "community",
-  "mach:maturity": "beta",
   "mach:category": "specs",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The primary specification for FAIR metadata services in European research data infrastructure, with production deployments at Health-RI and across ELIXIR nodes. Still an Unofficial Proposal Draft at W3C — not yet a formal standard — and the March 2026 draft still targets DCAT v2 rather than the current DCAT v3. The Java reference implementation is functional but known to be heavyweight. Marked Assess: track it closely if building FAIR-aligned health data infrastructure, especially given its role in the EHDS ecosystem, but evaluate whether the spec version and implementation maturity fit your requirements.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -60,6 +57,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:957ded432989ad8e850231107579cc1d776fb218",
-  "mach:licenseUrl": "https://github.com/FAIRDataTeam/FAIRDataPoint/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/FAIRDataTeam/FAIRDataPoint/blob/master/LICENSE"
 }

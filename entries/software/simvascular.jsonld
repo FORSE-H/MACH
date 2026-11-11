@@ -48,9 +48,6 @@
   "mach:foundation": "Stanford University / University of California",
   "mach:category": "software",
   "mach:subcategory": "medical-imaging",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The definitive open-source platform for patient-specific cardiovascular haemodynamic simulation — no comparable open alternative covers the full pipeline from image segmentation to CFD analysis. 313 GitHub stars for a highly specialised scientific computing tool reflects strong domain adoption. BSD-style licence, actively maintained (May 2026), with Stanford and UC Regents pedigree and extensive peer-reviewed publications. Essential for any team working on computational cardiovascular medicine, surgical planning, or vascular device evaluation.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -74,6 +71,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:84641543e68533b8371a9b9cfda56ee348eebe61",
-  "mach:licenseUrl": "https://github.com/SimVascular/SimVascular/blob/master/LICENSE.md",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/SimVascular/SimVascular/blob/master/LICENSE.md"
 }

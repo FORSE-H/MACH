@@ -50,7 +50,6 @@
     }
   ],
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
@@ -59,8 +58,6 @@
     "endocrinology",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The leading open-source AID system for Android, with NEJM-level clinical evidence from the CREATE RCT (2022) demonstrating improved time-in-range vs standard care. 4.9k forks reflects extraordinary real-world deployment. oref0/oref1 algorithm supports unannounced meals (UAM) and super micro bolus (SMB), with 30+ pump integrations. AGPL-3.0 is OSI-approved but copyleft — embedding in proprietary apps requires attention. Adopt for diabetes research teams and clinical programmes supporting open-source AID.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -80,6 +77,5 @@
       "schema:name": "Closed-Loop Insulin Delivery in Suboptimally Controlled Type 1 Diabetes (CREATE trial). New England Journal of Medicine 2022."
     }
   ],
-  "mach:licenseUrl": "https://github.com/nightscout/AndroidAPS/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/nightscout/AndroidAPS/blob/master/LICENSE.txt"
 }

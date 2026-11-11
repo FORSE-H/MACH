@@ -16,7 +16,6 @@
   ],
   "license": "CC0-1.0",
   "mach:licenseUrl": "https://docs.openalex.org/license",
-  "mach:licenseVerified": true,
   "keywords": [
     "academic-knowledge-graph",
     "scholarly-literature",
@@ -37,7 +36,6 @@
     }
   ],
   "mach:governance": "foundation",
-  "mach:maturity": "production",
   "mach:category": "data-sources",
   "mach:deploymentContext": [
     "cloud"
@@ -47,8 +45,6 @@
     "epidemiology",
     "genomics"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The definitive open academic knowledge graph — 250M+ works, CC0, free REST API, no authentication required. Unique value for research software cataloging: ROR institution IDs on author affiliations (enabling governance inference), funder metadata (grant → institution → governance), citation counts (adoption signal), and open-access PDF links. Successor to Microsoft Academic Graph with better coverage and open licensing. Used by Elicit, Semantic Scholar, and major academic discovery platforms as a data layer. Adopt as the primary scholarly enrichment source for any system linking research software to its academic literature.",
   "mach:editorialReviewedAt": "2026-06-12",
   "mach:evidence": [
     {

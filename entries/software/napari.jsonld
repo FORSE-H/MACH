@@ -45,9 +45,6 @@
   "mach:foundation": "Chan Zuckerberg Initiative",
   "mach:category": "software",
   "mach:subcategory": "pathology",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The standard Python viewer for bio-imaging and computational pathology research. 2,652 stars, 496 forks, CZI-backed, BSD-3-Clause. Not a clinical DICOM platform — its strength is multi-dimensional bio-image exploration and a rich plugin ecosystem (napari-hub) covering histopathology, fluorescence microscopy, and cell segmentation. Natural companion to OMERO (data management), PathML, and HistoLab (analysis) already in MACH. Essential for any team building Python-native bio-imaging or computational pathology pipelines.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -76,6 +73,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:b7112c49b4d78cbbdfb57ccbfeda879cfa98f796",
-  "mach:licenseUrl": "https://github.com/napari/napari/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/napari/napari/blob/main/LICENSE"
 }

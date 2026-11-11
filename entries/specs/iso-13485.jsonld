@@ -15,7 +15,6 @@
   "url": "https://www.iso.org/standard/59752.html",
   "license": "LicenseRef-ISO-copyright",
   "mach:licenseUrl": "https://www.iso.org/standard/59752.html",
-  "mach:licenseVerified": true,
   "mach:accessModel": "paid",
   "mach:specPrice": "Approx. CHF 158 from ISO; available via national standards bodies (BSI, DIN, NEN, etc.)",
   "dateModified": "2016-03-01",
@@ -38,15 +37,12 @@
   },
   "mach:governance": "government",
   "mach:category": "specs",
-  "mach:maturity": "production",
   "mach:clinicalDomain": [
     "medical-devices",
     "primary-care",
     "secondary-care",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The foundational QMS standard for any organisation manufacturing medical devices — hardware, SaMD, or AI/ML systems. Harmonised with EU MDR/IVDR and recognised across MDSAP participating jurisdictions (EU, Canada, Australia, Japan, Brazil). Compliance is a prerequisite for CE marking and market access in most regulated markets. Applies to the full device lifecycle including design, development, and post-market surveillance. Note: this is a paid ISO standard (approx. CHF 158); unlike open interoperability standards such as FHIR or DICOM it is not freely available. Adopt means compliance is mandatory for any team building regulated medical device software — not that the standard is open access.",
   "mach:editorialReviewedAt": "2026-06-05",
   "mach:evidence": [
     {

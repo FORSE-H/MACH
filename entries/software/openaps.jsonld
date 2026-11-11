@@ -35,13 +35,10 @@
     "url": "https://github.com/openaps"
   },
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The original open-source artificial pancreas algorithm — community-built by and for people with Type 1 diabetes, with direct influence on FDA-cleared commercial APS systems. MIT licensed, 475 stars, 404 forks. Last formal release v0.7.1 (2022) reflects algorithmic maturity rather than abandonment; the broader DIY loop ecosystem (AndroidAPS, Loop) evolved from this foundation. Historically significant as a patient-empowerment project that reshaped the commercial insulin delivery landscape.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -61,6 +58,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:d90f57bf2cd17b0f4b2c6e1c11ba04ca9c20d60b",
-  "mach:licenseUrl": "https://github.com/openaps/oref0/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/openaps/oref0/blob/master/LICENSE.txt"
 }

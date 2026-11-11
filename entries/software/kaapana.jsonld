@@ -49,9 +49,6 @@
   "mach:foundation": "Division of Medical Image Computing, DKFZ (Hanno Gao, Philipp Schader et al.)",
   "mach:category": "software",
   "mach:subcategory": "federated-learning",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Architecturally impressive Kubernetes-based platform for federated medical image analysis, with real national-scale deployments including RACOON (German national COVID-19 radiology network) and JIP (Joint Imaging Platform, DKTK). Integrates nnU-Net, MITK, TotalSegmentator, and Airflow into a coherent, access-controlled research platform. Two caveats worth knowing before adopting: (1) AGPL-3.0 license — institutions that deploy a modified version as a service must release their modifications; the team acknowledges this and may switch to a more liberal license in the future; (2) Kubernetes dependency means significant infrastructure expertise is required. Marked Assess rather than Adopt due to the pre-1.0 version, AGPL licensing complexity, and k8s barrier — but the RACOON deployment and active DKFZ team make it a strong candidate to move to Adopt as it matures.",
   "mach:editorialReviewedAt": "2026-05-11",
   "mach:clinicalDomain": [
     "radiology",
@@ -95,6 +92,5 @@
     "flower-federated-learning"
   ],
   "mach:swhid": "swh:1:ori:f1625918c14698c1e423a7f0465995c75b4136ce",
-  "mach:licenseUrl": "https://github.com/kaapana/kaapana/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/kaapana/kaapana/blob/master/LICENSE"
 }

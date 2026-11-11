@@ -48,7 +48,6 @@
   "mach:foundation": "Bo Wang Lab, University of Toronto",
   "mach:category": "ai-ml-models",
   "mach:subcategory": "imaging-model",
-  "mach:maturity": "beta",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud"
@@ -59,8 +58,6 @@
     "surgery",
     "gastroenterology"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Natural successor to MedSAM for 3D and video data — extends SAM2 to volumetric CT/MRI and clinical video with 645 stars and Apache-2.0. No versioned releases yet and arXiv paper is very recent (April 2025). Assess until the community validates it at the same scale as MedSAM. Teams working with 3D imaging or video should evaluate this alongside MedSAM.",
   "mach:editorialReviewedAt": "2026-05-18",
   "mach:evidence": [
     {
@@ -79,6 +76,5 @@
     "medsam",
     "nnunet"
   ],
-  "mach:licenseUrl": "https://github.com/bowang-lab/MedSAM2/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/bowang-lab/MedSAM2/blob/main/LICENSE"
 }

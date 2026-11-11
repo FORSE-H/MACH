@@ -37,13 +37,10 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Caution",
-  "mach:judgementReason": "Strong nucleus segmentation model — Medical Image Analysis 2024, state-of-the-art on PanNuke, ViT-based WSI inference. However, licensed under Apache 2.0 with Commons Clause, which prohibits selling the software and is not OSI-approved open source. This non-standard licence creates legal ambiguity for commercial and many institutional use cases. Consider HoVer-Net (MIT) or StarDist (BSD-3-Clause) as alternatives with clean open-source licences. CellViT++ is the actively maintained successor.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -57,6 +54,5 @@
       "mach:evidenceType": "academic-reference"
     }
   ],
-  "mach:licenseUrl": "https://github.com/TIO-IKIM/CellViT/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/TIO-IKIM/CellViT/blob/main/LICENSE"
 }

@@ -30,13 +30,10 @@
     "url": "https://openslide.org/"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The foundational WSI file I/O library — used invisibly by QuPath, HistomicsTK, and virtually every computational pathology pipeline to read proprietary scanner formats. LGPL-2.1, v4.0.0 (October 2023), 11 vendor formats supported, CMU/NIH origin. Like ITK in the radiology space, OpenSlide is infrastructure that operates below the surface of higher-level tools rather than being used directly by end users.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -55,6 +52,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:22d98e0c923e58f0a43ac89ea74779f1ac8637f3",
-  "mach:licenseVerified": false
+  "mach:swhid": "swh:1:ori:22d98e0c923e58f0a43ac89ea74779f1ac8637f3"
 }

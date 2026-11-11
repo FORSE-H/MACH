@@ -33,7 +33,6 @@
     "url": "https://github.com/suyashkumar"
   },
   "mach:governance": "individual",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "medical-imaging",
@@ -42,8 +41,6 @@
   "mach:deploymentContext": [
     "embedded-library"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The reference DICOM parsing library for Go — MIT, stable v1.1.0, 1.1k stars, actively maintained with a complete rewrite history showing long-term commitment. DICOM is the core medical imaging standard so this is a genuine healthcare infrastructure need. Assess rather than Adopt due to individual governance (single maintainer sustainability risk) and the library nature of the project, which makes adoption dependent on the Go stack being in use.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -57,6 +54,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/suyashkumar/dicom/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/suyashkumar/dicom/blob/main/LICENSE"
 }

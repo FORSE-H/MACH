@@ -53,7 +53,6 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
@@ -64,8 +63,6 @@
     "research",
     "pathology"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de facto open-source platform for digital pathology — 8,480+ citations on the 2017 Scientific Reports paper make it the most widely cited pathology analysis software in existence. GPL-3.0, 1.4k stars, v0.7.0 March 2026 showing active maintenance. Supports WSI annotation, interactive cell classification, TMA analysis, and Groovy scripting for reproducible pipelines. Integrates natively with MONAI Label for AI-assisted annotation. Adopt for any team doing computational pathology, biomarker quantification, or training pathology AI models.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -86,6 +83,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:901111bd8c8794f4f96af13cec42c3d247036dd9",
-  "mach:licenseUrl": "https://github.com/qupath/qupath/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/qupath/qupath/blob/main/LICENSE"
 }

@@ -37,7 +37,6 @@
   "mach:governance": "academic",
   "mach:foundation": "Amsterdam University Medical Centers",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted"
   ],
@@ -45,8 +44,6 @@
     "secondary-care",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The first and most significant freely accessible European ICU database — 23,106 admissions, ~1 billion observations, OMOP CDM v5.4 aligned. Published in Critical Care Medicine 2021, actively versioned (v1.5.0 May 2024), MIT code license, 206 stars. Essential reference for European ICU research including sepsis, fluid management, and clinical prediction tasks. Data access requires a short application (not full DUA) making it far more accessible than US equivalents like MIMIC. Direct complement to MIMIC-IV for teams needing European patient populations.",
   "mach:editorialReviewedAt": "2026-05-18",
   "mach:evidence": [
     {
@@ -62,6 +59,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:3c01a6c4379c8313540fe1cbb476f8f0c881b099",
-  "mach:licenseUrl": "https://github.com/AmsterdamUMC/AmsterdamUMCdb/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/AmsterdamUMC/AmsterdamUMCdb/blob/master/LICENSE"
 }

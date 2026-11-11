@@ -44,9 +44,6 @@
   "mach:foundation": "National Institutes of Health / NLM",
   "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "NeurIPS 2024 Oral from NIH/NLM — the only dedicated benchmark for clinical calculator reasoning, a skill systematically absent from existing medical QA benchmarks. Covers 55 real-world scoring systems derived from actual patient notes. CC-BY-SA-4.0 data licence, freely usable. Essential for teams evaluating LLM safety in numerical clinical reasoning tasks where errors carry direct patient-safety implications.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -69,6 +66,5 @@
       "url": "https://arxiv.org/abs/2406.12036",
       "mach:evidenceType": "academic-reference"
     }
-  ],
-  "mach:licenseVerified": false
+  ]
 }

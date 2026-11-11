@@ -43,9 +43,6 @@
   "mach:foundation": "Harvard Medical School / MIMS Lab",
   "mach:category": "ai-ml-models",
   "mach:subcategory": "llm-agents",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Highly capable therapeutic reasoning agent from a leading computational medicine lab (Zitnik, Harvard). Orchestrates 211 tools including drug databases, genomic repositories, and clinical guidelines — a significant breadth advantage over single-tool approaches. MIT licence, 617 stars, actively maintained. Not yet clinically validated in real EHR workflows, but is the most capable open-source agent for treatment recommendation research. Essential evaluation for teams building drug-interaction or personalised treatment pipeline agents.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -72,6 +69,5 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/mims-harvard/TxAgent/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/mims-harvard/TxAgent/blob/main/LICENSE"
 }

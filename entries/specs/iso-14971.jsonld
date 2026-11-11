@@ -18,7 +18,6 @@
   ],
   "license": "LicenseRef-ISO-copyright",
   "mach:licenseUrl": "https://www.iso.org/standard/72704.html",
-  "mach:licenseVerified": true,
   "mach:accessModel": "paid",
   "mach:specPrice": "Approx. CHF 148 from ISO; available via national standards bodies (BSI, DIN, NEN, etc.)",
   "dateModified": "2019-12-01",
@@ -41,8 +40,6 @@
   },
   "mach:governance": "government",
   "mach:category": "specs",
-  "mach:maturity": "production",
-  "mach:accessModel": "paid",
   "mach:clinicalDomain": [
     "medical-devices",
     "research",
@@ -50,8 +47,6 @@
     "primary-care",
     "secondary-care"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The mandatory risk management standard for any medical device — hardware, SaMD, or AI/ML system — seeking CE marking under EU MDR/IVDR or FDA clearance/approval. Defines the full risk management lifecycle: hazard identification, risk estimation, risk evaluation, risk controls, and post-market monitoring. Non-compliance blocks regulatory approval. Note: this is a paid ISO standard (approx. CHF 148); unlike FHIR or DICOM it is not freely available. Adopt means compliance is mandatory for regulated medical device development — not that the standard document is open access. ISO/TR 24971:2020 provides free implementation guidance excerpts.",
   "mach:editorialReviewedAt": "2026-06-05",
   "mach:evidence": [
     {

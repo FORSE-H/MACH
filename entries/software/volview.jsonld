@@ -12,7 +12,6 @@
   "codeRepository": "https://github.com/Kitware/VolView",
   "license": "Apache-2.0",
   "mach:licenseUrl": "https://github.com/Kitware/VolView/blob/main/LICENSE",
-  "mach:licenseVerified": true,
   "version": "4.4.0",
   "dateModified": "2025-07-31",
   "programmingLanguage": [
@@ -39,7 +38,6 @@
     }
   ],
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "cloud",
@@ -49,8 +47,6 @@
     "radiology",
     "research"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Browser-native 3D DICOM viewer from Kitware (VTK/ITK/ParaView lineage) with a clear differentiator: cinematic volume rendering running entirely client-side with no data upload, no installation, and no server dependency. NIH-funded, MICCAI 2022 paper, v4.4.0, Apache-2.0. Assess rather than Adopt: 283 stars and DICOM-only format support (no NIfTI/NRRD), which limits it to radiology workflows vs. broader neuroimaging use cases covered by NiiVue or 3D Slicer (both already in MACH). The zero-install local-processing model is a strong fit for privacy-sensitive clinical environments. Adopt OHIF Viewer for full-featured DICOM worklist and annotation; Assess VolView for lightweight 3D rendering without infrastructure.",
   "mach:editorialReviewedAt": "2026-06-04",
   "mach:evidence": [
     {

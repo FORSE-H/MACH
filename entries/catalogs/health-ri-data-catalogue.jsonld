@@ -35,14 +35,11 @@
     "url": "https://www.health-ri.nl"
   },
   "mach:governance": "foundation",
-  "mach:maturity": "production",
   "mach:category": "catalogs",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The principal national health data discovery infrastructure for the Netherlands, indexing over 480 datasets from hospitals, biobanks, and research cohorts. One of the first national health catalogs to adopt HealthDCAT-AP, the EHDS-aligned metadata profile — making it directly relevant to the European Health Data Space rollout. Built on the FAIR Data Point specification with openly accessible metadata. Marked Assess rather than Adopt because the catalogue is a hosted service rather than a self-contained open-source tool.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {

@@ -17,7 +17,6 @@
   ],
   "license": "custom",
   "mach:licenseUrl": "https://vivli.org/resources/vivli-data-use-agreement/",
-  "mach:licenseVerified": false,
   "keywords": [
     "clinical-trials",
     "individual-patient-data",
@@ -37,7 +36,6 @@
     }
   ],
   "mach:governance": "foundation",
-  "mach:maturity": "production",
   "mach:category": "data-sources",
   "mach:deploymentContext": [
     "cloud"
@@ -48,8 +46,6 @@
     "pharmacology",
     "oncology"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The primary platform for individual patient data (IPD) sharing from clinical trials — 8,000+ trials, 5.2 million participants, 530+ resulting publications. Endorsed by NIH as an approved data sharing repository. Supported by 55+ members spanning major pharma (Pfizer, Roche, GSK, Novartis) and top academic institutions. Implements Five Safes Framework. Assess rather than Adopt for three reasons: access is entirely controlled (no open data tier), DUA is custom and non-negotiable (not a standard open licence), and there is no public API for programmatic discovery. Essential reference for any team requiring clinical trial IPD — assess whether your research plan meets the access criteria and institutional DUA requirements before submitting.",
   "mach:editorialReviewedAt": "2026-06-02",
   "mach:evidence": [
     {

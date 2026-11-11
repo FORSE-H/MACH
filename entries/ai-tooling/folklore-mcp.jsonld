@@ -41,10 +41,7 @@
   "mach:governance": "vendor-led",
   "mach:category": "ai-tooling",
   "mach:subcategory": "mcp-server",
-  "mach:maturity": "beta",
   "mach:aiActRiskClass": "high-risk-candidate",
-  "mach:judgement": "Caution",
-  "mach:judgementReason": "A current, substantive (Apache-2.0, 93 commits, tests, CI, versioned releases) MCP server bringing ACMG/AMP germline variant interpretation to LLM agents — a genuinely useful capability for clinical-genomics AI, with commendably explicit scope limits (no patient context, outputs require professional review). Marked Caution for two converging reasons. (1) It is an open adapter to a proprietary hosted service: the variant-classification logic runs on Helena Bioinformatics' closed Folklore API, not in the open repository, so the capability depends on a vendor-operated service with its own terms (and an API key for the fuller toolset). (2) Automated clinical variant interpretation sits squarely in EU AI Act high-risk-candidate territory; it is a decision-support aid that is not independently validated here, and must not substitute for qualified review. Useful for teams building genomics-AI agents who can accept the hosted-service dependency and treat outputs as draft; the open code is the adapter, not the interpreter. Submitted via the MACH form with a disclosed maintainer affiliation.",
   "mach:editorialReviewedAt": "2026-11-11",
   "schema:comment": "Apache-2.0 MCP adapter to a CLOSED hosted service (api.helena.bio); core variant-classification logic is not open. Clinical/high-risk. Submitted via MACH form (issue #6) by the maintainer. Re-verify hosting/licence on next review.",
   "mach:clinicalDomain": [
@@ -66,6 +63,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/helena-bioinformatics/folklore-mcp/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/helena-bioinformatics/folklore-mcp/blob/main/LICENSE"
 }

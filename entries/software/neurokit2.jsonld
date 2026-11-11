@@ -44,9 +44,6 @@
   "mach:governance": "academic",
   "mach:category": "software",
   "mach:subcategory": "signal-processing",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The most accessible and comprehensive Python library for physiological signal processing. 2,200+ stars, MIT license, pip-installable, well-documented with tutorials. Covers ECG, EEG, EMG, EDA, and PPG with a consistent API. Widely used in clinical research and wearable device analysis pipelines. Benchmarked against established tools in peer-reviewed publications.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "cardiology",
@@ -71,6 +68,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:9cee6d7cfc3e31b0238662c220f0ae341ff7d7bb",
-  "mach:licenseUrl": "https://github.com/neuropsychology/NeuroKit/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/neuropsychology/NeuroKit/blob/master/LICENSE"
 }

@@ -35,7 +35,6 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "programmingLanguage": [
     "Python"
@@ -57,8 +56,6 @@
     "surgery",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference tool for whole-body CT and MRI anatomical segmentation — 100+ structures, one-line CLI, Apache-2.0, 2.7k stars, v2.5.0 (January 2025). Built on nnU-Net and published in Radiology AI 2023. Widely used in large-scale clinical cohort studies for automated organ volumetry and structure extraction. Complements nnU-Net in the MACH catalog: nnU-Net is the general-purpose training framework; TotalSegmentator is the ready-to-use pre-trained segmentation tool for radiology.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -83,6 +80,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:bee3294d70de8f5fa0655c09419e3d6378ac74a5",
-  "mach:licenseUrl": "https://github.com/wasserth/TotalSegmentator/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/wasserth/TotalSegmentator/blob/master/LICENSE"
 }

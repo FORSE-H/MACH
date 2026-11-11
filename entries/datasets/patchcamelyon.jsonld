@@ -40,13 +40,10 @@
   ],
   "mach:governance": "community",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted",
     "offline-capable"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The accessible entry-point benchmark for computational pathology — 327K patches derived from CAMELYON16, trainable on a single GPU in hours, CC0. Standard inclusion in pathology AI model evaluations alongside CAMELYON and PANDA. Complements the CAMELYON WSI-level benchmark in the MACH catalog: PCam enables rapid patch-level classifier development; CAMELYON provides the full slide-level evaluation setting.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -61,6 +58,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:ccad8e5bc14bd7812f3e4815bb05392683c946f4",
-  "mach:licenseUrl": "https://github.com/basveeling/pcam/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/basveeling/pcam/blob/master/LICENSE.txt"
 }
