@@ -6,6 +6,7 @@ on:
     paths:
       - 'entries/**'
       - 'scripts/generate_entries.py'
+      - 'scripts/generate_dashboard.py'
       - 'scripts/taxonomy.py'
       - 'data/taxonomy/categories.yaml'
       - 'index.html'
@@ -43,6 +44,9 @@ jobs:
       - name: Run generate_entries.py
         run: python scripts/generate_entries.py
 
+      - name: Run generate_dashboard.py
+        run: python scripts/generate_dashboard.py
+
       - name: Set up Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
@@ -65,7 +69,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add entries/ index.html
-          git diff --staged --quiet || git commit -m "ci: add SWHIDs and regenerate index.html [skip ci]"
+          git add entries/ index.html mach-dashboard.html
+          git diff --staged --quiet || git commit -m "ci: regenerate index.html and dashboard [skip ci]"
           git pull --rebase origin main
           git push

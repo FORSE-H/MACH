@@ -1,11 +1,13 @@
 name: Validate Entries
 
 on:
+  # Run on EVERY pull request — not just ones that touch entries/.
+  # This job is a Required status check in branch protection; a path filter
+  # here means PRs that don't touch entries/ never report a status and get
+  # stuck forever on "Expected — Waiting for status to be reported". Running
+  # unconditionally (it passes trivially when there's nothing to validate)
+  # keeps the required check from deadlocking non-entries PRs.
   pull_request:
-    paths:
-      - 'entries/**'
-      - 'data/schema/**'
-      - 'data/context/**'
   push:
     branches: [main]
     paths:

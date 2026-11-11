@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MACH Catalog Intelligence Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .header { text-align: center; padding: 40px 20px 20px; background: linear-gradient(180deg, #161b22 0%, #0d1117 100%); border-bottom: 1px solid #21262d; }
+  .header h1 { font-size: 2.2rem; font-weight: 700; }
+  .header h1 span { color: #58a6ff; }
+  .header p { color: #8b949e; margin-top: 8px; font-size: 0.95rem; }
+  .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 16px; }
+  .badge { background: #21262d; border: 1px solid #30363d; border-radius: 20px; padding: 5px 14px; font-size: 0.8rem; color: #8b949e; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; padding: 24px 32px; }
+  .kpi { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 20px 16px; text-align: center; }
+  .kpi .num { font-size: 2rem; font-weight: 700; }
+  .kpi .label { font-size: 0.75rem; color: #8b949e; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .insights { margin: 0 32px 24px; background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 20px 24px; }
+  .insights h3 { color: #58a6ff; font-size: 0.85rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .insight-item { color: #c9d1d9; font-size: 0.88rem; line-height: 1.6; padding: 4px 0; border-bottom: 1px solid #21262d; }
+  .insight-item:last-child { border-bottom: none; }
+  .insight-item strong { color: #f0f6fc; }
+  .section { padding: 0 32px 32px; }
+  .section-title { font-size: 1rem; font-weight: 600; color: #f0f6fc; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+  .section-title span { color: #58a6ff; }
+  .chart-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .chart-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .chart-box { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 20px; }
+  .chart-box h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; margin-bottom: 16px; }
+  .chart-box canvas { max-height: 240px; }
+  .bar-list { display: flex; flex-direction: column; gap: 8px; }
+  .bar-item { display: flex; align-items: center; gap: 10px; font-size: 0.82rem; }
+  .bar-item .name { width: 140px; flex-shrink: 0; color: #c9d1d9; text-align: right; font-size: 0.78rem; }
+  .bar-item .bar-wrap { flex: 1; background: #21262d; border-radius: 3px; height: 18px; position: relative; }
+  .bar-item .bar-fill { height: 100%; border-radius: 3px; }
+  .bar-item .val { width: 36px; text-align: right; color: #8b949e; font-size: 0.78rem; flex-shrink: 0; }
+  .note { font-size: 0.78rem; color: #58a6ff; margin-top: 12px; padding: 8px 12px; background: #0d2137; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; }
+  .judgement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+  .judgement-card { border-radius: 10px; padding: 18px; text-align: center; }
+  .judgement-card.adopt { background: #0d2b1a; border: 1px solid #2ea043; }
+  .judgement-card.assess { background: #1a1a0d; border: 1px solid #d29922; }
+  .judgement-card.caution { background: #2b0d0d; border: 1px solid #da3633; }
+  .judgement-card .num { font-size: 2.2rem; font-weight: 700; }
+  .judgement-card.adopt .num { color: #3fb950; }
+  .judgement-card.assess .num { color: #e3b341; }
+  .judgement-card.caution .num { color: #f85149; }
+  .judgement-card .label { font-size: 0.8rem; color: #8b949e; margin-top: 4px; }
+  .judgement-card .pct { font-size: 0.75rem; color: #6e7681; margin-top: 2px; }
+  footer { text-align: center; padding: 24px; color: #6e7681; font-size: 0.78rem; border-top: 1px solid #21262d; margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>MACH <span>Catalog Intelligence</span> Dashboard</h1>
+  <p>Machine-Actionable Catalog for Healthcare · Open-source tools, models, datasets, and standards</p>
+  <div class="badges">
+    <span class="badge">209 Entries Analysed</span>
+    <span class="badge">7 Entry Categories</span>
+    <span class="badge">39 Clinical Domains</span>
+    <span class="badge">Verified Metadata · CC-BY-4.0</span>
+    <span class="badge">Generated: November 2026</span>
+  </div>
+</div>
+
+<!-- KPI Row -->
+<div class="kpi-grid">
+  <div class="kpi"><div class="num" style="color:#58a6ff">209</div><div class="label">Total Entries</div></div>
+  <div class="kpi"><div class="num" style="color:#3fb950">110</div><div class="label">Adopt</div></div>
+  <div class="kpi"><div class="num" style="color:#e3b341">93</div><div class="label">Assess</div></div>
+  <div class="kpi"><div class="num" style="color:#f85149">6</div><div class="label">Caution</div></div>
+  <div class="kpi"><div class="num" style="color:#a371f7">106</div><div class="label">Software Tools</div></div>
+  <div class="kpi"><div class="num" style="color:#f78166">30</div><div class="label">AI/ML Models</div></div>
+</div>
+
+<!-- Intelligence Findings -->
+<div class="insights">
+  <h3>🔍 Top Intelligence Findings from 209 MACH Entries</h3>
+  <div class="insight-item">— <strong>Academic governance leads:</strong> academic accounts for 95 of 209 entries (45.5%) — reflecting the research-first origins of open-source healthcare tooling. 25 are vendor-led.</div>
+  <div class="insight-item">— <strong>Research is the most represented clinical domain</strong> with 98 entries.</div>
+  <div class="insight-item">— <strong>Apache-2.0 is the dominant licence</strong> (65 entries, 31.1%). MIT follows at 39. Only 7 entries use copyleft (GPL-3.0), reducing commercial-adoption friction.</div>
+  <div class="insight-item">— <strong>Python dominates healthcare AI tooling:</strong> 68 of 109 declared-language mentions are Python (62.4%).</div>
+  <div class="insight-item">— <strong>Production maturity is the norm:</strong> 159 of 209 entries (76.1%) are rated production — MACH deliberately excludes prototype-only tools, so this reflects curation, not field-wide maturity.</div>
+  <div class="insight-item">— <strong>FHIR adoption is real but not dominant:</strong> 21 entries carry the "fhir" keyword; interoperability remains a gap (13 tagged "interoperability").</div>
+  <div class="insight-item">— <strong>Self-hosted deployment dominates (166 entries):</strong> healthcare data-sovereignty concerns drive on-premise preference; only 41 are cloud-only.</div>
+</div>
+
+<!-- Judgement Section -->
+<div class="section">
+  <div class="section-title">Editorial Judgement Distribution — <span>What MACH Recommends</span></div>
+  <div class="judgement-grid">
+    <div class="judgement-card adopt"><div class="num">110</div><div class="label">Adopt</div><div class="pct">52.6% of catalog</div></div>
+    <div class="judgement-card assess"><div class="num">93</div><div class="label">Assess</div><div class="pct">44.5% of catalog</div></div>
+    <div class="judgement-card caution"><div class="num">6</div><div class="label">Caution</div><div class="pct">2.9% of catalog</div></div>
+  </div>
+  <div class="chart-grid-2">
+    <div class="chart-box"><h4>Entries by Category</h4><canvas id="catChart"></canvas></div>
+    <div class="chart-box"><h4>Judgement by Category</h4><canvas id="judgCatChart"></canvas></div>
+  </div>
+</div>
+
+<!-- Governance & Maturity -->
+<div class="section">
+  <div class="section-title">Governance &amp; Maturity — <span>Who Builds Healthcare Open Source</span></div>
+  <div class="chart-grid-3">
+    <div class="chart-box"><h4>Governance Model</h4><canvas id="govChart"></canvas></div>
+    <div class="chart-box"><h4>Maturity Level</h4><canvas id="matChart"></canvas></div>
+    <div class="chart-box"><h4>Licence Landscape (Top 8)</h4><canvas id="licChart"></canvas></div>
+  </div>
+</div>
+
+<!-- Clinical Domain -->
+<div class="section">
+  <div class="section-title">Clinical Domain Coverage — <span>Where Open Source Exists</span></div>
+  <div class="chart-grid-2">
+    <div class="chart-box" style="grid-column: span 2">
+      <h4>Entries by Clinical Domain (Top 15)</h4>
+      <div class="bar-list" id="domainBars"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Tech Stack -->
+<div class="section">
+  <div class="section-title">Technology Landscape — <span>Languages &amp; Deployment</span></div>
+  <div class="chart-grid-3">
+    <div class="chart-box"><h4>Programming Languages</h4><canvas id="langChart"></canvas></div>
+    <div class="chart-box"><h4>Deployment Context</h4><canvas id="deployChart"></canvas></div>
+    <div class="chart-box"><h4>Operating System Support</h4><canvas id="osChart"></canvas></div>
+  </div>
+</div>
+
+<!-- Keywords -->
+<div class="section">
+  <div class="section-title">Top Keywords — <span>What Healthcare Open Source Is About</span></div>
+  <div class="chart-box">
+    <h4>Most Frequent Keywords (Top 20)</h4>
+    <div class="bar-list" id="kwBars"></div>
+  </div>
+</div>
+
+<footer>
+  MACH — Machine-Actionable Catalog for Healthcare · github.com/FORSE-H/MACH · Apache-2.0 / CC-BY-4.0 · All statistics derived from verified catalog entries · November 2026
+</footer>
+
+<script>
+const COLORS = ['#58a6ff','#3fb950','#e3b341','#f85149','#a371f7','#f78166','#56d364','#ffa657','#79c0ff','#ffb3c8'];
+const GRID = { color: '#21262d' };
+const TICK = { color: '#8b949e', font: { size: 11 } };
+
+new Chart(document.getElementById('catChart'), {
+  type: 'doughnut',
+  data: { labels: ["Software (106)", "AI / ML Models (30)", "Datasets (27)", "Data Sources (21)", "Specs (14)", "MCP Servers (8)", "Catalogs (3)"], datasets: [{ data: [106, 30, 27, 21, 14, 8, 3], backgroundColor: COLORS, borderWidth: 2, borderColor: '#161b22' }] },
+  options: { plugins: { legend: { labels: { color: '#8b949e', font: { size: 11 }, boxWidth: 12 } } }, cutout: '60%' }
+});
+
+new Chart(document.getElementById('judgCatChart'), {
+  type: 'bar',
+  data: { labels: ["Software", "AI / ML Models", "Datasets", "Data Sources", "Specs", "MCP Servers", "Catalogs"], datasets: [
+    { label: 'Adopt', data: [58, 8, 16, 17, 10, 1, 0], backgroundColor: '#2ea043' },
+    { label: 'Assess', data: [47, 21, 11, 2, 4, 5, 3], backgroundColor: '#d29922' },
+    { label: 'Caution', data: [1, 1, 0, 2, 0, 2, 0], backgroundColor: '#da3633' }
+  ] },
+  options: { scales: { x: { stacked: true, ticks: TICK, grid: GRID }, y: { stacked: true, ticks: TICK, grid: GRID } },
+    plugins: { legend: { labels: { color: '#8b949e', font: { size: 11 }, boxWidth: 12 } } } }
+});
+
+new Chart(document.getElementById('govChart'), {
+  type: 'doughnut',
+  data: { labels: ["academic (95)", "community (33)", "vendor-led (25)", "foundation (24)", "government (24)", "individual (8)"], datasets: [{ data: [95, 33, 25, 24, 24, 8], backgroundColor: COLORS, borderWidth: 2, borderColor: '#161b22' }] },
+  options: { plugins: { legend: { labels: { color: '#8b949e', font: { size: 10 }, boxWidth: 12 } } }, cutout: '60%' }
+});
+
+new Chart(document.getElementById('matChart'), {
+  type: 'doughnut',
+  data: { labels: ["Production (159)", "Beta (45)", "Experimental (4)", "Legacy (1)"], datasets: [{ data: [159, 45, 4, 1], backgroundColor: ['#3fb950','#e3b341','#f85149','#6e7681'], borderWidth: 2, borderColor: '#161b22' }] },
+  options: { plugins: { legend: { labels: { color: '#8b949e', font: { size: 11 }, boxWidth: 12 } } }, cutout: '60%' }
+});
+
+new Chart(document.getElementById('licChart'), {
+  type: 'bar',
+  data: { labels: ["Apache-2.0", "MIT", "BSD-3-Clause", "CC-BY-4.0", "CC0-1.0", "GPL-3.0", "custom", "CC-BY-NC-ND-4.0"], datasets: [{ data: [65, 39, 11, 10, 9, 7, 6, 5], backgroundColor: COLORS }] },
+  options: { indexAxis: 'y', scales: { x: { ticks: TICK, grid: GRID }, y: { ticks: TICK, grid: GRID } }, plugins: { legend: { display: false } } }
+});
+
+new Chart(document.getElementById('langChart'), {
+  type: 'bar',
+  data: { labels: ["Python", "Java", "C++", "TypeScript", "Vue", "Swift", "Kotlin", "JavaScript"], datasets: [{ data: [68, 12, 9, 4, 3, 2, 2, 2], backgroundColor: '#58a6ff' }] },
+  options: { indexAxis: 'y', scales: { x: { ticks: TICK, grid: GRID }, y: { ticks: { ...TICK, font: { size: 10 } }, grid: GRID } }, plugins: { legend: { display: false } } }
+});
+
+new Chart(document.getElementById('deployChart'), {
+  type: 'doughnut',
+  data: { labels: ["self-hosted (166)", "cloud (50)", "cloud-only (41)", "docker (33)", "offline-capable (31)", "embedded-library (8)", "cloud-deployable (7)", "gdpr-ready (5)", "research (4)", "hipaa-ready (3)", "mobile (2)", "kubernetes (1)", "eu-ai-act-documented (1)"], datasets: [{ data: [166, 50, 41, 33, 31, 8, 7, 5, 4, 3, 2, 1, 1], backgroundColor: COLORS, borderWidth: 2, borderColor: '#161b22' }] },
+  options: { plugins: { legend: { labels: { color: '#8b949e', font: { size: 10 }, boxWidth: 12 } } }, cutout: '60%' }
+});
+
+new Chart(document.getElementById('osChart'), {
+  type: 'bar',
+  data: { labels: ["Linux", "macOS", "Windows", "Docker", "Android", "Kubernetes", "iOS"], datasets: [{ data: [57, 43, 34, 14, 2, 1, 1], backgroundColor: '#a371f7' }] },
+  options: { scales: { x: { ticks: TICK, grid: GRID }, y: { ticks: TICK, grid: GRID } }, plugins: { legend: { display: false } } }
+});
+
+const domains = [["Research", 98], ["Oncology", 67], ["Primary Care", 36], ["Secondary Care", 32], ["Radiology", 30], ["Public Health", 26], ["Pathology", 26], ["Cardiology", 19], ["Genomics", 17], ["Rare Disease", 17], ["Neurology", 15], ["Medical Imaging", 12], ["Clinical Research", 11], ["Epidemiology", 9], ["Global Health", 8]];
+const domColors = ['#58a6ff','#f85149','#3fb950','#e3b341','#a371f7','#f78166','#56d364','#ffa657','#79c0ff','#58a6ff','#3fb950','#e3b341','#a371f7','#f78166','#56d364'];
+const maxD = domains.length ? domains[0][1] : 1;
+const domContainer = document.getElementById('domainBars');
+domains.forEach(([name, val], i) => {
+  domContainer.innerHTML += `<div class="bar-item"><div class="name">${name}</div><div class="bar-wrap"><div class="bar-fill" style="width:${(val/maxD*100).toFixed(1)}%;background:${domColors[i % domColors.length]}"></div></div><div class="val">${val}</div></div>`;
+});
+
+const keywords = [["medical-imaging", 32], ["digital-pathology", 32], ["ehr", 29], ["radiology", 28], ["dicom", 27], ["python", 26], ["whole-slide-imaging", 21], ["fhir", 21], ["benchmark", 20], ["mri", 18], ["deep-learning", 18], ["pytorch", 18], ["segmentation", 15], ["foundation-model", 14], ["ct", 13], ["interoperability", 13], ["open-data", 12], ["rest-api", 12], ["llm", 12], ["llm-agent", 11]];
+const maxK = keywords.length ? keywords[0][1] : 1;
+const kwContainer = document.getElementById('kwBars');
+keywords.forEach(([name, val], i) => {
+  kwContainer.innerHTML += `<div class="bar-item"><div class="name">${name}</div><div class="bar-wrap"><div class="bar-fill" style="width:${(val/maxK*100).toFixed(1)}%;background:${COLORS[i % COLORS.length]}"></div></div><div class="val">${val}</div></div>`;
+});
+</script>
+
+</body>
+</html>
