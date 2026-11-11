@@ -816,6 +816,10 @@
     font-family: 'DM Mono', monospace;
   }
   .semantic-status a { cursor: pointer; }
+  .link-btn {
+    background: none; border: none; padding: 0; cursor: pointer;
+    font: inherit; color: var(--teal-700); text-decoration: underline;
+  }
 
   /* ── FILTER BARS ── */
   .filter-rows { margin-bottom: 1.5rem; }
@@ -3519,10 +3523,10 @@
       });
       const safeQ = q.replace(/[<>&]/g, '');
       if (shown === 0) {
-        status.innerHTML = `No strong matches for "${safeQ}". Try a fuller phrase (e.g. "diabetes management app"), or <a id="sem-clear">browse all</a>.`;
+        status.innerHTML = `No strong matches for "${safeQ}". Try a fuller phrase (e.g. "diabetes management app"), or <button type="button" id="sem-clear" class="link-btn">browse all</button>.`;
       } else {
         const tip = shown <= 2 ? ' Tip: a fuller phrase finds more.' : '';
-        status.innerHTML = `${shown} relevant ${shown === 1 ? 'result' : 'results'} for "${safeQ}", ranked by meaning.${tip} <a id="sem-clear">Clear</a>`;
+        status.innerHTML = `${shown} relevant ${shown === 1 ? 'result' : 'results'} for "${safeQ}", ranked by meaning.${tip} <button type="button" id="sem-clear" class="link-btn">Clear</button>`;
       }
       document.getElementById('sem-clear').addEventListener('click', clearSemantic);
     } catch (err) {
