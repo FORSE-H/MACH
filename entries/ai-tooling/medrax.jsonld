@@ -1,6 +1,6 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/medrax",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/medrax",
   "@type": [
     "schema:SoftwareApplication",
     "schema:SoftwareSourceCode"
@@ -43,7 +43,7 @@
   "mach:huggingFaceUrl": "https://huggingface.co/datasets/wanglab/chest-agent-bench",
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
-  "mach:category": "software",
+  "mach:category": "ai-tooling",
   "mach:maturity": "beta",
   "mach:deploymentContext": [
     "self-hosted",
@@ -69,5 +69,6 @@
     }
   ],
   "mach:licenseUrl": "https://github.com/bowang-lab/MedRAX/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseVerified": true,
+  "mach:subcategory": "ai-agent"
 }

@@ -1,6 +1,6 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/mcp-servers/omophub-mcp",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/omophub-mcp",
   "@type": [
     "schema:SoftwareApplication",
     "schema:SoftwareSourceCode"
@@ -43,8 +43,8 @@
   "mach:transport": "http",
   "mach:authMethod": "api-key",
   "mach:governance": "vendor-led",
-  "mach:category": "mcp-servers",
-  "mach:subcategory": "terminology-mcp",
+  "mach:category": "ai-tooling",
+  "mach:subcategory": "mcp-server",
   "mach:maturity": "beta",
   "mach:judgement": "Caution",
   "mach:judgementReason": "An open-source (MIT) MCP server giving LLM agents structured access to OHDSI OMOP vocabularies — 11M+ concepts across SNOMED CT, ICD-10, LOINC, RxNorm — with semantic/multilingual search, cross-vocabulary mappings, and FHIR-to-OMOP resolution. Genuinely useful for clinical-AI and OMOP data teams, with stdio + Streamable HTTP transports and sibling Python/Node/R SDKs. Marked Caution for one decisive reason: the server is only a thin open-source client to OMOPHub's hosted, proprietary REST API (api.omophub.com), and it does not function without an OMOPHub account and API key — there is no self-hosted or offline vocabulary option. So while the MCP/SDK code is open, the capability it exposes is a closed, vendor-operated service, and usage (including any paid tiers) is governed by OMOPHub. Teams needing vendor-neutral or self-hostable OMOP/terminology access should weigh this lock-in; the open client is still worth cataloguing as a working path to OMOP vocabularies for agents. Vendor-led, no independent adoption track record yet.",

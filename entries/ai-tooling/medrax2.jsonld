@@ -1,6 +1,6 @@
 {
   "@context": "../../data/context/mach.jsonld",
-  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/medrax2",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/medrax2",
   "@type": [
     "schema:SoftwareApplication",
     "schema:SoftwareSourceCode"
@@ -33,7 +33,7 @@
   ],
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
-  "mach:category": "software",
+  "mach:category": "ai-tooling",
   "mach:maturity": "experimental",
   "mach:deploymentContext": [
     "self-hosted"
@@ -52,5 +52,6 @@
     }
   ],
   "mach:licenseUrl": "https://github.com/bowang-lab/MedRAX2/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseVerified": true,
+  "mach:subcategory": "ai-agent"
 }
