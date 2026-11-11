@@ -29,7 +29,7 @@
   },
   "mach:governance": "academic",
   "mach:maturity": "beta",
-  "mach:category": "models",
+  "mach:category": "ai-ml-models",
   "mach:weightsLicense": "MIT",
   "mach:trainingDataSummary": "Pretrained on 10 million+ ECG recordings across multiple clinical sources. Fine-tuned and evaluated across multiple cardiac domains including arrhythmia detection and myocardial infarction.",
   "mach:intendedUse": "ECG interpretation and cardiac function assessment in clinical research and AI-assisted diagnostics. Not validated for autonomous clinical decision-making.",
