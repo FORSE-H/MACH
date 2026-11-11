@@ -22,7 +22,7 @@
     }
   ],
   "mach:huggingFaceUrl": "https://huggingface.co/facebook/esm2_t33_650M_UR50D",
-  "mach:category": "models",
+  "mach:category": "ai-ml-models",
   "mach:subcategory": "protein-language-model",
   "mach:judgement": "Adopt",
   "mach:judgementReason": "The dominant open protein language model — 4.1k GitHub stars, 2.5M+ monthly HuggingFace downloads, 32 fine-tuned variants, and a landmark Science 2023 publication (Lin et al., DOI: 10.1126/science.ade2574). Six model sizes from 8M to 15B parameters make it accessible across compute budgets. MIT license with no restrictions. Outperforms all tested single-sequence protein language models on structure prediction benchmarks. Standard foundation for drug target discovery, variant effect prediction, and protein engineering pipelines. Adopt for any team working on genomics, proteomics, or computational drug discovery.",
