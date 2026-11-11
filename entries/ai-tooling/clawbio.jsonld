@@ -1,0 +1,70 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/clawbio",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "clawbio",
+  "name": "ClawBio",
+  "alternateName": [
+    "ClawBio bioinformatics skills"
+  ],
+  "description": "A bioinformatics-native AI agent skill library for the OpenClaw framework — each skill is a folder with a SKILL.md spec, Python code, demo data, and reproducibility outputs, read directly by a model-agnostic agent. Emphasises local-first, reproducible analysis (GWAS lookup, Galaxy bridge, variant workflows, reference-genome handling). MIT-licensed, community-driven, with skills accepted via pull request; individual skills may declare their own licences and depend on third-party tools/models with their own terms. Built on OpenClaw (the popular MIT open-source agent framework), so it needs a user-supplied LLM and API key to run.",
+  "url": "https://github.com/ClawBio/ClawBio",
+  "codeRepository": "https://github.com/ClawBio/ClawBio",
+  "license": "MIT",
+  "relatedLink": [
+    "https://clawbio.github.io/",
+    "https://openclaw.im/"
+  ],
+  "programmingLanguage": [
+    "Markdown",
+    "Python"
+  ],
+  "applicationCategory": "Research",
+  "keywords": [
+    "ai-agent-skills",
+    "bioinformatics",
+    "openclaw",
+    "reproducibility",
+    "gwas",
+    "galaxy",
+    "genomics",
+    "local-first"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "ClawBio",
+    "url": "https://github.com/ClawBio"
+  },
+  "mach:governance": "community",
+  "mach:category": "ai-tooling",
+  "mach:subcategory": "agent-skills",
+  "mach:maturity": "beta",
+  "mach:judgement": "Assess",
+  "mach:judgementReason": "Rule-based: judgement is assigned deterministically by the MACH scorer from harvested signals (stars, maintenance, licence). A genuinely open (MIT), actively developed bioinformatics agent-skill library with healthy adoption (~1.2k stars, 2000+ commits, versioned releases) and a reproducibility-first design. Research tooling, not a clinical device; skills run on the user's own agent/LLM and may carry their own sub-licences.",
+  "mach:editorialReviewedAt": "2026-11-11",
+  "schema:comment": "MIT; built on OpenClaw. Judgement is auto-scored by the harvester from signals. Individual skills may declare own licences + third-party tool deps. Re-verify on next review.",
+  "mach:clinicalDomain": [
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ClawBio/ClawBio",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://clawbio.github.io/",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/ClawBio/ClawBio/blob/main/LICENSE",
+  "mach:licenseVerified": true
+}

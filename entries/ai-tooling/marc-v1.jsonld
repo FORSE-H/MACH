@@ -1,0 +1,70 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/marc-v1",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "marc-v1",
+  "name": "MARC v1",
+  "alternateName": [
+    "Multi-Agent Reasoning and Coordination"
+  ],
+  "description": "An open, configurable multi-agent framework for clinical AI reasoning: role-specialised LLM agents (extraction, reasoning, answer generation, evaluation) coordinate in a YAML-configured sequential pipeline that passes context explicitly and exposes traceable intermediate outputs, in place of a single monolithic prompt. Supports API-based (Gemini) and local CPU-compatible (Ollama) backends with per-agent RAG via Chroma; examples use the MedGemma medical model. The authors state it is a research framework, not a medical device, and not for clinical decision-making. Early-stage and lightly adopted.",
+  "url": "https://github.com/Penn-RAIL/MARC-v1",
+  "codeRepository": "https://github.com/Penn-RAIL/MARC-v1",
+  "license": "MIT",
+  "relatedLink": [
+    "https://arxiv.org/abs/2608.13476"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "applicationCategory": "Research",
+  "keywords": [
+    "multi-agent",
+    "agent-orchestration",
+    "clinical-reasoning",
+    "rag",
+    "llm-agent",
+    "medgemma",
+    "yaml-configured",
+    "coordination"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Penn-RAIL",
+    "url": "https://github.com/Penn-RAIL"
+  },
+  "mach:governance": "academic",
+  "mach:category": "ai-tooling",
+  "mach:subcategory": "ai-swarm",
+  "mach:maturity": "experimental",
+  "mach:aiActRiskClass": "high-risk-candidate",
+  "mach:judgement": "Caution",
+  "mach:judgementReason": "Rule-based: judgement is assigned deterministically by the MACH scorer from harvested signals (stars, maintenance, licence). A genuinely open (MIT) multi-agent framework for clinical reasoning with an arXiv preprint — the first orchestration/swarm-style entry in MACH. It is early-stage and lightly adopted (~11 stars, no releases), a sequential pipeline rather than a true swarm, and the authors explicitly state it is a research framework, not a medical device and not for clinical decision-making. Clinical reasoning is EU AI Act high-risk-candidate territory. Track it; do not rely on it clinically.",
+  "mach:editorialReviewedAt": "2026-11-11",
+  "schema:comment": "MIT; seeds the ai-swarm subcategory. Judgement auto-scored by harvester. Sequential pipeline (not a true swarm), research-only, unvalidated, ~11 stars. arXiv 2608.13476, no DOI. Penn-RAIL org affiliation (U. Pennsylvania) not fully confirmed. Re-verify on next review.",
+  "mach:clinicalDomain": [
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Penn-RAIL/MARC-v1",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2608.13476",
+      "mach:evidenceType": "academic-reference",
+      "schema:name": "MARC v1: An Open-Source Multi-Agent Framework for Clinical AI Reasoning and Coordination. arXiv:2608.13476 (2026)."
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/Penn-RAIL/MARC-v1/blob/main/LICENSE",
+  "mach:licenseVerified": true
+}
