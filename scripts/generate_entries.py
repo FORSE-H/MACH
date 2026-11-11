@@ -85,10 +85,49 @@ TYPE_LABELS = {
     "schema:DataCatalog": "Catalog",
 }
 
+# mach:subcategory → display label for the type pill. The subcategory is the
+# authoritative, consistently-set field; @type is not (some MCP servers lack
+# mach:MCPServer in @type), so when a subcategory maps here we use it.
+SUBCATEGORY_TYPE_LABELS = {
+    "mcp-server":    "MCP Server",
+    "ai-agent":      "AI Agent",
+    "agent-skills":  "Agent Skills",
+    "ai-swarm":      "Agent Swarm",
+}
+
+# mach:category → type-pill label, used as a reliable fallback when @type is
+# missing or inconsistent. The folder-derived category is always correct, so a
+# model mislabelled in @type still shows "ML Model", a data-source shows "Data
+# Source", etc. Benchmarks keep their own label via @type (checked first).
+CATEGORY_TYPE_LABELS = {
+    "ai-ml-models":  "ML Model",
+    "data-sources":  "Data Source",
+    "datasets":      "Dataset",
+    "specs":         "Standard",
+    "catalogs":      "Catalog",
+    "software":      "Software",
+}
+
 def get_entry_type(e):
+    # 1. Subcategory wins when it names a concrete tool type (ai-tooling).
+    sub = e.get("mach:subcategory", "")
+    if sub in SUBCATEGORY_TYPE_LABELS:
+        return SUBCATEGORY_TYPE_LABELS[sub]
+
     types = e.get("@type", [])
     if isinstance(types, str):
         types = [types]
+
+    # 2. A distinctive @type (Benchmark) that the category can't express.
+    if "mach:Benchmark" in types:
+        return "Benchmark"
+
+    # 3. The folder-derived category — always correct, unlike @type ordering.
+    cat = e.get("_cat", "")
+    if cat in CATEGORY_TYPE_LABELS:
+        return CATEGORY_TYPE_LABELS[cat]
+
+    # 4. Fall back to @type, then Software.
     for key, label in TYPE_LABELS.items():
         if key in types:
             return label
