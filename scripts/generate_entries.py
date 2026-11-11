@@ -30,6 +30,32 @@ FOLDER_TO_CAT = {c["folder"]: c["id"] for c in _yaml.safe_load(
     (Path(__file__).parent.parent / "data/taxonomy/categories.yaml").read_text()
 )["categories"]}
 
+SIGNALS_PATH = Path("data/signals.json")
+
+
+def load_signals():
+    """Load the harvested signals (stars, scorer judgement, lineage) keyed by
+    identifier. Absent file → empty dict, so the site still builds without it."""
+    if not SIGNALS_PATH.exists():
+        print("NOTE: data/signals.json not found — rendering without harvested signals")
+        return {}
+    data = json.loads(SIGNALS_PATH.read_text(encoding="utf-8"))
+    return {e["identifier"]: e for e in data.get("entries", [])}
+
+
+def _fmt_count(n):
+    """9018 -> '9,018'; large numbers -> '9.0k'."""
+    if n is None:
+        return None
+    if n >= 10000:
+        return f"{n/1000:.0f}k"
+    if n >= 1000:
+        return f"{n/1000:.1f}k"
+    return f"{n:,}"
+
+
+SIGNALS = {}  # populated in main()
+
 def load_entries():
     entries = []
     for path in sorted(ENTRIES_DIR.rglob("*.jsonld")):
@@ -59,10 +85,49 @@ TYPE_LABELS = {
     "schema:DataCatalog": "Catalog",
 }
 
+# mach:subcategory → display label for the type pill. The subcategory is the
+# authoritative, consistently-set field; @type is not (some MCP servers lack
+# mach:MCPServer in @type), so when a subcategory maps here we use it.
+SUBCATEGORY_TYPE_LABELS = {
+    "mcp-server":    "MCP Server",
+    "ai-agent":      "AI Agent",
+    "agent-skills":  "Agent Skills",
+    "ai-swarm":      "Agent Swarm",
+}
+
+# mach:category → type-pill label, used as a reliable fallback when @type is
+# missing or inconsistent. The folder-derived category is always correct, so a
+# model mislabelled in @type still shows "ML Model", a data-source shows "Data
+# Source", etc. Benchmarks keep their own label via @type (checked first).
+CATEGORY_TYPE_LABELS = {
+    "ai-ml-models":  "ML Model",
+    "data-sources":  "Data Source",
+    "datasets":      "Dataset",
+    "specs":         "Standard",
+    "catalogs":      "Catalog",
+    "software":      "Software",
+}
+
 def get_entry_type(e):
+    # 1. Subcategory wins when it names a concrete tool type (ai-tooling).
+    sub = e.get("mach:subcategory", "")
+    if sub in SUBCATEGORY_TYPE_LABELS:
+        return SUBCATEGORY_TYPE_LABELS[sub]
+
     types = e.get("@type", [])
     if isinstance(types, str):
         types = [types]
+
+    # 2. A distinctive @type (Benchmark) that the category can't express.
+    if "mach:Benchmark" in types:
+        return "Benchmark"
+
+    # 3. The folder-derived category — always correct, unlike @type ordering.
+    cat = e.get("_cat", "")
+    if cat in CATEGORY_TYPE_LABELS:
+        return CATEGORY_TYPE_LABELS[cat]
+
+    # 4. Fall back to @type, then Software.
     for key, label in TYPE_LABELS.items():
         if key in types:
             return label
@@ -138,18 +203,49 @@ def build_entries_html(entries):
         else:
             lic_tag = ""
         name_href     = jsonld_url if jsonld_url else e.get("url", e.get("codeRepository", "#"))
-        links_html    = f'<div class="entry-card-links">{url_links}</div>' if url_links else ""
 
-        # Judgement badge (Adopt / Assess / Caution), shown when the entry has one.
-        judgement_badge = (
-            f'<span class="entry-judgement ring-{judgement.lower()}" '
-            f'title="MACH editorial judgement: {judgement}">{judgement}</span>'
-            if judgement in ("Adopt", "Assess", "Caution") else ""
+        # ── Rule-based judgement from the harvested scorer (not hand-written) ──
+        ident = e.get("identifier", "")
+        sig   = SIGNALS.get(ident, {})
+        scorer_judgement = sig.get("judgement")          # Adopt/Assess/Caution or None
+        scorer_reason    = sig.get("judgement_reason") or ""
+        signals          = sig.get("signals", {}) or {}
+
+        if scorer_judgement in ("Adopt", "Assess", "Caution"):
+            judgement = scorer_judgement
+            j_title   = scorer_reason.replace('"', "&quot;")
+            judgement_badge = (
+                f'<span class="entry-judgement ring-{judgement.lower()}" '
+                f'title="{j_title}">{judgement}</span>'
+            )
+        else:
+            # No harvestable signal → not auto-scored (datasets, specs, hosted services).
+            judgement = ""
+            judgement_badge = (
+                '<span class="entry-judgement ring-none" '
+                'title="No harvestable repository signal — not auto-scored">not scored</span>'
+            )
+
+        # ── Stars badge (from harvested GitHub signals) ──
+        stars = _fmt_count(signals.get("repo_stars"))
+        stars_badge = (
+            f'<span class="entry-stars" title="GitHub stars">&#9733; {stars}</span>'
+            if stars else ""
         )
+
+        # ── Per-entry links: detail page, repo/site, raw JSON-LD ──
+        detail_href = f"entry/{ident}.html"
+        jsonld_link = (
+            f'<a href="{jsonld_url}" target="_blank" rel="noopener" class="entry-url entry-jsonld" '
+            f'title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a>'
+            if jsonld_url else ""
+        )
+        detail_link = f'<a href="{detail_href}" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a>'
+        links_html  = f'<div class="entry-card-links">{detail_link}{url_links}{jsonld_link}</div>'
 
         cards.append(f"""    <div class="entry-card" data-cat="{cat}" data-license="{license_str}" data-judgement="{judgement}">
       <div class="entry-card-meta">
-        <span class="entry-cat">{cat_label}</span>{judgement_badge}
+        <span class="entry-cat">{cat_label}</span>{stars_badge}{judgement_badge}
       </div>
       <p class="entry-name"><a href="{name_href}" target="_blank" rel="noopener">{name}</a></p>
       <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}</div>
@@ -159,10 +255,15 @@ def build_entries_html(entries):
 
     return "\n".join(cards)
 
+def _entry_judgement(e):
+    """The rule-based (scorer) judgement for an entry, or '' if not auto-scored."""
+    j = SIGNALS.get(e.get("identifier", ""), {}).get("judgement")
+    return j if j in ("Adopt", "Assess", "Caution") else ""
+
 def build_stats_html(entries):
     total    = len(entries)
-    adopts   = sum(1 for e in entries if e.get("mach:judgement") == "Adopt")
-    assessed = sum(1 for e in entries if e.get("mach:judgement") == "Assess")
+    adopts   = sum(1 for e in entries if _entry_judgement(e) == "Adopt")
+    assessed = sum(1 for e in entries if _entry_judgement(e) == "Assess")
     cats     = len(set(e.get("_cat","") for e in entries if e.get("_cat")))
     return total, adopts, assessed, cats
 
@@ -207,8 +308,13 @@ def main():
         print(f"ERROR: {INDEX_HTML} not found")
         raise SystemExit(1)
 
+    global SIGNALS
+    SIGNALS = load_signals()
+
     entries = load_entries()
-    print(f"Loaded {len(entries)} entries")
+    scored = sum(1 for e in entries if _entry_judgement(e))
+    print(f"Loaded {len(entries)} entries ({scored} auto-scored, "
+          f"{len(entries) - scored} not scored); {len(SIGNALS)} signal records")
 
     html = INDEX_HTML.read_text(encoding="utf-8")
     patched = patch_html(html, entries)
