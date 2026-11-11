@@ -15,3 +15,5 @@ updates:
       - "github-actions"
     commit-message:
       prefix: "ci"
+
+# (re-triggered CI — previous validate run desynced on GitHub)
