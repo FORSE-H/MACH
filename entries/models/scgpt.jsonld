@@ -46,7 +46,6 @@
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
   "mach:category": "ai-ml-models",
-  "mach:maturity": "beta",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud"
@@ -55,8 +54,6 @@
     "oncology",
     "research"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Strong foundation model for single-cell genomics — 1.6k stars, MIT, v0.2.4, trained on 33M cells across tissue types. Sits at the boundary of MACH's clinical scope (genomics/bioinformatics rather than clinical informatics) but relevant for precision oncology and translational research pipelines that bridge molecular data and clinical outcomes. Assess pending broader clinical validation beyond genomics research use cases.",
   "mach:editorialReviewedAt": "2026-05-18",
   "mach:evidence": [
     {
@@ -71,6 +68,5 @@
       "schema:name": "scGPT: Towards Building a Foundation Model for Single-Cell Multi-omics Using Generative AI. bioRxiv 2023."
     }
   ],
-  "mach:licenseUrl": "https://github.com/bowang-lab/scGPT/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/bowang-lab/scGPT/blob/main/LICENSE"
 }

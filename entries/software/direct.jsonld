@@ -43,9 +43,6 @@
   "mach:foundation": "Netherlands Cancer Institute / AI for Oncology",
   "mach:category": "software",
   "mach:subcategory": "radiology",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Well-structured deep learning framework for accelerated MRI reconstruction from the AI for Oncology group at the Netherlands Cancer Institute. Apache-2.0, 302 stars and 49 forks for a specialised research tool reflects solid community adoption. Implements physics-informed and unrolled network approaches, with fastMRI challenge participation confirming benchmark-level quality. Active development through May 2026 despite last formal release being July 2024. Assess for teams building MRI acceleration pipelines or evaluating deep learning reconstruction against clinical baseline methods.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -68,6 +65,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:5943b867f0106a319bd9239da56c88222e45cc0f",
-  "mach:licenseUrl": "https://github.com/NKI-AI/direct/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/NKI-AI/direct/blob/main/LICENSE"
 }

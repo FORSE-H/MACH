@@ -35,14 +35,11 @@
     }
   ],
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "Apache 2.0 pathology foundation model trained on 1.5M MSK slides — one of the few major pathology FMs with a truly open licence. Nature Medicine 2024, Paige + Microsoft Research. 632M parameter ViT-H/14. Alongside Prov-GigaPath (also Apache 2.0), Virchow is recommended over the NC-licensed alternatives (UNI, CONCH, Virchow2) for teams building commercial or derivative pathology AI pipelines.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -56,6 +53,5 @@
       "mach:evidenceType": "academic-reference"
     }
   ],
-  "mach:licenseUrl": "https://github.com/Paige-AI/paige-ml-sdk/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/Paige-AI/paige-ml-sdk/blob/main/LICENSE"
 }

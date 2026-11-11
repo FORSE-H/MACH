@@ -34,7 +34,6 @@
     "url": "https://lcp.mit.edu"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "cardiology",
@@ -45,8 +44,6 @@
   "mach:deploymentContext": [
     "embedded-library"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The standard Python library for reading and writing WFDB-format physiological signals — the I/O layer for PhysioNet datasets (MIT-BIH, MIMIC waveforms, PTB-XL). MIT license, MIT LCP governance, 836 stars, v4.3.1 (February 2026). Assess rather than Adopt due to narrower scope (waveform signal I/O) compared to general imaging libraries, but essential for any team building ECG or ICU alarm AI on PhysioNet data.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -60,6 +57,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/MIT-LCP/wfdb-python/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/MIT-LCP/wfdb-python/blob/main/LICENSE"
 }

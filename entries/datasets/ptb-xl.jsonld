@@ -63,13 +63,10 @@
   ],
   "mach:governance": "government",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:clinicalDomain": [
     "cardiology",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de facto benchmark for 12-lead ECG deep learning research — 21,799 cardiologist-annotated recordings with 71 SCP-ECG labels, standardised train/val/test splits, and CC BY 4.0 access. Published in Scientific Data (2020) and widely cited across ECG classification, arrhythmia detection, and foundation model work. WFDB format with dual sampling rates (500 Hz / 100 Hz). Adopt for any team building or evaluating ECG AI models.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {

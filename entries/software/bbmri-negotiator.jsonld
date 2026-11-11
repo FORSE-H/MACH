@@ -44,9 +44,6 @@
   "mach:foundation": "BBMRI-ERIC",
   "mach:category": "software",
   "mach:subcategory": "data-access",
-  "mach:maturity": "production",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The official data access negotiation platform for BBMRI-ERIC, the pan-European biobank network (20+ countries). Covers the full Data Access Request lifecycle including multi-party review and approval workflows — a genuine gap not addressed by generic workflow tools. AGPL-3.0 licence and Java stack may require evaluation for hospital IT environments. 33 stars understates institutional deployment; 11 forks indicate real infrastructure adoption. Assess for teams building FAIR data access workflows for biobanks or multi-site research networks; strong fit for ELIXIR and BBMRI-affiliated institutions.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -76,6 +73,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:3acb33cc3680b0c3434a267a779fdd5b95d25341",
-  "mach:licenseUrl": "https://github.com/BBMRI-ERIC/negotiator/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/BBMRI-ERIC/negotiator/blob/master/LICENSE"
 }

@@ -30,7 +30,6 @@
     "url": "https://github.com/niivue"
   },
   "mach:governance": "community",
-  "mach:maturity": "beta",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "medical-imaging",
@@ -41,8 +40,6 @@
     "embedded-library",
     "cloud-deployable"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Modern WebGL2/WebGPU neuroimaging viewer supporting 30+ formats — BSD-2-Clause, 451 stars, actively maintained (v0.69.0, May 2026). Assess due to pre-1.0 versioning and an ongoing architecture migration to a monorepo. The go-to embeddable viewer for NIfTI-first neuroimaging web applications; distinct from OHIF Viewers which is DICOM-first.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -56,6 +53,5 @@
       "mach:evidenceType": "primary-instance"
     }
   ],
-  "mach:licenseUrl": "https://github.com/niivue/niivue/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/niivue/niivue/blob/main/LICENSE"
 }

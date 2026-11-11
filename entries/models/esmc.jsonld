@@ -22,7 +22,6 @@
   ],
   "license": "MIT",
   "mach:licenseUrl": "https://github.com/evolutionaryscale/esm/blob/main/LICENSE",
-  "mach:licenseVerified": true,
   "version": "3.2.2",
   "dateModified": "2025-09-22",
   "programmingLanguage": [
@@ -48,7 +47,6 @@
     }
   ],
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "mach:deploymentContext": [
     "cloud",
@@ -64,8 +62,6 @@
   "mach:trainingDataSummary": "~2.8 billion protein sequences from evolutionary databases. No proprietary clinical data.",
   "mach:intendedUse": "Foundation model for protein representation learning and structure prediction. Intended for researchers and developers in drug discovery, protein engineering, and computational biology. Not a clinical diagnostic tool.",
   "mach:aiActRiskClass": "minimal-risk",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "EvolutionaryScale's leading protein language model — 2.7k stars, MIT, 160K+ HuggingFace downloads, and the foundation for ESMFold2 which matches or exceeds AlphaFold3 on structure prediction. Validated on five therapeutic targets with nanomolar-affinity hits for minibinders and scFvs. Candido et al. 2026 paper. Assess rather than Adopt: EvolutionaryScale is a commercial entity (vendor-led governance), and ESMC is a protein research tool rather than a directly clinical application — downstream drug discovery use requires independent validation. Essential reference model for any team working on protein structure, drug discovery, or therapeutic design.",
   "mach:editorialReviewedAt": "2026-06-05",
   "mach:evidence": [
     {

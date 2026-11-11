@@ -44,7 +44,6 @@
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
   "mach:category": "ai-tooling",
-  "mach:maturity": "beta",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud"
@@ -52,8 +51,6 @@
   "mach:clinicalDomain": [
     "radiology"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "One of the first open agentic frameworks for multi-step clinical CXR reasoning — orchestrates 7 specialist models dynamically rather than relying on a single model. ICML 2025, 1.2k stars, Apache-2.0. Caveats: uses GPT-4o as the default backbone (commercial dependency), no versioned releases, and the agentic pattern is still early-stage in clinical radiology. Assess until the framework proves stable and backbone-agnostic deployments are validated.",
   "mach:editorialReviewedAt": "2026-05-18",
   "mach:evidence": [
     {
@@ -69,6 +66,5 @@
     }
   ],
   "mach:licenseUrl": "https://github.com/bowang-lab/MedRAX/blob/main/LICENSE",
-  "mach:licenseVerified": true,
   "mach:subcategory": "ai-agent"
 }

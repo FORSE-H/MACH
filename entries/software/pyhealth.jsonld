@@ -60,9 +60,6 @@
   "mach:foundation": "Sun Lab, UIUC (John Wu)",
   "mach:category": "software",
   "mach:subcategory": "pipeline",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "PyHealth 2.0 (Jan 2026) is the most comprehensive unified Python framework for clinical AI, covering EHR, signals, and imaging in a single coherent API. Benchmarks show 39× faster loading than pandas and 20× less memory than pandarallel on MIMIC-IV. Active community (400+ Discord), pip-installable, peer-reviewed paper, and a structured research initiative. The main caveat is academic governance (single lab) rather than a foundation — watch for bus-factor risk as with most academic open-source.",
   "mach:editorialReviewedAt": "2026-05-01",
   "mach:clinicalDomain": [
     "primary-care",
@@ -108,6 +105,5 @@
     "medicalai"
   ],
   "mach:swhid": "swh:1:ori:02d8b4f6ac3e8499e44bd640ada6d5d4a5318ea1",
-  "mach:licenseUrl": "https://github.com/sunlabuiuc/PyHealth/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/sunlabuiuc/PyHealth/blob/master/LICENSE"
 }

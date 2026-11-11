@@ -53,15 +53,12 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only",
     "docker"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference open-source platform for running medical imaging AI challenges and deploying clinical validation algorithms — 100k+ users, 390+ challenges hosted, including CAMELYON, PANDA, and PI-CAI. Apache 2.0, actively maintained by DIAG Nijmegen (v2025.11, November 2025), self-hostable via Docker Compose. Uniquely covers the full lifecycle from data archiving and expert annotation through challenge benchmarking to algorithm deployment. No comparable open-source alternative at this scope. Essential infrastructure for any team organising medical imaging benchmarks or validating AI algorithms.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -81,6 +78,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:273c545f6336388e991aba06bac9e81a6423280f",
-  "mach:licenseUrl": "https://github.com/comic/grand-challenge.org/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/comic/grand-challenge.org/blob/main/LICENSE"
 }

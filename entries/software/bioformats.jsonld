@@ -47,7 +47,6 @@
     }
   ],
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
@@ -57,8 +56,6 @@
     "pathology",
     "oncology"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The foundational image I/O library for biomedical microscopy used by QuPath, ImageJ/FIJI, OMERO, and virtually every WSI analysis tool to read proprietary scanner formats. 150+ formats supported, 20+ years of active OME consortium development, v8.5.0 March 2026. GPL-2.0 copyleft applies to redistribution but does not restrict use as a library dependency in research pipelines. Adopt as the standard format reading layer for any pathology or microscopy imaging pipeline.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -73,6 +70,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:88972ad5d906f74bdce0ae152786d8612acbc110",
-  "mach:licenseUrl": "https://github.com/ome/bioformats/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/ome/bioformats/blob/master/LICENSE.txt"
 }

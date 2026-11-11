@@ -35,13 +35,10 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "ai-ml-models",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Influential multi-resolution segmentation architecture with a well-cited MIA 2021 paper — the hooking mechanism for cross-resolution feature injection is a notable architectural contribution. MIT licensed, pip-installable. However, modest adoption (71 GitHub stars) and a TensorFlow 2.x dependency limit appeal relative to PyTorch-native alternatives. The architecture has been extended for TLS detection (see HookNet-TLS) and is deployed on Grand Challenge. Assess for teams building multi-resolution pathology segmentation pipelines.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -57,6 +54,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:2a952e9785ef8246bb449110c937d1ad79468166",
-  "mach:licenseUrl": "https://github.com/DIAGNijmegen/pathology-hooknet/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/DIAGNijmegen/pathology-hooknet/blob/master/LICENSE"
 }

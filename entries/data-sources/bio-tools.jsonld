@@ -19,7 +19,6 @@
   ],
   "license": "CC-BY-SA-4.0",
   "mach:licenseUrl": "https://biotools.readthedocs.io/en/latest/what_is_biotools.html",
-  "mach:licenseVerified": true,
   "keywords": [
     "bioinformatics",
     "life-science",
@@ -40,7 +39,6 @@
     }
   ],
   "mach:governance": "foundation",
-  "mach:maturity": "production",
   "mach:category": "data-sources",
   "mach:deploymentContext": [
     "cloud"
@@ -50,8 +48,6 @@
     "genomics",
     "public-health"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "ELIXIR's canonical registry for bioinformatics and life science software — 33,000+ tools, fully public REST API, EDAM-classified, CC-BY-SA-4.0. A ready-made discovery pipeline for MACH's Phase 2 harvester: query by topic (e.g. 'Medical informatics') to surface healthcare-adjacent tool candidates. EDAM topic and operation terms are a reference vocabulary for MACH's own clinical domain classifier. Cross-referencing MACH entries with their biotoolsID provides free enrichment (publications, operations metadata). Adopt as a harvester source and schema reference.",
   "mach:editorialReviewedAt": "2026-05-29",
   "mach:evidence": [
     {

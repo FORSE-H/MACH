@@ -32,7 +32,6 @@
   "mach:foundation": "Stanford University",
   "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted"
   ],
@@ -41,8 +40,6 @@
     "secondary-care",
     "research"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "One of the few benchmarks that evaluates LLM instruction-following against real longitudinal EHRs using clinician-authored tasks — a much harder and more clinically valid signal than MCQ benchmarks. MIT code licence, 99 stars. Assess because the dataset itself requires a Stanford AIMI DUA (not freely downloadable) and there are no versioned releases. Essential reference for teams evaluating clinical LLMs on realistic EHR reasoning tasks.",
   "mach:editorialReviewedAt": "2026-05-16",
   "mach:evidence": [
     {
@@ -57,6 +54,5 @@
       "schema:name": "MedAlign: A Clinician-Generated Dataset for Instruction Following with Electronic Medical Records. AAAI 2024."
     }
   ],
-  "mach:licenseUrl": "https://github.com/som-shahlab/medalign/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/som-shahlab/medalign/blob/main/LICENSE"
 }

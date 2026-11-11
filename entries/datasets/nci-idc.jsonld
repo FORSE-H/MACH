@@ -45,12 +45,9 @@
   ],
   "mach:governance": "government",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The modern cloud-native access layer for NCI cancer imaging data — 99+ TB across 176 collections, queryable at scale via Google BigQuery and the idc-index Python client. Data Release v24.0 (April 2026), actively maintained by NCI. Complements TCIA in the MACH catalog: TCIA is the authoritative collection registry; IDC provides the scalable, DICOM-native cloud query infrastructure on top of the same data. Essential for AI teams doing large-scale cancer imaging research without managing local storage.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -69,6 +66,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/ImagingDataCommons/idc-index/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/ImagingDataCommons/idc-index/blob/main/LICENSE"
 }

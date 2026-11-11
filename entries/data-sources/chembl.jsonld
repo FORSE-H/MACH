@@ -7,7 +7,6 @@
   "url": "https://www.ebi.ac.uk/chembl/",
   "license": "CC-BY-SA-3.0",
   "mach:licenseUrl": "https://www.ebi.ac.uk/chembl/db_info",
-  "mach:licenseVerified": true,
   "author": [
     {
       "@type": "schema:Organization",
@@ -17,12 +16,16 @@
   ],
   "mach:category": "data-sources",
   "mach:subcategory": "drug-discovery",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The definitive open database for bioactive molecules in drug discovery — maintained by EMBL-EBI, a Global Core Biodata Resource, and part of ELIXIR infrastructure. CC-BY-SA-3.0 data license. Covers compound structures, binding assays, ADMET properties, and approved drug clinical data. REST API and bulk downloads available. Cited in the landmark 2023 NAR paper (DOI: 10.1093/nar/gkad1004). Essential for any computational drug discovery, target validation, or cheminformatics pipeline. No viable open alternative at this scale.",
-  "mach:maturity": "production",
   "mach:governance": "academic",
-  "mach:clinicalDomain": ["drug-discovery", "genomics", "pharmacology"],
-  "mach:deploymentContext": ["research", "cloud"],
+  "mach:clinicalDomain": [
+    "drug-discovery",
+    "genomics",
+    "pharmacology"
+  ],
+  "mach:deploymentContext": [
+    "research",
+    "cloud"
+  ],
   "mach:editorialReviewedAt": "2026-05-25",
   "mach:evidence": [
     {

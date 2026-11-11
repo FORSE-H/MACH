@@ -40,7 +40,6 @@
   ],
   "mach:governance": "government",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud"
   ],
@@ -50,8 +49,6 @@
     "rare-disease",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The authoritative open reference for germline variant-disease classification — 4.5M+ distinct variants, star-rated evidence quality, ClinGen expert panel curation, public domain. Accessible via REST API and bulk FTP. Used in clinical variant interpretation workflows, VUS resolution pipelines, genetic counselling decision support, and precision oncology. Adopt for any team building genomic medicine tools or ingesting variant significance data.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {

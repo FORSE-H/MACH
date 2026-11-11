@@ -39,7 +39,6 @@
   "mach:governance": "academic",
   "mach:foundation": "Stanford University",
   "mach:category": "software",
-  "mach:maturity": "beta",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud"
@@ -49,8 +48,6 @@
     "secondary-care",
     "research"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The most direct on-ramp to EHR foundation model training for teams already in the HuggingFace ecosystem. Ships pretrained GPT/Llama/Mamba/Hyena models on 2B structured EHR tokens; FEMR's own docs recommend it for autoregressive training. Apache 2.0, Shah Lab provenance, paper at arXiv. Assess because it is pre-1.0 with 46 stars — community adoption is still early. Pair with FEMR (masked/CLMBR-style) and EHRSHOT (evaluation) for a full Shah Lab EHR stack.",
   "mach:editorialReviewedAt": "2026-05-16",
   "mach:evidence": [
     {
@@ -65,6 +62,5 @@
       "schema:name": "Context Clues: Evaluating Long Context Models for Clinical Prediction Tasks on EHRs. arXiv 2024."
     }
   ],
-  "mach:licenseUrl": "https://github.com/som-shahlab/hf_ehr/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/som-shahlab/hf_ehr/blob/main/LICENSE"
 }

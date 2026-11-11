@@ -32,13 +32,10 @@
     "url": "https://www.vitasystems.de/"
   },
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference open-source implementation of the openEHR CDR — the natural complement to the openEHR standard entry in the MACH catalog. Implements openEHR RM 1.1.0, ADL 1.4, openEHR REST API, and AQL. v2.31.0 released April 2026, 367 stars, Apache 2.0. Jointly developed by Vitasystems GmbH and the Peter L. Reichertz Institute (TU Braunschweig / Hannover Medical School), with active use across European hospital and eHealth programmes.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -58,6 +55,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:affd5aaa680da911d3d326db4fae0aef0022ea05",
-  "mach:licenseUrl": "https://github.com/ehrbase/ehrbase/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/ehrbase/ehrbase/blob/master/LICENSE"
 }

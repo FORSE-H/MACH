@@ -21,7 +21,6 @@
   ],
   "license": "LicenseRef-US-Government-Public-Domain",
   "mach:licenseUrl": "https://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/CMSNondiscriminationNotice",
-  "mach:licenseVerified": false,
   "mach:accessModel": "open",
   "keywords": [
     "medicare",
@@ -43,7 +42,6 @@
     }
   ],
   "mach:governance": "government",
-  "mach:maturity": "production",
   "mach:category": "data-sources",
   "mach:deploymentContext": [
     "cloud"
@@ -54,8 +52,6 @@
     "oncology",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The authoritative source for US Medicare coverage policy — the ground truth for whether a procedure, diagnostic, drug, or device is reimbursable under Medicare. NCDs and LCDs are US Government works (public domain). Directly relevant for clinical decision support systems, prior authorisation automation, and AI agents answering coverage questions for US healthcare workflows. Used by Climb in its Databricks Marketplace MCP connector for plain-language Medicare coverage queries. Adopt for any team building US clinical AI tools where reimbursement eligibility is a decision factor.",
   "mach:editorialReviewedAt": "2026-06-12",
   "mach:evidence": [
     {

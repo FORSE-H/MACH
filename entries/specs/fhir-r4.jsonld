@@ -33,9 +33,6 @@
   "mach:foundation": "Health Level Seven International (HL7)",
   "mach:category": "specs",
   "mach:subcategory": "fhir",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de-facto standard for modern healthcare interoperability. Mandated by CMS and ONC in the US, referenced in EU EHR interoperability guidelines, and adopted globally. Multiple mature open-source implementations exist (HAPI FHIR, Blaze, Medplum, Azure Health Data Services). Use R4 for new work; R5 is emerging but R4 has far wider ecosystem support.",
   "mach:editorialReviewedAt": "2025-10-01",
   "mach:clinicalDomain": [
     "primary-care",

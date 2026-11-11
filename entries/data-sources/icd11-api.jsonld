@@ -35,13 +35,10 @@
   ],
   "mach:governance": "government",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud-only",
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The authoritative programmatic interface to ICD-11 — WHO-maintained, free, multilingual (40+ languages), updated with each annual classification release (v2.6, 2026). Supports entity lookup, search, code validation, and autocompletion. Self-hostable via Docker for offline/air-gapped deployments. Free registration required for API key. Marked custom licence as ICD-11 has its own WHO terms of use rather than a standard open licence, but free for most research and implementation uses.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {

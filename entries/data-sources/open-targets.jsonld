@@ -39,7 +39,6 @@
   "mach:governance": "foundation",
   "mach:foundation": "Open Targets partnership (EMBL-EBI led)",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud"
   ],
@@ -49,8 +48,6 @@
     "research",
     "pharmacology"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de-facto open platform for evidence-based drug target identification — integrates genetics, genomics, and disease data across 60k+ targets with a REST/GraphQL API and CC BY 4.0 bulk downloads. Public-private partnership (EMBL-EBI + GSK + AstraZeneca + BMS + Pfizer) ensures long-term sustainability. Adopt for any team building target discovery pipelines, drug repurposing models, or grounding clinical AI with gene-disease associations.",
   "mach:editorialReviewedAt": "2026-05-18",
   "mach:evidence": [
     {

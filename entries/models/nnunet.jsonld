@@ -64,9 +64,6 @@
   "mach:foundation": "Division of Medical Image Computing, DKFZ (Fabian Isensee et al.)",
   "mach:category": "ai-ml-models",
   "mach:subcategory": "imaging-model",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The undisputed benchmark for medical image segmentation. nnU-Net's self-configuring approach — automatically tuning architecture, preprocessing, and post-processing per dataset — has dominated MICCAI segmentation challenges since 2018 and is cited in thousands of papers. Nature Methods 2021 publication, Apache-2.0, pip-installable (nnunetv2), 8,000+ GitHub stars. Any new medical segmentation project should benchmark against or build on nnU-Net before choosing an alternative. Academic governance is the only caveat; the principal author (Fabian Isensee) is exceptionally active.",
   "mach:editorialReviewedAt": "2026-05-11",
   "mach:clinicalDomain": [
     "radiology",
@@ -104,6 +101,5 @@
     "medsam"
   ],
   "mach:swhid": "swh:1:ori:553d7b2c96a0c0c4646cce9e77e1af8857b71f35",
-  "mach:licenseUrl": "https://github.com/MIC-DKFZ/nnUNet/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/MIC-DKFZ/nnUNet/blob/master/LICENSE"
 }

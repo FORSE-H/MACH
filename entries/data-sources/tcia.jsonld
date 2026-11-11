@@ -43,7 +43,6 @@
   ],
   "mach:governance": "government",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud"
   ],
@@ -53,8 +52,6 @@
     "pathology",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The primary open repository for cancer imaging data — NCI-funded, DICOM-format collections spanning CT, MRI, PET, and histopathology across all major cancer types. Hosts foundational benchmarks including LIDC-IDRI (lung nodule detection) and TCGA-linked imaging collections. REST API and Python client (tcia_utils) enable programmatic access. CC BY 3.0 for most collections. Adopt as the first stop for teams building or validating oncology imaging AI models.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {

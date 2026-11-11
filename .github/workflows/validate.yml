@@ -61,8 +61,11 @@ jobs:
           python3 - <<'EOF'
           import json, os, sys
 
+          # Judgement is now derived deterministically by the scorer (rule-based),
+          # not hand-written, so mach:judgement / mach:judgementReason are no longer
+          # required (or expected) in entry files.
           REQUIRED = ["identifier", "name", "description", "url",
-                      "mach:category", "mach:judgement", "mach:judgementReason",
+                      "mach:category",
                       "mach:editorialReviewedAt", "mach:evidence"]
 
           # license required except for hosted-service catalog entries

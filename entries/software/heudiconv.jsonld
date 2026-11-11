@@ -33,7 +33,6 @@
     "url": "https://github.com/nipy"
   },
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "medical-imaging",
@@ -44,8 +43,6 @@
     "self-hosted",
     "cloud-deployable"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The standard DICOM-to-BIDS conversion tool for neuroimaging research — actively maintained (v1.4.0, April 2026), Apache-2.0, widely used in multi-site fMRI and structural MRI studies. Assess rather than Adopt due to 279 stars and community governance with a small core maintainer group. Pairs closely with dcm2niix (already Adopt) as the heuristic orchestration layer on top.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -59,6 +56,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/nipy/heudiconv/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/nipy/heudiconv/blob/master/LICENSE"
 }

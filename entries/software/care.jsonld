@@ -39,14 +39,11 @@
     "url": "https://ohc.network"
   },
   "mach:governance": "foundation",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "Production-proven FHIR R5-native HMIS operating at national scale in India — 580+ hospitals, 10+ states, 186 million people served. Designated the 50th Digital Public Good by the DPGA, ABDM-compliant, and backed by the Michael & Susan Dell Foundation and ACT Grants. MIT-licensed with active development (v3.0.0, 5000+ commits, 47 releases). The reference open-source EHR for LMIC and national-scale health system deployments, particularly where Tele-ICU and resource analytics are priorities.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -66,6 +63,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:cde7b1bc024973d272c7d61ca01c7aef3f82d338",
-  "mach:licenseUrl": "https://github.com/ohcnetwork/care/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/ohcnetwork/care/blob/master/LICENSE"
 }

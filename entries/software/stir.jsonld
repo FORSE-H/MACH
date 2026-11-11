@@ -46,9 +46,6 @@
   "mach:foundation": "University College London",
   "mach:category": "software",
   "mach:subcategory": "signal-processing",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The definitive open-source toolkit for PET and SPECT image reconstruction — no comparable open alternative covers the full reconstruction pipeline for nuclear medicine imaging. Apache-2.0, 109 forks against 147 stars reflects deep institutional adoption by research groups customising for specific scanner configurations. Actively maintained through v6.3.1 (April 2026), with Python bindings and SIRF integration enabling use in modern imaging pipelines. Fills a clear gap in MACH: the only nuclear medicine / PET/SPECT entry in the catalog.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -73,6 +70,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:cbc599809bac5d4e779e0e8446f49895856bcb87",
-  "mach:licenseUrl": "https://github.com/UCL/STIR/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/UCL/STIR/blob/master/LICENSE.txt"
 }

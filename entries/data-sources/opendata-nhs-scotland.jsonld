@@ -19,7 +19,6 @@
   ],
   "license": "OGL-UK-3.0",
   "mach:licenseUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-  "mach:licenseVerified": true,
   "keywords": [
     "open-data",
     "scotland",
@@ -42,7 +41,6 @@
     }
   ],
   "mach:governance": "government",
-  "mach:maturity": "production",
   "mach:category": "data-sources",
   "mach:deploymentContext": [
     "cloud"
@@ -54,8 +52,6 @@
     "mental-health",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The primary open data platform for Scottish NHS statistics — 104 datasets covering hospital activity, maternity, cancer, mental health, COVID-19, and social care, all under Open Government Licence v3.0. CKAN API enables programmatic access; R client (phsopendata) available on CRAN. Maintained by Public Health Scotland with regular quarterly and annual updates. Adopt as the reference open data source for any team working with Scottish health data or building UK-wide health analytics pipelines.",
   "mach:editorialReviewedAt": "2026-05-29",
   "mach:evidence": [
     {

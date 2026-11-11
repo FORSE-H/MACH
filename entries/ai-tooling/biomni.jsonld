@@ -48,9 +48,6 @@
   "mach:foundation": "Stanford University SNAP Lab",
   "mach:category": "ai-tooling",
   "mach:subcategory": "ai-agent",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Promising biomedical AI agent framework from Stanford SNAP with strong traction (3.1k stars, Apache-2.0). Uses MCP for external tool integration, supports Claude, GPT-4, Gemini, and custom models. Covers a wide range of biomedical research workflows. Critical caveat: executes LLM-generated code with full system privileges — authors require sandboxed environments. Research prototype (v0.0.8); not suitable for clinical production or sensitive data without isolation. Track as the MCP-native biomedical agent ecosystem matures.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -74,6 +71,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:d2c9316c97ed5eb680282790345b343ca59ee5f7",
-  "mach:licenseUrl": "https://github.com/snap-stanford/biomni/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/snap-stanford/biomni/blob/main/LICENSE"
 }

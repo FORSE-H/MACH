@@ -37,7 +37,6 @@
   "mach:foundation": "Stanford University",
   "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted"
   ],
@@ -46,8 +45,6 @@
     "secondary-care",
     "research"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The primary open benchmark for few-shot evaluation of EHR foundation models — 6,739 longitudinal patients, 15 clinical tasks, NeurIPS 2023 Spotlight. From the Shah Lab (same group as MedHELM and MedAgentBench). Code is Apache 2.0 with 217 stars. Assess rather than Adopt because the actual dataset requires a Stanford AIMI data use agreement (not freely downloadable) and there are no versioned releases. Essential reference for teams building or evaluating clinical foundation models on structured EHR data.",
   "mach:editorialReviewedAt": "2026-05-16",
   "mach:evidence": [
     {
@@ -67,6 +64,5 @@
       "schema:name": "EHRSHOT: An EHR Benchmark for Few-Shot Evaluation of Foundation Models. NeurIPS 2023."
     }
   ],
-  "mach:licenseUrl": "https://github.com/som-shahlab/ehrshot-benchmark/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/som-shahlab/ehrshot-benchmark/blob/main/LICENSE"
 }

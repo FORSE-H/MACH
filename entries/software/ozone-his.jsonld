@@ -33,13 +33,10 @@
     "url": "https://github.com/ozone-his"
   },
   "mach:governance": "community",
-  "mach:maturity": "beta",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Fills a distinct niche as a batteries-included HIS distribution built on OpenMRS 3 — adding integrated billing (Odoo), lab (SENAITE), and analytics (Superset) that OpenMRS alone does not provide. Production-proven at MSF Mosul Hospital (Iraq), Burundi, UCSF, and World Bank deployments despite carrying an alpha version tag. Community-governed within the OpenMRS ecosystem, MPL-2.0. Marked Assess rather than Adopt due to alpha versioning and low community discovery (32 stars); the deployment evidence is credible but the project has not yet reached a stable 1.0 release.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -58,6 +55,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/ozone-his/ozone/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/ozone-his/ozone/blob/main/LICENSE"
 }

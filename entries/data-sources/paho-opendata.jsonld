@@ -43,7 +43,6 @@
   ],
   "mach:governance": "government",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:applicability": "specialist",
   "mach:deploymentContext": [
     "cloud"
@@ -54,8 +53,6 @@
     "global-health",
     "primary-care"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The authoritative open data source for population health indicators across the Americas, maintained by PAHO (WHO regional office) with 30+ years of longitudinal data. Production-grade, intergovernmentally governed, and freely accessible for non-commercial and research use under CC BY-NC 3.0 IGO. Adopt for public health research, surveillance, and SDG monitoring in the Americas region. Note: the NC clause restricts commercial applications — verify compliance before use in a commercial product.",
   "mach:editorialReviewedAt": "2026-05-21",
   "mach:evidence": [
     {

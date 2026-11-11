@@ -40,9 +40,6 @@
   "mach:foundation": "NHS England",
   "mach:category": "datasets",
   "mach:subcategory": "nlp-benchmark",
-  "mach:maturity": "experimental",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "One of the few publicly available synthetic clinical notes datasets reflecting UK NHS documentation style, published by the official NHS England Data Science team. MIT licence enables unrestricted use for training and fine-tuning clinical NLP models without PHI risk. Very new (April 2026) with limited downloads to date — added early given the NHS England pedigree and the scarcity of UK-style open clinical text. Assess pending broader adoption and potential follow-on releases from the same team.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",

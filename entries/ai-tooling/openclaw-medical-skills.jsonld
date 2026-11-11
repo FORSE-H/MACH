@@ -40,10 +40,7 @@
   "mach:governance": "community",
   "mach:category": "ai-tooling",
   "mach:subcategory": "agent-skills",
-  "mach:maturity": "beta",
   "mach:aiActRiskClass": "high-risk-candidate",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Rule-based: judgement is assigned deterministically by the MACH scorer from harvested signals (stars, maintenance, licence). A genuinely open (MIT) and widely-starred (~3.1k) medical/bio agent-skill library — the largest of its kind — with real clinical coverage (decision support, FHIR, HIPAA) alongside bioinformatics. Clinical decision-support skills are EU AI Act high-risk-candidate territory and are not described as validated; this is agent tooling requiring a user-supplied LLM, not a cleared device. Useful as draft procedures that require qualified review.",
   "mach:editorialReviewedAt": "2026-11-11",
   "schema:comment": "No LICENSE file in repo (README shows an MIT badge only) — licence unverified. Built on OpenClaw/NanoClaw. 869 skills, ~119 clinical. Judgement auto-scored by harvester. Clinical skills unvalidated, high-risk. Governance (FreedomIntelligence) affiliation not confirmed. Re-verify on next review.",
   "mach:clinicalDomain": [
@@ -62,6 +59,5 @@
       "mach:evidenceType": "primary-repo"
     }
   ],
-  "mach:licenseUrl": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
-  "mach:licenseVerified": false
+  "mach:licenseUrl": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills"
 }

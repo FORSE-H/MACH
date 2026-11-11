@@ -43,13 +43,10 @@
   ],
   "mach:governance": "academic",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The foundational computational pathology benchmark — CAMELYON16 and CAMELYON17 established the first rigorous evaluation standard for cancer metastasis detection in WSIs and catalysed an entire field of pathology AI. CC0 (public domain), no access restrictions, available via AWS Open Data and GigaScience. 1,400 total slides from 5 medical centres. Cited in hundreds of papers; used to train and evaluate virtually every breast cancer pathology AI model. Essential reference benchmark for digital pathology research.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {

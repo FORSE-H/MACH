@@ -34,13 +34,10 @@
   ],
   "mach:governance": "academic",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted",
     "offline-capable"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The broadest public nucleus segmentation dataset — 200K nuclei across 19 tissue types, the de-facto benchmark for pan-cancer nucleus classification models including HoVer-Net and CellViT. CC-BY-NC-SA-4.0: non-commercial restriction limits use in commercial AI pipelines. Assess rather than Adopt due to the NC licence clause. Essential for academic teams evaluating nucleus segmentation models across diverse tissue contexts.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {

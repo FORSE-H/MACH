@@ -28,7 +28,6 @@
     "url": "https://www.ncbi.nlm.nih.gov"
   },
   "mach:governance": "government",
-  "mach:maturity": "production",
   "mach:category": "ai-tooling",
   "mach:clinicalDomain": [
     "clinical-research",
@@ -38,8 +37,6 @@
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The leading open-source framework for clinical trial matching — government-backed (NCBI/NIH), published in Nature Communications (2024), v1.0.0 released. Demonstrates 42.6% reduction in screening time and near-expert criterion-level accuracy. Public domain (US Government work). High clinical research value for any team working on trial recruitment or eligibility screening.",
   "mach:editorialReviewedAt": "2026-05-24",
   "mach:evidence": [
     {
@@ -59,6 +56,5 @@
     }
   ],
   "mach:licenseUrl": "https://github.com/ncbi-nlp/TrialGPT/blob/main/LICENSE",
-  "mach:licenseVerified": true,
   "mach:subcategory": "ai-agent"
 }

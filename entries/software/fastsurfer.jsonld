@@ -47,15 +47,12 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
     "docker",
     "offline-capable"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference open-source alternative to FreeSurfer for brain MRI segmentation — Apache 2.0, 602 stars, v2.4.2 (February 2025), 10-15x faster than FreeSurfer with comparable accuracy. Peer-reviewed in NeuroImage 2020, actively extended with sub-modules for cerebellum, hypothalamus, and corpus callosum. Produces FreeSurfer-compatible outputs, making it a drop-in replacement for existing workflows. Essential for any team running large-scale neuroimaging cohort studies, dementia research, or clinical MRI volumetry where FreeSurfer's processing time is a bottleneck.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -71,6 +68,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:ab0102a74971fb4f838cbea0e2b2235456bc1ba5",
-  "mach:licenseUrl": "https://github.com/Deep-MI/FastSurfer/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/Deep-MI/FastSurfer/blob/master/LICENSE"
 }

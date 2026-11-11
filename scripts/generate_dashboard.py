@@ -14,8 +14,9 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
-ENTRIES_DIR = Path("entries")
-OUT_HTML    = Path("mach-dashboard.html")
+ENTRIES_DIR  = Path("entries")
+OUT_HTML     = Path("mach-dashboard.html")
+SIGNALS_PATH = Path("data/signals.json")
 
 sys.path.insert(0, str(Path(__file__).parent))
 from taxonomy import label as category_label  # canonical category display names
@@ -31,6 +32,21 @@ def load_entries():
         except json.JSONDecodeError as e:
             print(f"WARN: skipping {path} — {e}")
     return entries
+
+def load_signals():
+    """Harvested signals keyed by identifier — the rule-based judgement lives here
+    now, not in the entry files."""
+    if not SIGNALS_PATH.exists():
+        return {}
+    data = json.loads(SIGNALS_PATH.read_text(encoding="utf-8"))
+    return {e["identifier"]: e for e in data.get("entries", [])}
+
+SIGNALS = {}  # populated in main()
+
+def entry_judgement(e):
+    """Rule-based judgement for an entry from the scorer, or '' if not scored."""
+    j = SIGNALS.get(e.get("identifier", ""), {}).get("judgement")
+    return j if j in ("Adopt", "Assess", "Caution") else ""
 
 def as_list(v):
     if v is None:
@@ -64,12 +80,13 @@ def aggregate(entries):
 
         g = e.get("mach:governance")
         if g: gov[g] += 1
-        m = e.get("mach:maturity")
-        if m: mat[m] += 1
-        j = e.get("mach:judgement")
+        # Judgement is rule-based now, from the scorer (signals), not the file.
+        j = entry_judgement(e)
         if j:
             judg[j] += 1
             judg_by_cat.setdefault(c, Counter())[j] += 1
+        else:
+            mat["not scored"] += 1   # track how many entries have no harvestable signal
 
         lic[license_short(e.get("license", ""))] += 1
 
@@ -120,13 +137,18 @@ def build_html(a):
     # Governance doughnut
     gov_labels, gov_data = labelled(a["gov"])
 
-    # Maturity doughnut (fixed order where present)
-    mat_order = ["production", "beta", "experimental", "legacy"]
+    # Judgement coverage doughnut (rule-based): Adopt/Assess/Caution + not-scored.
+    # Replaces the old hand-set maturity field, which rotted against the scorer.
+    _judg = a["judg"]
     mat_labels, mat_data = [], []
-    for m in mat_order:
-        if a["mat"].get(m):
-            mat_labels.append(f"{TITLE(m)} ({a['mat'][m]})")
-            mat_data.append(a["mat"][m])
+    for ring in ("Adopt", "Assess", "Caution"):
+        if _judg.get(ring):
+            mat_labels.append(f"{ring} ({_judg[ring]})")
+            mat_data.append(_judg[ring])
+    not_scored = a["mat"].get("not scored", 0)
+    if not_scored:
+        mat_labels.append(f"Not scored ({not_scored})")
+        mat_data.append(not_scored)
 
     # Licence (top 8) horizontal bar
     lic_labels, lic_data = labelled(a["lic"], 8)
@@ -166,7 +188,8 @@ def build_html(a):
     gpl_n = a["lic"].get("GPL-3.0", 0)
     py_n = a["lang"].get("Python", 0)
     lang_total = sum(a["lang"].values())
-    prod_n = a["mat"].get("production", 0)
+    adopt_n = a["judg"].get("Adopt", 0)
+    scored_n = sum(a["judg"].values())
     fhir_n = a["kw"].get("fhir", 0)
     interop_n = a["kw"].get("interoperability", 0)
     self_n = a["deploy"].get("self-hosted", 0)
@@ -188,9 +211,10 @@ def build_html(a):
         f"declared-language mentions are Python "
         f"({pct(py_n, lang_total)}).",
 
-        f"<strong>Production maturity is the norm:</strong> {prod_n} of {total} entries "
-        f"({pct(prod_n, total)}) are rated production — MACH deliberately excludes "
-        f"prototype-only tools, so this reflects curation, not field-wide maturity.",
+        f"<strong>Judgement is rule-based:</strong> {scored_n} of {total} entries are "
+        f"auto-scored from harvested signals (stars, maintenance, licence); "
+        f"{adopt_n} are rated Adopt. The {total - scored_n} without a harvestable "
+        f"repository signal (datasets, standards, hosted services) are not auto-scored.",
 
         f"<strong>FHIR adoption is real but not dominant:</strong> {fhir_n} entries carry "
         f"the \"fhir\" keyword; interoperability remains a gap "
@@ -309,10 +333,10 @@ def build_html(a):
 
 <!-- Governance & Maturity -->
 <div class="section">
-  <div class="section-title">Governance &amp; Maturity — <span>Who Builds Healthcare Open Source</span></div>
+  <div class="section-title">Governance &amp; Judgement — <span>Who Builds Healthcare Open Source</span></div>
   <div class="chart-grid-3">
     <div class="chart-box"><h4>Governance Model</h4><canvas id="govChart"></canvas></div>
-    <div class="chart-box"><h4>Maturity Level</h4><canvas id="matChart"></canvas></div>
+    <div class="chart-box"><h4>Judgement Coverage</h4><canvas id="matChart"></canvas></div>
     <div class="chart-box"><h4>Licence Landscape (Top 8)</h4><canvas id="licChart"></canvas></div>
   </div>
 </div>
@@ -430,9 +454,11 @@ keywords.forEach(([name, val], i) => {{
 """
 
 def main():
+    global SIGNALS
+    SIGNALS = load_signals()
     entries = load_entries()
     a = aggregate(entries)
-    print(f"Loaded {a['total']} entries")
+    print(f"Loaded {a['total']} entries ({len(SIGNALS)} signal records)")
     OUT_HTML.write_text(build_html(a), encoding="utf-8")
     print(f"Wrote {OUT_HTML} — {a['total']} entries, "
           f"{len(a['cat'])} categories, {len(a['domain'])} clinical domains")

@@ -30,13 +30,10 @@
     "url": "https://www.nextgen.com/"
   },
   "mach:governance": "vendor-led",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de-facto open-source healthcare integration engine — the standard tool for connecting heterogeneous clinical systems via HL7, FHIR, DICOM, and proprietary formats. Widely deployed in hospitals and health information exchanges worldwide. MPL 2.0, 1.2k stars, v4.5.2 (Sept 2024), vendor-led by NextGen Healthcare. The closest open-source equivalent to commercial integration engines like Rhapsody and Mulesoft in healthcare contexts.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -55,6 +52,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:8da1ea839683aa6709744f73d95b24001c6f78c4",
-  "mach:licenseVerified": false
+  "mach:swhid": "swh:1:ori:8da1ea839683aa6709744f73d95b24001c6f78c4"
 }

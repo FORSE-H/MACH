@@ -31,13 +31,10 @@
     "url": "https://github.com/torchio-project"
   },
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The standard Python library for 3D medical image augmentation and preprocessing in deep learning — fills a gap that general-purpose vision libraries (Albumentations, torchvision) do not cover. Domain-specific transforms include MRI bias field and k-space motion artifact simulation. v1.0.2 released April 2026, 2.4k stars, 262 forks, Apache 2.0, peer-reviewed publication in Computer Methods and Programs in Biomedicine (2021). Originally from UCL/KCL, now community-maintained.",
   "mach:editorialReviewedAt": "2026-05-13",
   "mach:evidence": [
     {
@@ -62,6 +59,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:4645091797bf1bdd2bc21824868bb191569e4923",
-  "mach:licenseUrl": "https://github.com/fepegar/torchio/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/fepegar/torchio/blob/main/LICENSE"
 }

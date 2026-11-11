@@ -34,7 +34,6 @@
     "url": "https://ohif.org"
   },
   "mach:governance": "foundation",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "medical-imaging",
@@ -43,8 +42,6 @@
   "mach:deploymentContext": [
     "embedded-library"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The rendering engine behind OHIF Viewers — MIT, OHIF foundation governance, 1.1k stars, actively maintained (v4.16.0, February 2026). Assess rather than Adopt because it is a developer framework rather than a deployable application; teams integrating medical imaging into custom web apps will need it, but end users reach it indirectly via OHIF Viewers (already Adopt).",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -58,6 +55,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/cornerstonejs/cornerstone3D/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/cornerstonejs/cornerstone3D/blob/main/LICENSE"
 }

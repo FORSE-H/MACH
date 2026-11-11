@@ -45,13 +45,10 @@
   ],
   "mach:governance": "academic",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud-only"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The largest public prostate pathology WSI dataset — 11,000 slides with expert Gleason grading from two leading medical centres, widely used to train and benchmark prostate cancer AI. CC BY-SA-NC 4.0: free for research but non-commercial restriction limits use in commercial AI development pipelines. Requires Kaggle account for data access. Assess rather than Adopt due to the NC licence clause and Kaggle access dependency. Essential for academic prostate pathology AI research.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {

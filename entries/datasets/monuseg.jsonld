@@ -34,12 +34,9 @@
   ],
   "mach:governance": "academic",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The standard multi-organ nucleus segmentation benchmark — used to train and evaluate StarDist, CellViT, and virtually every nucleus instance segmentation model. IEEE Transactions on Medical Imaging 2020, MICCAI 2018 origin. Assess rather than Adopt because access requires Grand Challenge registration and the licence terms are not openly stated. The dataset itself is small (30 training images) but heavily cited due to multi-organ diversity.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {

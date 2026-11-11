@@ -34,7 +34,6 @@
   "mach:accessModel": "open",
   "mach:governance": "foundation",
   "mach:category": "specs",
-  "mach:maturity": "production",
   "mach:clinicalDomain": [
     "medical-imaging",
     "radiology",
@@ -42,8 +41,6 @@
     "cardiology",
     "radiation-therapy"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The universal standard for medical imaging — every PACS, modality, RIS, and imaging AI pipeline interoperates through DICOM. Maintained by NEMA since 1993 as a living standard (22 parts, continuously updated). Free to download and use. No viable alternative exists for any team working with clinical imaging data.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {

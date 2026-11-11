@@ -184,7 +184,6 @@ def build_entries_html(entries):
         name        = e.get("name", "—")
         description = e.get("description", "")
         cat         = e.get("_cat", "")
-        judgement   = e.get("mach:judgement", "")
 
         short_desc  = (description[:140] + "…") if len(description) > 143 else description
         cat_label   = _category_label(cat)
@@ -194,10 +193,8 @@ def build_entries_html(entries):
         url_links   = build_url_links(e)
 
         license_url   = e.get("mach:licenseUrl")
-        lic_verified  = e.get("mach:licenseVerified", None)
         if license_str and license_url:
-            verified_title = "License file verified" if lic_verified else "License file not yet verified"
-            lic_tag = f'<a href="{license_url}" target="_blank" rel="noopener" class="entry-lic" title="{verified_title}">{license_str}</a>'
+            lic_tag = f'<a href="{license_url}" target="_blank" rel="noopener" class="entry-lic" title="Licence">{license_str}</a>'
         elif license_str:
             lic_tag = f'<span class="entry-lic">{license_str}</span>'
         else:

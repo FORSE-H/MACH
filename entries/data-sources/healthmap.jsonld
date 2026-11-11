@@ -38,7 +38,6 @@
   ],
   "mach:governance": "academic",
   "mach:category": "data-sources",
-  "mach:maturity": "production",
   "mach:applicability": "specialist",
   "mach:deploymentContext": [
     "cloud"
@@ -49,8 +48,6 @@
     "global-health",
     "infectious-disease"
   ],
-  "mach:judgement": "Caution",
-  "mach:judgementReason": "Established and well-funded real-time outbreak surveillance system (2006, Boston Children's Hospital) with broader and faster signal coverage than WHO DON. However, there is no public API and data access is governed by a proprietary user agreement with Children's Hospital Boston, not an open license — limiting programmatic integration. Caution for teams needing open, reusable data; the platform remains useful for manual monitoring and situational awareness. Re-assess if an open API or data licence is introduced.",
   "mach:editorialReviewedAt": "2026-05-21",
   "mach:evidence": [
     {

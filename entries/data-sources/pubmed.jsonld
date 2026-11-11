@@ -22,7 +22,6 @@
   ],
   "license": "LicenseRef-NLM-freely-reusable",
   "mach:licenseUrl": "https://www.nlm.nih.gov/databases/download/terms_and_conditions.html",
-  "mach:licenseVerified": true,
   "keywords": [
     "biomedical-literature",
     "medline",
@@ -43,7 +42,6 @@
     }
   ],
   "mach:governance": "government",
-  "mach:maturity": "production",
   "mach:category": "data-sources",
   "mach:deploymentContext": [
     "cloud"
@@ -55,8 +53,6 @@
     "genomics",
     "epidemiology"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The gold-standard biomedical literature index — 35M+ citations, MeSH controlled vocabulary, free E-utilities API, maintained by NLM/NCBI. The primary source for verifying and discovering peer-reviewed papers associated with clinical tools, AI models, and healthcare software. MeSH terms enable clinical precision that general academic indexes lack. PMC provides open-access full text for 4M+ articles. Adopt as the primary paper verification source for any system cataloging biomedical research software — use alongside OpenAlex (which adds citation graph, ROR affiliations, and funder metadata that PubMed does not provide).",
   "mach:editorialReviewedAt": "2026-06-12",
   "mach:evidence": [
     {

@@ -34,13 +34,10 @@
     "url": "https://www.insightsoftwareconsortium.org/"
   },
   "mach:governance": "foundation",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The foundational medical image segmentation and registration toolkit — underpins 3D Slicer, ITK-SNAP, and numerous imaging AI pipelines. Apache 2.0, v5.4.6 released May 2026, 1.6k stars, 728 forks, NumFOCUS-sponsored. Cross-platform C++ with Python bindings. Like dcm4che in the DICOM space, ITK is infrastructure that often operates invisibly inside other tools rather than being directly deployed by end users.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -60,6 +57,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:3803eb9cf5dbaf7b2fe647e0ca98c3ff5f176562",
-  "mach:licenseUrl": "https://github.com/InsightSoftwareConsortium/ITK/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/InsightSoftwareConsortium/ITK/blob/main/LICENSE"
 }

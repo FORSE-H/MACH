@@ -33,9 +33,6 @@
   "mach:governance": "individual",
   "mach:category": "ai-tooling",
   "mach:subcategory": "mcp-server",
-  "mach:maturity": "experimental",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Early-stage MCP server (February 2026) filling a clear gap: SNOMED CT concept lookup for LLM agents via any FHIR R4 terminology server. Apache-2.0, vendor-neutral design is the key differentiator. 18 stars reflects its novelty rather than quality — SNOMED CT access is a fundamental need for clinical AI agents. Explicitly experimental; individual-governed with no institutional backing. Assess with the caveat that API stability, error handling, and production hardening have not been validated. Worth tracking as the MCP ecosystem matures.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -52,6 +49,5 @@
       "mach:evidenceType": "primary-repo"
     }
   ],
-  "mach:licenseUrl": "https://github.com/eigenbau/mcp-snomed-ct/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/eigenbau/mcp-snomed-ct/blob/main/LICENSE"
 }

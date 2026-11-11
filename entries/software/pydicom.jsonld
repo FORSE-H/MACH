@@ -44,9 +44,6 @@
   "mach:governance": "community",
   "mach:category": "software",
   "mach:subcategory": "dicom",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de-facto standard for DICOM file handling in Python. 2,200+ GitHub stars, pip-installable, actively maintained with a March 2026 release. Used as a foundational dependency by nnU-Net, MONAI, TotalSegmentator, SimpleITK, and most clinical AI pipelines. No credible alternative exists in the Python ecosystem for direct DICOM file I/O. MIT license, community-governed.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "radiology",
@@ -79,6 +76,5 @@
   ],
   "mach:alternativeTo": [],
   "mach:swhid": "swh:1:ori:bd71a2e4880057a2e78742ecf791c63288427efb",
-  "mach:licenseUrl": "https://github.com/pydicom/pydicom/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/pydicom/pydicom/blob/main/LICENSE"
 }

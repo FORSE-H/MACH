@@ -15,7 +15,6 @@
   "url": "https://opennursingcoreig.com/",
   "codeRepository": "https://opensource.unicc.org/nursecitizendeveloper/open-nursing-core-ig",
   "license": "MIT",
-  "mach:licenseVerified": false,
   "keywords": [
     "fhir",
     "nursing",
@@ -37,7 +36,6 @@
   ],
   "mach:accessModel": "open",
   "mach:governance": "community",
-  "mach:maturity": "beta",
   "mach:category": "specs",
   "mach:deploymentContext": [
     "self-hosted",
@@ -48,8 +46,6 @@
     "secondary-care",
     "mental-health"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The only open FHIR R4 implementation guide dedicated to nursing — 25+ profiles covering the full ADPIE nursing process, NHS-aligned (NEWS2, Braden, Waterlow), hosted on the UNICC open source portal. v1.0.0 released January 2026. MIT licence. Assess at launch due to very early community adoption; the institutional backing of UNICC and the absence of any comparable open nursing IG gives it strong potential. Worth tracking as the first mover in a gap that affects every nurse-facing EHR implementation.",
   "mach:editorialReviewedAt": "2026-05-28",
   "mach:evidence": [
     {

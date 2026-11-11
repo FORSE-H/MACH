@@ -8,13 +8,26 @@
   "codeRepository": "https://github.com/StanfordSpezi/Spezi",
   "license": "MIT",
   "mach:licenseUrl": "https://github.com/StanfordSpezi/Spezi/blob/main/LICENSE",
-  "mach:licenseVerified": true,
   "softwareVersion": "1.10.2",
   "dateModified": "2026-04-11",
-  "programmingLanguage": ["Swift"],
-  "operatingSystem": ["iOS", "macOS"],
+  "programmingLanguage": [
+    "Swift"
+  ],
+  "operatingSystem": [
+    "iOS",
+    "macOS"
+  ],
   "applicationCategory": "Digital health application framework",
-  "keywords": ["iOS", "Swift", "digital health", "FHIR", "HealthKit", "clinical research", "patient app", "mHealth"],
+  "keywords": [
+    "iOS",
+    "Swift",
+    "digital health",
+    "FHIR",
+    "HealthKit",
+    "clinical research",
+    "patient app",
+    "mHealth"
+  ],
   "author": [
     {
       "@type": "schema:Organization",
@@ -24,13 +37,19 @@
   ],
   "mach:category": "software",
   "mach:subcategory": "mhealth-framework",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The most structured open-source framework available for building clinical-grade iOS digital health apps. 248 stars, 49 releases, and active maintenance from Stanford Biodesign Digital Health. Modular ecosystem (SpeziFHIR, SpeziLLM, SpeziHealthKit, etc.) enables rapid composition of research and patient-facing apps aligned with FHIR R4. Constraint: Swift/iOS only — not applicable to Android, web, or backend systems. Best evaluated by teams building iOS research apps or patient engagement tools.",
-  "mach:maturity": "production",
   "mach:governance": "academic",
-  "mach:clinicalDomain": ["digital-health", "clinical-research", "patient-engagement"],
-  "mach:deploymentContext": ["mobile", "research"],
-  "mach:supportsSpec": ["FHIR R4"],
+  "mach:clinicalDomain": [
+    "digital-health",
+    "clinical-research",
+    "patient-engagement"
+  ],
+  "mach:deploymentContext": [
+    "mobile",
+    "research"
+  ],
+  "mach:supportsSpec": [
+    "FHIR R4"
+  ],
   "mach:editorialReviewedAt": "2026-05-24",
   "mach:evidence": [
     {

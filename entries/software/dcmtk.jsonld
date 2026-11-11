@@ -35,7 +35,6 @@
     "url": "https://www.offis.de"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "medical-imaging",
@@ -45,8 +44,6 @@
     "self-hosted",
     "embedded-library"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The original and most comprehensive open-source implementation of the DICOM standard, maintained by OFFIS e.V. since the 1990s. BSD-3-Clause, 879 stars, actively maintained (v3.7.0, January 2026). Covers the full DICOM stack: encoding, networking, compression, structured reporting, and RT. Underpins many commercial PACS and imaging middleware systems. The reference toolkit for any team implementing DICOM at the protocol level.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -59,6 +56,5 @@
       "url": "https://dicom.offis.de/dcmtk",
       "mach:evidenceType": "primary-instance"
     }
-  ],
-  "mach:licenseVerified": false
+  ]
 }

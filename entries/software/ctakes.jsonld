@@ -36,13 +36,10 @@
     "url": "https://www.apache.org/"
   },
   "mach:governance": "foundation",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference open-source clinical NLP platform for extracting structured knowledge from unstructured clinical text. Originally from Mayo Clinic, now an Apache top-level project. Supports SNOMED-CT, RxNorm, FHIR, and HL7 CDA. Apache 2.0, v6.0.0 (Sept 2024), modular UIMA architecture. Widely used in clinical research and EHR analytics pipelines. Complements MedCAT in the MACH catalog: cTAKES is the established rule-based + ML pipeline; MedCAT is the modern transformer-based NER/linking tool.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -62,6 +59,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:c8dec29349bebf664429f3c370184ada99106986",
-  "mach:licenseUrl": "https://github.com/apache/ctakes/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/apache/ctakes/blob/main/LICENSE"
 }

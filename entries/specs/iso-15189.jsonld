@@ -15,7 +15,6 @@
   "url": "https://www.iso.org/standard/76677.html",
   "license": "LicenseRef-ISO-copyright",
   "mach:licenseUrl": "https://www.iso.org/standard/76677.html",
-  "mach:licenseVerified": true,
   "mach:accessModel": "paid",
   "mach:specPrice": "Approx. CHF 178 from ISO; available via national standards bodies (BSI, DIN, NEN, etc.)",
   "dateModified": "2022-12-01",
@@ -37,7 +36,6 @@
   },
   "mach:governance": "government",
   "mach:category": "specs",
-  "mach:maturity": "production",
   "mach:clinicalDomain": [
     "pathology",
     "genomics",
@@ -45,8 +43,6 @@
     "primary-care",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The universal accreditation standard for medical laboratories — required for accreditation in 100+ countries via national bodies (UKAS, DAkkS, RvA, etc.). The 2022 revision explicitly addresses laboratory information systems and digital result reporting, making it directly relevant to teams building LIS software, AI diagnostics, or clinical genomics pipelines operating within accredited labs. Non-compliance prevents laboratory accreditation and restricts clinical use of results. Note: paid ISO standard (approx. CHF 178) — not freely available unlike open standards such as DICOM or openEHR. Adopt means accreditation compliance is mandatory for clinical laboratory operation — not that the document is open access.",
   "mach:editorialReviewedAt": "2026-06-05",
   "mach:evidence": [
     {

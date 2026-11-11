@@ -44,12 +44,9 @@
   ],
   "mach:governance": "government",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud-only"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The most widely used cancer research dataset in existence — 2.5 petabytes across 33 cancer types, cited in tens of thousands of papers in genomics, pathology AI, and clinical oncology. NCI/NHGRI governed, open access for most data via GDC portal (controlled access via dbGaP for some). Includes whole-slide pathology images used to train and benchmark virtually every digital pathology foundation model. Essential reference dataset for oncology AI development.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -69,6 +66,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:c27fb46b1da361cc06ca0c4ea47d69f803f4e441",
-  "mach:licenseUrl": "https://github.com/NCI-GDC/gdc-client/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/NCI-GDC/gdc-client/blob/master/LICENSE"
 }

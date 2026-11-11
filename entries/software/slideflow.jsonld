@@ -43,7 +43,6 @@
     }
   ],
   "mach:governance": "community",
-  "mach:maturity": "beta",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
@@ -53,8 +52,6 @@
     "research",
     "pathology"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Apache-2.0 unified training framework covering weakly supervised, MIL, and self-supervised workflows in a single API. 361 stars, v3.0.2 October 2024. Fills a gap between low-level libraries (TIA Toolbox) and research codebases (CLAM) by providing a training-focused abstraction. Assess for teams wanting a framework-level API rather than assembling individual components.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -68,6 +65,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/slideflow/slideflow/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/slideflow/slideflow/blob/master/LICENSE"
 }

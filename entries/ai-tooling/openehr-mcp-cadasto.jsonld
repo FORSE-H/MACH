@@ -44,9 +44,6 @@
   "mach:foundation": "Cadasto",
   "mach:category": "ai-tooling",
   "mach:subcategory": "mcp-server",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The first MCP server focused on openEHR design-time knowledge — CKM archetypes, templates, and terminology. Fills a genuine gap for AI agents working with openEHR artefacts. Pre-release (v0.x, breaking changes expected), maintained by Cadasto (small org, unclear long-term sustainability), and written in PHP which limits the contributor pool. Hosted endpoint available for quick evaluation. Track alongside the openEHR CDR-focused counterpart (deak-ai). Do not use in production clinical workflows until v1.0.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "primary-care",
@@ -77,6 +74,5 @@
     "openehr-mcp-deak"
   ],
   "mach:swhid": "swh:1:ori:f72700672dbb916abe85f7f659412f43106ba1d8",
-  "mach:licenseUrl": "https://github.com/Cadasto/openehr-assistant-mcp/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/Cadasto/openehr-assistant-mcp/blob/main/LICENSE"
 }

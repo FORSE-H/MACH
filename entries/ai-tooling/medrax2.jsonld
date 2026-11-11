@@ -34,15 +34,12 @@
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
   "mach:category": "ai-tooling",
-  "mach:maturity": "experimental",
   "mach:deploymentContext": [
     "self-hosted"
   ],
   "mach:clinicalDomain": [
     "radiology"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Very early iteration (25 stars, no releases) of the MedRAX agentic CXR framework. Apache-2.0. Follow MedRAX first — catalog this once the project has independent traction and a distinct paper or release beyond the MedRAX arXiv preprint.",
   "mach:editorialReviewedAt": "2026-05-18",
   "mach:evidence": [
     {
@@ -52,6 +49,5 @@
     }
   ],
   "mach:licenseUrl": "https://github.com/bowang-lab/MedRAX2/blob/main/LICENSE",
-  "mach:licenseVerified": true,
   "mach:subcategory": "ai-agent"
 }

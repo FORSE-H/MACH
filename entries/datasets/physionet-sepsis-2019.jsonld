@@ -41,7 +41,6 @@
   "mach:foundation": "PhysioNet (MIT Laboratory for Computational Physiology)",
   "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted"
   ],
@@ -49,8 +48,6 @@
     "secondary-care",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The canonical open benchmark for sepsis early warning — 40,336 ICU patients, 34 features (vitals + labs + demographics), Sepsis-3 labels, CC-BY 4.0, freely downloadable with no DUA. Reference implementations in four languages. Published in Critical Care Medicine 2019. Used in hundreds of papers as the standard evaluation dataset for sepsis prediction algorithms. Any team developing a clinical early warning model for sepsis should evaluate against this benchmark.",
   "mach:editorialReviewedAt": "2026-05-18",
   "mach:evidence": [
     {

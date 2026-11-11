@@ -43,9 +43,6 @@
   "mach:governance": "individual",
   "mach:category": "ai-tooling",
   "mach:subcategory": "agent-skills",
-  "mach:maturity": "beta",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "A genuinely open (CC-BY-4.0), substantive, and current resource: ~199 markdown 'skills' that give AI coding agents procedural domain knowledge across bioinformatics, cheminformatics, and biostatistics. It is a real and differentiated artifact — one of the largest open skill libraries of its kind, dependency-free (the skills are plain SKILL.md files read directly by the agent, usable with any agent plus Git), with healthy traction and clear biomedical-research relevance. It is novel for MACH, which has no agent-skills-library entry. Marked Assess rather than Adopt for honest reasons. (1) It is maintained by a single individual GitHub account with no institutional backing, governance, or tagged releases. (2) The headline 92.0% BixBench-Verified-50 accuracy (vs a 65.3% Claude Code / Opus 4.6 baseline) is self-reported and not independently verified or peer-reviewed — MACH records the claim but does not endorse it. (3) The self-reported skill count is inconsistent across the page (197 / 198 / 199). (4) CC-BY-4.0 is a content licence appropriate for the markdown skills, but there is no separate code licence for the Python validation scripts, so 'open source' applies cleanly to the content and is ambiguous for the tooling; individual skills also note the (sometimes different) licences of their underlying tools. Useful for research/bioinformatics teams who want to equip their own AI agents with reproducible domain procedures; treat the benchmark as a vendor claim and validate skills against your own pipelines. Not a clinical tool — research use only.",
   "mach:editorialReviewedAt": "2026-11-11",
   "schema:comment": "CC-BY-4.0 content licence; no separate code licence for validation scripts, individual skills carry their own tool licences. 92.0% BixBench figure is self-reported, unverified. Single-maintainer, no tagged releases. Powers OmicsHorizon (omicshorizon.ai). Re-verify licence/maturity/benchmark on next review.",
   "mach:clinicalDomain": [
@@ -67,6 +64,5 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/jaechang-hits/SciAgent-Skills/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/jaechang-hits/SciAgent-Skills/blob/main/LICENSE"
 }

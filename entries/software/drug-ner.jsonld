@@ -43,9 +43,6 @@
   "mach:governance": "vendor-led",
   "mach:category": "software",
   "mach:subcategory": "pipeline-tools",
-  "mach:maturity": "production",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Focused, production-ready Python library (v2.0.9) for drug-name NER — a narrower but complementary scope to general clinical NLP tools like MedCAT. Key differentiators: OMOP concept ID linking (critical for OHDSI/OMOP pipelines), SMILES molecular notation output, and fuzzy matching for pharmaceutical misspellings. MIT licence, pip-installable, actively maintained through 2025. Modest adoption (32 GitHub stars) and no peer-reviewed publication, but fills a specific gap for teams building pharmacovigilance or drug-mention extraction pipelines that need OMOP-ready output.",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -73,6 +70,5 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/fastdatascience/drug_named_entity_recognition/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/fastdatascience/drug_named_entity_recognition/blob/main/LICENSE"
 }

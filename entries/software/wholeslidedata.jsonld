@@ -49,13 +49,10 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "beta",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "Fills a specific but important gap in the computational pathology stack: annotation-aware WSI patch sampling for training deep learning models. Supports all major WSI backends (OpenSlide, ASAP, PyVIPS, TiffSlide, cuCIM) and annotation formats (ASAP, QuPath, Virtum, HistomicsTK). Apache 2.0, actively developed by DIAG Nijmegen (20+ commits in 2025, same team behind Grand Challenge and CAMELYON). Marked Assess due to major-version-zero API instability and infrequent PyPI releases — install from GitHub for the current state. Teams training pathology models who need structured batch sampling around annotations should evaluate this alongside TorchIO (MRI-focused) and HistomicsTK.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -65,6 +62,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:f6c4e32e998ac8d7f236161fec60b4e347f6aa96",
-  "mach:licenseUrl": "https://github.com/DIAGNijmegen/pathology-whole-slide-data/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/DIAGNijmegen/pathology-whole-slide-data/blob/main/LICENSE"
 }

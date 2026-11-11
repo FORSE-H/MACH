@@ -30,7 +30,6 @@
     "url": "https://github.com/rordenlab"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:clinicalDomain": [
     "medical-imaging",
@@ -42,8 +41,6 @@
     "embedded-library",
     "cloud-deployable"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The reference DICOM-to-NIfTI converter for neuroimaging — embedded in 100+ downstream tools including fMRIprep, FreeSurfer, SPM12, AFNI, and heudiconv. BSD-2-Clause, actively maintained by Chris Rorden's lab with frequent releases (v1.0.20260416, May 2026), 1.2k stars. Handles vendor-specific DICOM divergences across all major scanner manufacturers. No credible open-source alternative at this level of adoption, reliability, and breadth of scanner support. The starting point for any neuroimaging data pipeline.",
   "mach:editorialReviewedAt": "2026-05-22",
   "mach:evidence": [
     {
@@ -62,6 +59,5 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "A reproducible evaluation of ANTs similarity metric performance in brain image registration. J Neurosci Methods 2016."
     }
-  ],
-  "mach:licenseVerified": false
+  ]
 }

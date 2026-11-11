@@ -46,13 +46,10 @@
   ],
   "mach:governance": "academic",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:clinicalDomain": [
     "critical-care",
     "research"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The leading multi-center open ICU dataset — 200k+ admissions across 208 US hospitals, enabling generalisation studies not possible with single-center datasets like MIMIC-IV. Published in Scientific Data (2018). Access requires free PhysioNet credentialing and DUA signature. Adopt alongside MIMIC-IV for any critical care AI work requiring external validation or hospital-level heterogeneity.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {

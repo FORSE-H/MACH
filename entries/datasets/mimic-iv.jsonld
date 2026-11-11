@@ -43,14 +43,11 @@
   ],
   "mach:governance": "academic",
   "mach:category": "datasets",
-  "mach:maturity": "production",
   "mach:clinicalDomain": [
     "critical-care",
     "research",
     "clinical-nlp"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The most widely used open EHR dataset for ICU and clinical AI research — 364k patients, 546k admissions, two structured modules (hosp + icu), with linked note and imaging datasets. Published in Scientific Data (2023), v3.1 October 2024. Access requires free PhysioNet credentialing and CITI training completion (DUA-restricted, not openly downloadable). Adopt for ICU mortality prediction, clinical NLP, foundation model pretraining, and benchmark tasks requiring real-world EHR data.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {

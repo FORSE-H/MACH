@@ -54,9 +54,6 @@
   "mach:foundation": "vantage6 community (originally iknl / Netherlands eScience Center)",
   "mach:category": "software",
   "mach:subcategory": "federated-learning",
-  "mach:maturity": "production",
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "One of the most mature open-source federated learning platforms available for healthcare research, with 246 releases and v4.14.0 as of March 2026. Pip-installable, fully Dockerised, with a dedicated algorithm store and OHDSI/OMOP algorithm base image. EU-origin with GDPR-aligned architecture — data never leaves the node. Zenodo DOI, CITATION.cff, AMIA 2020 peer-reviewed paper, and a Research Software Directory listing make it fully citable for academic use. The principal caution is community (not foundation) governance, but 8,000+ commits and 8+ years of active development substantially reduce the bus-factor risk.",
   "mach:editorialReviewedAt": "2026-05-11",
   "mach:clinicalDomain": [
     "oncology",
@@ -113,6 +110,5 @@
     "substra"
   ],
   "mach:swhid": "swh:1:ori:c55613f6fc1190eae2efbafa315912af46f7112a",
-  "mach:licenseUrl": "https://github.com/vantage6/vantage6/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/vantage6/vantage6/blob/main/LICENSE"
 }

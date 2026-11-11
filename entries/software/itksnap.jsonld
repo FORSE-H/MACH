@@ -30,13 +30,10 @@
     "url": "https://www.med.upenn.edu/bbbl/"
   },
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "One of the most widely cited medical image segmentation tools in research — 8,000+ academic paper citations, 20+ years of continuous development, funded by NIH/NLM. GPL-3.0, v4.4.0 (August 2025), 431 stars. Part of the ITK ecosystem: ITK provides the segmentation algorithms; ITK-SNAP provides an interactive desktop application for manual and semi-automatic segmentation workflows in research and pre-clinical settings.",
   "mach:editorialReviewedAt": "2026-05-14",
   "mach:evidence": [
     {
@@ -50,6 +47,5 @@
       "mach:evidenceType": "primary-instance"
     }
   ],
-  "mach:swhid": "swh:1:ori:0c34580f7821ced612e0927d5f618b5d7368bc74",
-  "mach:licenseVerified": false
+  "mach:swhid": "swh:1:ori:0c34580f7821ced612e0927d5f618b5d7368bc74"
 }

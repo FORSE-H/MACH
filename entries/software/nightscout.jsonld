@@ -52,7 +52,6 @@
     }
   ],
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
@@ -64,8 +63,6 @@
     "research",
     "public-health"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de facto open-source CGM data platform with 73k forks reflecting extraordinary real-world deployment since 2013. Provides the data layer that Loop, AndroidAPS, and Trio integrate with for remote monitoring and data sharing. REST and GraphQL APIs enable research pipeline integration. AGPL-3.0 copyleft applies to embedding in proprietary products. Adopt for any diabetes research programme or clinical team supporting patients using DIY AID or needing real-time remote CGM visibility.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -80,6 +77,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:fefab2e3a4665e465b42617db0f2a2b294ae9275",
-  "mach:licenseUrl": "https://github.com/nightscout/cgm-remote-monitor/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/nightscout/cgm-remote-monitor/blob/master/LICENSE"
 }

@@ -56,7 +56,6 @@
   "mach:foundation": "Health Level Seven International (HL7) / ISO",
   "mach:category": "specs",
   "mach:subcategory": "fhir",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "cloud",
     "self-hosted"
@@ -68,8 +67,6 @@
     "cross-border",
     "care-transitions"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The global standard for portable patient summaries — ISO 27269 + HL7 FHIR R4 IG, mandated by the EU for cross-border health data exchange (eHDSI / myHealth@EU) and referenced in the EU Health Data Space regulation. CC0 licensed. Any team building care transition, cross-border, or patient-facing health data flows should implement IPS as the minimum patient context payload.",
   "mach:editorialReviewedAt": "2026-05-15",
   "mach:evidence": [
     {
@@ -89,6 +86,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:7cb6fd76ce8e2dab4357ab04327ffe9cb595be78",
-  "mach:licenseUrl": "https://github.com/HL7/fhir-ips/blob/master/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/HL7/fhir-ips/blob/master/LICENSE"
 }

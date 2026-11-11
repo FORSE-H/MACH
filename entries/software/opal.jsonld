@@ -19,7 +19,6 @@
   ],
   "license": "GPL-3.0",
   "mach:licenseUrl": "https://github.com/obiba/opal/blob/master/LICENSE.txt",
-  "mach:licenseVerified": true,
   "version": "5.7.2",
   "dateModified": "2026-05-29",
   "programmingLanguage": [
@@ -52,7 +51,6 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
@@ -64,8 +62,6 @@
     "genomics",
     "epidemiology"
   ],
-  "mach:judgement": "Adopt",
-  "mach:judgementReason": "The de facto open-source platform for biobank and epidemiological cohort data management — production-grade, v5.7.2, actively maintained by Maelstrom Research (McGill) and Epigeny. Deployed in CanPath (Canada's national population cohort), EUCAN-Connect, and SYNCHROS EU federated networks. Covers the full research data lifecycle: multi-source import, harmonisation, derivation, querying, REST API, R integration via Rock, and native DataSHIELD support for federated privacy-preserving analysis. GPL-3.0. GitHub stars (31) understate institutional adoption — Opal is the infrastructure backbone for major multi-country cohort studies. Adopt for any team building biobank infrastructure or federated epidemiological data platforms.",
   "mach:editorialReviewedAt": "2026-06-02",
   "mach:evidence": [
     {

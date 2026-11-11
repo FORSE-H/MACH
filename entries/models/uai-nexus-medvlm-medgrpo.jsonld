@@ -40,7 +40,6 @@
     }
   ],
   "mach:governance": "academic",
-  "mach:maturity": "beta",
   "mach:category": "ai-ml-models",
   "mach:clinicalDomain": [
     "surgery",
@@ -55,8 +54,6 @@
   "mach:trainingDataSummary": "Supervised fine-tuning and MedGRPO reinforcement learning on the MedVidBench Standard split — 51,505 balanced video-instruction pairs drawn from 8 open surgical-video source datasets (AVOS, CholecT50, CholecTrack20, Cholec80-CVS, CoPESD, EgoSurgery, JIGSAWS, NurViD). Base model: Qwen2.5-VL-7B-Instruct. Note: while the released weights are Apache-2.0, the MedVidBench training/evaluation corpus is CC-BY-NC-SA-4.0 (non-commercial), and individual source datasets carry their own upstream licences.",
   "mach:intendedUse": "Research on medical and surgical video understanding: temporal action localization, spatiotemporal grounding, video summarization, region captioning, and surgical skill / Critical View of Safety assessment. Not validated or cleared for clinical decision-making.",
   "mach:aiActRiskClass": "high-risk-candidate",
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "A current (CVPR 2026) open vision-language model for surgical and medical video understanding with permissively licensed (Apache-2.0) weights, real released code, and ~7,000 monthly HuggingFace downloads. The MedGRPO training method (cross-dataset reward normalization + a medical LLM judge) is a substantive contribution, and the SFT baseline reportedly beats GPT-4.1 and Gemini-2.5-Flash on the authors' MedVidBench. Marked Assess, not Adopt, for several converging reasons. (1) It is an explicit alpha release (v1.0a) — the maintainers' own versioning signals it is not production-stable. (2) Evidence is strong but self-reported on the authors' own benchmark; there is no independent or peer-reviewed clinical validation yet. (3) Under the EU AI Act risk cap, surgical CVS/skill assessment is high-risk-candidate territory and is held at Assess until peer-reviewed clinical validation exists. (4) A licence split is a real consumer trap: the weights are Apache-2.0 (permissive), but the MedVidBench data needed to reproduce or fine-tune is CC-BY-NC-SA-4.0 (non-commercial), and the code repository has no visible LICENSE file as of review. Useful now for research teams building surgical-video AI; commercial users must check the data and code licensing carefully. The companion benchmark is cataloged separately as MedVidBench (datasets).",
   "mach:editorialReviewedAt": "2026-06-15",
   "schema:comment": "Code repository UII-AI/MedGRPO-Code has no visible LICENSE file as of 2026-06-15 — code reuse terms unstated even though the weights are Apache-2.0. Re-verify on next review; if a LICENSE is added, set mach:licenseVerified accordingly.",
   "mach:evidence": [
@@ -78,6 +75,5 @@
     }
   ],
   "mach:huggingFaceUrl": "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL",
-  "mach:licenseUrl": "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL/blob/main/README.md",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL/blob/main/README.md"
 }

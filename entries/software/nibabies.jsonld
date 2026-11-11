@@ -18,7 +18,6 @@
   ],
   "license": "Apache-2.0",
   "mach:licenseUrl": "https://github.com/nipreps/nibabies/blob/master/LICENSE",
-  "mach:licenseVerified": true,
   "version": "25.2.1",
   "dateModified": "2025-10-22",
   "programmingLanguage": [
@@ -48,7 +47,6 @@
     }
   ],
   "mach:governance": "community",
-  "mach:maturity": "production",
   "mach:category": "software",
   "mach:deploymentContext": [
     "self-hosted",
@@ -60,8 +58,6 @@
     "neurology",
     "pediatrics"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The only open-source MRI preprocessing pipeline purpose-built for infant neuroimaging (0–2 years) — fills a genuine gap since fMRIPrep is not suitable for neonatal/infant data due to inverted tissue contrast and incomplete myelination. Apache-2.0, BIDS-compliant, 36 releases showing active development. Assess due to small community (39 stars) reflecting the niche population. Essential for any team working on infant brain development, neonatal outcomes research, or early neurodevelopment studies.",
   "mach:editorialReviewedAt": "2026-05-29",
   "mach:evidence": [
     {

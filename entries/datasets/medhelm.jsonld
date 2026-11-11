@@ -42,7 +42,6 @@
   "mach:foundation": "Stanford University / Microsoft",
   "mach:category": "datasets",
   "mach:subcategory": "clinical-benchmark",
-  "mach:maturity": "production",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud"
@@ -53,8 +52,6 @@
     "oncology",
     "research"
   ],
-  "mach:judgement": "Assess",
-  "mach:judgementReason": "The most comprehensive open evaluation framework for medical LLMs — 121 clinician-validated tasks across 5 clinical domains, published in Nature Medicine 2025. Built on the established HELM framework with Apache 2.0 licence. The repo is very new and community traction is still low. Assess now; expect to move to Adopt once star count and downstream adoption confirm real-world uptake beyond the paper.",
   "mach:editorialReviewedAt": "2026-05-16",
   "mach:evidence": [
     {
@@ -75,6 +72,5 @@
     }
   ],
   "mach:swhid": "swh:1:ori:c2e750a032145bc822eb5ab2115e8ff7406bc8de",
-  "mach:licenseUrl": "https://github.com/stanford-crfm/helm/blob/main/LICENSE",
-  "mach:licenseVerified": true
+  "mach:licenseUrl": "https://github.com/stanford-crfm/helm/blob/main/LICENSE"
 }
