@@ -1,0 +1,66 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/clinicare-bench",
+  "@type": [
+    "schema:Dataset",
+    "mach:Benchmark"
+  ],
+  "identifier": "clinicare-bench",
+  "name": "CliniCARE-Bench",
+  "alternateName": [
+    "CliniCARE",
+    "clinicare"
+  ],
+  "description": "An open clinical-agent benchmark over MIMIC-IV from Scale AI. An agent answers a clinical question about a single patient record, accesses the chart through a governed tool surface, and returns a four-way verdict (YES, NO, INDETERMINATE for lack of data, or INDETERMINATE for medical ambiguity) with cited evidence. Scoring covers verdict accuracy, evidence retrieval, citation support, process-rubric adherence, and appropriate deferral when the record cannot settle the question. Comprises 25 scenarios / 750 tasks (150 indeterminate) plus a 148-case dev subset, with an evaluation pipeline, scenario templates, and a leaderboard. The MIT licence covers the code and scenario specs; patient data is NOT distributed — the MIMIC-IV-derived cohort bundle requires PhysioNet credentials and a DUA, and corpus documents carry per-publisher terms. Early-stage: the README states it is being prepared for public release.",
+  "url": "https://github.com/scaleapi/clinicare",
+  "codeRepository": "https://github.com/scaleapi/clinicare",
+  "license": "MIT",
+  "relatedLink": [
+    "https://physionet.org/content/mimiciv/"
+  ],
+  "programmingLanguage": [
+    "Python"
+  ],
+  "applicationCategory": "Research",
+  "keywords": [
+    "clinical-benchmark",
+    "clinical-agent",
+    "mimic-iv",
+    "llm-agent",
+    "evidence-citation",
+    "clinical-qa",
+    "evaluation",
+    "icu"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Scale AI",
+    "url": "https://scale.com"
+  },
+  "mach:governance": "vendor-led",
+  "mach:foundation": "Scale AI",
+  "mach:category": "datasets",
+  "mach:subcategory": "clinical-benchmark",
+  "mach:editorialReviewedAt": "2026-11-11",
+  "schema:comment": "MIT code + scenario specs; patient data not distributed (MIMIC-IV derivative, PhysioNet DUA). Early-stage (16 stars, no releases/paper DOI yet, 'being prepared for public release'). Judgement auto-scored by harvester. Re-verify maturity + paper on next review.",
+  "mach:clinicalDomain": [
+    "research",
+    "secondary-care"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/scaleapi/clinicare",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://physionet.org/content/mimiciv/",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/scaleapi/clinicare/blob/main/LICENSE"
+}
