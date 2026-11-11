@@ -32,7 +32,7 @@
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Washington University School of Medicine",
-    "url": "https://www.mir.wustl.edu/research/research-support-facilities/neuroinformatics-research-group/"
+    "url": "https://www.xnat.org/about/"
   },
   "mach:governance": "academic",
   "mach:maturity": "production",
