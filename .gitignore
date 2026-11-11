@@ -19,3 +19,6 @@ data/compliance-standards.csv
 mach_catalog_dump_*.json
 .claude/
 REVIEW.md
+# Python bytecode
+__pycache__/
+*.pyc
