@@ -140,9 +140,16 @@ def build_entries_html(entries):
         name_href     = jsonld_url if jsonld_url else e.get("url", e.get("codeRepository", "#"))
         links_html    = f'<div class="entry-card-links">{url_links}</div>' if url_links else ""
 
-        cards.append(f"""    <div class="entry-card" data-cat="{cat}" data-license="{license_str}">
+        # Judgement badge (Adopt / Assess / Caution), shown when the entry has one.
+        judgement_badge = (
+            f'<span class="entry-judgement ring-{judgement.lower()}" '
+            f'title="MACH editorial judgement: {judgement}">{judgement}</span>'
+            if judgement in ("Adopt", "Assess", "Caution") else ""
+        )
+
+        cards.append(f"""    <div class="entry-card" data-cat="{cat}" data-license="{license_str}" data-judgement="{judgement}">
       <div class="entry-card-meta">
-        <span class="entry-cat">{cat_label}</span>
+        <span class="entry-cat">{cat_label}</span>{judgement_badge}
       </div>
       <p class="entry-name"><a href="{name_href}" target="_blank" rel="noopener">{name}</a></p>
       <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}</div>
