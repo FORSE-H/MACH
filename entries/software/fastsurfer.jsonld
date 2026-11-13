@@ -68,5 +68,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:ab0102a74971fb4f838cbea0e2b2235456bc1ba5",
-  "mach:licenseUrl": "https://github.com/Deep-MI/FastSurfer/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/Deep-MI/FastSurfer/blob/master/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -53,5 +53,7 @@
       "mach:evidenceType": "primary-instance"
     }
   ],
-  "mach:licenseUrl": "https://github.com/niivue/niivue/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/niivue/niivue/blob/main/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

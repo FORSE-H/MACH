@@ -66,5 +66,7 @@
       "url": "https://github.com/microsoft/fhir-server",
       "mach:evidenceType": "primary-repo"
     }
-  ]
+  ],
+  "mach:subcategory": "interoperability",
+  "mach:subcategoryBy": "rule:keyword"
 }

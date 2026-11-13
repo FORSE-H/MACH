@@ -64,5 +64,7 @@
       "url": "https://www.opendata.nhs.scot/api/3/action/package_list",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "open-data-portal",
+  "mach:subcategoryBy": "rule:keyword"
 }

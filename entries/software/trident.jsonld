@@ -63,5 +63,7 @@
       "schema:name": "Accelerating Data Processing and Benchmarking of AI Models for Pathology. arXiv 2502.06750."
     }
   ],
-  "mach:licenseUrl": "https://github.com/mahmoodlab/TRIDENT/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/mahmoodlab/TRIDENT/blob/main/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

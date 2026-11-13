@@ -47,7 +47,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install Python dependencies
-        run: pip install requests
+        run: pip install requests pyyaml
 
       - name: Validate JSON syntax on all entries
         run: |
@@ -55,6 +55,11 @@ jobs:
           find entries/ -name "*.jsonld" ! -name "_template.jsonld" | while read f; do
             python3 -c "import json; json.load(open('$f'))" && echo "OK: $f" || { echo "FAIL: $f"; exit 1; }
           done
+
+      - name: Check classification (Function is in the controlled vocab)
+        # Every entry's mach:subcategory must be a Function defined for its category
+        # in data/taxonomy/categories.yaml, and no entry may be unclassified.
+        run: python scripts/classify.py --check
 
       - name: Check required fields
         run: |

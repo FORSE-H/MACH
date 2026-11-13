@@ -56,5 +56,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/nipy/heudiconv/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/nipy/heudiconv/blob/master/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

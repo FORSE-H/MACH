@@ -57,5 +57,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/prov-gigapath/prov-gigapath/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/prov-gigapath/prov-gigapath/blob/main/LICENSE",
+  "mach:subcategory": "imaging-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

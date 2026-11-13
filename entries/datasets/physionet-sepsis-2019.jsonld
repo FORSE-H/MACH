@@ -40,7 +40,7 @@
   "mach:governance": "academic",
   "mach:foundation": "PhysioNet (MIT Laboratory for Computational Physiology)",
   "mach:category": "datasets",
-  "mach:subcategory": "clinical-benchmark",
+  "mach:subcategory": "benchmark",
   "mach:deploymentContext": [
     "self-hosted"
   ],
@@ -61,5 +61,6 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "Early Prediction of Sepsis from Clinical Data: The PhysioNet/Computing in Cardiology Challenge 2019. Critical Care Medicine, 2019."
     }
-  ]
+  ],
+  "mach:subcategoryBy": "rule:keyword"
 }

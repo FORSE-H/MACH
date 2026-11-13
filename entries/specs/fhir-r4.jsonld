@@ -32,7 +32,7 @@
   "mach:governance": "foundation",
   "mach:foundation": "Health Level Seven International (HL7)",
   "mach:category": "specs",
-  "mach:subcategory": "fhir",
+  "mach:subcategory": "interoperability-standard",
   "mach:editorialReviewedAt": "2025-10-01",
   "mach:clinicalDomain": [
     "primary-care",
@@ -57,5 +57,6 @@
       "url": "https://www.cms.gov/priorities/burden-reduction/overview/interoperability/policies-regulations/cms-interoperability-patient-access-final-rule-cms-9115-f",
       "mach:evidenceType": "regulatory-reference"
     }
-  ]
+  ],
+  "mach:subcategoryBy": "rule:keyword"
 }

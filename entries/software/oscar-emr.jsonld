@@ -49,5 +49,7 @@
       "url": "https://fammed.mcmaster.ca/oscar-emr",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:subcategory": "clinical-system",
+  "mach:subcategoryBy": "rule:keyword"
 }

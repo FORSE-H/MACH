@@ -56,5 +56,7 @@
       "mach:evidenceType": "regulatory-reference",
       "schema:name": "EU MDR 2017/745 — harmonised with ISO 13485 for QMS compliance"
     }
-  ]
+  ],
+  "mach:subcategory": "quality-standard",
+  "mach:subcategoryBy": "rule:keyword"
 }

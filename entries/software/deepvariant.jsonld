@@ -73,5 +73,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "A universal SNP and small-indel variant caller using deep neural networks. Nature Biotechnology, 2018."
     }
-  ]
+  ],
+  "mach:subcategory": "bioinformatics-pipeline",
+  "mach:subcategoryBy": "rule:keyword"
 }

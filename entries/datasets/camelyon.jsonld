@@ -64,5 +64,7 @@
       "url": "https://camelyon17.grand-challenge.org/Data/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "benchmark",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -61,7 +61,7 @@
   ],
   "mach:governance": "academic",
   "mach:category": "datasets",
-  "mach:subcategory": "omics-benchmark",
+  "mach:subcategory": "benchmark",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "oncology",
@@ -88,5 +88,6 @@
       "mach:evidenceType": "model-hub"
     }
   ],
-  "mach:swhid": "swh:1:ori:1908417582a9997ba665d7eb5a4dec717821698e"
+  "mach:swhid": "swh:1:ori:1908417582a9997ba665d7eb5a4dec717821698e",
+  "mach:subcategoryBy": "rule:keyword"
 }

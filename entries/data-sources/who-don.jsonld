@@ -67,5 +67,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "The World Health Organization's Disease Outbreak News: A retrospective database. PMC 2023."
     }
-  ]
+  ],
+  "mach:subcategory": "surveillance-feed",
+  "mach:subcategoryBy": "rule:keyword"
 }

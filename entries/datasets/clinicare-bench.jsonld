@@ -40,7 +40,7 @@
   "mach:governance": "vendor-led",
   "mach:foundation": "Scale AI",
   "mach:category": "datasets",
-  "mach:subcategory": "clinical-benchmark",
+  "mach:subcategory": "benchmark",
   "mach:editorialReviewedAt": "2026-11-11",
   "schema:comment": "MIT code + scenario specs; patient data not distributed (MIMIC-IV derivative, PhysioNet DUA). Early-stage (16 stars, no releases/paper DOI yet, 'being prepared for public release'). Judgement auto-scored by harvester. Re-verify maturity + paper on next review.",
   "mach:clinicalDomain": [
@@ -62,5 +62,6 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/scaleapi/clinicare/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/scaleapi/clinicare/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

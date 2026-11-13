@@ -53,5 +53,7 @@
       "url": "https://www.dicomstandard.org",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "interoperability-standard",
+  "mach:subcategoryBy": "rule:keyword"
 }

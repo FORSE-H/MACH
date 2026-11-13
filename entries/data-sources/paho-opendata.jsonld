@@ -65,5 +65,7 @@
       "url": "https://www.paho.org/en/information-systems",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "surveillance-feed",
+  "mach:subcategoryBy": "rule:keyword"
 }

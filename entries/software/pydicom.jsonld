@@ -43,7 +43,7 @@
   },
   "mach:governance": "community",
   "mach:category": "software",
-  "mach:subcategory": "dicom",
+  "mach:subcategory": "medical-imaging",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "radiology",
@@ -79,5 +79,6 @@
   "mach:licenseUrl": "https://github.com/pydicom/pydicom/blob/main/LICENSE",
   "mach:supportsSpec": [
     "https://github.com/FORSE-H/MACH/tree/main/entries/specs/dicom"
-  ]
+  ],
+  "mach:subcategoryBy": "rule:keyword"
 }

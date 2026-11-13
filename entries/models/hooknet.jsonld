@@ -54,5 +54,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:2a952e9785ef8246bb449110c937d1ad79468166",
-  "mach:licenseUrl": "https://github.com/DIAGNijmegen/pathology-hooknet/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/DIAGNijmegen/pathology-hooknet/blob/master/LICENSE",
+  "mach:subcategory": "imaging-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

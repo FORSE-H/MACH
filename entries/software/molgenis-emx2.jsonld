@@ -71,5 +71,6 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/molgenis/molgenis-emx2/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/molgenis/molgenis-emx2/blob/master/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

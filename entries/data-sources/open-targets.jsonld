@@ -66,5 +66,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "Open Targets Platform: supporting systematic drug-target identification and prioritisation. Nucleic Acids Research 2022."
     }
-  ]
+  ],
+  "mach:subcategory": "open-data-portal",
+  "mach:subcategoryBy": "rule:keyword"
 }

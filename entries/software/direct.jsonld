@@ -42,7 +42,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Netherlands Cancer Institute / AI for Oncology",
   "mach:category": "software",
-  "mach:subcategory": "radiology",
+  "mach:subcategory": "medical-imaging",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -65,5 +65,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:5943b867f0106a319bd9239da56c88222e45cc0f",
-  "mach:licenseUrl": "https://github.com/NKI-AI/direct/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/NKI-AI/direct/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

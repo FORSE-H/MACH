@@ -40,7 +40,7 @@
   "mach:governance": "government",
   "mach:foundation": "National Institutes of Health / NLM",
   "mach:category": "ai-ml-models",
-  "mach:subcategory": "genomics",
+  "mach:subcategory": "genomics-model",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -67,5 +67,6 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/ncbi-nlp/GeneAgent/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/ncbi-nlp/GeneAgent/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

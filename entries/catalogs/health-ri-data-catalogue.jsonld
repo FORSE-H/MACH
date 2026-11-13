@@ -52,5 +52,7 @@
       "url": "https://fairdatapoint.readthedocs.io/",
       "mach:evidenceType": "specification"
     }
-  ]
+  ],
+  "mach:subcategory": "catalog",
+  "mach:subcategoryBy": "catalog"
 }

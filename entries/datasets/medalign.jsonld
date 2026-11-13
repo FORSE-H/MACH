@@ -31,7 +31,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Stanford University",
   "mach:category": "datasets",
-  "mach:subcategory": "clinical-benchmark",
+  "mach:subcategory": "benchmark",
   "mach:deploymentContext": [
     "self-hosted"
   ],
@@ -54,5 +54,6 @@
       "schema:name": "MedAlign: A Clinician-Generated Dataset for Instruction Following with Electronic Medical Records. AAAI 2024."
     }
   ],
-  "mach:licenseUrl": "https://github.com/som-shahlab/medalign/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/som-shahlab/medalign/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

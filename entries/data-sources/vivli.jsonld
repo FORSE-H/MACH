@@ -64,5 +64,7 @@
       "mach:evidenceType": "adoption",
       "schema:name": "NIH NLM — Generalist Repositories (NIH-approved for Data Management and Sharing Policy compliance)"
     }
-  ]
+  ],
+  "mach:subcategory": "registry",
+  "mach:subcategoryBy": "rule:keyword"
 }

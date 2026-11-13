@@ -58,5 +58,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:06ffa3f233a87c52674ac342f9cb011151d5d696",
-  "mach:licenseUrl": "https://github.com/dhis2/dhis2-core/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/dhis2/dhis2-core/blob/master/LICENSE",
+  "mach:subcategory": "interoperability",
+  "mach:subcategoryBy": "rule:keyword"
 }

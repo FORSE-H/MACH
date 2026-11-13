@@ -61,5 +61,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "schema:comment": "entry_status: watchlist — re-assess if a public API or open data licence becomes available. No programmatic access under open terms as of May 2026."
+  "schema:comment": "entry_status: watchlist — re-assess if a public API or open data licence becomes available. No programmatic access under open terms as of May 2026.",
+  "mach:subcategory": "surveillance-feed",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -48,7 +48,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Division of Medical Image Computing, DKFZ (Hanno Gao, Philipp Schader et al.)",
   "mach:category": "software",
-  "mach:subcategory": "federated-learning",
+  "mach:subcategory": "medical-imaging",
   "mach:editorialReviewedAt": "2026-05-11",
   "mach:clinicalDomain": [
     "radiology",
@@ -92,5 +92,6 @@
     "flower-federated-learning"
   ],
   "mach:swhid": "swh:1:ori:f1625918c14698c1e423a7f0465995c75b4136ce",
-  "mach:licenseUrl": "https://github.com/kaapana/kaapana/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/kaapana/kaapana/blob/master/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

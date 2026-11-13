@@ -12,6 +12,8 @@ on:
       - 'scripts/generate_entries.py'
       - 'scripts/generate_entry_pages.py'
       - 'scripts/generate_dashboard.py'
+      - 'scripts/generate_taxonomy.py'
+      - 'scripts/classify.py'
       - 'scripts/taxonomy.py'
       - 'data/taxonomy/categories.yaml'
       - 'data/signals.json'
@@ -66,6 +68,9 @@ jobs:
 
       - name: Run generate_dashboard.py
         run: python scripts/generate_dashboard.py
+
+      - name: Run generate_taxonomy.py
+        run: python scripts/generate_taxonomy.py
 
       - name: Set up Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0

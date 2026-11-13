@@ -60,5 +60,7 @@
       "url": "https://biotools.readthedocs.io/en/latest/api_reference.html",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "terminology",
+  "mach:subcategoryBy": "rule:keyword"
 }

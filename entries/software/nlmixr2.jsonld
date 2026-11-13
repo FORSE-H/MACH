@@ -55,5 +55,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/nlmixr2/nlmixr2/blob/main/LICENSE.md"
+  "mach:licenseUrl": "https://github.com/nlmixr2/nlmixr2/blob/main/LICENSE.md",
+  "mach:subcategory": "pharmacometrics",
+  "mach:subcategoryBy": "rule:keyword"
 }

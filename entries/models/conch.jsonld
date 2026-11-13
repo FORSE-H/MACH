@@ -62,5 +62,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/mahmoodlab/CONCH/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/mahmoodlab/CONCH/blob/main/LICENSE",
+  "mach:subcategory": "imaging-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -69,5 +69,7 @@
       "schema:name": "ECG-FM: An Open Electrocardiogram Foundation Model. arXiv 2024."
     }
   ],
-  "mach:licenseUrl": "https://github.com/bowang-lab/ecg-fm/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/bowang-lab/ecg-fm/blob/main/LICENSE",
+  "mach:subcategory": "foundation-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

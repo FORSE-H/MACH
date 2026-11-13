@@ -42,7 +42,7 @@
   },
   "mach:governance": "vendor-led",
   "mach:category": "software",
-  "mach:subcategory": "pipeline-tools",
+  "mach:subcategory": "clinical-nlp",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -70,5 +70,6 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/fastdatascience/drug_named_entity_recognition/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/fastdatascience/drug_named_entity_recognition/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

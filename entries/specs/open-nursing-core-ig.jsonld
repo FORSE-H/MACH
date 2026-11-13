@@ -58,5 +58,7 @@
       "url": "https://opensource.unicc.org/nursecitizendeveloper/open-nursing-core-ig",
       "mach:evidenceType": "primary-repo"
     }
-  ]
+  ],
+  "mach:subcategory": "interoperability-standard",
+  "mach:subcategoryBy": "rule:keyword"
 }

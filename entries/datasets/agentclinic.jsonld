@@ -34,7 +34,7 @@
   ],
   "mach:governance": "academic",
   "mach:category": "datasets",
-  "mach:subcategory": "clinical-benchmark",
+  "mach:subcategory": "benchmark",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -62,5 +62,6 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/SamuelSchmidgall/AgentClinic/blob/main/LICENSE.txt"
+  "mach:licenseUrl": "https://github.com/SamuelSchmidgall/AgentClinic/blob/main/LICENSE.txt",
+  "mach:subcategoryBy": "rule:keyword"
 }

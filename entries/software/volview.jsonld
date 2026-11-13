@@ -65,5 +65,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "Interactive, in-browser cinematic volume rendering of medical images. MICCAI AE-CAI Workshop, 2022."
     }
-  ]
+  ],
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

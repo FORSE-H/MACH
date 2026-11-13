@@ -67,5 +67,7 @@
       "schema:name": "ProMED, an early warning system on disease outbreaks, appears near collapse. STAT News, 2023."
     }
   ],
-  "schema:comment": "entry_status: watchlist — re-assess when access model stabilises. RSS permanently closed 2023; commercial API (Samdesk) covers 2025+ only. Monitor ISID financial situation and any restoration of open access."
+  "schema:comment": "entry_status: watchlist — re-assess when access model stabilises. RSS permanently closed 2023; commercial API (Samdesk) covers 2025+ only. Monitor ISID financial situation and any restoration of open access.",
+  "mach:subcategory": "surveillance-feed",
+  "mach:subcategoryBy": "rule:keyword"
 }

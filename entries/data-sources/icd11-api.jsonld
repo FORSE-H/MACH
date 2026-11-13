@@ -51,5 +51,7 @@
       "url": "https://icd.who.int/icdapi/docs2/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "terminology",
+  "mach:subcategoryBy": "rule:keyword"
 }

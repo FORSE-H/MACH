@@ -57,5 +57,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:957ded432989ad8e850231107579cc1d776fb218",
-  "mach:licenseUrl": "https://github.com/FAIRDataTeam/FAIRDataPoint/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/FAIRDataTeam/FAIRDataPoint/blob/master/LICENSE",
+  "mach:subcategory": "interoperability-standard",
+  "mach:subcategoryBy": "rule:keyword"
 }

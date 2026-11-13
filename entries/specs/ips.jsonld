@@ -55,7 +55,7 @@
   "mach:governance": "foundation",
   "mach:foundation": "Health Level Seven International (HL7) / ISO",
   "mach:category": "specs",
-  "mach:subcategory": "fhir",
+  "mach:subcategory": "interoperability-standard",
   "mach:deploymentContext": [
     "cloud",
     "self-hosted"
@@ -86,5 +86,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:7cb6fd76ce8e2dab4357ab04327ffe9cb595be78",
-  "mach:licenseUrl": "https://github.com/HL7/fhir-ips/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/HL7/fhir-ips/blob/master/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

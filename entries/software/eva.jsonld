@@ -69,5 +69,7 @@
       "schema:name": "eva: Evaluation framework for medical imaging foundation models. MIDL 2024."
     }
   ],
-  "mach:licenseUrl": "https://github.com/kaiko-ai/eva/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/kaiko-ai/eva/blob/main/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

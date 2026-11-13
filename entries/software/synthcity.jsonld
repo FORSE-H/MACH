@@ -62,5 +62,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "Synthcity: Facilitating Innovative Use Cases of Synthetic Data in Different Data Modalities. NeurIPS 2023."
     }
-  ]
+  ],
+  "mach:subcategory": "clinical-system",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -70,5 +70,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:bc37481c9919827bb717a1f8740fd1a3bfc3ef38",
-  "mach:licenseUrl": "https://github.com/oncoray/mirp/blob/master/LICENSE.txt"
+  "mach:licenseUrl": "https://github.com/oncoray/mirp/blob/master/LICENSE.txt",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

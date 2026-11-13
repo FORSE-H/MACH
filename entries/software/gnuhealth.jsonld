@@ -57,5 +57,7 @@
       "url": "https://www.gnuhealth.org/docs/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "clinical-system",
+  "mach:subcategoryBy": "rule:keyword"
 }

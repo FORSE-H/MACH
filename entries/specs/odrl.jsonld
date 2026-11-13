@@ -63,5 +63,6 @@
       "url": "https://internationaldataspaces.org/",
       "mach:evidenceType": "ecosystem-reference"
     }
-  ]
+  ],
+  "mach:subcategoryBy": "rule:keyword"
 }

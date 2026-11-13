@@ -36,7 +36,7 @@
     }
   ],
   "mach:category": "software",
-  "mach:subcategory": "mhealth-framework",
+  "mach:subcategory": "interoperability",
   "mach:governance": "academic",
   "mach:clinicalDomain": [
     "digital-health",
@@ -70,5 +70,6 @@
       "url": "https://doi.org/10.5281/zenodo.549199889",
       "mach:evidenceType": "archive"
     }
-  ]
+  ],
+  "mach:subcategoryBy": "rule:keyword"
 }

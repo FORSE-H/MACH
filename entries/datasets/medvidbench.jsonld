@@ -68,5 +68,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "MedGRPO: Multi-Task Reinforcement Learning for Heterogeneous Medical Video Understanding. arXiv:2512.06581 (CVPR 2026)."
     }
-  ]
+  ],
+  "mach:subcategory": "benchmark",
+  "mach:subcategoryBy": "rule:keyword"
 }

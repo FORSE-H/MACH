@@ -82,5 +82,7 @@
       "url": "https://developers.google.com/health-ai-developer-foundations/medgemma",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "imaging-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

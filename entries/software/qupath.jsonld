@@ -83,5 +83,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:901111bd8c8794f4f96af13cec42c3d247036dd9",
-  "mach:licenseUrl": "https://github.com/qupath/qupath/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/qupath/qupath/blob/main/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

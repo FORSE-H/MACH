@@ -74,5 +74,7 @@
       "schema:name": "MetaboNet: The Largest Publicly Available Consolidated Dataset for Type 1 Diabetes Management. arXiv 2601.11505, January 2026."
     }
   ],
-  "mach:licenseUrl": "https://github.com/replicahealth/metabonet_processor/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/replicahealth/metabonet_processor/blob/main/LICENSE",
+  "mach:subcategory": "benchmark",
+  "mach:subcategoryBy": "rule:keyword"
 }

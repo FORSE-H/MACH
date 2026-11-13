@@ -64,5 +64,7 @@
       "mach:evidenceType": "primary-instance"
     }
   ],
-  "mach:licenseUrl": "https://github.com/OHIF/Viewers/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/OHIF/Viewers/blob/master/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

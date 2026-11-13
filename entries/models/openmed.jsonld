@@ -42,7 +42,7 @@
   ],
   "mach:governance": "individual",
   "mach:category": "ai-ml-models",
-  "mach:subcategory": "nlp-ner",
+  "mach:subcategory": "clinical-nlp",
   "mach:editorialReviewedAt": "2026-05-11",
   "mach:clinicalDomain": [
     "cross-cutting"
@@ -75,5 +75,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:c0e198ef7ba41275e2b69aa2e2fb5428385729ef",
-  "mach:licenseUrl": "https://github.com/maziyarpanahi/openmed/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/maziyarpanahi/openmed/blob/master/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

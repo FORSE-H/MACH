@@ -78,5 +78,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "MRIQC: Advancing the Automatic Prediction of Image Quality in MRI from Unseen Sites. PLOS ONE 2017."
     }
-  ]
+  ],
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

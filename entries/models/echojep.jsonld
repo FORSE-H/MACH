@@ -46,7 +46,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
   "mach:category": "ai-ml-models",
-  "mach:subcategory": "imaging-model",
+  "mach:subcategory": "foundation-model",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud"
@@ -67,5 +67,6 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "EchoJEPA: A Latent Predictive Foundation Model for Echocardiography. arXiv 2026."
     }
-  ]
+  ],
+  "mach:subcategoryBy": "rule:keyword"
 }

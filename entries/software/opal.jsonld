@@ -80,5 +80,7 @@
       "mach:evidenceType": "adoption",
       "schema:name": "CanPath — Canada's national population health study, deploys Opal"
     }
-  ]
+  ],
+  "mach:subcategory": "research-platform",
+  "mach:subcategoryBy": "rule:keyword"
 }

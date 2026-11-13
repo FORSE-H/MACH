@@ -35,7 +35,7 @@
   ],
   "mach:huggingFaceUrl": "https://huggingface.co/facebook/esm2_t33_650M_UR50D",
   "mach:category": "ai-ml-models",
-  "mach:subcategory": "protein-language-model",
+  "mach:subcategory": "genomics-model",
   "mach:governance": "vendor-led",
   "mach:clinicalDomain": [
     "genomics",
@@ -70,5 +70,6 @@
       "url": "https://github.com/facebookresearch/esm/releases/tag/v1.0.3",
       "mach:evidenceType": "release"
     }
-  ]
+  ],
+  "mach:subcategoryBy": "rule:keyword"
 }

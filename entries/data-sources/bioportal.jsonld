@@ -67,5 +67,7 @@
       "mach:evidenceType": "documentation",
       "schema:name": "BioPortal REST API"
     }
-  ]
+  ],
+  "mach:subcategory": "terminology",
+  "mach:subcategoryBy": "rule:keyword"
 }

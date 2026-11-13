@@ -64,5 +64,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:8843271fde3f2179b9cb4c2682db9663b739574c",
-  "mach:licenseUrl": "https://github.com/openmrs/openmrs-core/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/openmrs/openmrs-core/blob/master/LICENSE",
+  "mach:subcategory": "interoperability",
+  "mach:subcategoryBy": "rule:keyword"
 }

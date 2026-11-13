@@ -61,5 +61,7 @@
       "mach:evidenceType": "model-weights"
     }
   ],
-  "mach:licenseUrl": "https://github.com/NickLJLee/ECGFounder/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/NickLJLee/ECGFounder/blob/master/LICENSE",
+  "mach:subcategory": "foundation-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -49,5 +49,7 @@
       "url": "https://www.bioptimus.com/",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:subcategory": "imaging-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

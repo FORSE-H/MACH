@@ -48,7 +48,7 @@
   "mach:governance": "academic",
   "mach:foundation": "CogStack / King's College London",
   "mach:category": "software",
-  "mach:subcategory": "pipeline-tools",
+  "mach:subcategory": "clinical-system",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -79,5 +79,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:57f852844383702e16feacee6a4c21ab566ecbb8",
-  "mach:licenseUrl": "https://github.com/CogStack/MedCAT/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/CogStack/MedCAT/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

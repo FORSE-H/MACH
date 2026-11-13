@@ -54,5 +54,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/suyashkumar/dicom/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/suyashkumar/dicom/blob/main/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -75,5 +75,6 @@
     }
   ],
   "mach:huggingFaceUrl": "https://huggingface.co/NYUMedML/Neuro-JEPA",
-  "mach:licenseUrl": "https://huggingface.co/NYUMedML/Neuro-JEPA"
+  "mach:licenseUrl": "https://huggingface.co/NYUMedML/Neuro-JEPA",
+  "mach:subcategoryBy": "rule:keyword"
 }

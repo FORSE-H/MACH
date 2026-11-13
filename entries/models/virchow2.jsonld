@@ -50,5 +50,7 @@
       "mach:evidenceType": "academic-reference"
     }
   ],
-  "mach:licenseUrl": "https://github.com/Paige-AI/paige-ml-sdk/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/Paige-AI/paige-ml-sdk/blob/main/LICENSE",
+  "mach:subcategory": "imaging-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -45,7 +45,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Dana-Farber Cancer Institute",
   "mach:category": "software",
-  "mach:subcategory": "imaging-model",
+  "mach:subcategory": "medical-imaging",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "pathology",
@@ -72,5 +72,6 @@
     "histolab"
   ],
   "mach:swhid": "swh:1:ori:848b4e9c20fa1d00848bf51db71e01409aad832c",
-  "mach:licenseUrl": "https://github.com/Dana-Farber-AIOS/pathml/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/Dana-Farber-AIOS/pathml/blob/master/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

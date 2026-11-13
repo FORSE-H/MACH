@@ -43,7 +43,7 @@
   "mach:governance": "foundation",
   "mach:foundation": "BBMRI-ERIC",
   "mach:category": "software",
-  "mach:subcategory": "data-access",
+  "mach:subcategory": "research-platform",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -73,5 +73,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:3acb33cc3680b0c3434a267a779fdd5b95d25341",
-  "mach:licenseUrl": "https://github.com/BBMRI-ERIC/negotiator/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/BBMRI-ERIC/negotiator/blob/master/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

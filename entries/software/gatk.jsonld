@@ -53,7 +53,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Broad Institute of MIT and Harvard",
   "mach:category": "software",
-  "mach:subcategory": "pipeline-tools",
+  "mach:subcategory": "bioinformatics-pipeline",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "oncology",
@@ -84,5 +84,6 @@
       "mach:evidenceType": "package-registry"
     }
   ],
-  "mach:swhid": "swh:1:ori:062ae9057dd25273d479e4bb5ae410dc9eded313"
+  "mach:swhid": "swh:1:ori:062ae9057dd25273d479e4bb5ae410dc9eded313",
+  "mach:subcategoryBy": "rule:keyword"
 }
