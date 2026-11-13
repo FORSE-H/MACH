@@ -71,5 +71,8 @@
       "url": "https://github.com/samply/blaze/wiki",
       "mach:evidenceType": "documentation"
     }
+  ],
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fhir-r4"
   ]
 }

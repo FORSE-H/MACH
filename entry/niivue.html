@@ -36,6 +36,24 @@
   td.value { word-break:break-word; }
   td.source code, td code { font-family:'DM Mono',monospace; font-size:0.78rem; background:#f0f3f5; padding:2px 6px; border-radius:4px; color:#4a5560; }
   footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--border); font-size:0.8rem; color:var(--muted); }
+  /* Repository panel */
+  section.repo { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; }
+  .health { display:flex; align-items:center; gap:8px; margin:4px 0 10px; font-size:0.92rem; }
+  .health .dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+  .health.ok .dot { background:var(--teal-700); }
+  .health.warn .dot { background:var(--amber-dark); }
+  .health.bad .dot { background:var(--rose); }
+  .counts { margin:0 0 12px; font-size:0.88rem; color:#39434d; font-variant-numeric:tabular-nums; }
+  .langbar { display:flex; height:9px; border-radius:5px; overflow:hidden; background:var(--border); margin:4px 0 6px; }
+  .langbar .seg:nth-child(1){background:#3fb3a1;} .langbar .seg:nth-child(2){background:#5b8def;}
+  .langbar .seg:nth-child(3){background:#e0a33a;} .langbar .seg:nth-child(4){background:#b06fd6;}
+  .langbar .seg:nth-child(n+5){background:#8aa0a8;}
+  .legend { margin:0 0 12px; font-size:0.78rem; color:var(--muted); display:flex; flex-wrap:wrap; gap:4px 12px; }
+  ul.checks { list-style:none; margin:0 0 10px; padding:0; display:flex; flex-wrap:wrap; gap:6px 14px; font-size:0.84rem; font-family:'DM Mono',monospace; }
+  ul.checks .yes { color:var(--teal-700); } ul.checks .no { color:var(--muted); }
+  .implements { margin:8px 0 0; font-size:0.85rem; }
+  .spec-chip { display:inline-block; font-family:'DM Mono',monospace; font-size:0.78rem; background:var(--teal-50); color:var(--teal-700); padding:2px 8px; border-radius:999px; text-decoration:none; margin:2px 3px 0 0; }
+  .spec-chip:hover { text-decoration:underline; }
 </style>
 </head>
 <body>
@@ -49,6 +67,10 @@
       <p>Adopt — committed within 3 months; 506 stars; permissive licence (BSD-2-Clause).</p>
       <p class="muted">Derived deterministically by the MACH scorer from the signals below — not written prose.</p>
     </div>
+    <section class="repo">
+    <h3>Repository</h3>
+    <p class="counts">&#9733; 506 stars · 127 forks</p>
+    </section>
     <section>
       <h3>Signals &amp; lineage</h3>
       <p class="muted">Every value records the source it was harvested from.</p>

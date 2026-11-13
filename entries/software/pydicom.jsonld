@@ -76,5 +76,8 @@
   ],
   "mach:alternativeTo": [],
   "mach:swhid": "swh:1:ori:bd71a2e4880057a2e78742ecf791c63288427efb",
-  "mach:licenseUrl": "https://github.com/pydicom/pydicom/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/pydicom/pydicom/blob/main/LICENSE",
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/dicom"
+  ]
 }

@@ -59,5 +59,8 @@
     }
   ],
   "mach:swhid": "swh:1:ori:b7fcda337d08e17b3a06d4b160ceeebbce9766ad",
-  "mach:licenseUrl": "https://github.com/dcm4che/dcm4che/blob/master/LICENSE.txt"
+  "mach:licenseUrl": "https://github.com/dcm4che/dcm4che/blob/master/LICENSE.txt",
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/dicom"
+  ]
 }
