@@ -230,6 +230,16 @@ def build_entries_html(entries):
             if stars else ""
         )
 
+        # ── Primary language chip + repo-health dot ──
+        lang = signals.get("primary_language")
+        lang_chip = f'<span class="entry-lang">{lang}</span>' if lang else ""
+        health = signals.get("repo_health")
+        health_dot = (
+            f'<span class="entry-health health-{health.lower()}" title="Repo health: {health}'
+            f'{" — " + signals.get("repo_health_reason") if signals.get("repo_health_reason") else ""}">&#9679;</span>'
+            if health else ""
+        )
+
         # ── Per-entry links: detail page, repo/site, raw JSON-LD ──
         detail_href = f"entry/{ident}.html"
         jsonld_link = (
@@ -245,7 +255,7 @@ def build_entries_html(entries):
         <span class="entry-cat">{cat_label}</span>{stars_badge}{judgement_badge}
       </div>
       <p class="entry-name"><a href="{name_href}" target="_blank" rel="noopener">{name}</a></p>
-      <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}</div>
+      <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}{lang_chip}{health_dot}</div>
       <p class="entry-desc">{short_desc}</p>
       {links_html}
     </div>""")

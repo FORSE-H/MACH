@@ -24,11 +24,23 @@ _FIELD_LABELS = {
     "repo_stars": "GitHub stars",
     "repo_forks": "GitHub forks",
     "repo_last_commit": "last commit",
+    "repo_created": "repository created",
     "repo_archived": "archived",
+    "repo_open_issues": "open issues",
+    "repo_primary_language": "primary language",
+    "repo_languages": "languages",
+    "repo_topics": "topics",
+    "repo_homepage": "homepage",
+    "has_tests": "has tests",
+    "has_ci": "has CI",
+    "has_docs": "has docs",
+    "has_releases": "has releases",
     "pypi_downloads": "PyPI downloads (monthly)",
     "hf_downloads": "HuggingFace downloads (monthly)",
     "judgement": "judgement",
     "judgement_reason": "judgement reason",
+    "repo_health": "repo health",
+    "repo_health_reason": "repo health reason",
 }
 
 
@@ -68,6 +80,93 @@ def _jsonld_url(entry) -> str:
 RING_CLASS = {"Adopt": "ring-adopt", "Assess": "ring-assess", "Caution": "ring-caution"}
 
 
+_HEALTH_CLASS = {
+    "Active": "ok", "Maintained": "ok",
+    "Dormant": "warn", "Stale": "warn", "Unknown": "warn",
+    "Archived": "bad",
+}
+
+
+def _spec_name_from_url(url: str) -> str:
+    """entries/specs/fhir-r4 → 'fhir-r4'. Falls back to the last path segment."""
+    return url.rstrip("/").split("/")[-1]
+
+
+def _repo_section(signals: dict, entry: dict) -> str:
+    """Repository health, languages, and code-health checklist — the 'is this a
+    serious, living codebase?' panel. Returns '' when there is nothing to show."""
+    health = signals.get("repo_health")
+    health_reason = signals.get("repo_health_reason") or ""
+    langs = signals.get("languages")  # "Python:82,C++:15"
+    stars = signals.get("repo_stars")
+    forks = signals.get("repo_forks")
+    issues = signals.get("repo_open_issues")
+    checks = [("tests", signals.get("has_tests")), ("CI", signals.get("has_ci")),
+              ("docs", signals.get("has_docs")), ("releases", signals.get("has_releases"))]
+
+    # Standards this tool implements (curated mach:supportsSpec on the entry).
+    specs = entry.get("mach:supportsSpec") or []
+    if isinstance(specs, str):
+        specs = [specs]
+
+    if not any([health, langs, stars is not None, any(v is not None for _, v in checks), specs]):
+        return ""
+
+    parts = ['<section class="repo">', "<h3>Repository</h3>"]
+
+    if health:
+        cls = _HEALTH_CLASS.get(health, "warn")
+        parts.append(
+            f'<p class="health {cls}"><span class="dot"></span><strong>{esc(health)}</strong>'
+            f'<span class="muted"> — {esc(health_reason)}</span></p>'
+        )
+
+    # Headline counts
+    counts = []
+    if stars is not None:  counts.append(f"&#9733; {stars:,} stars")
+    if forks is not None:  counts.append(f"{forks:,} forks")
+    if issues is not None: counts.append(f"{issues:,} open issues")
+    if counts:
+        parts.append(f'<p class="counts">{" · ".join(counts)}</p>')
+
+    # Language breakdown bar
+    if langs:
+        pairs = []
+        for tok in langs.split(","):
+            if ":" in tok:
+                lang, pct = tok.split(":", 1)
+                try:
+                    pairs.append((lang, int(pct)))
+                except ValueError:
+                    pass
+        if pairs:
+            bar = "".join(
+                f'<span class="seg" style="width:{pct}%" title="{esc(lang)} {pct}%"></span>'
+                for lang, pct in pairs
+            )
+            legend = " ".join(f'<span class="lg">{esc(lang)} {pct}%</span>' for lang, pct in pairs[:5])
+            parts.append(f'<div class="langbar">{bar}</div><p class="legend">{legend}</p>')
+
+    # Code-health checklist
+    if any(v is not None for _, v in checks):
+        items = "".join(
+            f'<li class="{"yes" if v else "no"}">{"✓" if v else "✕"} {name}</li>'
+            for name, v in checks if v is not None
+        )
+        parts.append(f'<ul class="checks">{items}</ul>')
+
+    # Standards implemented
+    if specs:
+        chips = " ".join(
+            f'<a class="spec-chip" href="../entry/{esc(_spec_name_from_url(s))}.html">{esc(_spec_name_from_url(s))}</a>'
+            for s in specs
+        )
+        parts.append(f'<p class="implements"><span class="muted">Implements:</span> {chips}</p>')
+
+    parts.append("</section>")
+    return "\n    ".join(parts)
+
+
 def render_page(entry: dict, sig: dict) -> str:
     ident = entry["identifier"]
     name = entry.get("name", ident)
@@ -80,6 +179,9 @@ def render_page(entry: dict, sig: dict) -> str:
     reason = (sig or {}).get("judgement_reason") or ""
     facts = (sig or {}).get("facts", []) or []
     history = (sig or {}).get("history", []) or []
+    signals = (sig or {}).get("signals", {}) or {}
+
+    repo_block = _repo_section(signals, entry)
 
     if judgement in RING_CLASS:
         badge = f'<span class="ring {RING_CLASS[judgement]}">{esc(judgement)}</span>'
@@ -190,6 +292,24 @@ def render_page(entry: dict, sig: dict) -> str:
   td.value {{ word-break:break-word; }}
   td.source code, td code {{ font-family:'DM Mono',monospace; font-size:0.78rem; background:#f0f3f5; padding:2px 6px; border-radius:4px; color:#4a5560; }}
   footer {{ margin-top:48px; padding-top:20px; border-top:1px solid var(--border); font-size:0.8rem; color:var(--muted); }}
+  /* Repository panel */
+  section.repo {{ background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; }}
+  .health {{ display:flex; align-items:center; gap:8px; margin:4px 0 10px; font-size:0.92rem; }}
+  .health .dot {{ width:9px; height:9px; border-radius:50%; flex-shrink:0; }}
+  .health.ok .dot {{ background:var(--teal-700); }}
+  .health.warn .dot {{ background:var(--amber-dark); }}
+  .health.bad .dot {{ background:var(--rose); }}
+  .counts {{ margin:0 0 12px; font-size:0.88rem; color:#39434d; font-variant-numeric:tabular-nums; }}
+  .langbar {{ display:flex; height:9px; border-radius:5px; overflow:hidden; background:var(--border); margin:4px 0 6px; }}
+  .langbar .seg:nth-child(1){{background:#3fb3a1;}} .langbar .seg:nth-child(2){{background:#5b8def;}}
+  .langbar .seg:nth-child(3){{background:#e0a33a;}} .langbar .seg:nth-child(4){{background:#b06fd6;}}
+  .langbar .seg:nth-child(n+5){{background:#8aa0a8;}}
+  .legend {{ margin:0 0 12px; font-size:0.78rem; color:var(--muted); display:flex; flex-wrap:wrap; gap:4px 12px; }}
+  ul.checks {{ list-style:none; margin:0 0 10px; padding:0; display:flex; flex-wrap:wrap; gap:6px 14px; font-size:0.84rem; font-family:'DM Mono',monospace; }}
+  ul.checks .yes {{ color:var(--teal-700); }} ul.checks .no {{ color:var(--muted); }}
+  .implements {{ margin:8px 0 0; font-size:0.85rem; }}
+  .spec-chip {{ display:inline-block; font-family:'DM Mono',monospace; font-size:0.78rem; background:var(--teal-50); color:var(--teal-700); padding:2px 8px; border-radius:999px; text-decoration:none; margin:2px 3px 0 0; }}
+  .spec-chip:hover {{ text-decoration:underline; }}
 </style>
 </head>
 <body>
@@ -199,6 +319,7 @@ def render_page(entry: dict, sig: dict) -> str:
     <p class="desc">{esc(desc)}</p>
     <div class="links">{''.join(links)}</div>
     {judgement_block}
+    {repo_block}
     {lineage}
     {history_block}
     <footer>MACH — Machine-Actionable Catalog for Healthcare · Judgement is rule-based, derived from harvested signals · <a href="../index.html">machcatalog.org</a></footer>

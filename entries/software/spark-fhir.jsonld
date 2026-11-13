@@ -63,5 +63,8 @@
       "url": "https://github.com/FirelyTeam/spark",
       "mach:evidenceType": "primary-repo"
     }
+  ],
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fhir-r4"
   ]
 }

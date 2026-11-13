@@ -80,5 +80,8 @@
       "url": "https://hapi.fhir.org/",
       "mach:evidenceType": "documentation"
     }
+  ],
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fhir-r4"
   ]
 }

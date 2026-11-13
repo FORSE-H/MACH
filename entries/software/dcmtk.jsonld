@@ -56,5 +56,8 @@
       "url": "https://dicom.offis.de/dcmtk",
       "mach:evidenceType": "primary-instance"
     }
+  ],
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/dicom"
   ]
 }
