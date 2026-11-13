@@ -1,0 +1,65 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/simehr",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "simehr",
+  "name": "SimEHR",
+  "alternateName": [
+    "SimEHR environment"
+  ],
+  "description": "An open, locally-run, high-fidelity simulated EHR for evaluating computer-use AI agents. A web application that models the information layout and interaction patterns of common commercial EHRs — agents see only 1280x800 screenshots and act through clicks, typing, and scrolling across Chart Review, Results Review, Orders, Clinical Notes, and patient messages. All patient data is synthetic, and the interface was refined over several rounds with practicing physicians. It reproduces those workflows rather than a whole EHR, and is a preview release: a companion benchmark (PhysicianBench-UI) is stated to follow with the paper. Apache-2.0 code; synthetic charts and recorded sessions are CC-BY-4.0.",
+  "url": "https://healthrex.github.io/SimEHR/",
+  "codeRepository": "https://github.com/HealthRex/SimEHR",
+  "license": "Apache-2.0",
+  "relatedLink": [
+    "https://arisekit.com/"
+  ],
+  "programmingLanguage": [
+    "TypeScript"
+  ],
+  "applicationCategory": "Research",
+  "keywords": [
+    "ai-agent",
+    "computer-use",
+    "ehr-simulation",
+    "agent-evaluation",
+    "clinical-workflow",
+    "synthetic-data",
+    "medical-ai",
+    "gui-agent"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "HealthRex",
+    "url": "https://github.com/HealthRex"
+  },
+  "mach:governance": "academic",
+  "mach:category": "ai-tooling",
+  "mach:subcategory": "ai-agent",
+  "mach:aiActRiskClass": "limited-risk",
+  "mach:editorialReviewedAt": "2026-11-13",
+  "schema:comment": "Apache-2.0 code + CC-BY-4.0 synthetic data. Agent EVALUATION environment (not a model/dataset); synthetic patient data only. Preview release, no paper/DOI yet (PhysicianBench-UI benchmark to follow). HealthRex is widely understood to be Stanford's clinical-informatics group but the repo metadata does not confirm the affiliation — re-verify governance + paper on next review. Judgement auto-scored by harvester.",
+  "mach:clinicalDomain": [
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/HealthRex/SimEHR",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://healthrex.github.io/SimEHR/",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/HealthRex/SimEHR/blob/main/LICENSE"
+}
