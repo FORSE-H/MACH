@@ -56,5 +56,7 @@
   "mach:swhid": "swh:1:ori:0ec70bc9cda7433bfb07bc5f5ae6f5184cee7d07",
   "mach:supportsSpec": [
     "https://github.com/FORSE-H/MACH/tree/main/entries/specs/dicom"
-  ]
+  ],
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

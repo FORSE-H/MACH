@@ -1,41 +1,89 @@
+# MACH taxonomy — a multi-axis, EDAM-inspired model.
+#   Type     = mach:category        (EDAM Data)      — what it is; from the folder
+#   Function = mach:subcategory      (EDAM Operation) — what it does; the controlled
+#              vocabulary below, assigned by deterministic rules (classified_by: rule)
+#              or by a curator (classified_by: curator). Every category's allowed
+#              Functions are listed under `functions:` and enforced by CI.
+#   Domain   = mach:clinicalDomain   (EDAM Topic)     — clinical/scientific area
+#   Standard = mach:supportsSpec      (EDAM Format)    — standards implemented
 categories:
   - id: software
     name: Software
     folder: software
     description: Open-source healthcare software tools, platforms, and applications
+    functions:
+      - { id: medical-imaging,         name: Medical imaging }
+      - { id: interoperability,        name: Interoperability }
+      - { id: clinical-system,         name: Clinical system }
+      - { id: bioinformatics-pipeline, name: Bioinformatics pipeline }
+      - { id: research-platform,       name: Research platform }
+      - { id: federated-analytics,     name: Federated analytics }
+      - { id: clinical-nlp,            name: Clinical NLP }
+      - { id: pharmacometrics,         name: Pharmacometrics }
+      - { id: privacy-deid,            name: Privacy & de-identification }
+      - { id: mhealth,                 name: mHealth }
 
   - id: ai-ml-models
     name: AI / ML Models
     folder: models
     description: Clinical AI models, medical imaging models, biomedical NLP, foundation models
+    functions:
+      - { id: imaging-model,    name: Imaging model }
+      - { id: foundation-model, name: Foundation model }
+      - { id: genomics-model,   name: Genomics model }
+      - { id: clinical-nlp,     name: Clinical NLP model }
+      - { id: agent-model,      name: Agent model }
 
   - id: ai-tooling
     name: AI Tooling
     folder: ai-tooling
     description: >
       AI agents, agent-skill libraries, MCP servers, and orchestration/swarm
-      frameworks for healthcare AI. Subcategories: ai-agent, agent-skills,
-      mcp-server, ai-swarm.
+      frameworks for healthcare AI.
+    functions:
+      - { id: mcp-server,   name: MCP server }
+      - { id: ai-agent,     name: AI agent }
+      - { id: agent-skills, name: Agent skills }
+      - { id: ai-swarm,     name: Agent swarm }
 
   - id: datasets
     name: Datasets
     folder: datasets
     description: Healthcare datasets, clinical benchmarks, and evaluation corpora
+    functions:
+      - { id: benchmark,        name: Benchmark }
+      - { id: clinical-dataset, name: Clinical dataset }
+      - { id: imaging-dataset,  name: Imaging dataset }
 
   - id: data-sources
     name: Data Sources
     folder: data-sources
-    description: Continuously updated open registries and data feeds — adverse events, trial registries, live clinical data
+    description: Continuously updated open registries, databases, and data feeds
+    functions:
+      - { id: registry,          name: Registry }
+      - { id: research-database, name: Research database }
+      - { id: knowledge-base,    name: Knowledge base }
+      - { id: terminology,       name: Terminology service }
+      - { id: open-data-portal,  name: Open data portal }
+      - { id: surveillance-feed, name: Surveillance feed }
 
   - id: catalogs
     name: Catalogs
     folder: catalogs
     description: Open catalogs and registries of healthcare software, models, or standards
+    functions:
+      - { id: catalog, name: Catalog }
 
   - id: specs
     name: Specs
     folder: specs
     description: Clinical interoperability specifications, protocols, and terminology systems
+    functions:
+      - { id: interoperability-standard, name: Interoperability standard }
+      - { id: terminology,               name: Terminology standard }
+      - { id: quality-standard,          name: Quality standard }
+      - { id: research-data-standard,    name: Research data standard }
+      - { id: data-governance,           name: Data governance }
 
 judgements:
   - id: Adopt

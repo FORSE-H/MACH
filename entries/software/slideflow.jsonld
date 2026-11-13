@@ -65,5 +65,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/slideflow/slideflow/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/slideflow/slideflow/blob/master/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

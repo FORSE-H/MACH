@@ -46,5 +46,7 @@
       "mach:evidenceType": "primary-repo"
     }
   ],
-  "mach:licenseUrl": "https://github.com/UMCU-Digital-Health/discharge-documentation-generator/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/UMCU-Digital-Health/discharge-documentation-generator/blob/main/LICENSE",
+  "mach:subcategory": "clinical-system",
+  "mach:subcategoryBy": "rule:keyword"
 }

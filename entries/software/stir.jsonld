@@ -45,7 +45,7 @@
   "mach:governance": "community",
   "mach:foundation": "University College London",
   "mach:category": "software",
-  "mach:subcategory": "signal-processing",
+  "mach:subcategory": "medical-imaging",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -70,5 +70,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:cbc599809bac5d4e779e0e8446f49895856bcb87",
-  "mach:licenseUrl": "https://github.com/UCL/STIR/blob/master/LICENSE.txt"
+  "mach:licenseUrl": "https://github.com/UCL/STIR/blob/master/LICENSE.txt",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -42,7 +42,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Harvard Medical School / MIMS Lab",
   "mach:category": "ai-ml-models",
-  "mach:subcategory": "llm-agents",
+  "mach:subcategory": "agent-model",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -69,5 +69,6 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/mims-harvard/TxAgent/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/mims-harvard/TxAgent/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

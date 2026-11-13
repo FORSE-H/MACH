@@ -41,7 +41,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Stanford University / Microsoft",
   "mach:category": "datasets",
-  "mach:subcategory": "clinical-benchmark",
+  "mach:subcategory": "benchmark",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud"
@@ -72,5 +72,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:c2e750a032145bc822eb5ab2115e8ff7406bc8de",
-  "mach:licenseUrl": "https://github.com/stanford-crfm/helm/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/stanford-crfm/helm/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

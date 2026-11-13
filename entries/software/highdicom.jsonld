@@ -55,5 +55,7 @@
   "mach:licenseUrl": "https://github.com/ImagingDataCommons/highdicom/blob/master/LICENSE",
   "mach:supportsSpec": [
     "https://github.com/FORSE-H/MACH/tree/main/entries/specs/dicom"
-  ]
+  ],
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

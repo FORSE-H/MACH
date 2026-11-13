@@ -70,5 +70,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "The Cancer Imaging Archive (TCIA): Maintaining and Operating a Public Information Repository. Journal of Digital Imaging 2013."
     }
-  ]
+  ],
+  "mach:subcategory": "open-data-portal",
+  "mach:subcategoryBy": "rule:keyword"
 }

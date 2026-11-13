@@ -65,5 +65,7 @@
       "mach:evidenceType": "documentation",
       "schema:name": "CMS Open Data Portal"
     }
-  ]
+  ],
+  "mach:subcategory": "registry",
+  "mach:subcategoryBy": "rule:keyword"
 }

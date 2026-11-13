@@ -44,7 +44,7 @@
   "mach:governance": "community",
   "mach:foundation": "NiPreps / Stanford University",
   "mach:category": "software",
-  "mach:subcategory": "signal-processing",
+  "mach:subcategory": "medical-imaging",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -73,5 +73,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:036da6a71398bcbe1fc15743863fc6dc9ca3e23d",
-  "mach:licenseUrl": "https://github.com/nipreps/fmriprep/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/nipreps/fmriprep/blob/master/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

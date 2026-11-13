@@ -59,5 +59,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:4645091797bf1bdd2bc21824868bb191569e4923",
-  "mach:licenseUrl": "https://github.com/fepegar/torchio/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/fepegar/torchio/blob/main/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

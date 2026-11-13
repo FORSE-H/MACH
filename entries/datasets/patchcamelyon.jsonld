@@ -58,5 +58,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:ccad8e5bc14bd7812f3e4815bb05392683c946f4",
-  "mach:licenseUrl": "https://github.com/basveeling/pcam/blob/master/LICENSE.txt"
+  "mach:licenseUrl": "https://github.com/basveeling/pcam/blob/master/LICENSE.txt",
+  "mach:subcategory": "benchmark",
+  "mach:subcategoryBy": "rule:keyword"
 }

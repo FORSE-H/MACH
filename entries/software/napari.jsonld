@@ -44,7 +44,7 @@
   "mach:governance": "foundation",
   "mach:foundation": "Chan Zuckerberg Initiative",
   "mach:category": "software",
-  "mach:subcategory": "pathology",
+  "mach:subcategory": "medical-imaging",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -73,5 +73,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:b7112c49b4d78cbbdfb57ccbfeda879cfa98f796",
-  "mach:licenseUrl": "https://github.com/napari/napari/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/napari/napari/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -54,5 +54,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:9b741685df88a449a445ad2b5d4cb012cf249668",
-  "mach:licenseUrl": "https://github.com/som-shahlab/femr/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/som-shahlab/femr/blob/main/LICENSE",
+  "mach:subcategory": "clinical-system",
+  "mach:subcategoryBy": "rule:keyword"
 }

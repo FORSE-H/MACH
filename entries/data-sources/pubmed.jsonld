@@ -66,5 +66,7 @@
       "mach:evidenceType": "documentation",
       "schema:name": "NCBI E-utilities API"
     }
-  ]
+  ],
+  "mach:subcategory": "research-database",
+  "mach:subcategoryBy": "rule:keyword"
 }

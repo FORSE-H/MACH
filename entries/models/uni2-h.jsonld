@@ -77,5 +77,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/mahmoodlab/uni/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/mahmoodlab/uni/blob/main/LICENSE",
+  "mach:subcategory": "imaging-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

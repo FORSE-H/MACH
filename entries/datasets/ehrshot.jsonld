@@ -36,7 +36,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Stanford University",
   "mach:category": "datasets",
-  "mach:subcategory": "clinical-benchmark",
+  "mach:subcategory": "benchmark",
   "mach:deploymentContext": [
     "self-hosted"
   ],
@@ -64,5 +64,6 @@
       "schema:name": "EHRSHOT: An EHR Benchmark for Few-Shot Evaluation of Foundation Models. NeurIPS 2023."
     }
   ],
-  "mach:licenseUrl": "https://github.com/som-shahlab/ehrshot-benchmark/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/som-shahlab/ehrshot-benchmark/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

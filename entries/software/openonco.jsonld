@@ -40,7 +40,7 @@
   },
   "mach:governance": "individual",
   "mach:category": "software",
-  "mach:subcategory": "clinical-decision-support",
+  "mach:subcategory": "clinical-system",
   "mach:aiActRiskClass": "high-risk-candidate",
   "mach:editorialReviewedAt": "2026-11-11",
   "schema:comment": "MIT code + CC-BY-4.0 specs/content; genuinely open. High-risk oncology decision-support, early-stage, maintainer-disclosed draft status. Submitted via MACH form (issue #9) by the maintainer. Re-verify maturity/validation on next review.",
@@ -64,5 +64,6 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/romeo111/OpenOnco/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/romeo111/OpenOnco/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

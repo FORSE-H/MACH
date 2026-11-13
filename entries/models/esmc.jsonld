@@ -80,5 +80,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "Candido et al. ESM: Evolutionary Scale Modeling of Protein Structure and Function. 2026."
     }
-  ]
+  ],
+  "mach:subcategory": "genomics-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

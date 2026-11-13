@@ -43,7 +43,7 @@
   "mach:governance": "government",
   "mach:foundation": "National Institutes of Health / NLM",
   "mach:category": "datasets",
-  "mach:subcategory": "clinical-benchmark",
+  "mach:subcategory": "benchmark",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -66,5 +66,6 @@
       "url": "https://arxiv.org/abs/2406.12036",
       "mach:evidenceType": "academic-reference"
     }
-  ]
+  ],
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -66,5 +66,7 @@
   ],
   "mach:supportsSpec": [
     "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fhir-r4"
-  ]
+  ],
+  "mach:subcategory": "interoperability",
+  "mach:subcategoryBy": "rule:keyword"
 }

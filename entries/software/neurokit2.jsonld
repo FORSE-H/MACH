@@ -43,7 +43,7 @@
   },
   "mach:governance": "academic",
   "mach:category": "software",
-  "mach:subcategory": "signal-processing",
+  "mach:subcategory": "bioinformatics-pipeline",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "cardiology",
@@ -68,5 +68,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:9cee6d7cfc3e31b0238662c220f0ae341ff7d7bb",
-  "mach:licenseUrl": "https://github.com/neuropsychology/NeuroKit/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/neuropsychology/NeuroKit/blob/master/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

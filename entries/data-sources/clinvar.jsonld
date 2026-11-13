@@ -67,5 +67,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "ClinVar: improvements to accessing data. Nucleic Acids Research 2023."
     }
-  ]
+  ],
+  "mach:subcategory": "open-data-portal",
+  "mach:subcategoryBy": "rule:keyword"
 }

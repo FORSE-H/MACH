@@ -68,5 +68,7 @@
       "url": "https://doi.org/10.13026/C2WM1R",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:subcategory": "benchmark",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -39,7 +39,7 @@
   },
   "mach:governance": "individual",
   "mach:category": "software",
-  "mach:subcategory": "ehr",
+  "mach:subcategory": "clinical-system",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "primary-care",
@@ -58,5 +58,6 @@
     }
   ],
   "mach:swhid": "swh:1:ori:941d0cebf7be15c329a2bac1a092398fb13f8f47",
-  "mach:licenseUrl": "https://github.com/sammargolis/OpenScribe/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/sammargolis/OpenScribe/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

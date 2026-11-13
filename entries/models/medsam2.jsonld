@@ -47,7 +47,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Bo Wang Lab, University of Toronto",
   "mach:category": "ai-ml-models",
-  "mach:subcategory": "imaging-model",
+  "mach:subcategory": "foundation-model",
   "mach:deploymentContext": [
     "self-hosted",
     "cloud"
@@ -76,5 +76,6 @@
     "medsam",
     "nnunet"
   ],
-  "mach:licenseUrl": "https://github.com/bowang-lab/MedSAM2/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/bowang-lab/MedSAM2/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

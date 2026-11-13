@@ -71,5 +71,7 @@
       "url": "https://www.fda.gov/industry/study-data-standards-resources/study-data-submission-cder-and-cber",
       "mach:evidenceType": "regulatory-reference"
     }
-  ]
+  ],
+  "mach:subcategory": "research-data-standard",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -53,7 +53,7 @@
   "mach:governance": "community",
   "mach:foundation": "vantage6 community (originally iknl / Netherlands eScience Center)",
   "mach:category": "software",
-  "mach:subcategory": "federated-learning",
+  "mach:subcategory": "medical-imaging",
   "mach:editorialReviewedAt": "2026-05-11",
   "mach:clinicalDomain": [
     "oncology",
@@ -110,5 +110,6 @@
     "substra"
   ],
   "mach:swhid": "swh:1:ori:c55613f6fc1190eae2efbafa315912af46f7112a",
-  "mach:licenseUrl": "https://github.com/vantage6/vantage6/blob/main/LICENSE"
+  "mach:licenseUrl": "https://github.com/vantage6/vantage6/blob/main/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

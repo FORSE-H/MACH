@@ -69,5 +69,7 @@
       "mach:evidenceType": "primary-repo",
       "schema:name": "DataSHIELD GitHub organisation — 84 repositories across R, Python, and Docker"
     }
-  ]
+  ],
+  "mach:subcategory": "federated-analytics",
+  "mach:subcategoryBy": "rule:keyword"
 }

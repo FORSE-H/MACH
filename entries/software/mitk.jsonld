@@ -54,7 +54,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Division of Medical Image Computing, DKFZ Heidelberg",
   "mach:category": "software",
-  "mach:subcategory": "dicom-viewer",
+  "mach:subcategory": "medical-imaging",
   "mach:editorialReviewedAt": "2026-05-11",
   "mach:clinicalDomain": [
     "radiology",
@@ -91,5 +91,6 @@
   ],
   "schema:comment": "Two strong follow-on entries from the MITK partner projects page: (1) Kaapana (https://www.kaapana.ai, github.com/kaapana/kaapana) — open-source Kubernetes-based platform for federated medical image analysis workflows, strong fit for tooling-infrastructure/federated-learning; (2) MITK-Diffusion (github.com/MIC-DKFZ/MITK-Diffusion) — diffusion MRI tractography and connectomics, strong fit for medical-imaging-signals.",
   "mach:swhid": "swh:1:ori:791d95caf3efa51e709791a2d1635987648af966",
-  "mach:licenseUrl": "https://github.com/MITK/MITK/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/MITK/MITK/blob/master/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

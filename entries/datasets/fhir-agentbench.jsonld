@@ -44,7 +44,7 @@
   "mach:governance": "vendor-led",
   "mach:foundation": "Verily (Alphabet)",
   "mach:category": "datasets",
-  "mach:subcategory": "clinical-benchmark",
+  "mach:subcategory": "benchmark",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -72,5 +72,6 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:licenseUrl": "https://github.com/glee4810/FHIR-AgentBench/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/glee4810/FHIR-AgentBench/blob/master/LICENSE",
+  "mach:subcategoryBy": "rule:keyword"
 }

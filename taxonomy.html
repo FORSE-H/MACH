@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MACH Taxonomy</title>
+<style>
+  :root {
+    --bg:#f7f9f8; --surface:#fff; --ink:#11201b; --muted:#5a6b64; --line:#dde6e2;
+    --teal:#0f6e56; --teal-bright:#1d9e75; --teal-tint:#e4f3ee;
+    --display:'Fraunces',Georgia,serif; --body:'Inter',-apple-system,'Segoe UI',system-ui,sans-serif; --mono:'DM Mono',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#0e1613;--surface:#142019;--ink:#e7efea;--muted:#9db3aa;--line:#25352d;
+    --teal:#4fc3a1;--teal-bright:#6fd9ba;--teal-tint:#15271f;color-scheme:dark;}}
+  :root[data-theme="dark"]{
+    --bg:#0e1613;--surface:#142019;--ink:#e7efea;--muted:#9db3aa;--line:#25352d;
+    --teal:#4fc3a1;--teal-bright:#6fd9ba;--teal-tint:#15271f;color-scheme:dark;}
+  * { box-sizing:border-box; }
+  body { background:var(--bg); color:var(--ink); font-family:var(--body); line-height:1.5; margin:0; }
+  .wrap { max-width:900px; margin:0 auto; padding:32px 16px 56px; }
+  header { border-bottom:3px solid var(--teal); padding-bottom:16px; margin-bottom:8px; }
+  h1 { font-family:var(--display); font-weight:600; font-size:2rem; margin:0; letter-spacing:-0.01em; }
+  h1 span { color:var(--teal); }
+  .sub { color:var(--muted); font-size:0.9rem; margin-top:4px; }
+  .lede { color:var(--muted); font-size:0.92rem; max-width:72ch; margin:16px 0 20px; }
+  .lede b { color:var(--ink); }
+  .axes { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:12px; }
+  .axis { background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--teal); border-radius:10px; padding:12px 14px; }
+  .axis .e { font-size:0.64rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); font-weight:700; }
+  .axis h3 { margin:2px 0 2px; font-family:var(--display); font-size:0.98rem; }
+  .axis code { font-family:var(--mono); font-size:0.74rem; color:var(--muted); }
+  .prov { background:var(--teal-tint); border:1px solid var(--line); border-radius:10px; padding:12px 16px; font-size:0.86rem; margin:14px 0 26px; }
+  .prov b { color:var(--teal); }
+  section.cat { margin:30px 0; }
+  h2 { font-family:var(--display); font-weight:600; font-size:1.35rem; margin:0 0 2px; }
+  h2 .ct { font-size:0.9rem; color:var(--muted); font-weight:400; }
+  .cd { color:var(--muted); font-size:0.85rem; margin:0 0 10px; }
+  table { width:100%; border-collapse:collapse; font-size:0.86rem; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  th,td { text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { background:var(--teal-tint); color:var(--teal); font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; font-weight:700; }
+  tr:last-child td { border-bottom:none; }
+  tr.empty { opacity:0.45; }
+  td.fn { font-weight:500; white-space:nowrap; }
+  td.fn code { font-family:var(--mono); font-size:0.74rem; color:var(--muted); font-weight:400; display:block; }
+  td.n { font-variant-numeric:tabular-nums; color:var(--muted); text-align:right; width:40px; }
+  td.ex { color:var(--muted); font-size:0.82rem; }
+  footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--line); font-size:0.78rem; color:var(--muted); }
+  footer a { color:var(--teal); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>MACH <span>Taxonomy</span></h1>
+    <div class="sub">A multi-axis, EDAM-inspired classification · 218 entries · November 2026</div>
+  </header>
+
+  <p class="lede">Every entry is classified on four orthogonal axes. <b>Type</b> is the top-level category (from the entry's folder). <b>Function</b> is a controlled sub-type, assigned by published deterministic rules or an explicit curator decision. <b>Domain</b> is the clinical area, and <b>Standards</b> are the specifications a tool implements.</p>
+
+  <div class="axes">
+    <div class="axis"><div class="e">EDAM · Data</div><h3>Type</h3><code>mach:category</code></div>
+    <div class="axis"><div class="e">EDAM · Operation</div><h3>Function</h3><code>mach:subcategory</code></div>
+    <div class="axis"><div class="e">EDAM · Topic</div><h3>Domain</h3><code>mach:clinicalDomain</code></div>
+    <div class="axis"><div class="e">EDAM · Format</div><h3>Standards</h3><code>mach:supportsSpec</code></div>
+  </div>
+
+  <div class="prov">
+    Function is assigned deterministically where a signal is clear: <b>196</b> by rule
+    (from harvested keywords / implemented standards), <b>3</b> by curator decision,
+    <b>19</b> authored (AI tooling). Each entry records how it was classified
+    (<code>mach:subcategoryBy</code>), so the taxonomy is auditable, not opinion.
+  </div>
+
+    <section class="cat">
+      <h2>Software <span class="ct">102</span></h2>
+      <p class="cd">Open-source healthcare software tools, platforms, and applications</p>
+      <table>
+        <thead><tr><th>Function</th><th>n</th><th>entries</th></tr></thead>
+        <tbody><tr><td class="fn">Medical imaging <code>medical-imaging</code></td><td class="n">59</td><td class="ex">3D Slicer, batchgenerators, Bio-Formats, CellProfiler, Cornerstone3D, dcm2niix, dcm4che, DCMTK …</td></tr><tr><td class="fn">Interoperability <code>interoperability</code></td><td class="n">15</td><td class="ex">Android FHIR SDK, Blaze, CARE, Apache cTAKES, DHIS2, EHRbase, HAPI FHIR, Medplum …</td></tr><tr><td class="fn">Clinical system <code>clinical-system</code></td><td class="n">11</td><td class="ex">Discharge Documentation Generator, FEMR, GNU Health, hf_ehr, MedCAT, No-Show Prediction, OpenOnco, OpenScribe …</td></tr><tr><td class="fn">Bioinformatics pipeline <code>bioinformatics-pipeline</code></td><td class="n">6</td><td class="ex">DeepVariant, GATK, NeuroKit2, Open-ECG-Digitizer, RDKit, WFDB Python</td></tr><tr><td class="fn">Research platform <code>research-platform</code></td><td class="n">4</td><td class="ex">BBMRI-ERIC Negotiator, MOLGENIS EMX2, Opal, Tidepool</td></tr><tr><td class="fn">Federated analytics <code>federated-analytics</code></td><td class="n">1</td><td class="ex">DataSHIELD</td></tr><tr><td class="fn">Clinical NLP <code>clinical-nlp</code></td><td class="n">1</td><td class="ex">Drug Named Entity Recognition</td></tr><tr><td class="fn">Pharmacometrics <code>pharmacometrics</code></td><td class="n">1</td><td class="ex">nlmixr2</td></tr><tr><td class="fn">Privacy &amp; de-identification <code>privacy-deid</code></td><td class="n">1</td><td class="ex">Veil</td></tr><tr><td class="fn">mHealth <code>mhealth</code></td><td class="n">3</td><td class="ex">AndroidAPS, Nightscout, OpenAPS</td></tr></tbody>
+      </table>
+    </section>
+    <section class="cat">
+      <h2>AI / ML Models <span class="ct">31</span></h2>
+      <p class="cd">Clinical AI models, medical imaging models, biomedical NLP, foundation models</p>
+      <table>
+        <thead><tr><th>Function</th><th>n</th><th>entries</th></tr></thead>
+        <tbody><tr><td class="fn">Imaging model <code>imaging-model</code></td><td class="n">17</td><td class="ex">CellViT, CONCH, H-optimus-0, HookNet, HoVer-Net, MedGemma, Neuro-JEPA, nnDetection …</td></tr><tr><td class="fn">Foundation model <code>foundation-model</code></td><td class="n">8</td><td class="ex">ECG-FM, ECGFounder, EchoJEPA, MedSAM, MedSAM2, OpenTSLM, scGPT, uAI-NEXUS-MedVLM (MedGRPO)</td></tr><tr><td class="fn">Genomics model <code>genomics-model</code></td><td class="n">4</td><td class="ex">BioReason, ESM-2, ESMC, GeneAgent</td></tr><tr><td class="fn">Clinical NLP model <code>clinical-nlp</code></td><td class="n">1</td><td class="ex">OpenMed</td></tr><tr><td class="fn">Agent model <code>agent-model</code></td><td class="n">1</td><td class="ex">TxAgent</td></tr></tbody>
+      </table>
+    </section>
+    <section class="cat">
+      <h2>AI Tooling <span class="ct">19</span></h2>
+      <p class="cd">AI agents, agent-skill libraries, MCP servers, and orchestration/swarm frameworks for healthcare AI.
+</p>
+      <table>
+        <thead><tr><th>Function</th><th>n</th><th>entries</th></tr></thead>
+        <tbody><tr><td class="fn">MCP server <code>mcp-server</code></td><td class="n">9</td><td class="ex">FHIR MCP Server (WSO2), Folklore Clinical Variant Interpretation MCP, Noodle Biomedical Literature Discovery MCP, OMCP, OMOPHub MCP Server, openEHR Assistant MCP (Cadasto), openEHR MCP Server (deak-ai), MCP SNOMED CT …</td></tr><tr><td class="fn">AI agent <code>ai-agent</code></td><td class="n">6</td><td class="ex">Biomni, MedRAX, MedRAX2, SimEHR, Talk2Biomodels, TrialGPT</td></tr><tr><td class="fn">Agent skills <code>agent-skills</code></td><td class="n">3</td><td class="ex">ClawBio, OpenClaw Medical Skills, SciAgent-Skills</td></tr><tr><td class="fn">Agent swarm <code>ai-swarm</code></td><td class="n">1</td><td class="ex">MARC v1</td></tr></tbody>
+      </table>
+    </section>
+    <section class="cat">
+      <h2>Datasets <span class="ct">28</span></h2>
+      <p class="cd">Healthcare datasets, clinical benchmarks, and evaluation corpora</p>
+      <table>
+        <thead><tr><th>Function</th><th>n</th><th>entries</th></tr></thead>
+        <tbody><tr><td class="fn">Benchmark <code>benchmark</code></td><td class="n">23</td><td class="ex">AgentClinic, CAMELYON, Chi-Bench, CliniCARE-Bench, EHRSHOT, eICU Collaborative Research Database, FHIR-AgentBench, HealthBench …</td></tr><tr><td class="fn">Clinical dataset <code>clinical-dataset</code></td><td class="n">3</td><td class="ex">AmsterdamUMCdb, NHS England Synthetic Clinical Notes, TUH EEG Corpus</td></tr><tr><td class="fn">Imaging dataset <code>imaging-dataset</code></td><td class="n">2</td><td class="ex">NCI Imaging Data Commons, The Cancer Genome Atlas</td></tr></tbody>
+      </table>
+    </section>
+    <section class="cat">
+      <h2>Data Sources <span class="ct">21</span></h2>
+      <p class="cd">Continuously updated open registries, databases, and data feeds</p>
+      <table>
+        <thead><tr><th>Function</th><th>n</th><th>entries</th></tr></thead>
+        <tbody><tr><td class="fn">Registry <code>registry</code></td><td class="n">3</td><td class="ex">ClinicalTrials.gov, CMS Medicare Coverage Database, Vivli</td></tr><tr><td class="fn">Research database <code>research-database</code></td><td class="n">3</td><td class="ex">ChEMBL, PubMed, Synapse</td></tr><tr class="empty"><td class="fn">Knowledge base <code>knowledge-base</code></td><td class="n">0</td><td class="ex"></td></tr><tr><td class="fn">Terminology service <code>terminology</code></td><td class="n">3</td><td class="ex">bio.tools, NCBO BioPortal, ICD-11 API</td></tr><tr><td class="fn">Open data portal <code>open-data-portal</code></td><td class="n">6</td><td class="ex">ClinVar, Open Targets Platform, OpenAlex, Scottish Health and Social Care Open Data, PhysioNet, The Cancer Imaging Archive</td></tr><tr><td class="fn">Surveillance feed <code>surveillance-feed</code></td><td class="n">6</td><td class="ex">EMA Medicines Data, HealthMap, openFDA, PAHO Open Data Portal, ProMED, WHO Disease Outbreak News</td></tr></tbody>
+      </table>
+    </section>
+    <section class="cat">
+      <h2>Catalogs <span class="ct">3</span></h2>
+      <p class="cd">Open catalogs and registries of healthcare software, models, or standards</p>
+      <table>
+        <thead><tr><th>Function</th><th>n</th><th>entries</th></tr></thead>
+        <tbody><tr><td class="fn">Catalog <code>catalog</code></td><td class="n">3</td><td class="ex">BrainX Community Data Archive, Health-RI Data Catalogue, SPHN Metadata Catalog</td></tr></tbody>
+      </table>
+    </section>
+    <section class="cat">
+      <h2>Specs <span class="ct">14</span></h2>
+      <p class="cd">Clinical interoperability specifications, protocols, and terminology systems</p>
+      <table>
+        <thead><tr><th>Function</th><th>n</th><th>entries</th></tr></thead>
+        <tbody><tr><td class="fn">Interoperability standard <code>interoperability-standard</code></td><td class="n">7</td><td class="ex">DICOM, FAIR Data Point (FDP) Specification, HL7 FHIR R4, HealthDCAT-AP, International Patient Summary, Open Nursing Core Implementation Guide, openEHR</td></tr><tr><td class="fn">Terminology standard <code>terminology</code></td><td class="n">1</td><td class="ex">HITO</td></tr><tr><td class="fn">Quality standard <code>quality-standard</code></td><td class="n">3</td><td class="ex">ISO 13485:2016, ISO 14971:2019, ISO 15189:2022</td></tr><tr><td class="fn">Research data standard <code>research-data-standard</code></td><td class="n">2</td><td class="ex">CDISC ADaM, CDISC SDTM</td></tr><tr><td class="fn">Data governance <code>data-governance</code></td><td class="n">1</td><td class="ex">ODRL</td></tr></tbody>
+      </table>
+    </section>
+
+    <section class="cat">
+      <h2>Domain <span class="ct">top 20 of 39</span></h2>
+      <p class="cd">Clinical and scientific areas (an entry may have several).</p>
+      <table><thead><tr><th>Domain</th><th>n</th></tr></thead><tbody><tr><td>research</td><td class="n">107</td></tr><tr><td>oncology</td><td class="n">67</td></tr><tr><td>primary-care</td><td class="n">38</td></tr><tr><td>secondary-care</td><td class="n">35</td></tr><tr><td>radiology</td><td class="n">32</td></tr><tr><td>public-health</td><td class="n">26</td></tr><tr><td>pathology</td><td class="n">26</td></tr><tr><td>cardiology</td><td class="n">19</td></tr><tr><td>rare-disease</td><td class="n">17</td></tr><tr><td>genomics</td><td class="n">17</td></tr><tr><td>neurology</td><td class="n">17</td></tr><tr><td>medical-imaging</td><td class="n">12</td></tr><tr><td>clinical-research</td><td class="n">11</td></tr><tr><td>epidemiology</td><td class="n">9</td></tr><tr><td>global-health</td><td class="n">8</td></tr><tr><td>surgery</td><td class="n">8</td></tr><tr><td>pharmacology</td><td class="n">6</td></tr><tr><td>critical-care</td><td class="n">6</td></tr><tr><td>drug-discovery</td><td class="n">5</td></tr><tr><td>neuroscience</td><td class="n">5</td></tr></tbody></table>
+    </section>
+
+  <footer>
+    MACH — Machine-Actionable Catalog for Healthcare · taxonomy derived from 218 entries, regenerated in CI ·
+    model inspired by <a href="https://edamontology.org/" target="_blank" rel="noopener">EDAM</a> ·
+    <a href="index.html">machcatalog.org</a>
+  </footer>
+</div>
+</body>
+</html>

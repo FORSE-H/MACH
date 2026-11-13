@@ -41,7 +41,7 @@
   ],
   "mach:governance": "vendor-led",
   "mach:category": "datasets",
-  "mach:subcategory": "clinical-benchmark",
+  "mach:subcategory": "benchmark",
   "mach:deploymentContext": [
     "cloud",
     "self-hosted"
@@ -70,5 +70,6 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "HealthBench: Evaluating Large Language Models Towards Improved Human Health. OpenAI 2025."
     }
-  ]
+  ],
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -62,5 +62,7 @@
   "mach:licenseUrl": "https://github.com/dcm4che/dcm4che/blob/master/LICENSE.txt",
   "mach:supportsSpec": [
     "https://github.com/FORSE-H/MACH/tree/main/entries/specs/dicom"
-  ]
+  ],
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

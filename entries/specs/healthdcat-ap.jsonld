@@ -55,5 +55,7 @@
       "url": "https://www.healthinformationportal.eu/healthdcat-ap",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "interoperability-standard",
+  "mach:subcategoryBy": "rule:keyword"
 }

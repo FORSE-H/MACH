@@ -59,5 +59,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:3c01a6c4379c8313540fe1cbb476f8f0c881b099",
-  "mach:licenseUrl": "https://github.com/AmsterdamUMC/AmsterdamUMCdb/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/AmsterdamUMC/AmsterdamUMCdb/blob/master/LICENSE",
+  "mach:subcategory": "clinical-dataset",
+  "mach:subcategoryBy": "rule:keyword"
 }

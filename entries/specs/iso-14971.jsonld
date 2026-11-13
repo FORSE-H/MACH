@@ -66,5 +66,7 @@
       "mach:evidenceType": "regulatory-reference",
       "schema:name": "EU MDR 2017/745 — references ISO 14971 for risk management compliance"
     }
-  ]
+  ],
+  "mach:subcategory": "quality-standard",
+  "mach:subcategoryBy": "rule:keyword"
 }

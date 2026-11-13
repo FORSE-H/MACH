@@ -63,5 +63,7 @@
       "mach:evidenceType": "academic-reference",
       "schema:name": "Priem et al. OpenAlex: A fully-open index of the global research system. arXiv 2205.01833."
     }
-  ]
+  ],
+  "mach:subcategory": "open-data-portal",
+  "mach:subcategoryBy": "rule:keyword"
 }

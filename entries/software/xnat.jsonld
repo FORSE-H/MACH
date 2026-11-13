@@ -63,5 +63,7 @@
       "url": "https://wiki.xnat.org/documentation/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -36,7 +36,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Temple University / NEDC",
   "mach:category": "datasets",
-  "mach:subcategory": "clinical-benchmark",
+  "mach:subcategory": "clinical-dataset",
   "mach:deploymentContext": [
     "self-hosted"
   ],
@@ -51,5 +51,6 @@
       "url": "https://isip.piconepress.com/projects/nedc/html/tuh_eeg/",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:subcategoryBy": "rule:keyword"
 }

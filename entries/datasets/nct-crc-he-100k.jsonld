@@ -48,5 +48,7 @@
       "url": "https://zenodo.org/record/1214456",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:subcategory": "benchmark",
+  "mach:subcategoryBy": "rule:keyword"
 }

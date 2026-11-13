@@ -16,7 +16,7 @@
     }
   ],
   "mach:category": "data-sources",
-  "mach:subcategory": "research-data-platform",
+  "mach:subcategory": "research-database",
   "mach:governance": "academic",
   "mach:clinicalDomain": [
     "genomics",
@@ -47,5 +47,6 @@
       "url": "https://dreamchallenges.org/",
       "mach:evidenceType": "adoption"
     }
-  ]
+  ],
+  "mach:subcategoryBy": "curator"
 }

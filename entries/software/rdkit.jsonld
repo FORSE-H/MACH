@@ -43,7 +43,7 @@
   },
   "mach:governance": "community",
   "mach:category": "software",
-  "mach:subcategory": "pipeline-tools",
+  "mach:subcategory": "bioinformatics-pipeline",
   "mach:editorialReviewedAt": "2026-05-12",
   "mach:clinicalDomain": [
     "research",
@@ -70,5 +70,6 @@
       "mach:evidenceType": "package-registry"
     }
   ],
-  "mach:swhid": "swh:1:ori:0df93a544c70912c7917fe39fc9d3b210d173dd2"
+  "mach:swhid": "swh:1:ori:0df93a544c70912c7917fe39fc9d3b210d173dd2",
+  "mach:subcategoryBy": "rule:keyword"
 }

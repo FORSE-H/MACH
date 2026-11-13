@@ -62,5 +62,7 @@
       "url": "https://docs.aifo.dev/fastslide/",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }

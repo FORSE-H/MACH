@@ -44,5 +44,7 @@
       "url": "https://monuseg.grand-challenge.org/",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:subcategory": "benchmark",
+  "mach:subcategoryBy": "rule:keyword"
 }

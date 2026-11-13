@@ -56,5 +56,7 @@
       "url": "https://www.ema.europa.eu/en/about-us/legal-notice",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "surveillance-feed",
+  "mach:subcategoryBy": "rule:keyword"
 }

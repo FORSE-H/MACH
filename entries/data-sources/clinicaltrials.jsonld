@@ -47,5 +47,7 @@
       "url": "https://clinicaltrials.gov/data-api/about-api",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "registry",
+  "mach:subcategoryBy": "rule:keyword"
 }

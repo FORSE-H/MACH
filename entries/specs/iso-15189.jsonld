@@ -56,5 +56,7 @@
       "mach:evidenceType": "adoption",
       "schema:name": "UKAS — ISO 15189 accreditation programme (UK national accreditation body)"
     }
-  ]
+  ],
+  "mach:subcategory": "quality-standard",
+  "mach:subcategoryBy": "rule:keyword"
 }

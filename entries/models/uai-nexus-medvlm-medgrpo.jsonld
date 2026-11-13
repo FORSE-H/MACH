@@ -75,5 +75,7 @@
     }
   ],
   "mach:huggingFaceUrl": "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL",
-  "mach:licenseUrl": "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL/blob/main/README.md"
+  "mach:licenseUrl": "https://huggingface.co/UII-AI/uAI-NEXUS-MedVLM-1.0a-7B-RL/blob/main/README.md",
+  "mach:subcategory": "foundation-model",
+  "mach:subcategoryBy": "rule:keyword"
 }

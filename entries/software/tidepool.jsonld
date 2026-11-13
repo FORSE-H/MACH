@@ -54,5 +54,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:707382a9c618b502598d7a6f7df7dd9e7621a93a",
-  "mach:licenseUrl": "https://github.com/tidepool-org/platform/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/tidepool-org/platform/blob/master/LICENSE",
+  "mach:subcategory": "research-platform",
+  "mach:subcategoryBy": "rule:keyword"
 }

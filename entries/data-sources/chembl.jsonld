@@ -15,7 +15,7 @@
     }
   ],
   "mach:category": "data-sources",
-  "mach:subcategory": "drug-discovery",
+  "mach:subcategory": "research-database",
   "mach:governance": "academic",
   "mach:clinicalDomain": [
     "drug-discovery",
@@ -47,5 +47,6 @@
       "url": "https://elixir-europe.org/platforms/data/core-data-resources",
       "mach:evidenceType": "project-page"
     }
-  ]
+  ],
+  "mach:subcategoryBy": "curator"
 }

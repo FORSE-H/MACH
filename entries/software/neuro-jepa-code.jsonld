@@ -74,5 +74,6 @@
     }
   ],
   "mach:licenseUrl": "https://github.com/NYUMedML/Neuro-JEPA/blob/main/LICENSE",
-  "mach:alternativeTo": []
+  "mach:alternativeTo": [],
+  "mach:subcategoryBy": "rule:keyword"
 }

@@ -72,5 +72,7 @@
       "url": "https://developers.google.com/open-health-stack",
       "mach:evidenceType": "documentation"
     }
-  ]
+  ],
+  "mach:subcategory": "interoperability",
+  "mach:subcategoryBy": "rule:keyword"
 }

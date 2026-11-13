@@ -67,5 +67,7 @@
       "mach:evidenceType": "primary-instance",
       "schema:name": "Open-ECG-Digitizer training dataset (HuggingFace, Apache-2.0)"
     }
-  ]
+  ],
+  "mach:subcategory": "bioinformatics-pipeline",
+  "mach:subcategoryBy": "rule:keyword"
 }

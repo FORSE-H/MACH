@@ -57,5 +57,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:7cc509d0a672bf336ff99a3c3b5b9d1cba94c7a2",
-  "mach:licenseUrl": "https://github.com/hitontology/ontology/blob/master/LICENSE"
+  "mach:licenseUrl": "https://github.com/hitontology/ontology/blob/master/LICENSE",
+  "mach:subcategory": "terminology",
+  "mach:subcategoryBy": "rule:keyword"
 }

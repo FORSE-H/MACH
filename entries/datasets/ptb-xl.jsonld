@@ -85,5 +85,7 @@
       "url": "https://doi.org/10.13026/kfzx-aw45",
       "mach:evidenceType": "primary-instance"
     }
-  ]
+  ],
+  "mach:subcategory": "benchmark",
+  "mach:subcategoryBy": "rule:keyword"
 }

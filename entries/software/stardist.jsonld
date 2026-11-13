@@ -53,5 +53,7 @@
     }
   ],
   "mach:swhid": "swh:1:ori:130daafc20a0e0548c726aec732c74f7f4bd8787",
-  "mach:licenseUrl": "https://github.com/stardist/stardist/blob/main/LICENSE.txt"
+  "mach:licenseUrl": "https://github.com/stardist/stardist/blob/main/LICENSE.txt",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
 }
