@@ -5,17 +5,27 @@ on:
     paths:
       - 'index.html'
 
+permissions:
+  contents: read
+
 jobs:
   pa11y:
     name: WCAG 2.1 AA — pa11y
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@ab7a9404c0f3da075243ca237b5fac12c98deaa5 # v2
+        with:
+          egress-policy: audit
+
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
 
