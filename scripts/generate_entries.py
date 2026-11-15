@@ -199,7 +199,6 @@ def build_entries_html(entries):
             lic_tag = f'<span class="entry-lic">{license_str}</span>'
         else:
             lic_tag = ""
-        name_href     = jsonld_url if jsonld_url else e.get("url", e.get("codeRepository", "#"))
 
         # ── Rule-based judgement from the harvested scorer (not hand-written) ──
         ident = e.get("identifier", "")
@@ -254,7 +253,7 @@ def build_entries_html(entries):
       <div class="entry-card-meta">
         <span class="entry-cat">{cat_label}</span>{stars_badge}{judgement_badge}
       </div>
-      <p class="entry-name"><a href="{name_href}" target="_blank" rel="noopener">{name}</a></p>
+      <p class="entry-name"><a href="{detail_href}" class="entry-name-link" title="Open details &amp; lineage">{name}</a></p>
       <div class="entry-tags"><span class="entry-type">{entry_type}</span>{lic_tag}{lang_chip}{health_dot}</div>
       <p class="entry-desc">{short_desc}</p>
       {links_html}
