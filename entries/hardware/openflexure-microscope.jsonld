@@ -42,6 +42,7 @@
   "mach:governance": "academic",
   "mach:foundation": "University of Bath / University of Cambridge",
   "mach:category": "hardware",
+  "mach:editorialReviewedAt": "2026-11-16",
   "mach:clinicalDomain": [
     "pathology",
     "infectious-disease",

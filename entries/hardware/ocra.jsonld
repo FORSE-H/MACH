@@ -38,6 +38,7 @@
   "mach:governance": "community",
   "mach:foundation": "OpenMRI",
   "mach:category": "hardware",
+  "mach:editorialReviewedAt": "2026-11-16",
   "mach:clinicalDomain": [
     "radiology",
     "research"

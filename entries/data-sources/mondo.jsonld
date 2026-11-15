@@ -37,6 +37,7 @@
   "mach:governance": "academic",
   "mach:foundation": "Monarch Initiative",
   "mach:category": "data-sources",
+  "mach:editorialReviewedAt": "2026-11-16",
   "mach:clinicalDomain": [
     "rare-disease",
     "genetics",

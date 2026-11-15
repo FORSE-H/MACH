@@ -38,6 +38,7 @@
   "mach:governance": "vendor-led",
   "mach:foundation": "Opentrons",
   "mach:category": "hardware",
+  "mach:editorialReviewedAt": "2026-11-16",
   "mach:clinicalDomain": [
     "research",
     "laboratory-medicine",

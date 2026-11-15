@@ -39,6 +39,7 @@
   "mach:governance": "community",
   "mach:foundation": "OHDSI",
   "mach:category": "software",
+  "mach:editorialReviewedAt": "2026-11-16",
   "mach:supportsSpec": [
     "OMOP-CDM"
   ],

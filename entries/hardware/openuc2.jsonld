@@ -40,6 +40,7 @@
   "mach:governance": "community",
   "mach:foundation": "openUC2",
   "mach:category": "hardware",
+  "mach:editorialReviewedAt": "2026-11-16",
   "mach:clinicalDomain": [
     "pathology",
     "research",

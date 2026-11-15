@@ -37,6 +37,7 @@
   "mach:governance": "community",
   "mach:foundation": "JuliaHealth",
   "mach:category": "software",
+  "mach:editorialReviewedAt": "2026-11-16",
   "mach:clinicalDomain": [
     "radiology",
     "research"
