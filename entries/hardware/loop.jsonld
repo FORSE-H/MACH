@@ -1,0 +1,66 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/hardware/loop",
+  "@type": [
+    "schema:Product",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "loop",
+  "name": "Loop",
+  "description": "Open-source automated insulin delivery (AID) app for iOS, built on the LoopKit frameworks. It reads continuous glucose monitor data and commands an insulin pump to form a closed-loop 'artificial pancreas' for people with type 1 diabetes. A flagship open-source medical-device software project in the #WeAreNotWaiting community.",
+  "url": "https://loopkit.github.io/loopdocs/",
+  "codeRepository": "https://github.com/LoopKit/Loop",
+  "relatedLink": [
+    "https://loopkit.github.io/loopdocs/",
+    "https://github.com/LoopKit/LoopKit"
+  ],
+  "license": "MIT",
+  "mach:licenseNote": "MIT, with noted exceptions for certain bundled frameworks and graphics (per repo LICENSE).",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-11-12",
+  "programmingLanguage": [
+    "Swift"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "insulin-delivery",
+    "artificial-pancreas",
+    "closed-loop",
+    "diabetes",
+    "automated-insulin-delivery",
+    "therapeutic-device"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "LoopKit Authors"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:foundation": "LoopKit",
+  "mach:category": "hardware",
+  "mach:editorialReviewedAt": "2026-11-16",
+  "mach:clinicalDomain": [
+    "endocrinology",
+    "diabetes",
+    "patient-facing"
+  ],
+  "mach:deploymentContext": [
+    "patient-facing",
+    "self-hosted"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/LoopKit/Loop",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://loopkit.github.io/loopdocs/",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:subcategory": "therapeutic-device",
+  "mach:subcategoryBy": "rule:keyword"
+}

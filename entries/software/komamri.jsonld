@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/komamri",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "komamri",
+  "name": "KomaMRI.jl",
+  "description": "GPU-accelerated, Pulseq-compatible framework written in Julia for simulating Magnetic Resonance Imaging acquisitions from the Bloch equations. Aimed at reproducible MRI sequence development, reconstruction research, and education, with a graphical interface and open, well-documented code.",
+  "url": "https://juliahealth.org/KomaMRI.jl/",
+  "codeRepository": "https://github.com/JuliaHealth/KomaMRI.jl",
+  "relatedLink": [
+    "https://juliahealth.org/KomaMRI.jl/"
+  ],
+  "license": "MIT",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-11-15",
+  "programmingLanguage": [
+    "Julia"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "mri",
+    "medical-imaging",
+    "simulation",
+    "magnetic-resonance",
+    "pulseq",
+    "image-reconstruction"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "JuliaHealth"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:foundation": "JuliaHealth",
+  "mach:category": "software",
+  "mach:editorialReviewedAt": "2026-11-16",
+  "mach:clinicalDomain": [
+    "radiology",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/JuliaHealth/KomaMRI.jl",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
+}

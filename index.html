@@ -610,6 +610,7 @@
   .entry-card[data-cat="data-models-research-platforms"]  { border-top-color: #4F46E5; }
   .entry-card[data-cat="medical-imaging-signals"]         { border-top-color: #7C3AED; }
   .entry-card[data-cat="ai-ml-models"]                   { border-top-color: #4F46E5; }
+  .entry-card[data-cat="hardware"]                       { border-top-color: #475569; }
   .entry-card[data-cat="datasets-benchmarks"]            { border-top-color: #0284C7; }
   .entry-card[data-cat="de-identification-privacy"]       { border-top-color: #E11D48; }
   .entry-card[data-cat="quality-conformance"]             { border-top-color: #D97706; }
@@ -1237,11 +1238,11 @@
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:2rem;">
     <div style="background:var(--white);padding:1rem 1.25rem;">
       <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Total entries</p>
-      <p style="font-size:1.75rem;font-weight:600;color:#1D9E75;"><!-- STAT:TOTAL -->218<!-- /STAT:TOTAL --></p>
+      <p style="font-size:1.75rem;font-weight:600;color:#1D9E75;"><!-- STAT:TOTAL -->233<!-- /STAT:TOTAL --></p>
     </div>
     <div style="background:var(--white);padding:1rem 1.25rem;">
       <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Entry types</p>
-      <p style="font-size:1.75rem;font-weight:600;color:#4F46E5;"><!-- STAT:CATS -->7<!-- /STAT:CATS -->/7</p>
+      <p style="font-size:1.75rem;font-weight:600;color:#4F46E5;"><!-- STAT:CATS -->8<!-- /STAT:CATS -->/7</p>
     </div>
   </div>
   <span style="display:none;"><!-- STAT:ADOPT -->64<!-- /STAT:ADOPT --><!-- STAT:ASSESS -->85<!-- /STAT:ASSESS --></span>
@@ -1546,6 +1547,15 @@
       <div class="entry-tags"><span class="entry-type">Data Source</span><span class="entry-lic">custom</span></div>
       <p class="entry-desc">WHO REST API providing programmatic access to the ICD-11 Mortality and Morbidity Statistics (MMS) linearization — including entity lookups, …</p>
       <div class="entry-card-links"><a href="entry/icd11-api.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://icd.who.int/icdapi" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/data-sources/icd11-api.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="data-sources" data-license="CC-BY-4.0" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Data Sources</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/mondo.html" class="entry-name-link" title="Open details &amp; lineage">Mondo Disease Ontology</a></p>
+      <div class="entry-tags"><span class="entry-type">Data Source</span><span class="entry-lic">CC-BY-4.0</span></div>
+      <p class="entry-desc">Unified, continuously updated disease ontology that harmonises and cross-maps terminology from OMIM, Orphanet, the Disease Ontology, NCIt, a…</p>
+      <div class="entry-card-links"><a href="entry/mondo.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://mondo.monarchinitiative.org/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/monarch-initiative/mondo" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/data-sources/mondo.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
     </div>
     <div class="entry-card" data-cat="data-sources" data-license="Apache-2.0" data-judgement="">
       <div class="entry-card-meta">
@@ -1907,6 +1917,105 @@
       <p class="entry-desc">The largest publicly available clinical EEG database, containing 60,000+ recordings from Temple University Hospital (2002–present) across 7 …</p>
       <div class="entry-card-links"><a href="entry/tuh-eeg.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://isip.piconepress.com/projects/nedc/html/tuh_eeg/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/datasets/tuh-eeg.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
     </div>
+    <div class="entry-card" data-cat="hardware" data-license="MIT" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/bioamp-exg-pill.html" class="entry-name-link" title="Open details &amp; lineage">BioAmp EXG Pill</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">MIT</span></div>
+      <p class="entry-desc">Small open-hardware analogue front-end (AFE) board for acquiring biopotential signals — ECG, EMG, EEG, and EOG — from the body for use with …</p>
+      <div class="entry-card-links"><a href="entry/bioamp-exg-pill.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://upsidedownlabs.tech/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/upsidedownlabs/BioAmp-EXG-Pill" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/bioamp-exg-pill.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="hardware" data-license="TAPR-OHL-1.0" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/echomods.html" class="entry-name-link" title="Open details &amp; lineage">echOmods</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">TAPR-OHL-1.0</span></div>
+      <p class="entry-desc">Open-source ultrasound processing modules and building blocks — analogue front ends, FPGA acquisition, and signal-processing notebooks — for…</p>
+      <div class="entry-card-links"><a href="entry/echomods.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://github.com/kelu124/echomods" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/echomods.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="hardware" data-license="CERN-OHL-P-2.0" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/healthypi-5.html" class="entry-name-link" title="Open details &amp; lineage">HealthyPi 5</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">CERN-OHL-P-2.0</span></div>
+      <p class="entry-desc">Open-source vital-signs monitoring HAT/board measuring ECG, respiration, pulse oximetry (SpO2), and temperature, designed to work with a Ras…</p>
+      <div class="entry-card-links"><a href="entry/healthypi-5.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://protocentral.com/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/Protocentral/protocentral_healthypi_5" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/healthypi-5.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="hardware" data-license="MIT" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/loop.html" class="entry-name-link" title="Open details &amp; lineage">Loop</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">MIT</span></div>
+      <p class="entry-desc">Open-source automated insulin delivery (AID) app for iOS, built on the LoopKit frameworks. It reads continuous glucose monitor data and comm…</p>
+      <div class="entry-card-links"><a href="entry/loop.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://loopkit.github.io/loopdocs/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/LoopKit/Loop" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/loop.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="hardware" data-license="MIT" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/marcos-server.html" class="entry-name-link" title="Open details &amp; lineage">MaRCoS</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">MIT</span></div>
+      <p class="entry-desc">Magnetic Resonance Control System — an open-source, real-time console for driving low-field and research MRI scanners. The server component …</p>
+      <div class="entry-card-links"><a href="entry/marcos-server.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://github.com/vnegnev/marcos_server" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/marcos-server.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="hardware" data-license="GPL-3.0" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/ocra.html" class="entry-name-link" title="Open details &amp; lineage">OCRA</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">GPL-3.0</span></div>
+      <p class="entry-desc">Open-source MRI console built on a low-cost Xilinx Zynq FPGA, providing spectrometer and acquisition hardware plus control software for magn…</p>
+      <div class="entry-card-links"><a href="entry/ocra.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://openmri.github.io/ocra/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/OpenMRI/ocra" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/ocra.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="hardware" data-license="MIT" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/openbci-gui.html" class="entry-name-link" title="Open details &amp; lineage">OpenBCI GUI</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">MIT</span></div>
+      <p class="entry-desc">Cross-platform application for acquiring and visualising EEG, EMG, and ECG data from OpenBCI's open biosensing boards (Cyton, Ganglion). The…</p>
+      <div class="entry-card-links"><a href="entry/openbci-gui.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://openbci.com/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/OpenBCI/OpenBCI_GUI" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/openbci-gui.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="hardware" data-license="CERN-OHL-W-2.0" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/openflexure-microscope.html" class="entry-name-link" title="Open details &amp; lineage">OpenFlexure Microscope</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">CERN-OHL-W-2.0</span></div>
+      <p class="entry-desc">3D-printable, fully automated laboratory microscope built on a monolithic flexure translation stage for sub-micron motion. Designed for low-…</p>
+      <div class="entry-card-links"><a href="entry/openflexure-microscope.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://openflexure.org/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://gitlab.com/openflexure/openflexure-microscope" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/openflexure-microscope.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="hardware" data-license="Apache-2.0" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/opentrons.html" class="entry-name-link" title="Open details &amp; lineage">Opentrons</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">Apache-2.0</span></div>
+      <p class="entry-desc">Open-source software for authoring and running protocols on Opentrons liquid-handling laboratory robots (OT-2, Flex). The Python Protocol AP…</p>
+      <div class="entry-card-links"><a href="entry/opentrons.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://opentrons.com/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/Opentrons/opentrons" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/opentrons.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="hardware" data-license="MIT" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/openuc2.html" class="entry-name-link" title="Open details &amp; lineage">openUC2</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">MIT</span></div>
+      <p class="entry-desc">Modular open-science microscopy system built from 3D-printed cubes that snap onto a magnetic baseplate, reconfigurable into brightfield, flu…</p>
+      <div class="entry-card-links"><a href="entry/openuc2.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://openuc2.com/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/openUC2/UC2-GIT" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/openuc2.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="hardware" data-license="TAPR-OHL-1.0" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Medical Hardware</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/un0rick.html" class="entry-name-link" title="Open details &amp; lineage">un0rick</a></p>
+      <div class="entry-tags"><span class="entry-type">Hardware</span><span class="entry-lic">TAPR-OHL-1.0</span></div>
+      <p class="entry-desc">Compact open-source ultrasound board pairing an iCE40 FPGA with a Raspberry Pi to provide pulse-echo acquisition for imaging experiments. A …</p>
+      <div class="entry-card-links"><a href="entry/un0rick.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://un0rick.cc/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/kelu124/un0rick" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/hardware/un0rick.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
     <div class="entry-card" data-cat="ai-ml-models" data-license="Apache-2.0" data-judgement="Assess">
       <div class="entry-card-meta">
         <span class="entry-cat">AI / ML Models</span><span class="entry-stars" title="GitHub stars">&#9733; 406</span><span class="entry-judgement ring-assess" title="Assess — last commit ~5 months ago; 406 stars; permissive licence (Apache-2.0).">Assess</span>
@@ -2212,6 +2321,15 @@
       <div class="entry-tags"><span class="entry-type">Software</span><a href="https://github.com/nightscout/AndroidAPS/blob/master/LICENSE.txt" target="_blank" rel="noopener" class="entry-lic" title="Licence">AGPL-3.0</a></div>
       <p class="entry-desc">Open-source automated insulin delivery (AID) system for Android implementing the OpenAPS oref0/oref1 algorithm. Manages insulin pump communi…</p>
       <div class="entry-card-links"><a href="entry/androidaps.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://github.com/nightscout/AndroidAPS" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/androidaps.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="software" data-license="Apache-2.0" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Software</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/ants.html" class="entry-name-link" title="Open details &amp; lineage">ANTs (Advanced Normalization Tools)</a></p>
+      <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">Apache-2.0</span></div>
+      <p class="entry-desc">Widely used open-source toolkit for medical image registration, segmentation, and quantification, with a strong track record in neuroimaging…</p>
+      <div class="entry-card-links"><a href="entry/ants.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://github.com/ANTsX/ANTs" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/ants.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
     </div>
     <div class="entry-card" data-cat="software" data-license="Apache-2.0" data-judgement="Adopt">
       <div class="entry-card-meta">
@@ -2564,6 +2682,15 @@
       <p class="entry-desc">Kubernetes-based open-source platform toolkit for building federated medical image analysis infrastructure. Orchestrates AI workflows (nnU-N…</p>
       <div class="entry-card-links"><a href="entry/kaapana.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://kaapana.ai" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/kaapana/kaapana" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/kaapana/kaapana" target="_blank" rel="noopener" class="entry-url entry-swh" title="Archived on Software Heritage&#10;swh:1:ori:f1625918c14698c1e423a7f0465995c75b4136ce"><img src="logos/swh.svg" alt="" class="swh-icon">swh</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/kaapana.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
     </div>
+    <div class="entry-card" data-cat="software" data-license="MIT" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Software</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/komamri.html" class="entry-name-link" title="Open details &amp; lineage">KomaMRI.jl</a></p>
+      <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">MIT</span></div>
+      <p class="entry-desc">GPU-accelerated, Pulseq-compatible framework written in Julia for simulating Magnetic Resonance Imaging acquisitions from the Bloch equation…</p>
+      <div class="entry-card-links"><a href="entry/komamri.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://juliahealth.org/KomaMRI.jl/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/JuliaHealth/KomaMRI.jl" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/komamri.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
     <div class="entry-card" data-cat="software" data-license="Apache-2.0" data-judgement="Caution">
       <div class="entry-card-meta">
         <span class="entry-cat">Software</span><span class="entry-stars" title="GitHub stars">&#9733; 531</span><span class="entry-judgement ring-caution" title="Caution — repository archived by maintainer. Capped: no clear open licence.">Caution</span>
@@ -2743,6 +2870,15 @@
       <div class="entry-tags"><span class="entry-type">Software</span><a href="https://github.com/UMCU-Digital-Health/No_Show/blob/main/LICENSE" target="_blank" rel="noopener" class="entry-lic" title="Licence">MIT</a></div>
       <p class="entry-desc">Machine learning model for predicting patient no-shows at clinical appointments, actively deployed at UMC Utrecht. Identifies patients at hi…</p>
       <div class="entry-card-links"><a href="entry/no-show.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://github.com/UMCU-Digital-Health/No_Show" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/no-show.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
+    <div class="entry-card" data-cat="software" data-license="Apache-2.0" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Software</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/ohdsi-atlas.html" class="entry-name-link" title="Open details &amp; lineage">OHDSI ATLAS</a></p>
+      <div class="entry-tags"><span class="entry-type">Software</span><span class="entry-lic">Apache-2.0</span></div>
+      <p class="entry-desc">Open-source web application for designing and executing observational analyses against patient data standardised to the OMOP Common Data Mod…</p>
+      <div class="entry-card-links"><a href="entry/ohdsi-atlas.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://atlas-demo.ohdsi.org/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/OHDSI/Atlas" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/ohdsi-atlas.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
     </div>
     <div class="entry-card" data-cat="software" data-license="MIT" data-judgement="Adopt">
       <div class="entry-card-meta">
@@ -3435,6 +3571,7 @@
     'data-models-research-platforms': { c:'#4F46E5', b:'#EEF2FF', cb:'rgba(79,70,229,0.28)' },
     'medical-imaging-signals':        { c:'#7C3AED', b:'#F5F3FF', cb:'rgba(124,58,237,0.28)' },
     'ai-ml-models':                   { c:'#4F46E5', b:'#EEF2FF', cb:'rgba(79,70,229,0.28)' },
+    'hardware':                       { c:'#475569', b:'#F1F5F9', cb:'rgba(71,85,105,0.28)' },
     'ai-tooling':                     { c:'#7C3AED', b:'#F5F3FF', cb:'rgba(124,58,237,0.28)' },
     'datasets-benchmarks':            { c:'#0284C7', b:'#E0F2FE', cb:'rgba(2,132,199,0.28)' },
     'de-identification-privacy':      { c:'#E11D48', b:'#FFF1F2', cb:'rgba(225,29,72,0.28)' },
@@ -3558,6 +3695,7 @@
 
   const catLabels = {
     'software':     'Software',
+    'hardware':     'Medical Hardware',
     'ai-ml-models': 'AI / ML Models',
     'ai-tooling':   'AI Tooling',
     'datasets':     'Datasets',

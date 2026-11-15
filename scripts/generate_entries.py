@@ -106,6 +106,7 @@ CATEGORY_TYPE_LABELS = {
     "specs":         "Standard",
     "catalogs":      "Catalog",
     "software":      "Software",
+    "hardware":      "Hardware",
 }
 
 def get_entry_type(e):
