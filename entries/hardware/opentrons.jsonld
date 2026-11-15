@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/hardware/opentrons",
+  "@type": [
+    "schema:Product",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "opentrons",
+  "name": "Opentrons",
+  "description": "Open-source software for authoring and running protocols on Opentrons liquid-handling laboratory robots (OT-2, Flex). The Python Protocol API and app let labs automate pipetting, sample prep, and assays reproducibly; the robots' hardware designs and the full software stack are open.",
+  "url": "https://opentrons.com/",
+  "codeRepository": "https://github.com/Opentrons/opentrons",
+  "relatedLink": [
+    "https://docs.opentrons.com/"
+  ],
+  "license": "Apache-2.0",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-11-14",
+  "programmingLanguage": [
+    "Python",
+    "TypeScript"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "lab-automation",
+    "liquid-handling",
+    "lab-robot",
+    "pipetting",
+    "open-hardware",
+    "laboratory-automation"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Opentrons Labworks"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:foundation": "Opentrons",
+  "mach:category": "hardware",
+  "mach:clinicalDomain": [
+    "research",
+    "laboratory-medicine",
+    "genomics"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Opentrons/opentrons",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:subcategory": "lab-automation",
+  "mach:subcategoryBy": "rule:keyword"
+}

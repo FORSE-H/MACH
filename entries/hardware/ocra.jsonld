@@ -1,0 +1,58 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/hardware/ocra",
+  "@type": [
+    "schema:Product",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "ocra",
+  "name": "OCRA",
+  "description": "Open-source MRI console built on a low-cost Xilinx Zynq FPGA, providing spectrometer and acquisition hardware plus control software for magnetic resonance imaging. Lowers the cost barrier for MRI research and education by replacing proprietary consoles with an open, documented design.",
+  "url": "https://openmri.github.io/ocra/",
+  "codeRepository": "https://github.com/OpenMRI/ocra",
+  "relatedLink": [
+    "https://openmri.github.io/ocra/"
+  ],
+  "license": "GPL-3.0",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-05-06",
+  "programmingLanguage": [
+    "Python",
+    "C++"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "mri",
+    "imaging",
+    "open-hardware",
+    "fpga",
+    "magnetic-resonance",
+    "medical-imaging"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "OpenMRI community"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:foundation": "OpenMRI",
+  "mach:category": "hardware",
+  "mach:clinicalDomain": [
+    "radiology",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/OpenMRI/ocra",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:subcategory": "imaging-hardware",
+  "mach:subcategoryBy": "rule:keyword"
+}

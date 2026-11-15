@@ -1,0 +1,66 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/hardware/openuc2",
+  "@type": [
+    "schema:Product",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "openuc2",
+  "name": "openUC2",
+  "description": "Modular open-science microscopy system built from 3D-printed cubes that snap onto a magnetic baseplate, reconfigurable into brightfield, fluorescence, lightsheet, and holographic setups. Combines open hardware, firmware, and Python-based control for research and education. Actively developed with an open community and commercial kits.",
+  "url": "https://openuc2.com/",
+  "codeRepository": "https://github.com/openUC2/UC2-GIT",
+  "relatedLink": [
+    "https://github.com/openUC2/ImSwitch"
+  ],
+  "license": "MIT",
+  "mach:licenseNote": "Software MIT (per repo LICENSE); hardware designs released under open-hardware terms described in the repo.",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-08-09",
+  "programmingLanguage": [
+    "Jupyter Notebook",
+    "Python"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "microscope",
+    "microscopy",
+    "3d-printing",
+    "open-hardware",
+    "fluorescence",
+    "imaging",
+    "modular"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "openUC2 / Leibniz IPHT Jena"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:foundation": "openUC2",
+  "mach:category": "hardware",
+  "mach:clinicalDomain": [
+    "pathology",
+    "research",
+    "education"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/openUC2/UC2-GIT",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://openuc2.com/",
+      "mach:evidenceType": "project-website"
+    }
+  ],
+  "mach:subcategory": "imaging-hardware",
+  "mach:subcategoryBy": "rule:keyword"
+}

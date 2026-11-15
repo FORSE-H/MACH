@@ -23,6 +23,20 @@ categories:
       - { id: privacy-deid,            name: Privacy & de-identification }
       - { id: mhealth,                 name: mHealth }
 
+  - id: hardware
+    name: Medical Hardware
+    folder: hardware
+    description: >
+      Open-source medical and laboratory hardware — device designs, PCBs,
+      firmware, and 3D-printable builds (imaging consoles, biosignal boards,
+      microscopes, lab robots, therapeutic devices).
+    functions:
+      - { id: imaging-hardware,     name: Imaging hardware }
+      - { id: biosignal-acquisition, name: Biosignal acquisition }
+      - { id: lab-automation,       name: Lab automation }
+      - { id: therapeutic-device,   name: Therapeutic device }
+      - { id: point-of-care-device, name: Point-of-care device }
+
   - id: ai-ml-models
     name: AI / ML Models
     folder: models

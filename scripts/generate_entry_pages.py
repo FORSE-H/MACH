@@ -167,6 +167,29 @@ def _repo_section(signals: dict, entry: dict) -> str:
     return "\n    ".join(parts)
 
 
+_HARDWARE_NOTE = (
+    "Open-source medical hardware: the repository holds device designs, PCBs, "
+    "firmware, and build documentation. MACH&rsquo;s rule-based signals (stars, "
+    "commit recency, licence, repo health) describe the activity and openness of "
+    "this <em>design repository</em> &mdash; not the safety, regulatory clearance, "
+    "or clinical fitness of any device built from it. Verify licences (hardware and "
+    "software may differ), build quality, and any applicable medical-device "
+    "regulation before use."
+)
+
+
+def _hardware_note(entry: dict) -> str:
+    """An always-on caveat shown at the bottom of every hardware entry page."""
+    if entry.get("mach:category") != "hardware":
+        return ""
+    return (
+        '<aside class="hw-note" role="note">'
+        '<strong>About medical-hardware entries</strong>'
+        f'<p>{_HARDWARE_NOTE}</p>'
+        "</aside>"
+    )
+
+
 def render_page(entry: dict, sig: dict) -> str:
     ident = entry["identifier"]
     name = entry.get("name", ident)
@@ -182,6 +205,7 @@ def render_page(entry: dict, sig: dict) -> str:
     signals = (sig or {}).get("signals", {}) or {}
 
     repo_block = _repo_section(signals, entry)
+    hardware_note = _hardware_note(entry)
 
     if judgement in RING_CLASS:
         badge = f'<span class="ring {RING_CLASS[judgement]}">{esc(judgement)}</span>'
@@ -310,6 +334,16 @@ def render_page(entry: dict, sig: dict) -> str:
   .implements {{ margin:8px 0 0; font-size:0.85rem; }}
   .spec-chip {{ display:inline-block; font-family:'DM Mono',monospace; font-size:0.78rem; background:var(--teal-50); color:var(--teal-700); padding:2px 8px; border-radius:999px; text-decoration:none; margin:2px 3px 0 0; }}
   .spec-chip:hover {{ text-decoration:underline; }}
+  .hw-note {{ margin:20px 0 0; padding:14px 16px; border:1px solid var(--border);
+    border-left:3px solid #475569; border-radius:8px; background:#F1F5F9; }}
+  .hw-note strong {{ display:block; font-size:0.82rem; letter-spacing:0.02em;
+    text-transform:uppercase; color:#334155; margin:0 0 4px; }}
+  .hw-note p {{ margin:0; font-size:0.86rem; line-height:1.5; color:#39434d; }}
+  @media (prefers-color-scheme: dark) {{
+    :root:not([data-theme="light"]) .hw-note {{ background:#1e293b; border-left-color:#64748b; }}
+    :root:not([data-theme="light"]) .hw-note strong {{ color:#cbd5e1; }}
+    :root:not([data-theme="light"]) .hw-note p {{ color:#cbd5e1; }}
+  }}
 </style>
 </head>
 <body>
@@ -322,6 +356,7 @@ def render_page(entry: dict, sig: dict) -> str:
     {repo_block}
     {lineage}
     {history_block}
+    {hardware_note}
     <footer>MACH — Machine-Actionable Catalog for Healthcare · Judgement is rule-based, derived from harvested signals · <a href="../index.html">machcatalog.org</a></footer>
   </div>
 </body>

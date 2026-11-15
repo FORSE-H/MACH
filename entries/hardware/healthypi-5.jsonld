@@ -1,0 +1,61 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/hardware/healthypi-5",
+  "@type": [
+    "schema:Product",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "healthypi-5",
+  "name": "HealthyPi 5",
+  "description": "Open-source vital-signs monitoring HAT/board measuring ECG, respiration, pulse oximetry (SpO2), and temperature, designed to work with a Raspberry Pi or standalone. Hardware, firmware, and companion apps are published for building open patient-monitoring and remote-health devices.",
+  "url": "https://protocentral.com/",
+  "codeRepository": "https://github.com/Protocentral/protocentral_healthypi_5",
+  "relatedLink": [
+    "https://healthypi.protocentral.com/"
+  ],
+  "license": "CERN-OHL-P-2.0",
+  "mach:licenseNote": "Hardware under CERN-OHL-P-2.0 (permissive); accompanying software under its own open licence, per the repo LICENSE.",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-07-25",
+  "programmingLanguage": [
+    "C",
+    "Java"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "vital-signs",
+    "ecg",
+    "pulse-oximetry",
+    "respiration",
+    "biosignal",
+    "open-hardware",
+    "remote-monitoring"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "ProtoCentral Electronics"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:foundation": "ProtoCentral",
+  "mach:category": "hardware",
+  "mach:clinicalDomain": [
+    "cardiology",
+    "point-of-care",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Protocentral/protocentral_healthypi_5",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:subcategory": "biosignal-acquisition",
+  "mach:subcategoryBy": "rule:keyword"
+}

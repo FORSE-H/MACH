@@ -1,0 +1,59 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/hardware/marcos-server",
+  "@type": [
+    "schema:Product",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "marcos-server",
+  "name": "MaRCoS",
+  "description": "Magnetic Resonance Control System — an open-source, real-time console for driving low-field and research MRI scanners. The server component runs on the FPGA/SoC and streams pulse sequences and acquisition; paired with the MaRCoS client it forms a complete open MRI control stack used by the open-MRI research community.",
+  "url": "https://github.com/vnegnev/marcos_server",
+  "codeRepository": "https://github.com/vnegnev/marcos_server",
+  "relatedLink": [
+    "https://github.com/vnegnev/marcos_client",
+    "https://github.com/vnegnev/marcos_extras"
+  ],
+  "license": "MIT",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-04-13",
+  "programmingLanguage": [
+    "C++",
+    "Python"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "mri",
+    "imaging",
+    "open-hardware",
+    "fpga",
+    "magnetic-resonance",
+    "marcos"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "MaRCoS collaboration"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "MaRCoS collaboration",
+  "mach:category": "hardware",
+  "mach:clinicalDomain": [
+    "radiology",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/vnegnev/marcos_server",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:subcategory": "imaging-hardware",
+  "mach:subcategoryBy": "rule:keyword"
+}

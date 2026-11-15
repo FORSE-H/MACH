@@ -1,0 +1,61 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/hardware/openbci-gui",
+  "@type": [
+    "schema:Product",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "openbci-gui",
+  "name": "OpenBCI GUI",
+  "description": "Cross-platform application for acquiring and visualising EEG, EMG, and ECG data from OpenBCI's open biosensing boards (Cyton, Ganglion). The software counterpart to OpenBCI's open-hardware ecosystem, widely used in brain-computer-interface, neuroscience, and biosignal research.",
+  "url": "https://openbci.com/",
+  "codeRepository": "https://github.com/OpenBCI/OpenBCI_GUI",
+  "relatedLink": [
+    "https://docs.openbci.com/"
+  ],
+  "license": "MIT",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-04-10",
+  "programmingLanguage": [
+    "Java",
+    "Processing"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "eeg",
+    "emg",
+    "ecg",
+    "bci",
+    "brain-computer-interface",
+    "biosignal",
+    "open-hardware",
+    "electrophysiology"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "OpenBCI"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:foundation": "OpenBCI",
+  "mach:category": "hardware",
+  "mach:clinicalDomain": [
+    "neurology",
+    "research",
+    "education"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/OpenBCI/OpenBCI_GUI",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:subcategory": "biosignal-acquisition",
+  "mach:subcategoryBy": "rule:keyword"
+}

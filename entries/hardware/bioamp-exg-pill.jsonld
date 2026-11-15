@@ -1,0 +1,62 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/hardware/bioamp-exg-pill",
+  "@type": [
+    "schema:Product",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "bioamp-exg-pill",
+  "name": "BioAmp EXG Pill",
+  "description": "Small open-hardware analogue front-end (AFE) board for acquiring biopotential signals — ECG, EMG, EEG, and EOG — from the body for use with microcontrollers such as Arduino. Widely used in education, maker, and research biosignal projects; full schematics, PCB, and example firmware are published.",
+  "url": "https://upsidedownlabs.tech/",
+  "codeRepository": "https://github.com/upsidedownlabs/BioAmp-EXG-Pill",
+  "relatedLink": [
+    "https://docs.upsidedownlabs.tech/"
+  ],
+  "license": "MIT",
+  "mach:licenseNote": "Dual-licensed: software under MIT; hardware under an open-hardware licence, per the repo LICENSE agreement.",
+  "mach:licenseVerified": true,
+  "dateModified": "2024-08-23",
+  "programmingLanguage": [
+    "C++"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "ecg",
+    "emg",
+    "eeg",
+    "eog",
+    "biopotential",
+    "biosignal",
+    "open-hardware",
+    "wearable-sensor"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Upside Down Labs"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:foundation": "Upside Down Labs",
+  "mach:category": "hardware",
+  "mach:clinicalDomain": [
+    "cardiology",
+    "neurology",
+    "research",
+    "education"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/upsidedownlabs/BioAmp-EXG-Pill",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:subcategory": "biosignal-acquisition",
+  "mach:subcategoryBy": "rule:keyword"
+}

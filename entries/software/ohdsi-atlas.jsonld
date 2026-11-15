@@ -1,0 +1,67 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/ohdsi-atlas",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "ohdsi-atlas",
+  "name": "OHDSI ATLAS",
+  "description": "Open-source web application for designing and executing observational analyses against patient data standardised to the OMOP Common Data Model. ATLAS lets researchers define cohorts, characterise populations, estimate effects, and build patient-level prediction models across a federated network of OMOP databases. Maintained by the OHDSI community.",
+  "url": "https://atlas-demo.ohdsi.org/",
+  "codeRepository": "https://github.com/OHDSI/Atlas",
+  "relatedLink": [
+    "https://ohdsi.github.io/Atlas/",
+    "https://www.ohdsi.org/"
+  ],
+  "license": "Apache-2.0",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-09-16",
+  "programmingLanguage": [
+    "JavaScript"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "omop",
+    "ohdsi",
+    "observational-research",
+    "cohort",
+    "research-platform",
+    "common-data-model",
+    "federated-analysis"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "OHDSI (Observational Health Data Sciences and Informatics)"
+    }
+  ],
+  "mach:governance": "community",
+  "mach:foundation": "OHDSI",
+  "mach:category": "software",
+  "mach:supportsSpec": [
+    "OMOP-CDM"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "pharmacoepidemiology",
+    "public-health"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/OHDSI/Atlas",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://www.ohdsi.org/",
+      "mach:evidenceType": "project-website"
+    }
+  ],
+  "mach:subcategory": "federated-analytics",
+  "mach:subcategoryBy": "rule:keyword"
+}

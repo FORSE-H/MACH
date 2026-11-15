@@ -1,0 +1,60 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/ants",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "ants",
+  "name": "ANTs (Advanced Normalization Tools)",
+  "description": "Widely used open-source toolkit for medical image registration, segmentation, and quantification, with a strong track record in neuroimaging. ANTs provides state-of-the-art diffeomorphic registration, template construction, and brain-extraction/segmentation pipelines, with Python (ANTsPy) and R (ANTsR) bindings.",
+  "url": "https://github.com/ANTsX/ANTs",
+  "codeRepository": "https://github.com/ANTsX/ANTs",
+  "relatedLink": [
+    "https://github.com/ANTsX/ANTsPy",
+    "https://github.com/ANTsX/ANTsR"
+  ],
+  "license": "Apache-2.0",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-11-15",
+  "programmingLanguage": [
+    "C++",
+    "Python"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "medical-imaging",
+    "neuroimaging",
+    "registration",
+    "segmentation",
+    "image-computing",
+    "mri"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "ANTsX / Penn Image Computing and Science Laboratory"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "ANTsX",
+  "mach:category": "software",
+  "mach:clinicalDomain": [
+    "neurology",
+    "radiology",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ANTsX/ANTs",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
+}

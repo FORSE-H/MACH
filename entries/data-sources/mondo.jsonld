@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/mondo",
+  "@type": [
+    "schema:Dataset",
+    "mach:DataSource"
+  ],
+  "identifier": "mondo",
+  "name": "Mondo Disease Ontology",
+  "description": "Unified, continuously updated disease ontology that harmonises and cross-maps terminology from OMIM, Orphanet, the Disease Ontology, NCIt, and others into a single coherent hierarchy with stable identifiers. Widely used for rare-disease research, phenotype-to-disease mapping, and data harmonisation. Maintained by the Monarch Initiative.",
+  "url": "https://mondo.monarchinitiative.org/",
+  "codeRepository": "https://github.com/monarch-initiative/mondo",
+  "relatedLink": [
+    "https://mondo.monarchinitiative.org/",
+    "https://monarchinitiative.org/"
+  ],
+  "license": "CC-BY-4.0",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-11-13",
+  "programmingLanguage": [
+    "Jupyter Notebook"
+  ],
+  "keywords": [
+    "ontology",
+    "terminology",
+    "disease",
+    "rare-disease",
+    "vocabulary",
+    "phenotype"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Monarch Initiative"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Monarch Initiative",
+  "mach:category": "data-sources",
+  "mach:clinicalDomain": [
+    "rare-disease",
+    "genetics",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/monarch-initiative/mondo",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://mondo.monarchinitiative.org/",
+      "mach:evidenceType": "project-website"
+    }
+  ],
+  "mach:subcategory": "terminology",
+  "mach:subcategoryBy": "rule:keyword"
+}

@@ -1,0 +1,69 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/hardware/openflexure-microscope",
+  "@type": [
+    "schema:Product",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "openflexure-microscope",
+  "name": "OpenFlexure Microscope",
+  "description": "3D-printable, fully automated laboratory microscope built on a monolithic flexure translation stage for sub-micron motion. Designed for low-cost deployment in research, education, and clinical settings such as malaria and tuberculosis diagnosis. Hardware, firmware, and control software are open; the project has shipped builds to labs and clinics in low-resource settings.",
+  "url": "https://openflexure.org/",
+  "codeRepository": "https://gitlab.com/openflexure/openflexure-microscope",
+  "relatedLink": [
+    "https://openflexure.org/projects/microscope/",
+    "https://build.openflexure.org/"
+  ],
+  "license": "CERN-OHL-W-2.0",
+  "mach:licenseNote": "Hardware under CERN-OHL-W-2.0; control software (openflexure-microscope-server) under a separate open licence in its own repo.",
+  "mach:licenseVerified": true,
+  "dateModified": "2026-02-01",
+  "programmingLanguage": [
+    "OpenSCAD",
+    "Python"
+  ],
+  "applicationCategory": "Healthcare",
+  "keywords": [
+    "microscope",
+    "microscopy",
+    "3d-printing",
+    "open-hardware",
+    "diagnostics",
+    "point-of-care",
+    "malaria",
+    "low-cost-diagnostic"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "OpenFlexure project / University of Bath / University of Cambridge"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "University of Bath / University of Cambridge",
+  "mach:category": "hardware",
+  "mach:clinicalDomain": [
+    "pathology",
+    "infectious-disease",
+    "global-health",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://gitlab.com/openflexure/openflexure-microscope",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://openflexure.org/",
+      "mach:evidenceType": "project-website"
+    }
+  ],
+  "mach:subcategory": "imaging-hardware",
+  "mach:subcategoryBy": "rule:keyword"
+}

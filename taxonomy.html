@@ -53,7 +53,7 @@
 <div class="wrap">
   <header>
     <h1>MACH <span>Taxonomy</span></h1>
-    <div class="sub">A multi-axis, EDAM-inspired classification · 218 entries · November 2026</div>
+    <div class="sub">A multi-axis, EDAM-inspired classification · 233 entries · November 2026</div>
   </header>
 
   <p class="lede">Every entry is classified on four orthogonal axes. <b>Type</b> is the top-level category (from the entry's folder). <b>Function</b> is a controlled sub-type, assigned by published deterministic rules or an explicit curator decision. <b>Domain</b> is the clinical area, and <b>Standards</b> are the specifications a tool implements.</p>
@@ -66,18 +66,27 @@
   </div>
 
   <div class="prov">
-    Function is assigned deterministically where a signal is clear: <b>196</b> by rule
+    Function is assigned deterministically where a signal is clear: <b>211</b> by rule
     (from harvested keywords / implemented standards), <b>3</b> by curator decision,
     <b>19</b> authored (AI tooling). Each entry records how it was classified
     (<code>mach:subcategoryBy</code>), so the taxonomy is auditable, not opinion.
   </div>
 
     <section class="cat">
-      <h2>Software <span class="ct">102</span></h2>
+      <h2>Software <span class="ct">105</span></h2>
       <p class="cd">Open-source healthcare software tools, platforms, and applications</p>
       <table>
         <thead><tr><th>Function</th><th>n</th><th>entries</th></tr></thead>
-        <tbody><tr><td class="fn">Medical imaging <code>medical-imaging</code></td><td class="n">59</td><td class="ex">3D Slicer, batchgenerators, Bio-Formats, CellProfiler, Cornerstone3D, dcm2niix, dcm4che, DCMTK …</td></tr><tr><td class="fn">Interoperability <code>interoperability</code></td><td class="n">15</td><td class="ex">Android FHIR SDK, Blaze, CARE, Apache cTAKES, DHIS2, EHRbase, HAPI FHIR, Medplum …</td></tr><tr><td class="fn">Clinical system <code>clinical-system</code></td><td class="n">11</td><td class="ex">Discharge Documentation Generator, FEMR, GNU Health, hf_ehr, MedCAT, No-Show Prediction, OpenOnco, OpenScribe …</td></tr><tr><td class="fn">Bioinformatics pipeline <code>bioinformatics-pipeline</code></td><td class="n">6</td><td class="ex">DeepVariant, GATK, NeuroKit2, Open-ECG-Digitizer, RDKit, WFDB Python</td></tr><tr><td class="fn">Research platform <code>research-platform</code></td><td class="n">4</td><td class="ex">BBMRI-ERIC Negotiator, MOLGENIS EMX2, Opal, Tidepool</td></tr><tr><td class="fn">Federated analytics <code>federated-analytics</code></td><td class="n">1</td><td class="ex">DataSHIELD</td></tr><tr><td class="fn">Clinical NLP <code>clinical-nlp</code></td><td class="n">1</td><td class="ex">Drug Named Entity Recognition</td></tr><tr><td class="fn">Pharmacometrics <code>pharmacometrics</code></td><td class="n">1</td><td class="ex">nlmixr2</td></tr><tr><td class="fn">Privacy &amp; de-identification <code>privacy-deid</code></td><td class="n">1</td><td class="ex">Veil</td></tr><tr><td class="fn">mHealth <code>mhealth</code></td><td class="n">3</td><td class="ex">AndroidAPS, Nightscout, OpenAPS</td></tr></tbody>
+        <tbody><tr><td class="fn">Medical imaging <code>medical-imaging</code></td><td class="n">61</td><td class="ex">3D Slicer, ANTs (Advanced Normalization Tools), batchgenerators, Bio-Formats, CellProfiler, Cornerstone3D, dcm2niix, dcm4che …</td></tr><tr><td class="fn">Interoperability <code>interoperability</code></td><td class="n">15</td><td class="ex">Android FHIR SDK, Blaze, CARE, Apache cTAKES, DHIS2, EHRbase, HAPI FHIR, Medplum …</td></tr><tr><td class="fn">Clinical system <code>clinical-system</code></td><td class="n">11</td><td class="ex">Discharge Documentation Generator, FEMR, GNU Health, hf_ehr, MedCAT, No-Show Prediction, OpenOnco, OpenScribe …</td></tr><tr><td class="fn">Bioinformatics pipeline <code>bioinformatics-pipeline</code></td><td class="n">6</td><td class="ex">DeepVariant, GATK, NeuroKit2, Open-ECG-Digitizer, RDKit, WFDB Python</td></tr><tr><td class="fn">Research platform <code>research-platform</code></td><td class="n">4</td><td class="ex">BBMRI-ERIC Negotiator, MOLGENIS EMX2, Opal, Tidepool</td></tr><tr><td class="fn">Federated analytics <code>federated-analytics</code></td><td class="n">2</td><td class="ex">DataSHIELD, OHDSI ATLAS</td></tr><tr><td class="fn">Clinical NLP <code>clinical-nlp</code></td><td class="n">1</td><td class="ex">Drug Named Entity Recognition</td></tr><tr><td class="fn">Pharmacometrics <code>pharmacometrics</code></td><td class="n">1</td><td class="ex">nlmixr2</td></tr><tr><td class="fn">Privacy &amp; de-identification <code>privacy-deid</code></td><td class="n">1</td><td class="ex">Veil</td></tr><tr><td class="fn">mHealth <code>mhealth</code></td><td class="n">3</td><td class="ex">AndroidAPS, Nightscout, OpenAPS</td></tr></tbody>
+      </table>
+    </section>
+    <section class="cat">
+      <h2>Medical Hardware <span class="ct">11</span></h2>
+      <p class="cd">Open-source medical and laboratory hardware — device designs, PCBs, firmware, and 3D-printable builds (imaging consoles, biosignal boards, microscopes, lab robots, therapeutic devices).
+</p>
+      <table>
+        <thead><tr><th>Function</th><th>n</th><th>entries</th></tr></thead>
+        <tbody><tr><td class="fn">Imaging hardware <code>imaging-hardware</code></td><td class="n">6</td><td class="ex">echOmods, MaRCoS, OCRA, OpenFlexure Microscope, openUC2, un0rick</td></tr><tr><td class="fn">Biosignal acquisition <code>biosignal-acquisition</code></td><td class="n">3</td><td class="ex">BioAmp EXG Pill, HealthyPi 5, OpenBCI GUI</td></tr><tr><td class="fn">Lab automation <code>lab-automation</code></td><td class="n">1</td><td class="ex">Opentrons</td></tr><tr><td class="fn">Therapeutic device <code>therapeutic-device</code></td><td class="n">1</td><td class="ex">Loop</td></tr><tr class="empty"><td class="fn">Point-of-care device <code>point-of-care-device</code></td><td class="n">0</td><td class="ex"></td></tr></tbody>
       </table>
     </section>
     <section class="cat">
@@ -106,11 +115,11 @@
       </table>
     </section>
     <section class="cat">
-      <h2>Data Sources <span class="ct">21</span></h2>
+      <h2>Data Sources <span class="ct">22</span></h2>
       <p class="cd">Continuously updated open registries, databases, and data feeds</p>
       <table>
         <thead><tr><th>Function</th><th>n</th><th>entries</th></tr></thead>
-        <tbody><tr><td class="fn">Registry <code>registry</code></td><td class="n">3</td><td class="ex">ClinicalTrials.gov, CMS Medicare Coverage Database, Vivli</td></tr><tr><td class="fn">Research database <code>research-database</code></td><td class="n">3</td><td class="ex">ChEMBL, PubMed, Synapse</td></tr><tr class="empty"><td class="fn">Knowledge base <code>knowledge-base</code></td><td class="n">0</td><td class="ex"></td></tr><tr><td class="fn">Terminology service <code>terminology</code></td><td class="n">3</td><td class="ex">bio.tools, NCBO BioPortal, ICD-11 API</td></tr><tr><td class="fn">Open data portal <code>open-data-portal</code></td><td class="n">6</td><td class="ex">ClinVar, Open Targets Platform, OpenAlex, Scottish Health and Social Care Open Data, PhysioNet, The Cancer Imaging Archive</td></tr><tr><td class="fn">Surveillance feed <code>surveillance-feed</code></td><td class="n">6</td><td class="ex">EMA Medicines Data, HealthMap, openFDA, PAHO Open Data Portal, ProMED, WHO Disease Outbreak News</td></tr></tbody>
+        <tbody><tr><td class="fn">Registry <code>registry</code></td><td class="n">3</td><td class="ex">ClinicalTrials.gov, CMS Medicare Coverage Database, Vivli</td></tr><tr><td class="fn">Research database <code>research-database</code></td><td class="n">3</td><td class="ex">ChEMBL, PubMed, Synapse</td></tr><tr class="empty"><td class="fn">Knowledge base <code>knowledge-base</code></td><td class="n">0</td><td class="ex"></td></tr><tr><td class="fn">Terminology service <code>terminology</code></td><td class="n">4</td><td class="ex">bio.tools, NCBO BioPortal, ICD-11 API, Mondo Disease Ontology</td></tr><tr><td class="fn">Open data portal <code>open-data-portal</code></td><td class="n">6</td><td class="ex">ClinVar, Open Targets Platform, OpenAlex, Scottish Health and Social Care Open Data, PhysioNet, The Cancer Imaging Archive</td></tr><tr><td class="fn">Surveillance feed <code>surveillance-feed</code></td><td class="n">6</td><td class="ex">EMA Medicines Data, HealthMap, openFDA, PAHO Open Data Portal, ProMED, WHO Disease Outbreak News</td></tr></tbody>
       </table>
     </section>
     <section class="cat">
@@ -131,13 +140,13 @@
     </section>
 
     <section class="cat">
-      <h2>Domain <span class="ct">top 20 of 39</span></h2>
+      <h2>Domain <span class="ct">top 20 of 46</span></h2>
       <p class="cd">Clinical and scientific areas (an entry may have several).</p>
-      <table><thead><tr><th>Domain</th><th>n</th></tr></thead><tbody><tr><td>research</td><td class="n">107</td></tr><tr><td>oncology</td><td class="n">67</td></tr><tr><td>primary-care</td><td class="n">38</td></tr><tr><td>secondary-care</td><td class="n">35</td></tr><tr><td>radiology</td><td class="n">32</td></tr><tr><td>public-health</td><td class="n">26</td></tr><tr><td>pathology</td><td class="n">26</td></tr><tr><td>cardiology</td><td class="n">19</td></tr><tr><td>rare-disease</td><td class="n">17</td></tr><tr><td>genomics</td><td class="n">17</td></tr><tr><td>neurology</td><td class="n">17</td></tr><tr><td>medical-imaging</td><td class="n">12</td></tr><tr><td>clinical-research</td><td class="n">11</td></tr><tr><td>epidemiology</td><td class="n">9</td></tr><tr><td>global-health</td><td class="n">8</td></tr><tr><td>surgery</td><td class="n">8</td></tr><tr><td>pharmacology</td><td class="n">6</td></tr><tr><td>critical-care</td><td class="n">6</td></tr><tr><td>drug-discovery</td><td class="n">5</td></tr><tr><td>neuroscience</td><td class="n">5</td></tr></tbody></table>
+      <table><thead><tr><th>Domain</th><th>n</th></tr></thead><tbody><tr><td>research</td><td class="n">121</td></tr><tr><td>oncology</td><td class="n">67</td></tr><tr><td>primary-care</td><td class="n">38</td></tr><tr><td>radiology</td><td class="n">38</td></tr><tr><td>secondary-care</td><td class="n">35</td></tr><tr><td>pathology</td><td class="n">28</td></tr><tr><td>public-health</td><td class="n">27</td></tr><tr><td>cardiology</td><td class="n">21</td></tr><tr><td>neurology</td><td class="n">20</td></tr><tr><td>rare-disease</td><td class="n">18</td></tr><tr><td>genomics</td><td class="n">18</td></tr><tr><td>medical-imaging</td><td class="n">12</td></tr><tr><td>clinical-research</td><td class="n">11</td></tr><tr><td>global-health</td><td class="n">10</td></tr><tr><td>epidemiology</td><td class="n">9</td></tr><tr><td>surgery</td><td class="n">8</td></tr><tr><td>pharmacology</td><td class="n">6</td></tr><tr><td>critical-care</td><td class="n">6</td></tr><tr><td>drug-discovery</td><td class="n">5</td></tr><tr><td>neuroscience</td><td class="n">5</td></tr></tbody></table>
     </section>
 
   <footer>
-    MACH — Machine-Actionable Catalog for Healthcare · taxonomy derived from 218 entries, regenerated in CI ·
+    MACH — Machine-Actionable Catalog for Healthcare · taxonomy derived from 233 entries, regenerated in CI ·
     model inspired by <a href="https://edamontology.org/" target="_blank" rel="noopener">EDAM</a> ·
     <a href="index.html">machcatalog.org</a>
   </footer>

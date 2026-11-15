@@ -21,7 +21,7 @@ def _load():
 
 
 def category_labels() -> dict[str, str]:
-    """Return {slug: display_name} for all 7 categories."""
+    """Return {slug: display_name} for all catalogue categories."""
     return {c["id"]: c["name"] for c in _load()["categories"]}
 
 
