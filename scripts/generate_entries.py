@@ -5,11 +5,17 @@ Reads all *.jsonld files from entries/ and rewrites the entries section
 of index.html with live data. Run locally or via GitHub Actions.
 """
 
+import html
 import json
 import os
 import re
 import sys
 from pathlib import Path
+
+
+def esc_attr(value):
+    """Escape a value for safe use inside a double-quoted HTML attribute."""
+    return html.escape(str(value or ""), quote=True)
 
 ENTRIES_DIR = Path("entries")
 INDEX_HTML  = Path("index.html")
@@ -142,6 +148,41 @@ def get_license_short(e):
         return lic.rstrip("/").split("/")[-1]
     return lic
 
+# Collapse the long tail of raw licence strings into a handful of buckets people
+# actually navigate by. The raw licence still shows on the card and detail page;
+# this is only for the filter. Order matters: non-commercial is checked before
+# the generic CC/open-data bucket so a CC-BY-NC lands in "non-commercial".
+def license_bucket(e):
+    lic = (get_license_short(e) or "").upper()
+    if not lic:
+        return "none"
+    if "NO-LICENSE" in lic or "NOASSERTION" in lic or lic in ("NONE", "OTHER"):
+        return "none"
+    # Non-commercial first (a CC-BY-NC must not fall into open-data).
+    if "-NC-" in lic or lic.endswith("-NC") or "NON-COMMERCIAL" in lic or "NONCOMMERCIAL" in lic:
+        return "noncommercial"
+    permissive = ("MIT", "APACHE", "BSD", "ISC", "0BSD", "ZLIB", "UNLICENSE", "W3C", "NEMA")
+    if any(p in lic for p in permissive):
+        return "permissive"
+    copyleft = ("GPL", "AGPL", "LGPL", "MPL", "EUPL", "EPL", "CDDL")
+    if any(p in lic for p in copyleft):
+        return "copyleft"
+    opendata = ("CC-BY", "CC0", "CC-0", "OGL", "PUBLIC-DOMAIN", "PUBLIC DOMAIN",
+                "GOVERNMENT-PUBLIC-DOMAIN", "FREELY-REUSABLE", "FREE-TO-USE",
+                "ISO-COPYRIGHT", "NCBO", "CHDL")
+    if any(p in lic for p in opendata):
+        return "opendata"
+    return "custom"
+
+_LICENSE_BUCKET_LABELS = {
+    "permissive":    "Permissive",
+    "copyleft":      "Copyleft",
+    "opendata":      "Open data",
+    "noncommercial": "Non-commercial",
+    "custom":        "Custom / restricted",
+    "none":          "No clear licence",
+}
+
 def get_jsonld_url(e):
     entry_id = e.get("@id", "")
     if "tree/main" in entry_id:
@@ -250,7 +291,16 @@ def build_entries_html(entries):
         detail_link = f'<a href="{detail_href}" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a>'
         links_html  = f'<div class="entry-card-links">{detail_link}{url_links}{jsonld_link}</div>'
 
-        cards.append(f"""    <div class="entry-card" data-cat="{cat}" data-license="{license_str}" data-judgement="{judgement}">
+        # ── Faceting attributes (from harvested signals + entry metadata) ──
+        lic_bucket = license_bucket(e)
+        lang_val   = (signals.get("primary_language") or "").strip()
+        health_val = (signals.get("repo_health") or "").strip().lower()
+        gov_val    = (e.get("mach:governance") or "").strip().lower()
+        on_pypi    = "1" if signals.get("pypi_downloads") not in (None, "", 0) else ""
+        on_hf      = "1" if signals.get("hf_downloads") not in (None, "", 0) \
+                             or e.get("mach:huggingFaceUrl") else ""
+
+        cards.append(f"""    <div class="entry-card" data-cat="{cat}" data-license="{license_str}" data-license-bucket="{lic_bucket}" data-lang="{esc_attr(lang_val)}" data-health="{health_val}" data-governance="{gov_val}" data-pypi="{on_pypi}" data-hf="{on_hf}" data-judgement="{judgement}">
       <div class="entry-card-meta">
         <span class="entry-cat">{cat_label}</span>{stars_badge}{judgement_badge}
       </div>
