@@ -725,9 +725,11 @@
     background: var(--gray-50); color: var(--gray-500);
   }
   .entry-health { font-size: 0.6rem; line-height: 1; margin-left: 2px; vertical-align: middle; }
-  .health-active, .health-maintained { color: var(--teal-500); }
-  .health-dormant, .health-stale, .health-unknown { color: var(--amber); }
-  .health-archived { color: var(--rose, #BE123C); }
+  /* WCAG 2.1 AA: these dots carry a title so colour isn't the only signal, but the
+     colours still meet 4.5:1 on the card background (teal-700 / amber-dark / #BE123C). */
+  .health-active, .health-maintained { color: var(--teal-700); }
+  .health-dormant, .health-stale, .health-unknown { color: var(--amber-dark); }
+  .health-archived { color: #BE123C; }
 
   .entry-card[data-cat="clinical-systems"]                .entry-type { background: var(--teal-50);      color: var(--teal-700); }
   .entry-card[data-cat="specs"]      .entry-type { background: var(--sky-light);    color: var(--sky); }
