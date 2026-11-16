@@ -916,6 +916,13 @@
   .more-toggle:hover { text-decoration: underline; }
   .filter-more { gap: 0.4rem 0.75rem; }
 
+  /* Judgement filter buttons — tint the text/border with the verdict colour when
+     inactive; the shared .filter-btn.active (teal) still marks the selected one. */
+  #filter-judgement .filter-btn.ring-adopt:not(.active)   { color: var(--teal-700);  border-color: var(--teal-300); }
+  #filter-judgement .filter-btn.ring-assess:not(.active)  { color: var(--amber-dark); border-color: #FCD34D; }
+  #filter-judgement .filter-btn.ring-caution:not(.active) { color: #BE123C;          border-color: #FDA4AF; }
+  #filter-judgement .filter-btn.ring-none:not(.active)    { color: var(--gray-500);  border-color: var(--border); }
+
   /* Category filter buttons: per-category color injected via --c / --b / --cb CSS vars */
   #filter-cat .filter-btn[data-value]:not(.active) { color: var(--c, var(--gray-500)); border-color: var(--cb, var(--border)); }
   #filter-cat .filter-btn[data-value]:hover        { background: var(--b, var(--teal-50)) !important; border-color: var(--c, var(--teal-300)) !important; color: var(--c, var(--teal-700)) !important; }
@@ -1282,6 +1289,10 @@
       <div class="filter-bar" id="filter-cat"></div>
     </div>
     <div class="filter-row">
+      <span class="filter-label">Judgement</span>
+      <div class="filter-bar" id="filter-judgement"></div>
+    </div>
+    <div class="filter-row">
       <span class="filter-label">License</span>
       <div class="filter-bar" id="filter-lic"></div>
     </div>
@@ -1297,8 +1308,6 @@
         <button type="button" class="filter-btn chip-toggle" data-source="pypi">On PyPI</button>
         <button type="button" class="filter-btn chip-toggle" data-source="hf">On HuggingFace</button>
       </div>
-      <span class="filter-label">Health</span>
-      <div class="filter-bar" id="filter-health"></div>
     </div>
     <button type="button" id="more-toggle" class="more-toggle" aria-expanded="false">More filters +</button>
   </div>
@@ -3619,7 +3628,7 @@
     'compliance-governance':          { c:'#D97706', b:'#FFFBEB', cb:'rgba(217,119,6,0.28)' },
   };
 
-  const active = { cat: '', license: '', lang: '', health: '', search: '', pypi: false, hf: false };
+  const active = { cat: '', license: '', lang: '', judgement: '', search: '', pypi: false, hf: false };
 
   function getVisible() {
     return rows.filter(r => {
@@ -3628,13 +3637,15 @@
       // License now filters by bucket (data-license-bucket) rather than raw string.
       const licOk    = !active.license || d.licenseBucket === active.license;
       const langOk   = !active.lang    || d.lang === active.lang;
-      const healthOk = !active.health  || d.health === active.health;
+      // Judgement: '__none__' matches not-scored (empty data-judgement).
+      const judgeOk  = !active.judgement
+                       || (active.judgement === '__none__' ? !d.judgement : d.judgement === active.judgement);
       const pypiOk   = !active.pypi    || d.pypi === '1';
       const hfOk     = !active.hf      || d.hf === '1';
       const nameEl   = r.querySelector('.entry-name');
       const name     = nameEl ? nameEl.textContent.toLowerCase() : '';
       const searchOk = !active.search  || name.includes(active.search);
-      return catOk && licOk && langOk && healthOk && pypiOk && hfOk && searchOk;
+      return catOk && licOk && langOk && judgeOk && pypiOk && hfOk && searchOk;
     });
   }
 
@@ -3762,12 +3773,45 @@
     none:          'No licence',
   };
   const LIC_ORDER = ['permissive', 'copyleft', 'opendata', 'noncommercial', 'custom', 'none'];
-  const healthLabels = { active: 'Active', maintained: 'Maintained', dormant: 'Dormant', stale: 'Stale', archived: 'Archived', unknown: 'Unknown' };
-  const HEALTH_ORDER = ['active', 'maintained', 'dormant', 'stale', 'archived', 'unknown'];
-
   buildBar('filter-cat', 'cat',           v => catLabels[v] || v);
   buildBar('filter-lic', 'licenseBucket', v => licLabels[v] || v, { activeKey: 'license', order: LIC_ORDER });
-  buildBar('filter-health', 'health',     v => healthLabels[v] || v, { order: HEALTH_ORDER });
+
+  // Judgement filter — MACH's rule-based verdict. Built by hand because the
+  // not-scored bucket is an EMPTY data-judgement, which buildBar would skip.
+  (function buildJudgementBar() {
+    const bar = document.getElementById('filter-judgement');
+    if (!bar) return;
+    // Fixed order; only show buckets that have entries.
+    const defs = [
+      { value: 'Adopt',     label: 'Adopt' },
+      { value: 'Assess',    label: 'Assess' },
+      { value: 'Caution',   label: 'Caution' },
+      { value: '__none__',  label: 'Not scored' },
+    ];
+    const present = new Set(rows.map(r => r.dataset.judgement || '__none__'));
+
+    const allBtn = document.createElement('button');
+    allBtn.className = 'filter-btn active';
+    allBtn.textContent = 'All';
+    bar.appendChild(allBtn);
+
+    defs.filter(d => present.has(d.value)).forEach(d => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn ring-' + (d.value === '__none__' ? 'none' : d.value.toLowerCase());
+      btn.textContent = d.label;
+      btn.dataset.value = d.value;
+      bar.appendChild(btn);
+    });
+
+    bar.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      active.judgement = btn.dataset.value || '';
+      applyFilters();
+    });
+  })();
 
   // Language dropdown — populated from distinct data-lang values, sorted by count.
   (function buildLangSelect() {
