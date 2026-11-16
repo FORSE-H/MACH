@@ -47,7 +47,7 @@
       "mach:evidenceType": "primary-instance"
     }
   ],
-  "mach:swhid": "swh:1:ori:bad33cfc5f6225b393ccb4ae5c7f1dcd57da2587",
+  "mach:swhid": "swh:1:snp:8ee19e9fa1b449c53c05009082604f6788b9b89a",
   "mach:licenseUrl": "https://github.com/invesalius/invesalius3/blob/master/LICENSE.txt",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"

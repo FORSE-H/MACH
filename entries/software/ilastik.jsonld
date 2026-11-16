@@ -67,7 +67,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:1a0f9e55ae15248b77fa2c3d59abaf400a7da5c8",
+  "mach:swhid": "swh:1:snp:8f4a2250a3985233cc1163ab2adf52a9e91248cc",
   "mach:licenseUrl": "https://github.com/ilastik/ilastik/blob/main/LICENSE",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"

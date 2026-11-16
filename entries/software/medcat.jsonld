@@ -78,7 +78,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:57f852844383702e16feacee6a4c21ab566ecbb8",
+  "mach:swhid": "swh:1:snp:12414481bfd88e53def331f955eb963a79de8ba3",
   "mach:licenseUrl": "https://github.com/CogStack/MedCAT/blob/main/LICENSE",
   "mach:subcategoryBy": "rule:keyword"
 }

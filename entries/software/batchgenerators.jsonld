@@ -64,7 +64,7 @@
       "mach:evidenceType": "package-registry"
     }
   ],
-  "mach:swhid": "swh:1:ori:44448b42bffd1287b21a27e60218a4503a74ffc2",
+  "mach:swhid": "swh:1:snp:a388aa21d98da7dc0827b79eeed57dff35cdd48e",
   "mach:licenseUrl": "https://github.com/MIC-DKFZ/batchgenerators/blob/master/LICENSE",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"

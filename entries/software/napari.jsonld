@@ -72,7 +72,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:b7112c49b4d78cbbdfb57ccbfeda879cfa98f796",
+  "mach:swhid": "swh:1:snp:b4f7bbfd68b8412322710a21eda2df6d2cbe3843",
   "mach:licenseUrl": "https://github.com/napari/napari/blob/main/LICENSE",
   "mach:subcategoryBy": "rule:keyword"
 }

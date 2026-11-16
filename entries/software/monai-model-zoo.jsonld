@@ -90,7 +90,7 @@
     "nnunet",
     "medsam"
   ],
-  "mach:swhid": "swh:1:ori:98b121215e6edcf92020c17b4be4630649dd2b3a",
+  "mach:swhid": "swh:1:snp:7dac88c751d65c28e63404ddaee01a97c3a676dc",
   "mach:licenseUrl": "https://github.com/Project-MONAI/model-zoo/blob/master/LICENSE",
   "mach:subcategoryBy": "rule:keyword"
 }

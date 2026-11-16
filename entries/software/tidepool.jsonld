@@ -53,7 +53,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:707382a9c618b502598d7a6f7df7dd9e7621a93a",
+  "mach:swhid": "swh:1:snp:577204f94017846523678078c4cc86460d0654d8",
   "mach:licenseUrl": "https://github.com/tidepool-org/platform/blob/master/LICENSE",
   "mach:subcategory": "research-platform",
   "mach:subcategoryBy": "rule:keyword"

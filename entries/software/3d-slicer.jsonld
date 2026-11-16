@@ -80,7 +80,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:1c47cace64b6d3d27e7ebed181954efe10a9b03f",
+  "mach:swhid": "swh:1:snp:60f059bb8a40b5bec78283ec7def52643796ef98",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"
 }

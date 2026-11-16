@@ -67,7 +67,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:a71470b5e4a4e1319e3067f657638f96dab2e19d",
+  "mach:swhid": "swh:1:snp:b12432cb768b912e3eeb4a7ce60d2f8b4e9156f8",
   "mach:licenseUrl": "https://github.com/CellProfiler/CellProfiler/blob/main/LICENSE",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"

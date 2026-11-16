@@ -73,6 +73,6 @@
   "mach:alternativeTo": [
     "openehr-mcp-deak"
   ],
-  "mach:swhid": "swh:1:ori:f72700672dbb916abe85f7f659412f43106ba1d8",
+  "mach:swhid": "swh:1:snp:4f4bbaa4d78cb935d4a7072c9f8ac35b43541703",
   "mach:licenseUrl": "https://github.com/Cadasto/openehr-assistant-mcp/blob/main/LICENSE"
 }

@@ -65,7 +65,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:c27fb46b1da361cc06ca0c4ea47d69f803f4e441",
+  "mach:swhid": "swh:1:snp:4bd895d6a13bd2d3efc51d32dcb4f1da112bbfc9",
   "mach:licenseUrl": "https://github.com/NCI-GDC/gdc-client/blob/master/LICENSE",
   "mach:subcategory": "imaging-dataset",
   "mach:subcategoryBy": "rule:keyword"

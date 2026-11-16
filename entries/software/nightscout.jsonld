@@ -76,7 +76,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:fefab2e3a4665e465b42617db0f2a2b294ae9275",
+  "mach:swhid": "swh:1:snp:0a03e3c49e400e6c022f130f2f0baf788b0c6509",
   "mach:licenseUrl": "https://github.com/nightscout/cgm-remote-monitor/blob/master/LICENSE",
   "mach:subcategory": "mhealth",
   "mach:subcategoryBy": "rule:keyword"

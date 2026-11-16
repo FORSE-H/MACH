@@ -72,7 +72,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:036da6a71398bcbe1fc15743863fc6dc9ca3e23d",
+  "mach:swhid": "swh:1:snp:76e1cba5770fe1dbbc1580f1b857815314030c95",
   "mach:licenseUrl": "https://github.com/nipreps/fmriprep/blob/master/LICENSE",
   "mach:subcategoryBy": "rule:keyword"
 }
