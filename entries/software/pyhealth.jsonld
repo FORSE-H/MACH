@@ -104,7 +104,7 @@
     "torcheeg",
     "medicalai"
   ],
-  "mach:swhid": "swh:1:ori:02d8b4f6ac3e8499e44bd640ada6d5d4a5318ea1",
+  "mach:swhid": "swh:1:snp:9c416d6e3891677ccc3fdf8f96d2d8f9cbfa6b86",
   "mach:licenseUrl": "https://github.com/sunlabuiuc/PyHealth/blob/master/LICENSE",
   "mach:subcategoryBy": "rule:spec"
 }

@@ -100,7 +100,7 @@
     "totalsegmentator",
     "medsam"
   ],
-  "mach:swhid": "swh:1:ori:553d7b2c96a0c0c4646cce9e77e1af8857b71f35",
+  "mach:swhid": "swh:1:snp:75495dff51cd39635d86d6c4fb416670c9a973aa",
   "mach:licenseUrl": "https://github.com/MIC-DKFZ/nnUNet/blob/master/LICENSE",
   "mach:subcategoryBy": "rule:keyword"
 }

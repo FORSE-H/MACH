@@ -64,6 +64,6 @@
   "mach:alternativeTo": [
     "openehr-mcp-cadasto"
   ],
-  "mach:swhid": "swh:1:ori:1412de90d56ffa05fca10fdcdbcf33ce415a570d",
+  "mach:swhid": "swh:1:snp:7f6e49ada02c404236f68e50407196a1307e7fda",
   "mach:licenseUrl": "https://github.com/deak-ai/openehr-mcp-server/blob/main/LICENSE"
 }

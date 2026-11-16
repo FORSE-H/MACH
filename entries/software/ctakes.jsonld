@@ -58,7 +58,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:c8dec29349bebf664429f3c370184ada99106986",
+  "mach:swhid": "swh:1:snp:44bb080283ba814d2c4fedc1db1b0d157a13a806",
   "mach:licenseUrl": "https://github.com/apache/ctakes/blob/main/LICENSE",
   "mach:subcategory": "interoperability",
   "mach:subcategoryBy": "rule:keyword"

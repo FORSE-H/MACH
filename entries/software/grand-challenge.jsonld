@@ -77,7 +77,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:273c545f6336388e991aba06bac9e81a6423280f",
+  "mach:swhid": "swh:1:snp:1afd81b18c9d3869cc7f6cf90e52361a13a0e9cc",
   "mach:licenseUrl": "https://github.com/comic/grand-challenge.org/blob/main/LICENSE",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"

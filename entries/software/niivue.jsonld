@@ -7,7 +7,7 @@
   "identifier": "niivue",
   "name": "NiiVue",
   "description": "Browser-based medical image visualisation library supporting 30+ neuroimaging formats including NIfTI, DICOM, MGH, NRRD, tractography, and surface meshes. Built on WebGL2 with active migration to a monorepo architecture adding WebGPU support and smaller bundle sizes. Designed for embedding in web applications, Jupyter notebooks, and VSCode extensions. Developed by a community spanning multiple neuroimaging institutions. Complements OHIF Viewers for NIfTI-first neuroimaging workflows where DICOM is not the primary format.",
-  "url": "https://niivue.github.io/niivue/",
+  "url": "https://niivue.com/",
   "codeRepository": "https://github.com/niivue/niivue",
   "license": "BSD-2-Clause",
   "version": "0.69.0",
@@ -49,7 +49,7 @@
     },
     {
       "@type": "schema:WebPage",
-      "url": "https://niivue.github.io/niivue/",
+      "url": "https://niivue.com/",
       "mach:evidenceType": "primary-instance"
     }
   ],

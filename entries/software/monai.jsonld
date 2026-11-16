@@ -58,7 +58,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:d5118eba6654e6d3488010d9d81129124bfd708c",
+  "mach:swhid": "swh:1:snp:51604761f5e2d62fe11636a5aba98f42ca5c5253",
   "mach:licenseUrl": "https://github.com/Project-MONAI/MONAI/blob/main/LICENSE",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"

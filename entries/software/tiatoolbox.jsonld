@@ -67,7 +67,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:460cc70e87c788df9df943fd780f7f14b51df719",
+  "mach:swhid": "swh:1:snp:99e9b8f5de4752c9fa4b1db01b6728bbe47a2d60",
   "mach:licenseUrl": "https://github.com/TissueImageAnalytics/tiatoolbox/blob/master/LICENSE",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"

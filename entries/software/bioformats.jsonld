@@ -69,7 +69,7 @@
       "mach:evidenceType": "project-website"
     }
   ],
-  "mach:swhid": "swh:1:ori:88972ad5d906f74bdce0ae152786d8612acbc110",
+  "mach:swhid": "swh:1:snp:31b9b24129d5f15ba5c2afa80b5b085d24e5605f",
   "mach:licenseUrl": "https://github.com/ome/bioformats/blob/master/LICENSE.txt",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"

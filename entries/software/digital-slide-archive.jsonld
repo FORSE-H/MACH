@@ -49,7 +49,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:ef8943df8ef565260c4bb51ca73dac11cb906086",
+  "mach:swhid": "swh:1:snp:a3618a0dcbe33255457ca1aceed8a2b430eea9cc",
   "mach:licenseUrl": "https://github.com/DigitalSlideArchive/digital_slide_archive/blob/master/LICENSE",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"

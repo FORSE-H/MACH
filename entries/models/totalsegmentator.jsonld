@@ -79,7 +79,7 @@
       "mach:evidenceType": "package-registry"
     }
   ],
-  "mach:swhid": "swh:1:ori:bee3294d70de8f5fa0655c09419e3d6378ac74a5",
+  "mach:swhid": "swh:1:snp:a0bd73494958b597015b839b3716bb3c1c3b8e0d",
   "mach:licenseUrl": "https://github.com/wasserth/TotalSegmentator/blob/master/LICENSE",
   "mach:subcategory": "imaging-model",
   "mach:subcategoryBy": "rule:keyword"

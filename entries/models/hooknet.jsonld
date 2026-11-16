@@ -53,7 +53,7 @@
       "schema:name": "HookNet: Multi-resolution convolutional neural networks for semantic segmentation in histopathology whole-slide images. Medical Image Analysis 2021."
     }
   ],
-  "mach:swhid": "swh:1:ori:2a952e9785ef8246bb449110c937d1ad79468166",
+  "mach:swhid": "swh:1:snp:b3cc15adb363b9f6b582d69704e88b6ba059fb14",
   "mach:licenseUrl": "https://github.com/DIAGNijmegen/pathology-hooknet/blob/master/LICENSE",
   "mach:subcategory": "imaging-model",
   "mach:subcategoryBy": "rule:keyword"

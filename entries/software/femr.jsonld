@@ -53,7 +53,7 @@
       "mach:evidenceType": "primary-repo"
     }
   ],
-  "mach:swhid": "swh:1:ori:9b741685df88a449a445ad2b5d4cb012cf249668",
+  "mach:swhid": "swh:1:snp:20e82db0a00de0a26e7c7069d5d000d046355ed8",
   "mach:licenseUrl": "https://github.com/som-shahlab/femr/blob/main/LICENSE",
   "mach:subcategory": "clinical-system",
   "mach:subcategoryBy": "rule:keyword"

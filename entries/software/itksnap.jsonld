@@ -47,7 +47,7 @@
       "mach:evidenceType": "primary-instance"
     }
   ],
-  "mach:swhid": "swh:1:ori:0c34580f7821ced612e0927d5f618b5d7368bc74",
+  "mach:swhid": "swh:1:snp:8f3e8257d27ffc1a363b32392592df12024d1bab",
   "mach:subcategory": "medical-imaging",
   "mach:subcategoryBy": "rule:keyword"
 }

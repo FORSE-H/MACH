@@ -57,7 +57,7 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:swhid": "swh:1:ori:c31d9bde6ee14ed592c4ed5a2217dbf0d1c2d292",
+  "mach:swhid": "swh:1:snp:4b77f7e53b3241b203ea28c342def3d60d7069ee",
   "mach:licenseUrl": "https://github.com/medplum/medplum/blob/main/LICENSE.txt",
   "mach:subcategory": "interoperability",
   "mach:subcategoryBy": "rule:keyword"

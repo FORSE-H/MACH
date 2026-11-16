@@ -56,7 +56,7 @@
       "mach:evidenceType": "primary-instance"
     }
   ],
-  "mach:swhid": "swh:1:ori:957ded432989ad8e850231107579cc1d776fb218",
+  "mach:swhid": "swh:1:snp:03eece3e1d75b75eece35e1d4c5be0e07de17d40",
   "mach:licenseUrl": "https://github.com/FAIRDataTeam/FAIRDataPoint/blob/master/LICENSE",
   "mach:subcategory": "interoperability-standard",
   "mach:subcategoryBy": "rule:keyword"
