@@ -1,0 +1,66 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/helios-fhir",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "helios-fhir",
+  "name": "Helios FHIR Server",
+  "alternateName": [
+    "hfs",
+    "HeliosSoftware/hfs"
+  ],
+  "description": "Implementation of the HL7 FHIR standard built in Rust for high performance, optimised for clinical analytics workloads. Distributed as a Cargo workspace with GitHub releases and container images. MIT-licensed, actively developed.",
+  "url": "https://github.com/HeliosSoftware/hfs",
+  "codeRepository": "https://github.com/HeliosSoftware/hfs",
+  "license": "MIT",
+  "programmingLanguage": [
+    "Rust"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Docker"
+  ],
+  "keywords": [
+    "fhir",
+    "hl7",
+    "fhir-server",
+    "rust",
+    "interoperability",
+    "clinical-analytics",
+    "high-performance"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Helios Software",
+      "url": "https://github.com/HeliosSoftware"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:foundation": "Helios Software",
+  "mach:category": "software",
+  "mach:editorialReviewedAt": "2026-11-20",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "interoperability",
+    "research"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/HeliosSoftware/hfs",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fhir-r4"
+  ],
+  "mach:subcategory": "interoperability",
+  "mach:subcategoryBy": "rule:keyword"
+}

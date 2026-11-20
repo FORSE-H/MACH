@@ -1,0 +1,65 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/ballerina-fhir",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "ballerina-fhir",
+  "name": "Ballerina Health FHIR R4",
+  "alternateName": [
+    "Ballerina FHIR",
+    "module-ballerinax-health.fhir.r4"
+  ],
+  "description": "FHIR R4 packages and a service framework for the Ballerina programming language: data types, resource models, parsers, serializers, a FHIR service type, and utilities for building FHIR-native integrations and APIs. A set of building blocks rather than a single turnkey server. Maintained by the Ballerina platform team (WSO2 ecosystem).",
+  "url": "https://github.com/ballerina-platform/module-ballerinax-health.fhir.r4",
+  "codeRepository": "https://github.com/ballerina-platform/module-ballerinax-health.fhir.r4",
+  "license": "Apache-2.0",
+  "programmingLanguage": [
+    "Ballerina",
+    "Java"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "keywords": [
+    "fhir",
+    "hl7",
+    "fhir-r4",
+    "interoperability",
+    "ballerina",
+    "integration",
+    "healthcare-api"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Ballerina platform (WSO2)",
+      "url": "https://github.com/ballerina-platform"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:foundation": "WSO2",
+  "mach:category": "software",
+  "mach:editorialReviewedAt": "2026-11-20",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:clinicalDomain": [
+    "interoperability"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/ballerina-platform/module-ballerinax-health.fhir.r4",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fhir-r4"
+  ],
+  "mach:subcategory": "interoperability",
+  "mach:subcategoryBy": "rule:keyword"
+}
