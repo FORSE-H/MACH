@@ -1,0 +1,65 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/bwell-fhir",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "bwell-fhir",
+  "name": "bWell FHIR Server (Helix)",
+  "alternateName": [
+    "Helix FHIR Server",
+    "icanbwell/fhir-server"
+  ],
+  "description": "Open-source FHIR server backed by MongoDB, developed by b.well Connected Health (the \"Helix\" FHIR Server). Implements the HL7 FHIR standard for storing, searching, and exchanging clinical resources at scale. Node.js/JavaScript, MIT-licensed, actively developed.",
+  "url": "https://github.com/icanbwell/fhir-server",
+  "codeRepository": "https://github.com/icanbwell/fhir-server",
+  "license": "MIT",
+  "programmingLanguage": [
+    "JavaScript"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Docker"
+  ],
+  "keywords": [
+    "fhir",
+    "hl7",
+    "fhir-server",
+    "mongodb",
+    "interoperability",
+    "nodejs"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "b.well Connected Health",
+      "url": "https://github.com/icanbwell"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:foundation": "b.well Connected Health",
+  "mach:category": "software",
+  "mach:editorialReviewedAt": "2026-11-20",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "interoperability"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/icanbwell/fhir-server",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:supportsSpec": [
+    "https://github.com/FORSE-H/MACH/tree/main/entries/specs/fhir-r4"
+  ],
+  "mach:subcategory": "interoperability",
+  "mach:subcategoryBy": "rule:keyword"
+}
