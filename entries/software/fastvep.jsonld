@@ -1,0 +1,86 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/fastvep",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "fastvep",
+  "name": "fastVEP",
+  "alternateName": [
+    "fastVEP - Variant Effect Predictor"
+  ],
+  "description": "High-performance variant effect predictor written in Rust. Annotates genomic variants with consequence, impact, HGVS names, ClinVar, population frequency (gnomAD), AlphaMissense, and ACMG-AMP pathogenicity class (Richards 2015 + ClinGen SVI rule set). Inspired by and compatible with Ensembl VEP and Illumina Nirvana. Offers a CLI, a self-hostable REST API, and a browser-based annotator at fastvep.org. From the Huang Lab, Icahn School of Medicine at Mount Sinai.",
+  "url": "https://fastvep.org/",
+  "codeRepository": "https://github.com/Huang-lab/fastVEP",
+  "relatedLink": [
+    "https://fastvep.org/",
+    "https://doi.org/10.64898/2026.04.14.718452",
+    "https://doi.org/10.64898/2026.11.16.26368228"
+  ],
+  "license": "Apache-2.0",
+  "mach:licenseUrl": "https://github.com/Huang-lab/fastVEP/blob/master/LICENSE.md",
+  "version": "0.6.2",
+  "dateModified": "2026-11-19",
+  "programmingLanguage": [
+    "Rust"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "keywords": [
+    "genomics",
+    "variant-calling",
+    "variant-annotation",
+    "variant-effect-predictor",
+    "bioinformatics",
+    "clinical-genetics",
+    "acmg",
+    "clinvar",
+    "gnomad",
+    "rust"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Huang Lab, Icahn School of Medicine at Mount Sinai",
+      "url": "https://labs.icahn.mssm.edu/kuanhuanglab"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Icahn School of Medicine at Mount Sinai",
+  "mach:category": "software",
+  "mach:editorialReviewedAt": "2026-11-20",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cli",
+    "offline-capable"
+  ],
+  "mach:clinicalDomain": [
+    "genomics",
+    "clinical-genetics",
+    "rare-disease",
+    "research"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/Huang-lab/fastVEP",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://fastvep.org/",
+      "mach:evidenceType": "project-website"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://doi.org/10.64898/2026.04.14.718452",
+      "mach:evidenceType": "preprint"
+    }
+  ],
+  "mach:subcategory": "bioinformatics-pipeline",
+  "mach:subcategoryBy": "rule:keyword"
+}
