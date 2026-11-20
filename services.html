@@ -57,41 +57,11 @@
   h1 { font-size:2.3rem; font-weight:600; line-height:1.15; letter-spacing:-.01em; margin:0 0 16px; }
   .lede { font-size:1.12rem; color:var(--gray-700); max-width:62ch; margin:0; }
 
-  /* Free-first banner */
-  .freebar { background:var(--teal-50); border:1px solid var(--teal-100); border-radius:12px; padding:16px 20px; margin:28px 0 8px; font-size:.95rem; color:var(--gray-700); }
-  .freebar b { color:var(--gray-900); }
-  :root[data-theme="dark"] .freebar, :root:not([data-theme="light"]) .freebar { border-color:var(--teal-700); }
-
-  section { padding:34px 0 6px; }
   h2 { font-size:1.5rem; font-weight:600; letter-spacing:-.01em; margin:0 0 8px; }
   .sub { color:var(--gray-500); margin:0 0 24px; max-width:60ch; }
 
-  /* Service cards */
-  .svcs { display:grid; grid-template-columns:1fr; gap:16px; }
-  .svc { background:var(--gray-50); border:1px solid var(--border); border-radius:12px; padding:22px 24px; }
-  .svc .tag { font-family:'DM Mono',monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--teal-700); margin:0 0 8px; }
-  .svc h3 { font-size:1.14rem; font-weight:600; margin:0 0 8px; }
-  .svc p { margin:0 0 12px; color:var(--gray-700); font-size:.96rem; }
-  .svc ul { margin:0; padding-left:20px; }
-  .svc li { margin-bottom:5px; color:var(--gray-500); font-size:.92rem; }
-  .svc li b { color:var(--gray-700); font-weight:500; }
-
-  /* Why me */
-  .why { display:grid; grid-template-columns:1fr 1fr; gap:14px 26px; margin-top:10px; }
-  .why .item { font-size:.95rem; color:var(--gray-700); }
-  .why .item b { display:block; color:var(--gray-900); font-weight:600; margin-bottom:2px; }
-
-  /* How it works */
-  .steps { counter-reset:s; display:grid; gap:14px; margin-top:8px; }
-  .step { display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; }
-  .step .n { counter-increment:s; width:30px; height:30px; border-radius:50%; background:var(--teal-700); color:#fff; display:grid; place-items:center; font-weight:600; font-size:.9rem; }
-  .step .n::before { content:counter(s); }
-  .step .t { font-size:.96rem; color:var(--gray-700); padding-top:3px; }
-  .step .t b { color:var(--gray-900); }
-
-  /* CTA */
   /* Get in touch — two columns like the gro-diet form */
-  .contact { padding:42px 0 6px; border-top:1px solid var(--border); margin-top:34px; }
+  .contact { padding:40px 0 6px; }
   .contact h2 { font-size:1.6rem; }
   .contact > .sub { margin-bottom:28px; }
   .contact-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:40px; align-items:start; }
@@ -146,71 +116,6 @@
     <h1>Hands-on help with open-source healthcare software</h1>
     <p class="lede">The MACH catalog is free and open, and always will be. Separately, I offer paid consultancy, auditing, and proof-of-concept implementation for teams that want expert help putting open-source healthcare tools into practice.</p>
   </div>
-
-  <div class="freebar">
-    <b>To be clear:</b> the catalog, its data, and its judgements are free, open, and independent — nothing here gates them. These services are optional expert help from the person who built MACH, for organisations that want a deeper, hands-on engagement.
-  </div>
-
-  <section>
-    <h2>What I offer</h2>
-    <p class="sub">Focused, practical engagements around open-source healthcare software, models, and standards.</p>
-    <div class="svcs">
-
-      <div class="svc">
-        <p class="tag">Advisory</p>
-        <h3>Consultancy &amp; tool selection</h3>
-        <p>Deciding which open-source tool fits your context — imaging, FHIR/interoperability, clinical NLP, data platforms, AI tooling — and how it compares to alternatives.</p>
-        <ul>
-          <li><b>Landscape &amp; shortlist</b> for a specific need, with the evidence behind each option</li>
-          <li><b>Build-vs-adopt</b> guidance and open-vs-commercial trade-offs</li>
-          <li><b>Standards fit</b> — FHIR, DICOM, OMOP, openEHR and what adopting them really involves</li>
-        </ul>
-      </div>
-
-      <div class="svc">
-        <p class="tag">Assurance</p>
-        <h3>Auditing &amp; due diligence</h3>
-        <p>An independent, transparent assessment of an open-source tool or model before you rely on it — openness, maintenance, licence, provenance, and fit for your setting.</p>
-        <ul>
-          <li><b>Openness &amp; licence audit</b> — is it genuinely open, and usable in your context?</li>
-          <li><b>Maintenance &amp; health review</b> — activity, governance, longevity risk</li>
-          <li><b>Provenance &amp; archival</b> — reproducibility, Software Heritage archiving, citability</li>
-        </ul>
-      </div>
-
-      <div class="svc">
-        <p class="tag">Delivery</p>
-        <h3>Proof-of-concept implementation</h3>
-        <p>A working proof of concept so you can evaluate an open-source tool with your own (non-identifiable) data before committing — de-risking the decision with something you can actually run.</p>
-        <ul>
-          <li><b>PoC build &amp; deployment</b> of a shortlisted open tool in a sandbox you control</li>
-          <li><b>Integration spikes</b> — connecting to FHIR, imaging, or data pipelines</li>
-          <li><b>Handover</b> — documentation and a clear path to production (or a clear "not yet")</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <h2>Why work with me</h2>
-    <p class="sub">The same rigour that built the catalog, applied to your specific decision.</p>
-    <div class="why">
-      <div class="item"><b>Independent &amp; vendor-neutral</b>I don't sell or resell the tools — so the advice has no product to push.</div>
-      <div class="item"><b>Evidence-driven</b>Recommendations trace to signals and sources, the way MACH's judgements do — nothing opaque.</div>
-      <div class="item"><b>Deep open-source knowledge</b>Built and maintain a curated catalog of 230+ open healthcare tools, their licences, health and provenance.</div>
-      <div class="item"><b>Healthcare context</b>Work informed by firsthand experience of real clinical software environments and their constraints.</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>How it works</h2>
-    <div class="steps">
-      <div class="step"><div class="n"></div><div class="t"><b>Short intro call.</b> You describe the problem or the tool in question; I tell you honestly whether I can help and whether it's even worth paid work.</div></div>
-      <div class="step"><div class="n"></div><div class="t"><b>Scoped proposal.</b> A clear, fixed-scope engagement — advisory, audit, or PoC — with the deliverable, timeline, and cost agreed up front.</div></div>
-      <div class="step"><div class="n"></div><div class="t"><b>Delivery &amp; handover.</b> You get a concrete output — a shortlist, an audit report, or a running proof of concept — that you own.</div></div>
-    </div>
-  </section>
 
   <div class="contact">
     <h2>Get in touch</h2>
