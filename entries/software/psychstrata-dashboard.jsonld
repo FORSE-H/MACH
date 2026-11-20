@@ -1,0 +1,71 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/psychstrata-dashboard",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "psychstrata-dashboard",
+  "name": "PsychStrata Dashboard",
+  "description": "Interactive dashboard for shared decision-making on treatment resistance in major depressive disorder (MDD). Presents prediction, explainability (feature attribution), and patient stratification (t-SNE) to support clinician–patient discussion of treatment options. Python backend + TypeScript/Vite frontend, Docker Compose, with a live synthetic-data demo. From Fraunhofer SCAI (the PsychStrata EU project). A research prototype on synthetic data — explicitly not a medical device and not for clinical use.",
+  "url": "https://demo.psychstrata.bio.scai.fraunhofer.de/",
+  "codeRepository": "https://github.com/SCAI-BIO/psychstrata-dashboard",
+  "relatedLink": [
+    "https://psych-strata.eu/",
+    "https://doi.org/10.5281/zenodo.22922039"
+  ],
+  "license": "Apache-2.0",
+  "programmingLanguage": [
+    "TypeScript",
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "Docker"
+  ],
+  "keywords": [
+    "dashboard",
+    "psychiatry",
+    "major-depressive-disorder",
+    "treatment-resistance",
+    "shared-decision-making",
+    "clinical-decision-support",
+    "explainability",
+    "mental-health"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Fraunhofer SCAI (PsychStrata)",
+      "url": "https://github.com/SCAI-BIO"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Fraunhofer SCAI",
+  "mach:category": "software",
+  "mach:editorialReviewedAt": "2026-11-20",
+  "mach:applicability": "specialist",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "docker"
+  ],
+  "mach:clinicalDomain": [
+    "psychiatry",
+    "mental-health",
+    "research"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/SCAI-BIO/psychstrata-dashboard",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://demo.psychstrata.bio.scai.fraunhofer.de/",
+      "mach:evidenceType": "demo"
+    }
+  ],
+  "mach:subcategory": "clinical-system",
+  "mach:subcategoryBy": "rule:keyword"
+}

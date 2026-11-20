@@ -1,0 +1,67 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/data-sources/pro-act",
+  "@type": [
+    "schema:Dataset",
+    "mach:DataSource"
+  ],
+  "identifier": "pro-act",
+  "name": "PRO-ACT",
+  "alternateName": [
+    "Pooled Resource Open-Access ALS Clinical Trials Database"
+  ],
+  "description": "The largest publicly accessible database of amyotrophic lateral sclerosis (ALS) clinical-trial data: 13,717 fully de-identified subject records pooled from 44 Phase II/III trials (placebo and active arms), with 18+ million longitudinal data points — ALSFRS(-R), FVC/SVC, vital signs, labs, medications, adverse events, survival, strength, and neurofilament. Widely used for ALS prognostic modelling and trial design. Run by the Neurological Clinical Research Institute at Massachusetts General Hospital with Prize4Life, the ALS Association, and consortium partners. Access is free but registration-gated with a click-through data-use agreement (no re-identification, citation and manuscript-review obligations, and country-of-concern restrictions) — 'open-access' here means open to registered users, not open bulk download.",
+  "url": "https://ncri1.partners.org/ProACT",
+  "relatedLink": [
+    "https://ncri1.partners.org/ProACT/Document/DisplayLatest/6",
+    "https://www.alsdata.org/"
+  ],
+  "license": "LicenseRef-PRO-ACT-terms",
+  "mach:licenseNote": "Custom click-through Data Use Agreement (NCRI / Mass General) — free registration required; no re-identification, no resale, citation + manuscript-review obligations; access restricted for certain countries under US DOJ 28 CFR Part 202. Not a standard open-data licence.",
+  "mach:licenseVerified": true,
+  "keywords": [
+    "als",
+    "amyotrophic-lateral-sclerosis",
+    "clinical-trials",
+    "patient-data",
+    "alsfrs",
+    "neurodegeneration",
+    "registry",
+    "longitudinal"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Neurological Clinical Research Institute (NCRI), Massachusetts General Hospital",
+      "url": "https://ncri1.partners.org/ProACT"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "NCRI / Mass General · Prize4Life · ALS Association",
+  "mach:category": "data-sources",
+  "mach:editorialReviewedAt": "2026-11-20",
+  "mach:clinicalDomain": [
+    "neurology",
+    "als",
+    "rare-disease",
+    "research"
+  ],
+  "mach:deploymentContext": [
+    "hosted",
+    "registration-required"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://ncri1.partners.org/ProACT",
+      "mach:evidenceType": "project-website"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://ncri1.partners.org/ProACT/Document/DisplayLatest/6",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:subcategory": "registry",
+  "mach:subcategoryBy": "rule:keyword"
+}
