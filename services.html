@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Services — MACH</title>
+<meta name="description" content="Independent consultancy, auditing, and proof-of-concept implementation for open-source healthcare software — from the maintainer of the MACH catalog. The catalog itself is, and stays, free.">
+<link rel="icon" href="logos/mach-icon.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --teal-900:#04342C; --teal-700:#0F6E56; --teal-500:#1D9E75; --teal-300:#5DCAA5;
+    --teal-100:#9FE1CB; --teal-50:#E1F5EE;
+    --gray-900:#1a1a18; --gray-700:#2C2C2A; --gray-500:#5F5E5A; --gray-300:#B4B2A9;
+    --gray-100:#D3D1C7; --gray-50:#F1EFE8; --white:#FAFAF8; --border:rgba(0,0,0,0.08);
+    --indigo:#4F46E5; --amber:#D97706; --amber-dark:#B45309;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --white:#14181a; --gray-50:#1c2124; --gray-900:#e9ede7; --gray-700:#cdd4ce;
+      --gray-500:#9aa79c; --gray-300:#6d7a70; --border:rgba(255,255,255,0.1);
+      --teal-700:#35b78c; --teal-500:#44c99c; --teal-50:#16342a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --white:#14181a; --gray-50:#1c2124; --gray-900:#e9ede7; --gray-700:#cdd4ce;
+    --gray-500:#9aa79c; --gray-300:#6d7a70; --border:rgba(255,255,255,0.1);
+    --teal-700:#35b78c; --teal-500:#44c99c; --teal-50:#16342a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family:'DM Sans',sans-serif; font-weight:300; background:var(--white); color:var(--gray-900); line-height:1.7; font-size:16px; margin:0; }
+  a { color:var(--teal-700); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .mono { font-family:'DM Mono',monospace; font-size:.85em; }
+
+  nav {
+    position:sticky; top:0; z-index:100; background:rgba(4,52,44,0.97);
+    backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:space-between;
+    padding:14px max(20px, env(safe-area-inset-left,0px)); border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav-brand { display:flex; align-items:center; gap:9px; color:#fff; font-weight:500; font-size:1rem; }
+  .nav-brand img { height:22px; width:auto; }
+  .nav-brand b { letter-spacing:.04em; }
+  .nav-brand span { opacity:.7; font-weight:300; font-size:.82rem; }
+  .nav-links { display:flex; gap:20px; list-style:none; margin:0; padding:0; }
+  .nav-links a { color:rgba(255,255,255,.85); font-size:.9rem; }
+  .nav-links a:hover { color:#fff; text-decoration:none; }
+
+  .wrap { max-width:860px; margin:0 auto; padding-left:max(20px,env(safe-area-inset-left,0px)); padding-right:max(20px,env(safe-area-inset-right,0px)); }
+
+  /* Hero */
+  .hero { padding:56px 0 20px; }
+  .eyebrow { font-family:'DM Mono',monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-700); margin:0 0 14px; }
+  h1 { font-size:2.3rem; font-weight:600; line-height:1.15; letter-spacing:-.01em; margin:0 0 16px; }
+  .lede { font-size:1.12rem; color:var(--gray-700); max-width:62ch; margin:0; }
+
+  /* Free-first banner */
+  .freebar { background:var(--teal-50); border:1px solid var(--teal-100); border-radius:12px; padding:16px 20px; margin:28px 0 8px; font-size:.95rem; color:var(--gray-700); }
+  .freebar b { color:var(--gray-900); }
+  :root[data-theme="dark"] .freebar, :root:not([data-theme="light"]) .freebar { border-color:var(--teal-700); }
+
+  section { padding:34px 0 6px; }
+  h2 { font-size:1.5rem; font-weight:600; letter-spacing:-.01em; margin:0 0 8px; }
+  .sub { color:var(--gray-500); margin:0 0 24px; max-width:60ch; }
+
+  /* Service cards */
+  .svcs { display:grid; grid-template-columns:1fr; gap:16px; }
+  .svc { background:var(--gray-50); border:1px solid var(--border); border-radius:12px; padding:22px 24px; }
+  .svc .tag { font-family:'DM Mono',monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--teal-700); margin:0 0 8px; }
+  .svc h3 { font-size:1.14rem; font-weight:600; margin:0 0 8px; }
+  .svc p { margin:0 0 12px; color:var(--gray-700); font-size:.96rem; }
+  .svc ul { margin:0; padding-left:20px; }
+  .svc li { margin-bottom:5px; color:var(--gray-500); font-size:.92rem; }
+  .svc li b { color:var(--gray-700); font-weight:500; }
+
+  /* Why me */
+  .why { display:grid; grid-template-columns:1fr 1fr; gap:14px 26px; margin-top:10px; }
+  .why .item { font-size:.95rem; color:var(--gray-700); }
+  .why .item b { display:block; color:var(--gray-900); font-weight:600; margin-bottom:2px; }
+
+  /* How it works */
+  .steps { counter-reset:s; display:grid; gap:14px; margin-top:8px; }
+  .step { display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; }
+  .step .n { counter-increment:s; width:30px; height:30px; border-radius:50%; background:var(--teal-700); color:#fff; display:grid; place-items:center; font-weight:600; font-size:.9rem; }
+  .step .n::before { content:counter(s); }
+  .step .t { font-size:.96rem; color:var(--gray-700); padding-top:3px; }
+  .step .t b { color:var(--gray-900); }
+
+  /* CTA */
+  /* Get in touch — two columns like the gro-diet form */
+  .contact { padding:42px 0 6px; border-top:1px solid var(--border); margin-top:34px; }
+  .contact h2 { font-size:1.6rem; }
+  .contact > .sub { margin-bottom:28px; }
+  .contact-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:40px; align-items:start; }
+  .cform h3, .cinfo h3 { font-size:1.05rem; font-weight:600; margin:0 0 4px; }
+  .cform .hint { font-size:.86rem; color:var(--gray-500); margin:0 0 18px; }
+  .cform form { display:flex; flex-direction:column; gap:14px; }
+  .cform label { font-size:.82rem; color:var(--gray-700); font-weight:500; margin-bottom:-8px; }
+  .cform input, .cform textarea, .cform select {
+    font-family:inherit; font-size:.95rem; padding:11px 13px; border-radius:8px;
+    border:1px solid var(--border); background:var(--white); color:var(--gray-900); width:100%;
+  }
+  .cform input::placeholder, .cform textarea::placeholder { color:var(--gray-300); }
+  .cform input:focus, .cform textarea:focus, .cform select:focus { outline:2px solid var(--teal-500); outline-offset:1px; border-color:var(--teal-500); }
+  .cform button { font-family:inherit; font-size:.98rem; font-weight:600; padding:13px; border:0; border-radius:8px; background:var(--teal-500); color:#fff; cursor:pointer; margin-top:4px; }
+  .cform button:hover { background:var(--teal-700); }
+  .cform .success { display:none; font-size:1rem; color:var(--teal-700); padding:14px 16px; background:var(--teal-50); border-radius:8px; }
+  .cform .success.on { display:block; }
+  .cinfo .hint { font-size:.86rem; color:var(--gray-500); margin:0 0 20px; }
+  .cinfo .block { margin-bottom:18px; }
+  .cinfo .lbl { font-family:'DM Mono',monospace; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-500); margin:0 0 4px; }
+  .cinfo .val { font-size:.95rem; color:var(--gray-900); }
+  .cinfo .val a { color:var(--teal-700); }
+
+  .backlink { display:inline-flex; align-items:center; gap:6px; margin:32px 0 0; font-size:.92rem; }
+
+  footer { margin-top:44px; padding:26px max(20px,env(safe-area-inset-left,0px)); border-top:1px solid var(--border); font-size:.82rem; color:var(--gray-500); line-height:1.8; }
+  footer a { color:var(--teal-700); }
+
+  @media (max-width:640px) {
+    h1 { font-size:1.8rem; }
+    .nav-links { gap:14px; } .nav-brand span { display:none; }
+    .why { grid-template-columns:1fr; }
+    .contact-grid { grid-template-columns:1fr; gap:28px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html"><img src="logos/mach-icon.svg" alt=""><b>MACH</b><span>Services</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#catalog">Catalog</a></li>
+    <li><a href="index.html#suggest">Contribute</a></li>
+    <li><a href="https://github.com/FORSE-H/MACH">GitHub →</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+  <div class="hero">
+    <p class="eyebrow">Independent · optional · the catalog stays free</p>
+    <h1>Hands-on help with open-source healthcare software</h1>
+    <p class="lede">The MACH catalog is free and open, and always will be. Separately, I offer paid consultancy, auditing, and proof-of-concept implementation for teams that want expert help putting open-source healthcare tools into practice.</p>
+  </div>
+
+  <div class="freebar">
+    <b>To be clear:</b> the catalog, its data, and its judgements are free, open, and independent — nothing here gates them. These services are optional expert help from the person who built MACH, for organisations that want a deeper, hands-on engagement.
+  </div>
+
+  <section>
+    <h2>What I offer</h2>
+    <p class="sub">Focused, practical engagements around open-source healthcare software, models, and standards.</p>
+    <div class="svcs">
+
+      <div class="svc">
+        <p class="tag">Advisory</p>
+        <h3>Consultancy &amp; tool selection</h3>
+        <p>Deciding which open-source tool fits your context — imaging, FHIR/interoperability, clinical NLP, data platforms, AI tooling — and how it compares to alternatives.</p>
+        <ul>
+          <li><b>Landscape &amp; shortlist</b> for a specific need, with the evidence behind each option</li>
+          <li><b>Build-vs-adopt</b> guidance and open-vs-commercial trade-offs</li>
+          <li><b>Standards fit</b> — FHIR, DICOM, OMOP, openEHR and what adopting them really involves</li>
+        </ul>
+      </div>
+
+      <div class="svc">
+        <p class="tag">Assurance</p>
+        <h3>Auditing &amp; due diligence</h3>
+        <p>An independent, transparent assessment of an open-source tool or model before you rely on it — openness, maintenance, licence, provenance, and fit for your setting.</p>
+        <ul>
+          <li><b>Openness &amp; licence audit</b> — is it genuinely open, and usable in your context?</li>
+          <li><b>Maintenance &amp; health review</b> — activity, governance, longevity risk</li>
+          <li><b>Provenance &amp; archival</b> — reproducibility, Software Heritage archiving, citability</li>
+        </ul>
+      </div>
+
+      <div class="svc">
+        <p class="tag">Delivery</p>
+        <h3>Proof-of-concept implementation</h3>
+        <p>A working proof of concept so you can evaluate an open-source tool with your own (non-identifiable) data before committing — de-risking the decision with something you can actually run.</p>
+        <ul>
+          <li><b>PoC build &amp; deployment</b> of a shortlisted open tool in a sandbox you control</li>
+          <li><b>Integration spikes</b> — connecting to FHIR, imaging, or data pipelines</li>
+          <li><b>Handover</b> — documentation and a clear path to production (or a clear "not yet")</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Why work with me</h2>
+    <p class="sub">The same rigour that built the catalog, applied to your specific decision.</p>
+    <div class="why">
+      <div class="item"><b>Independent &amp; vendor-neutral</b>I don't sell or resell the tools — so the advice has no product to push.</div>
+      <div class="item"><b>Evidence-driven</b>Recommendations trace to signals and sources, the way MACH's judgements do — nothing opaque.</div>
+      <div class="item"><b>Deep open-source knowledge</b>Built and maintain a curated catalog of 230+ open healthcare tools, their licences, health and provenance.</div>
+      <div class="item"><b>Healthcare context</b>Work informed by firsthand experience of real clinical software environments and their constraints.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step"><div class="n"></div><div class="t"><b>Short intro call.</b> You describe the problem or the tool in question; I tell you honestly whether I can help and whether it's even worth paid work.</div></div>
+      <div class="step"><div class="n"></div><div class="t"><b>Scoped proposal.</b> A clear, fixed-scope engagement — advisory, audit, or PoC — with the deliverable, timeline, and cost agreed up front.</div></div>
+      <div class="step"><div class="n"></div><div class="t"><b>Delivery &amp; handover.</b> You get a concrete output — a shortlist, an audit report, or a running proof of concept — that you own.</div></div>
+    </div>
+  </section>
+
+  <div class="contact">
+    <h2>Get in touch</h2>
+    <p class="sub">Have a project in mind, want to collaborate, or just want to explore options? Fill in the form and I'll get back to you within 1–2 business days.</p>
+    <div class="contact-grid">
+
+      <div class="cform">
+        <h3>Send a project enquiry</h3>
+        <p class="hint">No obligation, no sales pressure — I'll reply honestly about whether I can help.</p>
+        <!-- Reuses the site's existing Formspree endpoint (mrejdarr). To separate
+             services enquiries from entry suggestions, create a dedicated Formspree
+             form and replace the action URL below with its /f/<id>. -->
+        <form id="services-form" action="https://formspree.io/f/mrejdarr" method="POST">
+          <input type="hidden" name="_subject" value="MACH — services enquiry">
+          <input type="hidden" name="inquiry_type" value="services">
+          <label for="s-name">Name</label>
+          <input type="text" id="s-name" name="name" placeholder="Your name" autocomplete="name">
+          <label for="s-email">Email *</label>
+          <input type="email" id="s-email" name="email" required placeholder="you@organisation.com" autocomplete="email">
+          <label for="s-need">Project type</label>
+          <select id="s-need" name="need">
+            <option value="">Select a service area…</option>
+            <option>Consultancy / tool selection</option>
+            <option>Auditing / due diligence</option>
+            <option>Proof-of-concept implementation</option>
+            <option>Not sure yet</option>
+          </select>
+          <label for="s-msg">Tell me about your project *</label>
+          <textarea id="s-msg" name="message" required rows="4" placeholder="What are you trying to solve? What's the context? Any deadline?"></textarea>
+          <input type="text" name="_gotcha" style="display:none" aria-hidden="true" tabindex="-1">
+          <button type="submit">Send Enquiry</button>
+        </form>
+        <div class="success" id="services-success">Thanks — your enquiry has been sent. I'll get back to you by email within 1–2 business days.</div>
+      </div>
+
+      <div class="cinfo">
+        <h3>Direct contact</h3>
+        <p class="hint">Prefer a direct line? Reach out by email.</p>
+        <div class="block">
+          <p class="lbl">Email</p>
+          <p class="val"><a href="mailto:priyanka@gro-diet.foundation">priyanka@gro-diet.foundation</a></p>
+        </div>
+        <div class="block">
+          <p class="lbl">Location</p>
+          <p class="val">Amsterdam-based · available onsite in Amsterdam, remotely across NL / EU</p>
+        </div>
+        <div class="block">
+          <p class="lbl">Prefer the open route?</p>
+          <p class="val"><a href="https://github.com/FORSE-H/MACH/issues/new/choose">Open an issue on GitHub</a>, or explore the <a href="index.html">free catalog</a> first.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var form = document.getElementById('services-form');
+      var ok = document.getElementById('services-success');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('button');
+        btn.disabled = true; btn.textContent = 'Sending…';
+        fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+          .then(function (r) {
+            if (r.ok) { form.style.display = 'none'; ok.classList.add('on'); }
+            else { btn.disabled = false; btn.textContent = 'Send Enquiry'; alert('Something went wrong — please try again, or email directly.'); }
+          })
+          .catch(function () { btn.disabled = false; btn.textContent = 'Send Enquiry'; alert('Network error — please try again, or email directly.'); });
+      });
+    })();
+  </script>
+
+  <a class="backlink" href="index.html">&#8592; Back to the free MACH catalog</a>
+
+</div>
+
+<footer>
+  MACH — Machine-Actionable Catalog for Healthcare &nbsp;·&nbsp;
+  The catalog is free &amp; open (Code: Apache-2.0 · Data: CC0-1.0). Services are a separate, optional offering. &nbsp;·&nbsp;
+  <a href="index.html">machcatalog.org</a> &nbsp;·&nbsp;
+  By <a href="https://orcid.org/0000-0002-6844-6493">Priyanka Ojha</a>, Netherlands &nbsp;·&nbsp; 2025–2026
+</footer>
+
+</body>
+</html>
