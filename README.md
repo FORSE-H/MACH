@@ -11,7 +11,7 @@ An open, machine-actionable catalog of open-source healthcare software, AI/ML mo
 
 Every entry is a structured JSON-LD record. What makes MACH different from a list is its **judgement**: tools with a public repository get a deterministic **Adopt / Assess / Caution** verdict, derived by a transparent rule-based scorer from measured signals (maintenance, adoption, licence quality) — not hand-written opinion, and never a black box.
 
-**Live catalog:** [machcatalog.org](https://machcatalog.org) · **Status:** Active — 217 entries, CI pipeline live · A project of [FORSE-H](https://github.com/FORSE-H).
+**Live catalog:** [machcatalog.org](https://machcatalog.org) · **Status:** Active — 230+ entries, CI pipeline live · A project of [FORSE-H](https://github.com/FORSE-H).
 
 ---
 
@@ -23,7 +23,7 @@ MACH fills that gap:
 
 - **Judgement, not just listing** — every repo-backed entry carries a deterministic Adopt / Assess / Caution verdict from a rule-based scorer; entries without a harvestable repository signal (datasets, standards, hosted services) show *not scored* rather than a fake verdict.
 - **Auditable by design** — each entry's detail page shows every harvested signal and the exact source it came from, plus the rules that produced its judgement. No hallucinated recommendations.
-- **Seven entry types** — software, AI/ML models, **AI tooling** (MCP servers, AI agents, agent-skill libraries), datasets, clinical standards, data sources, and catalogs.
+- **Eight entry types** — software, **medical hardware** (open device designs, PCBs, firmware), AI/ML models, **AI tooling** (MCP servers, AI agents, agent-skill libraries), datasets, clinical standards, data sources, and catalogs.
 - **Verified metadata** — licences are verified against the actual LICENSE file, not just a badge; every entry has at least one live evidence URL.
 - **Agent-queryable** — the catalog is served by a live MCP server, so an AI agent can list, search, retrieve, and get the full provenance of any entry.
 - **FAIR-aligned** — stable entry URIs, DOI-archived on Zenodo, ORCID-attributed, Software Heritage SWHIDs.
@@ -184,11 +184,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the entry checklist and conflict-of-i
 
 ## Roadmap
 
-- Richer repo-health signals on entries (programming languages, tests/CI presence, maintenance)
-- Linking tools to the standards they implement (e.g. pydicom → DICOM, HAPI FHIR → FHIR R4)
 - Machine-readable exports (CodeMeta, DCAT-AP, Croissant) and `llms.txt`
 - Structured, filtered agent queries over the MCP server (by judgement, standard, deployment)
 - MCP usage documentation and a stable, documented API
+- A linked reuse graph — which libraries, standards, and datasets are the shared backbone
 
 ---
 
