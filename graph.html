@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reuse Graph — MACH</title>
+<meta name="description" content="An interactive graph of MACH: which standards, languages and organisations connect open-source healthcare tools.">
+<link rel="icon" href="logos/mach-icon.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.2/cytoscape.min.js"></script>
+<style>
+  :root {
+    --teal-900:#04342C; --teal-700:#0F6E56; --teal-500:#1D9E75; --teal-300:#5DCAA5; --teal-50:#E1F5EE;
+    --gray-900:#1a1a18; --gray-700:#2C2C2A; --gray-500:#5F5E5A; --gray-300:#B4B2A9; --gray-100:#D3D1C7; --gray-50:#F1EFE8;
+    --white:#FAFAF8; --border:rgba(0,0,0,0.08);
+    --indigo:#4F46E5; --amber:#D97706; --purple:#7C3AED; --sky:#0284C7; --rose:#E11D48; --slate:#475569;
+  }
+  * { box-sizing:border-box; }
+  html,body { height:100%; margin:0; }
+  body { font-family:'DM Sans',sans-serif; font-weight:300; background:var(--white); color:var(--gray-900); display:flex; flex-direction:column; }
+  a { color:var(--teal-700); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  nav { background:rgba(4,52,44,0.97); display:flex; align-items:center; justify-content:space-between; padding:12px max(16px,env(safe-area-inset-left,0px)); flex:none; }
+  .brand { display:flex; align-items:center; gap:9px; color:#fff; font-weight:500; }
+  .brand img { height:22px; }
+  .brand span { opacity:.65; font-weight:300; font-size:.82rem; }
+  nav .links a { color:rgba(255,255,255,.85); font-size:.9rem; margin-left:18px; }
+
+  .intro { padding:16px max(16px,env(safe-area-inset-left,0px)) 10px; border-bottom:1px solid var(--border); flex:none; }
+  .intro h1 { font-size:1.3rem; font-weight:600; margin:0 0 4px; }
+  .intro p { margin:0; color:var(--gray-500); font-size:.9rem; max-width:70ch; }
+  .intro .stat { font-family:'DM Mono',monospace; color:var(--teal-700); }
+
+  .stage { flex:1; display:flex; min-height:0; }
+  #cy { flex:1; min-width:0; background:var(--gray-50); }
+
+  .panel { width:300px; flex:none; border-left:1px solid var(--border); padding:16px; overflow-y:auto; background:var(--white); }
+  .panel h2 { font-size:.72rem; font-family:'DM Mono',monospace; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-500); margin:0 0 10px; }
+  .legend { display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
+  .legend .row { display:flex; align-items:center; gap:9px; font-size:.86rem; color:var(--gray-700); cursor:pointer; user-select:none; }
+  .legend .dot { width:13px; height:13px; border-radius:50%; flex:none; }
+  .legend .row.off { opacity:.35; }
+
+  .controls { display:flex; flex-direction:column; gap:10px; margin-bottom:20px; }
+  .controls input { font:inherit; font-size:.9rem; padding:8px 11px; border:1px solid var(--border); border-radius:8px; background:var(--white); color:var(--gray-900); width:100%; }
+  .controls input:focus { outline:2px solid var(--teal-500); outline-offset:1px; }
+
+  .details { border-top:1px solid var(--border); padding-top:16px; }
+  .details .placeholder { color:var(--gray-300); font-size:.88rem; }
+  .details .n-label { font-size:1.05rem; font-weight:600; margin:0 0 2px; }
+  .details .n-type { font-family:'DM Mono',monospace; font-size:.72rem; color:var(--gray-500); text-transform:uppercase; letter-spacing:.06em; margin:0 0 12px; }
+  .details .n-stat { font-size:.86rem; color:var(--gray-700); margin:0 0 10px; }
+  .details .n-stat b { color:var(--gray-900); }
+  .details ul { margin:6px 0 0; padding-left:18px; }
+  .details li { font-size:.84rem; color:var(--gray-700); margin-bottom:3px; }
+  .details .open-link { display:inline-block; margin-top:12px; font-size:.9rem; }
+
+  footer { flex:none; padding:8px 16px; font-size:.74rem; color:var(--gray-500); border-top:1px solid var(--border); text-align:center; }
+
+  @media (max-width:760px) {
+    .stage { flex-direction:column; }
+    .panel { width:auto; border-left:0; border-top:1px solid var(--border); max-height:44vh; }
+    #cy { min-height:50vh; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="index.html"><img src="logos/mach-icon.svg" alt=""><b>MACH</b><span>Reuse graph</span></a>
+  <div class="links"><a href="index.html#catalog">Catalog</a><a href="taxonomy.html">Taxonomy</a><a href="https://github.com/FORSE-H/MACH">GitHub →</a></div>
+</nav>
+
+<div class="intro">
+  <h1>How the catalogue connects</h1>
+  <p>Every open-source tool in MACH is linked to the <b>standards</b> it implements, the <b>language</b> it's written in, and the <b>organisation</b> behind it. This graph makes the shared backbone visible — <span class="stat" id="intro-stat">loading…</span>. Click any node to inspect it; use the legend to filter.</p>
+</div>
+
+<div class="stage">
+  <div id="cy"></div>
+  <aside class="panel">
+    <h2>Filter &amp; legend</h2>
+    <div class="controls">
+      <input type="search" id="search" placeholder="Search a tool, standard, language…" autocomplete="off">
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="details" id="details">
+      <p class="placeholder">Click a node to see what it connects to.</p>
+    </div>
+  </aside>
+</div>
+
+<footer>MACH — reuse graph (Layer A: standards · languages · organisations). Dependency edges (library reuse) coming as enrichment lands. · <a href="graph.json">graph.json</a></footer>
+
+<script>
+(function () {
+  "use strict";
+
+  // Node-type → colour + display label. Entry categories share one "tool" colour
+  // so hubs (standards/langs/orgs) stand out as the connective tissue.
+  var TYPES = {
+    "standard": { color: "#0284C7", label: "Standard", shape: "round-rectangle" },
+    "language": { color: "#D97706", label: "Language", shape: "diamond" },
+    "org":      { color: "#7C3AED", label: "Organisation", shape: "hexagon" },
+    "tool":     { color: "#0F6E56", label: "Tool / entry", shape: "ellipse" }
+  };
+  function nodeKind(t) { return t.indexOf("entry:") === 0 ? "tool" : t; }
+
+  var cy, GRAPH;
+  var detailsEl = document.getElementById("details");
+
+  fetch("graph.json").then(function (r) { return r.json(); }).then(function (g) {
+    GRAPH = g;
+    document.getElementById("intro-stat").textContent =
+      g.meta.entry_count + " tools · " + (g.meta.node_types.standard || 0) +
+      " standards · " + (g.meta.node_types.language || 0) + " languages · " +
+      g.meta.edge_count + " connections";
+    render(g);
+    buildLegend();
+  }).catch(function () {
+    document.getElementById("intro-stat").textContent = "graph data unavailable";
+  });
+
+  function render(g) {
+    var els = [];
+    g.nodes.forEach(function (n) {
+      els.push({ data: { id: n.id, label: n.label, kind: nodeKind(n.type), degree: n.degree } });
+    });
+    g.edges.forEach(function (e, i) {
+      els.push({ data: { id: "e" + i, source: e.source, target: e.target, etype: e.type } });
+    });
+
+    cy = cytoscape({
+      container: document.getElementById("cy"),
+      elements: els,
+      wheelSensitivity: 0.25,
+      style: [
+        { selector: "node", style: {
+            "background-color": function (n) { return TYPES[n.data("kind")].color; },
+            "shape": function (n) { return TYPES[n.data("kind")].shape; },
+            "width": function (n) { return 10 + Math.min(34, n.data("degree") * 2); },
+            "height": function (n) { return 10 + Math.min(34, n.data("degree") * 2); },
+            "label": function (n) { return n.data("kind") === "tool" ? "" : n.data("label"); },
+            "font-size": 9, "font-family": "DM Mono, monospace",
+            "color": "#2C2C2A", "text-valign": "bottom", "text-margin-y": 3,
+            "border-width": 0
+        } },
+        { selector: "node:selected", style: { "border-width": 3, "border-color": "#1D9E75", "label": "data(label)" } },
+        { selector: "edge", style: {
+            "width": 1, "line-color": "#cfccc2", "curve-style": "haystack", "opacity": 0.55
+        } },
+        { selector: ".faded", style: { "opacity": 0.08 } },
+        { selector: ".hl", style: { "opacity": 1, "line-color": "#1D9E75", "width": 2 } },
+        { selector: "node.hl", style: { "opacity": 1 } }
+      ],
+      layout: { name: "cose", animate: false, nodeRepulsion: 6000, idealEdgeLength: 55, padding: 30 }
+    });
+
+    cy.on("tap", "node", function (ev) { showDetails(ev.target); });
+    cy.on("tap", function (ev) { if (ev.target === cy) { clearHighlight(); showPlaceholder(); } });
+  }
+
+  function showDetails(node) {
+    var kind = node.data("kind");
+    var id = node.id();
+    highlightNeighborhood(node);
+
+    var neighbors = node.connectedEdges().connectedNodes().not(node);
+    var html = '<p class="n-label">' + esc(node.data("label")) + '</p>' +
+               '<p class="n-type">' + TYPES[kind].label + '</p>' +
+               '<p class="n-stat"><b>' + neighbors.length + '</b> connection' + (neighbors.length === 1 ? '' : 's') + '</p>';
+
+    if (kind === "tool") {
+      var ident = id.replace(/^entry:/, "");
+      html += '<a class="open-link" href="entry/' + encodeURIComponent(ident) + '.html">Open entry →</a>';
+      var hubs = neighbors.filter(function (n) { return n.data("kind") !== "tool"; });
+      if (hubs.length) {
+        html += '<p class="n-stat" style="margin-top:12px">Connected to:</p><ul>';
+        hubs.forEach(function (n) { html += '<li>' + esc(n.data("label")) + ' <span style="color:var(--gray-300)">(' + TYPES[n.data("kind")].label.toLowerCase() + ')</span></li>'; });
+        html += '</ul>';
+      }
+    } else {
+      // A hub — list the tools it connects (the "pydicom underpins these" view).
+      var tools = neighbors.filter(function (n) { return n.data("kind") === "tool"; });
+      html += '<p class="n-stat" style="margin-top:4px">Used by these tools:</p><ul>';
+      tools.sort(function (a, b) { return a.data("label").localeCompare(b.data("label")); })
+           .forEach(function (n) {
+             var ident = n.id().replace(/^entry:/, "");
+             html += '<li><a href="entry/' + encodeURIComponent(ident) + '.html">' + esc(n.data("label")) + '</a></li>';
+           });
+      html += '</ul>';
+    }
+    detailsEl.innerHTML = html;
+  }
+
+  function highlightNeighborhood(node) {
+    cy.elements().addClass("faded").removeClass("hl");
+    var hood = node.closedNeighborhood();
+    hood.removeClass("faded").addClass("hl");
+    node.removeClass("faded");
+  }
+  function clearHighlight() { cy.elements().removeClass("faded hl"); }
+  function showPlaceholder() { detailsEl.innerHTML = '<p class="placeholder">Click a node to see what it connects to.</p>'; }
+
+  function buildLegend() {
+    var el = document.getElementById("legend");
+    var active = { standard: true, language: true, org: true, tool: true };
+    Object.keys(TYPES).forEach(function (k) {
+      var row = document.createElement("div");
+      row.className = "row";
+      row.innerHTML = '<span class="dot" style="background:' + TYPES[k].color + '"></span>' + TYPES[k].label;
+      row.addEventListener("click", function () {
+        active[k] = !active[k];
+        row.classList.toggle("off", !active[k]);
+        cy.nodes().forEach(function (n) {
+          n.style("display", active[n.data("kind")] ? "element" : "none");
+        });
+      });
+      el.appendChild(row);
+    });
+  }
+
+  // Search: highlight matching nodes.
+  document.getElementById("search").addEventListener("input", function (e) {
+    var q = e.target.value.toLowerCase().trim();
+    if (!cy) return;
+    if (!q) { clearHighlight(); return; }
+    cy.elements().addClass("faded").removeClass("hl");
+    var matches = cy.nodes().filter(function (n) { return n.data("label").toLowerCase().indexOf(q) !== -1; });
+    matches.closedNeighborhood().removeClass("faded").addClass("hl");
+  });
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (m) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[m];
+    });
+  }
+})();
+</script>
+</body>
+</html>
