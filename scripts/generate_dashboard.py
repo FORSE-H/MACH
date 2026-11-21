@@ -448,7 +448,8 @@ keywords.forEach(([name, val], i) => {{
   kwContainer.innerHTML += `<div class="bar-item"><div class="name">${{name}}</div><div class="bar-wrap"><div class="bar-fill" style="width:${{(val/maxK*100).toFixed(1)}}%;background:${{COLORS[i % COLORS.length]}}"></div></div><div class="val">${{val}}</div></div>`;
 }});
 </script>
-
+<script data-goatcounter="https://machcatalog.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
 """

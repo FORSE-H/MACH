@@ -359,6 +359,9 @@ def render_page(entry: dict, sig: dict) -> str:
     {hardware_note}
     <footer>MACH — Machine-Actionable Catalog for Healthcare · Judgement is rule-based, derived from harvested signals · <a href="../index.html">machcatalog.org</a></footer>
   </div>
+  <!-- Privacy-first analytics (GoatCounter — no cookies, no personal data). -->
+  <script data-goatcounter="https://machcatalog.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
 """
