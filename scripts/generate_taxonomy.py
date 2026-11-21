@@ -186,6 +186,8 @@ def build(tax, entries) -> str:
     <a href="index.html">machcatalog.org</a>
   </footer>
 </div>
+<script data-goatcounter="https://machcatalog.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
 """

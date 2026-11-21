@@ -1,0 +1,99 @@
+name: Backup analytics
+
+# Daily backup of GoatCounter analytics into the repo, so the data is portable
+# and survives even if the hosted service goes away (MACH's no-lock-in principle,
+# applied to its own analytics). GoatCounter's export is async: POST to start a
+# job, poll until finished, then download the CSV (files expire after 24h, so we
+# download in the same run). Exports are limited to once per hour; twice a month
+# is well within that. GoatCounter keeps the data server-side too — this is a
+# portable, in-repo backup, not the only copy.
+#
+# Setup (one-time): in GoatCounter, enable "Individual pageviews" in site
+# settings, then create an API key ([username] -> API) with export permission.
+# Add two repository secrets:
+#   GOATCOUNTER_CODE   = your site code (the subdomain, e.g. "machcatalog")
+#   GOATCOUNTER_TOKEN  = the API key
+# Without them the job logs a notice and exits cleanly (no failure, no commit).
+
+on:
+  schedule:
+    - cron: '17 4 1,15 * *'   # twice a month (1st & 15th), 04:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backup-analytics
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    name: Export & commit analytics CSV
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a # v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
+
+      - name: Export GoatCounter data
+        env:
+          CODE: ${{ secrets.GOATCOUNTER_CODE }}
+          TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${CODE:-}" ] || [ -z "${TOKEN:-}" ]; then
+            echo "::notice::GOATCOUNTER_CODE / GOATCOUNTER_TOKEN not set — skipping backup."
+            echo "skip=1" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          API="https://${CODE}.goatcounter.com/api/v0"
+          AUTH="Authorization: Bearer ${TOKEN}"
+
+          echo "Starting export…"
+          start=$(curl -fsS -X POST "${API}/export" \
+            -H 'Content-Type: application/json' -H "${AUTH}" -d '{"format":"csv"}')
+          id=$(echo "$start" | python3 -c 'import sys,json;print(json.load(sys.stdin)["id"])')
+          echo "Export id: $id"
+
+          # Poll until finished (max ~2 min).
+          for i in $(seq 1 60); do
+            info=$(curl -fsS "${API}/export/${id}" -H "${AUTH}")
+            fin=$(echo "$info" | python3 -c 'import sys,json;d=json.load(sys.stdin);print(d.get("finished_at") or "")')
+            err=$(echo "$info" | python3 -c 'import sys,json;d=json.load(sys.stdin);print(d.get("error") or "")')
+            if [ -n "$err" ]; then echo "Export error: $err"; exit 1; fi
+            if [ -n "$fin" ]; then echo "Export finished."; break; fi
+            sleep 2
+          done
+
+          mkdir -p data/analytics
+          echo "Downloading…"
+          # The download may be gzip-compressed; detect by magic bytes and decode.
+          curl -fsS "${API}/export/${id}/download" -H "${AUTH}" -o data/analytics/_raw
+          if [ "$(head -c2 data/analytics/_raw | xxd -p)" = "1f8b" ]; then
+            gzip -dc data/analytics/_raw > data/analytics/goatcounter-export.csv
+          else
+            mv data/analytics/_raw data/analytics/goatcounter-export.csv
+          fi
+          rm -f data/analytics/_raw
+          lines=$(wc -l < data/analytics/goatcounter-export.csv || echo 0)
+          echo "Wrote data/analytics/goatcounter-export.csv (${lines} lines)."
+
+      - name: Commit if changed
+        if: env.skip != '1'
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/analytics/goatcounter-export.csv
+          git diff --staged --quiet && { echo "No analytics changes."; exit 0; }
+          git commit -m "chore: backup analytics export [skip ci]"
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          done
+          echo "Failed to push analytics backup." >&2; exit 1
