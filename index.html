@@ -3655,22 +3655,24 @@
 </div>
 
 <!-- ── USAGE STRIP ── live pageviews (GoatCounter) + MCP tool calls (/stats).
-     Both fetched client-side; the strip hides itself if neither source answers. -->
-<section id="usage-strip" hidden style="max-width:1100px;margin:36px auto 0;padding:18px max(20px,env(safe-area-inset-left,0px));border-top:1px solid var(--border);">
+     Always shown; each metric fills in when its source answers, else shows a
+     muted "—" placeholder so the panel is visibly present either way. -->
+<section id="usage-strip" style="max-width:1100px;margin:40px auto 0;padding:20px max(20px,env(safe-area-inset-left,0px));border-top:1px solid var(--border);">
+  <p style="font-family:'DM Mono',monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-500);margin:0 0 14px;">Usage</p>
   <div style="display:flex;flex-wrap:wrap;gap:28px 48px;align-items:flex-start;">
     <div>
       <p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin:0 0 4px;">Website</p>
-      <p style="margin:0;font-size:1.5rem;font-weight:600;color:var(--teal-500);line-height:1.1;"><span id="usage-views">—</span></p>
+      <p style="margin:0;font-size:1.5rem;font-weight:600;color:var(--teal-500);line-height:1.1;"><span id="usage-views" style="color:var(--gray-500);">—</span></p>
       <p style="margin:2px 0 0;font-size:.78rem;color:var(--gray-500);">page&nbsp;views <span style="opacity:.6;">· <a href="https://machcatalog.goatcounter.com" style="color:inherit;">GoatCounter</a></span></p>
     </div>
     <div>
       <p style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin:0 0 4px;">MCP server</p>
-      <p style="margin:0;font-size:1.5rem;font-weight:600;color:var(--indigo);line-height:1.1;"><span id="usage-mcp">—</span></p>
+      <p style="margin:0;font-size:1.5rem;font-weight:600;color:var(--indigo);line-height:1.1;"><span id="usage-mcp" style="color:var(--gray-500);">—</span></p>
       <p style="margin:2px 0 0;font-size:.78rem;color:var(--gray-500);">AI&nbsp;tool&nbsp;calls <span id="usage-mcp-since" style="opacity:.6;"></span></p>
       <ul id="usage-mcp-tools" style="list-style:none;margin:10px 0 0;padding:0;display:none;font-size:.76rem;color:var(--gray-500);"></ul>
     </div>
   </div>
-  <p style="margin:14px 0 0;font-size:.7rem;color:var(--gray-500);opacity:.75;max-width:70ch;">
+  <p id="usage-note" style="margin:14px 0 0;font-size:.7rem;color:var(--gray-500);opacity:.75;max-width:78ch;">
     Privacy-first, aggregate counts only — GoatCounter sets no cookies and stores no personal data; MCP counts are per-tool totals with no caller identity. MCP counts reset on each server deploy.
   </p>
 </section>
@@ -4093,17 +4095,14 @@
 })();
 </script>
 <!-- ── USAGE STRIP loader ── fills #usage-strip from GoatCounter + the MCP API.
-     Each source is independent; the strip shows whatever answers and reveals
-     itself only if at least one does. Failures are silent (cold start, a
-     setting not yet enabled) — the page never shows an error for analytics. -->
+     The strip is always visible; each metric fills in when its source answers,
+     and stays a muted "—" when it doesn't (cold start, or a setting not yet
+     enabled). Failures never surface an error to the visitor. -->
 <script>
 (function () {
   var API = 'https://mach-render-deploy.onrender.com';
   var GC  = 'https://machcatalog.goatcounter.com/counter/TOTAL.json';
-  var strip = document.getElementById('usage-strip');
-  if (!strip) return;
-  var shown = false;
-  function reveal() { if (!shown) { shown = true; strip.hidden = false; } }
+  var live = function (el) { if (el) el.style.color = ''; };  // drop the muted placeholder colour
 
   // Website page views — GoatCounter public total (needs "Allow adding visitor
   // counts on your website" enabled in GoatCounter settings).
@@ -4111,8 +4110,9 @@
     .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
     .then(function (d) {
       if (d && d.count != null) {
-        document.getElementById('usage-views').textContent = d.count; // already thousands-formatted
-        reveal();
+        var el = document.getElementById('usage-views');
+        el.textContent = d.count;  // already thousands-formatted
+        live(el);
       }
     })
     .catch(function () {});
@@ -4123,7 +4123,9 @@
     .then(function (d) {
       if (!d) return;
       var total = d.total_calls || 0;
-      document.getElementById('usage-mcp').textContent = total.toLocaleString();
+      var el = document.getElementById('usage-mcp');
+      el.textContent = total.toLocaleString();
+      live(el);
       var tools = d.tools || {};
       var names = Object.keys(tools).sort(function (a, b) { return tools[b].calls - tools[a].calls; });
       if (names.length) {
@@ -4135,7 +4137,6 @@
         }).join('');
         ul.style.display = 'block';
       }
-      reveal();
     })
     .catch(function () {});
 })();
