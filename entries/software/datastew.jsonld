@@ -1,0 +1,70 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/datastew",
+  "@type": [
+    "schema:SoftwareApplication",
+    "schema:SoftwareSourceCode"
+  ],
+  "identifier": "datastew",
+  "name": "datastew",
+  "description": "Python library for intelligent data harmonization using large language model (LLM) embeddings. Maps variables, concepts, and codes across heterogeneous datasets to standard terminologies — helping harmonise clinical and research data for interoperability and pooled analysis. Installable from PyPI. From Fraunhofer SCAI.",
+  "url": "https://github.com/SCAI-BIO/datastew",
+  "codeRepository": "https://github.com/SCAI-BIO/datastew",
+  "relatedLink": [
+    "https://pypi.org/project/datastew/"
+  ],
+  "license": "Apache-2.0",
+  "version": "1.0.4",
+  "dateModified": "2026-11-18",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "keywords": [
+    "data-harmonization",
+    "data-stewardship",
+    "interoperability",
+    "terminology",
+    "embeddings",
+    "large-language-models",
+    "concept-mapping",
+    "fair-data"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Fraunhofer SCAI (SCAI-BIO)",
+      "url": "https://github.com/SCAI-BIO"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:foundation": "Fraunhofer SCAI",
+  "mach:category": "software",
+  "mach:editorialReviewedAt": "2026-11-21",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "offline-capable"
+  ],
+  "mach:clinicalDomain": [
+    "research",
+    "interoperability"
+  ],
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/SCAI-BIO/datastew",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://pypi.org/project/datastew/",
+      "mach:evidenceType": "package"
+    }
+  ],
+  "mach:subcategory": "interoperability",
+  "mach:subcategoryBy": "rule:keyword"
+}
