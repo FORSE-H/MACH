@@ -379,5 +379,17 @@ def main():
 
     print(f"Updated {INDEX_HTML} — {len(entries)} entries written")
 
+    # Keep README's entry/category counts in lockstep with index.html, so the
+    # consistency gate (scripts/check_consistency.py) never flags drift after a
+    # normal regeneration. Best-effort: never fail generation if it's missing.
+    try:
+        import subprocess
+        subprocess.run(
+            [sys.executable, "scripts/check_consistency.py", "--write"],
+            check=False,
+        )
+    except Exception as exc:  # pragma: no cover
+        print(f"(consistency sync skipped: {exc})")
+
 if __name__ == "__main__":
     main()
