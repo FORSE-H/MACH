@@ -61,6 +61,11 @@ jobs:
         # in data/taxonomy/categories.yaml, and no entry may be unclassified.
         run: python scripts/classify.py --check
 
+      - name: Check prose consistency (README / index.html vs catalogue)
+        # Fail if the human-facing entry/category counts drift from entries/.
+        # Fix locally with: python scripts/check_consistency.py --write
+        run: python scripts/check_consistency.py
+
       - name: Check required fields
         run: |
           python3 - <<'EOF'
