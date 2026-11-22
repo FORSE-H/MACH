@@ -841,6 +841,16 @@
   }
   .semantic-status a { cursor: pointer; }
 
+  /* Sample question chips — give the empty search box a starting point. */
+  .sample-qs { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: .6rem; }
+  .sample-label { font-family: 'DM Mono', monospace; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-500); margin-right: .1rem; }
+  .sample-chip {
+    font-family: inherit; font-size: .82rem; padding: .3rem .7rem; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--white); color: var(--teal-700);
+    cursor: pointer; transition: background .12s, border-color .12s; line-height: 1.3;
+  }
+  .sample-chip:hover { background: var(--teal-50); border-color: var(--teal-300); }
+
   /* ── FILTER BARS ── */
   .filter-rows { margin-bottom: 1.5rem; }
 
@@ -1266,7 +1276,7 @@
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:2rem;">
     <div style="background:var(--white);padding:1rem 1.25rem;">
       <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Total entries</p>
-      <p style="font-size:1.75rem;font-weight:600;color:#1D9E75;"><!-- STAT:TOTAL -->249<!-- /STAT:TOTAL --></p>
+      <p style="font-size:1.75rem;font-weight:600;color:#1D9E75;"><!-- STAT:TOTAL -->250<!-- /STAT:TOTAL --></p>
     </div>
     <div style="background:var(--white);padding:1rem 1.25rem;">
       <p style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Entry types</p>
@@ -1282,6 +1292,14 @@
       <button type="button" id="semantic-btn" class="semantic-btn" title="AI-powered search by meaning (MACH API)">✨ AI Search</button>
     </div>
     <p id="semantic-status" class="semantic-status" hidden></p>
+    <div class="sample-qs" id="sample-qs" aria-label="Example searches">
+      <span class="sample-label">Try:</span>
+      <button type="button" class="sample-chip" data-q="open-source FHIR server I can self-host">self-hostable FHIR server</button>
+      <button type="button" class="sample-chip" data-q="pathology foundation model with a permissive commercial licence">commercially-usable pathology model</button>
+      <button type="button" class="sample-chip" data-q="actively maintained CT or radiology segmentation model">maintained CT imaging model</button>
+      <button type="button" class="sample-chip" data-q="open dataset of de-identified clinical notes">open clinical-notes dataset</button>
+      <button type="button" class="sample-chip" data-q="MCP server for healthcare data">healthcare MCP server</button>
+    </div>
   </div>
 
   <div class="filter-rows">
@@ -2746,6 +2764,15 @@
       <p class="entry-desc">The most widely used open-source Java implementation of the HL7 FHIR standard. Provides both a client library and a full JPA server with dat…</p>
       <div class="entry-card-links"><a href="entry/hapi-fhir.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://hapifhir.io/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/hapifhir/hapi-fhir" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/hapi-fhir.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
     </div>
+    <div class="entry-card" data-cat="software" data-license="Apache-2.0" data-license-bucket="permissive" data-lang="" data-health="" data-governance="vendor-led" data-pypi="" data-hf="" data-judgement="">
+      <div class="entry-card-meta">
+        <span class="entry-cat">Software</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
+      </div>
+      <p class="entry-name"><a href="entry/haste-health.html" class="entry-name-link" title="Open details &amp; lineage">Haste Health</a></p>
+      <div class="entry-tags"><span class="entry-type">Software</span><a href="https://github.com/HasteHealth/HasteHealth/blob/main/LICENSE" target="_blank" rel="noopener" class="entry-lic" title="Licence">Apache-2.0</a></div>
+      <p class="entry-desc">Open-source FHIR R4 server written in Rust, aimed at AI-native health applications. Stores clinical data as FHIR and serves it to apps, anal…</p>
+      <div class="entry-card-links"><a href="entry/haste-health.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://haste.health" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/HasteHealth/HasteHealth" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/haste-health.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
+    </div>
     <div class="entry-card" data-cat="software" data-license="MIT" data-license-bucket="permissive" data-lang="" data-health="" data-governance="vendor-led" data-pypi="" data-hf="" data-judgement="">
       <div class="entry-card-meta">
         <span class="entry-cat">Software</span><span class="entry-judgement ring-none" title="No harvestable repository signal — not auto-scored">not scored</span>
@@ -2878,7 +2905,7 @@
       </div>
       <p class="entry-name"><a href="entry/medplum.html" class="entry-name-link" title="Open details &amp; lineage">Medplum</a></p>
       <div class="entry-tags"><span class="entry-type">Software</span><a href="https://github.com/medplum/medplum/blob/main/LICENSE.txt" target="_blank" rel="noopener" class="entry-lic" title="Licence">Apache-2.0</a><span class="entry-lang">TypeScript</span><span class="entry-health health-active" title="Repo health: Active — committed within the last month; has CI, releases">&#9679;</span></div>
-      <p class="entry-desc">FHIR-native open-source developer platform for building and deploying clinical software, operated by Orangebot Inc. Provides a full-stack Ty…</p>
+      <p class="entry-desc">Open-source, self-hostable FHIR server and FHIR-native developer platform for building and deploying clinical software, operated by Orangebo…</p>
       <div class="entry-card-links"><a href="entry/medplum.html" class="entry-url entry-detail" title="Signals &amp; lineage">&#8505; details</a><a href="https://medplum.com/" target="_blank" rel="noopener" class="entry-url">&#8599; site</a><a href="https://github.com/medplum/medplum" target="_blank" rel="noopener" class="entry-url">&#8599; repo</a><a href="https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/medplum/medplum" target="_blank" rel="noopener" class="entry-url entry-swh" title="Archived on Software Heritage&#10;swh:1:snp:4b77f7e53b3241b203ea28c342def3d60d7069ee"><img src="logos/swh.svg" alt="" class="swh-icon">swh</a><a href="https://github.com/FORSE-H/MACH/blob/main/entries/software/medplum.jsonld" target="_blank" rel="noopener" class="entry-url entry-jsonld" title="View raw JSON-LD metadata">&#123;&#125; JSON-LD</a></div>
     </div>
     <div class="entry-card" data-cat="software" data-license="MIT" data-license-bucket="permissive" data-lang="" data-health="" data-governance="academic" data-pypi="" data-hf="" data-judgement="">
@@ -4131,6 +4158,19 @@
 
   btn.addEventListener('click', runSemantic);
   input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); runSemantic(); } });
+
+  // Sample question chips: fill the box and run the meaning search.
+  const sampleWrap = document.getElementById('sample-qs');
+  if (sampleWrap) {
+    sampleWrap.addEventListener('click', (e) => {
+      const chip = e.target.closest('.sample-chip');
+      if (!chip) return;
+      input.value = chip.dataset.q || chip.textContent;
+      input.focus();
+      runSemantic();
+      input.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  }
   // typing a plain name filter exits semantic mode
   input.addEventListener('input', () => { if (semanticOn) clearSemantic(); });
 })();

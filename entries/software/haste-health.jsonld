@@ -1,0 +1,59 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/haste-health",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "haste-health",
+  "name": "Haste Health",
+  "description": "Open-source FHIR R4 server written in Rust, aimed at AI-native health applications. Stores clinical data as FHIR and serves it to apps, analytics, and AI agents through one API, with OAuth2, SMART-on-FHIR, and an MCP server built in. Ingests from Epic, Oracle Health, and HL7v2; outputs FHIR, SQL-on-FHIR, and MCP. Apache-2.0 licensed and self-hostable (docker-compose, an npm package, or native Linux/macOS binaries), with a hosted option under a signed BAA.",
+  "url": "https://haste.health",
+  "codeRepository": "https://github.com/HasteHealth/HasteHealth",
+  "license": "Apache-2.0",
+  "programmingLanguage": [
+    "Rust"
+  ],
+  "applicationCategory": "Interoperability",
+  "keywords": [
+    "fhir",
+    "fhir-server",
+    "fhir-r4",
+    "smart-on-fhir",
+    "sql-on-fhir",
+    "mcp-server",
+    "interoperability",
+    "rust",
+    "ai-native",
+    "oauth2"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Haste Health",
+      "url": "https://haste.health"
+    }
+  ],
+  "mach:governance": "vendor-led",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "cloud-deployable"
+  ],
+  "mach:editorialReviewedAt": "2026-11-22",
+  "schema:comment": "A newer entrant (surfaced via a Google AI Overview for 'self-hostable FHIR servers' that MACH had not yet catalogued). Rust + MCP-native positioning is distinctive among FHIR servers. Repo active with a large commit count; adoption still early (low star count) — the rule-based scorer will set its ring from harvested signals.",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/HasteHealth/HasteHealth",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://haste.health",
+      "mach:evidenceType": "primary-instance"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/HasteHealth/HasteHealth/blob/main/LICENSE",
+  "mach:subcategory": "interoperability",
+  "mach:subcategoryBy": "rule:keyword"
+}

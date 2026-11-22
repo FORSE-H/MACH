@@ -11,7 +11,7 @@ An open, machine-actionable catalog of open-source healthcare software, AI/ML mo
 
 Every entry is a structured JSON-LD record. What makes MACH different from a list is its **judgement**: tools with a public repository get a deterministic **Adopt / Assess / Caution** verdict, derived by a transparent rule-based scorer from measured signals (maintenance, adoption, licence quality) — not hand-written opinion, and never a black box.
 
-**Live catalog:** [machcatalog.org](https://machcatalog.org) · **Status:** Active — <!-- MACH:ENTRY_COUNT -->249<!-- /MACH:ENTRY_COUNT --> entries across <!-- MACH:CATEGORY_COUNT -->8<!-- /MACH:CATEGORY_COUNT --> types, CI pipeline live · A project of [FORSE-H](https://github.com/FORSE-H).
+**Live catalog:** [machcatalog.org](https://machcatalog.org) · **Status:** Active — <!-- MACH:ENTRY_COUNT -->250<!-- /MACH:ENTRY_COUNT --> entries across <!-- MACH:CATEGORY_COUNT -->8<!-- /MACH:CATEGORY_COUNT --> types, CI pipeline live · A project of [FORSE-H](https://github.com/FORSE-H).
 
 ---
 
