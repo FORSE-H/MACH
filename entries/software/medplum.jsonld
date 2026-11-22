@@ -6,7 +6,7 @@
   ],
   "identifier": "medplum",
   "name": "Medplum",
-  "description": "FHIR-native open-source developer platform for building and deploying clinical software, operated by Orangebot Inc. Provides a full-stack TypeScript monorepo (Node.js API, React frontend, PostgreSQL, Redis) covering FHIR-based clinical data repository, SMART-on-FHIR authentication, serverless Bots for workflow automation, a React component library for clinical UIs, and client SDKs. ONC Certified (including HTI-4), SOC 2 Type II, HIPAA, CFR Part 11, EPCS, and ISO 9001 certified. Used in production by Ro, Rad AI, Summer Health, Thirty Madison, Color, and Tia across custom EHRs, AI scribe agents, patient engagement portals, and population health tools. Apache 2.0 licensed, self-hostable, with a managed cloud option. OpenSSF Best Practices certified, 150+ open-source contributors.",
+  "description": "Open-source, self-hostable FHIR server and FHIR-native developer platform for building and deploying clinical software, operated by Orangebot Inc. The FHIR R4 server (clinical data repository with a RESTful API) sits inside a full-stack TypeScript monorepo (Node.js API, React frontend, PostgreSQL, Redis) that also covers SMART-on-FHIR authentication, serverless Bots for workflow automation, a React component library for clinical UIs, and client SDKs. ONC Certified (including HTI-4), SOC 2 Type II, HIPAA, CFR Part 11, EPCS, and ISO 9001 certified. Used in production by Ro, Rad AI, Summer Health, Thirty Madison, Color, and Tia across custom EHRs, AI scribe agents, patient engagement portals, and population health tools. Apache 2.0 licensed, self-hostable, with a managed cloud option. OpenSSF Best Practices certified, 150+ open-source contributors.",
   "url": "https://medplum.com/",
   "codeRepository": "https://github.com/medplum/medplum",
   "license": "Apache-2.0",
@@ -14,6 +14,7 @@
   "dateModified": "2026-05-06",
   "keywords": [
     "fhir",
+    "fhir-server",
     "fhir-r4",
     "smart-on-fhir",
     "ehr",
