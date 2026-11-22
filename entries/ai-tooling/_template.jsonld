@@ -1,0 +1,31 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/ai-tooling/REPLACE-WITH-SLUG",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode"],
+
+  "identifier": "REPLACE-WITH-SLUG",
+  "name": "Tool Name",
+  "description": "One sentence: what the MCP server / agent / skill library does.",
+  "url": "https://REPLACE-with-the-TOOL-OWN-page-not-a-related-project",
+  "codeRepository": "https://github.com/org/repo",
+
+  "license": "SPDX-EXPRESSION-HERE",
+  "programmingLanguage": ["Python"],
+
+  "keywords": ["mcp-server", "REPLACE-keywords"],
+
+  "copyrightHolder": { "@type": "Organization", "name": "Organisation Name", "url": "https://org-site" },
+
+  "mach:governance": "academic",
+  "mach:category": "ai-tooling",
+  "mach:deploymentContext": ["self-hosted", "cloud-deployable"],
+  "mach:editorialReviewedAt": "YYYY-MM-DD",
+
+  "_comment": "mach:subcategory is assigned by scripts/classify.py — leave it out. For an MCP server, add mach:transport / mach:authMethod / mach:mcpSpecVersion as needed. Set url to THIS tool's own page, never a related project's (that was the ToolUniverse/TxAgent bug). Remove this _comment before committing.",
+
+  "mach:evidence": [
+    { "@type": "schema:WebPage", "url": "https://github.com/org/repo", "mach:evidenceType": "primary-repo" }
+  ],
+
+  "mach:licenseUrl": "https://github.com/org/repo/blob/main/LICENSE"
+}

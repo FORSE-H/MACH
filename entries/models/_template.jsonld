@@ -1,0 +1,38 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/REPLACE-WITH-SLUG",
+  "@type": ["schema:SoftwareApplication", "schema:SoftwareSourceCode", "mach:MLModel"],
+
+  "identifier": "REPLACE-WITH-SLUG",
+  "name": "Model Name",
+  "description": "One sentence: what the model does, modality, who built it.",
+  "url": "https://REPLACE-with-the-MODEL-OWN-page-not-a-related-project",
+  "codeRepository": "https://github.com/org/repo",
+
+  "license": "SPDX-EXPRESSION-HERE",
+  "programmingLanguage": ["Python"],
+
+  "keywords": ["imaging-model", "REPLACE-keywords"],
+
+  "author": [
+    { "@type": "Organization", "name": "Lab / Organisation Name", "url": "https://org-site" }
+  ],
+
+  "mach:governance": "academic",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": ["self-hosted", "embedded-library"],
+  "mach:weightsLicense": "SPDX or note — weights licence if it differs from the code.",
+  "mach:trainingDataSummary": "One line on what it was trained on.",
+  "mach:intendedUse": "Research use; not for direct clinical use without validation.",
+  "mach:accessModel": "open-weights",
+  "mach:editorialReviewedAt": "YYYY-MM-DD",
+
+  "_comment": "Judgement is assigned by the scorer from harvested signals — do NOT add mach:judgement/mach:judgementReason/mach:licenseVerified. mach:subcategory is assigned by scripts/classify.py — leave it out. Set url to the MODEL's own page, never a related project's. Remove this _comment before committing.",
+
+  "mach:evidence": [
+    { "@type": "schema:WebPage", "url": "https://github.com/org/repo", "mach:evidenceType": "primary-repo" },
+    { "@type": "schema:ScholarlyArticle", "url": "https://doi.org/REPLACE", "mach:evidenceType": "academic-reference" }
+  ],
+
+  "mach:licenseUrl": "https://github.com/org/repo/blob/main/LICENSE"
+}

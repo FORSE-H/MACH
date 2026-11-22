@@ -8,6 +8,20 @@ Open a [GitHub Issue](https://github.com/FORSE-H/MACH/issues/new/choose) using t
 The curator reviews every suggestion. Suitable entries are harvested, scored, and added
 to the catalog. You will be notified in the issue thread.
 
+### Authoring an entry (maintainers)
+
+Start from the empty template for the entry's category — `entries/<category>/_template.jsonld` —
+never by copying a neighbouring real entry. Cloning a real entry is how one entry's
+`url` or `relatedLink` ends up pointing at a *different* project. CI enforces this:
+
+- `scripts/check_placeholders.py` fails the build if any `REPLACE-*`, `YYYY-MM-DD`,
+  or `SPDX-EXPRESSION-HERE` placeholder is left unfilled.
+- `scripts/check_entry_leaks.py` fails the build if an entry's `relatedLink` points at
+  another entry's folder.
+
+Set `url` to the entry's **own** page. Leave `mach:subcategory` out — `scripts/classify.py`
+assigns it. Do not add `mach:judgement` — the scorer derives it from harvested signals.
+
 ---
 
 ## What makes a good suggestion

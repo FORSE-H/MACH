@@ -1,0 +1,31 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/specs/REPLACE-WITH-SLUG",
+  "@type": ["schema:TechArticle", "mach:Spec"],
+
+  "identifier": "REPLACE-WITH-SLUG",
+  "name": "Standard / Specification Name",
+  "description": "One sentence: what this standard specifies and who maintains it.",
+  "url": "https://REPLACE-with-the-SPEC-OWN-page-not-a-related-project",
+
+  "license": "SPDX-EXPRESSION-HERE",
+
+  "keywords": ["interoperability", "REPLACE-keywords"],
+
+  "copyrightHolder": { "@type": "Organization", "name": "Standards Body Name", "url": "https://org-site" },
+
+  "mach:governance": "standards-body",
+  "mach:category": "specs",
+  "mach:deploymentContext": ["specification"],
+  "mach:accessModel": "open-spec",
+  "mach:applicability": "general",
+  "mach:editorialReviewedAt": "YYYY-MM-DD",
+
+  "_comment": "mach:subcategory is assigned by scripts/classify.py — leave it out. A spec has no code repo; 'license' is the specification's own licence. Remove this _comment before committing.",
+
+  "mach:evidence": [
+    { "@type": "schema:WebPage", "url": "https://REPLACE-spec-page", "mach:evidenceType": "primary-instance" }
+  ],
+
+  "mach:licenseUrl": "https://REPLACE-licence-page"
+}

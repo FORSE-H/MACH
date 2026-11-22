@@ -1,0 +1,33 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/REPLACE-WITH-SLUG",
+  "@type": ["schema:Dataset", "mach:Dataset"],
+
+  "identifier": "REPLACE-WITH-SLUG",
+  "name": "Dataset / Benchmark Name",
+  "description": "One sentence: what the data is, modality, size, who released it.",
+  "url": "https://REPLACE-with-the-DATASET-OWN-page-not-a-related-project",
+  "codeRepository": "https://github.com/org/repo",
+
+  "license": "SPDX-EXPRESSION-HERE",
+
+  "keywords": ["benchmark", "REPLACE-keywords"],
+
+  "author": [
+    { "@type": "Organization", "name": "Lab / Organisation Name", "url": "https://org-site" }
+  ],
+
+  "mach:governance": "academic",
+  "mach:category": "datasets",
+  "mach:deploymentContext": ["self-hosted"],
+  "mach:accessModel": "open-download",
+  "mach:editorialReviewedAt": "YYYY-MM-DD",
+
+  "_comment": "mach:subcategory (benchmark / clinical-dataset / imaging-dataset) is assigned by scripts/classify.py — leave it out. If the data is access-gated, set mach:accessModel to 'registration-gated' and say so in schema:comment. The licence here is the DATA/CONTENT licence, which may differ from the code repo's licence. Remove this _comment before committing.",
+
+  "mach:evidence": [
+    { "@type": "schema:WebPage", "url": "https://github.com/org/repo", "mach:evidenceType": "primary-repo" }
+  ],
+
+  "mach:licenseUrl": "https://github.com/org/repo/blob/main/LICENSE"
+}

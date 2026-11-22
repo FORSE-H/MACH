@@ -72,6 +72,11 @@ jobs:
         # (how TxAgent's page ended up in ToolUniverse's metadata).
         run: python scripts/check_entry_leaks.py
 
+      - name: Check for unfilled template placeholders
+        # Fail if any entry still carries a template placeholder (REPLACE-*,
+        # YYYY-MM-DD, SPDX-EXPRESSION-HERE, ...) — i.e. a half-filled clone.
+        run: python scripts/check_placeholders.py
+
       - name: Check required fields
         run: |
           python3 - <<'EOF'
