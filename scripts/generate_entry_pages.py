@@ -48,10 +48,18 @@ def esc(s) -> str:
     return html.escape(str(s)) if s is not None else ""
 
 
+# Harvest date (top-level generated_at from signals.json), captured at load so
+# the citation "as of" stamp can be shown without threading it through every call.
+HARVEST_DATE = ""
+
+
 def load_signals() -> dict:
+    global HARVEST_DATE
     if not SIGNALS_PATH.exists():
         return {}
     data = json.loads(SIGNALS_PATH.read_text(encoding="utf-8"))
+    # keep only the date part (YYYY-MM-DD) of an ISO timestamp
+    HARVEST_DATE = (data.get("generated_at") or "")[:10]
     return {e["identifier"]: e for e in data.get("entries", [])}
 
 
@@ -188,12 +196,14 @@ def _impact_section(signals: dict) -> str:
         meta.append(esc(year))
     tail = f'<span class="muted"> — {" · ".join(meta)}</span>' if meta else ""
 
+    asof = f" as of {esc(HARVEST_DATE)}" if HARVEST_DATE else ""
     return (
         '<section class="repo">\n    <h3>Academic impact</h3>\n'
         f'    <p class="counts">{bits[0]}{tail}</p>\n'
         '    <p class="muted" style="font-size:0.8rem;margin:0;">Citation count from '
         '<a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, '
-        "matched by the entry&rsquo;s DOI. A measure of reach, not quality.</p>\n    </section>"
+        f"matched by the entry&rsquo;s DOI{asof}. Citations accrue over time, so this is a "
+        "point-in-time figure refreshed at each harvest &mdash; a measure of reach, not quality.</p>\n    </section>"
     )
 
 
