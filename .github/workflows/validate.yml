@@ -77,6 +77,15 @@ jobs:
         # YYYY-MM-DD, SPDX-EXPRESSION-HERE, ...) — i.e. a half-filled clone.
         run: python scripts/check_placeholders.py
 
+      - name: Audit licences (curated vs harvested)
+        # Non-blocking: print the count of entries whose curated licence disagrees
+        # with the harvested signals.license and is NOT yet reconciled (verified +
+        # explained). A green 0 means no hidden licence drift; a non-zero count is
+        # a worklist, not a build failure — so this reports without blocking.
+        # Re-run locally with: python scripts/audit_licenses.py
+        run: python scripts/audit_licenses.py
+        continue-on-error: true
+
       - name: Check required fields
         run: |
           python3 - <<'EOF'
