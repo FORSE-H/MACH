@@ -1,0 +1,65 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/clin-bhc-summ",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "clin-bhc-summ",
+  "name": "clin-bhc-summ",
+  "alternateName": [
+    "Brief Hospital Course Summarization"
+  ],
+  "description": "Dataset and benchmark for hospital-course summarization — generating the 'brief hospital course' narrative of a discharge summary from the rest of a patient's record — with code to evaluate large language models on the task. MIT-licensed, from Stanford University. Published in JAMIA 2024 ('A dataset and benchmark for hospital course summarization with adapted large language models'). Built on MIMIC-IV clinical notes (the MIMIC-IV-Ext-BHC dataset on PhysioNet), so use of the underlying data is subject to PhysioNet credentialing.",
+  "url": "https://github.com/StanfordMIMI/clin-bhc-summ",
+  "codeRepository": "https://github.com/StanfordMIMI/clin-bhc-summ",
+  "relatedLink": [
+    "https://doi.org/10.1093/jamia/ocae312",
+    "https://doi.org/10.13026/fh2q-4148"
+  ],
+  "license": "MIT",
+  "programmingLanguage": [
+    "Jupyter Notebook",
+    "Python"
+  ],
+  "keywords": [
+    "benchmark",
+    "clinical-nlp",
+    "summarization",
+    "discharge-summary",
+    "large-language-models",
+    "mimic-iv",
+    "jamia",
+    "stanford"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Stanford MIMI (Medical Imaging and Machine Intelligence) Lab",
+      "url": "https://aimi.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:accessModel": "registration-gated",
+  "mach:editorialReviewedAt": "2026-11-22",
+  "schema:comment": "The benchmark derives from MIMIC-IV notes; running it requires PhysioNet credentialed access to that source data, separate from the MIT code licence.",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/StanfordMIMI/clin-bhc-summ",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1093/jamia/ocae312",
+      "mach:evidenceType": "academic-reference"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/StanfordMIMI/clin-bhc-summ/blob/main/LICENSE",
+  "mach:subcategory": "benchmark",
+  "mach:subcategoryBy": "rule:keyword"
+}

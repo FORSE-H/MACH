@@ -1,0 +1,66 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/datasets/skm-tea",
+  "@type": [
+    "schema:Dataset",
+    "mach:Dataset"
+  ],
+  "identifier": "skm-tea",
+  "name": "SKM-TEA",
+  "alternateName": [
+    "Stanford Knee MRI Multi-Task Evaluation"
+  ],
+  "description": "Knee MRI dataset pairing raw quantitative MRI k-space data, reconstructed images, and dense tissue and pathology labels, enabling joint study of accelerated MRI reconstruction, segmentation, and detection on the same scans. The companion GitHub code (PyTorch dataloaders, metrics, baselines, tutorials) is MIT-licensed; the imaging data is distributed through Stanford AIMI. Published at the NeurIPS 2021 Datasets and Benchmarks Track (per the project's OpenReview record). Stanford MIMI Lab.",
+  "url": "https://github.com/StanfordMIMI/skm-tea",
+  "codeRepository": "https://github.com/StanfordMIMI/skm-tea",
+  "relatedLink": [
+    "https://openreview.net/forum?id=YDMFgD_qJuA",
+    "https://stanfordaimi.azurewebsites.net/datasets/4aaeafb9-c6e6-4e3c-9188-3aaaf0e0a9e7"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "benchmark",
+    "knee-mri",
+    "mri-reconstruction",
+    "segmentation",
+    "quantitative-mri",
+    "radiology",
+    "neurips",
+    "stanford"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Stanford MIMI (Medical Imaging and Machine Intelligence) Lab",
+      "url": "https://aimi.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "datasets",
+  "mach:deploymentContext": [
+    "self-hosted"
+  ],
+  "mach:accessModel": "registration-gated",
+  "mach:editorialReviewedAt": "2026-11-22",
+  "schema:comment": "The MIT licence covers the GitHub toolkit/dataloader code. The imaging dataset itself is downloaded through Stanford AIMI and is subject to that platform's access terms, separate from the code licence.",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/StanfordMIMI/skm-tea",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://openreview.net/forum?id=YDMFgD_qJuA",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://stanfordaimi.azurewebsites.net/datasets/4aaeafb9-c6e6-4e3c-9188-3aaaf0e0a9e7",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/StanfordMIMI/skm-tea/blob/main/LICENSE",
+  "mach:subcategory": "benchmark",
+  "mach:subcategoryBy": "rule:keyword"
+}
