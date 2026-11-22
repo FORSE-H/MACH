@@ -51,6 +51,14 @@
   .legend { margin:0 0 12px; font-size:0.78rem; color:var(--muted); display:flex; flex-wrap:wrap; gap:4px 12px; }
   ul.checks { list-style:none; margin:0 0 10px; padding:0; display:flex; flex-wrap:wrap; gap:6px 14px; font-size:0.84rem; font-family:'DM Mono',monospace; }
   ul.checks .yes { color:var(--teal-700); } ul.checks .no { color:var(--muted); }
+  .ssf { display:inline-block; font-size:0.86rem; padding:2px 10px; border-radius:999px; font-variant-numeric:tabular-nums; }
+  .ssf.ok { background:var(--teal-50); color:var(--teal-700); }
+  .ssf.warn { background:#fdf0dd; color:var(--amber-dark); }
+  .ssf.bad { background:#fde5e7; color:var(--rose); }
+  .lic { display:inline-block; font-family:'DM Mono',monospace; font-size:0.86rem; padding:2px 10px; border-radius:999px; background:#eef1f4; color:var(--ink); }
+  .lic.ok { background:var(--teal-50); color:var(--teal-700); }
+  .lic a { color:inherit; text-decoration:underline; }
+  .lic-verified { font-size:0.78rem; color:var(--teal-700); font-weight:600; }
   .implements { margin:8px 0 0; font-size:0.85rem; }
   .spec-chip { display:inline-block; font-family:'DM Mono',monospace; font-size:0.78rem; background:var(--teal-50); color:var(--teal-700); padding:2px 8px; border-radius:999px; text-decoration:none; margin:2px 3px 0 0; }
   .spec-chip:hover { text-decoration:underline; }
@@ -77,20 +85,35 @@
       <p class="muted">This entry has no harvestable repository signal (e.g. a dataset, standard, or hosted service), so the deterministic scorer does not assign a ring.</p>
     </div>
     
+    <section class="repo">
+    <h3>Licence</h3>
+    <p class="counts">
+    <span class="lic">CC-BY-4.0</span>
+    </p>
+    </section>
+    
+    
     <section>
       <h3>Signals &amp; lineage</h3>
       <p class="muted">Every value records the source it was harvested from.</p>
       <table class="lineage">
         <thead><tr><th>Field</th><th>Value</th><th>Source</th></tr></thead>
-        <tbody><tr><td class="field">HuggingFace downloads (monthly)</td><td class="value"><span class="muted">not_found</span></td><td class="source"><code>huggingface</code></td></tr><tr><td class="field">PyPI downloads (monthly)</td><td class="value"><span class="muted">not_found</span></td><td class="source"><code>pypi</code></td></tr></tbody>
+        <tbody><tr><td class="field">HuggingFace downloads (monthly)</td><td class="value"><span class="muted">not on this platform</span></td><td class="source"><code>huggingface</code></td></tr><tr><td class="field">PyPI downloads (monthly)</td><td class="value"><span class="muted">not on this platform</span></td><td class="source"><code>pypi</code></td></tr></tbody>
       </table>
     </section>
     <section>
       <h3>Change history</h3>
-      <p class="muted">No recorded deviations yet — values have not changed since first harvest.</p>
+      <p class="muted">Recorded deviations — when a harvested value changed between runs.</p>
+      <table class="lineage">
+        <thead><tr><th>When</th><th>Field</th><th>Was</th><th>Now</th><th>Source</th></tr></thead>
+        <tbody><tr><td>2026-11-21T20:42:14.034109</td><td class="field">hf_downloads</td><td class="muted">—</td><td>—</td><td><code>huggingface</code></td></tr><tr><td>2026-11-21T20:42:13.983691</td><td class="field">pypi_downloads</td><td class="muted">—</td><td>—</td><td><code>pypi</code></td></tr></tbody>
+      </table>
     </section>
     
     <footer>MACH — Machine-Actionable Catalog for Healthcare · Judgement is rule-based, derived from harvested signals · <a href="../index.html">machcatalog.org</a></footer>
   </div>
+  <!-- Privacy-first analytics (GoatCounter — no cookies, no personal data). -->
+  <script data-goatcounter="https://machcatalog.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

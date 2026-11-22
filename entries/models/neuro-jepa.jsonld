@@ -76,5 +76,7 @@
   ],
   "mach:huggingFaceUrl": "https://huggingface.co/NYUMedML/Neuro-JEPA",
   "mach:licenseUrl": "https://huggingface.co/NYUMedML/Neuro-JEPA",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "Neuro-JEPA WEIGHTS are CC-BY-NC-ND-4.0 (non-commercial research); the CODE repo is MIT (per its LICENSE), with portions derived from V-JEPA 2 under V-JEPA 2's terms. The HF model card's top-level licence tag is internally inconsistent (it labels everything NC-ND); the weights figure is the one that matters here.",
   "mach:subcategoryBy": "rule:keyword"
 }

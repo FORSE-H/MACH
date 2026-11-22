@@ -242,6 +242,54 @@ def _security_section(signals: dict) -> str:
     return "\n    ".join(parts)
 
 
+def _stem_license(s: str) -> str:
+    """Fold SPDX precision suffixes so GPL-2.0-only == GPL-2.0, case-insensitive,
+    matching scripts/audit_licenses.py so the page and the audit never disagree
+    about what counts as 'the same licence'."""
+    s = (s or "").strip().casefold()
+    for suf in ("-or-later", "-only"):
+        if s.endswith(suf):
+            s = s[: -len(suf)]
+    return s
+
+
+def _license_section(entry: dict, signals: dict) -> str:
+    """Curated licence block. The authoritative licence is the one in the entry
+    JSON-LD (set or confirmed by a human), NOT the harvested signals.license —
+    GitHub's detector often reports the linked *code* repo's licence when the
+    entry is really a dataset, model weights, or specification. When the two
+    differ, we show the curated value as the headline and, transparently, note
+    what the harvester saw and why it differs."""
+    curated = entry.get("license")
+    if not curated:
+        return ""
+    verified = bool(entry.get("mach:licenseVerified"))
+    note = entry.get("mach:licenseNote") or ""
+    lic_url = entry.get("mach:licenseUrl") or ""
+    harvested = (signals or {}).get("license") or ""
+    differs = harvested and _stem_license(harvested) != _stem_license(curated)
+
+    chip_cls = "lic ok" if verified else "lic"
+    label = esc(curated)
+    if lic_url:
+        label = f'<a href="{esc(lic_url)}" target="_blank" rel="noopener">{esc(curated)}</a>'
+
+    parts = ['<section class="repo">', "<h3>Licence</h3>", '<p class="counts">']
+    vtag = ' &nbsp;<span class="lic-verified">&#10003; verified against source</span>' if verified else ""
+    parts.append(f'<span class="{chip_cls}">{label}</span>{vtag}')
+    parts.append("</p>")
+    if note:
+        parts.append(f'<p class="muted" style="font-size:0.85rem;margin:0;">{esc(note)}</p>')
+    if differs:
+        parts.append(
+            '<p class="muted" style="font-size:0.8rem;margin:6px 0 0;">'
+            f'Automated detection (GitHub) reported <code>{esc(harvested)}</code> for the linked '
+            'repository; the value above is the curator-verified licence for this entry.</p>'
+        )
+    parts.append("</section>")
+    return "\n    ".join(parts)
+
+
 _HARDWARE_NOTE = (
     "Open-source medical hardware: the repository holds device designs, PCBs, "
     "firmware, and build documentation. MACH&rsquo;s rule-based signals (stars, "
@@ -282,7 +330,15 @@ def render_page(entry: dict, sig: dict) -> str:
     repo_block = _repo_section(signals, entry)
     impact_block = _impact_section(signals)
     security_block = _security_section(signals)
+    license_block = _license_section(entry, signals)
     hardware_note = _hardware_note(entry)
+
+    # The lineage table is built from harvested facts. When the entry carries a
+    # curator-verified licence that differs from the harvested one, don't let the
+    # table present the harvested value as plain fact — annotate that row so the
+    # table agrees with the headline Licence section above.
+    _curated_license = entry.get("license")
+    _license_verified = bool(entry.get("mach:licenseVerified"))
 
     if judgement in RING_CLASS:
         badge = f'<span class="ring {RING_CLASS[judgement]}">{esc(judgement)}</span>'
@@ -318,10 +374,22 @@ def render_page(entry: dict, sig: dict) -> str:
             status = f.get("fetch_status", "")
             phrase = _STATUS_PHRASE.get(status, status or "—")
             val_disp = esc(val) if val not in (None, "") else f'<span class="muted">{esc(phrase)}</span>'
+            source_disp = f'<code>{esc(f.get("source_id","—"))}</code>'
+            # Override the harvested licence row when the curated licence differs:
+            # keep the harvested value visible (lineage honesty) but mark it
+            # superseded, and point at the verified value shown above.
+            if (f["field_name"] == "license" and _curated_license
+                    and _stem_license(val) != _stem_license(_curated_license)):
+                val_disp = (
+                    f'<span class="muted" style="text-decoration:line-through;">{esc(val)}</span>'
+                    f' &rarr; <strong>{esc(_curated_license)}</strong>'
+                    + (' <span class="lic-verified">&#10003;</span>' if _license_verified else '')
+                )
+                source_disp = f'<code>{esc(f.get("source_id","—"))}</code> &rarr; <code>curator</code>'
             rows.append(
                 f'<tr><td class="field">{esc(label)}</td>'
                 f'<td class="value">{val_disp}</td>'
-                f'<td class="source"><code>{esc(f.get("source_id","—"))}</code></td></tr>'
+                f'<td class="source">{source_disp}</td></tr>'
             )
         lineage = f"""<section>
       <h3>Signals &amp; lineage</h3>
@@ -424,6 +492,10 @@ def render_page(entry: dict, sig: dict) -> str:
   .ssf.ok {{ background:var(--teal-50); color:var(--teal-700); }}
   .ssf.warn {{ background:#fdf0dd; color:var(--amber-dark); }}
   .ssf.bad {{ background:#fde5e7; color:var(--rose); }}
+  .lic {{ display:inline-block; font-family:'DM Mono',monospace; font-size:0.86rem; padding:2px 10px; border-radius:999px; background:#eef1f4; color:var(--ink); }}
+  .lic.ok {{ background:var(--teal-50); color:var(--teal-700); }}
+  .lic a {{ color:inherit; text-decoration:underline; }}
+  .lic-verified {{ font-size:0.78rem; color:var(--teal-700); font-weight:600; }}
   .implements {{ margin:8px 0 0; font-size:0.85rem; }}
   .spec-chip {{ display:inline-block; font-family:'DM Mono',monospace; font-size:0.78rem; background:var(--teal-50); color:var(--teal-700); padding:2px 8px; border-radius:999px; text-decoration:none; margin:2px 3px 0 0; }}
   .spec-chip:hover {{ text-decoration:underline; }}
@@ -447,6 +519,7 @@ def render_page(entry: dict, sig: dict) -> str:
     <div class="links">{''.join(links)}</div>
     {judgement_block}
     {repo_block}
+    {license_block}
     {security_block}
     {impact_block}
     {lineage}

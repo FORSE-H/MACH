@@ -14,8 +14,9 @@
     "https://healthypi.protocentral.com/"
   ],
   "license": "CERN-OHL-P-2.0",
-  "mach:licenseNote": "Hardware under CERN-OHL-P-2.0 (permissive); accompanying software under its own open licence, per the repo LICENSE.",
+  "mach:licenseNote": "Three-way split (per repo LICENSE.md): hardware design = CERN-OHL-P-2.0 (permissive), software = MIT, documentation = CC-BY-SA-4.0. GitHub's detector reports only MIT (the software).",
   "mach:licenseVerified": true,
+  "mach:licenseUrl": "https://github.com/Protocentral/protocentral_healthypi_5/blob/master/LICENSE.md",
   "dateModified": "2026-07-25",
   "programmingLanguage": [
     "C",

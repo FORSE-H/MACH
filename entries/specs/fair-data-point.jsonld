@@ -57,7 +57,9 @@
     }
   ],
   "mach:swhid": "swh:1:snp:03eece3e1d75b75eece35e1d4c5be0e07de17d40",
-  "mach:licenseUrl": "https://github.com/FAIRDataTeam/FAIRDataPoint/blob/master/LICENSE",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "The FDP specification itself is published under the W3C Software and Document License; the Java reference implementation (codeRepository) is separately MIT-licensed — which is the 'MIT' GitHub's detector reports.",
+  "mach:licenseUrl": "https://www.w3.org/copyright/software-license/",
   "mach:subcategory": "interoperability-standard",
   "mach:subcategoryBy": "rule:keyword"
 }

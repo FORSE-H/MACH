@@ -20,6 +20,8 @@
     "https://arxiv.org/abs/2507.05201"
   ],
   "license": "custom",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "MedGemma WEIGHTS are under Google's custom Health AI Developer Foundations (HAI-DEF) Terms of Use (bespoke, with a Prohibited Use Policy — not standard OSS). The Apache-2.0 the harvester reports covers only the SOURCE CODE repo.",
   "mach:licenseUrl": "https://developers.google.com/health-ai-developer-foundations/terms",
   "version": "1.0.0",
   "dateModified": "2025-07-09",

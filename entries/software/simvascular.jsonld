@@ -72,5 +72,7 @@
   ],
   "mach:swhid": "swh:1:snp:f9d135e9e43f4731e939bd23e339eba1d0514aa5",
   "mach:licenseUrl": "https://github.com/SimVascular/SimVascular/blob/master/LICENSE.md",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "LICENSE.md states 'SimVascular is provided under the BSD license' (SimVascular / Stanford / UC Regents wording), not a stock SPDX licence. GitHub's detector reports MIT because the permission text resembles it.",
   "mach:subcategoryBy": "rule:keyword"
 }

@@ -13,7 +13,9 @@
   "relatedLink": [
     "https://www.ilastik.org/documentation/"
   ],
-  "license": "LGPL-2.1",
+  "license": "GPL-2.0-or-later",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "Dual-licensed: ilastik itself is GPL-2.0-or-later; the bundled lazyflow component is LGPL-2.1-or-later (per the repository LICENSE file).",
   "version": "1.4.2",
   "programmingLanguage": [
     "Python"

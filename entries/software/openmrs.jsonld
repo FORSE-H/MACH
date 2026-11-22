@@ -65,6 +65,8 @@
   ],
   "mach:swhid": "swh:1:snp:b0b1587a4779bfb8ee6c694c6f1bb728032a2cf4",
   "mach:licenseUrl": "https://github.com/openmrs/openmrs-core/blob/master/LICENSE",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "Mozilla Public License 2.0 (the LICENSE file carries SPDX-License-Identifier: MPL-2.0; GPL-2.0 appears only as a possible Secondary License). GitHub's detector reports GPL-3.0.",
   "mach:subcategory": "interoperability",
   "mach:subcategoryBy": "rule:keyword"
 }
