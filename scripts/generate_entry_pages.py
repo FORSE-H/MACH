@@ -167,6 +167,81 @@ def _repo_section(signals: dict, entry: dict) -> str:
     return "\n    ".join(parts)
 
 
+def _impact_section(signals: dict) -> str:
+    """Academic impact from OpenAlex (citations), shown only for entries that
+    carry a DOI and were found in OpenAlex. Returns '' when there's nothing."""
+    citations = signals.get("citations")
+    if citations in (None, ""):
+        return ""
+    try:
+        n = int(citations)
+    except (TypeError, ValueError):
+        return ""
+    year = signals.get("publication_year")
+    venue = signals.get("openalex_venue")
+
+    bits = [f"&#10078; <strong>{n:,}</strong> citation{'' if n == 1 else 's'}"]
+    meta = []
+    if venue:
+        meta.append(esc(venue))
+    if year:
+        meta.append(esc(year))
+    tail = f'<span class="muted"> — {" · ".join(meta)}</span>' if meta else ""
+
+    return (
+        '<section class="repo">\n    <h3>Academic impact</h3>\n'
+        f'    <p class="counts">{bits[0]}{tail}</p>\n'
+        '    <p class="muted" style="font-size:0.8rem;margin:0;">Citation count from '
+        '<a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, '
+        "matched by the entry&rsquo;s DOI. A measure of reach, not quality.</p>\n    </section>"
+    )
+
+
+def _security_section(signals: dict) -> str:
+    """Security posture: OpenSSF Scorecard (repo hygiene, 0–10) and OSV known
+    vulnerabilities. Shown only when at least one was harvested. Hygiene is not
+    a safety guarantee — the note says so."""
+    score = signals.get("ssf_score")
+    vulns = signals.get("osv_known_vulns")
+    has_score = score not in (None, "")
+    has_vulns = vulns not in (None, "")
+    if not (has_score or has_vulns):
+        return ""
+
+    parts = ['<section class="repo">', "<h3>Security posture</h3>", '<p class="counts">']
+    chips = []
+    if has_score:
+        try:
+            s = float(score)
+            cls = "ok" if s >= 7 else ("warn" if s >= 4 else "bad")
+        except (TypeError, ValueError):
+            s, cls = score, "warn"
+        chips.append(
+            f'<span class="ssf {cls}">OpenSSF Scorecard: <strong>{esc(s)}</strong>/10</span>'
+        )
+    if has_vulns:
+        try:
+            v = int(vulns)
+        except (TypeError, ValueError):
+            v = vulns
+        vcls = "ok" if v == 0 else "bad"
+        label = "no known vulnerabilities" if v == 0 else f"{v:,} known vulnerabilit{'y' if v == 1 else 'ies'}"
+        chips.append(f'<span class="ssf {vcls}">OSV: <strong>{esc(label)}</strong></span>')
+    parts.append(" &nbsp; ".join(chips))
+    parts.append("</p>")
+    parts.append(
+        '<p class="muted" style="font-size:0.8rem;margin:0;">'
+        '<a href="https://securityscorecards.dev" target="_blank" rel="noopener">OpenSSF Scorecard</a> '
+        "measures a repository&rsquo;s security <em>hygiene</em> (branch protection, code review, "
+        "dangerous workflows), and "
+        '<a href="https://osv.dev" target="_blank" rel="noopener">OSV</a> lists known published '
+        "advisories in discovered packages. Neither certifies that the software is safe to deploy "
+        "clinically — they describe the development process, not clinical fitness.</p>"
+    )
+    parts.append("</section>")
+    return "\n    ".join(parts)
+
+
 _HARDWARE_NOTE = (
     "Open-source medical hardware: the repository holds device designs, PCBs, "
     "firmware, and build documentation. MACH&rsquo;s rule-based signals (stars, "
@@ -205,6 +280,8 @@ def render_page(entry: dict, sig: dict) -> str:
     signals = (sig or {}).get("signals", {}) or {}
 
     repo_block = _repo_section(signals, entry)
+    impact_block = _impact_section(signals)
+    security_block = _security_section(signals)
     hardware_note = _hardware_note(entry)
 
     if judgement in RING_CLASS:
@@ -331,6 +408,10 @@ def render_page(entry: dict, sig: dict) -> str:
   .legend {{ margin:0 0 12px; font-size:0.78rem; color:var(--muted); display:flex; flex-wrap:wrap; gap:4px 12px; }}
   ul.checks {{ list-style:none; margin:0 0 10px; padding:0; display:flex; flex-wrap:wrap; gap:6px 14px; font-size:0.84rem; font-family:'DM Mono',monospace; }}
   ul.checks .yes {{ color:var(--teal-700); }} ul.checks .no {{ color:var(--muted); }}
+  .ssf {{ display:inline-block; font-size:0.86rem; padding:2px 10px; border-radius:999px; font-variant-numeric:tabular-nums; }}
+  .ssf.ok {{ background:var(--teal-50); color:var(--teal-700); }}
+  .ssf.warn {{ background:#fdf0dd; color:var(--amber-dark); }}
+  .ssf.bad {{ background:#fde5e7; color:var(--rose); }}
   .implements {{ margin:8px 0 0; font-size:0.85rem; }}
   .spec-chip {{ display:inline-block; font-family:'DM Mono',monospace; font-size:0.78rem; background:var(--teal-50); color:var(--teal-700); padding:2px 8px; border-radius:999px; text-decoration:none; margin:2px 3px 0 0; }}
   .spec-chip:hover {{ text-decoration:underline; }}
@@ -354,6 +435,8 @@ def render_page(entry: dict, sig: dict) -> str:
     <div class="links">{''.join(links)}</div>
     {judgement_block}
     {repo_block}
+    {security_block}
+    {impact_block}
     {lineage}
     {history_block}
     {hardware_note}
