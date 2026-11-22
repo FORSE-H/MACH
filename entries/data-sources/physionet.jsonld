@@ -18,8 +18,10 @@
     "https://physionet.org/content/",
     "https://wfdb.readthedocs.io/"
   ],
-  "license": "CC-BY-4.0",
-  "mach:licenseUrl": "https://physionet.org/about/licenses/",
+  "license": "varies",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "PhysioNet datasets span open, restricted and credentialed access tiers, each with its own data-use agreement — there is no single blanket licence. The platform CODE (MIT-LCP/physionet-build) is separately BSD-3-Clause.",
+  "mach:licenseUrl": "https://physionet.org/about/database/",
   "keywords": [
     "ecg",
     "icu",

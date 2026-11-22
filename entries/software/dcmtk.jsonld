@@ -14,6 +14,9 @@
   "url": "https://dicom.offis.de/dcmtk",
   "codeRepository": "https://github.com/DCMTK/dcmtk",
   "license": "BSD-3-Clause",
+  "mach:licenseVerified": true,
+  "mach:licenseUrl": "https://github.com/DCMTK/dcmtk/blob/master/COPYRIGHT",
+  "mach:licenseNote": "Core DCMTK is BSD-3-Clause (per COPYRIGHT). GitHub's detector reports Apache-2.0 from a bundled log4cplus header; bundled components also include LGPL, MIT, IJG, OpenSSL, zlib and libpng pieces.",
   "version": "3.7.0",
   "dateModified": "2026-01-23",
   "keywords": [

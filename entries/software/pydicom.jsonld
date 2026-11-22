@@ -77,6 +77,8 @@
   "mach:alternativeTo": [],
   "mach:swhid": "swh:1:snp:29394dd72cbfa70088456cb41ea37c8c78920bd6",
   "mach:licenseUrl": "https://github.com/pydicom/pydicom/blob/main/LICENSE",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "MIT (a small GDCM-derived private dictionary portion is BSD-3-Clause). GitHub's detector reports BSD-2-Clause; the LICENSE file is MIT.",
   "mach:supportsSpec": [
     "https://github.com/FORSE-H/MACH/tree/main/entries/specs/dicom"
   ],

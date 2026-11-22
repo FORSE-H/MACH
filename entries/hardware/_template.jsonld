@@ -1,0 +1,31 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/hardware/REPLACE-WITH-SLUG",
+  "@type": ["schema:Product", "schema:SoftwareSourceCode"],
+
+  "identifier": "REPLACE-WITH-SLUG",
+  "name": "Hardware / Device Design Name",
+  "description": "One sentence: what the open hardware design is (PCB, firmware, 3D-print).",
+  "url": "https://REPLACE-with-the-DESIGN-OWN-page-not-a-related-project",
+  "codeRepository": "https://github.com/org/repo",
+
+  "license": "SPDX-EXPRESSION-HERE",
+
+  "keywords": ["open-hardware", "REPLACE-keywords"],
+
+  "copyrightHolder": { "@type": "Organization", "name": "Organisation Name", "url": "https://org-site" },
+
+  "mach:governance": "community",
+  "mach:category": "hardware",
+  "mach:deploymentContext": ["self-build"],
+  "mach:licenseNote": "Note which licence covers hardware vs firmware vs docs if they differ.",
+  "mach:editorialReviewedAt": "YYYY-MM-DD",
+
+  "_comment": "mach:subcategory is assigned by scripts/classify.py — leave it out. ALWAYS-ON caveat: signals describe the design repo, not the physical device's safety or regulatory clearance — keep that framing. Remove this _comment before committing.",
+
+  "mach:evidence": [
+    { "@type": "schema:WebPage", "url": "https://github.com/org/repo", "mach:evidenceType": "primary-repo" }
+  ],
+
+  "mach:licenseUrl": "https://github.com/org/repo/blob/main/LICENSE"
+}

@@ -58,7 +58,9 @@
     }
   ],
   "mach:swhid": "swh:1:snp:9aaf449e42df1ef854e1e4476c1e7cfcefdd71c9",
-  "mach:licenseUrl": "https://github.com/basveeling/pcam/blob/master/LICENSE.txt",
+  "mach:licenseUrl": "https://github.com/basveeling/pcam#license",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "The PCam DATASET is CC0 (stated in the repo README, following Camelyon16's licence). The repo's LICENSE.txt is MIT and covers only the CODE — which is what the harvester reports.",
   "mach:subcategory": "benchmark",
   "mach:subcategoryBy": "rule:keyword"
 }

@@ -15,7 +15,9 @@
     "https://docs.openalex.org"
   ],
   "license": "CC0-1.0",
-  "mach:licenseUrl": "https://docs.openalex.org/license",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "The OpenAlex DATA is CC0 (per help.openalex.org/license). The harvester's 'MIT' comes from the linked tutorial code repo, which is a separate artifact.",
+  "mach:licenseUrl": "https://help.openalex.org/license",
   "keywords": [
     "academic-knowledge-graph",
     "scholarly-literature",

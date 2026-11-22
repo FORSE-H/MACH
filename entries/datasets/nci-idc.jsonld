@@ -66,7 +66,9 @@
       "mach:evidenceType": "documentation"
     }
   ],
-  "mach:licenseUrl": "https://github.com/ImagingDataCommons/idc-index/blob/main/LICENSE",
+  "mach:licenseUrl": "https://learn.canceridc.dev/data/licensing",
+  "mach:licenseVerified": true,
+  "mach:licenseNote": "IDC imaging DATA is predominantly CC-BY (≈75% CC BY 4.0, ≈22% CC BY 3.0, remainder CC BY-NC / NLM terms) — licence is per-DICOM-series. The 'MIT' the harvester reports is the idc-index CODE repo, a separate artifact.",
   "mach:subcategory": "imaging-dataset",
   "mach:subcategoryBy": "rule:keyword"
 }
