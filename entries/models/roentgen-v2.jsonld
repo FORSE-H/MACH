@@ -1,0 +1,53 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/roentgen-v2",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "roentgen-v2",
+  "name": "RoentGen-v2",
+  "description": "Radiographic generative AI models that produce finely controllable synthetic chest X-ray data, used to improve the robustness and fairness of downstream chest X-ray interpretation models. MIT-licensed code from the Stanford MIMI Lab. Note: RoentGen-v2 is distinct from the original RoentGen repository, whose code carried no licence and whose weights were gated to MIMIC-CXR-credentialed researchers; this v2 repository is permissively licensed.",
+  "url": "https://github.com/StanfordMIMI/RoentGen-v2",
+  "codeRepository": "https://github.com/StanfordMIMI/RoentGen-v2",
+  "license": "MIT",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "imaging-model",
+    "generative-model",
+    "chest-x-ray",
+    "synthetic-data",
+    "radiology",
+    "fairness",
+    "data-augmentation",
+    "stanford"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Stanford MIMI (Medical Imaging and Machine Intelligence) Lab",
+      "url": "https://aimi.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "embedded-library"
+  ],
+  "mach:intendedUse": "A research tool for generating controllable synthetic chest X-rays to augment and de-bias training data for interpretation models — not for producing images presented as real clinical studies.",
+  "mach:editorialReviewedAt": "2026-11-22",
+  "schema:comment": "Generated images are synthetic and must not be presented as genuine patient radiographs. Weights-release and training-data details to be confirmed from the repository and the associated paper.",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/StanfordMIMI/RoentGen-v2",
+      "mach:evidenceType": "primary-repo"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/StanfordMIMI/RoentGen-v2/blob/main/LICENSE",
+  "mach:subcategory": "imaging-model",
+  "mach:subcategoryBy": "rule:keyword"
+}

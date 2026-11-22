@@ -1,0 +1,73 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/merlin",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "merlin",
+  "name": "Merlin",
+  "description": "3D vision-language foundation model for abdominal computed tomography, pretrained on paired CT volumes, structured electronic health records, and unstructured radiology reports. Supports image and text embeddings, phenotype classification, five-year disease-risk prediction, and radiology report generation. Published in Nature 2026. Code and model weights are MIT-licensed and released on Hugging Face; the accompanying Merlin Abdominal CT Dataset is distributed separately through Stanford AIMI under a data-use agreement. Stanford MIMI Lab.",
+  "url": "https://huggingface.co/stanfordmimi/Merlin",
+  "codeRepository": "https://github.com/StanfordMIMI/Merlin",
+  "relatedLink": [
+    "https://doi.org/10.1038/s41586-026-10181-8",
+    "https://arxiv.org/abs/2406.06512",
+    "https://github.com/ashwinkumargb/Merlin-nnUNet"
+  ],
+  "license": "MIT",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "imaging-model",
+    "vision-language",
+    "foundation-model",
+    "computed-tomography",
+    "3d-imaging",
+    "radiology",
+    "electronic-health-records",
+    "report-generation",
+    "nature",
+    "stanford"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Stanford MIMI (Medical Imaging and Machine Intelligence) Lab",
+      "url": "https://aimi.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "embedded-library"
+  ],
+  "mach:weightsLicense": "MIT (model weights released on Hugging Face under the same licence as the code).",
+  "mach:trainingDataSummary": "Paired abdominal CT volumes, structured EHR phenotypes, and unstructured radiology reports (the Merlin Abdominal CT Dataset).",
+  "mach:intendedUse": "A research foundation model for CT-based representation learning and downstream tasks (classification, risk prediction, report generation) — not intended for direct clinical use without further validation.",
+  "mach:accessModel": "open-weights",
+  "mach:editorialReviewedAt": "2026-11-22",
+  "schema:comment": "Segmentation is handled via a separate Merlin-nnU-Net integration repo. The Merlin Abdominal CT Dataset is access-gated through Stanford AIMI (data-use agreement), separate from the MIT-licensed code and weights.",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/stanfordmimi/Merlin",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://doi.org/10.1038/s41586-026-10181-8",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/StanfordMIMI/Merlin",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/StanfordMIMI/Merlin/blob/main/LICENSE",
+  "mach:subcategory": "imaging-model",
+  "mach:subcategoryBy": "rule:keyword"
+}

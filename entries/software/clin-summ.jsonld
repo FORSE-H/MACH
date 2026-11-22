@@ -1,0 +1,59 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/clin-summ",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "clin-summ",
+  "name": "clin-summ",
+  "alternateName": [
+    "Clinical text summarization by adapting LLMs"
+  ],
+  "description": "Code and methods for adapting large language models to clinical text summarization across tasks including radiology reports, progress notes, dialogue, and question answering, with expert evaluation comparing model summaries to clinician-written ones. MIT-licensed (with the UMLS Scorer component governed by its own NLM licence), Python, from the Stanford MIMI Lab.",
+  "url": "https://github.com/StanfordMIMI/clin-summ",
+  "codeRepository": "https://github.com/StanfordMIMI/clin-summ",
+  "license": "MIT",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "applicationCategory": "Clinical NLP",
+  "keywords": [
+    "clinical-nlp",
+    "summarization",
+    "large-language-models",
+    "radiology-reports",
+    "progress-notes",
+    "domain-adaptation",
+    "stanford"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Stanford MIMI (Medical Imaging and Machine Intelligence) Lab",
+      "url": "https://aimi.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "embedded-library"
+  ],
+  "mach:editorialReviewedAt": "2026-11-22",
+  "schema:comment": "The MIT licence covers all code except the UMLS Scorer, which is subject to the separate NLM UMLS licence.",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/StanfordMIMI/clin-summ",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/StanfordMIMI/clin-summ/blob/main/LICENSE",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/StanfordMIMI/clin-summ/blob/main/LICENSE",
+  "mach:subcategory": "clinical-nlp",
+  "mach:subcategoryBy": "rule:keyword"
+}

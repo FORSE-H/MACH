@@ -1,0 +1,80 @@
+name: Sync harvested signals
+
+# Keeps MACH's data/signals.json in step with the harvester in mach-render-deploy.
+# The harvester runs weekly there (Mondays 05:00 UTC) and commits a fresh
+# signals.json; this job fetches that file an hour later and, if it differs from
+# the copy committed here, opens a pull request with the diff. Nothing lands on
+# main without review — the PR is the gate — and once merged, Update-site rebuilds
+# the site with the new citations / security / download signals baked in.
+#
+# render-deploy is public, so the raw file is readable with no token. The PR is
+# opened with the built-in GITHUB_TOKEN; create-pull-request is pinned to a SHA.
+
+on:
+  schedule:
+    - cron: '30 6 * * 1'   # Mondays 06:30 UTC — after the harvester's 05:00 run
+  workflow_dispatch:        # allow a manual sync any time
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-signals
+  cancel-in-progress: false
+
+env:
+  SOURCE_RAW: https://raw.githubusercontent.com/FORSE-H/mach-render-deploy/main/data/signals.json
+
+jobs:
+  sync:
+    name: Fetch signals and open a PR on change
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # create-pull-request pushes the branch
+      pull-requests: write    # ...and opens the PR
+
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a # v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
+
+      - name: Fetch latest signals.json from the harvester
+        run: |
+          set -euo pipefail
+          tmp="$(mktemp)"
+          # Fail on any non-200 so a transient outage doesn't blank the file.
+          http=$(curl -sS --max-time 120 -w '%{http_code}' -o "$tmp" "$SOURCE_RAW")
+          if [ "$http" != "200" ]; then
+            echo "::error::Fetch failed (HTTP $http) from $SOURCE_RAW"; exit 1
+          fi
+          # Must be valid JSON with an entries array, or we refuse to overwrite.
+          python3 -c "import json; d=json.load(open('$tmp', encoding='utf-8')); assert isinstance(d.get('entries'), list) and d['entries'], 'no entries'; print('OK', len(d['entries']), 'entries')"
+          mv "$tmp" data/signals.json
+
+      - name: Show what changed
+        run: |
+          if git diff --quiet -- data/signals.json; then
+            echo "No change — signals.json is already up to date."
+          else
+            git --no-pager diff --stat -- data/signals.json
+          fi
+
+      - name: Open a PR if signals changed
+        uses: peter-evans/create-pull-request@d4f3be6ce6f4083b7ac7490ab98b48a62db1ee41 # v7.0.10
+        with:
+          add-paths: data/signals.json
+          branch: signals-sync
+          delete-branch: true
+          commit-message: "data: refresh harvested signals from mach-render-deploy"
+          title: "data: refresh harvested signals"
+          body: |
+            Automated sync of `data/signals.json` from the harvester in
+            [`mach-render-deploy`](https://github.com/FORSE-H/mach-render-deploy)
+            (its weekly harvest). Review the stat diff, then merge — Update-site
+            will rebuild the entry pages with the new signals.
+
+            If this PR is empty, the catalogue's signals were already current.

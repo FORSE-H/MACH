@@ -1,0 +1,72 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/models/medvae",
+  "@type": [
+    "mach:MLModel",
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "medvae",
+  "name": "MedVAE",
+  "alternateName": [
+    "Efficient Automated Interpretation of Medical Images with Large-Scale Generalizable Autoencoders"
+  ],
+  "description": "Family of six large-scale 2D and 3D autoencoders that compress high-resolution medical images into much smaller latent representations, pretrained on over one million images across modalities and anatomies. The compact latents speed up downstream training and inference (classification, finetuning) while preserving clinically relevant detail. MIT-licensed code and weights, installable via pip and released on Hugging Face. MIDL 2025 (Oral). Stanford MIMI Lab.",
+  "url": "https://huggingface.co/stanfordmimi/MedVAE",
+  "codeRepository": "https://github.com/StanfordMIMI/MedVAE",
+  "relatedLink": [
+    "https://arxiv.org/abs/2502.14753",
+    "https://pypi.org/project/medvae/"
+  ],
+  "license": "MIT",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "keywords": [
+    "imaging-model",
+    "autoencoder",
+    "medical-imaging",
+    "latent-compression",
+    "representation-learning",
+    "foundation-model",
+    "midl",
+    "stanford"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Stanford MIMI (Medical Imaging and Machine Intelligence) Lab",
+      "url": "https://aimi.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "ai-ml-models",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "embedded-library"
+  ],
+  "mach:weightsLicense": "MIT (weights released on Hugging Face under the same licence as the code).",
+  "mach:trainingDataSummary": "Over one million medical images spanning multiple modalities and anatomies; evaluated across 20 datasets.",
+  "mach:intendedUse": "A research tool for compressing medical images into latents to accelerate downstream model training and inference — not a clinical diagnostic model.",
+  "mach:accessModel": "open-weights",
+  "mach:editorialReviewedAt": "2026-11-22",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://huggingface.co/stanfordmimi/MedVAE",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2502.14753",
+      "mach:evidenceType": "academic-reference"
+    },
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/StanfordMIMI/MedVAE",
+      "mach:evidenceType": "documentation"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/StanfordMIMI/MedVAE/blob/main/LICENSE",
+  "mach:subcategory": "imaging-model",
+  "mach:subcategoryBy": "rule:keyword"
+}

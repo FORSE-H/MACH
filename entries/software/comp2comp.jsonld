@@ -1,0 +1,63 @@
+{
+  "@context": "../../data/context/mach.jsonld",
+  "@id": "https://github.com/FORSE-H/MACH/tree/main/entries/software/comp2comp",
+  "@type": [
+    "schema:SoftwareApplication"
+  ],
+  "identifier": "comp2comp",
+  "name": "Comp2Comp",
+  "alternateName": [
+    "Computed tomography to body composition"
+  ],
+  "description": "Library that extracts clinical body-composition insights from CT scans through chained inference pipelines: spine labelling, muscle and adipose tissue quantification (T12-L5), bone mineral density, aortic calcification, abdominal aortic aneurysm, and liver/spleen/pancreas and contrast-phase analysis. Apache-2.0 licensed, Python, from the Stanford MIMI Lab. Research software — its bone-mineral-density output is explicitly labelled NOT FDA cleared.",
+  "url": "https://github.com/StanfordMIMI/Comp2Comp",
+  "codeRepository": "https://github.com/StanfordMIMI/Comp2Comp",
+  "relatedLink": [
+    "https://arxiv.org/abs/2302.06568"
+  ],
+  "license": "Apache-2.0",
+  "programmingLanguage": [
+    "Python"
+  ],
+  "applicationCategory": "Medical imaging",
+  "keywords": [
+    "medical-imaging",
+    "computed-tomography",
+    "body-composition",
+    "segmentation",
+    "radiology",
+    "clinical-pipeline",
+    "stanford"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Stanford MIMI (Medical Imaging and Machine Intelligence) Lab",
+      "url": "https://aimi.stanford.edu/"
+    }
+  ],
+  "mach:governance": "academic",
+  "mach:category": "software",
+  "mach:deploymentContext": [
+    "self-hosted",
+    "embedded-library"
+  ],
+  "mach:intendedUse": "A research pipeline for extracting body-composition metrics from CT; outputs (including bone mineral density Z/T-scores) are explicitly NOT FDA cleared and not for clinical decision-making without validation.",
+  "mach:editorialReviewedAt": "2026-11-22",
+  "schema:comment": "README labels the BMD pipeline output 'NOT FDA cleared'. Installed from source (pip install -e .), not currently on PyPI.",
+  "mach:evidence": [
+    {
+      "@type": "schema:WebPage",
+      "url": "https://github.com/StanfordMIMI/Comp2Comp",
+      "mach:evidenceType": "primary-repo"
+    },
+    {
+      "@type": "schema:ScholarlyArticle",
+      "url": "https://arxiv.org/abs/2302.06568",
+      "mach:evidenceType": "academic-reference"
+    }
+  ],
+  "mach:licenseUrl": "https://github.com/StanfordMIMI/Comp2Comp/blob/main/LICENSE",
+  "mach:subcategory": "medical-imaging",
+  "mach:subcategoryBy": "rule:keyword"
+}
