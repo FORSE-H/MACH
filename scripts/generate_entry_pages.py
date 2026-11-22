@@ -299,13 +299,25 @@ def render_page(entry: dict, sig: dict) -> str:
     </div>"""
 
     # Signals & lineage table
+    # A harvested field with no value still records *why* (its fetch_status), so
+    # the table stays honest. But a raw code like "not_found" reads as a failure
+    # when it usually just means the entry isn't on that platform — so map the
+    # statuses to plain phrases. The field is still shown (transparency), just
+    # without the alarm.
+    _STATUS_PHRASE = {
+        "not_found": "not on this platform",
+        "error": "not reachable",
+        "rate_limited": "not checked (rate-limited)",
+        "": "—",
+    }
     if facts:
         rows = []
         for f in sorted(facts, key=lambda x: x["field_name"]):
             label = _FIELD_LABELS.get(f["field_name"], f["field_name"])
             val = f["value"]
             status = f.get("fetch_status", "")
-            val_disp = esc(val) if val not in (None, "") else f'<span class="muted">{esc(status or "—")}</span>'
+            phrase = _STATUS_PHRASE.get(status, status or "—")
+            val_disp = esc(val) if val not in (None, "") else f'<span class="muted">{esc(phrase)}</span>'
             rows.append(
                 f'<tr><td class="field">{esc(label)}</td>'
                 f'<td class="value">{val_disp}</td>'

@@ -9,7 +9,7 @@
   "identifier": "tooluniverse",
   "name": "ToolUniverse",
   "description": "Native MCP server exposing 211+ expert-curated biomedical tools to any MCP-compatible AI agent. Tools span drug discovery, therapeutic reasoning, precision oncology, rare disease diagnosis, pharmacovigilance, multi-omics analysis, protein docking, and literature search across PubMed, Semantic Scholar, ArXiv, BioRxiv, and Europe PMC. Supports MCP Tasks for non-blocking execution of long-running operations such as molecular simulations and protein docking. Developed by the Zitnik Lab at Harvard Medical School as infrastructure for AI scientist systems. Powers TxAgent's therapeutic reasoning capabilities.",
-  "url": "https://zitniklab.hms.harvard.edu/TxAgent/",
+  "url": "https://aiscientist.tools",
   "codeRepository": "https://github.com/mims-harvard/ToolUniverse",
   "license": "Apache-2.0",
   "softwareVersion": "1.2.1",
@@ -70,7 +70,11 @@
       "schema:name": "Democratizing AI scientists using ToolUniverse. arXiv 2025."
     }
   ],
-  "relatedLink": "https://github.com/FORSE-H/MACH/tree/main/entries/software/txagent",
+  "relatedLink": [
+    "https://aiscientist.tools",
+    "https://zitniklab.hms.harvard.edu/ToolUniverse/",
+    "https://pypi.org/project/tooluniverse/"
+  ],
   "mach:licenseUrl": "https://github.com/mims-harvard/ToolUniverse/blob/main/LICENSE",
   "mach:subcategory": "mcp-server"
 }

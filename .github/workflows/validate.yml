@@ -66,6 +66,12 @@ jobs:
         # Fix locally with: python scripts/check_consistency.py --write
         run: python scripts/check_consistency.py
 
+      - name: Check for cross-entry copy-paste leaks
+        # Fail if an entry's relatedLink points at a DIFFERENT entry's folder —
+        # the signature of cloning an entry and forgetting to update a field
+        # (how TxAgent's page ended up in ToolUniverse's metadata).
+        run: python scripts/check_entry_leaks.py
+
       - name: Check required fields
         run: |
           python3 - <<'EOF'
