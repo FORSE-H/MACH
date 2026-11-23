@@ -64,7 +64,7 @@ jobs:
           fi
 
       - name: Open a PR if signals changed
-        uses: peter-evans/create-pull-request@d4f3be6ce6f4083b7ac7490ab98b48a62db1ee41 # v7.0.10
+        uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
         with:
           add-paths: data/signals.json
           branch: signals-sync
