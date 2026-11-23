@@ -1,5 +1,9 @@
 # MACH — Machine-Actionable Catalog for Healthcare
 
+> ⚠️ **Work in progress (week of 2026-11-23).** The backend and data pipeline are
+> being restructured, so parts of the site, API, or data may be temporarily
+> inconsistent or break. Expected to be stable again by the weekend (Sun 2026-11-29).
+
 [![License: Apache-2.0](https://img.shields.io/badge/Code-Apache_2.0-blue.svg)](LICENSE)
 [![Data License: CC0-1.0](https://img.shields.io/badge/Data-CC0_1.0-lightgrey.svg)](LICENSE-DATA)
 [![Validate](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml/badge.svg)](https://github.com/FORSE-H/MACH/actions/workflows/validate.yml)

@@ -19,6 +19,10 @@ data/compliance-standards.csv
 mach_catalog_dump_*.json
 .claude/
 REVIEW.md
+# Generated per-entry pages — rebuilt from JSON-LD + signals.json at deploy
+# time (update-site.yml). Not committed, so there is no second copy to drift.
+entry/*.html
+
 # Python bytecode
 __pycache__/
 *.pyc

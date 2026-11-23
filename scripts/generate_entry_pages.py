@@ -48,10 +48,18 @@ def esc(s) -> str:
     return html.escape(str(s)) if s is not None else ""
 
 
+# Harvest date (top-level generated_at from signals.json), captured at load so
+# the citation "as of" stamp can be shown without threading it through every call.
+HARVEST_DATE = ""
+
+
 def load_signals() -> dict:
+    global HARVEST_DATE
     if not SIGNALS_PATH.exists():
         return {}
     data = json.loads(SIGNALS_PATH.read_text(encoding="utf-8"))
+    # keep only the date part (YYYY-MM-DD) of an ISO timestamp
+    HARVEST_DATE = (data.get("generated_at") or "")[:10]
     return {e["identifier"]: e for e in data.get("entries", [])}
 
 
@@ -188,12 +196,14 @@ def _impact_section(signals: dict) -> str:
         meta.append(esc(year))
     tail = f'<span class="muted"> — {" · ".join(meta)}</span>' if meta else ""
 
+    asof = f" as of {esc(HARVEST_DATE)}" if HARVEST_DATE else ""
     return (
         '<section class="repo">\n    <h3>Academic impact</h3>\n'
         f'    <p class="counts">{bits[0]}{tail}</p>\n'
         '    <p class="muted" style="font-size:0.8rem;margin:0;">Citation count from '
         '<a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>, '
-        "matched by the entry&rsquo;s DOI. A measure of reach, not quality.</p>\n    </section>"
+        f"matched by the entry&rsquo;s DOI{asof}. Citations accrue over time, so this is a "
+        "point-in-time figure refreshed at each harvest &mdash; a measure of reach, not quality.</p>\n    </section>"
     )
 
 
@@ -357,22 +367,46 @@ def render_page(entry: dict, sig: dict) -> str:
     # Signals & lineage table
     # A harvested field with no value still records *why* (its fetch_status), so
     # the table stays honest. But a raw code like "not_found" reads as a failure
-    # when it usually just means the entry isn't on that platform — so map the
-    # statuses to plain phrases. The field is still shown (transparency), just
-    # without the alarm.
+    # when it usually just means the lookup found nothing — so map the statuses to
+    # plain phrases. The phrase for "not_found" is FIELD-AWARE: "not on this
+    # platform" only makes sense for package registries (a project either has a
+    # package there or doesn't). For a repo scan like OpenSSF Scorecard or OSV,
+    # "not_found" means the scan didn't run / produced no result, NOT that the
+    # project isn't "on a platform" — so those get "not scored". Everything else
+    # gets a neutral "no data".
     _STATUS_PHRASE = {
-        "not_found": "not on this platform",
         "error": "not reachable",
         "rate_limited": "not checked (rate-limited)",
         "": "—",
     }
+    # fields that represent a package in a registry — "not on this platform" fits
+    _REGISTRY_FIELDS = {
+        "hf_downloads", "discovered_hf",
+        "pypi_downloads", "discovered_pypi",
+        "conda_downloads", "discovered_conda",
+        "npm_downloads", "discovered_npm",
+        "cran_downloads", "discovered_cran",
+    }
+    # fields that come from a repo scan — "not scored" fits (not "not on platform")
+    _SCAN_FIELDS = {"ssf_score", "ssf_maintained", "ssf_code_review", "ssf_date", "osv_known_vulns"}
+
+    def _notfound_phrase(field_name: str) -> str:
+        if field_name in _REGISTRY_FIELDS:
+            return "not on this platform"
+        if field_name in _SCAN_FIELDS:
+            return "not scored"
+        return "no data"
+
     if facts:
         rows = []
         for f in sorted(facts, key=lambda x: x["field_name"]):
             label = _FIELD_LABELS.get(f["field_name"], f["field_name"])
             val = f["value"]
             status = f.get("fetch_status", "")
-            phrase = _STATUS_PHRASE.get(status, status or "—")
+            if status == "not_found":
+                phrase = _notfound_phrase(f["field_name"])
+            else:
+                phrase = _STATUS_PHRASE.get(status, status or "—")
             val_disp = esc(val) if val not in (None, "") else f'<span class="muted">{esc(phrase)}</span>'
             source_disp = f'<code>{esc(f.get("source_id","—"))}</code>'
             # Override the harvested licence row when the curated licence differs:
