@@ -4109,10 +4109,47 @@
       });
       if (!res.ok) throw new Error(res.status);
       const raw = await res.json();
-      // Relevance threshold: cosine search always returns *something*, so drop
-      // weak matches (noise / gibberish) and keep only genuinely-relevant hits.
-      const THRESHOLD = 0.30;
-      const hits = raw.filter((h) => h.score >= THRESHOLD);
+
+      // --- Hybrid re-rank: semantic recall + a lexical "type intent" boost. ---
+      // Pure cosine conflates topic with type: "MCP server for healthcare data"
+      // scores a healthcare-data catalogue almost as high as an actual MCP
+      // server. So we read each hit's own card (its type label + name) and, when
+      // the query's meaningful words match the card's type/name, treat it as a
+      // strong, on-type match. On-type hits always rank first; everything else
+      // must clear a relative floor below the top score, which adapts per query.
+      const STOP = new Set(['for','the','a','an','of','to','in','on','and','or',
+        'with','by','my','your','data','healthcare','health','open','source',
+        'tool','tools','app','apps','system','systems','server','servers','that',
+        'can','use','used','using','via','as','is','are']);
+      const qWords = q.toLowerCase().split(/[^a-z0-9+]+/).filter(w => w && !STOP.has(w));
+      // keep intent words even if they're common, so "mcp", "fhir", "dicom" count
+      const qRaw = q.toLowerCase().split(/[^a-z0-9+]+/).filter(Boolean);
+      const intent = new Set([...qWords, ...qRaw.filter(w =>
+        ['mcp','fhir','dicom','openehr','ecg','ehr','llm','rag','agent','vector',
+         'ontology','snomed','omop','imaging','genomic','segmentation'].includes(w))]);
+
+      const cardText = (h) => {
+        const c = cardForHit(h);
+        if (!c) return '';
+        const type = (c.querySelector('.entry-type')?.textContent || '');
+        const name = (c.querySelector('.entry-name')?.textContent || '');
+        return (type + ' ' + name).toLowerCase();
+      };
+      // on-type = a query intent word appears in the card's TYPE or NAME label
+      const onType = (h) => {
+        const t = cardText(h);
+        return [...intent].some(w => w.length > 1 && t.includes(w));
+      };
+
+      const top = raw.length ? raw[0].score : 0;
+      const FLOOR = 0.34;                 // hard noise floor
+      const relCut = Math.max(FLOOR, top - 0.15);  // adapts to query strength
+
+      const strong = raw.filter(h => onType(h) && h.score >= FLOOR);
+      const rest   = raw.filter(h => !onType(h) && h.score >= relCut);
+      // on-type matches first (by score), then the rest (by score)
+      const hits = [...strong, ...rest];
+
       semanticOn = true;
       if (pager) pager.style.display = 'none';          // semantic mode shows matches, no paging
       grid.classList.add('semantic-active');
