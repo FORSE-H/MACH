@@ -4095,9 +4095,51 @@
     input.dispatchEvent(new Event('input')); // let the name-filter re-render
   }
 
+  // Known programming languages present in the catalog (from data-lang), lower-cased.
+  const KNOWN_LANGS = (() => {
+    const s = new Set();
+    rows.forEach(r => { const l = (r.dataset.lang || '').trim(); if (l) s.add(l.toLowerCase()); });
+    return s;
+  })();
+
+  // Route a search two ways:
+  //   • keyword / lookup  → the local filter (fast, COMPLETE): a single word that
+  //     is a known language, or that matches an entry name, filters the cards.
+  //   • sentence / concept → the semantic API (meaning-based).
+  // Returns true if it handled the query locally (so the caller skips semantic).
+  function tryKeywordRoute(q) {
+    const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+    // only single-token queries are treated as keyword lookups
+    if (words.length !== 1) return false;
+    const w = words[0];
+
+    // 1) exact language match → use the language filter (shows ALL of that language)
+    if (KNOWN_LANGS.has(w)) {
+      clearSemantic();
+      // find the matching data-lang value (preserve its original casing)
+      let langVal = '';
+      rows.forEach(r => { if ((r.dataset.lang || '').toLowerCase() === w) langVal = r.dataset.lang; });
+      active.lang = langVal;
+      const langSel = document.getElementById('filter-lang');
+      if (langSel) langSel.value = langVal;   // reflect in the dropdown
+      applyFilters();
+      const n = getVisible().length;
+      status.hidden = false;
+      status.innerHTML = `Showing all <strong>${esc(langVal)}</strong> entries (${n}) — filtered by language. <a id="sem-clear">Clear</a>`;
+      document.getElementById('sem-clear').addEventListener('click', () => {
+        active.lang = ''; if (langSel) langSel.value = ''; applyFilters(); status.hidden = true; input.value = '';
+      });
+      return true;
+    }
+    return false;
+  }
+
+  function esc(s){ return String(s).replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
+
   async function runSemantic() {
     const q = input.value.trim();
     if (!q) { clearSemantic(); return; }
+    if (tryKeywordRoute(q)) { btn.disabled = false; return; }  // handled as a keyword lookup
     btn.disabled = true;
     status.hidden = false;
     status.textContent = 'Searching by meaning… (the API may take ~50s to wake if idle)';
