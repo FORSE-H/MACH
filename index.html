@@ -4115,19 +4115,29 @@
 
     // 1) exact language match → use the language filter (shows ALL of that language)
     if (KNOWN_LANGS.has(w)) {
-      clearSemantic();
+      // Leave semantic mode WITHOUT dispatching an input event (that would make
+      // the name-filter read "python" and AND it against the language filter,
+      // collapsing results to the one entry with "python" in its name).
+      semanticOn = false;
+      grid.classList.remove('semantic-active');
+      cards.forEach((c) => { c.style.display = ''; c.style.order = ''; });
+      if (pager) pager.style.display = '';
+
       // find the matching data-lang value (preserve its original casing)
       let langVal = '';
       rows.forEach(r => { if ((r.dataset.lang || '').toLowerCase() === w) langVal = r.dataset.lang; });
+
+      active.search = '';                       // name-filter off — we filter by language
       active.lang = langVal;
       const langSel = document.getElementById('filter-lang');
-      if (langSel) langSel.value = langVal;   // reflect in the dropdown
+      if (langSel) langSel.value = langVal;    // reflect in the dropdown
       applyFilters();
+
       const n = getVisible().length;
       status.hidden = false;
       status.innerHTML = `Showing all <strong>${esc(langVal)}</strong> entries (${n}) — filtered by language. <a id="sem-clear">Clear</a>`;
       document.getElementById('sem-clear').addEventListener('click', () => {
-        active.lang = ''; if (langSel) langSel.value = ''; applyFilters(); status.hidden = true; input.value = '';
+        active.lang = ''; if (langSel) langSel.value = ''; input.value = ''; active.search = ''; applyFilters(); status.hidden = true;
       });
       return true;
     }
