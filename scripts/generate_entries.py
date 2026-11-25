@@ -7,7 +7,6 @@ of index.html with live data. Run locally or via GitHub Actions.
 
 import html
 import json
-import os
 import re
 import sys
 from pathlib import Path
@@ -174,14 +173,6 @@ def license_bucket(e):
         return "opendata"
     return "custom"
 
-_LICENSE_BUCKET_LABELS = {
-    "permissive":    "Permissive",
-    "copyleft":      "Copyleft",
-    "opendata":      "Open data",
-    "noncommercial": "Non-commercial",
-    "custom":        "Custom / restricted",
-    "none":          "No clear licence",
-}
 
 def get_jsonld_url(e):
     entry_id = e.get("@id", "")

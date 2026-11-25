@@ -109,7 +109,7 @@ def collect_urls(entry_files):
             with open(filepath, encoding="utf-8") as f:
                 walk(json.load(f), filepath)
         except Exception:
-            pass
+            continue  # unreadable/invalid entry file — skip, don't abort the scan
 
     return url_map
 

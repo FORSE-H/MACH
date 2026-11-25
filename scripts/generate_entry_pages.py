@@ -13,6 +13,17 @@ from __future__ import annotations
 import html
 import json
 from pathlib import Path
+from urllib.parse import urlparse
+
+
+def _is_github(url: str) -> bool:
+    """True if url's HOST is github.com (or a subdomain), parsed properly —
+    not a substring match, which 'https://evil.com/github.com' would fool."""
+    try:
+        host = (urlparse(url).hostname or "").lower()
+    except ValueError:
+        return False
+    return host == "github.com" or host.endswith(".github.com")
 
 ENTRIES_DIR = Path("entries")
 OUT_DIR = Path("entry")
@@ -146,7 +157,7 @@ def _repo_section(signals: dict, entry: dict) -> str:
                 try:
                     pairs.append((lang, int(pct)))
                 except ValueError:
-                    pass
+                    continue  # skip a malformed "lang:pct" pair, keep the rest
         if pairs:
             bar = "".join(
                 f'<span class="seg" style="width:{pct}%" title="{esc(lang)} {pct}%"></span>'
@@ -463,7 +474,7 @@ def render_page(entry: dict, sig: dict) -> str:
 
     links = []
     if url:
-        links.append(f'<a href="{esc(url)}" target="_blank" rel="noopener">&#8599; {"Repository" if "github.com" in url else "Website"}</a>')
+        links.append(f'<a href="{esc(url)}" target="_blank" rel="noopener">&#8599; {"Repository" if _is_github(url) else "Website"}</a>')
     if repo and repo != url:
         links.append(f'<a href="{esc(repo)}" target="_blank" rel="noopener">&#8599; Repository</a>')
     if jsonld_url:

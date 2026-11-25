@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import html
 import json
-import sys
 from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
@@ -38,7 +37,6 @@ def load():
 
 
 def build(tax, entries) -> str:
-    cat_label = {c["id"]: c["name"] for c in tax["categories"]}
     func_label = {}
     for c in tax["categories"]:
         for fn in c.get("functions", []):
