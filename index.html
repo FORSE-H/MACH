@@ -4060,6 +4060,15 @@
   if (searchInput) {
     searchInput.addEventListener('input', () => {
       active.search = searchInput.value.trim().toLowerCase();
+      // If a LANGUAGE filter was applied by a keyword search (e.g. typing
+      // "python"), editing the box should release it so clearing returns to the
+      // full catalogue. A language the user picked from the dropdown is left be.
+      if (active._searchSetLang) {
+        active.lang = '';
+        active._searchSetLang = false;
+        const langSel = document.getElementById('filter-lang');
+        if (langSel) langSel.value = '';
+      }
       currentPage = 1;
       renderPage();
     });
@@ -4165,6 +4174,7 @@
       const langVal = F.langValue(w);            // original casing, e.g. "Python"
       F.active.search = '';                      // name-filter off — filter by language only
       F.active.lang = langVal;
+      F.active._searchSetLang = true;            // search applied this lang → clear it when box edited
       const langSel = document.getElementById('filter-lang');
       if (langSel) langSel.value = langVal;      // reflect in the dropdown
       F.applyFilters();                          // this un-hides cards + renders

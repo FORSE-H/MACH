@@ -1,0 +1,65 @@
+name: E2E tests
+
+# Playwright end-to-end tests for the static site's search + filters.
+# Runs on any change to the page or the tests — catches search/filter
+# regressions (e.g. "python" must match all Python entries, filters must
+# reset after a search) that unit tests can't see because they're browser
+# behaviour.
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'tests/**'
+      - 'playwright.config.js'
+      - 'package.json'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'tests/**'
+      - 'playwright.config.js'
+      - 'package.json'
+
+jobs:
+  e2e:
+    name: Playwright (search + filters)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@c6295a65d1254861815972266d5933fd6e532bdf # v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
+        with:
+          node-version: '20'
+
+      - name: Set up Python (serves the static site in the webServer step)
+        uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Run E2E tests
+        run: npx playwright test
+
+      - name: Upload report on failure
+        if: failure()
+        uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874 # v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7

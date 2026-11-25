@@ -1,0 +1,13 @@
+{
+  "name": "mach-site-tests",
+  "version": "0.1.0",
+  "private": true,
+  "description": "End-to-end tests for the MACH static site (search, filters).",
+  "scripts": {
+    "test": "playwright test",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.49.1"
+  }
+}
