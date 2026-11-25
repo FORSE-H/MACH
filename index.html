@@ -3890,7 +3890,21 @@
     container.appendChild(makeBtn('Next →', currentPage + 1, false, currentPage === totalPages));
   }
 
+  // Clear any semantic/keyword search RESULT view via the DOM (this runs in the
+  // filters' scope, which can't see the search scope's functions). Un-hides the
+  // cards the search had hidden, drops the semantic class, hides the status line,
+  // and fires 'mach:exit-search' so the search scope can reset its own flag.
+  function resetSemanticView() {
+    const g = document.querySelector('.entries-grid');
+    if (g) g.classList.remove('semantic-active');
+    document.querySelectorAll('.entry-card').forEach(c => { c.style.display = ''; c.style.order = ''; });
+    const st = document.getElementById('semantic-status');
+    if (st) st.hidden = true;
+    document.dispatchEvent(new CustomEvent('mach:exit-search'));
+  }
+
   function applyFilters() {
+    resetSemanticView();   // any filter change leaves search-result mode
     currentPage = 1;
     renderPage();
   }
@@ -4052,6 +4066,26 @@
   }
 
   renderPage();
+
+  // Expose what the (separate) semantic-search IIFE needs to drive the local
+  // filters — the two run in different closures, so they share through this.
+  window.MACHFilters = {
+    active,
+    rows,
+    applyFilters,
+    getVisible,
+    resetSemanticView,
+    knownLangs: () => {
+      const s = new Set();
+      rows.forEach(r => { const l = (r.dataset.lang || '').trim(); if (l) s.add(l.toLowerCase()); });
+      return s;
+    },
+    langValue: (lowerName) => {
+      let v = '';
+      rows.forEach(r => { if ((r.dataset.lang || '').toLowerCase() === lowerName) v = r.dataset.lang; });
+      return v;
+    },
+  };
 })();
 
 // ── SEMANTIC SEARCH (calls the live MACH API; falls back gracefully) ──────────
@@ -4092,58 +4126,55 @@
 
   let semanticOn = false;
 
-  function clearSemantic() {
+  // Reset the semantic/keyword result VIEW (hide status, un-hide cards, restore
+  // paging) WITHOUT touching the box text or dispatching events. Safe to call
+  // from a filter chip: after it, renderPage() shows the normal filtered list.
+  function exitSemanticView() {
     semanticOn = false;
     status.hidden = true;
     grid.classList.remove('semantic-active');
     cards.forEach((c) => { c.style.display = ''; c.style.order = ''; });
     if (pager) pager.style.display = '';
+  }
+
+  function clearSemantic() {
+    exitSemanticView();
     input.dispatchEvent(new Event('input')); // let the name-filter re-render
   }
 
-  // Known programming languages present in the catalog (from data-lang), lower-cased.
-  const KNOWN_LANGS = (() => {
-    const s = new Set();
-    rows.forEach(r => { const l = (r.dataset.lang || '').trim(); if (l) s.add(l.toLowerCase()); });
-    return s;
-  })();
+  // When a filter control resets the view (fires from the filters IIFE), sync
+  // our own semantic flag so a later search starts clean.
+  document.addEventListener('mach:exit-search', () => { semanticOn = false; });
 
   // Route a search two ways:
   //   • keyword / lookup  → the local filter (fast, COMPLETE): a single word that
-  //     is a known language, or that matches an entry name, filters the cards.
+  //     is a known language filters the cards.
   //   • sentence / concept → the semantic API (meaning-based).
+  // Uses window.MACHFilters, which the filters IIFE exposes (separate closures).
   // Returns true if it handled the query locally (so the caller skips semantic).
   function tryKeywordRoute(q) {
+    const F = window.MACHFilters;
+    if (!F) return false;                       // filters not ready → fall through
     const words = q.toLowerCase().split(/\s+/).filter(Boolean);
-    // only single-token queries are treated as keyword lookups
-    if (words.length !== 1) return false;
+    if (words.length !== 1) return false;       // only single-token queries route locally
     const w = words[0];
 
     // 1) exact language match → use the language filter (shows ALL of that language)
-    if (KNOWN_LANGS.has(w)) {
-      // Leave semantic mode WITHOUT dispatching an input event (that would make
-      // the name-filter read "python" and AND it against the language filter,
-      // collapsing results to the one entry with "python" in its name).
-      semanticOn = false;
-      grid.classList.remove('semantic-active');
-      cards.forEach((c) => { c.style.display = ''; c.style.order = ''; });
-      if (pager) pager.style.display = '';
-
-      // find the matching data-lang value (preserve its original casing)
-      let langVal = '';
-      rows.forEach(r => { if ((r.dataset.lang || '').toLowerCase() === w) langVal = r.dataset.lang; });
-
-      active.search = '';                       // name-filter off — we filter by language
-      active.lang = langVal;
+    if (F.knownLangs().has(w)) {
+      semanticOn = false;                        // leave semantic mode (no event dispatch)
+      const langVal = F.langValue(w);            // original casing, e.g. "Python"
+      F.active.search = '';                      // name-filter off — filter by language only
+      F.active.lang = langVal;
       const langSel = document.getElementById('filter-lang');
-      if (langSel) langSel.value = langVal;    // reflect in the dropdown
-      applyFilters();
+      if (langSel) langSel.value = langVal;      // reflect in the dropdown
+      F.applyFilters();                          // this un-hides cards + renders
 
-      const n = getVisible().length;
+      const n = F.getVisible().length;
       status.hidden = false;
       status.innerHTML = `Showing all <strong>${esc(langVal)}</strong> entries (${n}) — filtered by language. <a id="sem-clear">Clear</a>`;
       document.getElementById('sem-clear').addEventListener('click', () => {
-        active.lang = ''; if (langSel) langSel.value = ''; input.value = ''; active.search = ''; applyFilters(); status.hidden = true;
+        F.active.lang = ''; if (langSel) langSel.value = ''; input.value = ''; F.active.search = '';
+        F.applyFilters(); status.hidden = true;
       });
       return true;
     }
