@@ -1,0 +1,53 @@
+name: Report a bug or issue
+description: Something wrong on the site, in the data, or in search? Let us know.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve MACH! MACH is early and actively evolving, so some issues slip through — we appreciate the report and try to fix things quickly.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where is the issue?
+      options:
+        - Entry data (wrong licence, stars, description, judgement…)
+        - Search or filters
+        - The website (layout, a broken link, something not loading)
+        - The API or MCP server
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry or page? (if applicable)
+      placeholder: e.g. the OMCP entry, or machcatalog.org/entry/omcp.html
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong?
+      description: What did you see, and what did you expect instead?
+      placeholder: |
+        e.g. Searching "python" shows only 1 result, but there should be many.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce (if it's a site/search issue)
+      placeholder: |
+        1. Go to machcatalog.org
+        2. Type "…" in the search box
+        3. See …
+
+  - type: input
+    id: env
+    attributes:
+      label: Browser / device (if relevant)
+      placeholder: e.g. Chrome on Windows, Safari on iPhone
