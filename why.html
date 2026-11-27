@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why MACH: Machine-Actionable Catalog for Healthcare</title>
+<meta name="description" content="Healthcare does do open source. Proven open tools for research and care already exist, scattered across repositories and institutional websites. MACH helps you find them, trust them, and reuse and support them instead of rebuilding from scratch.">
+<link rel="icon" href="logos/mach-icon.svg">
+<style>
+  :root {
+    --teal-900:#04342C; --teal-700:#0F6E56; --teal-500:#1D9E75;
+    --teal-300:#5DCAA5; --teal-100:#9FE1CB; --teal-50:#E1F5EE;
+    --ink:#122019; --gray-500:#5a6b63; --border:rgba(0,0,0,0.08);
+    --bg:#fbfdfc; --white:#ffffff;
+    --font-head:'Space Grotesk',-apple-system,'Segoe UI',system-ui,sans-serif;
+    --font-body:'Inter',-apple-system,'Segoe UI',system-ui,sans-serif;
+    --font-mono:'DM Mono',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink:#eaf5f0; --gray-500:#8aa89c; --border:rgba(255,255,255,0.12);
+      --bg:#0b1a17; --white:#0f241f; --teal-50:#0f241f; --teal-700:#5DCAA5;
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink:#eaf5f0; --gray-500:#8aa89c; --border:rgba(255,255,255,0.12);
+    --bg:#0b1a17; --white:#0f241f; --teal-50:#0f241f; --teal-700:#5DCAA5;
+    color-scheme:dark;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:var(--font-body); background:var(--bg); color:var(--ink);
+         line-height:1.55; }
+  a { color:var(--teal-700); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  nav { display:flex; align-items:center; justify-content:space-between;
+        padding:1rem max(16px,env(safe-area-inset-left,0px));
+        padding-right:max(16px,env(safe-area-inset-right,0px));
+        border-bottom:1px solid var(--border); position:sticky;
+        top:env(safe-area-inset-top,0px); background:var(--bg); z-index:10; }
+  .nav-brand { font-family:var(--font-head); font-weight:700; font-size:1.1rem;
+               display:flex; align-items:center; gap:.5rem; color:var(--ink); }
+  .nav-brand img { height:1.5rem; width:1.5rem; }
+  .nav-brand b { color:var(--teal-500); }
+  .nav-links { display:flex; gap:1.25rem; font-size:.9rem; list-style:none; }
+  @media (max-width:640px){ .nav-links li:not(.keep){ display:none; } }
+
+  .wrap { max-width:1080px; margin:0 auto;
+          padding:0 max(16px,env(safe-area-inset-left,0px));
+          padding-right:max(16px,env(safe-area-inset-right,0px)); }
+
+  /* ---- Ticker board ---- */
+  .board { background:var(--teal-900); color:#eaf5f0; border-radius:16px;
+           margin:2.5rem 0 1rem; padding:2.25rem 0 1.75rem; overflow:hidden;
+           border:1px solid var(--teal-700); }
+  .board .inner { padding:0 clamp(16px,4vw,2.25rem); }
+  .eyebrow { font-family:var(--font-head); text-transform:uppercase;
+             letter-spacing:0.16em; font-size:0.7rem; color:var(--teal-300);
+             font-weight:600; }
+  .thesis { font-family:var(--font-head); font-weight:600; text-wrap:balance;
+            font-size:clamp(1.5rem,4.2vw,2.6rem); line-height:1.14;
+            margin:.5rem 0 0; letter-spacing:-0.01em; color:#f3faf7; }
+  .thesis .g { color:#F2B84B; }
+  .thesis-sub { color:#9fc7b8; font-size:.98rem; margin:.9rem 0 0; max-width:62ch; }
+
+  .lanes { margin-top:1.5rem; display:flex; flex-direction:column; gap:12px; }
+  .lane { position:relative; overflow:hidden;
+          -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent); }
+  .track { display:inline-flex; gap:12px; white-space:nowrap; will-change:transform; padding-right:12px; }
+  .lane.ltr .track { animation:marq-rtl var(--dur,52s) linear infinite; }
+  .lane.rtl .track { animation:marq-ltr var(--dur,64s) linear infinite; }
+  .lane:hover .track { animation-play-state:paused; }
+  @keyframes marq-rtl { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  @keyframes marq-ltr { from{transform:translateX(-50%)} to{transform:translateX(0)} }
+  .chip { display:inline-flex; align-items:center; gap:.6rem; flex:0 0 auto;
+          background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);
+          border-radius:999px; padding:10px 18px;
+          font-size:clamp(.86rem,1.7vw,1rem); font-family:var(--font-head); font-weight:500; }
+  .chip::before { content:""; width:8px; height:8px; border-radius:50%;
+                  background:var(--teal-300); flex:0 0 auto; }
+  .chip.reuse::before { background:#f3faf7; box-shadow:0 0 0 3px rgba(243,250,247,0.15); }
+  .chip .tag { font-family:var(--font-body); font-size:.66rem; text-transform:uppercase;
+               letter-spacing:.1em; color:#7fa495; font-weight:600; }
+  .chip .dim { color:#9fc7b8; }
+  @media (prefers-reduced-motion: reduce){ .track{animation:none!important} .lane{overflow-x:auto} }
+
+  .board-note { font-size:.76rem; color:#7fa495; margin-top:1.25rem;
+                padding:0 clamp(16px,4vw,2.25rem); }
+
+  /* ---- Narrative + evidence ---- */
+  .section { padding:2.75rem 0; }
+  .section-label { font-family:var(--font-head); text-transform:uppercase;
+                   letter-spacing:.12em; font-size:.72rem; font-weight:600;
+                   color:var(--teal-700); margin-bottom:.5rem; }
+  h2 { font-family:var(--font-head); font-weight:600; font-size:clamp(1.4rem,3vw,2rem);
+       line-height:1.15; letter-spacing:-0.01em; text-wrap:balance; }
+  .lead { color:var(--gray-500); font-size:1.02rem; margin-top:.9rem; max-width:64ch; }
+  .points { list-style:none; margin:1.5rem 0 0; padding:0; max-width:68ch;
+            display:flex; flex-direction:column; gap:.85rem; }
+  .points li { position:relative; padding-left:1.4rem; color:var(--gray-500);
+               font-size:.98rem; line-height:1.5; }
+  .points li::before { content:""; position:absolute; left:0; top:.55em;
+                       width:8px; height:8px; border-radius:50%; background:var(--teal-500); }
+  .points li b { color:var(--ink); font-weight:600; }
+  .further { font-size:.85rem; color:var(--gray-500); max-width:70ch;
+             padding-top:1.1rem; border-top:1px solid var(--border); }
+  .further-label { display:block; font-family:var(--font-head); text-transform:uppercase;
+                   letter-spacing:.12em; font-size:.68rem; font-weight:600;
+                   color:var(--teal-700); margin-bottom:.4rem; }
+
+  footer { border-top:1px solid var(--border); padding:1.75rem 0; margin-top:1rem;
+           font-size:.85rem; color:var(--gray-500); }
+  .btn { display:inline-flex; align-items:center; gap:.4rem; font-family:var(--font-head);
+         font-weight:500; font-size:.9rem; border-radius:999px; padding:.55rem 1.1rem;
+         background:var(--teal-700); color:#fff; border:1px solid var(--teal-700); }
+  .btn:hover { text-decoration:none; background:var(--teal-500); border-color:var(--teal-500); }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-brand" href="index.html"><img src="logos/mach-icon.svg" alt="">M<b>A</b>CH</a>
+  <ul class="nav-links">
+    <li><a href="index.html#catalog">Catalog</a></li>
+    <li><a href="index.html#categories">Categories</a></li>
+    <li class="keep"><a href="why.html">Why</a></li>
+    <li><a href="index.html#suggest">Contribute</a></li>
+    <li class="keep"><a href="https://github.com/FORSE-H/MACH">GitHub &#x2192;</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+  <div class="board">
+    <div class="inner">
+      <p class="eyebrow">The open-source healthcare landscape</p>
+      <h1 class="thesis">Healthcare does do open source, and <span class="g">you can see it here</span>.</h1>
+      <p class="thesis-sub">Proven open tools for research and care already exist, scattered across repositories and institutional websites. MACH helps you find them, trust them, and reuse and support them instead of rebuilding from scratch.</p>
+    </div>
+    <div class="lanes" id="lanes">
+      <div class="lane ltr" style="--dur:54s"><div class="track" data-lane="0"></div></div>
+      <div class="lane rtl" style="--dur:66s"><div class="track" data-lane="1"></div></div>
+      <div class="lane ltr" style="--dur:48s"><div class="track" data-lane="2"></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Why it matters</p>
+    <h2>Transparency enables scrutiny, reuse and trust</h2>
+    <p class="lead">
+      In the research and infrastructure layers (the tools, data and standards the field is built
+      on), open source lets the work be inspected, reused and improved in the open. MACH maps what's
+      open so it can be found and reused.
+    </p>
+    <ul class="points">
+      <li><b>Open means checkable.</b> Anyone can inspect, reuse and improve the work, and problems
+        get found and fixed in the open.</li>
+      <li><b>Machine-readable by design.</b> Every entry is structured JSON-LD, mapped to the right
+        open metadata standard for its type (CodeMeta, MLDCAT-AP, Croissant, DCAT-AP), so the
+        catalogue is queryable by software and AI agents, not just browsable by people.</li>
+      <li><b>Assessed, not just listed.</b> Each entry carries a rule-based judgement (Adopt, Assess
+        or Caution) and a repo-health label, derived from measured signals like maintenance,
+        adoption and licence, with the reasoning shown, so you can tell at a glance what's safe to
+        build on.</li>
+      <li><b>Security-aware.</b> Code repositories carry OpenSSF Scorecard and OSV vulnerability
+        signals, so security posture is visible alongside everything else, not hidden.</li>
+      <li><b>Connected.</b> You can <a href="graph.html">see how the entries connect</a> across the
+        catalogue.</li>
+    </ul>
+    <p class="further" style="margin-top:1.5rem;">
+      <span class="further-label">Further reading</span>
+      Malviya-Thakur et al., <em>"Scientific Open-Source Software Is Less Likely to Become Abandoned
+      Than One Might Think!"</em>, FSE 2025.
+      <a href="https://arxiv.org/abs/2504.18971" target="_blank" rel="noopener">arxiv.org/abs/2504.18971</a>
+    </p>
+    <p style="margin-top:2rem;">
+      <a class="btn" href="index.html#catalog">Browse the catalog &#x2192;</a>
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">machcatalog.org</a>
+  </div>
+</footer>
+
+<script>
+  // Ticker chips: positive thesis, open work exists; find, trust, reuse, support it.
+  // No brand names; claims are categorical. Avoid any "abandoned/unmaintained"
+  // claim: the evidence (FSE 2025) runs the other way.
+  const REUSE = [
+    ["Open where it's studied", "Research healthcare runs on open source"],
+    ["8 resource types", "Software, models, datasets, standards, data sources, hardware, tooling, catalogs"],
+    ["Reuse over rebuild", "The tools exist; the shortage is in reusing them"],
+    ["Effort spent twice", "Every rebuilt-from-scratch tool is work already done"],
+    ["Discoverability first", "You can't reuse what you can't find"],
+    ["Scattered, not scarce", "Open work is spread across repositories and institutional websites"],
+    ["Health signals", "MACH shows which tools are active and proven"],
+  ];
+  const OPEN = [
+    ["Medical imaging", "Viewers, servers, toolkits: an open stack end to end"],
+    ["Research datasets", "Benchmarks and clinical cohorts, openly licensed"],
+    ["Clinical platforms", "Full open-source EHR and hospital systems exist"],
+    ["Open standards", "FHIR, DICOM, openEHR: specs anyone can implement"],
+    ["FHIR servers", "Self-hostable, inspectable, free to run"],
+    ["Federated analytics", "Run queries across sites without moving the data"],
+    ["Open medical hardware", "Designs, PCBs and firmware you can build"],
+    ["Open data sources", "Drug, trial, genomic and literature registries"],
+    ["Terminology tooling", "Open access to clinical vocabularies and codes"],
+    ["AI agents & MCP", "Open tools that let models query clinical resources"],
+  ];
+  const MORE = [
+    ["Imaging to EHR", "An open stack from imaging and FHIR servers to federated analytics"],
+    ["Trust you can check", "Licence, maintenance and security signals, with their provenance"],
+  ];
+  function chip([title, body], kind) {
+    const el = document.createElement('span');
+    el.className = 'chip';
+    const tag = kind === 'reuse' ? 'Reuse' : 'Open';
+    el.innerHTML = '<span><span class="tag">' + tag + '</span> &nbsp;' + title +
+      ': <span class="dim">' + body + '</span></span>';
+    return el;
+  }
+  const lanes = [
+    REUSE.map(x => ['reuse', x]),
+    OPEN.map(x => ['open', x]),
+    [...OPEN.slice(5).map(x => ['open', x]), ...MORE.map(x => ['open', x])],
+  ];
+  lanes.forEach((items, i) => {
+    const track = document.querySelector('.track[data-lane="' + i + '"]');
+    if (!track) return;
+    for (let r = 0; r < 2; r++) items.forEach(([k, x]) => track.appendChild(chip(x, k)));
+  });
+</script>
+</body>
+</html>
