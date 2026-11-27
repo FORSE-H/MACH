@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -57,6 +58,31 @@ _FIELD_LABELS = {
 
 def esc(s) -> str:
     return html.escape(str(s)) if s is not None else ""
+
+
+def _linkify_value(val: str) -> str:
+    """Render a lineage value: a single clean http(s) URL becomes a link,
+    anything else is escaped as plain text. Comma-lists and values with spaces
+    stay as text so we don't produce a broken href."""
+    s = str(val).strip()
+    if (s.startswith(("http://", "https://"))
+            and " " not in s and "," not in s and '"' not in s):
+        return f'<a href="{esc(s)}" target="_blank" rel="noopener">{esc(s)}</a>'
+    return esc(val)
+
+
+def _fmt_languages(val: str) -> str:
+    """'Python:100,C++:80' -> 'Python, C++'. The percentages read like version
+    numbers in the raw table (a user mistook 'Python:100' for Python 100); the
+    language mix bar already shows the split. Only the ':<number>' suffix is
+    stripped, so a language name is never altered. The % breakdown stays in the
+    Repository panel's language bar."""
+    names = []
+    for tok in str(val).split(","):
+        name = re.sub(r":\d+$", "", tok.strip())
+        if name:
+            names.append(name)
+    return ", ".join(names) if names else str(val)
 
 
 # Harvest date (top-level generated_at from signals.json), captured at load so
@@ -418,7 +444,12 @@ def render_page(entry: dict, sig: dict) -> str:
                 phrase = _notfound_phrase(f["field_name"])
             else:
                 phrase = _STATUS_PHRASE.get(status, status or "—")
-            val_disp = esc(val) if val not in (None, "") else f'<span class="muted">{esc(phrase)}</span>'
+            if val in (None, ""):
+                val_disp = f'<span class="muted">{esc(phrase)}</span>'
+            elif f["field_name"] == "repo_languages":
+                val_disp = esc(_fmt_languages(val))
+            else:
+                val_disp = _linkify_value(val)
             source_disp = f'<code>{esc(f.get("source_id","—"))}</code>'
             # Override the harvested licence row when the curated licence differs:
             # keep the harvested value visible (lineage honesty) but mark it
@@ -454,8 +485,8 @@ def render_page(entry: dict, sig: dict) -> str:
             hrows.append(
                 f'<tr><td>{esc(h.get("changed_at",""))}</td>'
                 f'<td class="field">{esc(h.get("field_name",""))}</td>'
-                f'<td class="muted">{esc(h.get("previous_value") or "—")}</td>'
-                f'<td>{esc(h.get("value") or "—")}</td>'
+                f'<td class="muted">{_linkify_value(h["previous_value"]) if h.get("previous_value") else "—"}</td>'
+                f'<td>{_linkify_value(h["value"]) if h.get("value") else "—"}</td>'
                 f'<td><code>{esc(h.get("source_id","—"))}</code></td></tr>'
             )
         history_block = f"""<section>
