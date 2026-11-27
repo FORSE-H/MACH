@@ -49,6 +49,15 @@ _FIELD_LABELS = {
     "has_releases": "has releases",
     "pypi_downloads": "PyPI downloads (monthly)",
     "hf_downloads": "HuggingFace downloads (monthly)",
+    "conda_downloads": "conda downloads (monthly)",
+    "npm_downloads": "npm downloads (monthly)",
+    "cran_downloads": "CRAN downloads (monthly)",
+    "discovered_pypi": "PyPI package",
+    "discovered_conda": "conda package",
+    "discovered_npm": "npm package",
+    "discovered_cran": "CRAN package",
+    "discovered_hf": "HuggingFace model / dataset",
+    "discovered_doi": "DOI",
     "judgement": "judgement",
     "judgement_reason": "judgement reason",
     "repo_health": "repo health",
@@ -68,6 +77,31 @@ def _linkify_value(val: str) -> str:
     if (s.startswith(("http://", "https://"))
             and " " not in s and "," not in s and '"' not in s):
         return f'<a href="{esc(s)}" target="_blank" rel="noopener">{esc(s)}</a>'
+    return esc(val)
+
+
+# A discovered package name -> its public registry page, so the match can be
+# checked (and a wrong one flagged) by anyone. The harvester does not yet verify
+# the package's own repo matches the entry's repo, so making the link visible is
+# the community-review path until it does.
+_REGISTRY_URL = {
+    "discovered_pypi": "https://pypi.org/project/{}/",
+    "discovered_npm": "https://www.npmjs.com/package/{}",
+    "discovered_conda": "https://anaconda.org/conda-forge/{}",
+    "discovered_cran": "https://cran.r-project.org/package={}",
+    "discovered_hf": "https://huggingface.co/{}",
+    "discovered_doi": "https://doi.org/{}",
+}
+
+
+def _registry_link(field_name: str, val: str) -> str:
+    """Link a discovered package / DOI value to its registry page. Only a single
+    clean token is linked (no commas/spaces), so a comma-list stays plain text."""
+    s = str(val).strip()
+    tmpl = _REGISTRY_URL.get(field_name)
+    if tmpl and s and " " not in s and "," not in s and '"' not in s:
+        url = tmpl.format(s)
+        return f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(s)}</a>'
     return esc(val)
 
 
@@ -161,9 +195,14 @@ def _repo_section(signals: dict, entry: dict) -> str:
 
     if health:
         cls = _HEALTH_CLASS.get(health, "warn")
+        # Harvest "as of" stamp: this is a point-in-time snapshot, so a repo may
+        # have newer commits than the label reflects. Dating it (like the citation
+        # stamp) makes it read as a snapshot, not stale data.
+        asof = (f' <span class="asof" title="Harvested snapshot — the repository may have newer activity than shown.">'
+                f'· as of {esc(HARVEST_DATE)}</span>') if HARVEST_DATE else ""
         parts.append(
             f'<p class="health {cls}"><span class="dot"></span><strong>{esc(health)}</strong>'
-            f'<span class="muted"> — {esc(health_reason)}</span></p>'
+            f'<span class="muted"> — {esc(health_reason)}{asof}</span></p>'
         )
 
     # Headline counts
@@ -448,6 +487,8 @@ def render_page(entry: dict, sig: dict) -> str:
                 val_disp = f'<span class="muted">{esc(phrase)}</span>'
             elif f["field_name"] == "repo_languages":
                 val_disp = esc(_fmt_languages(val))
+            elif f["field_name"] in _REGISTRY_URL:
+                val_disp = _registry_link(f["field_name"], val)
             else:
                 val_disp = _linkify_value(val)
             source_disp = f'<code>{esc(f.get("source_id","—"))}</code>'
@@ -474,6 +515,11 @@ def render_page(entry: dict, sig: dict) -> str:
         <thead><tr><th>Field</th><th>Value</th><th>Source</th></tr></thead>
         <tbody>{''.join(rows)}</tbody>
       </table>
+      <p class="muted" style="font-size:0.8rem;margin:6px 0 0;">The package / DOI rows
+      (PyPI package, conda package, DOI, and so on) are the identifiers MACH matched for this
+      project, and what it uses to look up download counts and citations. Each links to its
+      registry page &mdash; if a match looks wrong,
+      <a href="https://github.com/FORSE-H/MACH/issues/new?template=bug-report.yml" target="_blank" rel="noopener">flag it</a>.</p>
     </section>"""
     else:
         lineage = ""
